@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useState } from "react";
 import {
   Flex,
@@ -238,7 +239,7 @@ const Header = () => {
                   }
                   defaultValue={currentApplication?.name || ""}
                   editInteractionKind={EditInteractionKind.SINGLE}
-                  editorName="Application"
+                  editorName={$t('index.f7fbdd33e3cabde4')}
                   fill
                   getNavigationMenu={useNavigationMenuData}
                   isError={isErroredSavingName}

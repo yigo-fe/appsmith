@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { LabelPosition } from "components/constants";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -33,7 +34,7 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Checkbox",
+      name: $t('index.f6fce3db7c241977'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.TOGGLES],
@@ -55,9 +56,9 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
     return {
       rows: 4,
       columns: 12,
-      label: "Label",
+      label: $t('index.078a8f4dace0b744'),
       defaultCheckedState: true,
-      widgetName: "Checkbox",
+      widgetName: $t('index.f6fce3db7c241977'),
       version: 1,
       alignWidget: AlignWidgetTypes.LEFT,
       labelPosition: LabelPosition.Left,
@@ -122,7 +123,7 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Checkbox is a simple UI widget you can use when you want users to make a binary choice",
+        $t('index.e85f7b1800cd722c'),
       "!url": "https://docs.appsmith.com/widget-reference/checkbox",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       isChecked: "bool",
@@ -133,27 +134,27 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Label",
+        sectionName: $t('index.078a8f4dace0b744'),
         children: [
           {
             propertyName: "label",
-            label: "Text",
+            label: $t('index.2a12f1117969c6a9'),
             controlType: "INPUT_TEXT",
-            helpText: "Displays a label next to the widget",
-            placeholderText: "I agree to the T&C",
+            helpText: $t('index.0ead094d6c846527'),
+            placeholderText: $t('index.845dd7b61fa2bdcd'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.da747db3d61e1f4f'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.d965b8c05b71d03a'),
             controlType: "ICON_TABS",
             fullWidth: true,
             options: [
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Right", value: LabelPosition.Right },
+              { label: $t('index.6f269ad69292501c'), value: LabelPosition.Left },
+              { label: $t('index.b9b6a849d87ac095'), value: LabelPosition.Right },
             ],
             defaultValue: LabelPosition.Left,
             isBindProperty: false,
@@ -162,8 +163,8 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
           },
           {
             propertyName: "alignWidget",
-            helpText: "Sets the alignment of the widget",
-            label: "Alignment",
+            helpText: $t('index.a28d7991cd467c3c'),
+            label: $t('index.1850e95233b55f6a'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -183,12 +184,12 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.bc294f412a0fb6ca'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.dd134a7a9f2ea9af'),
+            helpText: $t('index.940d3c40b1c396e4'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -198,12 +199,12 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.d43fec62485a34bf'),
         children: [
           {
             propertyName: "defaultCheckedState",
-            label: "Default state",
-            helpText: "Sets the default checked state of the widget",
+            label: $t('index.690239e44f1d9fb5'),
+            helpText: $t('index.cb236aa4b232e582'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -212,8 +213,8 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.9918ed57e212c70e'),
+            helpText: $t('index.fc523025168eecfb'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -222,9 +223,9 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.d4b48c4557204e37'),
             controlType: "SWITCH",
-            helpText: "Disables input to this widget",
+            helpText: $t('index.d832f5263ca6287d'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -232,9 +233,9 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.7c692f8218cba69a'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.b173dfd2b73aba2c'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -244,10 +245,10 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.0f9e6d1738d2e1ee'),
         children: [
           {
-            helpText: "when the check state is changed",
+            helpText: $t('index.487eed03fd436c29'),
             propertyName: "onCheckChange",
             label: "onCheckChange",
             controlType: "ACTION_SELECTOR",
@@ -263,12 +264,12 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.8c157e9c5cbd7016'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.24e331433291b35f'),
+            helpText: $t('index.e076eda0e60f2b7b'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -282,8 +283,8 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.ffd26ab669c3128d'),
+            helpText: $t('index.8f1c70a1bf38c65a'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             hidden: isAutoLayout,
@@ -326,8 +327,8 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.f13db7ddbd937539'),
+            helpText: $t('index.8d8e271590e73ca1'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -347,12 +348,12 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.c690c3d6b07a4ebf'),
         children: [
           {
             propertyName: "accentColor",
-            helpText: "Sets the checked state color of the checkbox",
-            label: "Accent color",
+            helpText: $t('index.3f47761fd96718cf'),
+            label: $t('index.11f06d7e8bb20750'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -362,13 +363,13 @@ class CheckboxWidget extends BaseWidget<CheckboxWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.11d60995564da2b1'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.af084722f387891e'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.39b48bfd90e19d05'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

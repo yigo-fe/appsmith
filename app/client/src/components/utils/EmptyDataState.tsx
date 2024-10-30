@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 
@@ -24,7 +25,7 @@ const TableColumnEmptyWrapper = styled.div`
 function EmptyDataState() {
   return (
     <TableColumnEmptyWrapper>
-      <img alt="No data" src={NoDataImage} />
+      <img alt={$t('EmptyDataState.112900fcec2200b6')} src={NoDataImage} />
       <div className="no-data-title">No data found</div>
     </TableColumnEmptyWrapper>
   );

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReactNode, RefObject } from "react";
 import React, {
   useEffect,
@@ -459,6 +460,6 @@ export const Entity = forwardRef(
   },
 );
 
-Entity.displayName = "Entity";
+Entity.displayName = $t('index.bb72e91fff2fa469');
 
 export default Entity;

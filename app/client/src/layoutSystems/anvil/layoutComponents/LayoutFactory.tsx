@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   DeriveHighlightsFn,
   LayoutComponentTypes,
@@ -36,7 +37,7 @@ class LayoutFactory {
   static getDeriveHighlightsFn(type: LayoutComponentTypes): DeriveHighlightsFn {
     const Comp: typeof BaseLayoutComponent = LayoutFactory.get(type);
 
-    if (!Comp) throw Error(`LayoutComponent with the type "${type}" not found`);
+    if (!Comp) throw Error($t('LayoutFactory.abc010c486e5ff0a', {type: type}));
 
     return Comp.deriveHighlights;
   }
@@ -44,7 +45,7 @@ class LayoutFactory {
   static doesLayoutRenderWidgets(type: LayoutComponentTypes): boolean {
     const Comp: typeof BaseLayoutComponent = LayoutFactory.get(type);
 
-    if (!Comp) throw Error(`LayoutComponent with the type "${type}" not found`);
+    if (!Comp) throw Error($t('LayoutFactory.abc010c486e5ff0a', {type: type}));
 
     return Comp.rendersWidgets;
   }

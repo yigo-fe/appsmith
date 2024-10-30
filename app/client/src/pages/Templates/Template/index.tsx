@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState } from "react";
 import styled from "styled-components";
 import history from "utils/history";
@@ -136,7 +137,7 @@ export function TemplateLayout(props: TemplateLayoutProps) {
         onClick={onClick}
       >
         <ImageWrapper className="image-wrapper">
-          <StyledImage alt="Template Thumbnail" src={screenshotUrls[0]} />
+          <StyledImage alt={$t('index.5715a77c352fa404')} src={screenshotUrls[0]} />
         </ImageWrapper>
         <TemplateContent className="template-content">
           <Tooltip content={title} placement="right">

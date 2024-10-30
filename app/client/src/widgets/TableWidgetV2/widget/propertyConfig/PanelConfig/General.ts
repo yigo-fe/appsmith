@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
@@ -15,13 +16,13 @@ import { ButtonVariantTypes } from "components/constants";
 import { StickyType } from "widgets/TableWidgetV2/component/Constants";
 
 export default {
-  sectionName: "General",
+  sectionName: $t('General.ff801f2727d14845'),
   children: [
     {
       propertyName: "isCellVisible",
       dependencies: ["primaryColumns", "columnType"],
-      label: "Visible",
-      helpText: "Controls the visibility of the cell in the column",
+      label: $t('General.9c81ae3c6880328c'),
+      helpText: $t('General.84cda17f5f9f62c4'),
       defaultValue: true,
       controlType: "SWITCH",
       customJSControl: "TABLE_COMPUTE_VALUE",
@@ -37,8 +38,8 @@ export default {
     },
     {
       propertyName: "isDisabled",
-      label: "Disabled",
-      helpText: "Controls the disabled state of the button",
+      label: $t('General.7a2ad95a6ead1d1f'),
+      helpText: $t('General.3cac38ccbe7f0766'),
       defaultValue: false,
       controlType: "SWITCH",
       customJSControl: "TABLE_COMPUTE_VALUE",
@@ -62,8 +63,8 @@ export default {
     },
     {
       propertyName: "isCompact",
-      helpText: "Decides if menu items will consume lesser space",
-      label: "Compact",
+      helpText: $t('General.6237b2385d6a1f19'),
+      label: $t('General.43f61c6705f35c23'),
       controlType: "SWITCH",
       customJSControl: "TABLE_COMPUTE_VALUE",
       isJSConvertible: true,
@@ -83,8 +84,8 @@ export default {
     {
       propertyName: "allowCellWrapping",
       dependencies: ["primaryColumns", "columnType"],
-      label: "Cell wrapping",
-      helpText: "Allows content of the cell to be wrapped",
+      label: $t('General.129d8247a6523d7b'),
+      helpText: $t('General.0f414c9b8f6bd326'),
       defaultValue: false,
       controlType: "SWITCH",
       customJSControl: "TABLE_COMPUTE_VALUE",
@@ -114,8 +115,8 @@ export default {
         "childStylesheet",
         "inlineEditingSaveOption",
       ],
-      label: "Editable",
-      helpText: "Controls the cell's editablity",
+      label: $t('General.62b7a23a45fda8a7'),
+      helpText: $t('General.86abe8b10fa67f3e'),
       defaultValue: false,
       controlType: "SWITCH",
       customJSControl: "TABLE_COMPUTE_VALUE",
@@ -143,10 +144,10 @@ export default {
     {
       propertyName: "sticky",
       helpText:
-        "Choose column that needs to be frozen left or right of the table",
+        $t('General.b11718a7f58f5e8e'),
       controlType: "ICON_TABS",
       defaultValue: StickyType.NONE,
-      label: "Column freeze",
+      label: $t('General.4491b4bc269f592f'),
       fullWidth: true,
       isBindProperty: true,
       isTriggerProperty: false,
@@ -171,16 +172,16 @@ export default {
 };
 
 export const GeneralStyle = {
-  sectionName: "General",
+  sectionName: $t('General.ff801f2727d14845'),
   children: [
     {
       propertyName: "buttonVariant",
-      label: "Button variant",
+      label: $t('General.985ef5b56cbab8e6'),
       controlType: "ICON_TABS",
       fullWidth: true,
       customJSControl: "TABLE_COMPUTE_VALUE",
       isJSConvertible: true,
-      helpText: "Sets the variant",
+      helpText: $t('General.b90cb9beb9788090'),
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         return hideByColumnType(props, propertyPath, [
           ColumnTypes.ICON_BUTTON,
@@ -190,15 +191,15 @@ export const GeneralStyle = {
       dependencies: ["primaryColumns", "columnOrder"],
       options: [
         {
-          label: "Primary",
+          label: $t('General.7b5756104187ec6f'),
           value: ButtonVariantTypes.PRIMARY,
         },
         {
-          label: "Secondary",
+          label: $t('General.dc00da1b3180d51b'),
           value: ButtonVariantTypes.SECONDARY,
         },
         {
-          label: "Tertiary",
+          label: $t('General.e5fcbd4febbe11a4'),
           value: ButtonVariantTypes.TERTIARY,
         },
       ],
@@ -222,22 +223,22 @@ export const GeneralStyle = {
     },
     {
       propertyName: "menuVariant",
-      label: "Button variant",
+      label: $t('General.985ef5b56cbab8e6'),
       controlType: "ICON_TABS",
       fullWidth: true,
       customJSControl: "TABLE_COMPUTE_VALUE",
-      helpText: "Sets the variant of the menu button",
+      helpText: $t('General.a0c771e071eb5d70'),
       options: [
         {
-          label: "Primary",
+          label: $t('General.7b5756104187ec6f'),
           value: ButtonVariantTypes.PRIMARY,
         },
         {
-          label: "Secondary",
+          label: $t('General.dc00da1b3180d51b'),
           value: ButtonVariantTypes.SECONDARY,
         },
         {
-          label: "Tertiary",
+          label: $t('General.e5fcbd4febbe11a4'),
           value: ButtonVariantTypes.TERTIARY,
         },
       ],
@@ -267,22 +268,22 @@ export const GeneralStyle = {
     {
       propertyName: "imageSize",
       dependencies: ["primaryColumns", "columnType"],
-      label: "Image Size",
-      helpText: "Sets the size of the image",
+      label: $t('General.337a099900e35a97'),
+      helpText: $t('General.ba996d66b5e05596'),
       defaultValue: "DEFAULT",
       controlType: "ICON_TABS",
       fullWidth: true,
       options: [
         {
-          label: "Default",
+          label: $t('General.89231e75dbd21b4f'),
           value: "DEFAULT",
         },
         {
-          label: "Medium",
+          label: $t('General.97c6c73f767eb28f'),
           value: "MEDIUM",
         },
         {
-          label: "Large",
+          label: $t('General.30ef4966fd98d69c'),
           value: "LARGE",
         },
       ],

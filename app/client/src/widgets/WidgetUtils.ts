@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type React from "react";
 import { Alignment, Classes } from "@blueprintjs/core";
 import { Classes as DTClasses } from "@blueprintjs/datetime";
@@ -51,7 +52,7 @@ export function getDisplayName(WrappedComponent: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   name: any;
 }) {
-  return WrappedComponent.displayName || WrappedComponent.name || "Component";
+  return WrappedComponent.displayName || WrappedComponent.name || $t('WidgetUtils.f8b25e360d5b9087');
 }
 
 export function getWidgetDimensions(props: WidgetPositionProps) {
@@ -77,7 +78,7 @@ export function getSnapSpaces(props: WidgetPositionProps) {
 export const DefaultAutocompleteDefinitions = {
   isVisible: {
     "!type": "bool",
-    "!doc": "Boolean value indicating if the widget is in visible state",
+    "!doc": $t('WidgetUtils.19d7b17880703cc7'),
   },
 };
 

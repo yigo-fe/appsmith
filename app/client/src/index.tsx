@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 // This file must be executed as early as possible to ensure the preloads are triggered ASAP
 import "./preload-route-chunks";
 
@@ -92,7 +93,7 @@ enableNewRelic &&
 
 function App() {
   return (
-    <Sentry.ErrorBoundary fallback={"An error has occured"}>
+    <Sentry.ErrorBoundary fallback={$t('index.306423d8e7b8d5c3')}>
       <Provider store={store}>
         <LayersContext.Provider value={Layers}>
           <ThemedAppWithProps />

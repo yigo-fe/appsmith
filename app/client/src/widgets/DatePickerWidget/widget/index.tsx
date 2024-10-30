@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   AutocompletionDefinitions,
   WidgetCallout,
@@ -46,7 +47,7 @@ function defaultDateValidation(
       messages: [
         {
           name: "TypeError",
-          message: `This value does not evaluate to type: Date ${dateFormat}`,
+          message: $t('index.ae2c139aa4ad2df8', {dateFormat: dateFormat}),
         },
       ],
     };
@@ -62,7 +63,7 @@ function defaultDateValidation(
         ? [
             {
               name: "TypeError",
-              message: `Value does not match ISO 8601 standard date string`,
+              message: $t('index.8f09ff8f65bebcad'),
             },
           ]
         : [{ name: "", message: "" }],
@@ -89,7 +90,7 @@ function minDateValidation(
         {
           name: "TypeError",
           message:
-            `Value does not match: Date String ` +
+            $t('index.bef936ad88a1e95f') +
             (dateFormat ? dateFormat : ""),
         },
       ],
@@ -125,7 +126,7 @@ function minDateValidation(
         {
           name: "TypeError",
           message:
-            `Value does not match: Date String ` +
+            $t('index.bef936ad88a1e95f') +
             (dateFormat ? dateFormat : ""),
         },
       ],
@@ -159,7 +160,7 @@ function maxDateValidation(
         {
           name: "TypeError",
           message:
-            `Value does not match type: Date String ` +
+            $t('index.a247d7aada4c1c5c') +
             (dateFormat ? dateFormat : ""),
         },
       ],
@@ -195,7 +196,7 @@ function maxDateValidation(
         {
           name: "TypeError",
           message:
-            `Value does not match type: Date String ` +
+            $t('index.a247d7aada4c1c5c') +
             (dateFormat ? dateFormat : ""),
         },
       ],
@@ -242,7 +243,7 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Datepicker is used to capture the date and time from a user. It can be used to filter data base on the input date range as well as to capture personal information such as date of birth",
+        $t('index.ab95e9777c6bc0f9'),
       "!url": "https://docs.appsmith.com/widget-reference/datepicker",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       selectedDate: "string",
@@ -253,13 +254,13 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.20915c13ace6f674'),
         children: [
           {
             propertyName: "defaultDate",
-            label: "Default Date",
+            label: $t('index.0681e3aa2d544e53'),
             helpText:
-              "Sets the default date of the widget. The date is updated if the default date changes",
+              $t('index.a54d2152dff943f3'),
             controlType: "DATE_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -278,9 +279,9 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
             dependencies: ["dateFormat"],
           },
           {
-            helpText: "Sets the format of the selected date",
+            helpText: $t('index.b1e6aba8cace8e8c'),
             propertyName: "dateFormat",
-            label: "Date format",
+            label: $t('index.a79509f4e7c57d08'),
             controlType: "DROP_DOWN",
             isJSConvertible: true,
             options: [
@@ -311,8 +312,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
           },
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.bf463b6a55128d42'),
+            helpText: $t('index.b32e3e0b84f71f1a'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -321,8 +322,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.7bb8e2ad1e368ef8'),
+            helpText: $t('index.ae9f657854aceb90'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -331,8 +332,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.6915023a79fdf89e'),
+            helpText: $t('index.c934d29756f676b1'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -341,9 +342,9 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.b0867963c9e19276'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.e7bb98e0e8b7ec36'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -352,8 +353,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
           },
           {
             propertyName: "minDate",
-            label: "Min Date",
-            helpText: "Defines the min date for this widget",
+            label: $t('index.21a7d949ac25ef8c'),
+            helpText: $t('index.8248ff6c5f79428a'),
             controlType: "DATE_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -373,8 +374,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
           },
           {
             propertyName: "maxDate",
-            label: "Max Date",
-            helpText: "Defines the max date for this widget",
+            label: $t('index.48e1bab2b697a6a9'),
+            helpText: $t('index.c4fc1e3c0347bb39'),
             controlType: "DATE_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -395,7 +396,7 @@ class DatePickerWidget extends BaseWidget<DatePickerWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.bcd095ee31ba321d'),
         children: [
           {
             propertyName: "onDateSelected",

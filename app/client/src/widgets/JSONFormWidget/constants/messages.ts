@@ -1,16 +1,17 @@
+import {$t} from "locale/index";
 // JSON Form
 
 export const JSON_FORM_CONNECT_OVERLAY_TEXT = () =>
-  "Generate a form from a datasource or write a JSON schema";
-export const JSON_FORM_CONNECT_BUTTON_TEXT = () => "Generate form";
+  $t('messages.4af1b63047855b67');
+export const JSON_FORM_CONNECT_BUTTON_TEXT = () => $t('messages.1ba4e9ef4ec7f668');
 export const SUCCESSFULL_BINDING_MESSAGE = (action: string) =>
-  `Successfully ${action}! Refresh the table to see updates`;
+  $t('messages.f1eace9a70779a2a', {action: action});
 export const ONSUBMIT_NOT_CONFIGURED_MESSAGE = (widgetName: string) =>
   `onSubmit event is not configured for ${widgetName}`;
-export const ONSUBMIT_NOT_CONFIGURED_ACTION_TEXT = () => "Learn more";
+export const ONSUBMIT_NOT_CONFIGURED_ACTION_TEXT = () => $t('messages.56e47fcbe3b05ff5');
 
 export const NO_CONNECTABLE_WIDGET_FOUND = () =>
-  "Add a table or list widget with data to get the values from";
+  $t('messages.8c729a04532a3240');
 
 export const ONSUBMIT_NOT_CONFIGURED_ACTION_URL = () =>
   "https://docs.appsmith.com/build-apps/how-to-guides/submit-form-data";

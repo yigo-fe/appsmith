@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Dispatch } from "react";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import { ReduxActionTypes } from "ee/constants/ReduxActionConstants";
@@ -19,14 +20,14 @@ export const config: AdminConfigType = {
   type: SettingCategories.VERSION,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.GROUP,
-  title: "Version",
+  title: $t('version.78bb397bcf8a56a7'),
   canSave: false,
   settings: [
     {
       id: "APPSMITH_CURRENT_VERSION",
       category: SettingCategories.VERSION,
       controlType: SettingTypes.TEXT,
-      label: "Current version",
+      label: $t('version.0e1a4e4292cb8896'),
     },
     {
       id: "APPSMITH_VERSION_READ_MORE",
@@ -39,7 +40,7 @@ export const config: AdminConfigType = {
       },
       category: SettingCategories.VERSION,
       controlType: SettingTypes.CALLOUT,
-      label: "Release notes",
+      label: $t('version.fc84e9f9eb2dd859'),
     },
   ].filter((setting) =>
     isAirgappedInstance ? setting.id !== "APPSMITH_VERSION_READ_MORE" : true,

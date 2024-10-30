@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useRef } from "react";
 import styled from "styled-components";
 import type { EditorTheme } from "./EditorConfig";
@@ -48,8 +49,8 @@ function BindingPrompt(props: {
         <>
           Type <span>{props.showLightningMenu === false ? "{{" : "/"}</span>{" "}
           {props.showLightningMenu === false
-            ? "to see a list of variables"
-            : "to access quick commands"}
+            ? $t('BindingPrompt.9c6135b08287741f')
+            : $t('BindingPrompt.b6977cf64285609c')}
         </>
       )}
     </Wrapper>

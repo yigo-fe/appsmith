@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { selectFeatureFlagCheck } from "ee/selectors/featureFlagsSelectors";
 import { AnimatedLayout, UnanimatedLayout } from "./Layout";
@@ -25,6 +26,6 @@ function IDE() {
   return <UnanimatedLayout />;
 }
 
-IDE.displayName = "AppIDE";
+IDE.displayName = $t('index.a8511fb7ba98929e');
 
 export default React.memo(IDE);

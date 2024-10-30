@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ControlType } from "constants/PropertyControlConstants";
 import type {
   ControlBuilder,
@@ -70,7 +71,7 @@ class PropertyControlFactory {
     } else {
       const ex: ControlCreationException = {
         message:
-          "Control Builder not registered for control type " +
+          $t('PropertyControlFactory.09a9a594ea811fbc') +
           controlData.controlType,
       };
 

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as Sentry from "@sentry/react";
 
 //Following function is the fix for the missing where key
@@ -48,7 +49,7 @@ export function getPathAndValueFromActionDiffObject(actionObjectDiff: any) {
               return acc;
             } catch (error) {
               Sentry.captureException({
-                message: `Adding key: where failed, cannot create path`,
+                message: $t('getPathAndValueFromActionDiffObject.9fde19d59c6c88fc'),
                 oldData: actionObjectDiff,
               });
             }

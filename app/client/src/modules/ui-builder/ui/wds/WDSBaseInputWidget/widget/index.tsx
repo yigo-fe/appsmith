@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import BaseWidget from "widgets/BaseWidget";
 import type { WidgetState } from "widgets/BaseWidget";
 import type { WidgetType } from "constants/WidgetConstants";
@@ -20,7 +21,7 @@ class WDSBaseInputWidget<
 
   static getConfig(): WidgetBaseConfiguration {
     return {
-      name: "Input",
+      name: $t('index.5cb58afe84425926'),
       hideCard: true,
       needsMeta: true,
     };
@@ -28,8 +29,8 @@ class WDSBaseInputWidget<
 
   static getDefaults() {
     return {
-      label: "Label",
-      widgetName: "Input",
+      label: $t('index.931cde9f8b35da14'),
+      widgetName: $t('index.5cb58afe84425926'),
       iconAlign: "left",
       defaultText: "",
       autoFocus: false,

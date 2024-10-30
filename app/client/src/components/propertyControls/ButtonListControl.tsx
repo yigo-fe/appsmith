@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { ControlProps } from "./BaseControl";
 import BaseControl from "./BaseControl";
@@ -108,7 +109,7 @@ class ButtonListControl extends BaseControl<
             DraggableListCard({
               ...props,
               isDelete: true,
-              placeholder: "Button label",
+              placeholder: $t('ButtonListControl.3e10cc2b07224d8d'),
             })
           }
           toggleVisibility={this.toggleVisibility}
@@ -207,7 +208,7 @@ class ButtonListControl extends BaseControl<
         id: newGroupButtonId,
         index: groupButtonsArray.length,
         label: isSeparator
-          ? "Separator"
+          ? $t('ButtonListControl.98b7fea2c9267d97')
           : createMessage(BUTTON_WIDGET_DEFAULT_LABEL),
         widgetId: generateReactKey(),
         isDisabled: false,

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Icon, MenuItem } from "@appsmith/ads";
 import React from "react";
 import styled from "styled-components";
@@ -69,9 +70,7 @@ export function LoadMoreOptions(props: LoadmoreProps) {
           }}
         >
           <DropdownOption
-            label={`Load ${
-              props.count - DEFAULT_QUERY_OPTIONS_COUNTS_TO_SHOW
-            } more`}
+            label={$t('DropdownOption.3a360605d5e97e85')}
             leftIcon={<Icon name="context-menu" size="md" />}
           />
         </div>

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   ApplicationVersion,
   updateApplication,
@@ -200,7 +201,7 @@ function ManualUpgrades(props: {
       className={classNames({
         relative: true,
         "inline-block": props.inline,
-        padding: "9px 16px",
+        padding: $t('ManualUpgrades.933b451ddc22c0bf'),
         "border-left": "1px solid #e7e7e7",
       })}
       data-testid="update-indicator"

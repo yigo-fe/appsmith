@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 export const API_EDITOR_FORM_NAME = "ApiEditorForm";
 export const CREATE_APPLICATION_FORM_NAME = "CreateApplicationForm";
 export const INVITE_USERS_TO_WORKSPACE_FORM = "InviteUsersToWorkspaceForm";
@@ -12,7 +13,7 @@ export const FORGOT_PASSWORD_FORM_NAME = "ForgotPasswordForm";
 export const RESET_PASSWORD_FORM_NAME = "ResetPasswordForm";
 export const CREATE_PASSWORD_FORM_NAME = "CreatePasswordForm";
 
-export const CREATE_WORKSPACE_FORM_NAME = "New workspace";
+export const CREATE_WORKSPACE_FORM_NAME = $t('forms.d9abb4e873352a75');
 export const CURL_IMPORT_FORM = "CurlImportForm";
 
 export const QUERY_EDITOR_FORM_NAME = "QueryEditorForm";

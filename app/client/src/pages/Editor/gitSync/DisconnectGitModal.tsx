@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useState } from "react";
 import {
   getDisconnectDocUrl,
@@ -113,7 +114,7 @@ function DisconnectGitModal() {
             kind="error"
             links={[
               {
-                children: "Learn more",
+                children: $t('DisconnectGitModal.f2322981f87e705d'),
                 to: gitDisconnectDocumentUrl,
                 className: "t--disconnect-learn-more",
               },

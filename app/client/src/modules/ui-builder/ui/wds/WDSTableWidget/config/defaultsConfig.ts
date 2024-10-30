@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { InlineEditingSaveOptions } from "../constants";
 import {
   BlueprintOperationTypes,
@@ -16,7 +17,7 @@ export const defaultsConfig = {
   animateLoading: true,
   defaultSelectedRowIndex: 0,
   defaultSelectedRowIndices: [0],
-  label: "Data",
+  label: $t('defaultsConfig.e08cbbe50ada5f4b'),
   widgetName: "Table",
   searchKey: "",
   horizontalAlignment: "start",
@@ -39,7 +40,7 @@ export const defaultsConfig = {
   version: 1,
   inlineEditingSaveOption: InlineEditingSaveOptions.ROW_LEVEL,
   pageSize: 8,
-  buttonLabel: "Action",
+  buttonLabel: $t('defaultsConfig.8608bcb0f23a9a13'),
   buttonColor: "accent",
   buttonVariant: "filled",
   isVisible: true,

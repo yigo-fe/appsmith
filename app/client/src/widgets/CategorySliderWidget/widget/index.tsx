@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as React from "react";
 
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
@@ -56,7 +57,7 @@ class CategorySliderWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Category Slider",
+      name: $t('index.99e9b9f16e6f3a5a'),
       needsMeta: true,
       searchTags: ["range"],
       iconSVG: IconSVG,
@@ -85,7 +86,7 @@ class CategorySliderWidget extends BaseWidget<
       shouldTruncate: false,
       version: 1,
       animateLoading: true,
-      labelText: "Size",
+      labelText: $t('index.c8e2772bc58fe7b0'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
@@ -145,7 +146,7 @@ class CategorySliderWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Category slider widget is used to capture user feedback from a range of categories",
+        $t('index.f1fb8cc0296bce3c'),
       "!url": "https://docs.appsmith.com/widget-reference/circular-progress",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       value: "string",

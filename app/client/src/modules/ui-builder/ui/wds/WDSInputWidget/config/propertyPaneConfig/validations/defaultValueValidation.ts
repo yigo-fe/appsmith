@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { LoDashStatic } from "lodash";
 
 import type { InputWidgetProps } from "../../../widget/types";
@@ -9,11 +10,11 @@ export function defaultValueValidation(
 ) {
   const STRING_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be string",
+    message: $t('defaultValueValidation.27e50fb6fddfb5a2'),
   };
   const NUMBER_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be number",
+    message: $t('defaultValueValidation.a54877113ab5543f'),
   };
   const EMPTY_ERROR_MESSAGE = { name: "", message: "" };
 

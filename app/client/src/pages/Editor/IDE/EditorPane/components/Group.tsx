@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useMemo, useState } from "react";
 import type { GroupedListProps } from "./types";
 import { DEFAULT_GROUP_LIST_SIZE } from "./constants";
@@ -40,7 +41,7 @@ const Group: React.FC<GroupProps> = ({ group }) => {
 
     if (hasMoreItems) {
       items.push({
-        title: "Load more...",
+        title: $t('Group.64b8f25919b26d8b'),
         description: "",
         descriptionType: "inline",
         onClick: handleLoadMore,

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useContext, useMemo } from "react";
 import { Icon } from "@appsmith/ads";
 import history from "utils/history";
@@ -43,9 +44,9 @@ function useOtherOptions(props: OtherOptionsProps) {
 
     options.push({
       icon: <Icon name="plus" size="md" />,
-      id: "Connect new datasource",
-      label: "Connect new datasource",
-      value: "Connect new datasource",
+      id: $t('useOtherOptions.a8943d94480b647d'),
+      label: $t('useOtherOptions.a8943d94480b647d'),
+      value: $t('useOtherOptions.a8943d94480b647d'),
       onSelect: () => {
         history.push(
           integrationEditorURL({
@@ -58,7 +59,7 @@ function useOtherOptions(props: OtherOptionsProps) {
           widgetName: widget.widgetName,
           widgetType: widget.type,
           propertyName: propertyName,
-          selectedAction: "Connect new datasource",
+          selectedAction: $t('useOtherOptions.a8943d94480b647d'),
         });
 
         const entryPoint = DatasourceCreateEntryPoints.ONE_CLICK_BINDING;
@@ -72,9 +73,9 @@ function useOtherOptions(props: OtherOptionsProps) {
     if (sampleData) {
       options.push({
         icon: <Icon name="code" size="md" />,
-        id: "Sample data",
-        label: "Sample data",
-        value: "Sample data",
+        id: $t('useOtherOptions.ff155b4817bfc913'),
+        label: $t('useOtherOptions.ff155b4817bfc913'),
+        value: $t('useOtherOptions.ff155b4817bfc913'),
         onSelect: () => {
           addBinding(sampleData, false);
 
@@ -89,7 +90,7 @@ function useOtherOptions(props: OtherOptionsProps) {
             widgetName: widget.widgetName,
             widgetType: widget.type,
             propertyName: propertyName,
-            selectedAction: "Sample data",
+            selectedAction: $t('useOtherOptions.ff155b4817bfc913'),
           });
         },
       });

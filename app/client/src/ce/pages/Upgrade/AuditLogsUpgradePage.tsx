@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { Carousel, Header } from "./types";
 import UpgradePage from "./UpgradePage";
@@ -29,7 +30,7 @@ export function AuditLogsUpgradePage() {
   });
 
   const header: Header = {
-    heading: createMessage(INTRODUCING, "audit logs"),
+    heading: createMessage(INTRODUCING, $t('AuditLogsUpgradePage.5e83ba9983ece57b')),
     subHeadings: [createMessage(AUDIT_LOGS_UPGRADE_PAGE_SUB_HEADING)],
   };
   const carousel: Carousel = {
@@ -77,7 +78,7 @@ export function AuditLogsUpgradePage() {
     onClick: () => {
       onUpgrade();
     },
-    message: createMessage(EXCLUSIVE_TO_BUSINESS, ["audit logs"]),
+    message: createMessage(EXCLUSIVE_TO_BUSINESS, [$t('AuditLogsUpgradePage.5e83ba9983ece57b')]),
   };
   const props = { header, carousel, footer };
 

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { WidgetDefaultProps } from "WidgetProvider/constants";
 import {
   BlueprintOperationTypes,
@@ -18,11 +19,11 @@ export const defaultsConfig = {
   showFooter: true,
   showHeader: true,
   size: "medium",
-  title: "Modal Title",
+  title: $t('defaultsConfig.37904dc4b8e523be'),
   showSubmitButton: true,
   closeOnSubmit: true,
-  submitButtonText: "Save Changes",
-  cancelButtonText: "Cancel",
+  submitButtonText: $t('defaultsConfig.f9518143fde24505'),
+  cancelButtonText: $t('defaultsConfig.4c5ea3f9dbf72ef3'),
   blueprint: {
     operations: [
       {

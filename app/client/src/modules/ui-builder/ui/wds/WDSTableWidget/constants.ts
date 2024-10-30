@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   ColumnProperties,
   CompactMode,
@@ -176,11 +177,11 @@ export const FilterableColumnTypes = [
 
 export const DEFAULT_BUTTON_COLOR = "rgb(3, 179, 101)";
 
-export const DEFAULT_BUTTON_LABEL = "Action";
+export const DEFAULT_BUTTON_LABEL = $t('constants.fceb7245af561b30');
 
 export const DEFAULT_MENU_VARIANT = "PRIMARY";
 
-export const DEFAULT_MENU_BUTTON_LABEL = "Open menu";
+export const DEFAULT_MENU_BUTTON_LABEL = $t('constants.69c7ef68dcca50c7');
 
 export interface TransientDataPayload {
   [key: string]: string | number | boolean;
@@ -226,7 +227,7 @@ export const defaultEditableCell = {
   initialValue: "",
 };
 
-export const DEFAULT_COLUMN_NAME = "Table Column";
+export const DEFAULT_COLUMN_NAME = $t('constants.975094d069424f03');
 
 export const ALLOW_TABLE_WIDGET_SERVER_SIDE_FILTERING =
   FEATURE_FLAG["release_table_serverside_filtering_enabled"];

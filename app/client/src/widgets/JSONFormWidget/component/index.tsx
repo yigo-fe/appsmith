@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { PropsWithChildren } from "react";
 import React, { Fragment } from "react";
 import styled from "styled-components";
@@ -176,8 +177,8 @@ function JSONFormComponent<TValues>(
         <InfoMessage fixHeight={fixMessageHeight}>
           Source data exceeds {MAX_ALLOWED_FIELDS} fields.&nbsp;
           {renderMode === RenderModes.PAGE
-            ? "Please contact your developer for more information"
-            : "Please update the source data."}
+            ? $t('index.9bd43825f2f75147')
+            : $t('index.dad5676908f38cbe')}
         </InfoMessage>
       );
     }

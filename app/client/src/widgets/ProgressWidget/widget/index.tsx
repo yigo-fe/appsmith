@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import type { DerivedPropertiesMap } from "WidgetProvider/factory";
@@ -24,7 +25,7 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Progress", // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
+      name: $t('index.be5e12a8ae46d355'), // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.CONTENT],
@@ -36,7 +37,7 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
 
   static getDefaults() {
     return {
-      widgetName: "Progress",
+      widgetName: $t('index.be5e12a8ae46d355'),
       rows: 4,
       columns: 28,
       fillColor: Colors.GREEN,
@@ -89,31 +90,31 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Basic",
+        sectionName: $t('index.a86b078926a58596'),
         children: [
           {
             helpText:
-              "Determines if progress indicator will be determinate or not",
+              $t('index.5eb294f7bb7a52c4'),
             propertyName: "isIndeterminate",
-            label: "Infinite loading",
+            label: $t('index.3986f79363d33d77'),
             controlType: "SWITCH",
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Determines the shape of the progress indicator",
+            helpText: $t('index.8275470eb197f59c'),
             propertyName: "progressType",
-            label: "Type",
+            label: $t('index.891b4f967de0356d'),
             controlType: "ICON_TABS",
             fullWidth: true,
             options: [
               {
-                label: "Circular",
+                label: $t('index.85b24c1b03d5a00e'),
                 value: ProgressType.CIRCULAR,
               },
               {
-                label: "Linear",
+                label: $t('index.e422c187115a68b9'),
                 value: ProgressType.LINEAR,
               },
             ],
@@ -123,11 +124,11 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
             hidden: isAutoLayout,
           },
           {
-            helpText: "Sets the value of the progress indicator",
+            helpText: $t('index.71e81dbfe804ac53'),
             propertyName: "progress",
-            label: "Progress",
+            label: $t('index.be5e12a8ae46d355'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter progress value",
+            placeholderText: $t('index.e34429f6df1316a0'),
             isBindProperty: true,
             isTriggerProperty: false,
             defaultValue: 50,
@@ -141,14 +142,14 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.064453b1c408ecee'),
         children: [
           {
-            helpText: "Sets the number of steps",
+            helpText: $t('index.513487298d5e695e'),
             propertyName: "steps",
-            label: "Number of steps",
+            label: $t('index.ba2d6eade8cbab7d'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter number of steps",
+            placeholderText: $t('index.5b78f218e77727d1'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -165,9 +166,9 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
             dependencies: ["isIndeterminate"],
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.8c194d878c9dff79'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.c34a752217052903'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -176,7 +177,7 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
           },
           {
             propertyName: "counterClockwise",
-            helpText: "Whether to rotate in counterclockwise direction",
+            helpText: $t('index.187fe764be9dcb3b'),
             label: "Counterclockwise",
             controlType: "SWITCH",
             isBindProperty: true,
@@ -189,9 +190,9 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Controls the visibility with the value of progress indicator",
+              $t('index.39f5a57e3553fa80'),
             propertyName: "showResult",
-            label: "Show result",
+            label: $t('index.e4a3e226baa948fe'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -208,7 +209,7 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Progress indicators commonly known as spinners, express an unspecified wait time or display the length of a process.",
+        $t('index.b2d66f26b14bbf98'),
       "!url": "https://docs.appsmith.com/widget-reference/progress",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       progress: "number",
@@ -218,12 +219,12 @@ class ProgressWidget extends BaseWidget<ProgressWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Color",
+        sectionName: $t('index.fc0dc86ab730c4a3'),
         children: [
           {
-            helpText: "Sets the color of the progress indicator",
+            helpText: $t('index.40fb6b000755c411'),
             propertyName: "fillColor",
-            label: "Fill color",
+            label: $t('index.f7cb9f2d89f9f2f4'),
             controlType: "COLOR_PICKER",
             defaultColor: Colors.GREEN,
             isBindProperty: true,

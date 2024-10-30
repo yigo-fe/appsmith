@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Field } from "redux-form";
@@ -112,7 +113,7 @@ export default function DetailsForm(
                 data-testid="firstName"
                 label={createMessage(WELCOME_FORM_FIRST_NAME)}
                 name="firstName"
-                placeholder="John"
+                placeholder={$t('DetailsForm.492c944d4b3c8a1d')}
                 type="text"
               />
             </StyledFormGroup>
@@ -122,7 +123,7 @@ export default function DetailsForm(
                 data-testid="lastName"
                 label={createMessage(WELCOME_FORM_LAST_NAME)}
                 name="lastName"
-                placeholder="Doe"
+                placeholder={$t('DetailsForm.45ad6bb8c55367a8')}
                 type="text"
               />
             </StyledFormGroup>
@@ -132,7 +133,7 @@ export default function DetailsForm(
               data-testid="email"
               label={createMessage(WELCOME_FORM_EMAIL_ID)}
               name="email"
-              placeholder="How can we reach you?"
+              placeholder={$t('DetailsForm.689574e7e9a814c3')}
               type="email"
             />
           </StyledFormGroup>
@@ -141,7 +142,7 @@ export default function DetailsForm(
               data-testid="password"
               label={createMessage(WELCOME_FORM_CREATE_PASSWORD)}
               name="password"
-              placeholder="Make it strong!"
+              placeholder={$t('DetailsForm.2db51ed6a498c0bc')}
               type="password"
             />
           </StyledFormGroup>
@@ -150,7 +151,7 @@ export default function DetailsForm(
               data-testid="verifyPassword"
               label={createMessage(WELCOME_FORM_VERIFY_PASSWORD)}
               name="verifyPassword"
-              placeholder="Type correctly"
+              placeholder={$t('DetailsForm.8c3980f19ec2b54c')}
               type="password"
             />
           </StyledFormGroup>

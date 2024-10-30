@@ -1,14 +1,15 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { isAutoLayout } from "layoutSystems/autolayout/utils/flexWidgetUtils";
 
 export default [
   {
-    sectionName: "General",
+    sectionName: $t('styleConfig.6d72040531c01c18'),
     children: [
       {
-        helpText: "Controls the size of the slider",
+        helpText: $t('styleConfig.55645819b3ffa027'),
         propertyName: "sliderSize",
-        label: "Size",
+        label: $t('styleConfig.2fc1f104366785a5'),
         controlType: "ICON_TABS",
         fullWidth: true,
         defaultValue: "m",
@@ -36,12 +37,12 @@ export default [
     ],
   },
   {
-    sectionName: "Label styles",
+    sectionName: $t('styleConfig.45a13c1bb0190088'),
     children: [
       {
         propertyName: "labelTextColor",
-        label: "Font color",
-        helpText: "Control the color of the label associated",
+        label: $t('styleConfig.f6f419d7f6fc9e42'),
+        helpText: $t('styleConfig.4e909c65c8be6b96'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -50,8 +51,8 @@ export default [
       },
       {
         propertyName: "labelTextSize",
-        label: "Font size",
-        helpText: "Control the font size of the label associated",
+        label: $t('styleConfig.a46607052017e8ab'),
+        helpText: $t('styleConfig.d01199a55905cb59'),
         controlType: "DROP_DOWN",
         defaultValue: "0.875rem",
         hidden: isAutoLayout,
@@ -94,8 +95,8 @@ export default [
       },
       {
         propertyName: "labelStyle",
-        label: "Emphasis",
-        helpText: "Control if the label should be bold or italics",
+        label: $t('styleConfig.de035aa046078ddb'),
+        helpText: $t('styleConfig.f73b9481644799b4'),
         controlType: "BUTTON_GROUP",
         options: [
           {
@@ -115,12 +116,12 @@ export default [
     ],
   },
   {
-    sectionName: "Color",
+    sectionName: $t('styleConfig.c62603c89f6cc94e'),
     children: [
       {
-        helpText: "Sets the fill color of the widget",
+        helpText: $t('styleConfig.c91ad45e480aee1f'),
         propertyName: "accentColor",
-        label: "Fill color",
+        label: $t('styleConfig.4f663e3bd1669ec9'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,

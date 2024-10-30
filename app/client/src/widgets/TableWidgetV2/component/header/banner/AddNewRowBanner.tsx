@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ButtonVariantTypes } from "components/constants";
 import styled from "styled-components";
 import React, { useState } from "react";
@@ -59,7 +60,7 @@ function AddNewRowBannerComponent(props: AddNewRowBannerType) {
               setIsDiscardLoading(false),
             );
           }}
-          text="Discard"
+          text=$t('AddNewRowBanner.0df6f5728c7183fd')
         />
         <BaseButton
           borderRadius={props.borderRadius}
@@ -76,7 +77,7 @@ function AddNewRowBannerComponent(props: AddNewRowBannerType) {
               setIsSaveLoading(false),
             );
           }}
-          text="Save row"
+          text=$t('AddNewRowBanner.af50b32d2ccaf9f1')
         />
       </ActionContainer>
     </Container>

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { APP_MAX_WIDTH, type AppMaxWidth } from "@appsmith/wds-theming";
 import { Option, Select } from "@appsmith/ads";
 import React from "react";
@@ -10,11 +11,11 @@ interface AppMaxWidthSelectProps {
 const resolveOptionLabelText = (option: AppMaxWidth) => {
   switch (option) {
     case APP_MAX_WIDTH.Unlimited:
-      return "Unlimited";
+      return $t('AppMaxWidthSelect.0d5948681ae82d32');
     case APP_MAX_WIDTH.Large:
-      return "Large";
+      return $t('AppMaxWidthSelect.5a73ee6ca423febc');
     case APP_MAX_WIDTH.Medium:
-      return "Medium";
+      return $t('AppMaxWidthSelect.410ad5f5090fdbfd');
     default: {
       const exhaustiveCheck: never = option;
 

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { call, delay, put, select } from "redux-saga/effects";
 import { getWidgetByID } from "sagas/selectors";
 import type { WidgetProps } from "widgets/BaseWidget";
@@ -52,7 +53,7 @@ export default class PropertyPaneNavigation extends PaneNavigation {
       getWidgetByID(this.entityInfo?.id),
     );
 
-    if (!widget) throw Error(`Couldn't find widget with ${this.entityInfo.id}`);
+    if (!widget) throw Error($t('index.234131aff5cab37e', {this_entityInfo_id: this.entityInfo.id}));
 
     this.widget = widget;
   }

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { LabelPosition } from "components/constants";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
@@ -73,7 +74,7 @@ class MultiSelectTreeWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Multi TreeSelect",
+      name: $t('index.239b6c81b5544497'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.SELECT],
@@ -100,21 +101,21 @@ class MultiSelectTreeWidget extends BaseWidget<
       animateLoading: true,
       options: [
         {
-          label: "Blue",
+          label: $t('index.bb541be824dd8ecc'),
           value: "BLUE",
           children: [
             {
-              label: "Dark Blue",
+              label: $t('index.4c10b3d54e8b9e66'),
               value: "DARK BLUE",
             },
             {
-              label: "Light Blue",
+              label: $t('index.42d6ea398362e766'),
               value: "LIGHT BLUE",
             },
           ],
         },
-        { label: "Green", value: "GREEN" },
-        { label: "Red", value: "RED" },
+        { label: $t('index.2456fd5221fc6a7e'), value: "GREEN" },
+        { label: $t('index.fae87d1ee158a019'), value: "RED" },
       ],
       widgetName: "MultiTreeSelect",
       defaultOptionValue: ["GREEN"],
@@ -124,8 +125,8 @@ class MultiSelectTreeWidget extends BaseWidget<
       isDisabled: false,
       allowClear: false,
       expandAll: false,
-      placeholderText: "Select option(s)",
-      labelText: "Label",
+      placeholderText: $t('index.e1407081bc845aa2'),
+      labelText: $t('index.9adae44ff1cb18e7'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
@@ -178,17 +179,17 @@ class MultiSelectTreeWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Multi TreeSelect is used to capture user inputs from a specified list of permitted inputs/Nested Inputs. A TreeSelect can capture a single choice as well as multiple choices",
+        $t('index.66e134899ef52eb6'),
       "!url": "https://docs.appsmith.com/widget-reference/treeselect",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       selectedOptionValues: {
         "!type": "[string]",
-        "!doc": "The array of values selected in a treeselect dropdown",
+        "!doc": $t('index.38ce87497f701811'),
         "!url": "https://docs.appsmith.com/widget-reference/treeselect",
       },
       selectedOptionLabels: {
         "!type": "[string]",
-        "!doc": "The array of selected option labels in a treeselect dropdown",
+        "!doc": $t('index.2b3606fd0ec5de33'),
         "!url": "https://docs.appsmith.com/widget-reference/treeselect",
       },
       isDisabled: "bool",
@@ -200,15 +201,15 @@ class MultiSelectTreeWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.aee785be2b4489e7'),
         children: [
           {
             helpText:
-              "Allows users to select multiple options. Values must be unique",
+              $t('index.a9f6ac31a542193e'),
             propertyName: "options",
-            label: "Options",
+            label: $t('index.0972818a5f328b4a'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter option value",
+            placeholderText: $t('index.b1946a1516dc3e3f'),
             isBindProperty: true,
             isTriggerProperty: false,
             isJSConvertible: false,
@@ -274,11 +275,11 @@ class MultiSelectTreeWidget extends BaseWidget<
               EvaluationSubstitutionType.SMART_SUBSTITUTE,
           },
           {
-            helpText: "Selects the option with value by default",
+            helpText: $t('index.312ef0ff2484ddd0'),
             propertyName: "defaultOptionValue",
-            label: "Default selected values",
+            label: $t('index.d496827e0a30fe3b'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter option value",
+            placeholderText: $t('index.b1946a1516dc3e3f'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -296,29 +297,29 @@ class MultiSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.9adae44ff1cb18e7'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.865f432428ce954d'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.81c7a09468db25b9'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.948e76080d2b2555'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.3c0da170b6cda2d7'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.26f458327aaefc94'),
             controlType: "ICON_TABS",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.59bb50f7bcf5c1cf'), value: LabelPosition.Auto },
+              { label: $t('index.bc62ea369972da42'), value: LabelPosition.Left },
+              { label: $t('index.140d93c39badb907'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -326,9 +327,9 @@ class MultiSelectTreeWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.47654dd8c4a4c8a5'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.0a338a12306314ee'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -350,9 +351,9 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.0c3791426d73c1c9'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.b2405df01abf90af'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -371,12 +372,12 @@ class MultiSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.6481edf98236c85e'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.855f038f26528785'),
+            helpText: $t('index.d2028084d627cb39'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -386,34 +387,34 @@ class MultiSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.7ff323c97d38bd5c'),
         children: [
           {
-            helpText: "Show help text or details about current selection",
+            helpText: $t('index.92a79c15ed817ecb'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.94bd1e73ec77f349'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Add tooltip text here",
+            placeholderText: $t('index.89b750f215cc2011'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Mode to Display options",
+            helpText: $t('index.902f41c6f582c4c3'),
             propertyName: "mode",
-            label: "Mode",
+            label: $t('index.7747807945d0dd17'),
             controlType: "DROP_DOWN",
             options: [
               {
-                label: "Display only parent items",
+                label: $t('index.3bd7d01c80d727ca'),
                 value: "SHOW_PARENT",
               },
               {
-                label: "Display only child items",
+                label: $t('index.6c740271ab4e3aa2'),
                 value: "SHOW_CHILD",
               },
               {
-                label: "Display all items",
+                label: $t('index.0e629c543d1784fd'),
                 value: "SHOW_ALL",
               },
             ],
@@ -421,19 +422,19 @@ class MultiSelectTreeWidget extends BaseWidget<
             isTriggerProperty: false,
           },
           {
-            helpText: "Sets a Placeholder Text",
+            helpText: $t('index.32c301c2ef979b78'),
             propertyName: "placeholderText",
-            label: "Placeholder",
+            label: $t('index.02863a3db32b4c45'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter placeholder text",
+            placeholderText: $t('index.9921476c9a1c4a83'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.d29440bcaa711d1a'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.2e79877f87c815cc'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -442,8 +443,8 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.d1ab01113e915823'),
+            helpText: $t('index.2cac24253b28b3e5'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -452,9 +453,9 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.7fcb6729dbfc12c8'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.aebefe45421b1434'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -463,8 +464,8 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "allowClear",
-            label: "Allow clearing value",
-            helpText: "Enables Icon to clear all Selections",
+            label: $t('index.b1607f7586bc1e21'),
+            helpText: $t('index.904e1423fe887416'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -473,8 +474,8 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "expandAll",
-            label: "Expand all by default",
-            helpText: "Expand All nested options",
+            label: $t('index.c5a87c22f7ba4f55'),
+            helpText: $t('index.fbe8c879bba2d430'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -484,10 +485,10 @@ class MultiSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.67efdd219e5fa47c'),
         children: [
           {
-            helpText: "when a user selects an option",
+            helpText: $t('index.cd14db37c9458c05'),
             propertyName: "onOptionChange",
             label: "onOptionChange",
             controlType: "ACTION_SELECTOR",
@@ -496,7 +497,7 @@ class MultiSelectTreeWidget extends BaseWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "when the dropdown opens",
+            helpText: $t('index.06af1619d89ad841'),
             propertyName: "onDropdownOpen",
             label: "onDropdownOpen",
             controlType: "ACTION_SELECTOR",
@@ -505,7 +506,7 @@ class MultiSelectTreeWidget extends BaseWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "when the dropdown closes",
+            helpText: $t('index.063cd4b982299b1c'),
             propertyName: "onDropdownClose",
             label: "onDropdownClose",
             controlType: "ACTION_SELECTOR",
@@ -521,12 +522,12 @@ class MultiSelectTreeWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.b34718f12deb0eba'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.1e807d65c1d751f5'),
+            helpText: $t('index.8c7d25fab7fcc861'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -535,8 +536,8 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.d4d5fa1b797a1e40'),
+            helpText: $t('index.ca43fd53cde313a3'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             hidden: isAutoLayout,
@@ -579,8 +580,8 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.7e470e67c1ca90fd'),
+            helpText: $t('index.e4e801a59df4ad2e'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -600,11 +601,11 @@ class MultiSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.4ef1aa37f9dc1cff'),
         children: [
           {
             propertyName: "accentColor",
-            label: "Accent color",
+            label: $t('index.44cd0f7a4da868ee'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -614,9 +615,9 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.f4ae54ccf23c857b'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.330ec56acd090614'),
             controlType: "BORDER_RADIUS_OPTIONS",
 
             isJSConvertible: true,
@@ -626,9 +627,9 @@ class MultiSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.632e8bd6587804b1'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.91f51e4a3ec2a953'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

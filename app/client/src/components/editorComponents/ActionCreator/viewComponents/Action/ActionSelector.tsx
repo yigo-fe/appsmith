@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Popover2 } from "@blueprintjs/popover2";
 import { isModalOpenSelector } from "components/editorComponents/GlobalSearch";
 import type { TreeDropdownOption } from "@appsmith/ads-old";
@@ -157,7 +158,7 @@ function ActionSelectorForm(props: TActionSelectorFormProps) {
     >
       <div className="flex mb-2 w-full justify-between px-3 mt-3 items-center">
         <Text className="mt-2" kind="heading-xs">
-          {isChainedAction ? "Configure action" : label}
+          {isChainedAction ? $t('ActionSelector.9474cf1b6d73ab43') : label}
         </Text>
         <div className="flex flex-row gap-1">
           <Button

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { FieldType } from "widgets/JSONFormWidget/constants";
 import type { HiddenFnParams } from "../helper";
@@ -8,8 +9,8 @@ const PROPERTIES = {
     data: [
       {
         propertyName: "defaultValue",
-        label: "Default Selected",
-        helpText: "Sets the On/Off default state of the field",
+        label: $t('switch.a79bf19d6ecca0bb'),
+        helpText: $t('switch.4abaec36f29c3c0b'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -24,8 +25,8 @@ const PROPERTIES = {
     label: [
       {
         propertyName: "alignWidget",
-        helpText: "Sets the position of the field",
-        label: "Position",
+        helpText: $t('switch.39e61f5ca088561e'),
+        label: $t('switch.b34f0acb99922605'),
         controlType: "ICON_TABS",
         defaultValue: "LEFT",
         fullWidth: true,
@@ -33,11 +34,11 @@ const PROPERTIES = {
         isTriggerProperty: false,
         options: [
           {
-            label: "Left",
+            label: $t('switch.a174b1c1a92cda6f'),
             value: "LEFT",
           },
           {
-            label: "Right",
+            label: $t('switch.3fb031be73b39bdf'),
             value: "RIGHT",
           },
         ],
@@ -48,7 +49,7 @@ const PROPERTIES = {
     ],
     events: [
       {
-        helpText: "when the switch state is changed",
+        helpText: $t('switch.08bc3118cd7f1f68'),
         propertyName: "onChange",
         label: "onChange",
         controlType: "ACTION_SELECTOR",

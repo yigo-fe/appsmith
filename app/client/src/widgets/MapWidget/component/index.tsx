@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
@@ -104,12 +105,12 @@ const MapComponent = (props: MapComponentProps) => {
         <Map.PickMyLocation
           allowZoom={allowZoom}
           isEnabled={enablePickLocation}
-          title="Pick My Location"
+          title={$t('index.e73e5a9712c80255')}
           updateCenter={updateCenter}
         />
         <Map.SearchBox
           isEnabled={enableSearch}
-          placeholder="Enter location to search"
+          placeholder=$t('index.01d3657350d0b4a2')
           updateCenter={updateCenter}
         />
       </Map>

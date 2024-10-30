@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { connect, useSelector } from "react-redux";
@@ -86,7 +87,7 @@ export function ErrorPageHeader(props: ErrorPageHeaderProps) {
             to={APPLICATIONS_URL}
           >
             <img
-              alt="Logo"
+              alt=$t('ErrorPageHeader.2d0d8b2787716e7b')
               className="h-6"
               src={getAssetUrl(tenantConfig.brandLogoUrl)}
             />
@@ -103,7 +104,7 @@ export function ErrorPageHeader(props: ErrorPageHeaderProps) {
                 flushErrorsAndRedirect(loginUrl);
               }}
               size="small"
-              text="Sign In"
+              text=$t('ErrorPageHeader.de5b2bdf6b33a929')
             />
           ) : (
             <ProfileDropdown

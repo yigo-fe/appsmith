@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Button } from "@appsmith/ads";
 import { debounce } from "lodash";
 import React, { useCallback, useEffect, useState } from "react";
@@ -144,7 +145,7 @@ export function ArrayComponent(props: ArrayComponentProps) {
           size="sm"
           startIcon="plus"
         >
-          {props.addLabel || "Add suggestion"}
+          {props.addLabel || $t('ArrayComponent.084831f9cf2e1d60')}
         </Button>
       </div>
     </>

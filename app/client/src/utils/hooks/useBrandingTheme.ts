@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { useSelector } from "react-redux";
 
 import { getTenantConfig } from "ee/selectors/tenantSelectors";
@@ -53,11 +54,11 @@ const useBrandingTheme = () => {
     // Set the favicon
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let favicon: any = document.querySelector("link[rel='shortcut icon']");
+    let favicon: any = document.querySelector("link[rel=$t('useBrandingTheme.3933a512dff50167')]");
 
     if (!favicon) {
       favicon = document.createElement("link");
-      favicon.rel = "shortcut icon";
+      favicon.rel = $t('useBrandingTheme.3933a512dff50167');
       favicon.className = "t--branding-favicon";
       document.getElementsByTagName("head")[0].appendChild(favicon);
     }

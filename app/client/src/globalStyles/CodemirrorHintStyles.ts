@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { createGlobalStyle } from "styled-components";
 import type { EditorTheme } from "components/editorComponents/CodeEditor/EditorConfig";
 import type { Theme } from "constants/DefaultTheme";
@@ -208,25 +209,25 @@ export const CodemirrorHintStyles = createGlobalStyle<{
       color: ${(props) => props.theme.colors.codeMirror.dataType.fullForm};
     }
     .CodeMirror-Tern-completion-fn:after {
-      content: "Function";
+      content: $t('CodemirrorHintStyles.e743141f00b4d24b');
     }
     .CodeMirror-Tern-completion-object:after {
       content: "Object";
     }
     .CodeMirror-Tern-completion-unknown:after {
-      content: "Unknown";
+      content: $t('CodemirrorHintStyles.2c7399fe3c9ea3f5');
     }
     .CodeMirror-Tern-completion-array:after {
-      content: "Array";
+      content: $t('CodemirrorHintStyles.522e7cdd26399e6a');
     }
     .CodeMirror-Tern-completion-number:after {
-      content: "Number";
+      content: $t('CodemirrorHintStyles.592166132dfaa44f');
     }
     .CodeMirror-Tern-completion-string:after {
-      content: "String";
+      content: $t('CodemirrorHintStyles.0ce848622ae8cff0');
     }
     .CodeMirror-Tern-completion-bool:after {
-      content: "Boolean";
+      content: $t('CodemirrorHintStyles.32615eaa8eaee42f');
     }
     .CodeMirror-Tern-completion-keyword:before {
       content: "K";

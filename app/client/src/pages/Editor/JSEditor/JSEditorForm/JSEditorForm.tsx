@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { FEATURE_FLAG } from "ee/entities/FeatureFlag";
 import type { JSEditorTab } from "reducers/uiReducers/jsPaneReducer";
@@ -77,7 +78,7 @@ export const JSEditorForm = (props: Props) => {
         isJSObject
         jsObjectName={props.currentJSCollection.name}
         mode={EditorModes.JAVASCRIPT}
-        placeholder="Let's write some code!"
+        placeholder={$t('JSEditorForm.c97097d6571dd968')}
         showLightningMenu={false}
         showLineNumbers
         size={EditorSize.EXTENDED}

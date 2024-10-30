@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import _ from "lodash";
 import configureStore from "redux-mock-store";
 
@@ -90,7 +91,7 @@ export function getStore(step: number) {
           config: {
             id: Math.random(),
             pageId: PAGE_ID,
-            name: "Query",
+            name: $t('testUtils.84ae5ecd23120bb5'),
           },
         },
       ];
@@ -108,7 +109,7 @@ export function getStore(step: number) {
           config: {
             id: Math.random(),
             pageId: PAGE_ID,
-            name: "Query",
+            name: $t('testUtils.84ae5ecd23120bb5'),
           },
         },
       ];

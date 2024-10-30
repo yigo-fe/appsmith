@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { fetchGheetColumns } from "actions/datasourceActions";
 import type { AppState } from "ee/reducers";
 import { WidgetQueryGeneratorFormContext } from "components/editorComponents/WidgetQueryGeneratorForm";
@@ -46,7 +47,7 @@ export function useTableHeaderIndex() {
   );
 
   return {
-    error: !isValidGsheetConfig(config) && "Please enter a positive number",
+    error: !isValidGsheetConfig(config) && $t('useTableHeader.3917734b4e3e17c7'),
     value: config.tableHeaderIndex,
     onChange,
     show: !!config.table && !!config.sheet,

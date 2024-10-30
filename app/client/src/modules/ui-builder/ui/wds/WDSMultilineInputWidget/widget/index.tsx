@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 import { WDSInputWidget } from "modules/ui-builder/ui/wds/WDSInputWidget";
 import type { WidgetBaseConfiguration } from "WidgetProvider/constants";
@@ -12,7 +13,7 @@ class WDSMultilineInputWidget extends WDSInputWidget {
       ...super.getConfig(),
       displayOrder: undefined,
       tags: [WIDGET_TAGS.INPUTS],
-      name: "Multiline Input",
+      name: $t('index.8ccdb6aca5da3d3b'),
     };
   }
 

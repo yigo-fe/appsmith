@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styles from "./styles.module.css";
 import Collapsible from "./collapsible";
@@ -47,7 +48,7 @@ export default function References() {
       >
         <Events />
       </Collapsible>
-      <Collapsible label="Help">
+      <Collapsible label={$t('index.38ea75c0ac3bab32')}>
         <Help />
       </Collapsible>
     </div>

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
@@ -21,8 +22,8 @@ export default [
   {
     propertyName: "validation.regex",
     helpText:
-      "Adds a validation to the cell value which displays an error on failure",
-    label: "Regex",
+      $t('Common.51a4cecad6e38ce6'),
+    label: $t('Common.862ba88fa08160d9'),
     controlType: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",
     dependencies: ["primaryColumns"],
     placeholderText: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$",
@@ -33,8 +34,8 @@ export default [
   },
   {
     propertyName: "validation.isColumnEditableCellValid",
-    helpText: "Shows the validity of the cell validity",
-    label: "Valid",
+    helpText: $t('Common.2325082855979e57'),
+    label: $t('Common.bb6e88540adff7c3'),
     controlType: "TABLE_INLINE_EDIT_VALID_PROPERTY_CONTROL",
     isJSConvertible: false,
     dependencies: ["primaryColumns", "columnOrder"],
@@ -51,11 +52,11 @@ export default [
   {
     propertyName: "validation.errorMessage",
     helpText:
-      "The error message to display if the regex or valid property check fails",
-    label: "Error message",
+      $t('Common.13278fd01158964b'),
+    label: $t('Common.440d1c6d6c3af631'),
     controlType: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",
     dependencies: ["primaryColumns"],
-    placeholderText: "Not a valid value!",
+    placeholderText: $t('Common.91b3f1492812da83'),
     isBindProperty: true,
     isTriggerProperty: false,
     validation: { type: ValidationTypes.TEXT },
@@ -63,8 +64,8 @@ export default [
   },
   {
     propertyName: "validation.isColumnEditableCellRequired",
-    helpText: "Makes input to the widget mandatory",
-    label: "Required",
+    helpText: $t('Common.90fb772de0277222'),
+    label: $t('Common.9ac99182caaa0d0f'),
     controlType: "SWITCH",
     dependencies: ["primaryColumns"],
     customJSControl: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",

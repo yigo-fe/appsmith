@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { ControlProps } from "./BaseControl";
 import BaseControl from "./BaseControl";
@@ -94,7 +95,7 @@ class MenuItemsControl extends BaseControl<ControlProps, State> {
             DraggableListCard({
               ...props,
               isDelete: true,
-              placeholder: "Menu item label",
+              placeholder: $t('MenuItemsControl.11ec697342697fa9'),
             })
           }
           toggleVisibility={this.toggleVisibility}
@@ -179,7 +180,7 @@ class MenuItemsControl extends BaseControl<ControlProps, State> {
       [newMenuItemId]: {
         id: newMenuItemId,
         index: menuItemsArray.length,
-        label: "Menu Item",
+        label: $t('MenuItemsControl.2962961fcb66a995'),
         widgetId: generateReactKey(),
         isDisabled: false,
         isVisible: true,

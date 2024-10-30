@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import type { ValidationResponse, Validator } from "constants/WidgetValidation";
@@ -28,7 +29,7 @@ import {
 export const UNDEFINED_VALIDATION = "UNDEFINED_VALIDATION";
 export const VALIDATION_ERROR_COUNT_THRESHOLD = 10;
 const MAX_ALLOWED_LINE_BREAKS = 1000; // Rendering performance deteriorates beyond this number.
-const LINE_BREAKS_ERROR_MESSAGE = `Warning: New lines in the text exceed ${MAX_ALLOWED_LINE_BREAKS}. The text displayed will not contain any new lines.`;
+const LINE_BREAKS_ERROR_MESSAGE = $t('validations.0f5384623e158d2b', {MAX_ALLOWED_LINE_BREAKS: MAX_ALLOWED_LINE_BREAKS});
 
 // TODO: Fix this the next time the file is edited
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -89,7 +90,7 @@ function validatePlainObject(
             messages.map((message) => {
               _messages.push({
                 name: message.name,
-                message: `Value of key: ${entryName} is invalid: ${message.message}`,
+                message: $t('validations.11ee2db701593831', {entryName: entryName,message_message: message.message}),
               });
             });
         }
@@ -97,7 +98,7 @@ function validatePlainObject(
         _valid = false;
         _messages.push({
           name: "ValidationError",
-          message: `Missing required key: ${entryName}`,
+          message: $t('validations.2c7551faad1f5e8a', {entryName: entryName}),
         });
       }
     });
@@ -194,7 +195,7 @@ function validateArray(
         messages: [
           {
             name: "ValidationError",
-            message: `Array must be unique. Duplicate values found at index: ${duplicateIndex}`,
+            message: $t('validations.dbd7211d321cd0ee', {duplicateIndex: duplicateIndex}),
           },
         ],
       };
@@ -221,9 +222,7 @@ function validateArray(
         messages: [
           {
             name: "ValidationError",
-            message: `Duplicate values found for the following properties, in the array entries, that must be unique -- ${uniqueKeys.join(
-              ",",
-            )}.`,
+            message: $t('validations.e5b4708338462e80'),
           },
         ],
       };
@@ -236,7 +235,7 @@ function validateArray(
     if (shouldVerifyAllowedValues && !allowedValues.has(entry)) {
       _messages.push({
         name: "ValidationError",
-        message: `Value is not allowed in this array: ${entry}`,
+        message: $t('validations.26f3abf6e953003b', {entry: entry}),
       });
       _isValid = false;
     }
@@ -257,7 +256,7 @@ function validateArray(
         childValidationResult.messages?.forEach((message) =>
           _messages.push({
             name: message.name,
-            message: `Invalid entry at index: ${index}. ${message.message}`,
+            message: $t('validations.bc43bc5fa9b5fa67', {index: index,message_message: message.message}),
           }),
         );
       }
@@ -350,7 +349,7 @@ export const validate = (
 };
 
 export const WIDGET_TYPE_VALIDATION_ERROR =
-  "This value does not evaluate to type"; // TODO: Lot's of changes in validations.ts file
+  $t('validations.9f93650469ddce8a'); // TODO: Lot's of changes in validations.ts file
 
 export function getExpectedType(config?: ValidationConfig): string | undefined {
   if (!config) return UNDEFINED_VALIDATION; // basic fallback
@@ -392,7 +391,7 @@ export function getExpectedType(config?: ValidationConfig): string | undefined {
       }
 
       if (config.params?.required) {
-        validationType = `${validationType} Required`;
+        validationType = $t('validations.b363f669f4c13e66', {validationType: validationType});
       }
 
       return validationType;
@@ -544,7 +543,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
           messages: [
             {
               name: "ValidationError",
-              message: `Disallowed value: ${parsed}`,
+              message: $t('validations.372cb49162fd285f', {parsed: parsed}),
             },
           ],
           isValid: false,
@@ -560,7 +559,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
           {
             name: "ValidationError",
             message:
-              "Excessive text length without a line break. Rendering a substring to avoid app crash.",
+              $t('validations.14bc141fe02b6a31'),
           },
         ],
       };
@@ -634,7 +633,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
           messages: [
             {
               name: "ValidationError",
-              message: "This value is required",
+              message: $t('validations.d8cd9fb6a71d1e21'),
             },
           ],
         };
@@ -706,7 +705,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
           messages: [
             {
               name: "RangeError",
-              message: `Minimum allowed value: ${config.params.min}`,
+              message: $t('validations.2f883a70fdc20188', {config_params_min: config.params.min}),
             },
           ],
         };
@@ -724,7 +723,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
           messages: [
             {
               name: "RangeError",
-              message: `Maximum allowed value: ${config.params.max}`,
+              message: $t('validations.a934275234f9035a', {config_params_max: config.params.max}),
             },
           ],
         };
@@ -738,7 +737,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
         messages: [
           {
             name: "ValidationError",
-            message: `Value should be a positive integer`,
+            message: $t('validations.989380ab42594bda'),
           },
         ],
       };
@@ -909,7 +908,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
           {
             name: "ValidationError",
             message:
-              "This property is required for the widget to function correctly",
+              $t('validations.8d9dfde33dd45d88'),
           },
         ];
 
@@ -1018,7 +1017,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
             messages: [
               {
                 name: "ValidationError",
-                message: `Invalid object at index ${index}`,
+                message: $t('validations.9e5f4e5d72e879ef', {index: index}),
               },
             ],
           };
@@ -1097,7 +1096,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
         isValid = false;
         message = {
           name: "TypeError",
-          message: `Value does not match: ${getExpectedType(config)}`,
+          message: $t('validations.c687d97952ed1582', {getExpectedType_config_: getExpectedType(config)}),
         };
       } else {
         isValid = true;
@@ -1123,7 +1122,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
         isValid = false;
         message = {
           name: "TypeError",
-          message: `Value does not match: ${getExpectedType(config)}`,
+          message: $t('validations.c687d97952ed1582', {getExpectedType_config_: getExpectedType(config)}),
         };
         parsed = config.params?.default;
       }
@@ -1131,7 +1130,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
       isValid = false;
       message = {
         name: "TypeError",
-        message: `Value does not match: ${getExpectedType(config)}`,
+        message: $t('validations.c687d97952ed1582', {getExpectedType_config_: getExpectedType(config)}),
       };
     }
 
@@ -1158,7 +1157,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
       messages: [
         {
           name: "ValidationError",
-          message: "Failed to validate",
+          message: $t('validations.d662dfda1d15f478'),
         },
       ],
     };
@@ -1289,7 +1288,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
         messages: [
           {
             name: "ValidationError",
-            message: "Invalid validation",
+            message: $t('validations.bcc4b43fe51ba9d2'),
           },
         ],
       };
@@ -1403,7 +1402,7 @@ export const VALIDATORS: Record<ValidationTypes, Validator> = {
         messages: [
           {
             name: "ValidationError",
-            message: "Invalid validation configuration",
+            message: $t('validations.0db9393679af5250'),
           },
         ],
       };

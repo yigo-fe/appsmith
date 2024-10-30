@@ -1,7 +1,8 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 
 export const metaConfig = {
-  name: "Inline Buttons",
+  name: $t('metaConfig.e46fb3194bbbd185'),
   needsMeta: false,
   isCanvas: false,
   searchTags: [

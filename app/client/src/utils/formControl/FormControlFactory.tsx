@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ControlType } from "constants/PropertyControlConstants";
 import type {
   ControlBuilder,
@@ -38,9 +39,9 @@ class FormControlFactory {
 
       return control;
     } else {
-      log.error(`Control type ${controlData.controlType} not found`);
+      log.error($t('FormControlFactory.3a316c59215635bd', {controlData_controlType: controlData.controlType}));
 
-      return <p>{`Control type ${controlData.controlType} not found`}</p>;
+      return <p>{$t('FormControlFactory.3a316c59215635bd', {controlData_controlType: controlData.controlType})}</p>;
     }
   }
 

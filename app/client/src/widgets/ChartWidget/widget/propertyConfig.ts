@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
 import type { ChartWidgetProps } from "widgets/ChartWidget/widget";
@@ -14,31 +15,31 @@ export const isLabelOrientationApplicableFor = (chartType: string) =>
 const labelOptions = () => {
   const options = [
     {
-      label: "Line chart",
+      label: $t('propertyConfig.7496d4209021d5fa'),
       value: "LINE_CHART",
     },
     {
-      label: "Bar chart",
+      label: $t('propertyConfig.5301ad96224a87df'),
       value: "BAR_CHART",
     },
     {
-      label: "Pie chart",
+      label: $t('propertyConfig.bb8b71a45f9ed6af'),
       value: "PIE_CHART",
     },
     {
-      label: "Column chart",
+      label: $t('propertyConfig.fa9596ad85ed92e8'),
       value: "COLUMN_CHART",
     },
     {
-      label: "Area chart",
+      label: $t('propertyConfig.783b54bce750ab55'),
       value: "AREA_CHART",
     },
     {
-      label: "Custom EChart",
+      label: $t('propertyConfig.2358ce791baa8d57'),
       value: "CUSTOM_ECHART",
     },
     {
-      label: "Custom Fusion Charts (deprecated)",
+      label: $t('propertyConfig.559a8b29cd5f9398'),
       value: "CUSTOM_FUSION_CHART",
     },
   ];
@@ -49,12 +50,12 @@ const labelOptions = () => {
 export const contentConfig = () => {
   return [
     {
-      sectionName: "Data",
+      sectionName: $t('propertyConfig.6c24328045f10875'),
       children: [
         {
-          helpText: "Changes the visualisation of the chart data",
+          helpText: $t('propertyConfig.a4d57d622b520076'),
           propertyName: "chartType",
-          label: "Chart type",
+          label: $t('propertyConfig.adf370928fcab16b'),
           controlType: "DROP_DOWN",
           options: labelOptions(),
           isJSConvertible: true,
@@ -77,9 +78,9 @@ export const contentConfig = () => {
         },
         {
           helpText: "Configure a custom ECHART see docs.appsmith.com",
-          placeholderText: `Custom ECharts Configuration`,
+          placeholderText: $t('propertyConfig.11f9f8c7f4ffe187'),
           propertyName: "customEChartConfig",
-          label: "Custom ECharts Configuration",
+          label: $t('propertyConfig.11f9f8c7f4ffe187'),
           controlType: "WRAPPED_CODE_EDITOR",
           controlConfig: {
             wrapperCode: {
@@ -102,9 +103,9 @@ export const contentConfig = () => {
         },
         {
           helpText: "Configure a custom FusionChart see docs.appsmith.com",
-          placeholderText: `Fusion Chart Config`,
+          placeholderText: $t('propertyConfig.ade2e367b8bcdb1d'),
           propertyName: "customFusionChartConfig",
-          label: "Custom fusion chart",
+          label: $t('propertyConfig.0e02c07840112acc'),
           controlType: "INPUT_TEXT",
           isBindProperty: true,
           isTriggerProperty: false,
@@ -181,10 +182,10 @@ export const contentConfig = () => {
             EvaluationSubstitutionType.SMART_SUBSTITUTE,
         },
         {
-          helpText: "Populates the chart with the data",
+          helpText: $t('propertyConfig.ac1ea58de4dd0d30'),
           propertyName: "chartData",
           placeholderText: '[{ "x": "2021", "y": "94000" }]',
-          label: "Chart series",
+          label: $t('propertyConfig.4c72ec43831f88c2'),
           controlType: "CHART_DATA",
           isBindProperty: false,
           isTriggerProperty: false,
@@ -193,9 +194,9 @@ export const contentConfig = () => {
           dependencies: ["chartType"],
           children: [
             {
-              helpText: "Series data",
+              helpText: $t('propertyConfig.fe923717e5432418'),
               propertyName: "data",
-              label: "Series data",
+              label: $t('propertyConfig.fe923717e5432418'),
               controlType: "INPUT_TEXT_AREA",
               isBindProperty: true,
               isTriggerProperty: false,
@@ -233,9 +234,9 @@ export const contentConfig = () => {
                 EvaluationSubstitutionType.SMART_SUBSTITUTE,
             },
             {
-              helpText: "Series name",
+              helpText: $t('propertyConfig.0175b68747cf4445'),
               propertyName: "seriesName",
-              label: "Series name",
+              label: $t('propertyConfig.0175b68747cf4445'),
               controlType: "INPUT_TEXT",
               isBindProperty: true,
               isTriggerProperty: false,
@@ -246,13 +247,13 @@ export const contentConfig = () => {
       ],
     },
     {
-      sectionName: "General",
+      sectionName: $t('propertyConfig.25ef0643f3bcc3d2'),
       children: [
         {
-          helpText: "Adds a title to the chart",
-          placeholderText: "Sales Report",
+          helpText: $t('propertyConfig.145a151daf8f0f75'),
+          placeholderText: $t('propertyConfig.cce33cff71178f59'),
           propertyName: "chartName",
-          label: "Title",
+          label: $t('propertyConfig.9291fca1d7fb7a9a'),
           controlType: "INPUT_TEXT",
           isBindProperty: true,
           isTriggerProperty: false,
@@ -262,8 +263,8 @@ export const contentConfig = () => {
         },
         {
           propertyName: "isVisible",
-          label: "Visible",
-          helpText: "Controls the visibility of the widget",
+          label: $t('propertyConfig.369a7be0ae7c4da1'),
+          helpText: $t('propertyConfig.0df0b2502012ea68'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -272,9 +273,9 @@ export const contentConfig = () => {
         },
         {
           propertyName: "animateLoading",
-          label: "Animate loading",
+          label: $t('propertyConfig.718ce1ab1f2a5950'),
           controlType: "SWITCH",
-          helpText: "Controls the loading of the widget",
+          helpText: $t('propertyConfig.c7f207a78a4165db'),
           defaultValue: true,
           isJSConvertible: true,
           isBindProperty: true,
@@ -282,9 +283,9 @@ export const contentConfig = () => {
           validation: { type: ValidationTypes.BOOLEAN },
         },
         {
-          helpText: "Enables scrolling inside the chart",
+          helpText: $t('propertyConfig.a402b29f302f586d'),
           propertyName: "allowScroll",
-          label: "Allow scroll",
+          label: $t('propertyConfig.6459d6ae3e4ba3df'),
           controlType: "SWITCH",
           isBindProperty: false,
           isTriggerProperty: false,
@@ -295,9 +296,9 @@ export const contentConfig = () => {
           dependencies: ["chartType"],
         },
         {
-          helpText: "Hides/Display data point labels on series data",
+          helpText: $t('propertyConfig.ccfc637d5442903e'),
           propertyName: "showDataPointLabel",
-          label: "Show Labels",
+          label: $t('propertyConfig.f4669db1a59fd181'),
           controlType: "SWITCH",
           isBindProperty: false,
           isTriggerProperty: false,
@@ -308,12 +309,12 @@ export const contentConfig = () => {
       ],
     },
     {
-      sectionName: "Axis",
+      sectionName: $t('propertyConfig.babee6b52ca7a5da'),
       children: [
         {
           propertyName: "setAdaptiveYMin",
-          label: "Adaptive axis",
-          helpText: "Define the minimum scale for X/Y axis",
+          label: $t('propertyConfig.8167b7d08362f764'),
+          helpText: $t('propertyConfig.495b1a4e2d48d274'),
           controlType: "SWITCH",
           isBindProperty: true,
           isTriggerProperty: false,
@@ -323,9 +324,9 @@ export const contentConfig = () => {
           hidden: (props: any) => props.chartType == "CUSTOM_ECHART",
         },
         {
-          helpText: "Specifies the label of the x-axis",
+          helpText: $t('propertyConfig.df5eed52901e8909'),
           propertyName: "xAxisName",
-          placeholderText: "Dates",
+          placeholderText: $t('propertyConfig.d03fc8e5b0ad72f6'),
           label: "x-axis label",
           controlType: "INPUT_TEXT",
           isBindProperty: true,
@@ -338,9 +339,9 @@ export const contentConfig = () => {
           dependencies: ["chartType"],
         },
         {
-          helpText: "Specifies the label of the y-axis",
+          helpText: $t('propertyConfig.31d86cb3f7e9f0d1'),
           propertyName: "yAxisName",
-          placeholderText: "Revenue",
+          placeholderText: $t('propertyConfig.7edf04b1b75cb624'),
           label: "y-axis label",
           controlType: "INPUT_TEXT",
           isBindProperty: true,
@@ -353,7 +354,7 @@ export const contentConfig = () => {
           dependencies: ["chartType"],
         },
         {
-          helpText: "Changes the x-axis label orientation",
+          helpText: $t('propertyConfig.e21e676c4c831791'),
           propertyName: "labelOrientation",
           label: "x-axis label orientation",
           hidden: (props: ChartWidgetProps) =>
@@ -364,15 +365,15 @@ export const contentConfig = () => {
           controlType: "DROP_DOWN",
           options: [
             {
-              label: "Auto",
+              label: $t('propertyConfig.9624df69471533a2'),
               value: LabelOrientation.AUTO,
             },
             {
-              label: "Slant",
+              label: $t('propertyConfig.b43e6fd6581fe715'),
               value: LabelOrientation.SLANT,
             },
             {
-              label: "Rotate",
+              label: $t('propertyConfig.b350fd1cbd16b617'),
               value: LabelOrientation.ROTATE,
             },
           ],
@@ -380,10 +381,10 @@ export const contentConfig = () => {
       ],
     },
     {
-      sectionName: "Events",
+      sectionName: $t('propertyConfig.1899caecd265c399'),
       children: [
         {
-          helpText: "when the chart data point is clicked",
+          helpText: $t('propertyConfig.f203c1e4fe6cbbf8'),
           propertyName: "onDataPointClick",
           label: "onDataPointClick",
           controlType: "ACTION_SELECTOR",
@@ -398,12 +399,12 @@ export const contentConfig = () => {
 
 export const styleConfig = [
   {
-    sectionName: "Border and shadow",
+    sectionName: $t('propertyConfig.94129605b0f5c15d'),
     children: [
       {
         propertyName: "borderRadius",
-        label: "Border radius",
-        helpText: "Rounds the corners of the icon button's outer border edge",
+        label: $t('propertyConfig.bc9f0db8beb7d8c2'),
+        helpText: $t('propertyConfig.0dd10d2596a65934'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -412,9 +413,9 @@ export const styleConfig = [
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
+        label: $t('propertyConfig.b0f93da66427a960'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('propertyConfig.9200a70cd845878f'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,

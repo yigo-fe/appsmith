@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useContext, useMemo, useRef } from "react";
 import styled from "styled-components";
 import { useController } from "react-hook-form";
@@ -50,9 +51,9 @@ const COMPONENT_DEFAULT_VALUES: SelectComponentProps = {
   labelTextSize: BASE_LABEL_TEXT_SIZE,
   serverSideFiltering: false,
   options: [
-    { label: "Blue", value: "BLUE" },
-    { label: "Green", value: "GREEN" },
-    { label: "Red", value: "RED" },
+    { label: $t('SelectField.27205a707421a31d'), value: "BLUE" },
+    { label: $t('SelectField.9d8af7263c9f23ce'), value: "GREEN" },
+    { label: $t('SelectField.f5e1f749e759c98f'), value: "RED" },
   ],
 };
 
@@ -227,9 +228,9 @@ function SelectField({
 SelectField.componentDefaultValues = {
   ...COMPONENT_DEFAULT_VALUES,
   options: [
-    { label: "Blue", value: "BLUE" },
-    { label: "Green", value: "GREEN" },
-    { label: "Red", value: "RED" },
+    { label: $t('SelectField.27205a707421a31d'), value: "BLUE" },
+    { label: $t('SelectField.9d8af7263c9f23ce'), value: "GREEN" },
+    { label: $t('SelectField.f5e1f749e759c98f'), value: "RED" },
   ],
 };
 

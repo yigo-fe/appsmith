@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
@@ -140,7 +141,7 @@ export function MockDatasourceCard(props: MockDatasourceCardProps) {
     <CardWrapper className="t--mock-datasource" onClick={addMockDataSource}>
       <DatasourceCardHeader className="t--datasource-name">
         <DatasourceImage
-          alt="Datasource"
+          alt={$t('MockDataSources.371764c6ef5eacd8')}
           data-testid="mock-datasource-image"
           src={getAssetUrl(pluginImages[currentPlugin.id])}
         />

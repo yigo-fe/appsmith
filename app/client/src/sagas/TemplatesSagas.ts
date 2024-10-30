@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { builderURL } from "ee/RouteBuilder";
 import {
   fetchApplication,
@@ -245,7 +246,7 @@ function* forkTemplateToApplicationSaga(
       yield put(getAllTemplates());
 
       toast.show(
-        `Pages from '${action.payload.templateName}' template added successfully`,
+        $t('TemplatesSagas.ba2f2599075336fc', {action_payload_templateName: action.payload.templateName}),
         {
           kind: "success",
         },
@@ -443,7 +444,7 @@ function* forkTemplateToApplicationViaOnboardingFlowSaga(
         payload: response.data.application,
       });
       toast.show(
-        `Pages from '${action.payload.templateName}' template added successfully`,
+        $t('TemplatesSagas.ba2f2599075336fc', {action_payload_templateName: action.payload.templateName}),
         {
           kind: "success",
         },

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { connect, useDispatch } from "react-redux";
@@ -113,7 +114,7 @@ function InfoContent({
       />
       <ImageWrapper>
         <ProgressiveImage
-          alt="template information"
+          alt=$t('CrudInfoModal.b30529ac885f37bd')
           imageSource={getAssetUrl(successImageUrl)}
           thumbnailSource={getInfoThumbnail()}
         />

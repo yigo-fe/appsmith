@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import type { DerivedPropertiesMap } from "WidgetProvider/factory";
@@ -48,7 +49,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Custom",
+      name: $t('index.90068ab00a6bd4db'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       needsMeta: true,
@@ -62,11 +63,11 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
 
   static getDefaults() {
     return {
-      widgetName: "Custom",
+      widgetName: $t('index.90068ab00a6bd4db'),
       rows: 30,
       columns: 23,
       version: 1,
-      onResetClick: "{{showAlert('Successfully reset!!', '');}}",
+      onResetClick: "{{showAlert($t('index.63e21812c4ab5cc5'), '');}}",
       events: ["onResetClick"],
       isVisible: true,
       defaultModel: DEFAULT_MODEL,
@@ -95,7 +96,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
                 widget&apos;s container should not have a fixed height set.{" "}
                 <StyledLink
                   kind="secondary"
-                  rel="noopener noreferrer"
+                  rel={$t('index.31d1ac60864480ff')}
                   target="_blank"
                   to={CUSTOM_WIDGET_HEIGHT_DOC_URL}
                 >
@@ -164,7 +165,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Widget",
+        sectionName: $t('index.305ab9287de959cd'),
         children: [
           {
             propertyName: "editSource",
@@ -181,7 +182,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
                 The source editor lets you add your own HTML, CSS and JS.{" "}
                 <StyledLink
                   kind="secondary"
-                  rel="noopener noreferrer"
+                  rel={$t('index.31d1ac60864480ff')}
                   target="_blank"
                   to={CUSTOM_WIDGET_DOC_URL}
                 >
@@ -193,7 +194,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Default Model",
+        sectionName: $t('index.f9b55f4d5141a175'),
         children: [
           {
             propertyName: "defaultModel",
@@ -202,7 +203,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
                 This model exposes Appsmith data to the widget editor.{" "}
                 <StyledLink
                   kind="secondary"
-                  rel="noopener noreferrer"
+                  rel={$t('index.31d1ac60864480ff')}
                   target="_blank"
                   to={CUSTOM_WIDGET_DEFAULT_MODEL_DOC_URL}
                 >
@@ -222,12 +223,12 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.30d1dbb7176b3bed'),
         children: [
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.62b1be9f18c103ff'),
+            helpText: $t('index.9be64b7e5bcbbf2c'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -237,7 +238,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.304d78b84e10cd42'),
         hasDynamicProperties: true,
         generateDynamicProperties: (widgetProps: WidgetProps) => {
           return widgetProps.events?.map((event: string) => ({
@@ -282,7 +283,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
               },
             },
             dependencies: ["events", "dynamicTriggerPathList"],
-            helpText: "when the event is triggered from custom widget",
+            helpText: $t('index.9ee63d9277f37d3e'),
           }));
         },
         children: [
@@ -292,7 +293,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
             controlType: "CUSTOM_WIDGET_ADD_EVENT_BUTTON_CONTROL",
             isJSConvertible: false,
             isBindProperty: false,
-            buttonLabel: "Add Event",
+            buttonLabel: $t('index.2521e7737aaf7cbe'),
             onAdd: (widget: CustomWidgetProps, event: string) => {
               const events = widget.events;
 
@@ -312,13 +313,13 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Color",
+        sectionName: $t('index.95b0fd0d71cae05a'),
         children: [
           {
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.f055a1eaa0e7dce8'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
             propertyName: "backgroundColor",
-            label: "Background color",
+            label: $t('index.5582aca09b520b8f'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -326,10 +327,10 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.f055a1eaa0e7dce8'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
             propertyName: "borderColor",
-            label: "Border color",
+            label: $t('index.aa61ccb5099ac802'),
             controlType: "COLOR_PICKER",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -338,13 +339,13 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.172b74031e788c13'),
         children: [
           {
-            helpText: "Enter value for border width",
+            helpText: $t('index.223fb078d6425298'),
             propertyName: "borderWidth",
-            label: "Border width",
-            placeholderText: "Enter value in px",
+            label: $t('index.c5f8aa692492ea02'),
+            placeholderText: $t('index.a3b85fa12bf14495'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -353,8 +354,8 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
-            helpText: "Rounds the corners of the widgets's outer border edge",
+            label: $t('index.ab2512847f6bed15'),
+            helpText: $t('index.cc2182561259c25e'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -363,9 +364,9 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.7657fc9788d4d434'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.dcd8c831e1c3a388'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

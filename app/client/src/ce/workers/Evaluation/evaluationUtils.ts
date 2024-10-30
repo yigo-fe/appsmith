@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { DependencyMap, EvaluationError } from "utils/DynamicBindingUtils";
 import {
   EVAL_ERROR_PATH,
@@ -502,7 +503,7 @@ export const makeParentsDependOnChild = (
   if (!allkeys[curKey]) {
     logWarn(
       `makeParentsDependOnChild - ${curKey} is not present in dataTree.`,
-      "This might result in a cyclic dependency.",
+      $t('evaluationUtils.bef6851c67040cf6'),
     );
   }
 

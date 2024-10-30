@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ChangeEvent } from "react";
 import React from "react";
 import ReactDOM from "react-dom";
@@ -592,7 +593,7 @@ class EmbeddedDatasourcePathComponent extends React.Component<
                 color="var(--ads-v2-color-fg-on-emphasis-max)"
                 kind="body-s"
               >
-                {`Datasource ${datasourceObject?.name}`}
+                {$t('EmbeddedDatasourcePathField.10fefd9a1e92cfbb', {datasourceObject__name: datasourceObject?.name})}
               </Text>
             </StyledTooltip>
           )}

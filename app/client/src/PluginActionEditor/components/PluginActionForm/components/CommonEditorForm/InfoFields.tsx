@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { EditorTheme } from "components/editorComponents/CodeEditor/EditorConfig";
 import RequestDropdownField from "components/editorComponents/form/fields/RequestDropdownField";
@@ -28,7 +29,7 @@ export function InfoFields(props: {
           disabled={!props.changePermitted}
           name="actionConfiguration.httpMethod"
           options={props.options}
-          placeholder="Method"
+          placeholder={$t('InfoFields.735255bf2076b69f')}
           width={"110px"}
         >
           <div />

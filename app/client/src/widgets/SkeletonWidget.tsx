@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AnvilConfig } from "WidgetProvider/constants";
 import React from "react";
 import styled from "styled-components";
@@ -14,7 +15,7 @@ class SkeletonWidget extends BaseWidget<SkeletonWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Skeleton",
+      name: $t('SkeletonWidget.c6163b013c3bd6d6'),
       hideCard: true,
     };
   }
@@ -24,7 +25,7 @@ class SkeletonWidget extends BaseWidget<SkeletonWidgetProps, WidgetState> {
       isLoading: true,
       rows: 4,
       columns: 4,
-      widgetName: "Skeleton",
+      widgetName: $t('SkeletonWidget.c6163b013c3bd6d6'),
       version: 1,
     };
   }

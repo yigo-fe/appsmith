@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import type { LoDashStatic } from "lodash";
 import type { WidgetProps } from "widgets/BaseWidget";
@@ -62,7 +63,7 @@ export function optionsCustomValidation(
   if (!_.isString(options)) {
     return createErrorValidationResponse(options, {
       name: "TypeError",
-      message: "This value does not evaluate to type string",
+      message: $t('optionsCustomValidation.1bdd3c95be238229'),
     });
   }
 
@@ -73,7 +74,7 @@ export function optionsCustomValidation(
     if (options.length === 0) {
       return createErrorValidationResponse(options, {
         name: "ValidationError",
-        message: "Options cannot be an empty array",
+        message: $t('optionsCustomValidation.3e2b5acbd4a4e3e0'),
       });
     }
 
@@ -100,7 +101,7 @@ export function optionsCustomValidation(
         _isValid = false;
         message = {
           name: "ValidationError",
-          message: "This value does not evaluate to type Object",
+          message: $t('optionsCustomValidation.2e6cbef312503363'),
         };
         break;
       }
@@ -119,7 +120,7 @@ export function optionsCustomValidation(
         _isValid = false;
         message = {
           name: "ValidationError",
-          message: "All the keys must be unique",
+          message: $t('optionsCustomValidation.373d6ff8bf6c0db7'),
         };
         break;
       }

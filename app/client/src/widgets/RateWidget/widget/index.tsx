@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
 import BaseWidget from "widgets/BaseWidget";
@@ -50,7 +51,7 @@ function validateDefaultRate(value: unknown, props: any, _: any) {
           messages: [
             {
               name: "TypeError",
-              message: `Value must be a number`,
+              message: $t('index.364f93188b97499c'),
             },
           ],
         };
@@ -69,7 +70,7 @@ function validateDefaultRate(value: unknown, props: any, _: any) {
         messages: [
           {
             name: "RangeError",
-            message: `This value must be less than or equal to max count`,
+            message: $t('index.afdf4b27c6f3a9ea'),
           },
         ],
       };
@@ -83,7 +84,7 @@ function validateDefaultRate(value: unknown, props: any, _: any) {
         messages: [
           {
             name: "ValidationError",
-            message: `This value can be a decimal only if 'Allow half' is true`,
+            message: $t('index.9d2cd954966167c9'),
           },
         ],
       };
@@ -97,7 +98,7 @@ function validateDefaultRate(value: unknown, props: any, _: any) {
       messages: [
         {
           name: "ValidationError",
-          message: `Could not validate `,
+          message: $t('index.f12c6027ea5f82a5'),
         },
       ],
     };
@@ -109,7 +110,7 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Rating",
+      name: $t('index.1eb29e169754dcd4'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.CONTENT],
@@ -132,8 +133,8 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
       isAllowHalf: false,
       isDisabled: false,
       isReadOnly: false,
-      tooltips: ["Terrible", "Bad", "Neutral", "Good", "Great"],
-      widgetName: "Rating",
+      tooltips: [$t('index.7b602049d4b93ec7'), $t('index.35ae7a9501b555d4'), $t('index.ab6c6cf996bb32cb'), "Good", $t('index.544ab50f3e027605')],
+      widgetName: $t('index.1eb29e169754dcd4'),
     };
   }
 
@@ -223,7 +224,7 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
-      "!doc": "Rating widget is used to display ratings in your app.",
+      "!doc": $t('index.f1db6c2f696b36f0'),
       "!url": "https://docs.appsmith.com/widget-reference/rate",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       value: "number",
@@ -234,12 +235,12 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.99fefac4ecf443b9'),
         children: [
           {
             propertyName: "maxCount",
-            helpText: "Sets the maximum allowed rating",
-            label: "Max rating",
+            helpText: $t('index.10a5ea1feb69940e'),
+            label: $t('index.41ac949b61a3d685'),
             controlType: "INPUT_TEXT",
             placeholderText: "5",
             isBindProperty: true,
@@ -251,8 +252,8 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
           },
           {
             propertyName: "defaultRate",
-            helpText: "Sets the default rating",
-            label: "Default rating",
+            helpText: $t('index.db8a8b975dc18df3'),
+            label: $t('index.3cbfaffac816ca62'),
             controlType: "INPUT_TEXT",
             placeholderText: "2.5",
             isBindProperty: true,
@@ -272,10 +273,10 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
           },
           {
             propertyName: "tooltips",
-            helpText: "Sets the tooltip contents of stars",
-            label: "Tooltips",
+            helpText: $t('index.c6659846dd73e7fd'),
+            label: $t('index.ec866f7981fabc3f'),
             controlType: "INPUT_TEXT",
-            placeholderText: '["Bad", "Neutral", "Good"]',
+            placeholderText: '[$t('index.35ae7a9501b555d4'), $t('index.ab6c6cf996bb32cb'), "Good"]',
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -286,12 +287,12 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.f216fde561b6ef27'),
         children: [
           {
             propertyName: "isAllowHalf",
-            helpText: "Controls if user can submit half stars",
-            label: "Allow half stars",
+            helpText: $t('index.4944ee9a4da8e12e'),
+            label: $t('index.beb612fbca21510f'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -300,8 +301,8 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            helpText: "Controls the visibility of the widget",
-            label: "Visible",
+            helpText: $t('index.bc0f804f1ff8e1bd'),
+            label: $t('index.c0ffdd51bf5a405d'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -310,8 +311,8 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            helpText: "Disables input to the widget",
-            label: "Disabled",
+            helpText: $t('index.4daf7374a39031b9'),
+            label: $t('index.93e7fb91d7fa7776'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -320,8 +321,8 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
           },
           {
             propertyName: "isReadOnly",
-            helpText: "Makes the widget read only",
-            label: "Read only",
+            helpText: $t('index.8a1ceb7c7553aca9'),
+            label: $t('index.ee6db7a9a5edafc7'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -330,9 +331,9 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.ab73a86419412c4f'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.ca632eaf64941118'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -342,10 +343,10 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.023d2d4d5ecb388e'),
         children: [
           {
-            helpText: "when the rate is changed",
+            helpText: $t('index.0714be69adf283f1'),
             propertyName: "onRateChanged",
             label: "onChange",
             controlType: "ACTION_SELECTOR",
@@ -361,27 +362,27 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.f216fde561b6ef27'),
         children: [
           {
             propertyName: "size",
-            label: "Star size",
-            helpText: "Controls the size of the stars in the widget",
+            label: $t('index.56e9c46a9399c785'),
+            helpText: $t('index.75102d474f534f81'),
             controlType: "ICON_TABS",
             defaultValue: "LARGE",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
               {
-                label: "Small",
+                label: $t('index.2e74106622a09108'),
                 value: "SMALL",
               },
               {
-                label: "Medium",
+                label: $t('index.70fb022ffbafa9c3'),
                 value: "MEDIUM",
               },
               {
-                label: "Large",
+                label: $t('index.2b11291c7eb808a6'),
                 value: "LARGE",
               },
             ],
@@ -391,12 +392,12 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.13696e11531421e3'),
         children: [
           {
             propertyName: "activeColor",
-            label: "Active color",
-            helpText: "Color of the selected stars",
+            label: $t('index.6e3180ae0de3faaa'),
+            helpText: $t('index.38718246ff73967c'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -405,8 +406,8 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
           },
           {
             propertyName: "inactiveColor",
-            label: "Inactive color",
-            helpText: "Color of the unselected stars",
+            label: $t('index.39d12c2ee40f91aa'),
+            helpText: $t('index.8ed0bcff442137fa'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,

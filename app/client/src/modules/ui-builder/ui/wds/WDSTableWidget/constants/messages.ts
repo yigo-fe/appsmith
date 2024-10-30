@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 // Table widget
 export const TABLE_CONNECT_OVERLAY_TEXT = () =>
-  "Connect your data or use sample data to display table";
+  $t('messages.bd0dc644b2ab6354');

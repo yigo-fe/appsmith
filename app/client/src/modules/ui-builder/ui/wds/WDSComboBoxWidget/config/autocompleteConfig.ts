@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "A combo box combines a text input with a listbox, allowing users to filter a list of options to items matching a query.",
+    $t('autocompleteConfig.5862481858df0fdc'),
   "!url": "https://docs.appsmith.com/widget-reference/radio",
   isVisible: DefaultAutocompleteDefinitions.isVisible,
   options: "[$__dropdownOption__$]",

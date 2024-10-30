@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { XYCord } from "layoutSystems/common/canvasArenas/ArenaTypes";
 import type {
   AnvilHighlightInfo,
@@ -343,7 +344,7 @@ function calculateDistance(a: AnvilHighlightInfo, b: XYCord): number {
  */
 export const renderDisallowDroppingUI = (slidingArena: HTMLDivElement) => {
   slidingArena.classList.add("disallow-dropping");
-  slidingArena.innerText = "This Layout doesn't support the widget";
+  slidingArena.innerText = $t('utils.e02692fcd3ff181a');
 };
 
 export const removeDisallowDroppingsUI = (slidingArena: HTMLDivElement) => {

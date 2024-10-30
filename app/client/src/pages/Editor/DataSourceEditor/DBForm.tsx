@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
@@ -102,7 +103,7 @@ class DatasourceDBEditor extends JSONtoForm<Props> {
               kind="info"
               links={[
                 {
-                  children: "Learn more",
+                  children: $t('DBForm.218eea892bb6a4f2'),
                   onClick: this.openDocumentation,
                   endIcon: "share-box-line",
                   to: "about:blank",

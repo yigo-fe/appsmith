@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { DATASOURCE_REST_API_FORM } from "ee/constants/forms";
@@ -166,7 +167,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
       !this.isDirty("authentication.headerPrefix") &&
       _.get(authentication, "headerPrefix") === undefined
     ) {
-      this.props.change("authentication.headerPrefix", "Bearer");
+      this.props.change("authentication.headerPrefix", $t('RestAPIDatasourceForm.7f9bd5f6533f2dde'));
     }
 
     if (_.get(authentication, "grantType") === GrantType.AuthorizationCode) {
@@ -335,7 +336,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
           <FormInputContainer data-location-id={btoa("sessionSignatureKey")}>
             {this.renderInputTextControlViaFormControl({
               configProperty: "sessionSignatureKey",
-              label: "Session details signature key",
+              label: $t('RestAPIDatasourceForm.b7f7a4bb89677d47'),
               placeholderText: "",
               dataType: "TEXT",
               encrypted: false,
@@ -346,13 +347,13 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("ssl")}>
           {this.renderCheckboxViaFormControl(
             "connection.ssl.authTypeControl",
-            "Use Self-Signed Certificate",
+            $t('RestAPIDatasourceForm.7aca68d340a5d6b1'),
             "",
             false,
           )}
         </FormInputContainer>
         {this.renderSelfSignedCertificateFields()}
-        <Collapsible title="Headers">
+        <Collapsible title={$t('RestAPIDatasourceForm.6af17a1d975ad4d0')}>
           <FormInputContainer
             className="t--headers-array"
             data-location-id={btoa("headers")}
@@ -360,7 +361,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
             {this.renderKeyValueControlViaFormControl("headers", "", "", false)}
           </FormInputContainer>
         </Collapsible>
-        <Collapsible title="Query parameters">
+        <Collapsible title={$t('RestAPIDatasourceForm.7c9705c6f84600da')}>
           <FormInputContainer data-location-id={btoa("queryParameters")}>
             {this.renderKeyValueControlViaFormControl(
               "queryParameters",
@@ -370,33 +371,33 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
             )}
           </FormInputContainer>
         </Collapsible>
-        <Collapsible title="Authentication">
+        <Collapsible title={$t('RestAPIDatasourceForm.df73a84bf1cd1c59')}>
           <FormInputContainer data-location-id={btoa("authType")}>
             {this.renderDropdownControlViaFormControl(
               "authType",
               [
                 {
-                  label: "None",
+                  label: $t('RestAPIDatasourceForm.1329d26af87de41a'),
                   value: AuthType.NONE,
                 },
                 {
-                  label: "Basic",
+                  label: $t('RestAPIDatasourceForm.1f640118bbdb1577'),
                   value: AuthType.basic,
                 },
                 {
-                  label: "OAuth 2.0",
+                  label: $t('RestAPIDatasourceForm.2ccbf0ab5672ed01'),
                   value: AuthType.OAuth2,
                 },
                 {
-                  label: "API key",
+                  label: $t('RestAPIDatasourceForm.249983efcd0d383b'),
                   value: AuthType.apiKey,
                 },
                 {
-                  label: "Bearer token",
+                  label: $t('RestAPIDatasourceForm.a3a51fc4864ce5ba'),
                   value: AuthType.bearerToken,
                 },
               ],
-              "Authentication type",
+              $t('RestAPIDatasourceForm.ad048e9f6f3024f2'),
               "",
               false,
               "",
@@ -416,7 +417,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <div style={{ marginTop: "16px" }}>
           {this.renderFilePickerControlViaFormControl(
             "connection.ssl.certificateFile",
-            "Upload Certificate",
+            $t('RestAPIDatasourceForm.94618023084cb573'),
             "",
             false,
             true,
@@ -454,7 +455,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("authentication.label")}>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.label",
-            label: "Key",
+            label: $t('RestAPIDatasourceForm.17907caea23597e0'),
             placeholderText: "api_key",
             dataType: "TEXT",
             encrypted: false,
@@ -464,7 +465,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.value",
-            label: "Value",
+            label: $t('RestAPIDatasourceForm.09a95b427d3c8cca'),
             placeholderText: "value",
             dataType: "TEXT",
             encrypted: true,
@@ -476,15 +477,15 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
             "authentication.addTo",
             [
               {
-                label: "Query Params",
+                label: $t('RestAPIDatasourceForm.635904aa544635c9'),
                 value: ApiKeyAuthType.QueryParams,
               },
               {
-                label: "Header",
+                label: $t('RestAPIDatasourceForm.93035adbb2e1d026'),
                 value: ApiKeyAuthType.Header,
               },
             ],
-            "Add To",
+            $t('RestAPIDatasourceForm.820a85de72df1521'),
             "",
             false,
             "",
@@ -496,7 +497,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
           >
             {this.renderInputTextControlViaFormControl({
               configProperty: "authentication.headerPrefix",
-              label: "Header prefix",
+              label: $t('RestAPIDatasourceForm.ad590951203e433f'),
               placeholderText: "eg: Bearer ",
               dataType: "TEXT",
               encrypted: false,
@@ -513,8 +514,8 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
       <FormInputContainer data-location-id={btoa("authentication.bearerToken")}>
         {this.renderInputTextControlViaFormControl({
           configProperty: "authentication.bearerToken",
-          label: "Bearer token",
-          placeholderText: "Bearer token",
+          label: $t('RestAPIDatasourceForm.a3a51fc4864ce5ba'),
+          placeholderText: $t('RestAPIDatasourceForm.a3a51fc4864ce5ba'),
           dataType: "TEXT",
           encrypted: true,
           isRequired: false,
@@ -529,8 +530,8 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("authentication.username")}>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.username",
-            label: "Username",
-            placeholderText: "Username",
+            label: $t('RestAPIDatasourceForm.2c1f2ded76ba0258'),
+            placeholderText: $t('RestAPIDatasourceForm.2c1f2ded76ba0258'),
             dataType: "TEXT",
             encrypted: false,
             isRequired: false,
@@ -539,8 +540,8 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("authentication.password")}>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.password",
-            label: "Password",
-            placeholderText: "Password",
+            label: $t('RestAPIDatasourceForm.7dbb89e00d35f95a'),
+            placeholderText: $t('RestAPIDatasourceForm.7dbb89e00d35f95a'),
             dataType: "PASSWORD",
             encrypted: true,
             isRequired: false,
@@ -577,15 +578,15 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
             "authentication.grantType",
             [
               {
-                label: "Client Credentials",
+                label: $t('RestAPIDatasourceForm.e91c0a2618728a65'),
                 value: GrantType.ClientCredentials,
               },
               {
-                label: "Authorization Code",
+                label: $t('RestAPIDatasourceForm.e58cfc7847640748'),
                 value: GrantType.AuthorizationCode,
               },
             ],
-            "Grant type",
+            $t('RestAPIDatasourceForm.855187f683747b22'),
             "",
             false,
             "",
@@ -608,15 +609,15 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
             "authentication.isTokenHeader",
             [
               {
-                label: "Request Header",
+                label: $t('RestAPIDatasourceForm.1a904631563c3825'),
                 value: true,
               },
               {
-                label: "Request URL",
+                label: $t('RestAPIDatasourceForm.88534afe0989a35d'),
                 value: false,
               },
             ],
-            "Add Access Token To",
+            $t('RestAPIDatasourceForm.8aef737fd3fc0786'),
             "",
             false,
             "",
@@ -629,7 +630,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
           >
             {this.renderInputTextControlViaFormControl({
               configProperty: "authentication.headerPrefix",
-              label: "Header prefix",
+              label: $t('RestAPIDatasourceForm.ad590951203e433f'),
               placeholderText: "eg: Bearer ",
               dataType: "TEXT",
               encrypted: false,
@@ -642,7 +643,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         >
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.accessTokenUrl",
-            label: "Access token URL",
+            label: $t('RestAPIDatasourceForm.5fd082ec4ddb6ddb'),
             placeholderText: "https://example.com/login/oauth/access_token",
             dataType: "TEXT",
             encrypted: false,
@@ -653,8 +654,8 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("authentication.clientId")}>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.clientId",
-            label: "Client ID",
-            placeholderText: "Client ID",
+            label: $t('RestAPIDatasourceForm.2adba6cb2e5a68fb'),
+            placeholderText: $t('RestAPIDatasourceForm.2adba6cb2e5a68fb'),
             dataType: "TEXT",
             encrypted: false,
             isRequired: false,
@@ -665,8 +666,8 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         >
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.clientSecret",
-            label: "Client secret",
-            placeholderText: "Client secret",
+            label: $t('RestAPIDatasourceForm.82fdefc7f5275553'),
+            placeholderText: $t('RestAPIDatasourceForm.82fdefc7f5275553'),
             dataType: "PASSWORD",
             encrypted: true,
             isRequired: false,
@@ -678,7 +679,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         >
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.scopeString",
-            label: "Scope(s)",
+            label: $t('RestAPIDatasourceForm.3130455e9556507a'),
             placeholderText: "e.g. read, write",
             dataType: "TEXT",
             encrypted: false,
@@ -692,15 +693,15 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
             "authentication.isAuthorizationHeader",
             [
               {
-                label: "Send as Basic Auth header",
+                label: $t('RestAPIDatasourceForm.4e904909305e3166'),
                 value: true,
               },
               {
-                label: "Send client credentials in body",
+                label: $t('RestAPIDatasourceForm.567b0847dcdb3ce7'),
                 value: false,
               },
             ],
-            "Client Authentication",
+            $t('RestAPIDatasourceForm.7214d4d22c3bb4ce'),
             "",
             false,
             "",
@@ -725,7 +726,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
       return null;
 
     return (
-      <Collapsible title="Advanced Settings">
+      <Collapsible title={$t('RestAPIDatasourceForm.7e7037c164d6acac')}>
         {isGrantTypeAuthorizationCode && (
           <FormInputContainer
             data-location-id={btoa("authentication.sendScopeWithRefreshToken")}
@@ -734,15 +735,15 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
               "authentication.sendScopeWithRefreshToken",
               [
                 {
-                  label: "Yes",
+                  label: $t('RestAPIDatasourceForm.c3ac2ae6e255b51b'),
                   value: true,
                 },
                 {
-                  label: "No",
+                  label: $t('RestAPIDatasourceForm.14dfb0846ab744b5'),
                   value: false,
                 },
               ],
-              "Send scope with refresh token",
+              $t('RestAPIDatasourceForm.45b4f87a3e054cce'),
               "",
               false,
               "",
@@ -760,15 +761,15 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
               "authentication.refreshTokenClientCredentialsLocation",
               [
                 {
-                  label: "Body",
+                  label: $t('RestAPIDatasourceForm.fc684b8dbaae283f'),
                   value: "BODY",
                 },
                 {
-                  label: "Header",
+                  label: $t('RestAPIDatasourceForm.93035adbb2e1d026'),
                   value: "HEADER",
                 },
               ],
-              "Send client credentials with (on refresh token):",
+              $t('RestAPIDatasourceForm.0eae5710fdf23608'),
               "",
               false,
               "",
@@ -781,7 +782,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
           >
             {this.renderCheckboxViaFormControl(
               "authentication.useSelfSignedCert",
-              "Use Self-Signed Certificate for Authorization requests",
+              $t('RestAPIDatasourceForm.ba0f11865629e019'),
               "",
               false,
             )}
@@ -797,7 +798,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("authentication.audience")}>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.audience",
-            label: "Audience",
+            label: $t('RestAPIDatasourceForm.7068b7a84975bf7b'),
             placeholderText: "https://example.com/oauth/audience",
             dataType: "TEXT",
             encrypted: false,
@@ -807,7 +808,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("authentication.resource")}>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.resource",
-            label: "Resource",
+            label: $t('RestAPIDatasourceForm.14b182a153f8605c'),
             placeholderText: "https://example.com/oauth/resource",
             dataType: "TEXT",
             encrypted: false,
@@ -841,7 +842,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         >
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.authorizationUrl",
-            label: "Authorization URL",
+            label: $t('RestAPIDatasourceForm.8f0b25ad67688ad4'),
             placeholderText: "https://example.com/login/oauth/authorize",
             dataType: "TEXT",
             encrypted: false,
@@ -867,7 +868,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         >
           {this.renderKeyValueControlViaFormControl(
             "authentication.customAuthenticationParameters",
-            "Custom Authentication Parameters",
+            $t('RestAPIDatasourceForm.4439597cfc27bb24'),
             "",
             false,
           )}
@@ -875,7 +876,7 @@ class DatasourceRestAPIEditor extends React.Component<Props> {
         <FormInputContainer data-location-id={btoa("authentication.expiresIn")}>
           {this.renderInputTextControlViaFormControl({
             configProperty: "authentication.expiresIn",
-            label: "Authorization expires in (seconds)",
+            label: $t('RestAPIDatasourceForm.96e97ddc3587f96f'),
             placeholderText: "3600",
             dataType: "NUMBER",
             encrypted: false,

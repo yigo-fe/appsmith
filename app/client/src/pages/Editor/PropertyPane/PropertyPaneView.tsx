@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { IPanelProps } from "@blueprintjs/core";
 import equal from "fast-deep-equal/es6";
 import type { ReactElement } from "react";
@@ -218,7 +219,7 @@ function PropertyPaneView(
   }> => {
     return [
       {
-        tooltipContent: "Copy widget",
+        tooltipContent: $t('PropertyPaneView.fe0a8f28a2068571'),
         icon: (
           <Button
             data-testid="t--copy-widget"
@@ -230,7 +231,7 @@ function PropertyPaneView(
         ),
       },
       {
-        tooltipContent: "Delete widget",
+        tooltipContent: $t('PropertyPaneView.7b371cb2a251e0d6'),
         icon: (
           <Button
             data-testid="t--delete-widget"

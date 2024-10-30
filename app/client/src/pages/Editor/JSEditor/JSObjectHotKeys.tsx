@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Hotkey, Hotkeys, HotkeysTarget } from "@blueprintjs/core";
 import { JS_OBJECT_HOTKEYS_CLASSNAME } from "./constants";
@@ -16,7 +17,7 @@ class JSObjectHotKeys extends React.Component<Props> {
           allowInInput
           combo="mod + enter"
           global
-          label="Run Js Function"
+          label=$t('JSObjectHotKeys.6b309119cfd45041')
           onKeyDown={this.props.runActiveJSFunction}
         />
       </Hotkeys>

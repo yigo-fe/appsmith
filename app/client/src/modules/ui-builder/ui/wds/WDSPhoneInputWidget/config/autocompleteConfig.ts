@@ -1,17 +1,18 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "An input text field is used to capture a phone number. Inputs are used in forms and can have custom validations.",
+    $t('autocompleteConfig.12656c427edddbff'),
   "!url": "https://docs.appsmith.com/widget-reference/phone-input",
   parsedText: {
     "!type": "string",
-    "!doc": "The formatted text value of the input",
+    "!doc": $t('autocompleteConfig.2b375cc3d8e0244f'),
     "!url": "https://docs.appsmith.com/widget-reference/phone-input",
   },
   rawText: {
     "!type": "string",
-    "!doc": "The unformatted text value of the input",
+    "!doc": $t('autocompleteConfig.87ec2d3d25b963b8'),
     "!url": "https://docs.appsmith.com/widget-reference/phone-input",
   },
   isValid: "bool",
@@ -20,10 +21,10 @@ export const autocompleteConfig = {
   isReadOnly: "bool",
   countryCode: {
     "!type": "string",
-    "!doc": "Selected country code for Phone Number",
+    "!doc": $t('autocompleteConfig.17ff595b9a58092e'),
   },
   dialCode: {
     "!type": "string",
-    "!doc": "Selected dialing code for Phone Number",
+    "!doc": $t('autocompleteConfig.465c45b2ee30bf38'),
   },
 };

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { SetterConfig, Stylesheet } from "entities/AppTheming";
@@ -36,7 +37,7 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Iframe",
+      name: $t('index.0a3495ecae4a4c7a'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.DISPLAY],
@@ -52,7 +53,7 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
       borderWidth: 1,
       rows: 32,
       columns: 24,
-      widgetName: "Iframe",
+      widgetName: $t('index.0a3495ecae4a4c7a'),
       version: 1,
       animateLoading: true,
       isVisible: true,
@@ -107,7 +108,7 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return (widget: IframeWidgetProps) => ({
-      "!doc": "Iframe widget is used to display iframes in your app.",
+      "!doc": $t('index.4be292b85f5308e8'),
       "!url": "https://docs.appsmith.com/widget-reference/iframe",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       source: "string",
@@ -135,11 +136,11 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.66923218abdc00eb'),
         children: [
           {
             propertyName: "source",
-            helpText: "The URL of the page to embed",
+            helpText: $t('index.c1fe337ebb01eda3'),
             label: "URL",
             controlType: "INPUT_TEXT",
             placeholderText: "https://docs.appsmith.com",
@@ -154,7 +155,7 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
           },
           {
             propertyName: "srcDoc",
-            helpText: "Inline HTML to embed, overriding the src attribute",
+            helpText: $t('index.5b2d130abf831be0'),
             label: "srcDoc",
             controlType: "INPUT_TEXT",
             placeholderText: "<p>Inline HTML</p>",
@@ -167,23 +168,23 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.18bd201a635a3992'),
         children: [
           {
             propertyName: "title",
-            helpText: "Label the content of the page to embed",
-            label: "Title",
+            helpText: $t('index.a105a1c23bcbe622'),
+            label: $t('index.f37f8ef3c76ed2ad'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Documentation",
+            placeholderText: $t('index.2a668aab05b75cdb'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.7bf768abc346f33b'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.fd61f035ff808cbc'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -192,9 +193,9 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.f028a5ca5d2999f4'),
             controlType: "SWITCH",
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.15becd8392414070'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -204,10 +205,10 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.989a4ea31e6ec05e'),
         children: [
           {
-            helpText: "when the source URL is changed",
+            helpText: $t('index.91a80bb211dd06fb'),
             propertyName: "onURLChanged",
             label: "onURLChanged",
             controlType: "ACTION_SELECTOR",
@@ -216,7 +217,7 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the srcDoc is changed",
+            helpText: $t('index.0cc84243620f7bc1'),
             propertyName: "onSrcDocChanged",
             label: "onSrcDocChanged",
             controlType: "ACTION_SELECTOR",
@@ -225,7 +226,7 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when a message event is received",
+            helpText: $t('index.fd8addbe0a12c2e5'),
             propertyName: "onMessageReceived",
             label: "onMessageReceived",
             controlType: "ACTION_SELECTOR",
@@ -241,12 +242,12 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Color",
+        sectionName: $t('index.2b94eb0e1832fed4'),
         children: [
           {
             propertyName: "borderColor",
-            label: "Border color",
-            helpText: "Controls the color of the border",
+            label: $t('index.dc96bfd4e1a7ad9a'),
+            helpText: $t('index.363cdf79d5c91f00'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -256,12 +257,12 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.85aadeaabb8ba7d6'),
         children: [
           {
             propertyName: "borderWidth",
-            label: "Border width (px)",
-            helpText: "Controls the size of the border in px",
+            label: $t('index.6714c73ce46a2377'),
+            helpText: $t('index.b51ba1cda7d1a53a'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -274,7 +275,7 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
           {
             propertyName: "borderOpacity",
             label: "Border opacity (%)",
-            helpText: "Controls the opacity of the border in percentage",
+            helpText: $t('index.de128e86ed2520e9'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -286,9 +287,9 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.ae97c17af10ac3e6'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.955958d75b9ccd1d'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -297,9 +298,9 @@ class IframeWidget extends BaseWidget<IframeWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.d9d46e7804a48ff3'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.5fd8a23fec75c150'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { PluginType, type Action } from "entities/Action";
 import type { EntityInfo } from "../types";
 import { getAction } from "ee/selectors/entitiesSelector";
@@ -12,7 +13,7 @@ export default class ActionPaneNavigationFactory {
   static *create(entityInfo: EntityInfo) {
     const action: Action | undefined = yield select(getAction, entityInfo.id);
 
-    if (!action) throw Error(`Couldn't find action with id: ${entityInfo.id}`);
+    if (!action) throw Error($t('index.f7c76380a5b107fa', {entityInfo_id: entityInfo.id}));
 
     switch (action.pluginType) {
       case PluginType.API:

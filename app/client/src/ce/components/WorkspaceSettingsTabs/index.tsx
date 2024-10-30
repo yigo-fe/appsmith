@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useEffect, useMemo } from "react";
 import {
   useRouteMatch,
@@ -123,12 +124,12 @@ export const WorkspaceSettingsTabs = ({
   const tabArr: TabProp[] = [
     hasManageWorkspacePermissions && {
       key: "general",
-      title: "General Settings",
+      title: $t('index.f773b51dad5faddc'),
       panelComponent: GeneralSettingsComponent,
     },
     isMemberofTheWorkspace && {
       key: "members",
-      title: "Members",
+      title: $t('index.469573b058e48bca'),
       panelComponent: MemberSettingsComponent,
     },
     addTabComponent && addTabComponent(),

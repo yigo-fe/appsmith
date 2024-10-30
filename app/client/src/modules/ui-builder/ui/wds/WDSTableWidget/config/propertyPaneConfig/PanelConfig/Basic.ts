@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import {
@@ -11,7 +12,7 @@ import {
 import { IconNames } from "@blueprintjs/icons";
 
 export default {
-  sectionName: "Basic",
+  sectionName: $t('Basic.efd3f9dc0d04c43e'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return hideByColumnType(
       props,
@@ -23,8 +24,8 @@ export default {
   children: [
     {
       propertyName: "iconName",
-      label: "Icon",
-      helpText: "Sets the icon to be used for the icon button",
+      label: $t('Basic.f7e4712af4596b90'),
+      helpText: $t('Basic.489e3ffaa38f147f'),
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         return hideByColumnType(props, propertyPath, [ColumnTypes.ICON_BUTTON]);
       },
@@ -48,8 +49,8 @@ export default {
     },
     {
       propertyName: "buttonLabel",
-      label: "Text",
-      helpText: "Sets the label of the button",
+      label: $t('Basic.d6e5b41aad744eff'),
+      helpText: $t('Basic.b34cc348f111dfaa'),
       controlType: "INPUT_TEXT",
       defaultValue: "Action",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
@@ -60,7 +61,7 @@ export default {
       isTriggerProperty: false,
     },
     {
-      helpText: "when the button is clicked",
+      helpText: $t('Basic.0fa1b5229c80737a'),
       propertyName: "onClick",
       label: "onClick",
       controlType: "ACTION_SELECTOR",

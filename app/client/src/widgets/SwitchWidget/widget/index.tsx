@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { WidgetProps, WidgetState } from "../../BaseWidget";
 import BaseWidget from "../../BaseWidget";
@@ -31,7 +32,7 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Switch",
+      name: $t('index.307abc6f0724afab'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.TOGGLES],
@@ -51,11 +52,11 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
 
   static getDefaults() {
     return {
-      label: "Label",
+      label: $t('index.c41b141dfe5f7446'),
       rows: 4,
       columns: 12,
       defaultSwitchState: true,
-      widgetName: "Switch",
+      widgetName: $t('index.307abc6f0724afab'),
       alignWidget: AlignWidgetTypes.LEFT,
       labelPosition: LabelPosition.Left,
       version: 1,
@@ -118,27 +119,27 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Label",
+        sectionName: $t('index.c41b141dfe5f7446'),
         children: [
           {
             propertyName: "label",
-            label: "Text",
+            label: $t('index.c914d342cab6af47'),
             controlType: "INPUT_TEXT",
-            helpText: "Displays a label next to the widget",
-            placeholderText: "Enable Option",
+            helpText: $t('index.3c51b8b9315d255c'),
+            placeholderText: $t('index.863dadc17ec8ee07'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.241f5e36e7719e61'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.7e073a07e2314f4f'),
             controlType: "ICON_TABS",
             fullWidth: true,
             options: [
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Right", value: LabelPosition.Right },
+              { label: $t('index.2f4ae55a9dcbbdd4'), value: LabelPosition.Left },
+              { label: $t('index.819b59da838383c3'), value: LabelPosition.Right },
             ],
             defaultValue: LabelPosition.Left,
             isBindProperty: false,
@@ -147,8 +148,8 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
           },
           {
             propertyName: "alignWidget",
-            helpText: "Sets the alignment of the widget",
-            label: "Alignment",
+            helpText: $t('index.907d97adf9d0f1be'),
+            label: $t('index.e310341077b2a8ce'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -168,13 +169,13 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.4877911f580ea379'),
         children: [
           {
             propertyName: "defaultSwitchState",
-            label: "Default state",
+            label: $t('index.434a16829c6bfc24'),
             helpText:
-              "On / Off the Switch by default. Changes to the default selection update the widget state",
+              $t('index.87f5613e472f6322'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -183,8 +184,8 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.914bac9d4aa5444f'),
+            helpText: $t('index.09abd3de96bc0158'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -193,9 +194,9 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.b3b6ef62372d31d4'),
             controlType: "SWITCH",
-            helpText: "Disables input to this widget",
+            helpText: $t('index.fcf7f270119520b9'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -203,9 +204,9 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.ba1c17b31bef2763'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.3fab969d9e962ecc'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -215,10 +216,10 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.b2a686e83d8ad59f'),
         children: [
           {
-            helpText: "when the switch state is changed",
+            helpText: $t('index.cb93c03f23b1d412'),
             propertyName: "onChange",
             label: "onChange",
             controlType: "ACTION_SELECTOR",
@@ -234,12 +235,12 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.69b36a1b42f2d0e8'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.0354bdc27d7cb752'),
+            helpText: $t('index.ebbe731872e9f270'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -253,8 +254,8 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.cdbcf792ab25f413'),
+            helpText: $t('index.50556a8544930c4d'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             hidden: isAutoLayout,
@@ -297,8 +298,8 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.a0ff54d1af629dc2'),
+            helpText: $t('index.95ba79915b916658'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -318,12 +319,12 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.be90475eb0dd1873'),
         children: [
           {
             propertyName: "accentColor",
-            helpText: "Sets the background color of the widget",
-            label: "Accent color",
+            helpText: $t('index.29d17b73ea7fd4c9'),
+            label: $t('index.7e1131753465b654'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -345,7 +346,7 @@ class SwitchWidget extends BaseWidget<SwitchWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Switch is a simple UI widget you can use when you want users to make a binary choice",
+        $t('index.6216dd0ff05349d7'),
       "!url": "https://docs.appsmith.com/widget-reference/switch",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       isSwitchedOn: "bool",

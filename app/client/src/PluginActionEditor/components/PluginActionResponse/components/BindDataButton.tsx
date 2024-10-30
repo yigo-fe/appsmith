@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useState } from "react";
 import {
   Button,
@@ -179,7 +180,7 @@ function getWidgetProps(
         props: {
           [fieldName]: {
             [reactKey]: {
-              seriesName: "Sales",
+              seriesName: $t('BindDataButton.8acebcd7102db596'),
               data: `{{${actionName}.${suggestedWidget.bindingQuery}}}`,
             },
           },

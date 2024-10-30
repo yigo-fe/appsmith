@@ -1,23 +1,24 @@
+import {$t} from "locale/index";
 export default [
   {
     sectionName: "",
     id: 1,
     children: [
       {
-        label: "Run query on page load",
+        label: $t('QuerySettingsConfig.e1351dbda7d4b1d2'),
         configProperty: "executeOnLoad",
         controlType: "SWITCH",
       },
       {
-        label: "Request confirmation before running query",
+        label: $t('QuerySettingsConfig.6cc8f1d53d326b9b'),
         configProperty: "confirmBeforeExecute",
         controlType: "SWITCH",
         tooltipText:
-          "Ask confirmation from the user each time before refreshing data",
+          $t('QuerySettingsConfig.12b0064ee4dcc3b0'),
       },
       {
-        label: "Query timeout (in milliseconds)",
-        subtitle: "Maximum time after which the query will return",
+        label: $t('QuerySettingsConfig.aa7682fa9c0f756f'),
+        subtitle: $t('QuerySettingsConfig.55e2adece2e2cd00'),
         configProperty: "actionConfiguration.timeoutInMillisecond",
         controlType: "INPUT_TEXT",
         dataType: "NUMBER",

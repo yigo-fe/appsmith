@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -355,7 +356,7 @@ export default function MemberSettings(props: PageProps) {
       },
     },
     {
-      Header: "Resource",
+      Header: $t('Members.5f3f4e91e20b9334'),
       accessor: "resource",
       // TODO: Fix this the next time the file is edited
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -364,14 +365,14 @@ export default function MemberSettings(props: PageProps) {
           <RowWrapper>
             <div className="resource-name">
               {cellProps.cell.row.original.roles?.[0]?.entityType ||
-                "Workspace"}
+                $t('Members.0d3ed565f91e9c3a')}
             </div>
           </RowWrapper>
         );
       },
     },
     {
-      Header: "Role",
+      Header: $t('Members.53aacf7b765b3853'),
       accessor: "permissionGroupName",
       // TODO: Fix this the next time the file is edited
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -448,7 +449,7 @@ export default function MemberSettings(props: PageProps) {
       },
     },
     {
-      Header: "Actions",
+      Header: $t('Members.6dda8c26df4b3cd7'),
       accessor: "actions",
       // TODO: Fix this the next time the file is edited
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

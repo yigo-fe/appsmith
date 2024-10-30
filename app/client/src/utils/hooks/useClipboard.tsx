@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { MutableRefObject } from "react";
 
 const writeToClipboard = async (
@@ -8,11 +9,11 @@ const writeToClipboard = async (
   if ("clipboard" in navigator) {
     try {
       await navigator.clipboard.writeText(text);
-      el.childNodes[0].textContent = "Copied to clipboard!";
+      el.childNodes[0].textContent = $t('useClipboard.704237d82d09831c');
       el.classList.add("success");
       ref.current && ref.current.append(el);
     } catch (e) {
-      el.childNodes[0].textContent = "Failed!";
+      el.childNodes[0].textContent = $t('useClipboard.781e227eeed03e62');
       el.classList.add("error");
       ref.current && ref.current.append(el);
     }
@@ -30,7 +31,7 @@ const writeToClipboard = async (
     to the element which the passed ref refers
 
     Error in copying:
-    It appends a div with the class .clipboard-message.error with text "Failed!"
+    It appends a div with the class .clipboard-message.error with text $t('useClipboard.781e227eeed03e62')
     to the element which the passed ref refers
 
     The component which implements the hook needs to add the appropriate styles

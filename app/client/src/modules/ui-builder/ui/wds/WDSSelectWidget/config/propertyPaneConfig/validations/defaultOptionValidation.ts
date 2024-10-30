@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import type { LoDashStatic } from "lodash";
 import type { WidgetProps } from "widgets/BaseWidget";
@@ -56,7 +57,7 @@ export function defaultOptionValidation(
       return createErrorValidationResponse(value, {
         name: "ValidationError",
         message:
-          "Default value is missing in options. Please update the value.",
+          $t('defaultOptionValidation.395550d2335800f7'),
       });
     }
 

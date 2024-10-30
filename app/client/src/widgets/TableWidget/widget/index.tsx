@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { lazy, Suspense } from "react";
 import log from "loglevel";
 import moment from "moment";
@@ -97,7 +98,7 @@ class TableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Table",
+      name: $t('index.a7057781c4ed8d86'),
       iconSVG: IconSVG,
       needsMeta: true,
       searchTags: ["datagrid"],
@@ -113,8 +114,8 @@ class TableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
       columns: 34,
       animateLoading: true,
       defaultSelectedRow: "0",
-      label: "Data",
-      widgetName: "Table",
+      label: $t('index.2435edacedb5c2c4'),
+      widgetName: $t('index.a7057781c4ed8d86'),
       searchKey: "",
       textSize: "0.875rem",
       horizontalAlignment: "LEFT",
@@ -212,7 +213,7 @@ class TableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
           isDerived: false,
           label: "action",
           onClick:
-            "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
+            "{{currentRow.step === '#1' ? showAlert($t('index.21930157ede026e8'), 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
           computedValue:
             "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
         },
@@ -221,13 +222,13 @@ class TableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
       tableData: [
         {
           step: "#1",
-          task: "Drop a table",
+          task: $t('index.cc6372e44ba60653'),
           status: "✅",
           action: "",
         },
         {
           step: "#2",
-          task: "Create a query fetch_users with the Mock DB",
+          task: $t('index.814021422ffa3c4e'),
           status: "--",
           action: "",
         },
@@ -575,7 +576,7 @@ class TableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
               columnActions: [
                 {
                   id: columnProperties.id,
-                  label: cellProperties.buttonLabel || "Action",
+                  label: cellProperties.buttonLabel || $t('index.33190870bdbb79b9'),
                   dynamicTrigger: columnProperties.onClick || "",
                 },
               ],
@@ -635,7 +636,7 @@ class TableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
               iconName: cellProperties.iconName || undefined,
               iconAlign: cellProperties.iconAlign,
               isCellVisible: cellProperties.isCellVisible ?? true,
-              label: cellProperties.menuButtonLabel ?? "Open menu",
+              label: cellProperties.menuButtonLabel ?? $t('index.3a906a813239cb25'),
             };
 
             return renderMenuButton(menuButtonProps, isHidden, cellProperties);
@@ -789,7 +790,7 @@ class TableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
                     tableRow[accessor] = "";
                   }
                 } else if (value) {
-                  tableRow[accessor] = "Invalid Value";
+                  tableRow[accessor] = $t('index.9d1bbaba285d54ca');
                 } else {
                   tableRow[accessor] = "";
                 }

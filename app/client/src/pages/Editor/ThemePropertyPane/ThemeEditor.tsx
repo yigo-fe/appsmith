@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import styled, { createGlobalStyle } from "styled-components";
 import { get, startCase } from "lodash";
 import { useDispatch, useSelector } from "react-redux";
@@ -142,7 +143,7 @@ function ThemeEditor() {
       </header>
       <main className="mt-1">
         {/* FONT  */}
-        <SettingSection className="px-4 py-3" isDefaultOpen title="Font">
+        <SettingSection className="px-4 py-3" isDefaultOpen title={$t('ThemeEditor.bd856d1759e31d34')}>
           {Object.keys(selectedTheme.config.fontFamily).map(
             (fontFamilySectionName: string, index: number) => {
               return (
@@ -173,7 +174,7 @@ function ThemeEditor() {
         <SettingSection
           className="px-4 py-3 border-t"
           isDefaultOpen
-          title="Color"
+          title=$t('ThemeEditor.bf0d4575b0644c97')
         >
           <section className="space-y-2">
             <ThemeColorControl
@@ -187,7 +188,7 @@ function ThemeEditor() {
         <SettingSection
           className="px-4 py-3 border-t "
           isDefaultOpen
-          title="Border"
+          title=$t('ThemeEditor.c46186c3f11e30d1')
         >
           {Object.keys(selectedTheme.config.borderRadius).map(
             (borderRadiusSectionName: string, index: number) => {
@@ -220,7 +221,7 @@ function ThemeEditor() {
         <SettingSection
           className="px-4 py-3 border-t "
           isDefaultOpen
-          title="Shadow"
+          title=$t('ThemeEditor.de846dc58c587c27')
         >
           {Object.keys(selectedTheme.config.boxShadow).map(
             (boxShadowSectionName: string, index: number) => {

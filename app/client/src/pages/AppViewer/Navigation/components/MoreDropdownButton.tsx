@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState } from "react";
 import type { NavigationSetting } from "constants/AppConstants";
 import { NAVIGATION_SETTINGS } from "constants/AppConstants";
@@ -58,7 +59,7 @@ const MoreDropdownButton = ({
       >
         <>
           <MenuText
-            name="More"
+            name=$t('MoreDropdownButton.cbd8ff0eba6b636d')
             navColorStyle={navColorStyle}
             primaryColor={primaryColor}
           />

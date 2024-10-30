@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get } from "lodash";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
@@ -10,7 +11,7 @@ import { ICON_NAMES } from "WidgetProvider/constants";
 import { ColumnTypes } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 
 export default {
-  sectionName: "Save Button",
+  sectionName: $t('SaveButtonProperties.bde1273781c0ded3'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return hideByColumnType(
       props,
@@ -21,13 +22,13 @@ export default {
   },
   children: [
     {
-      sectionName: "Label",
+      sectionName: $t('SaveButtonProperties.fbe3707e2eac9f7e'),
       collapsible: false,
       children: [
         {
           propertyName: "saveActionLabel",
-          label: "Text",
-          helpText: "Sets the label text of the button",
+          label: $t('SaveButtonProperties.315770b964c64133'),
+          helpText: $t('SaveButtonProperties.07e62e1f3a68dfe6'),
 
           dependencies: ["primaryColumns"],
           isBindProperty: true,
@@ -36,13 +37,13 @@ export default {
       ],
     },
     {
-      sectionName: "General",
+      sectionName: $t('SaveButtonProperties.f206b0bb490501c4'),
       collapsible: false,
       children: [
         {
           propertyName: "onSave",
           label: "onSave",
-          helpText: "when the save button is clicked",
+          helpText: $t('SaveButtonProperties.6681b2bfef3ff560'),
           controlType: "ACTION_SELECTOR",
           hidden: (props: TableWidgetProps, propertyPath: string) => {
             const baseProperty = getBasePropertyPath(propertyPath);
@@ -58,8 +59,8 @@ export default {
         {
           propertyName: "isSaveVisible",
           dependencies: ["primaryColumns"],
-          label: "Visible",
-          helpText: "Controls the visibility of the save button",
+          label: $t('SaveButtonProperties.4642aceec8734112'),
+          helpText: $t('SaveButtonProperties.8b99b093651d49d6'),
           defaultValue: true,
           controlType: "SWITCH",
 
@@ -75,8 +76,8 @@ export default {
         },
         {
           propertyName: "isSaveDisabled",
-          label: "Disabled",
-          helpText: "Disables clicks to the save button",
+          label: $t('SaveButtonProperties.cfe4bf8f02c61dbc'),
+          helpText: $t('SaveButtonProperties.21f4ca37bc6585a2'),
           defaultValue: false,
           controlType: "SWITCH",
 
@@ -97,7 +98,7 @@ export default {
 };
 
 export const saveButtonStyleConfig = {
-  sectionName: "Save Button",
+  sectionName: $t('SaveButtonProperties.bde1273781c0ded3'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return hideByColumnType(
       props,
@@ -108,14 +109,14 @@ export const saveButtonStyleConfig = {
   },
   children: [
     {
-      sectionName: "General",
+      sectionName: $t('SaveButtonProperties.f206b0bb490501c4'),
       collapsible: false,
       children: [
         {
           propertyName: "saveButtonColor",
-          label: "Button color",
+          label: $t('SaveButtonProperties.161d9207b11de846'),
           controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
-          helpText: "Changes the color of the button",
+          helpText: $t('SaveButtonProperties.e6458e28a2f9c2c1'),
           isJSConvertible: true,
 
           dependencies: ["primaryColumns"],
@@ -133,24 +134,24 @@ export const saveButtonStyleConfig = {
         },
         {
           propertyName: "saveButtonVariant",
-          label: "Button variant",
+          label: $t('SaveButtonProperties.ea6f94283b8ff76f'),
           controlType: "ICON_TABS",
           fullWidth: true,
 
           isJSConvertible: true,
-          helpText: "Sets the variant of the save button",
+          helpText: $t('SaveButtonProperties.f5619551b8c8ef9f'),
           dependencies: ["primaryColumns"],
           options: [
             {
-              label: "Primary",
+              label: $t('SaveButtonProperties.e93c36a972ae554a'),
               value: ButtonVariantTypes.PRIMARY,
             },
             {
-              label: "Secondary",
+              label: $t('SaveButtonProperties.6d3f390e658b4188'),
               value: ButtonVariantTypes.SECONDARY,
             },
             {
-              label: "Tertiary",
+              label: $t('SaveButtonProperties.a7298066bed8c115'),
               value: ButtonVariantTypes.TERTIARY,
             },
           ],
@@ -174,10 +175,10 @@ export const saveButtonStyleConfig = {
         },
         {
           propertyName: "saveBorderRadius",
-          label: "Border radius",
+          label: $t('SaveButtonProperties.0a454a8d3b9daeb4'),
 
           isJSConvertible: true,
-          helpText: "Rounds the corners of the save button's outer border edge",
+          helpText: $t('SaveButtonProperties.48e309587645d34f'),
           controlType: "BORDER_RADIUS_OPTIONS",
           dependencies: ["primaryColumns"],
           isBindProperty: true,
@@ -192,13 +193,13 @@ export const saveButtonStyleConfig = {
       ],
     },
     {
-      sectionName: "Icon",
+      sectionName: $t('SaveButtonProperties.31cd0ab65df4519c'),
       collapsible: false,
       children: [
         {
           propertyName: "saveActionIconName",
-          label: "Icon",
-          helpText: "Sets the icon to be used for the save action button",
+          label: $t('SaveButtonProperties.31cd0ab65df4519c'),
+          helpText: $t('SaveButtonProperties.0c4b538bd1fc9a66'),
           dependencies: ["primaryColumns", "columnOrder"],
           controlType: "ICON_SELECT",
 
@@ -217,8 +218,8 @@ export const saveButtonStyleConfig = {
         },
         {
           propertyName: "saveIconAlign",
-          label: "Position",
-          helpText: "Sets the icon alignment of the save button",
+          label: $t('SaveButtonProperties.405f509581fc8c05'),
+          helpText: $t('SaveButtonProperties.1b8cfd7dd5aef4ed'),
           controlType: "ICON_TABS",
           fullWidth: false,
           defaultValue: "left",

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AdminConfigType } from "ee/pages/AdminSettings/config/types";
 import {
   CategoryType,
@@ -12,7 +13,7 @@ export const config: AdminConfigType = {
   categoryType: CategoryType.ACL,
   controlType: SettingTypes.PAGE,
   component: AccessControlUpgradePage,
-  title: "Access Control",
+  title: $t('userlisting.dae308b8889c903e'),
   canSave: false,
   isFeatureEnabled: false,
 } as AdminConfigType;

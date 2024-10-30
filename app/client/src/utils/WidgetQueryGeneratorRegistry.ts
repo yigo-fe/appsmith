@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { error } from "loglevel";
 
 export default class WidgetQueryGeneratorRegistry {
@@ -7,7 +8,7 @@ export default class WidgetQueryGeneratorRegistry {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static register(id: string, queryGenerator: any) {
     if (WidgetQueryGeneratorRegistry.queryGeneratorMap.has(id)) {
-      error("There is already a widget query generator with the given id:", id);
+      error($t('WidgetQueryGeneratorRegistry.bdd003390e474ce3'), id);
 
       return;
     }
@@ -23,7 +24,7 @@ export default class WidgetQueryGeneratorRegistry {
     const queryAdaptor = WidgetQueryGeneratorRegistry.queryGeneratorMap.get(id);
 
     if (!queryAdaptor) {
-      error("Couldn't find the query generator with the given id:", id);
+      error($t('WidgetQueryGeneratorRegistry.36a081fa6d5e66d8'), id);
 
       return;
     }

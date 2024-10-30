@@ -1,16 +1,17 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 
 export const propertyPaneStyle = [
   {
-    sectionName: "General",
+    sectionName: $t('propertyPaneStyle.79a83ecc2570d499'),
     children: [
       {
         propertyName: "elevatedBackground",
-        label: "Visual Separation",
+        label: $t('propertyPaneStyle.6d14ebbd82b007e0'),
         controlType: "SWITCH",
         fullWidth: true,
         helpText:
-          "Sets the semantic elevated background and/or borders of the section. This separates the section visually. This could be useful for separating the contents of this section visually from the rest of the sections in the page",
+          $t('propertyPaneStyle.584ffae46d6e8f8b'),
         isJSConvertible: true,
         isBindProperty: true,
         isTriggerProperty: false,

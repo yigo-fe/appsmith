@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ConfigTree, DataTree } from "entities/DataTree/dataTreeTypes";
 import type ReplayEntity from "entities/Replay";
 import ReplayCanvas from "entities/Replay/ReplayEntity/ReplayCanvas";
@@ -117,7 +118,7 @@ export async function evalTree(
           cacheProps,
         ),
         webworkerTelemetry,
-        { description: "during initialisation" },
+        { description: $t('evalTree.6c4ca7d2b241a6ad') },
       );
 
       evalOrder = setupFirstTreeResponse.evalOrder;
@@ -125,7 +126,7 @@ export async function evalTree(
 
       const dataTreeResponse = profileFn(
         "evalAndValidateFirstTree",
-        { description: "during initialisation" },
+        { description: $t('evalTree.6c4ca7d2b241a6ad') },
         webworkerTelemetry,
         (dataTreeEvaluator as DataTreeEvaluator).evalAndValidateFirstTree.bind(
           dataTreeEvaluator,

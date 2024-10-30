@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as React from "react";
 import type { ComponentProps } from "widgets/BaseComponent";
 import "@uppy/core/dist/style.css";
@@ -27,7 +28,7 @@ class FilePickerComponent extends React.Component<
     let label = this.props.label;
 
     if (this.props.files && this.props.files.length) {
-      label = `${this.props.files.length} files selected`;
+      label = $t('index.eb60e230b55e7880', {this_props_files_length: this.props.files.length});
     }
 
     return (

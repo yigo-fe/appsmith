@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { generateAutoHeightLayoutTreeAction } from "actions/autoHeightActions";
 import type {
   MultipleWidgetDeletePayload,
@@ -504,7 +505,7 @@ function* deleteAllSelectedWidgetsSaga(
         flattenedWidgets.map((widget: any) => {
           AppsmithConsole.info({
             logType: LOG_TYPE.ENTITY_DELETED,
-            text: "Widget was deleted",
+            text: $t('WidgetDeletionSagas.6a96a457e377bf28'),
             source: {
               name: widget.widgetName,
               type: ENTITY_TYPE.WIDGET,
@@ -573,7 +574,7 @@ function* postDelete(
     otherWidgetsToDelete.map((widget) => {
       AppsmithConsole.info({
         logType: LOG_TYPE.ENTITY_DELETED,
-        text: "Widget was deleted",
+        text: $t('WidgetDeletionSagas.6a96a457e377bf28'),
         source: {
           name: widget.widgetName,
           type: ENTITY_TYPE.WIDGET,

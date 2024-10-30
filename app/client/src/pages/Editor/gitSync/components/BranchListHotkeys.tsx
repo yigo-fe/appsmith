@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Hotkey, Hotkeys, HotkeysTarget } from "@blueprintjs/core";
 
@@ -20,21 +21,21 @@ class GlobalSearchHotKeys extends React.Component<Props> {
         },
         allowInInput: true,
         group: "Branches",
-        label: "Move up the list",
+        label: $t('BranchListHotkeys.7f620b6b2321b684'),
       },
       {
         combo: "down",
         onKeyDown: this.props.handleDownKey,
         allowInInput: true,
         group: "Branches",
-        label: "Move down the list",
+        label: $t('BranchListHotkeys.27586100323ad36c'),
       },
       {
         combo: "return",
         onKeyDown: this.props.handleSubmitKey,
         allowInInput: true,
         group: "Branches",
-        label: "Submit",
+        label: $t('BranchListHotkeys.17d6290e88b6800d'),
       },
       {
         combo: "ESC",

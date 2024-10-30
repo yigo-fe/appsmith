@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as React from "react";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
@@ -75,7 +76,7 @@ export interface FileUploadResponse {
 
 function FilePicker(props: FilePickerProps) {
   const {
-    buttonLabel = "Select Files",
+    buttonLabel = $t('MultiFilePickerControl.9d3e7536805bee0e'),
     config: { params: uploadParams = {}, uploadToTrigger = false } = {},
   } = props;
   const [uploading, setUploading] = useState(false);
@@ -103,7 +104,7 @@ function FilePicker(props: FilePickerProps) {
         return [];
       }
     } catch (e) {
-      toast.show("Error uploading files", { kind: "error" });
+      toast.show($t('MultiFilePickerControl.b6fc85332baabe76'), { kind: "error" });
 
       return [];
     }
@@ -126,9 +127,7 @@ function FilePicker(props: FilePickerProps) {
 
     if (totalSize > maxFileSizeInBytes) {
       toast.show(
-        `Total file sizes execceds the maximum allowed size of ${formatFileSize(
-          maxFileSizeInBytes,
-        )}`,
+        $t('MultiFilePickerControl.403ae942f1e44aa8'),
         {
           kind: "error",
         },

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { usePluginActionContext } from "PluginActionEditor/PluginActionContext";
 import type { BottomTab } from "components/editorComponents/EntityBottomTabs";
@@ -112,7 +113,7 @@ function usePluginActionResponseTabs() {
     if (showSchema) {
       tabs.push({
         key: DEBUGGER_TAB_KEYS.SCHEMA_TAB,
-        title: "Schema",
+        title: $t('usePluginActionResponseTabs.83c30513ba411929'),
         panelComponent: (
           <Schema
             currentActionId={action.id}

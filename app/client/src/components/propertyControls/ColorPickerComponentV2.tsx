@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, {
   useEffect,
   useRef,
@@ -85,7 +86,7 @@ export const StyledInputGroup = styled(InputGroup)<{
   }
   &&& input {
     padding: ${({ $isFullColorPicker }) =>
-      $isFullColorPicker ? "0px 2px" : "0 10px 0 36px"};
+      $isFullColorPicker ? $t('ColorPickerComponentV2.90c1bdeb22997448') : $t('ColorPickerComponentV2.f8915803d7a531f6')};
     height: 36px;
     border: ${({ $isValid }) =>
       $isValid
@@ -642,7 +643,7 @@ const ColorPickerComponent = React.forwardRef(
             }
             onChange={handleChangeColor}
             onClick={handleInputClick}
-            placeholder={placeholderText || "enter color name or hex"}
+            placeholder={placeholderText || $t('ColorPickerComponentV2.58df906d66d81d15')}
             type={isFullColorPicker ? "color" : "text"}
             value={color}
           />

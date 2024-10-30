@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "Checkbox is a simple UI widget you can use when you want users to make a binary choice",
+    $t('autocompleteConfig.f8e41b87b0ac7947'),
   "!url": "https://docs.appsmith.com/widget-reference/checkbox",
   isVisible: DefaultAutocompleteDefinitions.isVisible,
   isChecked: "bool",

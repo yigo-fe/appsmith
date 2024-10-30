@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { getAllPathsFromPropertyConfig } from "entities/Widget/utils";
 import _, { get, isEmpty } from "lodash";
 import memoize from "micro-memoize";
@@ -166,7 +167,7 @@ export function getSetterConfig(
       }
     }
   } catch (e) {
-    error("Error while generating setter config", e);
+    error($t('dataTreeWidget.1149858be5cb1bd8'), e);
   }
 
   return modifiedSetterConfig;

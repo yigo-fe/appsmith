@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { lazy, Suspense } from "react";
 import log from "loglevel";
 import memoizeOne from "memoize-one";
@@ -175,7 +176,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Table",
+      name: $t('index.bc46bd67bebd6143'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.SUGGESTED_WIDGETS, WIDGET_TAGS.DISPLAY],
@@ -196,8 +197,8 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
       animateLoading: true,
       defaultSelectedRowIndex: 0,
       defaultSelectedRowIndices: [0],
-      label: "Data",
-      widgetName: "Table",
+      label: $t('index.212a2f812b79d179'),
+      widgetName: $t('index.bc46bd67bebd6143'),
       searchKey: "",
       textSize: "0.875rem",
       horizontalAlignment: "LEFT",
@@ -361,7 +362,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
       getOneClickBindingConnectableWidgetConfig: (widget: WidgetProps) => {
         return {
           widgetBindPath: `${widget.widgetName}.selectedRow`,
-          message: `Make sure ${widget.widgetName} is bound to the same data source`,
+          message: $t('index.e5aa8525983dc870', {widget_widgetName: widget.widgetName}),
         };
       },
     };
@@ -2003,9 +2004,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
         this.props.updatedRowIndices.indexOf(originalIndex) === -1) ||
       (this.hasInvalidColumnCell() && !isNewRow);
 
-    const disabledEditMessage = `Save or discard the ${
-      this.props.isAddRowInProgress ? "newly added" : "unsaved"
-    } row to start editing here`;
+    const disabledEditMessage = $t('index.f7689eac3f0745c5');
 
     if (this.props.isAddRowInProgress) {
       cellProperties.isCellDisabled = rowIndex !== 0;
@@ -2510,7 +2509,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
             timePrecision={cellProperties.timePrecision || TimePrecision.NONE}
             toggleCellEditMode={this.toggleCellEditMode}
             updateNewRowValues={this.updateNewRowValues}
-            validationErrorMessage="This field is required"
+            validationErrorMessage=$t('index.1b6f6eb9eeafc966')
             value={props.cell.value}
             verticalAlignment={cellProperties.verticalAlignment}
             widgetId={this.props.widgetId}
@@ -2524,7 +2523,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
           validationErrorMessage =
             column.validation.isColumnEditableCellRequired &&
             (isNil(props.cell.value) || props.cell.value === "")
-              ? "This field is required"
+              ? $t('index.1b6f6eb9eeafc966')
               : column.validation?.errorMessage;
         }
 

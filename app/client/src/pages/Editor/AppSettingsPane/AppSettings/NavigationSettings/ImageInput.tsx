@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
@@ -82,7 +83,7 @@ export const ImageInput = (props: ImageInputProps) => {
     if (value) {
       return (
         <StyledImg
-          alt="Your application's logo"
+          alt=$t('ImageInput.010dd2aee5b80530')
           className={classNames({
             hidden: !isLogoLoaded,
           })}
@@ -91,7 +92,7 @@ export const ImageInput = (props: ImageInputProps) => {
         />
       );
     } else {
-      return "No logo set";
+      return $t('ImageInput.4b3864c09f34b667');
     }
   };
 

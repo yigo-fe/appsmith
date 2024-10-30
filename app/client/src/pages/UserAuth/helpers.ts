@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ReduxActionTypes } from "ee/constants/ReduxActionConstants";
 import { SubmissionError } from "redux-form";
 import { useCallback, useEffect, useState } from "react";
@@ -153,7 +154,7 @@ export const useResendEmailVerification = (
     setLinkEnabled(false);
 
     if (!email) {
-      const errorMessage = "Email not found for retry verification";
+      const errorMessage = $t('helpers.d08d7694bf451359');
 
       Sentry.captureMessage(errorMessage);
       toast.show(errorMessage, { kind: "error" });
@@ -174,7 +175,7 @@ export const useResendEmailVerification = (
           return;
         }
 
-        toast.show("Verification email sent!", { kind: "success" });
+        toast.show($t('helpers.f1b18782d6e55256'), { kind: "success" });
       })
       .catch((error) => {
         toast.show(error.message, { kind: "error" });

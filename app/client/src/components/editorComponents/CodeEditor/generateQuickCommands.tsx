@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Datasource } from "entities/Datasource";
 import type { MouseEventHandler } from "react";
 import React, { useCallback } from "react";
@@ -35,7 +36,7 @@ const NO_OF_QUERIES_TO_SHOW_BY_DEFAULT = 5;
 
 export const getShowMoreLabel = (suggestions: CommandsCompletion[]) => {
   return (
-    "Load " + (suggestions.length - NO_OF_QUERIES_TO_SHOW_BY_DEFAULT) + " more"
+    $t('generateQuickCommands.9aee3250fc145fb5') + (suggestions.length - NO_OF_QUERIES_TO_SHOW_BY_DEFAULT) + " more"
   );
 };
 
@@ -289,13 +290,13 @@ export const generateQuickCommands = (
   filteredCommands.splice(0, filteredCommands.length);
   const newBinding: CommandsCompletion = generateCreateNewCommand({
     text: "{{}}",
-    displayText: "Add a binding",
+    displayText: $t('generateQuickCommands.231327eb8cbaa8e3'),
     shortcut: Shortcuts.BINDING,
     triggerCompletionsPostPick: true,
   });
   const newIntegration: CommandsCompletion = generateCreateNewCommand({
     text: "",
-    displayText: "New datasource",
+    displayText: $t('generateQuickCommands.bc2812833cc552f3'),
     action: () => {
       executeCommand({
         actionType: SlashCommand.NEW_INTEGRATION,
@@ -386,7 +387,7 @@ export const generateQuickCommands = (
         );
 
         ReactDOM.render(
-          <Command icon={icon} name={`New ${data.displayText} query`} />,
+          <Command icon={icon} name={$t('generateQuickCommands.0ca18ef4301872a9')} />,
           element,
         );
       },
@@ -450,7 +451,7 @@ export const generateQuickCommands = (
     if (suggestionsMatchingSearchText.length) {
       // Add header only if there are suggestions
       filteredCommands.push(
-        commandsHeader("Bind data", "", filteredCommands.length > 0),
+        commandsHeader($t('generateQuickCommands.46aa82904b37e28f'), "", filteredCommands.length > 0),
       );
       filteredCommands.push(...limitedSuggestions);
 
@@ -480,7 +481,7 @@ export const generateQuickCommands = (
       if (createNewCommandsMatchingSearchText.length) {
         // Add header only if there are create new commands
         filteredCommands.push(
-          commandsHeader("Create a query", "", filteredCommands.length > 0),
+          commandsHeader($t('generateQuickCommands.0fe151e41800430d'), "", filteredCommands.length > 0),
         );
         filteredCommands.push(...createNewCommandsMatchingSearchText);
       }

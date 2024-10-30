@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { memo, useEffect, useMemo, useRef, useState } from "react";
 import styled from "styled-components";
 import { isObject, isString } from "lodash";
@@ -216,7 +217,7 @@ function copyContent(
   // TODO: Fix this the next time the file is edited
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   content: any,
-  onCopyContentText = `Evaluated value copied to clipboard`,
+  onCopyContentText = $t('EvaluatedValuePopup.9ad646838055be91'),
 ) {
   const stringifiedContent = isString(content)
     ? content
@@ -291,7 +292,7 @@ export function PreparedStatementViewer(props: {
   const { parameters, value } = props.evaluatedValue;
 
   if (!value) {
-    Sentry.captureException("Prepared statement got no value", {
+    Sentry.captureException($t('EvaluatedValuePopup.034f8df8aeec1a47'), {
       level: Severity.Debug,
       extra: { props },
     });
@@ -333,7 +334,7 @@ export function CurrentValueViewer(props: {
    * This collapses the values visible in (say json) after these many characters and shows ellipsis.
    */
   collapseStringsAfterLength?: number;
-  /** @param {string} [onCopyContentText=`Evaluated value copied to clipboard`]
+  /** @param {string} [onCopyContentText=$t('EvaluatedValuePopup.9ad646838055be91')]
    * This parameter contains the string that is shown when the evaluatedValue is copied.
    */
   onCopyContentText?: string;
@@ -363,7 +364,7 @@ const ControlledCurrentValueViewer = memo(
      * This collapses the values visible in (say json) after these many characters and shows ellipsis.
      */
     collapseStringsAfterLength?: number;
-    /** @param {string} [onCopyContentText=`Evaluated value copied to clipboard`]
+    /** @param {string} [onCopyContentText=$t('EvaluatedValuePopup.9ad646838055be91')]
      * This parameter contains the string that is shown when the evaluatedValue is copied.
      */
     onCopyContentText?: string;
@@ -374,7 +375,7 @@ const ControlledCurrentValueViewer = memo(
     const collapseStringsAfterLength = props.collapseStringsAfterLength || 20;
     /* Setting the default value; ensuring that earlier code keeps working. */
     const onCopyContentText =
-      props.onCopyContentText || `Evaluated value copied to clipboard`;
+      props.onCopyContentText || $t('EvaluatedValuePopup.9ad646838055be91');
     const codeWrapperRef = React.createRef<HTMLPreElement>();
     const { openEvaluatedValue, setOpenEvaluatedValue } = props;
     const toggleEvaluatedValue = () => {
@@ -536,7 +537,7 @@ function PopoverContent(props: PopoverContentProps) {
   const getErrorMessage = (error: Error) => {
     return error
       ? error.message
-      : `This value does not evaluate to type "${expected?.type}".`;
+      : $t('EvaluatedValuePopup.341403ea942c7555', {expected__type: expected?.type});
   };
 
   return (
@@ -562,7 +563,7 @@ function PopoverContent(props: PopoverContentProps) {
 
           {errorNavigationUrl ? (
             <AsyncFunctionErrorView>
-              <Link onClick={openDebugger}>{`See error (${modText()} D)`}</Link>
+              <Link onClick={openDebugger}>{$t('EvaluatedValuePopup.e3daad42d61f0abe', {modText__: modText()})}</Link>
               <Link target={"_self"} to={errorNavigationUrl}>
                 View source
               </Link>

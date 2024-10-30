@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import type { DropdownOption } from "@design-system/widgets-old";
@@ -103,7 +104,7 @@ export const getSelectedISDCode = (code?: string): DropdownOption => {
 
   if (!selectedCountry) {
     selectedCountry = {
-      name: "United States",
+      name: $t('ISDCodeDropdown.5acd250e799bc05d'),
       dial_code: "+1",
       code: "US",
     };
@@ -160,7 +161,7 @@ export default function ISDCodeDropdown(props: ISDCodeDropdownProps) {
         optionWidth="340px"
         options={props.options}
         portalClassName={`country-type-filter-dropdown-${props.widgetId}`}
-        searchPlaceholder="Search by ISD code or country"
+        searchPlaceholder=$t('ISDCodeDropdown.1f9f8c2414262732')
         selected={props.selected}
         showLabelOnly
       />

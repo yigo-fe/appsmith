@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as React from "react";
 
 import type {
@@ -31,7 +32,7 @@ class CircularProgressWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Circular Progress",
+      name: $t('index.d977812da730bf31'),
       hideCard: true,
       isDeprecated: true,
       replacement: "PROGRESS_WIDGET",
@@ -61,21 +62,21 @@ class CircularProgressWidget extends BaseWidget<
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.82935ea61b0c0447'),
         children: [
           {
             propertyName: "progress",
-            helpText: "Sets the progress value of the widget",
-            label: "Progress",
+            helpText: $t('index.b33246f154e9489c'),
+            label: $t('index.458c9be58f9acfec'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Value:",
+            placeholderText: $t('index.2d5b049378d62d0f'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.NUMBER },
           },
           {
             propertyName: "counterClockwise",
-            helpText: "Counter clock wise",
+            helpText: $t('index.24565fa17d617337'),
             label: "CounterClockWise",
             controlType: "SWITCH",
             isBindProperty: true,
@@ -84,8 +85,8 @@ class CircularProgressWidget extends BaseWidget<
           },
           {
             propertyName: "showResult",
-            helpText: "Controls the visibility of progress value",
-            label: "Show result",
+            helpText: $t('index.1789d19c05a1d621'),
+            label: $t('index.96301a7dcdf635e2'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -94,8 +95,8 @@ class CircularProgressWidget extends BaseWidget<
           },
           {
             propertyName: "isVisible",
-            helpText: "Controls the visibility of the widget",
-            label: "Visible",
+            helpText: $t('index.502231dc3f9219e1'),
+            label: $t('index.74e2977127f58d50'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -105,11 +106,11 @@ class CircularProgressWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Styles",
+        sectionName: $t('index.e55aa61cf3c13bb6'),
         children: [
           {
             propertyName: "fillColor",
-            label: "Fill color",
+            label: $t('index.6abc6579d1fd29fb'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -140,7 +141,7 @@ class CircularProgressWidget extends BaseWidget<
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
-      "!doc": "Circular Progress is a simple UI widget used to show progress",
+      "!doc": $t('index.cf5b4c08f8b46b48'),
       "!url": "https://docs.appsmith.com/widget-reference/circular-progress",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       progress: "number",

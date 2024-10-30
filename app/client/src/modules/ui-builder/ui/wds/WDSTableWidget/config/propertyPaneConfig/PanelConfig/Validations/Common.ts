@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import { ColumnTypes } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
@@ -10,8 +11,8 @@ export default [
   {
     propertyName: "validation.regex",
     helpText:
-      "Adds a validation to the cell value which displays an error on failure",
-    label: "Regex",
+      $t('Common.c41aca51c36aebde'),
+    label: $t('Common.686c71448a79cedb'),
     controlType: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",
     dependencies: ["primaryColumns"],
     placeholderText: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$",
@@ -26,8 +27,8 @@ export default [
   },
   {
     propertyName: "validation.isColumnEditableCellValid",
-    helpText: "Shows the validity of the cell validity",
-    label: "Valid",
+    helpText: $t('Common.c75a3ce5a77736aa'),
+    label: $t('Common.4cdf16695f657155'),
     controlType: "TABLE_INLINE_EDIT_VALID_PROPERTY_CONTROL",
     isJSConvertible: false,
     dependencies: ["primaryColumns", "columnOrder"],
@@ -48,11 +49,11 @@ export default [
   {
     propertyName: "validation.errorMessage",
     helpText:
-      "The error message to display if the regex or valid property check fails",
-    label: "Error message",
+      $t('Common.628d9bbe26483893'),
+    label: $t('Common.8a04ecb6191b0589'),
     controlType: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",
     dependencies: ["primaryColumns"],
-    placeholderText: "Not a valid value!",
+    placeholderText: $t('Common.3e245d4e3a56ee70'),
     isBindProperty: true,
     isTriggerProperty: false,
     validation: { type: ValidationTypes.TEXT },
@@ -64,8 +65,8 @@ export default [
   },
   {
     propertyName: "validation.isColumnEditableCellRequired",
-    helpText: "Makes input to the widget mandatory",
-    label: "Required",
+    helpText: $t('Common.2162d4435b6bb995'),
+    label: $t('Common.6d1953d5348c25c4'),
     controlType: "SWITCH",
     dependencies: ["primaryColumns"],
     customJSControl: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",

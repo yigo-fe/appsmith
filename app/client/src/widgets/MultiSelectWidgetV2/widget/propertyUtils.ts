@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { LoDashStatic } from "lodash";
 import type { MultiSelectWidgetProps } from ".";
 import type { ValidationResponse } from "constants/WidgetValidation";
@@ -220,7 +221,7 @@ export function labelKeyValidation(
           ? [
               {
                 name: "ValidationError",
-                message: `Invalid entry at index: ${errorIndex}. This value does not evaluate to type: string`,
+                message: $t('propertyUtils.1b0e03095deadb93', {errorIndex: errorIndex}),
               },
             ]
           : [],
@@ -335,7 +336,7 @@ export function valueKeyValidation(
       : [
           {
             name: "ValidationError",
-            message: "Duplicate values found, value must be unique",
+            message: $t('propertyUtils.3541d8c2908d2353'),
           },
         ],
   };

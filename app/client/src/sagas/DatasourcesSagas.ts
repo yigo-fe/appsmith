@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {
   all,
@@ -479,7 +480,7 @@ export function* deleteDatasourceSaga(
       });
       AppsmithConsole.info({
         logType: LOG_TYPE.ENTITY_DELETED,
-        text: "Datasource deleted",
+        text: $t('DatasourcesSagas.450a1a60f8f4c971'),
         source: {
           id: response.data.id,
           name: response.data.name,
@@ -494,7 +495,7 @@ export function* deleteDatasourceSaga(
   } catch (error) {
     const datasource = shouldBeDefined<Datasource>(
       yield select(getDatasource, actionPayload.payload.id),
-      `Datasource not found for id - ${actionPayload.payload.id}`,
+      $t('DatasourcesSagas.daebd121a750ea4d', {actionPayload_payload_id: actionPayload.payload.id}),
     );
 
     yield put({
@@ -666,7 +667,7 @@ function* updateDatasourceSaga(
       }
 
       AppsmithConsole.info({
-        text: "Datasource configuration saved",
+        text: $t('DatasourcesSagas.93dd3f0e33802258'),
         source: {
           id: responseData.id,
           name: responseData.name,
@@ -911,7 +912,7 @@ function* testDatasourceSaga(actionPayload: ReduxAction<Datasource>) {
   const { initialValues } = yield select(getFormData, DATASOURCE_DB_FORM);
   const datasource = shouldBeDefined<Datasource>(
     yield select(getDatasource, actionPayload.payload.id),
-    `Datasource not found for id - ${actionPayload.payload.id}`,
+    $t('DatasourcesSagas.daebd121a750ea4d', {actionPayload_payload_id: actionPayload.payload.id}),
   );
   const currentEnvironment: string = yield select(
     getCurrentEditingEnvironmentId,
@@ -987,7 +988,7 @@ function* testDatasourceSaga(actionPayload: ReduxAction<Datasource>) {
           },
         });
         AppsmithConsole.error({
-          text: "Test Connection failed",
+          text: $t('DatasourcesSagas.1b43054aecc67594'),
           source: {
             id: actionPayload.payload.id,
             name: datasource.name,
@@ -1021,7 +1022,7 @@ function* testDatasourceSaga(actionPayload: ReduxAction<Datasource>) {
           },
         });
         AppsmithConsole.info({
-          text: "Test Connection successful",
+          text: $t('DatasourcesSagas.8900d7fe8c757903'),
           source: {
             id: actionPayload.payload.id,
             name: datasource.name,
@@ -1045,7 +1046,7 @@ function* testDatasourceSaga(actionPayload: ReduxAction<Datasource>) {
       errorMessages: (error as any)?.message,
     });
     AppsmithConsole.error({
-      text: "Test Connection failed",
+      text: $t('DatasourcesSagas.1b43054aecc67594'),
       source: {
         id: actionPayload.payload.id,
         name: datasource.name,
@@ -1574,7 +1575,7 @@ function* fetchDatasourceStructureSaga(
 
   const datasource = shouldBeDefined<Datasource>(
     yield select(getDatasource, action.payload.id),
-    `Datasource not found for id - ${action.payload.id}`,
+    $t('DatasourcesSagas.feb84bfa18a5a552', {action_payload_id: action.payload.id}),
   );
   const plugin: Plugin = yield select(getPlugin, datasource?.pluginId);
   let errorMessage = "";
@@ -1599,7 +1600,7 @@ function* fetchDatasourceStructureSaga(
       if (isEmpty(response.data)) {
         errorMessage = createMessage(DATASOURCE_SCHEMA_NOT_AVAILABLE);
         AppsmithConsole.warning({
-          text: "Datasource structure could not be retrieved",
+          text: $t('DatasourcesSagas.05087cbe40a9690f'),
           source: {
             id: action.payload.id,
             name: datasource.name,
@@ -1609,7 +1610,7 @@ function* fetchDatasourceStructureSaga(
       } else {
         isSuccess = true;
         AppsmithConsole.info({
-          text: "Datasource structure retrieved",
+          text: $t('DatasourcesSagas.8f6896bb29d6248c'),
           source: {
             id: action.payload.id,
             name: datasource.name,
@@ -1641,7 +1642,7 @@ function* fetchDatasourceStructureSaga(
       },
     });
     AppsmithConsole.error({
-      text: "Datasource structure could not be retrieved",
+      text: $t('DatasourcesSagas.05087cbe40a9690f'),
       source: {
         id: action.payload.id,
         name: datasource.name,
@@ -1702,7 +1703,7 @@ function* refreshDatasourceStructure(
 ) {
   const datasource = shouldBeDefined<Datasource>(
     yield select(getDatasource, action.payload.id),
-    `Datasource is not found for it - ${action.payload.id}`,
+    $t('DatasourcesSagas.5b87d7fc9e227d82', {action_payload_id: action.payload.id}),
   );
   const plugin: Plugin = yield select(getPlugin, datasource?.pluginId);
   let errorMessage = "";
@@ -1727,7 +1728,7 @@ function* refreshDatasourceStructure(
       if (isEmpty(response.data)) {
         errorMessage = createMessage(DATASOURCE_SCHEMA_NOT_AVAILABLE);
         AppsmithConsole.warning({
-          text: "Datasource structure could not be retrieved",
+          text: $t('DatasourcesSagas.05087cbe40a9690f'),
           source: {
             id: action.payload.id,
             name: datasource.name,
@@ -1737,7 +1738,7 @@ function* refreshDatasourceStructure(
       } else {
         isSuccess = true;
         AppsmithConsole.info({
-          text: "Datasource structure retrieved",
+          text: $t('DatasourcesSagas.8f6896bb29d6248c'),
           source: {
             id: action.payload.id,
             name: datasource.name,
@@ -1769,7 +1770,7 @@ function* refreshDatasourceStructure(
       },
     });
     AppsmithConsole.error({
-      text: "Datasource structure could not be retrieved",
+      text: $t('DatasourcesSagas.05087cbe40a9690f'),
       source: {
         id: action.payload.id,
         name: datasource.name,

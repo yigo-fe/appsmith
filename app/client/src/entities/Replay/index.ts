@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Doc, Map, UndoManager } from "yjs";
 import { captureException } from "@sentry/react";
 import type { Diff } from "deep-diff";
@@ -132,7 +133,7 @@ export default abstract class ReplayEntity<T> {
     const endTime = performance.now();
 
     this.logs.push({
-      log: "replay updating",
+      log: $t('index.0f146288818fb84f'),
       updateTime: `${endTime - startTime} ms`,
     });
   }

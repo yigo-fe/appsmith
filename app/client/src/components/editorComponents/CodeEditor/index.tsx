@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import type { AppState } from "ee/reducers";
@@ -1832,7 +1833,7 @@ class CodeEditor extends Component<Props, State> {
                 <a
                   className="linkStyles"
                   href={this.props.link}
-                  rel="noopener noreferrer"
+                  rel=$t('index.51ad6033e10b8de8')
                   target="_blank"
                 >
                   API documentation

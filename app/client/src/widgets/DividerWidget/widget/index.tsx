@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
 import BaseWidget from "widgets/BaseWidget";
@@ -23,7 +24,7 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Divider",
+      name: $t('index.25a70644184f0318'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.LAYOUT],
@@ -35,7 +36,7 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
     return {
       rows: 4,
       columns: 20,
-      widgetName: "Divider",
+      widgetName: $t('index.25a70644184f0318'),
       orientation: "horizontal",
       capType: "nc",
       capSide: 0,
@@ -83,7 +84,7 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
-      "!doc": "Divider is a simple UI widget used as a separator",
+      "!doc": $t('index.088ef8728951a253'),
       "!url": "https://docs.appsmith.com/widget-reference/divider",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       orientation: "string",
@@ -109,12 +110,12 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.64d1aa6844f43d98'),
         children: [
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.332c37657e4d11dd'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.1570cac23df22a7c'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -123,9 +124,9 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.8acdf10f4a4b76be'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.25e37b46f7349656'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -140,22 +141,22 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.64d1aa6844f43d98'),
         children: [
           {
-            helpText: "Controls widget orientation",
+            helpText: $t('index.4cbab9421ea81559'),
             propertyName: "orientation",
-            label: "Direction",
+            label: $t('index.79c85943105680e9'),
             controlType: "ICON_TABS",
             defaultValue: "horizontal",
             fullWidth: true,
             options: [
               {
-                label: "Horizontal",
+                label: $t('index.a0f996bf7f3f5cb1'),
                 value: "horizontal",
               },
               {
-                label: "Vertical",
+                label: $t('index.1b192713a77ba0a8'),
                 value: "vertical",
               },
             ],
@@ -168,12 +169,12 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Stroke",
+        sectionName: $t('index.a19a7a3a8cf203bc'),
         children: [
           {
-            helpText: "Controls the stroke color of divider",
+            helpText: $t('index.ad32a9109ba8aa5c'),
             propertyName: "dividerColor",
-            label: "Color",
+            label: $t('index.c573869eaed48249'),
             controlType: "COLOR_PICKER",
             isBindProperty: true,
             isJSConvertible: true,
@@ -186,23 +187,23 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
             },
           },
           {
-            helpText: "Controls the style of the divider",
+            helpText: $t('index.c25c93606835446f'),
             propertyName: "strokeStyle",
-            label: "Style",
+            label: $t('index.cd777581a30a38c5'),
             controlType: "DROP_DOWN",
             options: [
               {
-                label: "Solid",
+                label: $t('index.d4733dd9117bea70'),
                 value: "solid",
                 icon: "cap-solid",
               },
               {
-                label: "Dashed",
+                label: $t('index.31e7b719e2e788fa'),
                 value: "dashed",
                 icon: "line-dashed",
               },
               {
-                label: "Dotted",
+                label: $t('index.9d0ef7f86eb8c63e'),
                 value: "dotted",
                 icon: "line-dotted",
               },
@@ -213,9 +214,9 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Controls the thickness of divider",
+            helpText: $t('index.960d05fcb41e46d5'),
             propertyName: "thickness",
-            label: "Thickness",
+            label: $t('index.780d4246a8a3b9be'),
             controlType: "INPUT_TEXT",
             placeholderText: "5",
             isBindProperty: true,
@@ -231,24 +232,24 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
         sectionName: "Cap",
         children: [
           {
-            helpText: "Controls the type of divider cap",
+            helpText: $t('index.22a0c7c8180ef5d1'),
             propertyName: "capType",
             label: "Cap",
             controlType: "DROP_DOWN",
             isJSConvertible: true,
             options: [
               {
-                label: "No cap",
+                label: $t('index.b0da4562739ed491'),
                 value: "nc",
                 icon: "cap-solid",
               },
               {
-                label: "Arrow",
+                label: $t('index.57bf2aa67d4d0a3b'),
                 value: "arrow",
                 icon: "arrow-forward",
               },
               {
-                label: "Dot",
+                label: $t('index.e15cd9fd9901d784'),
                 value: "dot",
                 icon: "cap-dot",
               },
@@ -266,7 +267,7 @@ class DividerWidget extends BaseWidget<DividerWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Changes the position of the cap if a valid cap is selected.",
+              $t('index.9b6851c7e19c94ae'),
             propertyName: "capSide",
             label: "Cap position",
             controlType: "ICON_TABS",

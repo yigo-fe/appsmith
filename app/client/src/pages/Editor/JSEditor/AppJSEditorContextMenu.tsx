@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -130,7 +131,7 @@ export function AppJSEditorContextMenu({
                   ),
               };
             })
-        : [{ value: "No Pages", onSelect: noop, label: "No Pages" }],
+        : [{ value: $t('AppJSEditorContextMenu.cd2dcf9ff6540939'), onSelect: noop, label: $t('AppJSEditorContextMenu.cd2dcf9ff6540939') }],
   };
 
   const prettifyOptions = {
@@ -151,7 +152,7 @@ export function AppJSEditorContextMenu({
       dispatch(updateJSCollectionBody(editor.getValue(), jsCollection.id));
       AnalyticsUtil.logEvent("PRETTIFY_CODE_MANUAL_TRIGGER");
     },
-    label: "Prettify code",
+    label: $t('AppJSEditorContextMenu.820b1679196a6c80'),
   };
 
   const deleteOption = {

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   BUILD_FIXED_LAYOUT,
   BUILD_FIXED_LAYOUT_TEXT,
@@ -60,12 +61,12 @@ export const useAutoToFixedLayoutFlow = (
       selectDropDown: {
         options: [
           {
-            label: "Desktop",
+            label: $t('useAutoToFixedLayoutFlow.1c2ce8ab3f76bab4'),
             value: "DESKTOP",
             startIcon: "desktop",
           },
           {
-            label: "Mobile device",
+            label: $t('useAutoToFixedLayoutFlow.9ced074cd70a1a36'),
             value: "MOBILE",
             startIcon: "mobile",
           },

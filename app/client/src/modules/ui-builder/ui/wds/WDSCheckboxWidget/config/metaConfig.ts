@@ -1,7 +1,8 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 
 export const metaConfig = {
-  name: "Checkbox",
+  name: $t('metaConfig.728649d5e753e640'),
   tags: [WIDGET_TAGS.TOGGLES],
   needsMeta: true,
   searchTags: [

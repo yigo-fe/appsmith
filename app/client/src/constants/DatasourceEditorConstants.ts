@@ -1,7 +1,8 @@
+import {$t} from "locale/index";
 export const DATASOURCE_CONSTANT = "DATASOURCE";
 export const APPSMITH_IP_ADDRESSES = ["18.223.74.85", "3.131.104.27"];
-export const PRIMARY_KEY = "primary key";
-export const FOREIGN_KEY = "foreign key";
+export const PRIMARY_KEY = $t('DatasourceEditorConstants.96909fc5095ebadb');
+export const FOREIGN_KEY = $t('DatasourceEditorConstants.4ada6e86e4232a14');
 
 /* NOTE: This is a default formData value, 
 required to fix the missing config for an existing mongo query */

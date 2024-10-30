@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { Button, Icon, Menu, MenuContent, MenuTrigger } from "@appsmith/ads";
@@ -126,7 +127,7 @@ function WorkspaceMenu({
                 onBlur={(value: string) => {
                   workspaceNameChange(value, workspace.id);
                 }}
-                placeholder="Workspace name"
+                placeholder=$t('WorkspaceMenu.287a091253f89898')
                 savingState={
                   isSavingWorkspaceInfo
                     ? SavingState.STARTED
@@ -176,7 +177,7 @@ function WorkspaceMenu({
             }}
           >
             <Icon name="logout" size="md" />
-            {!warnLeavingWorkspace ? "Leave workspace" : "Are you sure?"}
+            {!warnLeavingWorkspace ? $t('WorkspaceMenu.fa141ad053b6d740') : $t('WorkspaceMenu.29a4dd788a014904')}
           </CustomMenuItem>
         )}
         {canDeleteWorkspace && (
@@ -189,7 +190,7 @@ function WorkspaceMenu({
             }}
           >
             <Icon name="delete-bin-line" size="md" />
-            {!warnDeleteWorkspace ? "Delete workspace" : "Are you sure?"}
+            {!warnDeleteWorkspace ? $t('WorkspaceMenu.c793791957f1a22a') : $t('WorkspaceMenu.29a4dd788a014904')}
           </CustomMenuItem>
         )}
       </MenuContent>

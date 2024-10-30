@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Alignment } from "@blueprintjs/core";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
@@ -35,7 +36,7 @@ class SwitchGroupWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Switch Group", // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
+      name: $t('index.b6bab4473886ca0c'), // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.TOGGLES],
@@ -59,9 +60,9 @@ class SwitchGroupWidget extends BaseWidget<
       rows: 6,
       columns: 26,
       options: [
-        { label: "Blue", value: "BLUE" },
-        { label: "Green", value: "GREEN" },
-        { label: "Red", value: "RED" },
+        { label: $t('index.9ad6c28b00e86aca'), value: "BLUE" },
+        { label: $t('index.aee83de4b8cb9dc5'), value: "GREEN" },
+        { label: $t('index.26b1fba77b85b40c'), value: "RED" },
       ],
       defaultSelectedValues: ["BLUE"],
       isDisabled: false,
@@ -70,7 +71,7 @@ class SwitchGroupWidget extends BaseWidget<
       isVisible: true,
       animateLoading: true,
       alignment: Alignment.LEFT,
-      labelText: "Label",
+      labelText: $t('index.2cc1330288ab1302'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
@@ -124,13 +125,13 @@ class SwitchGroupWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.2ccd99f049432b01'),
         children: [
           {
             helpText:
-              "Displays a list of options for a user to select. Values must be unique",
+              $t('index.254d405ba3a73003'),
             propertyName: "options",
-            label: "Options",
+            label: $t('index.ac5a06bfb23610ff'),
             controlType: "INPUT_TEXT",
             placeholderText: '[{ "label": "Option1", "value": "Option2" }]',
             isBindProperty: true,
@@ -169,10 +170,10 @@ class SwitchGroupWidget extends BaseWidget<
           },
           {
             helpText:
-              "Selects values of the options checked by default. Enter comma separated values for multiple selected",
+              $t('index.89c5f0278c3d90b0'),
             propertyName: "defaultSelectedValues",
-            label: "Default selected values",
-            placeholderText: "Enter option values",
+            label: $t('index.071b75c10dc0dd86'),
+            placeholderText: $t('index.78eedab934bb0f68'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -190,29 +191,29 @@ class SwitchGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.2cc1330288ab1302'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.ad9a85f868109c9a'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.40523e5bc9c2d95a'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.d12a3e61bb94396e'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.ae2bf5ce832542d2'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.b835d59033128225'),
             controlType: "ICON_TABS",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.693611011c5c77ea'), value: LabelPosition.Auto },
+              { label: $t('index.9a39055cda006748'), value: LabelPosition.Left },
+              { label: $t('index.4aa7e7c13c6c28d0'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -220,9 +221,9 @@ class SwitchGroupWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.47c297628be0e771'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.0f6eda3d17d05fd0'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -244,9 +245,9 @@ class SwitchGroupWidget extends BaseWidget<
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.d2249483b64c6c0a'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.fcaa7e39eb1d483a'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -265,12 +266,12 @@ class SwitchGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.d791b17c8b335f8c'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.7e7d0e3c03b1fcd7'),
+            helpText: $t('index.4c01dceb1f3a1e25'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -280,22 +281,22 @@ class SwitchGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.6a7f63e146b4edfc'),
         children: [
           {
-            helpText: "Show help text or details about current input",
+            helpText: $t('index.b61b1dd65ceaad3b'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.bd42336f808305cc'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Value must be atleast 6 chars",
+            placeholderText: $t('index.a0bca444f0754b2c'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isVisible",
-            helpText: "Controls the visibility of the widget",
-            label: "Visible",
+            helpText: $t('index.9aab5278bd286f65'),
+            label: $t('index.6ccdec946df260da'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -304,8 +305,8 @@ class SwitchGroupWidget extends BaseWidget<
           },
           {
             propertyName: "isDisabled",
-            helpText: "Disables input to the widget",
-            label: "Disabled",
+            helpText: $t('index.23ddab83f00d0f13'),
+            label: $t('index.c05502eed0cec0c9'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -315,8 +316,8 @@ class SwitchGroupWidget extends BaseWidget<
           {
             propertyName: "isInline",
             helpText:
-              "Whether switches are to be displayed inline horizontally",
-            label: "Inline",
+              $t('index.70a4ba78da2222f4'),
+            label: $t('index.b694aa7565daa3eb'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -325,9 +326,9 @@ class SwitchGroupWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.cfd7d237606fb7b1'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.2153b7ac7269803d'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -337,10 +338,10 @@ class SwitchGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.491da1b5581061f3'),
         children: [
           {
-            helpText: "when a switch state inside the group is changed",
+            helpText: $t('index.277b26cdb43c9557'),
             propertyName: "onSelectionChange",
             label: "onSelectionChange",
             controlType: "ACTION_SELECTOR",
@@ -375,12 +376,12 @@ class SwitchGroupWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.e14d9bdfe3be82cf'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.08198bd242f5649f'),
+            helpText: $t('index.badba2a048f7c079'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -389,8 +390,8 @@ class SwitchGroupWidget extends BaseWidget<
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.6d97e28bbc208a65'),
+            helpText: $t('index.82cdf4c18e780829'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             options: [
@@ -432,8 +433,8 @@ class SwitchGroupWidget extends BaseWidget<
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.016ea7e4bfd679b6'),
+            helpText: $t('index.df65c3edb3b4e746'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -453,12 +454,12 @@ class SwitchGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.6a7f63e146b4edfc'),
         children: [
           {
             propertyName: "alignment",
-            helpText: "Sets the alignment of the widget",
-            label: "Alignment",
+            helpText: $t('index.d6e5a1f742548260'),
+            label: $t('index.0f6eda3d17d05fd0'),
             controlType: "ICON_TABS",
             defaultValue: Alignment.LEFT,
             fullWidth: true,
@@ -478,12 +479,12 @@ class SwitchGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.8d69166cdc78bef0'),
         children: [
           {
             propertyName: "accentColor",
-            helpText: "Sets the background color of the widget",
-            label: "Accent color",
+            helpText: $t('index.6c68a3b7062d0479'),
+            label: $t('index.af9a865bf09a29d5'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -504,7 +505,7 @@ class SwitchGroupWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Switch group widget allows users to create many switch components which can easily by used in a form",
+        $t('index.9d7f7ca567735efc'),
       "!url": "https://docs.appsmith.com/widget-reference/switch-group",
       selectedValues: "[string]",
     };

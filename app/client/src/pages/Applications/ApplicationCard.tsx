@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, {
   useEffect,
   useState,
@@ -172,7 +173,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
     if (props.share) {
       moreActionItems.push({
         onSelect: shareApp,
-        children: "Share",
+        children: $t('ApplicationCard.a2b477f65d745808'),
         key: "share",
         startIcon: "share",
         "data-testid": "t--share",
@@ -183,7 +184,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
     if (hasEditPermission) {
       moreActionItems.push({
         onSelect: forkApplicationInitiate,
-        children: "Fork",
+        children: $t('ApplicationCard.83c25faf32966fd7'),
         key: "fork",
         startIcon: "fork-2",
         "data-testid": "t--fork-app",
@@ -193,7 +194,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
     if (!!props.enableImportExport && hasExportPermission) {
       moreActionItems.push({
         onSelect: exportApplicationAsJSONFile,
-        children: "Export",
+        children: $t('ApplicationCard.29f97b0b8cf04b18'),
         key: "export",
         startIcon: "download",
         "data-testid": "t--export-app",
@@ -259,7 +260,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
     }
 
     setIsMenuOpen(false);
-    toast.show(`Successfully exported ${props.application.name}`, {
+    toast.show($t('ApplicationCard.8dec222a6e0e645c', {props_application_name: props.application.name}), {
       kind: "success",
     });
   };
@@ -279,7 +280,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
     updatedActionItems.pop();
     updatedActionItems.push({
       onSelect: deleteApp,
-      children: "Are you sure?",
+      children: $t('ApplicationCard.48e9f455aa781e6a'),
       key: "areyousure",
       startIcon: "delete-bin-line",
       "data-testid": "t--delete",
@@ -298,7 +299,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
 
       moreActionItems.push({
         onSelect: askForConfirmation,
-        children: "Delete",
+        children: $t('ApplicationCard.8543aa9bbf17138c'),
         key: "delete",
         startIcon: "delete-bin-line",
         "data-testid": "t--delete-confirm",
@@ -360,7 +361,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
                 isError={isErroredSavingName}
                 isInvalid={(value: string) => {
                   if (!value) {
-                    return "Name cannot be empty";
+                    return $t('ApplicationCard.6cc8641d476e1c1d');
                   } else {
                     return false;
                   }
@@ -374,7 +375,7 @@ export function ApplicationCard(props: ApplicationCardProps) {
                 onTextChanged={(value: string) => {
                   setLastUpdatedValue(value);
                 }}
-                placeholder={"Edit text input"}
+                placeholder={$t('ApplicationCard.d8415f3773c4cf31')}
                 savingState={
                   isSavingName ? SavingState.STARTED : SavingState.NOT_STARTED
                 }

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useContext, useState } from "react";
 import styles from "./styles.module.css";
 import { Icon, Text } from "@appsmith/ads";
@@ -83,7 +84,7 @@ export default function Events() {
                     }}
                     isReadOnly
                     mode={EditorModes.TEXT_WITH_BINDING}
-                    placeholder="No action"
+                    placeholder={$t('events.9ecc83a2e5d781dd')}
                     positionCursorInsideBinding
                     showCustomToolTipForHighlightedText={false}
                     showLightningMenu={false}

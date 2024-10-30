@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   ChangeSelectedAppThemeAction,
   DeleteAppThemeAction,
@@ -127,7 +128,7 @@ export function* fetchAppSelectedTheme(
         payload: response.data,
       });
     } else {
-      Sentry.captureException("Unable to fetch the selected theme", {
+      Sentry.captureException($t('AppThemingSaga.4c7dcc454645aa9c'), {
         level: Severity.Critical,
         extra: {
           pageIdentities,
@@ -296,7 +297,7 @@ function* setDefaultSelectedThemeOnError() {
       yield AppThemingApi.fetchThemes(applicationId);
 
     // Gets default theme
-    const theme = find(response.data, { name: "Default" });
+    const theme = find(response.data, { name: $t('AppThemingSaga.2d4d7f0f5792069c') });
 
     if (theme) {
       // Update API call to set current theme to default

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as React from "react";
 
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
@@ -48,7 +49,7 @@ class NumberSliderWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Number Slider",
+      name: $t('index.18b7c26ea2c7289b'),
       needsMeta: true,
       searchTags: ["range"],
       iconSVG: IconSVG,
@@ -79,7 +80,7 @@ class NumberSliderWidget extends BaseWidget<
       shouldTruncate: false,
       version: 1,
       animateLoading: true,
-      labelText: "Percentage",
+      labelText: $t('index.bd1de38e302070ee'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 8,
@@ -145,7 +146,7 @@ class NumberSliderWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Number slider widget is used to capture user feedback from a range of values",
+        $t('index.51a26c509397b46c'),
       "!url": "https://docs.appsmith.com/widget-reference/circular-progress",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       value: "number",

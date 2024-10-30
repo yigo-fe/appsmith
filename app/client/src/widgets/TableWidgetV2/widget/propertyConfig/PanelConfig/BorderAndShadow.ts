@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
@@ -7,14 +8,14 @@ import {
 } from "../../propertyUtils";
 
 export default {
-  sectionName: "Border and shadow",
+  sectionName: $t('BorderAndShadow.6d6af7b296374258'),
   children: [
     {
       propertyName: "borderRadius",
-      label: "Border radius",
+      label: $t('BorderAndShadow.d2818adac8a24214'),
       customJSControl: "TABLE_COMPUTE_VALUE",
       isJSConvertible: true,
-      helpText: "Rounds the corners of the icon button's outer border edge",
+      helpText: $t('BorderAndShadow.5c974f24537556ac'),
       controlType: "BORDER_RADIUS_OPTIONS",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         return hideByColumnType(props, propertyPath, [
@@ -35,9 +36,9 @@ export default {
     },
     {
       propertyName: "boxShadow",
-      label: "Box shadow",
+      label: $t('BorderAndShadow.6b8ddfd7e4625388'),
       helpText:
-        "Enables you to cast a drop shadow from the frame of the widget",
+        $t('BorderAndShadow.72948aeba183c777'),
       controlType: "BOX_SHADOW_OPTIONS",
       customJSControl: "TABLE_COMPUTE_VALUE",
       isJSConvertible: true,

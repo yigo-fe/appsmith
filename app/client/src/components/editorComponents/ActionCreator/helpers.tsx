@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import {
   getFunctionNameFromJsObjectExpression,
@@ -454,7 +455,7 @@ function getApiAndQueryOptions(
   const pluginGroups: any = keyBy(plugins, "id");
 
   const createQueryObject: TreeDropdownOption = {
-    label: "New query",
+    label: $t('helpers.d78624c53a6c811c'),
     value: "datasources",
     id: "create",
     icon: "plus",
@@ -552,7 +553,7 @@ export function getJSOptions(
   );
 
   const createJSObject: TreeDropdownOption = {
-    label: "New JS Object",
+    label: $t('helpers.8062de00cee976e1'),
     value: AppsmithFunction.jsFunction,
     id: "create",
     icon: "plus",

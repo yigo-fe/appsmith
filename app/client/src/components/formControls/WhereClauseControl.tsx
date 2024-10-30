@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useRef } from "react";
 import FormControl from "pages/Editor/FormControl";
 import styled from "styled-components";
@@ -29,7 +30,7 @@ export interface whereClauseValueType {
 const valueFieldConfig: any = {
   key: "value",
   controlType: "QUERY_DYNAMIC_INPUT_TEXT",
-  placeholderText: "Value",
+  placeholderText: $t('WhereClauseControl.2680141d13555f33'),
 };
 
 // Form config for the key field
@@ -38,7 +39,7 @@ const valueFieldConfig: any = {
 const keyFieldConfig: any = {
   key: "key",
   controlType: "QUERY_DYNAMIC_INPUT_TEXT",
-  placeholderText: "Column name",
+  placeholderText: $t('WhereClauseControl.f3942f1939b2704b'),
 };
 
 // Form config for the condition field
@@ -117,7 +118,7 @@ const SecondaryBox = styled.div<{
   border: solid 1px var(--ads-v2-color-border);
   border-width: ${(props) => (props?.showBorder ? "1px" : "0px")};
   padding: ${(props) =>
-    props?.showBorder ? "0px 12px 12px 8px" : "4px 12px 12px 0px"};
+    props?.showBorder ? $t('WhereClauseControl.34a800b8bf84c419') : $t('WhereClauseControl.dbb0266393767d92')};
   width: 100%;
   // Setting a max width to not have it really elongate on very large screens
   max-width: 2000px;

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import type { IconName } from "@blueprintjs/icons";
 import { LabelPosition } from "components/constants";
@@ -36,7 +37,7 @@ class BaseInputWidget<
 
   static getConfig(): WidgetBaseConfiguration {
     return {
-      name: "Input",
+      name: $t('index.77f924518d15d633'),
       hideCard: true,
       iconSVG: IconSVG,
       needsMeta: true,
@@ -46,13 +47,13 @@ class BaseInputWidget<
   static getDefaults(): WidgetDefaultProps {
     return {
       rows: 4,
-      label: "Label",
+      label: $t('index.c6bf1acfa8913310'),
       labelPosition: LabelPosition.Left,
       labelAlignment: Alignment.LEFT,
       labelTextSize: "0.875rem",
       labelWidth: 5,
       columns: 20,
-      widgetName: "Input",
+      widgetName: $t('index.77f924518d15d633'),
       version: 1,
       defaultText: "",
       iconAlign: "left",
@@ -72,29 +73,29 @@ class BaseInputWidget<
   ) {
     return [
       {
-        sectionName: "Label",
+        sectionName: $t('index.c6bf1acfa8913310'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.c3c2af6eb1716830'),
             propertyName: "label",
-            label: "Text",
+            label: $t('index.7c6fcb87c8673628'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Name:",
+            placeholderText: $t('index.41b4e1e8e7fcf09a'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.2395c936bdf075cc'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.d040a0e4b32ca940'),
             controlType: "ICON_TABS",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.952f5424023bd287'), value: LabelPosition.Auto },
+              { label: $t('index.40bf3d1825ca6f0f'), value: LabelPosition.Left },
+              { label: $t('index.87065d9bb20b883c'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -102,9 +103,9 @@ class BaseInputWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.18a7d95a8f47b31a'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.7a89b3d57f30f6cd'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -126,9 +127,9 @@ class BaseInputWidget<
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.f0cd570bea2f2e91'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.31bcccf1abeb1703'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -147,13 +148,13 @@ class BaseInputWidget<
         ],
       },
       {
-        sectionName: "Validation",
+        sectionName: $t('index.6701b500e3ae1b62'),
         children: [
           {
             helpText:
-              "Adds a validation to the input which displays an error on failure",
+              $t('index.7394d58ad633acdd'),
             propertyName: "regex",
-            label: "Regex",
+            label: $t('index.96c3a3c8d7b1916b'),
             controlType: "INPUT_TEXT",
             placeholderText: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$",
             isBindProperty: true,
@@ -161,9 +162,9 @@ class BaseInputWidget<
             validation: { type: ValidationTypes.REGEX },
           },
           {
-            helpText: "Sets the input validity based on a JS expression",
+            helpText: $t('index.faa5582deb4819c6'),
             propertyName: "validation",
-            label: "Valid",
+            label: $t('index.24b04bdda8d535bd'),
             controlType: "INPUT_TEXT",
             placeholderText: "{{ Input1.text.length > 0 }}",
             isBindProperty: true,
@@ -177,20 +178,20 @@ class BaseInputWidget<
           },
           {
             helpText:
-              "The error message to display if the regex or valid property check fails",
+              $t('index.bb53a12107e05d1b'),
             propertyName: "errorMessage",
-            label: "Error message",
+            label: $t('index.bb7a08c447952a15'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Not a valid value!",
+            placeholderText: $t('index.ceec16402fa502c9'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isSpellCheck",
-            label: "Spellcheck",
+            label: $t('index.a9ac15048c0ae766'),
             helpText:
-              "Defines whether the text input may be checked for spelling errors",
+              $t('index.53aa39ec61dc1eec'),
             controlType: "SWITCH",
             isJSConvertible: false,
             isBindProperty: true,
@@ -204,32 +205,32 @@ class BaseInputWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.7be0f2014e4dcc1a'),
         children: [
           {
-            helpText: "Show help text or details about current input",
+            helpText: $t('index.0303cc457bd130bf'),
             propertyName: "tooltip",
-            label: "Tooltip",
+            label: $t('index.ce6860337eed8d46'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Value must be atleast 6 chars",
+            placeholderText: $t('index.3da48af9411f2d7e'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets a placeholder text for the input",
+            helpText: $t('index.d114f0b587daedab'),
             propertyName: "placeholderText",
-            label: "Placeholder",
+            label: $t('index.7bfdf286fd072813'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Placeholder",
+            placeholderText: $t('index.7bfdf286fd072813'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Show arrows to increase or decrease values",
+            helpText: $t('index.1161fae0b022596f'),
             propertyName: "showStepArrows",
-            label: "Show step arrows",
+            label: $t('index.584422f81e00ce62'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -249,9 +250,9 @@ class BaseInputWidget<
             dependencies: ["inputType"],
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.7c004b086a405621'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.702dea248d8ca16a'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -259,9 +260,9 @@ class BaseInputWidget<
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Disables input to this widget",
+            helpText: $t('index.b1e0fbc5e8dbf94f'),
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.db3858b7b38f74d0'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -270,9 +271,9 @@ class BaseInputWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.f998fad74abd903d'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.06bdc302de7f9083'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -280,9 +281,9 @@ class BaseInputWidget<
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Focus input automatically on load",
+            helpText: $t('index.bdbb1dbc89420c76'),
             propertyName: "autoFocus",
-            label: "Auto focus",
+            label: $t('index.8f8bbeac3393604c'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -291,8 +292,8 @@ class BaseInputWidget<
           },
           {
             propertyName: "shouldAllowAutofill",
-            label: "Allow autofill",
-            helpText: "Allow users to autofill values from browser",
+            label: $t('index.8d7417ba06eb9d8f'),
+            helpText: $t('index.c08d4c2266d05a05'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -309,8 +310,8 @@ class BaseInputWidget<
           },
           {
             propertyName: "allowFormatting",
-            label: "Enable formatting",
-            helpText: "Formats the phone number as per the country selected",
+            label: $t('index.b4041a410179102e'),
+            helpText: $t('index.9b364ebc1688d06b'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -324,10 +325,10 @@ class BaseInputWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.16dd911c4413c870'),
         children: [
           {
-            helpText: "when the text is changed",
+            helpText: $t('index.32c333d828ec2a7c'),
             propertyName: "onTextChanged",
             label: "onTextChanged",
             controlType: "ACTION_SELECTOR",
@@ -336,7 +337,7 @@ class BaseInputWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "when the input field receives focus",
+            helpText: $t('index.fabfe2342e4e28c0'),
             propertyName: "onFocus",
             label: "onFocus",
             controlType: "ACTION_SELECTOR",
@@ -345,7 +346,7 @@ class BaseInputWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "when the input field loses focus",
+            helpText: $t('index.bc2b4af3047ea83e'),
             propertyName: "onBlur",
             label: "onBlur",
             controlType: "ACTION_SELECTOR",
@@ -363,9 +364,9 @@ class BaseInputWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "Clears the input value after submit",
+            helpText: $t('index.645d494985924621'),
             propertyName: "resetOnSubmit",
-            label: "Reset on submit",
+            label: $t('index.891180610fb0ddfe'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -380,12 +381,12 @@ class BaseInputWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.3f843e35222c6f2a'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.2cef316a59be38f7'),
+            helpText: $t('index.794611ff5fb24b92'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -399,8 +400,8 @@ class BaseInputWidget<
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.e040185fc5e49916'),
+            helpText: $t('index.7e9793af40695b03'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             hidden: isAutoLayout,
@@ -443,8 +444,8 @@ class BaseInputWidget<
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.6832409aeeeb2c92'),
+            helpText: $t('index.777de3f41e924fe3'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -464,11 +465,11 @@ class BaseInputWidget<
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.187a353f70544877'),
         children: [
           {
             propertyName: "accentColor",
-            label: "Accent color",
+            label: $t('index.a5a95d78d1396536'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -478,9 +479,9 @@ class BaseInputWidget<
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.61256d104c7fbadb'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.ad52af701f4b8c83'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -489,9 +490,9 @@ class BaseInputWidget<
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.eb9b12eb9643eaff'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.c51a6cb2f27c957f'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

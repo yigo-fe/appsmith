@@ -1,23 +1,24 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 
 export const propertyPaneContent = [
   {
-    sectionName: "Section Split",
+    sectionName: $t('propertyPaneContent.900002cb02de68bd'),
     children: [
       {
         propertyName: "widgetId",
         label: "",
         controlType: "SECTION_SPLITTER",
-        helpText: "Distribute the 12 column section space between zones",
+        helpText: $t('propertyPaneContent.8338816bfff05f1a'),
         isBindProperty: true,
         isJSConvertible: false,
         isTriggerProperty: false,
       },
       {
         propertyName: "widgetId",
-        label: "Zones",
+        label: $t('propertyPaneContent.daeee964caf8a501'),
         controlType: "ZONE_STEPPER",
-        helpText: "Changes the no. of zones in a section",
+        helpText: $t('propertyPaneContent.c335d3775b69c38a'),
         isBindProperty: true,
         isJSConvertible: false,
         isTriggerProperty: false,
@@ -25,12 +26,12 @@ export const propertyPaneContent = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('propertyPaneContent.835abbff5dac9771'),
     children: [
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('propertyPaneContent.78d6fa6736aeb4c7'),
         propertyName: "isVisible",
-        label: "Visible",
+        label: $t('propertyPaneContent.846b53bf28314d0b'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -40,9 +41,9 @@ export const propertyPaneContent = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('propertyPaneContent.183f74a419e00d5e'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('propertyPaneContent.dcc43cb9cabc4a60'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,

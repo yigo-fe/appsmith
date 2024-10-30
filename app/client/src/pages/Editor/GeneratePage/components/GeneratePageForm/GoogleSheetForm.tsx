@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReactElement } from "react";
 import React, { useState, useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -98,7 +99,7 @@ export function isNumberValidator(value: string) {
 
   return {
     isValid: isValid,
-    message: !isValid ? "Only numeric value allowed" : "",
+    message: !isValid ? $t('GoogleSheetForm.5fd7c2a403d6f764') : "",
   };
 }
 
@@ -340,7 +341,7 @@ function GoogleSheetForm(props: Props) {
             <Input
               data-testid="t--tableHeaderIndex"
               onChange={tableHeaderIndexChangeHandler}
-              placeholder="Table header index"
+              placeholder=$t('GoogleSheetForm.896fba74a8731d8e')
               size="md"
               type="text"
               value={tableHeaderIndex}

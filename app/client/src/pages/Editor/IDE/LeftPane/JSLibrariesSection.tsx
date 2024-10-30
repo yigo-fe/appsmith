@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useMemo } from "react";
 
 import PaneHeader from "pages/Editor/IDE/LeftPane/PaneHeader";
@@ -20,7 +21,7 @@ function JSLibrariesSection() {
 
   return (
     <>
-      <PaneHeader rightIcon={rightIcon} title="Installed Libraries" />
+      <PaneHeader rightIcon={rightIcon} title={$t('JSLibrariesSection.1faba48b3bfe39c1')} />
       {transitions((style, lib) => (
         <animated.div style={style}>
           <LibraryEntity lib={lib} />

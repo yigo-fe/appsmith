@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AdminConfigType } from "ee/pages/AdminSettings/config/types";
 import {
   CategoryType,
@@ -11,7 +12,7 @@ export const config: AdminConfigType = {
   type: SettingCategories.ADVANCED,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.GROUP,
-  title: "Advanced",
+  title: $t('advanced.d95f3c9bcba79b84'),
   canSave: true,
   settings: [
     {
@@ -28,7 +29,7 @@ export const config: AdminConfigType = {
       category: SettingCategories.ADVANCED,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Redis URL",
+      label: $t('advanced.fac75ba76cd5091b'),
       subText:
         "* Appsmith internally uses Redis for session storage. Change this to an external redis for clustering",
     },
@@ -37,7 +38,7 @@ export const config: AdminConfigType = {
       category: SettingCategories.ADVANCED,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Custom domain",
+      label: $t('advanced.95d95822ab2e49e5'),
       subText: "* Custom domain for your Appsmith instance",
     },
   ],

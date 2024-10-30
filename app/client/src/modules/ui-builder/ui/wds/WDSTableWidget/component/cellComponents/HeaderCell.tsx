@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Key } from "react";
 import React, { useCallback, memo } from "react";
 
@@ -202,8 +203,8 @@ const HeaderCellComponent = (props: HeaderProps) => {
             />
             <Menu onAction={onActionOnMenu}>
               {[
-                { id: "sort-asc", label: "Sort column ascending" },
-                { id: "sort-desc", label: "Sort column descending" },
+                { id: "sort-asc", label: $t('HeaderCell.0cac4cdc7de74da5') },
+                { id: "sort-desc", label: $t('HeaderCell.0f1bc1540da5aacc') },
               ].map((item) => (
                 <MenuItem key={item.id} textValue={item.label}>
                   {item.label}

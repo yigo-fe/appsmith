@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ApplicationVersion } from "ee/actions/applicationActions";
 import type { UpdatePageActionPayload } from "actions/pageActions";
 import { setPageAsDefault, updatePageAction } from "actions/pageActions";
@@ -209,7 +210,7 @@ function PageSettings(props: { page: Page }) {
               savePageName();
             }
           }}
-          placeholder="Page name"
+          placeholder=$t('PageSettings.0ee7107d0cda3c24')
           size="md"
           type="text"
           value={pageName}
@@ -252,7 +253,7 @@ function PageSettings(props: { page: Page }) {
               saveCustomSlug();
             }
           }}
-          placeholder="Page URL"
+          placeholder=$t('PageSettings.ca4aede5c2849eed')
           size="md"
           type="text"
           value={customSlug}

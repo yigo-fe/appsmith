@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { lazy, Suspense } from "react";
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
 import BaseWidget from "widgets/BaseWidget";
@@ -69,7 +70,7 @@ class ChartWidget extends BaseWidget<ChartWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Chart",
+      name: $t('index.c0f925196b8f186c'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.DISPLAY],
@@ -89,9 +90,9 @@ class ChartWidget extends BaseWidget<ChartWidgetProps, WidgetState> {
     return {
       rows: 32,
       columns: 24,
-      widgetName: "Chart",
+      widgetName: $t('index.c0f925196b8f186c'),
       chartType: "COLUMN_CHART",
-      chartName: "Sales Report",
+      chartName: $t('index.7fc66cd6178e19dd'),
       allowScroll: false,
       version: 1,
       animateLoading: true,
@@ -107,8 +108,8 @@ class ChartWidget extends BaseWidget<ChartWidgetProps, WidgetState> {
       chartData: {
         [generateReactKey()]: DefaultEChartsBasicChartsData,
       },
-      xAxisName: "Product Line",
-      yAxisName: "Revenue($)",
+      xAxisName: $t('index.0678f078afad58c2'),
+      yAxisName: $t('index.06b893ab03cf2fba'),
       labelOrientation: LabelOrientation.AUTO,
       customFusionChartConfig: DefaultFusionChartConfig,
 
@@ -159,7 +160,7 @@ class ChartWidget extends BaseWidget<ChartWidgetProps, WidgetState> {
             message: messages.customFusionChartDeprecationMessage,
             links: [
               {
-                text: "Learn more",
+                text: $t('index.62fe1a58748acd0a'),
                 url: "https://www.appsmith.com/blog/deprecating-fusion-charts",
               },
             ],
@@ -174,7 +175,7 @@ class ChartWidget extends BaseWidget<ChartWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Chart widget is used to view the graphical representation of your data. Chart is the go-to widget for your data visualisation needs.",
+        $t('index.1dc9c9983a6b5171'),
       "!url": "https://docs.appsmith.com/widget-reference/chart",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       chartData: {

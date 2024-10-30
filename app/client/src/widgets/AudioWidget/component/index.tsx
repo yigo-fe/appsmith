@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import ReactPlayer from "react-player";
 import type { Ref } from "react";
 import React from "react";
@@ -50,7 +51,7 @@ export default function AudioComponent(props: AudioComponentProps) {
         file: {
           attributes: {
             controlsList:
-              "nofullscreen nodownload noremoteplayback noplaybackrate",
+              $t('index.d1bcf145e5a3a6e2'),
           },
         },
       }}

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState, useCallback } from "react";
 
 import type { noop } from "lodash";
@@ -71,7 +72,7 @@ export function EditorName(props: EditorNameProps) {
 
   const inputValidation = (value: string) => {
     if (value.trim() === "") {
-      toast.show(`${editorName} name can't be empty`, {
+      toast.show($t('index.4ccdc08fb1530504', {editorName: editorName}), {
         kind: "error",
       });
     }

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   firstTimeUserOnboardingInit,
   setCurrentApplicationIdForCreateNewApp,
@@ -97,7 +98,7 @@ export const redirectUserAfterSignup = (
         window.location.replace(redirectUrl);
       }
     } catch (e) {
-      error("Error handling the redirect url");
+      error($t('signupHelpers.927d154389a99329'));
     }
   } else {
     history.replace(APPLICATIONS_URL);

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import { toggleInOnboardingWidgetSelection } from "actions/onboardingActions";
 import { forceOpenWidgetPanel } from "actions/widgetSidebarActions";
@@ -23,11 +24,11 @@ const selectForceOpenWidgetPanel = (state: AppState) =>
 const options = [
   {
     value: "explorer",
-    label: "Explorer",
+    label: $t('index.093e014fa69004ec'),
   },
   {
     value: "widgets",
-    label: "Widgets",
+    label: $t('index.68308818d5f36433'),
   },
 ];
 

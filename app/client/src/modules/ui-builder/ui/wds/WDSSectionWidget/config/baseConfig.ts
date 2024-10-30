@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 import type { WidgetBaseConfiguration } from "WidgetProvider/constants";
 
 export const baseConfig: WidgetBaseConfiguration = {
-  name: "Section",
+  name: $t('baseConfig.a6a705775dffc00d'),
   hideCard: true,
   tags: [WIDGET_TAGS.LAYOUT],
   isCanvas: true,

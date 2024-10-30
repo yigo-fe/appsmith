@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import ColumnDropdown from "./ColumnDropdown";
 import { noop } from "lodash";
@@ -23,7 +24,7 @@ export default function WidgetSpecificControls(props: Props) {
         alias="searchableColumn"
         id="searchableColumn"
         isSearcheable
-        label="Select a searchable column"
+        label=$t('index.bf75223d43da3c3a')
         onSelect={noop}
       />
     );

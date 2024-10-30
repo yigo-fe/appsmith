@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useContext, useEffect } from "react";
 import { Tabs, TabsList, Tab, TabPanel, Icon, Tooltip } from "@appsmith/ads";
 import DebuggerItem from "./debuggerItem";
@@ -71,7 +72,7 @@ export default function Debugger() {
             style={{ cursor: "pointer" }}
           />
         </Tooltip>
-        <Tooltip content={open ? "Close console" : "Open console"}>
+        <Tooltip content={open ? $t('index.20f34fbb93f13f07') : $t('index.31881c4b9ba55c3a')}>
           <Icon
             name={open ? "arrow-down-s-line" : "arrow-up-s-line"}
             onClick={() => toggle()}

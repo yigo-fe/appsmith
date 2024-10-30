@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ButtonPlacementTypes } from "components/constants";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { CodeScannerWidgetProps } from "widgets/CodeScannerWidget/constants";
@@ -6,12 +7,12 @@ import { updateStyles } from "../propertyUtils";
 
 export default [
   {
-    sectionName: "Icon",
+    sectionName: $t('styleConfig.248fac7b786b1db2'),
     children: [
       {
         propertyName: "iconName",
-        label: "Select icon",
-        helpText: "Sets the icon to be used for the button",
+        label: $t('styleConfig.de53146fb0a2b0c9'),
+        helpText: $t('styleConfig.3a6c86c94cdeb9a9'),
         controlType: "ICON_SELECT",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -25,8 +26,8 @@ export default [
       },
       {
         propertyName: "iconAlign",
-        label: "Position",
-        helpText: "Sets the icon alignment of the button",
+        label: $t('styleConfig.e6d2b3d94fb2858f'),
+        helpText: $t('styleConfig.b877451ef83b6835'),
         controlType: "ICON_TABS",
         defaultValue: "left",
         fullWidth: false,
@@ -54,21 +55,21 @@ export default [
       },
       {
         propertyName: "placement",
-        label: "Placement",
+        label: $t('styleConfig.57d7a7cdff24f7c1'),
         controlType: "ICON_TABS",
         fullWidth: true,
-        helpText: "Sets the space between items",
+        helpText: $t('styleConfig.bf945a16abdb815f'),
         options: [
           {
-            label: "Start",
+            label: $t('styleConfig.e78fbb2368b50d7a'),
             value: ButtonPlacementTypes.START,
           },
           {
-            label: "Between",
+            label: $t('styleConfig.23050ce232b4df97'),
             value: ButtonPlacementTypes.BETWEEN,
           },
           {
-            label: "Center",
+            label: $t('styleConfig.aba05d43c05170dd'),
             value: ButtonPlacementTypes.CENTER,
           },
         ],
@@ -94,12 +95,12 @@ export default [
     ],
   },
   {
-    sectionName: "Color",
+    sectionName: $t('styleConfig.1e84a712ba61d655'),
     children: [
       {
         propertyName: "buttonColor",
-        helpText: "Sets the background color of the button",
-        label: "Button color",
+        helpText: $t('styleConfig.76fbc362446c2cd9'),
+        label: $t('styleConfig.a936e4f37eb1faf1'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -117,12 +118,12 @@ export default [
     ],
   },
   {
-    sectionName: "Border and shadow",
+    sectionName: $t('styleConfig.32ac6618a1000e12'),
     children: [
       {
         propertyName: "borderRadius",
-        label: "Border radius",
-        helpText: "Rounds the corners of the icon button's outer border edge",
+        label: $t('styleConfig.5fe92f97974ff559'),
+        helpText: $t('styleConfig.744b3b69cda37224'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -131,9 +132,9 @@ export default [
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
+        label: $t('styleConfig.8a9450d726de1930'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('styleConfig.7dfb78aa3a80eab8'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,

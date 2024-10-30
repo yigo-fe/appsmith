@@ -1,17 +1,18 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "An input text field is used to capture a currency value. Inputs are used in forms and can have custom validations.",
+    $t('autocompleteConfig.b2d4adbac7ff91bb'),
   "!url": "https://docs.appsmith.com/widget-reference/currency-input",
   parsedText: {
     "!type": "string",
-    "!doc": "The formatted text value of the input",
+    "!doc": $t('autocompleteConfig.f012464183dc5385'),
     "!url": "https://docs.appsmith.com/widget-reference/currency-input",
   },
   rawText: {
     "!type": "number",
-    "!doc": "The value of the input",
+    "!doc": $t('autocompleteConfig.8c16d712f40b67fc'),
     "!url": "https://docs.appsmith.com/widget-reference/currency-input",
   },
   isValid: "bool",
@@ -20,10 +21,10 @@ export const autocompleteConfig = {
   isReadOnly: "bool",
   countryCode: {
     "!type": "string",
-    "!doc": "Selected country code for Currency",
+    "!doc": $t('autocompleteConfig.94bb256b90442ae2'),
   },
   currencyCode: {
     "!type": "string",
-    "!doc": "Selected Currency code",
+    "!doc": $t('autocompleteConfig.59fe7535e503f31d'),
   },
 };

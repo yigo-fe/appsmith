@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useMemo, useState } from "react";
 import { Text } from "@appsmith/ads";
 import { useDispatch, useSelector } from "react-redux";
@@ -65,7 +66,7 @@ const PagesSection = ({ onItemSelected }: { onItemSelected: () => void }) => {
   return (
     <IDEHeaderDropdown>
       <IDEHeaderDropdown.Header className="pages">
-        <Text kind="heading-xs">{`All Pages (${pages.length})`}</Text>
+        <Text kind="heading-xs">{$t('PagesSection.65cac89befad0f00', {pages_length: pages.length})}</Text>
         {canCreatePages ? (
           <AddPageContextMenu
             buttonSize="sm"

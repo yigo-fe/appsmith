@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 
 /**
@@ -51,7 +52,7 @@ export function optionsCustomValidation(
         message = {
           name: "ValidationError",
           message:
-            "Invalid entry at index: " + i + ". Missing required key: label",
+            $t('optionsCustomValidation.127d5713f0f273d0') + i + ". Missing required key: label",
         };
         break;
       }
@@ -66,7 +67,7 @@ export function optionsCustomValidation(
         message = {
           name: "ValidationError",
           message:
-            "Invalid entry at index: " +
+            $t('optionsCustomValidation.127d5713f0f273d0') +
             i +
             ". Value of key: label is invalid: This value does not evaluate to type string",
         };
@@ -78,7 +79,7 @@ export function optionsCustomValidation(
         _isValid = false;
         message = {
           name: "TypeError",
-          message: "All value properties in options must have the same type",
+          message: $t('optionsCustomValidation.2c3cf6130123ee6c'),
         };
         break;
       }

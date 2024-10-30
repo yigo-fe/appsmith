@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { MutableRefObject } from "react";
 import React, { useRef } from "react";
 import type { DropdownOption } from "@appsmith/ads-old";
@@ -77,7 +78,7 @@ function FilterHeader(props: FilterHeaderProps) {
           className="debugger-search"
           data-testid="t--debugger-search"
           onChange={props.onChange}
-          placeholder="Filter"
+          placeholder={$t('FilterHeader.4d02e3db95fbbf92')}
           ref={searchRef}
           value={props.value}
         />

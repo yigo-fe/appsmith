@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { FieldType } from "widgets/JSONFormWidget/constants";
 import type { HiddenFnParams } from "../helper";
@@ -8,8 +9,8 @@ const PROPERTIES = {
     data: [
       {
         propertyName: "defaultValue",
-        label: "Default state",
-        helpText: "Sets the default checked state of the field",
+        label: $t('checkbox.b58e54ef2c30b2de'),
+        helpText: $t('checkbox.a31f10eca77bf2b2'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -23,7 +24,7 @@ const PROPERTIES = {
     ],
     events: [
       {
-        helpText: "when the check state is changed",
+        helpText: $t('checkbox.e5cdfd7c6c6c377f'),
         propertyName: "onCheckChange",
         label: "onCheckChange",
         controlType: "ACTION_SELECTOR",
@@ -39,18 +40,18 @@ const PROPERTIES = {
     label: [
       {
         propertyName: "alignWidget",
-        helpText: "Sets the Position of the field",
-        label: "Position",
+        helpText: $t('checkbox.ca3dd3e7ed5b7c48'),
+        label: $t('checkbox.d59d21f324022fb9'),
         controlType: "ICON_TABS",
         defaultValue: "LEFT",
         fullWidth: true,
         options: [
           {
-            label: "Left",
+            label: $t('checkbox.6e9dd9df9b567bc1'),
             value: "LEFT",
           },
           {
-            label: "Right",
+            label: $t('checkbox.5460325585f18c6e'),
             value: "RIGHT",
           },
         ],

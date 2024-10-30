@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ColumnTypes, DateInputFormat } from "widgets/TableWidgetV2/constants";
 
 // Mock columns data
@@ -119,13 +120,13 @@ export const tableDataNonDate = [
   {
     role: 1,
     id: 1,
-    name: "Alice Johnson",
+    name: $t('fixtures.ac0035359c013ca3'),
     __originalIndex__: 0,
   },
   {
     role: 2,
     id: 2,
-    name: "Bob Smith",
+    name: $t('fixtures.19c9a1f675624508'),
     __originalIndex__: 1,
   },
 ];
@@ -135,11 +136,11 @@ export const expectedDataNonDate = [
   {
     role: 1,
     id: 1,
-    name: "Alice Johnson",
+    name: $t('fixtures.ac0035359c013ca3'),
   },
   {
     role: 2,
     id: 2,
-    name: "Bob Smith",
+    name: $t('fixtures.19c9a1f675624508'),
   },
 ];

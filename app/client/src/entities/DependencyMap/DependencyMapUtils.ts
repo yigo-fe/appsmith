@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import toposort from "toposort";
 import type DependencyMap from ".";
 import { IMMEDIATE_PARENT_REGEX } from "ee/workers/Evaluation/evaluationUtils";
@@ -33,7 +34,7 @@ export class DependencyMapUtils {
     } catch (error) {
       // Cyclic dependency found. Extract node
       const cyclicNodes = (error as Error).message.match(
-        new RegExp('Cyclic dependency, node was:"(.*)"'),
+        new RegExp($t('DependencyMapUtils.c1f3b8b4cc01ce05')),
       );
       const node = cyclicNodes ? cyclicNodes[1] : "";
 

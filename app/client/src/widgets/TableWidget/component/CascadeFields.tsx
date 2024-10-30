@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import { Icon, InputGroup } from "@blueprintjs/core";
@@ -97,55 +98,55 @@ const AutoToolTipComponentWrapper = styled(AutoToolTipComponent)`
 const typeOperatorsMap: Record<ColumnTypes, DropdownOption[]> = {
   [ColumnTypes.TEXT]: [
     { label: "contains", value: "contains", type: "input" },
-    { label: "does not contain", value: "doesNotContain", type: "input" },
-    { label: "starts with", value: "startsWith", type: "input" },
-    { label: "ends with", value: "endsWith", type: "input" },
-    { label: "is exactly", value: "isExactly", type: "input" },
+    { label: $t('CascadeFields.9d7ed0c6dcbb8f02'), value: "doesNotContain", type: "input" },
+    { label: $t('CascadeFields.62e655b4ef147b27'), value: "startsWith", type: "input" },
+    { label: $t('CascadeFields.b47d355ba3272249'), value: "endsWith", type: "input" },
+    { label: $t('CascadeFields.b6c4c53514637b1a'), value: "isExactly", type: "input" },
     { label: "empty", value: "empty", type: "" },
-    { label: "not empty", value: "notEmpty", type: "" },
+    { label: $t('CascadeFields.515b14efbd04a8e8'), value: "notEmpty", type: "" },
   ],
   [ColumnTypes.URL]: [
     { label: "contains", value: "contains", type: "input" },
-    { label: "does not contain", value: "doesNotContain", type: "input" },
-    { label: "starts with", value: "startsWith", type: "input" },
-    { label: "ends with", value: "endsWith", type: "input" },
-    { label: "is exactly", value: "isExactly", type: "input" },
+    { label: $t('CascadeFields.9d7ed0c6dcbb8f02'), value: "doesNotContain", type: "input" },
+    { label: $t('CascadeFields.62e655b4ef147b27'), value: "startsWith", type: "input" },
+    { label: $t('CascadeFields.b47d355ba3272249'), value: "endsWith", type: "input" },
+    { label: $t('CascadeFields.b6c4c53514637b1a'), value: "isExactly", type: "input" },
     { label: "empty", value: "empty", type: "" },
-    { label: "not empty", value: "notEmpty", type: "" },
+    { label: $t('CascadeFields.515b14efbd04a8e8'), value: "notEmpty", type: "" },
   ],
   [ColumnTypes.DATE]: [
     { label: "is", value: "is", type: "date" },
-    { label: "is before", value: "isBefore", type: "date" },
-    { label: "is after", value: "isAfter", type: "date" },
-    { label: "is not", value: "isNot", type: "date" },
+    { label: $t('CascadeFields.d17be927f0056da5'), value: "isBefore", type: "date" },
+    { label: $t('CascadeFields.a8ce3f8539e01774'), value: "isAfter", type: "date" },
+    { label: $t('CascadeFields.bc8d0ceb08bdc6ea'), value: "isNot", type: "date" },
     { label: "empty", value: "empty", type: "" },
-    { label: "not empty", value: "notEmpty", type: "" },
+    { label: $t('CascadeFields.515b14efbd04a8e8'), value: "notEmpty", type: "" },
   ],
   [ColumnTypes.IMAGE]: [
     { label: "empty", value: "empty", type: "" },
-    { label: "not empty", value: "notEmpty", type: "" },
+    { label: $t('CascadeFields.515b14efbd04a8e8'), value: "notEmpty", type: "" },
   ],
   [ColumnTypes.VIDEO]: [
     { label: "empty", value: "empty", type: "" },
-    { label: "not empty", value: "notEmpty", type: "" },
+    { label: $t('CascadeFields.515b14efbd04a8e8'), value: "notEmpty", type: "" },
   ],
   [ColumnTypes.NUMBER]: [
-    { label: "is equal to", value: "isEqualTo", type: "input" },
-    { label: "not equal to", value: "notEqualTo", type: "input" },
-    { label: "greater than", value: "greaterThan", type: "input" },
+    { label: $t('CascadeFields.b423ced12632a94c'), value: "isEqualTo", type: "input" },
+    { label: $t('CascadeFields.4b3377709f3a08c2'), value: "notEqualTo", type: "input" },
+    { label: $t('CascadeFields.4283aea56a55bda5'), value: "greaterThan", type: "input" },
     {
-      label: "greater than or equal to",
+      label: $t('CascadeFields.629e49a2e029717a'),
       value: "greaterThanEqualTo",
       type: "input",
     },
-    { label: "less than", value: "lessThan", type: "input" },
+    { label: $t('CascadeFields.cf1999e81d3f8037'), value: "lessThan", type: "input" },
     {
-      label: "less than or equal to",
+      label: $t('CascadeFields.a065ae32d9360c56'),
       value: "lessThanEqualTo",
       type: "input",
     },
     { label: "empty", value: "empty", type: "" },
-    { label: "not empty", value: "notEmpty", type: "" },
+    { label: $t('CascadeFields.515b14efbd04a8e8'), value: "notEmpty", type: "" },
   ],
 };
 
@@ -155,12 +156,12 @@ const operatorOptions: DropdownOption[] = [
 ];
 
 const columnTypeNameMap: Record<ColumnTypes, string> = {
-  [ColumnTypes.TEXT]: "Text",
-  [ColumnTypes.VIDEO]: "Video",
-  [ColumnTypes.IMAGE]: "Image",
-  [ColumnTypes.NUMBER]: "Num",
-  [ColumnTypes.DATE]: "Date",
-  [ColumnTypes.URL]: "Url",
+  [ColumnTypes.TEXT]: $t('CascadeFields.e529994107bab1e1'),
+  [ColumnTypes.VIDEO]: $t('CascadeFields.5636176a07bcc929'),
+  [ColumnTypes.IMAGE]: $t('CascadeFields.5c0538107d273c9f'),
+  [ColumnTypes.NUMBER]: $t('CascadeFields.0ae2b498fc78ca9c'),
+  [ColumnTypes.DATE]: $t('CascadeFields.ebe48bdc9a4abded'),
+  [ColumnTypes.URL]: $t('CascadeFields.b556e3b1e34e4767'),
 };
 
 function RenderOption(props: { type: string; title: string; active: boolean }) {
@@ -263,7 +264,7 @@ function RenderInput(props: {
       className={props.className}
       defaultValue={value}
       onChange={onChange}
-      placeholder="Enter value"
+      placeholder=$t('CascadeFields.5da196fac1ec5ee9')
       type="text"
     />
   );
@@ -549,14 +550,14 @@ function Fields(props: CascadeFieldProps & { state: CascadeFieldState }) {
         </DropdownWrapper>
       ) : (
         <LabelWrapper>
-          {index === 0 ? "Where" : OperatorTypes[props.operator]}
+          {index === 0 ? $t('CascadeFields.bb70df4c7189ab0c') : OperatorTypes[props.operator]}
         </LabelWrapper>
       )}
       <DropdownWrapper width={150}>
         <RenderOptions
           className="t--table-filter-columns-dropdown"
           columns={props.columns}
-          placeholder="Attribute"
+          placeholder={$t('CascadeFields.5b13e838d0aa2f44')}
           selectItem={selectColumn}
           showType
           value={column}

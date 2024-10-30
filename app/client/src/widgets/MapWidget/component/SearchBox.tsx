@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import styled from "styled-components";
 import React, { useRef, useEffect } from "react";
 
@@ -63,7 +64,7 @@ const SearchBox = (props: SearchBoxProps) => {
 
   return (
     <StyledInput
-      placeholder="Enter location to search"
+      placeholder=$t('SearchBox.a5acc6cad5fc9686')
       ref={searchBoxRef}
       type="text"
     />

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ContentBox } from "pages/AdminSettings/components";
 import React from "react";
 
@@ -13,7 +14,7 @@ const DashboardPreview = (props: PreviewsProps) => {
       style={{
         backgroundColor: shades?.background,
       }}
-      title="Home"
+      title=$t('DashboardPreview.600f78065575751c')
     >
       <div className="w-full h-full bg-white">
         <div className="flex flex-col">

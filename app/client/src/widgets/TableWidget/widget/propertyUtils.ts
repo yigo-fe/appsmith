@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import type { ColumnProperties } from "../component/Constants";
 import type { TableWidgetProps } from "../constants";
@@ -137,7 +138,7 @@ export function totalRecordsCountValidation(
     return {
       isValid: false,
       parsed: 0,
-      message: "This value must be a number",
+      message: $t('propertyUtils.94d6d24d0cd6dc9b'),
     };
   }
 
@@ -145,7 +146,7 @@ export function totalRecordsCountValidation(
     return {
       isValid: false,
       parsed: 0,
-      message: "This value must be a number",
+      message: $t('propertyUtils.94d6d24d0cd6dc9b'),
     };
   }
 
@@ -173,7 +174,7 @@ export function uniqueColumnNameValidation(
     return {
       isValid: false,
       parsed: value,
-      messages: ["Column names should be unique."],
+      messages: [$t('propertyUtils.8b0bd47ec8d04da6')],
     };
   }
 

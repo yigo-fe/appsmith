@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { WidgetProps } from "./BaseWidget";
 import { debounce, fromPairs, isEmpty } from "lodash";
@@ -107,7 +108,7 @@ function withMeta(WrappedWidget: typeof BaseWidget) {
 
           actionExecution.triggerPropertyName &&
             AppsmithConsole.info({
-              text: `${actionExecution.triggerPropertyName} triggered`,
+              text: $t('MetaHOC.c705f69dc4b33013', {actionExecution_triggerPropertyName: actionExecution.triggerPropertyName}),
               source: {
                 type: ENTITY_TYPE.WIDGET,
                 id: this.props.widgetId,
@@ -201,7 +202,7 @@ function withMeta(WrappedWidget: typeof BaseWidget) {
 
       AppsmithConsole.info({
         logType: LOG_TYPE.WIDGET_UPDATE,
-        text: "Widget property was updated",
+        text: $t('MetaHOC.bfc9bb095733cd6f'),
         source: {
           type: ENTITY_TYPE.WIDGET,
           id: this.props.widgetId,

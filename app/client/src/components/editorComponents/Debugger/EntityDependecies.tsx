@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /* eslint-disable prefer-const */
 import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
@@ -163,7 +164,7 @@ export function Connection(props: ConnectionProps) {
 
   return (
     <Tooltip
-      content={`Open ${entityDescription}`}
+      content={$t('EntityDependecies.632ea9a7addabc71', {entityDescription: entityDescription})}
       isDisabled={!entityDescription}
       key={props.entityName}
     >

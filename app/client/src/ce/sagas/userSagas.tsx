@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { call, fork, put, race, select, take } from "redux-saga/effects";
 import type {
   ReduxAction,
@@ -130,7 +131,7 @@ export function* createUserSaga(
         error,
       },
     });
-    Sentry.captureException("Sign up failed", {
+    Sentry.captureException($t('userSagas.1db37560039ba3af'), {
       level: Severity.Error,
       extra: {
         error: error,
@@ -645,7 +646,7 @@ export function* leaveWorkspaceSaga(
         type: ReduxActionTypes.DELETE_WORKSPACE_SUCCESS,
         payload: workspaceId,
       });
-      toast.show(`You have successfully left the workspace`, {
+      toast.show($t('userSagas.c56c8ea69dd130bf'), {
         kind: "success",
       });
       history.push("/applications");

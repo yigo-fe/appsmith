@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState } from "react";
 import type { Alignment } from "@blueprintjs/core";
 import { MenuItem, Classes, Button as BButton } from "@blueprintjs/core";
@@ -592,7 +593,7 @@ export const renderEmptyRows = (
               key={index}
               style={{
                 display: "flex",
-                flex: "1 0 auto",
+                flex: $t('TableUtilities.661b98f6bfc00b82'),
               }}
             >
               {multiRowSelection &&

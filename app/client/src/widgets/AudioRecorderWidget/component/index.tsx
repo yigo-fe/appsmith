@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState, useMemo, useRef } from "react";
 import styled from "styled-components";
 import { Button, Icon } from "@blueprintjs/core";
@@ -574,7 +575,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
     RecorderStatusTypes.PERMISSION_PROMPT,
   );
   const [playerStatus, setPlayerStatus] = useState(PlayerStatusTypes.DEFAULT);
-  const [statusMessage, setStatusMessage] = useState("Press to get permission");
+  const [statusMessage, setStatusMessage] = useState($t('index.168e633a93d7fe65'));
 
   const [isReadyPlayerTimer, setIsReadyPlayerTimer] = useState(false);
   const [isClear, setIsClear] = useState(false);
@@ -607,7 +608,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
     if (error === "permission_denied") {
       setIsPermissionDenied(true);
       setRecorderStatus(RecorderStatusTypes.PERMISSION_DENIED);
-      setStatusMessage("Permission denied");
+      setStatusMessage($t('index.88a66042e11c28aa'));
     }
   }, [error]);
 
@@ -631,7 +632,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
 
   const resetRecorder = () => {
     setRecorderStatus(RecorderStatusTypes.DEFAULT);
-    setStatusMessage("Press to start recording");
+    setStatusMessage($t('index.0607761f610a951e'));
     setIsClear(true);
     setIsReadyPlayerTimer(false);
     reset(0, false);
@@ -643,13 +644,13 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
       .then(() => {
         setIsPermissionDenied(false);
         setRecorderStatus(RecorderStatusTypes.DEFAULT);
-        setStatusMessage("Press to start recording");
+        setStatusMessage($t('index.0607761f610a951e'));
       })
       .catch((err) => {
         if (err.code === 0) {
           setIsPermissionDenied(true);
           setRecorderStatus(RecorderStatusTypes.PERMISSION_DENIED);
-          setStatusMessage("Permission denied");
+          setStatusMessage($t('index.88a66042e11c28aa'));
         }
       });
   };
@@ -668,7 +669,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
         pauseRecording();
         pause();
         setRecorderStatus(RecorderStatusTypes.PAUSE);
-        setStatusMessage("Recording paused");
+        setStatusMessage($t('index.c886d9f8871806a0'));
         break;
       case RecorderStatusTypes.PAUSE:
         resumeRecording();
@@ -678,7 +679,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
         break;
       case RecorderStatusTypes.COMPLETE:
         setRecorderStatus(RecorderStatusTypes.SAVED);
-        setStatusMessage("Recording saved");
+        setStatusMessage($t('index.8d282bfce0264c86'));
         break;
       case RecorderStatusTypes.SAVED:
         resetRecorder();
@@ -694,7 +695,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
     stopRecording();
     pause();
     setRecorderStatus(RecorderStatusTypes.COMPLETE);
-    setStatusMessage("Recording complete");
+    setStatusMessage($t('index.3b2fb7e1075f5142'));
   };
 
   const handleClearRecording = () => {
@@ -702,7 +703,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
     setIsReadyPlayerTimer(false);
     setPlayerStatus(PlayerStatusTypes.DEFAULT);
     setRecorderStatus(RecorderStatusTypes.DEFAULT);
-    setStatusMessage("Press to start recording");
+    setStatusMessage($t('index.0607761f610a951e'));
     setIsClear(true);
   };
 
@@ -721,7 +722,7 @@ function AudioRecorderComponent(props: RecorderComponentProps) {
   const handleStopPlayer = () => {
     setPlayerStatus(PlayerStatusTypes.DEFAULT);
     setRecorderStatus(RecorderStatusTypes.DEFAULT);
-    setStatusMessage("Press to start recording");
+    setStatusMessage($t('index.0607761f610a951e'));
     setIsClear(true);
     reset(0, false);
     setIsReadyPlayerTimer(false);

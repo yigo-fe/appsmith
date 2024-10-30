@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { NumberSliderWidgetProps } from "./widget";
 
 export function minValueValidation(
@@ -14,7 +15,7 @@ export function minValueValidation(
       messages: [
         {
           name: "ValidationError",
-          message: "This value is required",
+          message: $t('validations.3e3e5b0a54107a56'),
         },
       ],
     };
@@ -30,7 +31,7 @@ export function minValueValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be a number",
+          message: $t('validations.c794e39df21a3545'),
         },
       ],
     };
@@ -43,7 +44,7 @@ export function minValueValidation(
       messages: [
         {
           name: "RangeError",
-          message: "This value must be less than max value",
+          message: $t('validations.4a3a67dc28ea7ae7'),
         },
       ],
     };
@@ -75,7 +76,7 @@ export function maxValueValidation(
       messages: [
         {
           name: "ValidationError",
-          message: "This value is required",
+          message: $t('validations.3e3e5b0a54107a56'),
         },
       ],
     };
@@ -91,7 +92,7 @@ export function maxValueValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be a number",
+          message: $t('validations.c794e39df21a3545'),
         },
       ],
     };
@@ -104,7 +105,7 @@ export function maxValueValidation(
       messages: [
         {
           name: "RangeError",
-          message: "This value must be greater than min value",
+          message: $t('validations.d9afb5b0430efc0d'),
         },
       ],
     };
@@ -153,7 +154,7 @@ export function defaultValueValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be a number",
+          message: $t('validations.c794e39df21a3545'),
         },
       ],
     };
@@ -166,7 +167,7 @@ export function defaultValueValidation(
       messages: [
         {
           name: "RangeError",
-          message: "This value must be greater than or equal to the min value",
+          message: $t('validations.8bed2b1cbb0e6ccd'),
         },
       ],
     };
@@ -179,7 +180,7 @@ export function defaultValueValidation(
       messages: [
         {
           name: "RangeError",
-          message: "This value must be less than or equal to the max value",
+          message: $t('validations.86d55ec9f28691ff'),
         },
       ],
     };
@@ -211,7 +212,7 @@ export function stepSizeValidation(
       messages: [
         {
           name: "ValidationError",
-          message: "This value is required",
+          message: $t('validations.3e3e5b0a54107a56'),
         },
       ],
     };
@@ -226,7 +227,7 @@ export function stepSizeValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be a number",
+          message: $t('validations.c794e39df21a3545'),
         },
       ],
     };
@@ -239,7 +240,7 @@ export function stepSizeValidation(
       messages: [
         {
           name: "RangeError",
-          message: "This value must be greater than 0.1",
+          message: $t('validations.980a51da9535ae3e'),
         },
       ],
     };
@@ -257,7 +258,7 @@ export function stepSizeValidation(
       messages: [
         {
           name: "RangeError",
-          message: `This value must be less than ${sliderRange}`,
+          message: $t('validations.3bf202b98a548f47', {sliderRange: sliderRange}),
         },
       ],
     };

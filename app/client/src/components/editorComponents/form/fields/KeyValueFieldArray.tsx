@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import type { WrappedFieldArrayProps } from "redux-form";
 import { FieldArray } from "redux-form";
@@ -118,10 +119,10 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
       {!props.hideHeader && (
         <FlexContainer>
           <Flex className="key-value" size={props.hasType ? 2 : 1}>
-            <Text kind="body-m">Key</Text>
+            <Text kind="body-m">{$t('KeyValueFieldArray.28a4049c0340975f')}</Text>
           </Flex>
           <Flex className="key-value" size={3}>
-            <Text kind="body-m">Value</Text>
+            <Text kind="body-m">{$t('KeyValueFieldArray.390642d11233a4e5')}</Text>
           </Flex>
         </FlexContainer>
       )}
@@ -160,11 +161,11 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
                         border={CodeEditorBorder.ALL_SIDE}
                         className={`t--${field}.key.${index}`}
                         dataTreePath={`${props.dataTreePath}[${index}].key`}
-                        evaluatedPopUpLabel={"Key"}
+                        evaluatedPopUpLabel={$t('KeyValueFieldArray.28a4049c0340975f')}
                         expected={expected}
                         hoverInteraction
                         name={`${field}.key`}
-                        placeholder={`Key ${index + 1}`}
+                        placeholder={$t('KeyValueFieldArray.59a2f23a171290eb')}
                         size={EditorSize.COMPACT_RETAIN_FORMATTING}
                         theme={props.theme}
                       />
@@ -186,11 +187,11 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
                       border={CodeEditorBorder.ALL_SIDE}
                       className={`t--${field}.key.${index}`}
                       dataTreePath={`${props.dataTreePath}[${index}].key`}
-                      evaluatedPopUpLabel={"Key"}
+                      evaluatedPopUpLabel={$t('KeyValueFieldArray.28a4049c0340975f')}
                       expected={expected}
                       hoverInteraction
                       name={`${field}.key`}
-                      placeholder={`Key ${index + 1}`}
+                      placeholder={$t('KeyValueFieldArray.59a2f23a171290eb', {})}
                       size={EditorSize.COMPACT_RETAIN_FORMATTING}
                       theme={props.theme}
                     />
@@ -203,11 +204,11 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
                       border={CodeEditorBorder.ALL_SIDE}
                       className={`t--${field}.value.${index}`}
                       dataTreePath={`${props.dataTreePath}[${index}].value`}
-                      evaluatedPopUpLabel={"Value"}
+                      evaluatedPopUpLabel={$t('KeyValueFieldArray.390642d11233a4e5')}
                       expected={expected}
                       hoverInteraction
                       name={`${field}.value`}
-                      placeholder={`Value ${index + 1}`}
+                      placeholder={$t('KeyValueFieldArray.cfe356493e18ae97')}
                       size={EditorSize.COMPACT_RETAIN_FORMATTING}
                       theme={props.theme}
                     />
@@ -225,7 +226,7 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
                           props.actionConfig[index].editable === undefined
                         )
                       }
-                      evaluatedPopUpLabel={"Value"}
+                      evaluatedPopUpLabel={$t('KeyValueFieldArray.390642d11233a4e5')}
                       expected={expected}
                       name={`${field}.value`}
                       placeholder={

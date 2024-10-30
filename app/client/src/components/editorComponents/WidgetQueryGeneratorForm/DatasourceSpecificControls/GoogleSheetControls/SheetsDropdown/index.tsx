@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   ErrorMessage,
   Label,
@@ -35,7 +36,7 @@ export default memo(function SheetsDropdown() {
           isValid={!error}
           onSelect={onSelect}
           options={options}
-          placeholder="Select sheet"
+          placeholder={$t('index.91e96a72519b438f')}
           showSearch
           value={selected}
         />

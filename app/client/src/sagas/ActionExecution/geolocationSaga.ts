@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import type { TriggerMeta } from "ee/sagas/ActionExecution/ActionExecutionSagas";
 import { call, put, spawn, take } from "redux-saga/effects";
@@ -157,7 +158,7 @@ export function* watchCurrentLocation(
     // at a given point in time, only one watch is active
     yield call(
       showToastOnExecutionError,
-      "A watchLocation is already active. Clear it before before starting a new one",
+      $t('geolocationSaga.a3fb31c1f1bd0e1f'),
     );
 
     return;
@@ -187,7 +188,7 @@ export function* watchCurrentLocation(
 
 export function* stopWatchCurrentLocation() {
   if (watchId === undefined) {
-    yield call(showToastOnExecutionError, "No location watch active");
+    yield call(showToastOnExecutionError, $t('geolocationSaga.c384679e5d91ec71'));
 
     return;
   }

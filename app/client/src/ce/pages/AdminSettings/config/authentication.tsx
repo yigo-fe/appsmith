@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import {
   EMAIL_SETUP_DOC,
@@ -43,7 +44,7 @@ const FormAuth: AdminConfigType = {
   type: SettingCategories.FORM_AUTH,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.GROUP,
-  title: "Form login",
+  title: $t('authentication.59c0364fc3bd6467'),
   subText: createMessage(FORM_LOGIN_DESC),
   canSave: true,
   settings: [
@@ -51,23 +52,23 @@ const FormAuth: AdminConfigType = {
       id: "APPSMITH_FORM_LOGIN_DISABLED",
       category: SettingCategories.FORM_AUTH,
       controlType: SettingTypes.TOGGLE,
-      label: "form login",
+      label: $t('authentication.28e99f86221078e1'),
     },
     {
       id: "APPSMITH_SIGNUP_DISABLED",
       category: SettingCategories.FORM_AUTH,
       controlType: SettingTypes.TOGGLE,
-      label: "Form signup",
+      label: $t('authentication.ec2561337e42fa17'),
       toggleText: (value: boolean) =>
         value
-          ? "Allow only invited users to signup"
-          : "Allow all users to signup",
+          ? $t('authentication.76573db1e8137d59')
+          : $t('authentication.52b333eb8c81893c'),
     },
     {
       id: "emailVerificationEnabled",
       category: SettingCategories.FORM_AUTH,
       controlType: SettingTypes.TOGGLE,
-      label: "email verification",
+      label: $t('authentication.18f0a323dbde9393'),
       isDisabled: (settings) => {
         // Disabled when mail is not enabled, unless setting already enabled then enabled
         if (!settings) {
@@ -86,7 +87,7 @@ const FormAuth: AdminConfigType = {
       category: SettingCategories.FORM_AUTH,
       controlType: SettingTypes.LINK,
       label:
-        "To enable email verification for form login, you must enable SMTP server from email settings",
+        $t('authentication.5578d66d967647ee'),
       url: EMAIL_SETUP_DOC,
       calloutType: "warning",
       isVisible: (settings) => {
@@ -107,7 +108,7 @@ const FormAuth: AdminConfigType = {
       category: SettingCategories.FORM_AUTH,
       controlType: SettingTypes.CALLOUT,
       label:
-        "Please ensure that your SMTP settings are correctly configured to ensure that the verification emails can be delivered",
+        $t('authentication.3e5b34088d37c0db'),
       calloutType: "warning",
       isVisible: (settings) => {
         // Visible when mail is enabled and setting is true
@@ -123,7 +124,7 @@ const FormAuth: AdminConfigType = {
       category: SettingCategories.FORM_AUTH,
       controlType: SettingTypes.LINK,
       label:
-        "Valid SMTP settings not found. Signup with email verification will not work without SMTP configuration",
+        $t('authentication.ae8cfb7418868dea'),
       calloutType: "error",
       isVisible: (settings) => {
         // Visible when mail is disabled but settings is true
@@ -153,14 +154,14 @@ export const GoogleAuth: AdminConfigType = {
       id: "APPSMITH_OAUTH2_GOOGLE_READ_MORE",
       category: SettingCategories.GOOGLE_AUTH,
       controlType: SettingTypes.CALLOUT,
-      label: "How to configure?",
+      label: $t('authentication.22278d0077a5cc9e'),
       url: GOOGLE_SIGNUP_SETUP_DOC,
     },
     {
       id: "APPSMITH_OAUTH2_GOOGLE_JS_ORIGIN_URL",
       category: SettingCategories.GOOGLE_AUTH,
       controlType: SettingTypes.UNEDITABLEFIELD,
-      label: "JavaScript origin URL",
+      label: $t('authentication.8aeb3994a71f08f6'),
       fieldName: "js-origin-url-form",
       value: "",
       tooltip:
@@ -171,7 +172,7 @@ export const GoogleAuth: AdminConfigType = {
       id: "APPSMITH_OAUTH2_GOOGLE_REDIRECT_URL",
       category: SettingCategories.GOOGLE_AUTH,
       controlType: SettingTypes.UNEDITABLEFIELD,
-      label: "Redirect URL",
+      label: $t('authentication.c36f5f932c6a45a8'),
       fieldName: "redirect-url-form",
       value: "/login/oauth2/code/google",
       tooltip:
@@ -183,7 +184,7 @@ export const GoogleAuth: AdminConfigType = {
       category: SettingCategories.GOOGLE_AUTH,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Client ID",
+      label: $t('authentication.9c10990576bc16f6'),
       isRequired: true,
     },
     {
@@ -191,7 +192,7 @@ export const GoogleAuth: AdminConfigType = {
       category: SettingCategories.GOOGLE_AUTH,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Client secret",
+      label: $t('authentication.a9e084a120524583'),
       isRequired: true,
     },
     {
@@ -199,7 +200,7 @@ export const GoogleAuth: AdminConfigType = {
       category: SettingCategories.GOOGLE_AUTH,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Allowed domains",
+      label: $t('authentication.e41f87338dcf64be'),
       placeholder: "domain1.com, domain2.com",
     },
   ],
@@ -209,7 +210,7 @@ export const GithubAuth: AdminConfigType = {
   type: SettingCategories.GITHUB_AUTH,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.GROUP,
-  title: "GitHub authentication",
+  title: $t('authentication.1c465d0f82e1c21c'),
   subText: createMessage(GITHUB_AUTH_DESC),
   canSave: true,
   settings: [
@@ -217,37 +218,37 @@ export const GithubAuth: AdminConfigType = {
       id: "APPSMITH_OAUTH2_GITHUB_READ_MORE",
       category: SettingCategories.GITHUB_AUTH,
       controlType: SettingTypes.CALLOUT,
-      label: "How to configure?",
+      label: $t('authentication.22278d0077a5cc9e'),
       url: GITHUB_SIGNUP_SETUP_DOC,
     },
     {
       id: "APPSMITH_OAUTH2_GITHUB_HOMEPAGE_URL",
       category: SettingCategories.GITHUB_AUTH,
       controlType: SettingTypes.UNEDITABLEFIELD,
-      label: "Homepage URL",
+      label: $t('authentication.d85f5eed631d7ab7'),
       fieldName: "homepage-url-form",
       value: "",
       tooltip:
-        "This URL will be used while configuring the GitHub OAuth Client ID's homepage URL",
-      helpText: "Paste this URL in your GitHub developer settings.",
+        $t('authentication.35369ce51677daba'),
+      helpText: $t('authentication.5c4a4bb7fef07cb6'),
     },
     {
       id: "APPSMITH_OAUTH2_GITHUB_REDIRECT_URL",
       category: SettingCategories.GITHUB_AUTH,
       controlType: SettingTypes.UNEDITABLEFIELD,
-      label: "Redirect URL",
+      label: $t('authentication.c36f5f932c6a45a8'),
       fieldName: "callback-url-form",
       value: "/login/oauth2/code/github",
       tooltip:
-        "This URL will be used while configuring the GitHub OAuth Client ID's Authorization callback URL",
-      helpText: "Paste this URL in your GitHub developer settings.",
+        $t('authentication.54a3eb8f285fbade'),
+      helpText: $t('authentication.5c4a4bb7fef07cb6'),
     },
     {
       id: "APPSMITH_OAUTH2_GITHUB_CLIENT_ID",
       category: SettingCategories.GITHUB_AUTH,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Client ID",
+      label: $t('authentication.9c10990576bc16f6'),
       isRequired: true,
     },
     {
@@ -255,7 +256,7 @@ export const GithubAuth: AdminConfigType = {
       category: SettingCategories.GITHUB_AUTH,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Client secret",
+      label: $t('authentication.a9e084a120524583'),
       isRequired: true,
     },
   ],
@@ -264,7 +265,7 @@ export const GithubAuth: AdminConfigType = {
 export const FormAuthCallout: AuthMethodType = {
   id: "APPSMITH_FORM_LOGIN_AUTH",
   category: SettingCategories.FORM_AUTH,
-  label: "Form login",
+  label: $t('authentication.59c0364fc3bd6467'),
   subText: createMessage(FORM_LOGIN_DESC),
   image: Lock,
   icon: "lock-password-line",
@@ -332,7 +333,7 @@ export const config: AdminConfigType = {
   type: SettingCategories.AUTHENTICATION,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.PAGE,
-  title: "Authentication",
+  title: $t('authentication.98ac8cdbb613e3dc'),
   canSave: false,
   children: [FormAuth, GoogleAuth, GithubAuth],
   component: AuthMain,

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes, ICON_NAMES } from "widgets/TableWidgetV2/constants";
@@ -14,7 +15,7 @@ import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
 import configureMenuItemsConfig from "./childPanels/configureMenuItemsConfig";
 
 export default {
-  sectionName: "Basic",
+  sectionName: $t('Basic.0acd0536fac2ee4a'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return hideByColumnType(
       props,
@@ -26,8 +27,8 @@ export default {
   children: [
     {
       propertyName: "iconName",
-      label: "Icon",
-      helpText: "Sets the icon to be used for the icon button",
+      label: $t('Basic.e8a6c720d431f3ce'),
+      helpText: $t('Basic.35f271899628f353'),
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         return hideByColumnType(props, propertyPath, [ColumnTypes.ICON_BUTTON]);
       },
@@ -52,8 +53,8 @@ export default {
     },
     {
       propertyName: "buttonLabel",
-      label: "Text",
-      helpText: "Sets the label of the button",
+      label: $t('Basic.f188fee402adfa87'),
+      helpText: $t('Basic.82ddb98a5dcb4a9c'),
       controlType: "TABLE_COMPUTE_VALUE",
       defaultValue: "Action",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
@@ -65,8 +66,8 @@ export default {
     },
     {
       propertyName: "menuButtonLabel",
-      label: "Text",
-      helpText: "Sets the label of the button",
+      label: $t('Basic.f188fee402adfa87'),
+      helpText: $t('Basic.82ddb98a5dcb4a9c'),
       controlType: "TABLE_COMPUTE_VALUE",
       defaultValue: "Open Menu",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
@@ -78,18 +79,18 @@ export default {
     },
     {
       propertyName: "menuItemsSource",
-      helpText: "Sets the source for the menu items",
-      label: "Menu items source",
+      helpText: $t('Basic.855b126d7d44617e'),
+      label: $t('Basic.02bf6ccff2d34344'),
       controlType: "ICON_TABS",
       fullWidth: true,
       defaultValue: MenuItemsSource.STATIC,
       options: [
         {
-          label: "Static",
+          label: $t('Basic.832cf3030b092d7c'),
           value: MenuItemsSource.STATIC,
         },
         {
-          label: "Dynamic",
+          label: $t('Basic.23d255b2cdfa9aa4'),
           value: MenuItemsSource.DYNAMIC,
         },
       ],
@@ -114,9 +115,9 @@ export default {
       },
     },
     {
-      helpText: "Takes in an array of items to display the menu items.",
+      helpText: $t('Basic.69c7cd293145fb38'),
       propertyName: "sourceData",
-      label: "Source data",
+      label: $t('Basic.743bcc3e322d59aa'),
       controlType: "TABLE_COMPUTE_VALUE",
       placeholderText: "{{Query1.data}}",
       isBindProperty: true,
@@ -176,14 +177,14 @@ export default {
       dependencies: ["primaryColumns", "columnOrder", "menuItemsSource"],
     },
     {
-      helpText: "Configure how each menu item will appear.",
+      helpText: $t('Basic.4d97514ca0242561'),
       propertyName: "configureMenuItems",
       controlType: "OPEN_CONFIG_PANEL",
       buttonConfig: {
-        label: "Configure",
+        label: $t('Basic.48107f551b8d75c2'),
         icon: "settings-2-line",
       },
-      label: "Configure menu items",
+      label: $t('Basic.7828106852c69bde'),
       isBindProperty: false,
       isTriggerProperty: false,
       hidden: (props: TableWidgetProps, propertyPath: string) =>
@@ -204,10 +205,10 @@ export default {
       panelConfig: configureMenuItemsConfig,
     },
     {
-      helpText: "Menu items",
+      helpText: $t('Basic.38187cd2c8cf31e6'),
       propertyName: "menuItems",
       controlType: "MENU_ITEMS",
-      label: "Menu items",
+      label: $t('Basic.38187cd2c8cf31e6'),
       isBindProperty: false,
       isTriggerProperty: false,
       hidden: (props: TableWidgetProps, propertyPath: string) => {
@@ -229,21 +230,21 @@ export default {
         dependencies: ["primaryColumns", "columnOrder"],
         contentChildren: [
           {
-            sectionName: "Basic",
+            sectionName: $t('Basic.0acd0536fac2ee4a'),
             children: [
               {
                 propertyName: "label",
-                helpText: "Sets the label of a menu item",
-                label: "Text",
+                helpText: $t('Basic.dd5bf220b2cb5c82'),
+                label: $t('Basic.f188fee402adfa87'),
                 controlType: "INPUT_TEXT",
-                placeholderText: "Enter label",
+                placeholderText: $t('Basic.e27e4942cf7cff5d'),
                 isBindProperty: true,
                 isTriggerProperty: false,
                 validation: { type: ValidationTypes.TEXT },
                 dependencies: ["primaryColumns", "columnOrder"],
               },
               {
-                helpText: "when the menu item is clicked",
+                helpText: $t('Basic.80c104a40d13e3f7'),
                 propertyName: "onClick",
                 label: "onClick",
                 controlType: "ACTION_SELECTOR",
@@ -255,12 +256,12 @@ export default {
             ],
           },
           {
-            sectionName: "General",
+            sectionName: $t('Basic.4d6fe407d56fd86d'),
             children: [
               {
                 propertyName: "isVisible",
-                helpText: "Controls the visibility of the widget",
-                label: "Visible",
+                helpText: $t('Basic.744416b58418c8ac'),
+                label: $t('Basic.e8251bfdfadda29b'),
                 controlType: "SWITCH",
                 customJSControl: "TABLE_COMPUTE_VALUE",
                 isJSConvertible: true,
@@ -276,8 +277,8 @@ export default {
               },
               {
                 propertyName: "isDisabled",
-                helpText: "Disables input to the widget",
-                label: "Disabled",
+                helpText: $t('Basic.df63cd7273940aea'),
+                label: $t('Basic.a69dfb27303e5385'),
                 controlType: "SWITCH",
                 customJSControl: "TABLE_COMPUTE_VALUE",
                 isJSConvertible: true,
@@ -296,12 +297,12 @@ export default {
         ],
         styleChildren: [
           {
-            sectionName: "Icon",
+            sectionName: $t('Basic.e8a6c720d431f3ce'),
             children: [
               {
                 propertyName: "iconName",
-                label: "Icon",
-                helpText: "Sets the icon to be used for a menu item",
+                label: $t('Basic.e8a6c720d431f3ce'),
+                helpText: $t('Basic.d8e322718a1c46f0'),
                 controlType: "ICON_SELECT",
                 isBindProperty: false,
                 isTriggerProperty: false,
@@ -310,8 +311,8 @@ export default {
               },
               {
                 propertyName: "iconAlign",
-                label: "Position",
-                helpText: "Sets the icon alignment of a menu item",
+                label: $t('Basic.d2bc4e0ebe579f06'),
+                helpText: $t('Basic.193044b070f7c761'),
                 controlType: "ICON_TABS",
                 defaultValue: "left",
                 fullWidth: false,
@@ -333,12 +334,12 @@ export default {
             ],
           },
           {
-            sectionName: "Color",
+            sectionName: $t('Basic.dada81cce58487cd'),
             children: [
               {
                 propertyName: "textColor",
-                helpText: "Sets the text color of a menu item",
-                label: "Text color",
+                helpText: $t('Basic.9021917d1b15cdc1'),
+                label: $t('Basic.48b76e603676d3b9'),
                 controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
                 customJSControl: "TABLE_COMPUTE_VALUE",
                 isJSConvertible: true,
@@ -357,8 +358,8 @@ export default {
               },
               {
                 propertyName: "backgroundColor",
-                helpText: "Sets the background color of a menu item",
-                label: "Background color",
+                helpText: $t('Basic.eb384576444cbde4'),
+                label: $t('Basic.a7952d6c7d3a6897'),
                 controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
                 customJSControl: "TABLE_COMPUTE_VALUE",
                 isJSConvertible: true,
@@ -377,8 +378,8 @@ export default {
               },
               {
                 propertyName: "iconColor",
-                helpText: "Sets the icon color of a menu item",
-                label: "Icon color",
+                helpText: $t('Basic.cce056eb23d64f65'),
+                label: $t('Basic.2392f61da422b130'),
                 controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
                 isBindProperty: false,
                 isTriggerProperty: false,
@@ -390,7 +391,7 @@ export default {
       },
     },
     {
-      helpText: "when the button is clicked",
+      helpText: $t('Basic.1b415c812e057e51'),
       propertyName: "onClick",
       label: "onClick",
       controlType: "ACTION_SELECTOR",

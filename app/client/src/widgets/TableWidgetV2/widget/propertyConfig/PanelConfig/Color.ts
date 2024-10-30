@@ -1,16 +1,17 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
 import { hideByColumnType } from "../../propertyUtils";
 
 export default {
-  sectionName: "Color",
+  sectionName: $t('Color.c9f78f5185765bc9'),
   children: [
     {
       propertyName: "buttonColor",
-      label: "Button color",
+      label: $t('Color.10257691b89298ee'),
       controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
-      helpText: "Changes the color of the button",
+      helpText: $t('Color.1ab123fb1d1423ce'),
       isJSConvertible: true,
       customJSControl: "TABLE_COMPUTE_VALUE",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
@@ -34,8 +35,8 @@ export default {
     },
     {
       propertyName: "menuColor",
-      helpText: "Sets the custom color preset based on the menu button variant",
-      label: "Button color",
+      helpText: $t('Color.b81f22e7b376e568'),
+      label: $t('Color.10257691b89298ee'),
       controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
       customJSControl: "TABLE_COMPUTE_VALUE",
       isJSConvertible: true,
@@ -58,8 +59,8 @@ export default {
     },
     {
       propertyName: "cellBackground",
-      label: "Cell Background",
-      helpText: "Changes the background color of the cell",
+      label: $t('Color.d638cb455a7e8044'),
+      helpText: $t('Color.c81c6445ad041d6b'),
       controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
       isJSConvertible: true,
       customJSControl: "TABLE_COMPUTE_VALUE",
@@ -78,8 +79,8 @@ export default {
     },
     {
       propertyName: "textColor",
-      label: "Text color",
-      helpText: "Controls the color of text in the column",
+      label: $t('Color.0c521e16b39ba390'),
+      helpText: $t('Color.6e69fa0bc59714f7'),
       controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
       isJSConvertible: true,
       customJSControl: "TABLE_COMPUTE_VALUE",

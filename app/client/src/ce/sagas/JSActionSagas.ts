@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   EvaluationReduxAction,
   ReduxAction,
@@ -125,7 +126,7 @@ export function* createJSCollectionSaga(
       });
 
       AppsmithConsole.info({
-        text: `JS Object created`,
+        text: $t('JSActionSagas.43287cfe15ede59d'),
         source: {
           type: ENTITY_TYPE.JSACTION,
           id: response.data.id,
@@ -155,7 +156,7 @@ export function* copyJSCollectionSaga(
     prefix: action.payload.name,
     parentEntityId: action.payload.destinationPageId,
     parentEntityKey: CreateNewActionKey.PAGE,
-    suffix: "Copy",
+    suffix: $t('JSActionSagas.c2df400804331a91'),
     startWithoutIndex: true,
   });
 
@@ -350,7 +351,7 @@ export function* deleteJSCollectionSaga(
 
       AppsmithConsole.info({
         logType: LOG_TYPE.ENTITY_DELETED,
-        text: "JS Object was deleted",
+        text: $t('JSActionSagas.42bf4a09da9cc526'),
         source: {
           type: ENTITY_TYPE.JSACTION,
           // @ts-expect-error: response.data is of type unknown

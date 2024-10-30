@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState } from "react";
 import { Wrapper, FieldWrapper, Loader } from "./StyledComponents";
 import {
@@ -55,7 +56,7 @@ export default function GitConfig() {
       setAreFormValuesUpdated(false);
       dispatch(updateGlobalGitConfigInit({ authorName, authorEmail }));
     } else {
-      toast.show("Please enter valid user details");
+      toast.show($t('GitConfig.c086f7c320b97aa2'));
     }
   };
 

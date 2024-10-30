@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { Component } from "react";
 import styled from "styled-components";
 import AppCrashImage from "assets/images/404-image.png";
@@ -43,7 +44,7 @@ class AppErrorBoundary extends Component {
     if (this.state.hasError) {
       return (
         <Wrapper>
-          <img alt="App crashed" src={AppCrashImage} />
+          <img alt={$t('AppErrorBoundry.d630d97bfd562e6e')} src={AppCrashImage} />
           <div>
             <p className="bold-text">Oops! Something went wrong</p>
             <p>

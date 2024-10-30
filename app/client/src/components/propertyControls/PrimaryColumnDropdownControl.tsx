@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { ControlProps } from "./BaseControl";
 import BaseControl from "./BaseControl";
@@ -64,7 +65,7 @@ class PrimaryColumnDropdownControl extends BaseControl<ControlProps> {
       <div className="w-full h-full" ref={this.containerRef}>
         <Select
           onSelect={this.onItemSelect}
-          placeholder="No selection."
+          placeholder={$t('PrimaryColumnDropdownControl.3f0ccee61d104f9f')}
           value={selected ? selected.value : undefined}
         >
           {options.map((option) => (

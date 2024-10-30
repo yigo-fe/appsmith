@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { BottomTab } from "components/editorComponents/EntityBottomTabs";
 import EntityBottomTabs from "components/editorComponents/EntityBottomTabs";
 import React, { useCallback, useEffect, useState } from "react";
@@ -247,7 +248,7 @@ function QueryDebuggerTabs({
   if (showSchema && currentActionConfig && currentActionConfig.datasource) {
     responseTabs.unshift({
       key: DEBUGGER_TAB_KEYS.SCHEMA_TAB,
-      title: "Schema",
+      title: $t('QueryDebuggerTabs.1689bba876cfca48'),
       panelComponent: (
         <Schema
           currentActionId={currentActionConfig.id}

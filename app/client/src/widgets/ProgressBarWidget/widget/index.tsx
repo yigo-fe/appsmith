@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import type { DerivedPropertiesMap } from "WidgetProvider/factory";
@@ -28,7 +29,7 @@ class ProgressBarWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Progress Bar", // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
+      name: $t('index.4cfe658655a9aae3'), // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
       hideCard: true,
       isDeprecated: true,
       replacement: "PROGRESS_WIDGET",
@@ -70,7 +71,7 @@ class ProgressBarWidget extends BaseWidget<
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
-      "!doc": "Progress bar is a simple UI widget used to show progress",
+      "!doc": $t('index.3b4fea51dea29c79'),
       "!url": "https://docs.appsmith.com/widget-reference/progressbar",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       progress: "number",
@@ -80,20 +81,20 @@ class ProgressBarWidget extends BaseWidget<
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.b598e7353192a357'),
         children: [
           {
-            helpText: "Sets progress bar type",
+            helpText: $t('index.19b5824b1a77de7f'),
             propertyName: "barType",
-            label: "Type",
+            label: $t('index.a59f2c91e0aab0d1'),
             controlType: "DROP_DOWN",
             options: [
               {
-                label: "Indeterminate",
+                label: $t('index.307406576790745f'),
                 value: BarType.INDETERMINATE,
               },
               {
-                label: "Determinate",
+                label: $t('index.c0c371fc41ac64fa'),
                 value: BarType.DETERMINATE,
               },
             ],
@@ -102,11 +103,11 @@ class ProgressBarWidget extends BaseWidget<
             isTriggerProperty: false,
           },
           {
-            helpText: "Provide progress value",
+            helpText: $t('index.a11b031aa2eb536f'),
             propertyName: "progress",
-            label: "Progress",
+            label: $t('index.189841c851303ba3'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter progress value",
+            placeholderText: $t('index.c9f9b1729ceb09c6'),
             isBindProperty: true,
             isTriggerProperty: false,
             defaultValue: 50,
@@ -116,11 +117,11 @@ class ProgressBarWidget extends BaseWidget<
             },
           },
           {
-            helpText: "Sets a number of steps",
+            helpText: $t('index.b0564c85365cfe45'),
             propertyName: "steps",
-            label: "Number of steps",
+            label: $t('index.e36451d8ef955ce1'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter number of steps",
+            placeholderText: $t('index.2750ec35be15adda'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -139,9 +140,9 @@ class ProgressBarWidget extends BaseWidget<
             dependencies: ["barType"],
           },
           {
-            helpText: "Controls the visibility of progress value",
+            helpText: $t('index.7dc2d3ec48da1dee'),
             propertyName: "showResult",
-            label: "Show result",
+            label: $t('index.cdd4029d14e6f2ff'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -149,9 +150,9 @@ class ProgressBarWidget extends BaseWidget<
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.0392611151f9c976'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.71a83d2e4feeebd6'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -161,12 +162,12 @@ class ProgressBarWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Styles",
+        sectionName: $t('index.d2237bedbd5a887f'),
         children: [
           {
-            helpText: "Controls the progress color of progress bar",
+            helpText: $t('index.9b5bf34de06ffebb'),
             propertyName: "fillColor",
-            label: "Fill color",
+            label: $t('index.1f779a4cb6094549'),
             controlType: "COLOR_PICKER",
             defaultColor: Colors.GREEN,
             isBindProperty: true,
@@ -181,9 +182,9 @@ class ProgressBarWidget extends BaseWidget<
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.3891fb2db135d57c'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.7b981259f7ba72fb'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isBindProperty: true,
             isJSConvertible: true,

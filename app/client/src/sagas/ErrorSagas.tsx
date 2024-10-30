@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get } from "lodash";
 import {
   type ReduxAction,
@@ -48,7 +49,7 @@ const shouldShowToast = (action: string) => {
  * @param action
  */
 export const getDefaultActionError = (action: string) =>
-  `Incurred an error when ${action}`;
+  $t('ErrorSagas.3295da4cb5efacdf', {action: action});
 
 // TODO: Fix this the next time the file is edited
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

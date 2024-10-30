@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { InputTypes } from "components/constants";
 import { ValidationTypes } from "constants/WidgetValidation";
 
@@ -6,12 +7,12 @@ import { ICONS } from "@appsmith/wds";
 
 export const propertyPaneStyleConfig = [
   {
-    sectionName: "Icon",
+    sectionName: $t('styleConfig.948d14b462ad099a'),
     children: [
       {
         propertyName: "iconName",
-        label: "Icon",
-        helpText: "Sets the icon to be used in input field",
+        label: $t('styleConfig.948d14b462ad099a'),
+        helpText: $t('styleConfig.cb3a4022812d6fb8'),
         controlType: "ICON_SELECT_V2",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -29,8 +30,8 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "iconAlign",
-        label: "Position",
-        helpText: "Sets the icon alignment of input field",
+        label: $t('styleConfig.17af79eff1109cb0'),
+        helpText: $t('styleConfig.767cbcf0d34b9794'),
         controlType: "ICON_TABS",
         defaultValue: "left",
         fullWidth: false,

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { RecaptchaTypes } from "components/constants";
 import { isAirgapped } from "ee/utils/airgapHelpers";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -8,12 +9,12 @@ import {
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Basic",
+    sectionName: $t('contentConfig.0f2d7dae955ef71a'),
     children: [
       {
         propertyName: "text",
-        label: "Label",
-        helpText: "Sets the label of the button",
+        label: $t('contentConfig.05ba9f6a9028696c'),
+        helpText: $t('contentConfig.48df1dfda7c8b25f'),
         controlType: "INPUT_TEXT",
         placeholderText: createMessage(BUTTON_WIDGET_DEFAULT_LABEL),
         isBindProperty: true,
@@ -21,7 +22,7 @@ export const propertyPaneContentConfig = [
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "when the button is clicked",
+        helpText: $t('contentConfig.6f901dd85b97096a'),
         propertyName: "onClick",
         label: "onClick",
         controlType: "ACTION_SELECTOR",
@@ -32,22 +33,22 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.6e21a44c9903c662'),
     children: [
       {
-        helpText: "Show helper text with button on hover",
+        helpText: $t('contentConfig.e2d45772b8986a18'),
         propertyName: "tooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.74a20c3e45ddc0f7'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Does the thing",
+        placeholderText: $t('contentConfig.8e4b9550687a008e'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
         propertyName: "isVisible",
-        label: "Visible",
-        helpText: "Controls the visibility of the widget",
+        label: $t('contentConfig.aa0a1e8682a39ad4'),
+        helpText: $t('contentConfig.f98dda068afe190c'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -56,9 +57,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "isDisabled",
-        label: "Disabled",
+        label: $t('contentConfig.8372c4c6d1ebd462'),
         controlType: "SWITCH",
-        helpText: "Disables clicks to this widget",
+        helpText: $t('contentConfig.0a405bd98671d743'),
         isJSConvertible: true,
         isBindProperty: true,
         isTriggerProperty: false,
@@ -66,9 +67,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.4ce4ce70c0db7635'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.e1b8cd46e77f80a9'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -78,7 +79,7 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Validation",
+    sectionName: $t('contentConfig.f1dfd8e9aa2424da'),
     hidden: isAirgapped,
     children: [
       {
@@ -86,7 +87,7 @@ export const propertyPaneContentConfig = [
         label: "Google reCAPTCHA key",
         helpText: "Sets Google reCAPTCHA site key for the button",
         controlType: "INPUT_TEXT",
-        placeholderText: "reCAPTCHA Key",
+        placeholderText: $t('contentConfig.963b69ab05bcfb3e'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -95,14 +96,14 @@ export const propertyPaneContentConfig = [
         propertyName: "recaptchaType",
         label: "Google reCAPTCHA version",
         controlType: "DROP_DOWN",
-        helpText: "Select reCAPTCHA version",
+        helpText: $t('contentConfig.0f965e2afb658955'),
         options: [
           {
-            label: "reCAPTCHA v3",
+            label: $t('contentConfig.df101b2adda22e09'),
             value: RecaptchaTypes.V3,
           },
           {
-            label: "reCAPTCHA v2",
+            label: $t('contentConfig.713ef3e9473994b2'),
             value: RecaptchaTypes.V2,
           },
         ],

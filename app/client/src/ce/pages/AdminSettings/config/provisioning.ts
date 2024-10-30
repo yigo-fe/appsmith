@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AdminConfigType } from "ee/pages/AdminSettings/config/types";
 import {
   CategoryType,
@@ -12,7 +13,7 @@ export const config: AdminConfigType = {
   categoryType: CategoryType.ACL,
   controlType: SettingTypes.PAGE,
   component: ProvisioningUpgradePage,
-  title: "Provisioning",
+  title: $t('provisioning.ce86b95ad702da20'),
   canSave: false,
   isFeatureEnabled: false,
   isEnterprise: true,

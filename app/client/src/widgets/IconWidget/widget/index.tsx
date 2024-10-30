@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { WidgetCallout } from "WidgetProvider/constants";
 import type { DerivedPropertiesMap } from "WidgetProvider/factory";
 import type { ExecutionResult } from "constants/AppsmithActionConstants/ActionConstants";
@@ -22,7 +23,7 @@ class IconWidget extends BaseWidget<IconWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Icon",
+      name: $t('index.67900c3e23fe7b0a'),
       iconSVG: IconSVG,
       hideCard: true,
       isDeprecated: true,
@@ -33,7 +34,7 @@ class IconWidget extends BaseWidget<IconWidgetProps, WidgetState> {
 
   static getDefaults() {
     return {
-      widgetName: "Icon",
+      widgetName: $t('index.67900c3e23fe7b0a'),
       rows: 4,
       columns: 4,
       version: 1,

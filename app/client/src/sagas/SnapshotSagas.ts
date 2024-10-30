@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   setLayoutConversionStateAction,
   updateSnapshotDetails,
@@ -135,7 +136,7 @@ function* restoreApplicationFromSnapshotSaga() {
     let error: Error = e;
 
     if (error) {
-      error.message = `Layout conversion error - while restoring snapshot: ${error.message}`;
+      error.message = $t('SnapshotSagas.7422bb2ca3691e93', {error_message: error.message});
     } else {
       error = new Error("Layout conversion error - while restoring snapshot");
     }

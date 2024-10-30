@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { IntentColors } from "constants/DefaultTheme";
@@ -387,7 +388,7 @@ class DatePickerComponent extends React.Component<
               minDate={minDate}
               onChange={this.onDateSelected}
               parseDate={this.parseDate}
-              placeholder={"Select Date"}
+              placeholder={$t('index.e59fb2d4f60c0a9f')}
               popoverProps={{
                 portalContainer:
                   document.getElementById(CANVAS_ART_BOARD) || undefined,

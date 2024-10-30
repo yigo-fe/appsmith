@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 
 export default {
@@ -18,20 +19,20 @@ export default {
 
   contentChildren: [
     {
-      sectionName: "Basic",
+      sectionName: $t('menuItemsConfig.32d41baeece4aafa'),
       children: [
         {
           propertyName: "label",
-          helpText: "Sets the label of a menu item",
-          label: "Label",
+          helpText: $t('menuItemsConfig.25e19ca3b7a9a8e2'),
+          label: $t('menuItemsConfig.37634f1a6d9a65cb'),
           controlType: "INPUT_TEXT",
-          placeholderText: "Download",
+          placeholderText: $t('menuItemsConfig.8cc515fee9816883'),
           isBindProperty: true,
           isTriggerProperty: false,
           validation: { type: ValidationTypes.TEXT },
         },
         {
-          helpText: "when the menu item is clicked",
+          helpText: $t('menuItemsConfig.f4bffd137df7297f'),
           propertyName: "onClick",
           label: "onClick",
           controlType: "ACTION_SELECTOR",
@@ -42,12 +43,12 @@ export default {
       ],
     },
     {
-      sectionName: "General",
+      sectionName: $t('menuItemsConfig.eb8a6c57234d0e72'),
       children: [
         {
           propertyName: "isVisible",
-          helpText: "Controls the visibility of the widget",
-          label: "Visible",
+          helpText: $t('menuItemsConfig.4cb3c0ea5853eb27'),
+          label: $t('menuItemsConfig.2effdf4952cd366a'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -56,8 +57,8 @@ export default {
         },
         {
           propertyName: "isDisabled",
-          helpText: "Disables input to the widget",
-          label: "Disabled",
+          helpText: $t('menuItemsConfig.a71c090a595f8eb3'),
+          label: $t('menuItemsConfig.2ec8343a441c8185'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -70,12 +71,12 @@ export default {
 
   styleChildren: [
     {
-      sectionName: "Icon",
+      sectionName: $t('menuItemsConfig.adc234a68dd3212e'),
       children: [
         {
           propertyName: "iconName",
-          label: "Icon",
-          helpText: "Sets the icon to be used for a menu item",
+          label: $t('menuItemsConfig.adc234a68dd3212e'),
+          helpText: $t('menuItemsConfig.a34ced99835e5648'),
           controlType: "ICON_SELECT",
           isBindProperty: false,
           isTriggerProperty: false,
@@ -83,8 +84,8 @@ export default {
         },
         {
           propertyName: "iconAlign",
-          label: "Position",
-          helpText: "Sets the icon alignment of a menu item",
+          label: $t('menuItemsConfig.eb38343f49b5954a'),
+          helpText: $t('menuItemsConfig.bf01a784d7e0727e'),
           controlType: "ICON_TABS",
           defaultValue: "left",
           fullWidth: false,
@@ -105,28 +106,28 @@ export default {
       ],
     },
     {
-      sectionName: "Color",
+      sectionName: $t('menuItemsConfig.703ddcd30f559e38'),
       children: [
         {
           propertyName: "iconColor",
-          helpText: "Sets the icon color of a menu item",
-          label: "Icon color",
+          helpText: $t('menuItemsConfig.ceeec52f9d73864c'),
+          label: $t('menuItemsConfig.eeb11cceb7add639'),
           controlType: "COLOR_PICKER",
           isBindProperty: false,
           isTriggerProperty: false,
         },
         {
           propertyName: "textColor",
-          helpText: "Sets the text color of a menu item",
-          label: "Text color",
+          helpText: $t('menuItemsConfig.c3444ec8b2c19ad8'),
+          label: $t('menuItemsConfig.8b128a07e8fbbf2f'),
           controlType: "COLOR_PICKER",
           isBindProperty: false,
           isTriggerProperty: false,
         },
         {
           propertyName: "backgroundColor",
-          helpText: "Sets the background color of a menu item",
-          label: "Background color",
+          helpText: $t('menuItemsConfig.c35a799b9879e319'),
+          label: $t('menuItemsConfig.538cfef8f567e035'),
           controlType: "COLOR_PICKER",
           isBindProperty: false,
           isTriggerProperty: false,

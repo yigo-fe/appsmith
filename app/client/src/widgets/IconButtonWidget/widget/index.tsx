@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { IconName } from "@blueprintjs/icons";
 import React from "react";
 
@@ -46,7 +47,7 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Icon button",
+      name: $t('index.628e27a1d029faae'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.BUTTONS],
@@ -112,12 +113,12 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Basic",
+        sectionName: $t('index.cf69625ffd9b877f'),
         children: [
           {
             propertyName: "iconName",
-            label: "Icon",
-            helpText: "Sets the icon to be used for the icon button",
+            label: $t('index.4a786261c4e565e0'),
+            helpText: $t('index.c993f48e86253b63'),
             controlType: "ICON_SELECT",
             defaultIconName: "plus",
             hideNoneIcon: true,
@@ -133,7 +134,7 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
             },
           },
           {
-            helpText: "when the button is clicked",
+            helpText: $t('index.6b1cd757fed030b0'),
             propertyName: "onClick",
             label: "onClick",
             controlType: "ACTION_SELECTOR",
@@ -144,22 +145,22 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.22e1b96b2368c639'),
         children: [
           {
-            helpText: "Show helper text with button on hover",
+            helpText: $t('index.0683ad0b48850174'),
             propertyName: "tooltip",
-            label: "Tooltip",
+            label: $t('index.83840dcd231c4e5e'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Add Input Field",
+            placeholderText: $t('index.d474c764eaed3ba3'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isVisible",
-            helpText: "Controls the visibility of the widget",
-            label: "Visible",
+            helpText: $t('index.52ddb66081d385f6'),
+            label: $t('index.3b8a9e07f63f9a96'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -168,8 +169,8 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            helpText: "Disables input to the widget",
-            label: "Disabled",
+            helpText: $t('index.06bbebbc4747bd0a'),
+            label: $t('index.d66a7dc27fcaeb67'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -178,9 +179,9 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.a885e1c82f6e6a8c'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.81d62cb74376cf01'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -195,26 +196,26 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.22e1b96b2368c639'),
         children: [
           {
             propertyName: "buttonVariant",
-            label: "Button variant",
+            label: $t('index.5c8f4f5fef06f767'),
             controlType: "ICON_TABS",
             defaultValue: ButtonVariantTypes.PRIMARY,
             fullWidth: true,
-            helpText: "Sets the variant of the icon button",
+            helpText: $t('index.bdaa164187c05649'),
             options: [
               {
-                label: "Primary",
+                label: $t('index.4751b934f9aec420'),
                 value: ButtonVariantTypes.PRIMARY,
               },
               {
-                label: "Secondary",
+                label: $t('index.994221155ae26b96'),
                 value: ButtonVariantTypes.SECONDARY,
               },
               {
-                label: "Tertiary",
+                label: $t('index.9965bfac1aba03e0'),
                 value: ButtonVariantTypes.TERTIARY,
               },
             ],
@@ -236,12 +237,12 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.d1ef36d13d4dc2b5'),
         children: [
           {
             propertyName: "buttonColor",
-            helpText: "Sets the style of the icon button",
-            label: "Button color",
+            helpText: $t('index.df2226b0bc6a806d'),
+            label: $t('index.39fe06696d1f8c39'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -256,13 +257,13 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.3bbcf27cae84346b'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.5a3ecbfc3185508a'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.e0456649e7b28e59'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -271,9 +272,9 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.b91ef33b0bfaf03e'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.3b482c849b059e6b'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -355,7 +356,7 @@ class IconButtonWidget extends BaseWidget<IconButtonWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Icon button widget is just an icon, along with all other button properties.",
+        $t('index.36267a6bd3d08c70'),
       "!url": "https://docs.appsmith.com/widget-reference/icon-button",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
     };

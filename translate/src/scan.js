@@ -7,10 +7,10 @@ const Translate = require('./translate')
 const Ignore = require('./ingore')
 const { strict } = require('assert')
 const translate = new Translate.translate({
-	appid: '20240827002134073',
-	secret: 'SQNwd8J6JQ79yma8hYR6'
-	// appid: '20240827002133754',
-	// secret: 'a9uorje9NSY8o0YnS5HH'
+	// appid: '20240827002134073',
+	// secret: 'SQNwd8J6JQ79yma8hYR6'
+	appid: '20240827002133754',
+	secret: 'a9uorje9NSY8o0YnS5HH'
 	// appid: '20240806002117333',
 	// secret: 'Ls8PLVdvGkar7cK8jiw8'
 })

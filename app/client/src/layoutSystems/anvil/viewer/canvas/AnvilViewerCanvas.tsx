@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useMemo } from "react";
 import styles from "./styles.module.css";
 import type { BaseWidgetProps } from "widgets/BaseWidgetHOC/withBaseWidgetHOC";
@@ -28,7 +29,7 @@ const RootStyled = styled.div<{
 }>`
   max-width: ${({ maxWidth }) =>
     maxWidth ? `${appMaxWidthToCSSValue(maxWidth)}` : "auto"};
-  margin: ${({ maxWidth }) => (maxWidth ? "0 auto" : "inherit")};
+  margin: ${({ maxWidth }) => (maxWidth ? $t('AnvilViewerCanvas.b4db8ede91a3cc20') : "inherit")};
 `;
 
 export const AnvilViewerCanvas = React.forwardRef(

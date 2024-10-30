@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get } from "lodash";
 import type { FlattenedWidgetProps } from "WidgetProvider/constants";
 import { BlueprintOperationTypes } from "WidgetProvider/constants";
@@ -25,23 +26,23 @@ import { LayoutSystemTypes } from "layoutSystems/types";
 const DEFAULT_LIST_DATA = [
   {
     id: "001",
-    name: "Blue",
+    name: $t('defaultProps.c8e27d52946563ec'),
     img: getAssetUrl(`${ASSETS_CDN_URL}/widgets/default.png`),
   },
   {
     id: "002",
-    name: "Green",
+    name: $t('defaultProps.9bc1c2254ca1699f'),
     img: getAssetUrl(`${ASSETS_CDN_URL}/widgets/default.png`),
   },
   {
     id: "003",
-    name: "Red",
+    name: $t('defaultProps.b6855af4c82af57b'),
     img: getAssetUrl(`${ASSETS_CDN_URL}/widgets/default.png`),
   },
 ];
 
 const LIST_WIDGET_NESTING_ERROR =
-  "Cannot have more than 3 levels of nesting in the list widget";
+  $t('defaultProps.83816e49d4040bfa');
 
 export default {
   backgroundColor: "transparent",

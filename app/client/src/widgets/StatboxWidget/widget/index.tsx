@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ContainerWidget } from "widgets/ContainerWidget/widget";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { SetterConfig, Stylesheet } from "entities/AppTheming";
@@ -38,7 +39,7 @@ class StatboxWidget extends ContainerWidget {
 
   static getConfig() {
     return {
-      name: "Stats Box",
+      name: $t('index.132a033c0146aec2'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.DISPLAY],
@@ -107,7 +108,7 @@ class StatboxWidget extends ContainerWidget {
                     },
                     position: { top: 0, left: 1 },
                     props: {
-                      text: "Page Views",
+                      text: $t('index.a970ea3a75c9d843'),
                       fontSize: "0.875rem",
                       textColor: "#999999",
                       version: 1,
@@ -321,12 +322,12 @@ class StatboxWidget extends ContainerWidget {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.3626a40fa1376ea5'),
         children: [
           {
             propertyName: "isVisible",
-            helpText: "Controls the visibility of the widget",
-            label: "Visible",
+            helpText: $t('index.92b6ea33e9f29ab8'),
+            label: $t('index.28a7b1b19277088f'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -335,17 +336,17 @@ class StatboxWidget extends ContainerWidget {
           },
           {
             propertyName: "shouldScrollContents",
-            helpText: "Enables scrolling for content inside the widget",
-            label: "Scroll contents",
+            helpText: $t('index.3974bf88d59fe6cd'),
+            label: $t('index.7024aeca401c3c36'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.98f530552fad0730'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.be95904a00c6c28a'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -371,13 +372,13 @@ class StatboxWidget extends ContainerWidget {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Color",
+        sectionName: $t('index.032d09d6fb3d1089'),
         children: [
           {
             propertyName: "backgroundColor",
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.cdccc63ef0d27bb8'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
-            label: "Background color",
+            label: $t('index.158bdbe1147448a8'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -386,9 +387,9 @@ class StatboxWidget extends ContainerWidget {
           },
           {
             propertyName: "borderColor",
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.cdccc63ef0d27bb8'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
-            label: "Border color",
+            label: $t('index.6ca2680dd29eb2ff'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -398,13 +399,13 @@ class StatboxWidget extends ContainerWidget {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.c8f1128d4f35885f'),
         children: [
           {
             propertyName: "borderWidth",
-            helpText: "Enter value for border width",
-            label: "Border width",
-            placeholderText: "Enter value in px",
+            helpText: $t('index.56a9111604f1fd32'),
+            label: $t('index.14ac72c24caea62f'),
+            placeholderText: $t('index.83e0e029c6dedc57'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -413,9 +414,9 @@ class StatboxWidget extends ContainerWidget {
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.688cac538c2b525f'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.e6d3f84bc37e6e1a'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -424,9 +425,9 @@ class StatboxWidget extends ContainerWidget {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.86f1d15bdaec6bc7'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.1b8f45f45f2fa111'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -447,7 +448,7 @@ class StatboxWidget extends ContainerWidget {
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
-      "!doc": "Show and highlight stats from your data sources",
+      "!doc": $t('index.4f6025443ed14485'),
       "!url": "https://docs.appsmith.com/widget-reference/stat-box",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
     };

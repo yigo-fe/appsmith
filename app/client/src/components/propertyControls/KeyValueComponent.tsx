@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import { ControlWrapper, InputGroup } from "./StyledControls";
@@ -147,7 +148,7 @@ export function KeyValueComponent(props: KeyValueComponentProps) {
     pairs = Array.isArray(pairs) ? pairs.slice() : [];
     pairs.push({
       label: getNextEntityName(
-        "Option",
+        $t('KeyValueComponent.ca5382b380108239'),
         // TODO: Fix this the next time the file is edited
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         pairs.map((pair: any) => pair.label),
@@ -163,7 +164,7 @@ export function KeyValueComponent(props: KeyValueComponentProps) {
 
     updatedRenderPairs.push({
       label: getNextEntityName(
-        "Option",
+        $t('KeyValueComponent.ca5382b380108239'),
         // TODO: Fix this the next time the file is edited
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         renderPairs.map((pair: any) => pair.label),
@@ -206,7 +207,7 @@ export function KeyValueComponent(props: KeyValueComponentProps) {
                 updateKey(index, value);
               }}
               onFocus={onInputFocus}
-              placeholder={"Name"}
+              placeholder={$t('KeyValueComponent.0398417befefb7bf')}
               // @ts-expect-error fix this the next time the file is edited
               value={pair.label}
             />
@@ -218,7 +219,7 @@ export function KeyValueComponent(props: KeyValueComponentProps) {
                 updateValue(index, value);
               }}
               onFocus={onInputFocus}
-              placeholder={"Value"}
+              placeholder={$t('KeyValueComponent.eda178c4a59db010')}
               value={pair.value}
             />
             <StyledBox />
@@ -246,7 +247,7 @@ export function KeyValueComponent(props: KeyValueComponentProps) {
           size="sm"
           startIcon="plus"
         >
-          {props.addLabel || "Add option"}
+          {props.addLabel || $t('KeyValueComponent.c783a6b7f6493983')}
         </Button>
       </div>
     </>

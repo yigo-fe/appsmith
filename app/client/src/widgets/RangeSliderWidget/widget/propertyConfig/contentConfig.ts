@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { LabelPosition } from "components/constants";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -15,12 +16,12 @@ import {
 
 export default [
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.473e8a1cc6853b53'),
     children: [
       {
         propertyName: "min",
-        helpText: "Sets the min value of the widget",
-        label: "Min. value",
+        helpText: $t('contentConfig.064a1a5ab2308927'),
+        label: $t('contentConfig.3fb6deb70ddf60ae'),
         controlType: "INPUT_TEXT",
         placeholderText: "0",
         isBindProperty: true,
@@ -39,8 +40,8 @@ export default [
       },
       {
         propertyName: "max",
-        helpText: "Sets the max value of the widget",
-        label: "Max. value",
+        helpText: $t('contentConfig.0e967a7dd623634e'),
+        label: $t('contentConfig.8b99dc17522a554f'),
         controlType: "INPUT_TEXT",
         placeholderText: "100",
         isBindProperty: true,
@@ -59,8 +60,8 @@ export default [
       },
       {
         propertyName: "step",
-        helpText: "The amount by which the slider value should increase",
-        label: "Step size",
+        helpText: $t('contentConfig.fdc5bd420e78e1f6'),
+        label: $t('contentConfig.1c50093f23cd9d25'),
         controlType: "INPUT_TEXT",
         placeholderText: "10",
         isBindProperty: true,
@@ -79,8 +80,8 @@ export default [
       },
       {
         propertyName: "minRange",
-        helpText: "Sets the min range of the widget",
-        label: "Min. range",
+        helpText: $t('contentConfig.9e8163bd69ef4a16'),
+        label: $t('contentConfig.36e35f5ce193f0ed'),
         controlType: "INPUT_TEXT",
         placeholderText: "10",
         isBindProperty: true,
@@ -99,10 +100,10 @@ export default [
       },
       {
         propertyName: "defaultStartValue",
-        helpText: "Sets the start value of the widget",
-        label: "Default start value",
+        helpText: $t('contentConfig.76ed383dcb9e693f'),
+        label: $t('contentConfig.417403c542e6e94e'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Start Value:",
+        placeholderText: $t('contentConfig.f8c74ac2bf3935a6'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: {
@@ -119,10 +120,10 @@ export default [
       },
       {
         propertyName: "defaultEndValue",
-        helpText: "Sets the end value of the widget",
-        label: "Default end value",
+        helpText: $t('contentConfig.44860bc55211bf70'),
+        label: $t('contentConfig.0d0af68a03e27eba'),
         controlType: "INPUT_TEXT",
-        placeholderText: "End Value:",
+        placeholderText: $t('contentConfig.42d1563eaaa7aae2'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: {
@@ -140,28 +141,28 @@ export default [
     ],
   },
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.8551677289918d9c'),
     children: [
       {
-        helpText: "Sets the label text of the widget",
+        helpText: $t('contentConfig.3e6ad2d990927a86'),
         propertyName: "labelText",
-        label: "Text",
+        label: $t('contentConfig.64f916387c1dc283'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Enter label text",
+        placeholderText: $t('contentConfig.391c46a400348bb5'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Sets the label position of the widget",
+        helpText: $t('contentConfig.3c0e7b358212563f'),
         propertyName: "labelPosition",
-        label: "Position",
+        label: $t('contentConfig.16f0c25738009f16'),
         controlType: "ICON_TABS",
         fullWidth: true,
         hidden: isAutoLayout,
         options: [
-          { label: "Left", value: LabelPosition.Left },
-          { label: "Top", value: LabelPosition.Top },
+          { label: $t('contentConfig.1d1a0849a92f85a3'), value: LabelPosition.Left },
+          { label: $t('contentConfig.2986d37b1e508067'), value: LabelPosition.Top },
         ],
         defaultValue: LabelPosition.Left,
         isBindProperty: false,
@@ -169,9 +170,9 @@ export default [
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Sets the label alignment of the widget",
+        helpText: $t('contentConfig.600f05bd08dd9293'),
         propertyName: "labelAlignment",
-        label: "Alignment",
+        label: $t('contentConfig.614818e8d5d63657'),
         controlType: "LABEL_ALIGNMENT_OPTIONS",
         fullWidth: false,
         options: [
@@ -192,9 +193,9 @@ export default [
         dependencies: ["labelPosition"],
       },
       {
-        helpText: "Sets the label width of the widget as the number of columns",
+        helpText: $t('contentConfig.2794c853f07309f4'),
         propertyName: "labelWidth",
-        label: "Width (in columns)",
+        label: $t('contentConfig.b529c97e02033877'),
         controlType: "NUMERIC_INPUT",
         isJSConvertible: true,
         isBindProperty: true,
@@ -213,22 +214,22 @@ export default [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.009784ff435e5595'),
     children: [
       {
-        helpText: "Show help text or details about current input",
+        helpText: $t('contentConfig.534b472af7fea27e'),
         propertyName: "labelTooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.f86c2c38ec8f7bc2'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Value must be atleast 6 chars",
+        placeholderText: $t('contentConfig.31216dc825d3828d'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
         propertyName: "showMarksLabel",
-        helpText: "Show the marks label below the slider",
-        label: "Show marks",
+        helpText: $t('contentConfig.4acbf40dabfac817'),
+        label: $t('contentConfig.9c1d6e009351bda3'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -236,9 +237,9 @@ export default [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Display Value Marks",
+        helpText: $t('contentConfig.098fcb61dd11b927'),
         propertyName: "marks",
-        label: "Marks",
+        label: $t('contentConfig.4fde5a45e3bea7ae'),
         controlType: "INPUT_TEXT",
         placeholderText: '[{ "value": "20", "label": "20%" }]',
         isBindProperty: true,
@@ -278,8 +279,8 @@ export default [
       },
       {
         propertyName: "isVisible",
-        helpText: "Controls the visibility of the widget",
-        label: "Visible",
+        helpText: $t('contentConfig.710137ed989cbfa5'),
+        label: $t('contentConfig.27fa310f029c9f83'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -288,9 +289,9 @@ export default [
       },
       {
         propertyName: "isDisabled",
-        label: "Disabled",
+        label: $t('contentConfig.8277350b2931ec4b'),
         controlType: "SWITCH",
-        helpText: "Disables clicks to this widget",
+        helpText: $t('contentConfig.c8035168dbed2ac9'),
         isJSConvertible: true,
         isBindProperty: true,
         isTriggerProperty: false,
@@ -298,9 +299,9 @@ export default [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.f9d9141e729c6946'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.222806b544f3fdef'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -309,8 +310,8 @@ export default [
       },
       {
         propertyName: "tooltipAlwaysOn",
-        helpText: "Keep showing the label with value",
-        label: "Show value always",
+        helpText: $t('contentConfig.39214150c2ed9119'),
+        label: $t('contentConfig.a92e314db38466d2'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -320,10 +321,10 @@ export default [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.5b7c4286911c055e'),
     children: [
       {
-        helpText: "when a user changes the slider value",
+        helpText: $t('contentConfig.f9f0aabea80ca3c8'),
         propertyName: "onStartValueChange",
         label: "onStartValueChange",
         controlType: "ACTION_SELECTOR",
@@ -332,7 +333,7 @@ export default [
         isTriggerProperty: true,
       },
       {
-        helpText: "when a user changes the slider value",
+        helpText: $t('contentConfig.f9f0aabea80ca3c8'),
         propertyName: "onEndValueChange",
         label: "onEndValueChange",
         controlType: "ACTION_SELECTOR",

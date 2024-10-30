@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState } from "react";
 import PageWrapper from "pages/common/PageWrapper";
 import styled from "styled-components";
@@ -30,7 +31,7 @@ function UserProfile() {
   const tabs = [
     {
       key: "general",
-      title: "General",
+      title: $t('index.3566d5bb9a0ac368'),
       panelComponent: <General />,
       icon: "general",
     },
@@ -38,7 +39,7 @@ function UserProfile() {
 
   tabs.push({
     key: "gitConfig",
-    title: "Git user config",
+    title: $t('index.584edb0a6b975e01'),
     panelComponent: <GitConfig />,
     icon: "git-branch",
   });
@@ -55,7 +56,7 @@ function UserProfile() {
   }, []);
 
   return (
-    <PageWrapper displayName={"Profile"}>
+    <PageWrapper displayName={$t('index.76df5a7d05aaf09d')}>
       <ProfileWrapper>
         <BackButton />
         <Tabs defaultValue={selectedTab} onValueChange={setSelectedTab}>

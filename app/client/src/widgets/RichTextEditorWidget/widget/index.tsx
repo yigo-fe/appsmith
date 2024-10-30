@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { LabelPosition } from "components/constants";
 import Skeleton from "components/utils/Skeleton";
@@ -56,7 +57,7 @@ class RichTextEditorWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Rich Text Editor",
+      name: $t('index.95f0728c7c393476'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.INPUTS],
@@ -87,7 +88,7 @@ class RichTextEditorWidget extends BaseWidget<
       widgetName: "RichTextEditor",
       isDefaultClickDisabled: true,
       inputType: "html",
-      labelText: "Label",
+      labelText: $t('index.97cda723ff22eab9'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
@@ -153,13 +154,13 @@ class RichTextEditorWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.a0d3eebf496ff688'),
         children: [
           {
             propertyName: "inputType",
             helpText:
-              "Sets the input type of the default text property in widget.",
-            label: "Input Type",
+              $t('index.19173136c0cb4e21'),
+            label: $t('index.f85add42436af8a0'),
             controlType: "ICON_TABS",
             defaultValue: "html",
             fullWidth: true,
@@ -179,8 +180,8 @@ class RichTextEditorWidget extends BaseWidget<
           {
             propertyName: "defaultText",
             helpText:
-              "Sets the default text of the widget. The text is updated if the default text changes",
-            label: "Default value",
+              $t('index.afa8d381a582db10'),
+            label: $t('index.1a5309febf957a20'),
             controlType: "INPUT_TEXT",
             placeholderText: "<b>Hello World</b>",
             isBindProperty: true,
@@ -190,28 +191,28 @@ class RichTextEditorWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.97cda723ff22eab9'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.b63994ec9d2a429b'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.94ed9a533ac1f6ec'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.689d258c0ca7da0b'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.7d22d36d400da269'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.aa08f4236d4aa521'),
             controlType: "ICON_TABS",
             fullWidth: true,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.343299eeb92a3b24'), value: LabelPosition.Auto },
+              { label: $t('index.5020b10b72d0a66a'), value: LabelPosition.Left },
+              { label: $t('index.383835904a26e2ad'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -219,9 +220,9 @@ class RichTextEditorWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.d1ddef6a16b27cd8'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.771131e3190cb0e2'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -243,9 +244,9 @@ class RichTextEditorWidget extends BaseWidget<
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.ade1d9e9b058f888'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.6822403e20e1765c'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -264,12 +265,12 @@ class RichTextEditorWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.e6372dc329d99df1'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.ce8b0d8f24195ba7'),
+            helpText: $t('index.e55c127aacc8ee47'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -279,22 +280,22 @@ class RichTextEditorWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.ec92b33710b1c82f'),
         children: [
           {
-            helpText: "Show help text or details about current input",
+            helpText: $t('index.4794202de2525ac4'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.47548c9bbbbaff2d'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Value must be atleast 6 chars",
+            placeholderText: $t('index.ec94914fd86084c5'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.734f65dfb49d281f'),
+            helpText: $t('index.f34008cab48678fc'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -303,8 +304,8 @@ class RichTextEditorWidget extends BaseWidget<
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.b3819e0d3fe6430b'),
+            helpText: $t('index.336df2c9c7e04751'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -313,9 +314,9 @@ class RichTextEditorWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.7535ec15ed216f0f'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.2c5122681661bf06'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -324,8 +325,8 @@ class RichTextEditorWidget extends BaseWidget<
           },
           {
             propertyName: "isToolbarHidden",
-            label: "Hide toolbar",
-            helpText: "Controls the visibility of the toolbar",
+            label: $t('index.c2302616a286b115'),
+            helpText: $t('index.424729ffa95aabd0'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -336,10 +337,10 @@ class RichTextEditorWidget extends BaseWidget<
       },
 
       {
-        sectionName: "Events",
+        sectionName: $t('index.3bcc16bd47ac4689'),
         children: [
           {
-            helpText: "when the text is changed",
+            helpText: $t('index.fee4117dd05c5867'),
             propertyName: "onTextChange",
             label: "onTextChanged",
             controlType: "ACTION_SELECTOR",
@@ -355,12 +356,12 @@ class RichTextEditorWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.1f1597f6406c10d4'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.93490d791972f956'),
+            helpText: $t('index.1f43dd4522b6bd1c'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -369,8 +370,8 @@ class RichTextEditorWidget extends BaseWidget<
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.13d917524140d40d'),
+            helpText: $t('index.f72aa04eb779e26f'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             options: [
@@ -410,8 +411,8 @@ class RichTextEditorWidget extends BaseWidget<
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.b93160ed5af32934'),
+            helpText: $t('index.0633807cf5c39ef4'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -431,13 +432,13 @@ class RichTextEditorWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.f9d3148bc4e1c33f'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.6a8d7b7e0ebba86d'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.990dffbea62aabcf'),
             controlType: "BORDER_RADIUS_OPTIONS",
 
             isJSConvertible: true,
@@ -447,9 +448,9 @@ class RichTextEditorWidget extends BaseWidget<
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.457023fee06f205e'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.bd786c09d8347867'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

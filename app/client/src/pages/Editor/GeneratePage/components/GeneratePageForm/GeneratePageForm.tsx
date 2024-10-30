@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
@@ -648,15 +649,15 @@ function GeneratePageForm() {
 
   if (!fetchingDatasourceConfigs) {
     if (datasourceTableOptions.length === 0) {
-      tableDropdownErrorMsg = `Couldn't find any ${pluginField.TABLE}, Please select another datasource`;
+      tableDropdownErrorMsg = $t('GeneratePageForm.e35493e453a51a88', {pluginField_TABLE: pluginField.TABLE});
     }
 
     if (fetchingDatasourceConfigError) {
-      tableDropdownErrorMsg = `Failed fetching datasource structure, Please check your datasource configuration`;
+      tableDropdownErrorMsg = $t('GeneratePageForm.b40c422fccd9246a');
     }
 
     if (isSelectedTableEmpty) {
-      tableDropdownErrorMsg = `Couldn't find any columns, Please select table with columns.`;
+      tableDropdownErrorMsg = $t('GeneratePageForm.dddafb3ac8c60d38');
     }
   }
 

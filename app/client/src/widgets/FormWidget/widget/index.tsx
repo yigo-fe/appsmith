@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type React from "react";
 import _, { get, some } from "lodash";
 import equal from "fast-deep-equal/es6";
@@ -41,7 +42,7 @@ class FormWidget extends ContainerWidget {
 
   static getConfig() {
     return {
-      name: "Form",
+      name: $t('index.1e29c9645bfac8a4'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.LAYOUT],
@@ -83,7 +84,7 @@ class FormWidget extends ContainerWidget {
       borderColor: Colors.GREY_5,
       borderWidth: "1",
       animateLoading: true,
-      widgetName: "Form",
+      widgetName: $t('index.1e29c9645bfac8a4'),
       backgroundColor: Colors.WHITE,
       children: [],
       positioning: Positioning.Fixed,
@@ -108,7 +109,7 @@ class FormWidget extends ContainerWidget {
                     },
                     position: { top: 1, left: 1.5 },
                     props: {
-                      text: "Form",
+                      text: $t('index.1e29c9645bfac8a4'),
                       fontSize: "1.25rem",
                       version: 1,
                     },
@@ -124,7 +125,7 @@ class FormWidget extends ContainerWidget {
                       left: 46,
                     },
                     props: {
-                      text: "Submit",
+                      text: $t('index.92348c18059e3fc9'),
                       buttonVariant: ButtonVariantTypes.PRIMARY,
                       disabledWhenInvalid: true,
                       resetFormOnClick: true,
@@ -143,7 +144,7 @@ class FormWidget extends ContainerWidget {
                       left: 30,
                     },
                     props: {
-                      text: "Reset",
+                      text: $t('index.00a9ffd329d8bfff'),
                       buttonVariant: ButtonVariantTypes.SECONDARY,
                       disabledWhenInvalid: false,
                       resetFormOnClick: true,
@@ -456,7 +457,7 @@ class FormWidget extends ContainerWidget {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return (widget: FormWidgetProps, extraDefsToDefine?: ExtraDef) => ({
       "!doc":
-        "Form is used to capture a set of data inputs from a user. Forms are used specifically because they reset the data inputs when a form is submitted and disable submission for invalid data inputs",
+        $t('index.63ff0e4a0c760a8d'),
       "!url": "https://docs.appsmith.com/widget-reference/form",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       data: generateTypeDef(widget.data, extraDefsToDefine),

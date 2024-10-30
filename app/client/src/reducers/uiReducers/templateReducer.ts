@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { createReducer } from "utils/ReducerUtils";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import {
@@ -17,7 +18,7 @@ const initialState: TemplatesReduxState = {
   templates: [],
   similarTemplates: [],
   filters: {
-    functions: ["All"],
+    functions: [$t('templateReducer.0011d699e2b24897')],
   },
   allFilters: {
     functions: [],

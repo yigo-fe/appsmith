@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useCallback } from "react";
 import styled from "styled-components";
 import { Classes } from "@blueprintjs/core";
@@ -246,7 +247,7 @@ function TableFilterPaneContent(props: TableFilterProps) {
               intent="primary"
               onClick={addFilter}
               size="small"
-              text="Add Filter"
+              text=$t('TableFilterPaneContent.279a2b0dab941e64')
             />
             <ButtonActionsWrapper>
               <Button

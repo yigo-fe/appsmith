@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import {
   Icon,
@@ -27,7 +28,7 @@ export default function HelpDropdown(props: DebuggerLog) {
           items={[
             {
               startIcon: <Icon name="book" size="md" />,
-              title: "Documentation",
+              title: $t('helpDropdown.941c0cbcfa69ff6a'),
               onClick: () => {
                 window.open(CUSTOM_WIDGET_DOC_URL, "_blank");
               },

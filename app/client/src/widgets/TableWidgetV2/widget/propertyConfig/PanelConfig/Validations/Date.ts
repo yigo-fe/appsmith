@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
 import {
@@ -8,8 +9,8 @@ import {
 export default [
   {
     propertyName: "validation.minDate",
-    helpText: "Sets the minimum allowed date",
-    label: "Min Date",
+    helpText: $t('Date.ae268f3330c0ec1c'),
+    label: $t('Date.36645962d6e0d8fc'),
     controlType: "DATE_PICKER",
     placeholderText: "1",
     isBindProperty: true,
@@ -23,8 +24,8 @@ export default [
   },
   {
     propertyName: "validation.maxDate",
-    helpText: "Sets the maximum allowed value",
-    label: "Max Date",
+    helpText: $t('Date.b556f4d417807299'),
+    label: $t('Date.da09193390b5cd1a'),
     controlType: "DATE_PICKER",
     placeholderText: "100",
     isBindProperty: true,

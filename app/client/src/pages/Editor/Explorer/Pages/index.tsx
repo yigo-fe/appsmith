@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, {
   useCallback,
   useEffect,
@@ -73,7 +74,7 @@ function Pages() {
 
   const createPageCallback = useCallback(() => {
     const name = getNextEntityName(
-      "Page",
+      $t('index.f85d3222df2ea9a1'),
       pages.map((page: Page) => page.pageName),
     );
 
@@ -129,13 +130,13 @@ function Pages() {
             openMenu={isMenuOpen}
           />
         }
-        entityId="Pages"
+        entityId=$t('index.01ffde0c816de38d')
         entitySize={ENTITY_HEIGHT * pages.length}
         icon={""}
         isDefaultExpanded={
           isPagesOpen === null || isPagesOpen === undefined ? true : isPagesOpen
         }
-        name="Pages"
+        name=$t('index.01ffde0c816de38d')
         onClickPreRightIcon={onPin}
         onToggle={onPageToggle}
         searchKeyword={""}
@@ -152,6 +153,6 @@ function Pages() {
   );
 }
 
-Pages.displayName = "Pages";
+Pages.displayName = $t('index.01ffde0c816de38d');
 
 export default React.memo(Pages);

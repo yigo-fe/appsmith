@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ContentBox } from "pages/AdminSettings/components";
 import React from "react";
 
@@ -13,12 +14,12 @@ const LoginPreview = (props: PreviewsProps) => {
       style={{
         backgroundColor: shades?.background,
       }}
-      title="Login screen"
+      title=$t('LoginPreview.70ee9173d700790e')
     >
       <ContentBox className="w-7/12 bg-white border-l border-r border-t h-4/5">
         <div className="flex flex-col gap-3 pt-6 px-9">
           <img
-            alt="Logo"
+            alt={$t('LoginPreview.eb4d44041b335a50')}
             className="block h-4 m-auto t--branding-logo"
             src={logo as string}
           />

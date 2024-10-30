@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { noop } from "lodash";
 
@@ -14,13 +15,13 @@ interface ResourcesLoaderProps {
 
 const DEFAULT_BACKGROUND_COLOR = "#9747FF1A";
 const DEFAULT_ICON = "book";
-const DEAFULT_RESOURCES = [{ id: "default", name: "Default Resource" }];
+const DEAFULT_RESOURCES = [{ id: "default", name: $t('ResourceListLoader.cbc2cf85275641b2') }];
 
 function ResourceListLoader({ isMobile, resources }: ResourcesLoaderProps) {
   const resourcesToUse = resources?.length ? resources : DEAFULT_RESOURCES;
 
   return (
-    <CardList isLoading isMobile={isMobile} title="Apps">
+    <CardList isLoading isMobile={isMobile} title={$t('ResourceListLoader.66f0ddbe9fd6ad4f')}>
       {/* TODO: Fix this the next time the file is edited */}
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       {resourcesToUse.map((resource: any) => {

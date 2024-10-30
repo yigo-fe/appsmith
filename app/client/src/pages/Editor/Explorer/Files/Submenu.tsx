@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import type { ActionOperation } from "components/editorComponents/GlobalSearch/utils";
@@ -96,7 +97,7 @@ export function ExplorerMenuContent({
         autoFocus
         data-testId="t--search-file-operation"
         onChange={onChange}
-        placeholder="Search datasources"
+        placeholder={$t('Submenu.b9cb608b16a32e74')}
         value={query}
       />
       <div className="ops-container">

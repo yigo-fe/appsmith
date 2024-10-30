@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import Pagination from "rc-pagination";
 import styled, { css } from "styled-components";
@@ -7,16 +8,16 @@ import { Icon, IconSize } from "@design-system/widgets-old";
 const locale = {
   // Options.jsx
   items_per_page: "/ page",
-  jump_to: "Go to",
+  jump_to: $t('ListPagination.460ce39248575113'),
   jump_to_confirm: "confirm",
   page: "",
   // Pagination.jsx
-  prev_page: "Previous Page",
-  next_page: "Next Page",
-  prev_5: "Previous 5 Pages",
-  next_5: "Next 5 Pages",
-  prev_3: "Previous 3 Pages",
-  next_3: "Next 3 Pages",
+  prev_page: $t('ListPagination.a5e22a089055557e'),
+  next_page: $t('ListPagination.ed3909d7bccd1e72'),
+  prev_5: $t('ListPagination.32434f26b3425dcc'),
+  next_5: $t('ListPagination.f2e699052c9125c9'),
+  prev_3: $t('ListPagination.acd54c41e407eda7'),
+  next_3: $t('ListPagination.a2bc3571cf6641ce'),
 };
 
 const paginatorCss = css<{
@@ -400,14 +401,14 @@ function ListPagination(props: ListPaginationProps) {
       disabled={props.disabled}
       locale={locale}
       nextIcon={() => (
-        <button aria-label="next page" className="rc-pagination-item-link">
+        <button aria-label={$t('ListPagination.c4ce881a75d4e300')} className="rc-pagination-item-link">
           <Icon name="right-arrow-2" size={IconSize.XXL} />
         </button>
       )}
       onChange={props.onChange}
       pageSize={props.perPage}
       prevIcon={() => (
-        <button aria-label="prev page" className="rc-pagination-item-link">
+        <button aria-label={$t('ListPagination.6170802fb3427cd8')} className="rc-pagination-item-link">
           <Icon name="left-arrow-2" size={IconSize.XXL} />
         </button>
       )}
@@ -436,10 +437,10 @@ export function ServerSideListPagination(props: any) {
         className={`t--list-widget-prev-page rc-pagination-prev ${
           props.pageNo === 1 && "rc-pagination-disabled"
         }`}
-        title="Previous Page"
+        title=$t('ListPagination.a5e22a089055557e')
       >
         <button
-          aria-label="prev page"
+          aria-label=$t('ListPagination.6170802fb3427cd8')
           className="rc-pagination-item-link"
           onClick={() => {
             if (props.pageNo > 1) props.prevPageClick();
@@ -457,10 +458,10 @@ export function ServerSideListPagination(props: any) {
       </li>
       <li
         className="t--list-widget-next-page rc-pagination-next"
-        title="Next Page"
+        title={$t('ListPagination.ed3909d7bccd1e72')}
       >
         <button
-          aria-label="next page"
+          aria-label={$t('ListPagination.c4ce881a75d4e300')}
           className="rc-pagination-item-link"
           onClick={() => {
             props.nextPageClick();

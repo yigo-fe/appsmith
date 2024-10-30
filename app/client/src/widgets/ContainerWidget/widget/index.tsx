@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { MouseEventHandler } from "react";
 import React from "react";
 import type { DerivedPropertiesMap } from "WidgetProvider/factory";
@@ -57,7 +58,7 @@ export class ContainerWidget extends BaseWidget<
 
   static getConfig(): WidgetBaseConfiguration {
     return {
-      name: "Container",
+      name: $t('index.d842bd6c7cfd63a7'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.LAYOUT],
@@ -96,7 +97,7 @@ export class ContainerWidget extends BaseWidget<
       backgroundColor: "#FFFFFF",
       rows: WidgetHeightLimits.MIN_CANVAS_HEIGHT_IN_ROWS,
       columns: 24,
-      widgetName: "Container",
+      widgetName: $t('index.d842bd6c7cfd63a7'),
       containerStyle: "card",
       borderColor: Colors.GREY_5,
       borderWidth: "1",
@@ -188,7 +189,7 @@ export class ContainerWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Containers are used to group widgets together to form logical higher order widgets. Containers let you organize your page better and move all the widgets inside them together.",
+        $t('index.53901b07f49ce9fe'),
       "!url": "https://docs.appsmith.com/widget-reference/container",
       backgroundColor: {
         "!type": "string",
@@ -212,12 +213,12 @@ export class ContainerWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.05dccbedcb307753'),
         children: [
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.ec056ff03971ab02'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.51a827bf5d24ca55'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -225,18 +226,18 @@ export class ContainerWidget extends BaseWidget<
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Enables scrolling for content inside the widget",
+            helpText: $t('index.5b608ed58359342e'),
             propertyName: "shouldScrollContents",
-            label: "Scroll contents",
+            label: $t('index.4368c6388c6b5448'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.6f734e498eba2fee'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.c5a236bc2953dca9'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -251,13 +252,13 @@ export class ContainerWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Color",
+        sectionName: $t('index.db1e5e728085f566'),
         children: [
           {
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.239780e613c7dd5d'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
             propertyName: "backgroundColor",
-            label: "Background color",
+            label: $t('index.06c1a0df7c9d1f05'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -265,10 +266,10 @@ export class ContainerWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.239780e613c7dd5d'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
             propertyName: "borderColor",
-            label: "Border color",
+            label: $t('index.2418437710234acf'),
             controlType: "COLOR_PICKER",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -277,13 +278,13 @@ export class ContainerWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.2fabdc2e9ff13f29'),
         children: [
           {
-            helpText: "Enter value for border width",
+            helpText: $t('index.c829435dbb855649'),
             propertyName: "borderWidth",
-            label: "Border width",
-            placeholderText: "Enter value in px",
+            label: $t('index.5b4a57508add859a'),
+            placeholderText: $t('index.df79df53558ab948'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -292,8 +293,8 @@ export class ContainerWidget extends BaseWidget<
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
-            helpText: "Rounds the corners of the widgets's outer border edge",
+            label: $t('index.891216048a1bb690'),
+            helpText: $t('index.65d91b1e6e52ad5d'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -302,9 +303,9 @@ export class ContainerWidget extends BaseWidget<
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.674ba046e0d1f971'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.d2f049d358a1602d'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

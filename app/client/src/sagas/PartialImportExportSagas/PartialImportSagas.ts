@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   importPartialApplicationSuccess,
   initDatasourceConnectionDuringImportRequest,
@@ -81,7 +82,7 @@ export function* partialImportSaga(
       // Step2: Import widgets from file, in parallel
       yield fork(partialImportWidgetsSaga, action.payload.applicationFile);
       yield call(postPageAdditionSaga, applicationId);
-      toast.show("Partial Application imported successfully", {
+      toast.show($t('PartialImportSagas.a4f3aea42962c312'), {
         kind: "success",
       });
 

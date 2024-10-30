@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import type { RouteComponentProps } from "react-router-dom";
@@ -94,7 +95,7 @@ export const ForgotPassword = (props: ForgotPasswordProps) => {
               {
                 to: "https://docs.appsmith.com/getting-started/setup/instance-configuration/email#configure-email",
                 target: "_blank",
-                children: "Configure email service",
+                children: $t('ForgotPassword.939a1385832f1adb'),
               },
             ]}
           >

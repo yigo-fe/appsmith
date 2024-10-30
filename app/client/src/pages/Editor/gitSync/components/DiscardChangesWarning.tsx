@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import {
   createMessage,
@@ -26,7 +27,7 @@ export default function DiscardChangesWarning({
         kind="error"
         links={[
           {
-            children: "Learn more",
+            children: $t('DiscardChangesWarning.e63130ba4f56897f'),
             endIcon: "right-arrow",
             to: discardDocUrl,
             target: "_blank",

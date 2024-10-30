@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import { FileTab } from "IDE/Components/FileTab";
@@ -25,7 +26,7 @@ const AddTab = ({
     onClose();
   };
 
-  const content = `New ${segment === EditorEntityTab.JS ? "JS" : "Query"}`;
+  const content = `New ${segment === EditorEntityTab.JS ? "JS" : $t('AddTab.66a19f7a4c3fe8f3')}`;
 
   return (
     <FileTab

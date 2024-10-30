@@ -1,7 +1,8 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 
 export const metaConfig = {
-  name: "Menu Button",
+  name: $t('metaConfig.1312e29fdd257d7f'),
   tags: [WIDGET_TAGS.BUTTONS],
   searchTags: [
     "click",

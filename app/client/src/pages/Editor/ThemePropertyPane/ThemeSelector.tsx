@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -58,7 +59,7 @@ function ThemeSelector() {
         <SettingSection
           className="px-4 py-3 border-t border-b"
           isDefaultOpen={false}
-          title="Applied theme"
+          title={$t('ThemeSelector.ef9fc32615b0a18a')}
         >
           <ThemeCard theme={selectedTheme} />
         </SettingSection>

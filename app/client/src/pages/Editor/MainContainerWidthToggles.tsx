@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,27 +32,27 @@ export const AppsmithDefaultLayout: AppLayoutConfig = {
 
 const AppsmithLayouts: AppsmithLayoutConfigOption[] = [
   {
-    name: "Fluid width",
+    name: $t('MainContainerWidthToggles.3c41a0a68dcaaa19'),
     type: "FLUID",
     icon: "fluid",
   },
   {
-    name: "Desktop",
+    name: $t('MainContainerWidthToggles.91fbff432109cb7e'),
     type: "DESKTOP",
     icon: "desktop",
   },
   {
-    name: "Tablet (Landscape)",
+    name: $t('MainContainerWidthToggles.16516cf0cd40e3e2'),
     type: "TABLET_LARGE",
     icon: "tabletLandscape",
   },
   {
-    name: "Tablet (Portrait)",
+    name: $t('MainContainerWidthToggles.51a74ecaacee7e8d'),
     type: "TABLET",
     icon: "tablet",
   },
   {
-    name: "Mobile device",
+    name: $t('MainContainerWidthToggles.5986ddfe3d8ef586'),
     type: "MOBILE",
     icon: "mobile",
   },

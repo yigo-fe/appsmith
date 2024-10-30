@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { capitalize } from "lodash";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { BUTTON_VARIANTS, COLORS, ICONS } from "@appsmith/wds";
@@ -7,13 +8,13 @@ import type { MenuButtonWidgetProps } from "../../widget/types";
 
 export const propertyPaneStyleConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('styleConfig.f3104f4592705428'),
     children: [
       {
         propertyName: "triggerButtonVariant",
-        label: "Button variant",
+        label: $t('styleConfig.8935320508e75a89'),
         controlType: "ICON_TABS",
-        helpText: "Sets the variant of the menu button",
+        helpText: $t('styleConfig.579c80a064cd699a'),
         options: objectKeys(BUTTON_VARIANTS).map((variant) => ({
           label: BUTTON_VARIANTS[variant],
           value: variant,
@@ -31,10 +32,10 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "triggerButtonColor",
-        label: "Button color",
+        label: $t('styleConfig.9f7b525d5d4b43ea'),
         controlType: "DROP_DOWN",
         fullWidth: true,
-        helpText: "Sets the semantic color of the button",
+        helpText: $t('styleConfig.305c32b916d27419'),
         options: Object.values(COLORS).map((semantic) => ({
           label: capitalize(semantic),
           value: semantic,
@@ -53,12 +54,12 @@ export const propertyPaneStyleConfig = [
     ],
   },
   {
-    sectionName: "Icon",
+    sectionName: $t('styleConfig.90795e1de2bc0850'),
     children: [
       {
         propertyName: "triggerButtonIconName",
-        label: "Icon",
-        helpText: "Sets the icon to be used for the menu button",
+        label: $t('styleConfig.90795e1de2bc0850'),
+        helpText: $t('styleConfig.fb966341616fab04'),
         controlType: "ICON_SELECT_V2",
         isJSConvertible: true,
         isBindProperty: true,
@@ -89,8 +90,8 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "triggerButtonIconAlign",
-        label: "Position",
-        helpText: "Sets the icon alignment of the menu button",
+        label: $t('styleConfig.cb27698e0a798fcf'),
+        helpText: $t('styleConfig.90086a16d41d5e56'),
         controlType: "ICON_TABS",
         defaultValue: "start",
         fullWidth: false,

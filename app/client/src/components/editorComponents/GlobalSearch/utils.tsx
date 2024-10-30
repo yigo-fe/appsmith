@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import {
   ACTION_OPERATION_DESCRIPTION,
@@ -43,9 +44,9 @@ export interface RecentEntity {
 }
 
 export enum SEARCH_CATEGORY_ID {
-  NAVIGATION = "Navigate",
+  NAVIGATION = $t('utils.a0e5875eb363c33d'),
   INIT = "INIT",
-  ACTION_OPERATION = "Create new",
+  ACTION_OPERATION = $t('utils.7dd80d8b72903b76'),
 }
 
 export enum SEARCH_ITEM_TYPES {
@@ -139,13 +140,13 @@ export function getOptionalFilters(optionalFilterMeta: any) {
 
 export const filterCategories: Record<SEARCH_CATEGORY_ID, SearchCategory> = {
   [SEARCH_CATEGORY_ID.NAVIGATION]: {
-    title: "Navigate",
+    title: $t('utils.a0e5875eb363c33d'),
     kind: SEARCH_ITEM_TYPES.category,
     id: SEARCH_CATEGORY_ID.NAVIGATION,
     desc: createMessage(NAV_DESCRIPTION),
   },
   [SEARCH_CATEGORY_ID.ACTION_OPERATION]: {
-    title: "Create new",
+    title: $t('utils.7dd80d8b72903b76'),
     kind: SEARCH_ITEM_TYPES.category,
     id: SEARCH_CATEGORY_ID.ACTION_OPERATION,
     desc: createMessage(ACTION_OPERATION_DESCRIPTION),
@@ -293,9 +294,9 @@ export interface ActionOperation {
 
 export const actionOperations: ActionOperation[] = [
   {
-    title: "New blank API",
+    title: $t('utils.f643e85eef962ccd'),
     entityExplorerTitle: "REST API",
-    desc: "Create a new API",
+    desc: $t('utils.a8131818db3b09bc'),
     kind: SEARCH_ITEM_TYPES.actionOperation,
     action: (
       entityId: string,
@@ -311,9 +312,9 @@ export const actionOperations: ActionOperation[] = [
     focusEntityType: FocusEntity.API,
   },
   {
-    title: "New blank GraphQL API",
-    entityExplorerTitle: "GraphQL API",
-    desc: "Create a new API",
+    title: $t('utils.5a248a664d49f160'),
+    entityExplorerTitle: $t('utils.c32d87976c80ed07'),
+    desc: $t('utils.a8131818db3b09bc'),
     icon: <GraphQLIconV2 />,
     kind: SEARCH_ITEM_TYPES.actionOperation,
     action: (
@@ -330,9 +331,9 @@ export const actionOperations: ActionOperation[] = [
     focusEntityType: FocusEntity.API,
   },
   {
-    title: "New JS Object",
-    entityExplorerTitle: "Import from cURL",
-    desc: "Create a new JS Object",
+    title: $t('utils.49a6bfcbf5f6ff22'),
+    entityExplorerTitle: $t('utils.a966b3f8c75d8856'),
+    desc: $t('utils.7b13ac64885ceb8c'),
     kind: SEARCH_ITEM_TYPES.actionOperation,
     icon: JsFileIconV2(),
     action: (
@@ -343,8 +344,8 @@ export const actionOperations: ActionOperation[] = [
     focusEntityType: FocusEntity.JS_OBJECT,
   },
   {
-    title: "New cURL import",
-    desc: "Import a cURL Request",
+    title: $t('utils.df926b274828b565'),
+    desc: $t('utils.4e9758f687136219'),
     kind: SEARCH_ITEM_TYPES.actionOperation,
     icon: <CurlIconV2 />,
     action: () => openCurlImportModal(),
@@ -354,7 +355,7 @@ export const actionOperations: ActionOperation[] = [
 
 export const createQueryOption = {
   desc: "",
-  title: "Create a query",
+  title: $t('utils.8cb4ec8c39b16c75'),
   kind: SEARCH_ITEM_TYPES.sectionTitle,
   focusEntityType: FocusEntity.QUERY,
 };
@@ -364,9 +365,9 @@ export const generateCreateQueryForDSOption = (
   onClick: (entityId: string, from: EventLocation) => void,
 ) => {
   return {
-    title: `New ${ds.name} query`,
-    shortTitle: `${ds.name} query`,
-    desc: `Create a query in ${ds.name}`,
+    title: $t('utils.ca7e47abe3131262', {ds_name: ds.name}),
+    shortTitle: $t('utils.d664f9e1a3091c49', {ds_name: ds.name}),
+    desc: $t('utils.83531c5f6eff4ec4', {ds_name: ds.name}),
     pluginId: ds.pluginId,
     kind: SEARCH_ITEM_TYPES.actionOperation,
     action: onClick,
@@ -382,8 +383,8 @@ export const generateCreateNewDSOption = (
   return [
     ...filteredFileOperations,
     {
-      desc: "Create a new datasource in the workspace",
-      title: "New datasource",
+      desc: $t('utils.36eeaa229c915392'),
+      title: $t('utils.cb984d5365df2bf8'),
       icon: (
         <EntityIcon>
           <Icon name="plus" size="lg" />

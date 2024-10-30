@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ECMA_VERSION } from "@shared/ast";
 import type { LintOptions } from "jshint";
 import isEntityFunction from "./utils/isEntityFunction";
@@ -28,8 +29,8 @@ export const lintOptions = (globalData: Record<string, boolean>) =>
     globals: globalData,
     loopfunc: true,
   }) as LintOptions;
-export const JS_OBJECT_START_STATEMENT = "export default";
-export const INVALID_JSOBJECT_START_STATEMENT = `JSObject must start with '${JS_OBJECT_START_STATEMENT}'`;
+export const JS_OBJECT_START_STATEMENT = $t('constants.31aba46cdd489853');
+export const INVALID_JSOBJECT_START_STATEMENT = $t('constants.a83fe3adb1308ca3', {JS_OBJECT_START_STATEMENT: JS_OBJECT_START_STATEMENT});
 export const INVALID_JSOBJECT_START_STATEMENT_ERROR_CODE =
   "INVALID_JSOBJECT_START_STATEMENT_ERROR_CODE";
 // https://github.com/jshint/jshint/blob/d3d84ae1695359aef077ddb143f4be98001343b4/src/messages.js#L204
@@ -41,14 +42,14 @@ export const WARNING_LINT_ERRORS = {
   W098: "'{a}' is defined but never used.",
   W014: "Misleading line break before '{a}'; readers may interpret this as an expression boundary.",
   ASYNC_FUNCTION_BOUND_TO_SYNC_FIELD:
-    "Cannot execute async code on functions bound to data fields",
+    $t('constants.84916c27c673ca97'),
   ACTION_MODAL_STRING: 'Use Modal1.name instead of "Modal" as a string',
 };
 
 export function asyncActionInSyncFieldLintMessage(isJsObject = false) {
   return isJsObject
-    ? `Cannot execute async code on functions bound to data fields`
-    : `Data fields cannot execute async code`;
+    ? $t('constants.84916c27c673ca97')
+    : $t('constants.80451ceef314d743');
 }
 
 /** These errors should be overlooked
@@ -98,12 +99,8 @@ export const CUSTOM_LINT_ERRORS: Record<
     const bindings = dataFieldBindings.join(" , ");
 
     return isMarkedAsync
-      ? `Cannot bind async functions to data fields. Convert this to a sync function or remove references to "${fullName}" on the following data ${
-          hasMultipleBindings ? "fields" : "field"
-        }: ${bindings}`
-      : `Functions bound to data fields cannot execute async code. Remove async statements highlighted below or remove references to "${fullName}" on the following data ${
-          hasMultipleBindings ? "fields" : "field"
-        }: ${bindings}`;
+      ? $t('constants.c87f16597c581b6a')
+      : $t('constants.22aa93b13f0a593e');
   },
   [CustomLintErrorCode.INVALID_WIDGET_PROPERTY_SETTER]: (
     methodName: string,
@@ -112,25 +109,25 @@ export const CUSTOM_LINT_ERRORS: Record<
     isValidProperty: boolean,
   ) => {
     const suggestionSentence = methodName
-      ? `Use ${methodName}(value) instead.`
-      : `Use ${objectName} setter method instead.`;
+      ? $t('constants.15f1084fc8ec810e', {methodName: methodName})
+      : $t('constants.3062a076b160750a', {objectName: objectName});
 
     const lintErrorMessage = !isValidProperty
-      ? `${objectName} doesn't have a property named ${propertyName}`
-      : `Direct mutation of widget properties is not supported. ${suggestionSentence}`;
+      ? $t('constants.402fae2b436fb93c', {objectName: objectName,propertyName: propertyName})
+      : $t('constants.488f16a047afa6c5', {suggestionSentence: suggestionSentence});
 
     return lintErrorMessage;
   },
   [CustomLintErrorCode.INVALID_APPSMITH_STORE_PROPERTY_SETTER]: () => {
-    return "Use storeValue() method to modify the store";
+    return $t('constants.f74238d062141ac2');
   },
   [CustomLintErrorCode.ACTION_MODAL_STRING]: (modalName: string) => {
-    return `Use ${modalName}.name instead of "${modalName}" as a string`;
+    return $t('constants.a05f027c8edc14ee', {modalName: modalName,modalName: modalName});
   },
   [CustomLintErrorCode.INVALID_INPUTS]: (
     inputs: string[],
     invalidKey: string,
   ) => {
-    return `${invalidKey} doesn't exist in valid list of inputs: ${inputs.join(", ")} `;
+    return $t('constants.54060ed4b11bb2d8', {invalidKey: invalidKey});
   },
 };

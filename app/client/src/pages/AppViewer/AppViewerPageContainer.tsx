@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useMemo } from "react";
 import type { RouteComponentProps } from "react-router-dom";
 import { Link, withRouter } from "react-router-dom";
@@ -71,7 +72,7 @@ function AppViewerPageContainer(props: AppViewerPageContainerProps) {
             iconSize={theme.fontSizes[9]}
           />
         }
-        title="This page seems to be blank"
+        title=$t('AppViewerPageContainer.abd7dec3960a8f4d')
       />
     </Centered>
   );

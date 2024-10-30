@@ -1,22 +1,23 @@
+import {$t} from "locale/index";
 export const CONFIRM_BEFORE_CALLING_HEADING = {
-  text: "Confirm before calling ",
+  text: $t('constants.1659dd3d1aedc56c'),
   hasInfo: true,
-  info: `Ask for confirmation before executing function.`,
+  info: $t('constants.1681be5deb599b40'),
   key: "run_before_calling",
   hidden: true,
 };
 
 export const SETTINGS_HEADINGS = [
   {
-    text: "Function name",
+    text: $t('constants.2381c9853f936814'),
     hasInfo: false,
     key: "func_name",
     hidden: undefined,
   },
   {
-    text: "Run on page load",
+    text: $t('constants.2f707920ec7ac706'),
     hasInfo: true,
-    info: "Allow function run when page loads",
+    info: $t('constants.b360d6b60441d581'),
     key: "run_on_pageload",
     hidden: undefined,
   },

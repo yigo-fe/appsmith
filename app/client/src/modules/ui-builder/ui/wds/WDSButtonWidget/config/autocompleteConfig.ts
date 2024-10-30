@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "Buttons are used to capture user intent and trigger actions based on that intent",
+    $t('autocompleteConfig.7930f141b38f9b2a'),
   "!url": "https://docs.appsmith.com/widget-reference/button",
   isVisible: DefaultAutocompleteDefinitions.isVisible,
   text: "string",

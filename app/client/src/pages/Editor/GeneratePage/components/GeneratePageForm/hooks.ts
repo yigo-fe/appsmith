@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { useEffect, useState, useCallback } from "react";
 import type { DropdownOptions } from "../constants";
 import type { Datasource } from "entities/Datasource";
@@ -14,7 +15,7 @@ import AnalyticsUtil from "ee/utils/AnalyticsUtil";
 export const FAKE_DATASOURCE_OPTION = {
   CONNECT_NEW_DATASOURCE_OPTION: {
     id: CONNECT_NEW_DATASOURCE_OPTION_ID,
-    label: "Connect new datasource",
+    label: $t('hooks.dc56198c4f4b6720'),
     value: CONNECT_NEW_DATASOURCE_OPTION_ID,
     data: {
       pluginId: "",
@@ -547,7 +548,7 @@ export const useSheetColumnHeaders = () => {
         if (Array.isArray(responseBody)) {
           setColumnHeaderList(responseBody);
         } else {
-          let error = "Failed fetching Column headers";
+          let error = $t('hooks.f1a71adf2e4f7613');
 
           if (typeof responseBody === "string") {
             error = responseBody;

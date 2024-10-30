@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { get, isString } from "lodash";
 import styled from "styled-components";
@@ -107,7 +108,7 @@ const expectedSeriesData: CodeEditorExpected = {
   type: "Array<{ x: string, y: number Required }>",
   example: [
     {
-      x: "Mon",
+      x: $t('ChartDataControl.ec1a3b1e0a1e05c3'),
       y: 10000,
     },
   ],
@@ -164,7 +165,7 @@ function DataControlComponent(props: RenderComponentProps) {
             },
           }}
           mode={EditorModes.TEXT_WITH_BINDING}
-          placeholder="Series Name"
+          placeholder={$t('ChartDataControl.cad6e8930124a828')}
           positionCursorInsideBinding
           size={EditorSize.EXTENDED}
           tabBehaviour={TabBehaviour.INPUT}
@@ -188,7 +189,7 @@ function DataControlComponent(props: RenderComponentProps) {
                 updateOption(index, "color", value);
               }}
               color={item.color || ""}
-              placeholderText="enter color hexcode"
+              placeholderText={$t('ChartDataControl.7d0c482c4bb444b1')}
               showApplicationColors
             />
           </StyledOptionControlWrapper>

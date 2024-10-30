@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { capitalize } from "lodash";
 import { BUTTON_VARIANTS, COLORS } from "@appsmith/wds";
 import { objectKeys } from "@appsmith/utils";
@@ -5,14 +6,14 @@ import { ValidationTypes } from "constants/WidgetValidation";
 
 export const propertyPaneStyleConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('styleConfig.234a06c6ae592c4f'),
     children: [
       {
         propertyName: "buttonVariant",
-        label: "Button variant",
+        label: $t('styleConfig.dc8de7b4a4be0a2a'),
         controlType: "ICON_TABS",
         fullWidth: true,
-        helpText: "Sets the variant of the button",
+        helpText: $t('styleConfig.19599c09bf6ebef6'),
         options: objectKeys(BUTTON_VARIANTS).map((variant) => ({
           label: BUTTON_VARIANTS[variant],
           value: variant,
@@ -31,10 +32,10 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "buttonColor",
-        label: "Button color",
+        label: $t('styleConfig.9ff50af3c97b9ab4'),
         controlType: "DROP_DOWN",
         fullWidth: true,
-        helpText: "Sets the semantic color of the button",
+        helpText: $t('styleConfig.4571f615f0375edd'),
         options: Object.values(COLORS).map((semantic) => ({
           label: capitalize(semantic),
           value: semantic,

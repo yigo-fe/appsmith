@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { DEFAULT_CENTER } from "constants/WidgetConstants";
 import React from "react";
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
@@ -71,7 +72,7 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Map",
+      name: $t('index.bdb90676cc72b2da'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.CONTENT],
@@ -85,7 +86,7 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
       columns: 24,
       isDisabled: false,
       isVisible: true,
-      widgetName: "Map",
+      widgetName: $t('index.bdb90676cc72b2da'),
       enableSearch: true,
       zoomLevel: 50,
       enablePickLocation: true,
@@ -178,13 +179,13 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.7d266c6f175ea30e'),
         children: [
           {
             propertyName: "mapCenter",
-            label: "Initial location",
+            label: $t('index.ef635350c98763a3'),
             helpText:
-              "Default location for the map. Search for a location directly in the field.",
+              $t('index.f53c96fc33d6d253'),
             isJSConvertible: true,
             controlType: "LOCATION_SEARCH",
             dependencies: ["googleMapsApiKey"],
@@ -220,10 +221,10 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
           },
           {
             propertyName: "defaultMarkers",
-            label: "Default markers",
+            label: $t('index.8fcd54fd0515ad15'),
             controlType: "INPUT_TEXT",
             inputType: "ARRAY",
-            helpText: "Sets the default markers on the map",
+            helpText: $t('index.1bc814a80cc34a19'),
             placeholderText: '[{ "lat": "val1", "long": "val2" }]',
             isBindProperty: true,
             isTriggerProperty: false,
@@ -274,21 +275,21 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.34a23259e3443159'),
         children: [
           {
             propertyName: "zoomLevel",
-            label: "Zoom level",
+            label: $t('index.739a17bbe511d274'),
             controlType: "STEP",
-            helpText: "Changes the default zoom of the map",
+            helpText: $t('index.1b9ebb0cb1e8cf06'),
             stepType: "ZOOM_PERCENTAGE",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.891f03d6fd118829'),
+            helpText: $t('index.455dde9154fc5ae3'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -297,9 +298,9 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.644f2fc8ff43a19a'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.f20c19ea9772fc46'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -308,26 +309,26 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
           },
           {
             propertyName: "enablePickLocation",
-            label: "Enable pick location",
-            helpText: "Allows a user to pick their location",
+            label: $t('index.8187ad20a8b35188'),
+            helpText: $t('index.36f17a7ed5412c16'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "isClickedMarkerCentered",
-            label: "Map & marker centering",
+            label: $t('index.5e2064ad3ce8d59d'),
             helpText:
-              "Controls whether the clicked marker is centered on the map",
+              $t('index.966c6ecdc9ae9d2e'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "allowClustering",
-            label: "Enable clustering",
+            label: $t('index.16a9866c7f86186d'),
             controlType: "SWITCH",
-            helpText: "Allows markers to be clustered",
+            helpText: $t('index.c6e39f74837780fb'),
             defaultValue: false,
             isJSConvertible: true,
             isBindProperty: true,
@@ -336,17 +337,17 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
           },
           {
             propertyName: "enableSearch",
-            label: "Enable search location",
-            helpText: "Allows a user to search for a location",
+            label: $t('index.6cb500af564a6ee8'),
+            helpText: $t('index.19c1e09ba7894ae3'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "enableMapTypeControl",
-            label: "Enable map types",
+            label: $t('index.9e18cdccb21805dc'),
             controlType: "SWITCH",
-            helpText: "Allows users to change the map type",
+            helpText: $t('index.203f3586d8fcca82'),
             isJSConvertible: false,
             isBindProperty: false,
             isTriggerProperty: false,
@@ -354,12 +355,12 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Create marker",
+        sectionName: $t('index.0b8e52d3dd01947e'),
         children: [
           {
             propertyName: "enableCreateMarker",
-            label: "Create new marker",
-            helpText: "Allows users to mark locations on the map",
+            label: $t('index.92044082864ffd55'),
+            helpText: $t('index.85b88284c3a0a9c0'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
@@ -368,7 +369,7 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
             propertyName: "onCreateMarker",
             label: "onCreateMarker",
             helpText:
-              "When create new marker is enabled, this event triggers upon successful marker creation",
+              $t('index.03b75b630acb6d96'),
             controlType: "ACTION_SELECTOR",
             isJSConvertible: true,
             isBindProperty: true,
@@ -381,12 +382,12 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.df63ce44aa72d266'),
         children: [
           {
             propertyName: "onMarkerClick",
             label: "onMarkerClick",
-            helpText: "when the user clicks on the marker",
+            helpText: $t('index.a57de79b9a6d3606'),
             controlType: "ACTION_SELECTOR",
             isJSConvertible: true,
             isBindProperty: true,
@@ -400,13 +401,13 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.56f972f44a74cdae'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.4e5d363ef4c6d5d0'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.bf490f7a7cd1f3c4'),
             controlType: "BORDER_RADIUS_OPTIONS",
 
             isJSConvertible: true,
@@ -416,9 +417,9 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.2340d04b1f438854'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.ddead989ff2d91f9'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -566,19 +567,19 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
             borderRadius={this.props.borderRadius}
             boxShadow={this.props.boxShadow}
           >
-            <h1>{"Map Widget disabled"}</h1>
+            <h1>{$t('index.05e01b8221d3ffc9')}</h1>
             <mark>Key: x{this.props.googleMapsApiKey}x</mark>
             <p>{"Map widget requires a Google Maps API key"}</p>
             <p>
-              {"See our"}
+              {$t('index.f8de31e4084992ae')}
               <a
                 href="https://docs.appsmith.com/getting-started/setup/instance-configuration/google-maps"
-                rel="noopener noreferrer"
+                rel=$t('index.58c7c90062ba669d')
                 target="_blank"
               >
                 {" documentation "}
               </a>
-              {"to configure API keys"}
+              {$t('index.54eec5e1d68a3fbe')}
             </p>
           </DisabledContainer>
         )}

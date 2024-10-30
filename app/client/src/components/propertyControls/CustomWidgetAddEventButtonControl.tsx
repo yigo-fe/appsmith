@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import type { ControlProps } from "./BaseControl";
@@ -152,7 +153,7 @@ class ButtonControl extends BaseControl<
                     this.onCancel();
                   }
                 }}
-                placeholder="Event Name"
+                placeholder={$t('CustomWidgetAddEventButtonControl.502c6b7b80fd736b')}
                 size="md"
                 value={this.state.eventName}
               />

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { LabelPosition } from "components/constants";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
@@ -45,7 +46,7 @@ function defaultOptionValueValidation(value: unknown): ValidationResponse {
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string",
+          message: $t('index.de6c6c6d725b6344'),
         },
       ],
     };
@@ -87,21 +88,21 @@ class SingleSelectTreeWidget extends BaseWidget<
       animateLoading: true,
       options: [
         {
-          label: "Blue",
+          label: $t('index.36f35507f208ac45'),
           value: "BLUE",
           children: [
             {
-              label: "Dark Blue",
+              label: $t('index.ebec2726b4642e1f'),
               value: "DARK BLUE",
             },
             {
-              label: "Light Blue",
+              label: $t('index.531bcd8905c48e66'),
               value: "LIGHT BLUE",
             },
           ],
         },
-        { label: "Green", value: "GREEN" },
-        { label: "Red", value: "RED" },
+        { label: $t('index.0fe55451ac641466'), value: "GREEN" },
+        { label: $t('index.2eca614e162f7df1'), value: "RED" },
       ],
       widgetName: "TreeSelect",
       defaultOptionValue: "BLUE",
@@ -111,8 +112,8 @@ class SingleSelectTreeWidget extends BaseWidget<
       isDisabled: false,
       allowClear: false,
       expandAll: false,
-      placeholderText: "Select option",
-      labelText: "Label",
+      placeholderText: $t('index.3c011cf55ac216de'),
+      labelText: $t('index.0b2c75bc3d659502'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
@@ -165,15 +166,15 @@ class SingleSelectTreeWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.16caf0f78e20a875'),
         children: [
           {
             helpText:
-              "Allows users to select multiple options. Values must be unique",
+              $t('index.d917321c588644cf'),
             propertyName: "options",
-            label: "Options",
+            label: $t('index.c71959b4bbd84d2d'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter option value",
+            placeholderText: $t('index.7be142b4888e43cf'),
             isBindProperty: true,
             isTriggerProperty: false,
             isJSConvertible: false,
@@ -239,11 +240,11 @@ class SingleSelectTreeWidget extends BaseWidget<
               EvaluationSubstitutionType.SMART_SUBSTITUTE,
           },
           {
-            helpText: "Selects the option with value by default",
+            helpText: $t('index.897d77bd1402420f'),
             propertyName: "defaultOptionValue",
-            label: "Default selected value",
+            label: $t('index.d2678eda4f1a8b26'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter option value",
+            placeholderText: $t('index.7be142b4888e43cf'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -261,29 +262,29 @@ class SingleSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.0b2c75bc3d659502'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.5600200ebf9bf6e0'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.fcbfba2db00e161f'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.8720286bfec189ee'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.3043bc93d307647a'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.ace129c0537052f0'),
             controlType: "ICON_TABS",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.63fae799b292142f'), value: LabelPosition.Auto },
+              { label: $t('index.035a98ae8b6f5c92'), value: LabelPosition.Left },
+              { label: $t('index.fd64b58e9edd6bd9'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -291,9 +292,9 @@ class SingleSelectTreeWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.dc3c5d6113338edd'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.507ac11f0376b78b'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -315,9 +316,9 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.99425be3f4685b43'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.83be749b8dcb7179'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -336,12 +337,12 @@ class SingleSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.bfc48ca38ca09472'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.676e2c1ca44d45e3'),
+            helpText: $t('index.9d33095cae019879'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -351,32 +352,32 @@ class SingleSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.5ce32655755dc0af'),
         children: [
           {
-            helpText: "Show help text or details about current selection",
+            helpText: $t('index.24f4e95f83baca5d'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.71c4c9e6339ba9f1'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Add tooltip text here",
+            placeholderText: $t('index.df8e1f5225d14992'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets a Placeholder Text",
+            helpText: $t('index.6c7d8ea8f65620d9'),
             propertyName: "placeholderText",
-            label: "Placeholder",
+            label: $t('index.752829c9d5472354'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter placeholder text",
+            placeholderText: $t('index.5bbdc0f3eb157420'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.2d3bde784ed41743'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.34c24bafccfad774'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -385,8 +386,8 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.36ee2141106cc315'),
+            helpText: $t('index.72e5646f999175d3'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -395,9 +396,9 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.4381ba0c5f81a4a4'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.fe21a48a98419da1'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -406,8 +407,8 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "allowClear",
-            label: "Allow clearing value",
-            helpText: "Enables Icon to clear all Selections",
+            label: $t('index.107d632c7a7644d3'),
+            helpText: $t('index.c77f6701894abb01'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -416,8 +417,8 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "expandAll",
-            label: "Expand all by default",
-            helpText: "Expand All nested options",
+            label: $t('index.6457d123871ac2c1'),
+            helpText: $t('index.2dd7154f7be597cf'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -427,10 +428,10 @@ class SingleSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.2ed1c61543cd27f8'),
         children: [
           {
-            helpText: "when a user selects an option",
+            helpText: $t('index.84f6e2e365877883'),
             propertyName: "onOptionChange",
             label: "onOptionChange",
             controlType: "ACTION_SELECTOR",
@@ -439,7 +440,7 @@ class SingleSelectTreeWidget extends BaseWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "when the dropdown opens",
+            helpText: $t('index.f585e768b5dfd3b8'),
             propertyName: "onDropdownOpen",
             label: "onDropdownOpen",
             controlType: "ACTION_SELECTOR",
@@ -448,7 +449,7 @@ class SingleSelectTreeWidget extends BaseWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "when the dropdown closes",
+            helpText: $t('index.b02792ed464c99bc'),
             propertyName: "onDropdownClose",
             label: "onDropdownClose",
             controlType: "ACTION_SELECTOR",
@@ -487,12 +488,12 @@ class SingleSelectTreeWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.b218738ff82ee69b'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.8864377f7480fbbb'),
+            helpText: $t('index.2d656127681c856a'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -501,8 +502,8 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.0a6bdbf5945c9f69'),
+            helpText: $t('index.95ca23773d4c2ac6'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             hidden: isAutoLayout,
@@ -545,8 +546,8 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.c955314b234010fb'),
+            helpText: $t('index.e2f5265180936f78'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -566,11 +567,11 @@ class SingleSelectTreeWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.00696f9ef298ccb5'),
         children: [
           {
             propertyName: "accentColor",
-            label: "Accent color",
+            label: $t('index.b94ccf814ad4abc6'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -580,9 +581,9 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.a6cfc1ac3a84f029'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.1602f2e75e2b7a8f'),
             controlType: "BORDER_RADIUS_OPTIONS",
 
             isJSConvertible: true,
@@ -592,9 +593,9 @@ class SingleSelectTreeWidget extends BaseWidget<
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.614ea992d192ee00'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.7463fbaa96582671'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -609,17 +610,17 @@ class SingleSelectTreeWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "TreeSelect is used to capture user input from a specified list of permitted inputs/Nested Inputs.",
+        $t('index.e7f9c85eca6b6d93'),
       "!url": "https://docs.appsmith.com/widget-reference/treeselect",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       selectedOptionValue: {
         "!type": "string",
-        "!doc": "The value selected in a treeselect dropdown",
+        "!doc": $t('index.61d2105618291556'),
         "!url": "https://docs.appsmith.com/widget-reference/treeselect",
       },
       selectedOptionLabel: {
         "!type": "string",
-        "!doc": "The selected option label in a treeselect dropdown",
+        "!doc": $t('index.a981aed38482bdb5'),
         "!url": "https://docs.appsmith.com/widget-reference/treeselect",
       },
       isDisabled: "bool",

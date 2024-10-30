@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   createMessage,
   GEN_CRUD_TABLE_HEADER_LABEL,
@@ -47,7 +48,7 @@ export default memo(function TableHeaderIndex() {
           isRequired
           labelPosition="top"
           onChange={onChange}
-          placeholder="Table header index"
+          placeholder=$t('index.019f41ed014e5fde')
           size="md"
           type="number"
           value={value.toString()}

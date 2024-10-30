@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { FieldEntityInformation } from "components/editorComponents/CodeEditor/EditorConfig";
 import {
   DataTreeFunctionSortOrder,
@@ -434,9 +435,9 @@ export class AutocompleteSorter {
 
     return bestMatchEndIndex > 0
       ? [
-          createCompletionHeader("Best match"),
+          createCompletionHeader($t('AutocompleteSortRules.65d2f5fc9a843df5')),
           ...sortedCompletions.slice(0, bestMatchEndIndex),
-          createCompletionHeader("Search results"),
+          createCompletionHeader($t('AutocompleteSortRules.c5198e385ac53b4a')),
           ...sortedCompletions.slice(bestMatchEndIndex),
         ]
       : sortedCompletions;

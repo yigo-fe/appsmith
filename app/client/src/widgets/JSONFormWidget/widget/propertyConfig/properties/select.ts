@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { FieldType } from "widgets/JSONFormWidget/constants";
 import type { HiddenFnParams } from "../helper";
 import { getSchemaItem, getAutocompleteProperties } from "../helper";
@@ -79,8 +80,8 @@ const PROPERTIES = {
     data: [
       {
         propertyName: "defaultValue",
-        helpText: "Selects the option with value by default",
-        label: "Default selected value",
+        helpText: $t('select.18f0791d284d8582'),
+        label: $t('select.83ebbc190303891e'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
         placeholderText: '{ "label": "Option1", "value": "Option2" }',
         isBindProperty: true,
@@ -105,10 +106,10 @@ const PROPERTIES = {
     general: [
       {
         propertyName: "placeholderText",
-        label: "Placeholder",
-        helpText: "Sets a placeholder text",
+        label: $t('select.1cef11cad8838864'),
+        helpText: $t('select.fb441fe14fce91de'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
-        placeholderText: "Enter placeholder text",
+        placeholderText: $t('select.0e20f6af0500a6bd'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -120,7 +121,7 @@ const PROPERTIES = {
     events: [
       {
         propertyName: "onOptionChange",
-        helpText: "when a user selects an option",
+        helpText: $t('select.a8871d9344cefff4'),
         label: "onOptionChange",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
@@ -135,8 +136,8 @@ const PROPERTIES = {
     searchAndFilters: [
       {
         propertyName: "isFilterable",
-        label: "Allow searching",
-        helpText: "Makes the dropdown list filterable",
+        label: $t('select.e79e218f3f181dd0'),
+        helpText: $t('select.d0190bf1005067e6'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -149,8 +150,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "serverSideFiltering",
-        helpText: "Enables server side filtering of the data",
-        label: "Server side filtering",
+        helpText: $t('select.5a9732c23ff392de'),
+        label: $t('select.7ac8cc5fdb8d20da'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -163,7 +164,7 @@ const PROPERTIES = {
       },
       {
         propertyName: "onFilterUpdate",
-        helpText: "Trigger an action on change of filterText",
+        helpText: $t('select.f94d01e31dd468d1'),
         label: "onFilterUpdate",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,

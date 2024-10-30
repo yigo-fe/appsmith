@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import { reduce } from "lodash";
 import type { Row as ReactTableRowType } from "react-table";
@@ -436,7 +437,7 @@ export function Table(props: TableProps) {
             props.isLoading
               ? Classes.SKELETON
               : shouldUseVirtual
-                ? "tableWrap virtual"
+                ? $t('Table.3cf5f15c9077d056')
                 : "tableWrap"
           }
           ref={tableWrapperRef}

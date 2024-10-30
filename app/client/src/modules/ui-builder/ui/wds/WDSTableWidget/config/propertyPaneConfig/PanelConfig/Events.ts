@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import { ColumnTypes } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import { get } from "lodash";
@@ -9,7 +10,7 @@ import {
 } from "../../../widget/propertyUtils";
 
 export default {
-  sectionName: "Events",
+  sectionName: $t('Events.6952a34a6473b37c'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     if (showByColumnType(props, propertyPath, [ColumnTypes.IMAGE], true)) {
       return false;
@@ -35,7 +36,7 @@ export default {
     {
       propertyName: "onClick",
       label: "onClick",
-      helpText: "when user clicks on an image",
+      helpText: $t('Events.2541c0ecb301ed85'),
       controlType: "ACTION_SELECTOR",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         const baseProperty = getBasePropertyPath(propertyPath);
@@ -51,7 +52,7 @@ export default {
     {
       propertyName: "onSubmit",
       label: "onSubmit",
-      helpText: "when the user presses enter or clicks outside the input box",
+      helpText: $t('Events.0bba84fc27683b2e'),
       controlType: "ACTION_SELECTOR",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         const baseProperty = getBasePropertyPath(propertyPath);
@@ -74,7 +75,7 @@ export default {
     {
       propertyName: "onOptionChange",
       label: "onOptionChange",
-      helpText: "when user changes an option",
+      helpText: $t('Events.49e88250d0fb4fed'),
       controlType: "ACTION_SELECTOR",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         const baseProperty = getBasePropertyPath(propertyPath);
@@ -91,7 +92,7 @@ export default {
     {
       propertyName: "onCheckChange",
       label: "onChange",
-      helpText: "when the check state is changed",
+      helpText: $t('Events.19ebfb8be1881f36'),
       controlType: "ACTION_SELECTOR",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         return hideByColumnType(props, propertyPath, [ColumnTypes.SWITCH]);
@@ -104,7 +105,7 @@ export default {
     {
       propertyName: "onCheckChange",
       label: "onCheckChange",
-      helpText: "when the check state is changed",
+      helpText: $t('Events.19ebfb8be1881f36'),
       controlType: "ACTION_SELECTOR",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         return hideByColumnType(props, propertyPath, [ColumnTypes.CHECKBOX]);
@@ -116,7 +117,7 @@ export default {
     },
     {
       propertyName: "onFilterUpdate",
-      helpText: "Trigger an action on change of filterText",
+      helpText: $t('Events.02f5b9f83766a5c1'),
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         const baseProperty = getBasePropertyPath(propertyPath);
         const columnType = get(props, `${baseProperty}.columnType`, "");
@@ -146,7 +147,7 @@ export default {
     {
       propertyName: "onDateSelected",
       label: "onDateSelected",
-      helpText: "when a date is selected in the calendar",
+      helpText: $t('Events.4ac45b3f05cbe499'),
       controlType: "ACTION_SELECTOR",
       isJSConvertible: true,
       isBindProperty: true,

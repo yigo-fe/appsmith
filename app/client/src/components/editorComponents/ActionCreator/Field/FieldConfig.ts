@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   AppsmithFunction,
   DEFAULT_SELECTOR_VIEW_TEXT,
@@ -81,9 +82,9 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
   },
   // Show Alert
   [FieldType.ALERT_TEXT_FIELD]: {
-    label: () => "Message",
+    label: () => $t('FieldConfig.604f4525e63ce839'),
     defaultText: "",
-    exampleText: "showAlert('Hello world!', 'info')",
+    exampleText: "showAlert($t('FieldConfig.5226d60a3dcbe9b7'), 'info')",
     options: () => null,
     getter: (value: string) => {
       return textGetter(value, 0);
@@ -94,10 +95,10 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.ALERT_TYPE_SELECTOR_FIELD]: {
-    label: () => "Type",
-    exampleText: "showAlert('Hello world!', 'info')",
+    label: () => $t('FieldConfig.1619a52a7e5758d3'),
+    exampleText: "showAlert($t('FieldConfig.5226d60a3dcbe9b7'), 'info')",
     options: () => ALERT_STYLE_OPTIONS,
-    defaultText: "Select type",
+    defaultText: $t('FieldConfig.972b3d8faf82bed3'),
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     getter: (value: any) => {
@@ -118,7 +119,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
   },
   // navigateTo
   [FieldType.URL_FIELD]: {
-    label: () => "Enter URL",
+    label: () => $t('FieldConfig.4f18515bc7307dce'),
     defaultText: "",
     exampleText: "navigateTo('google.com', { a: 1 }, 'SAME_WINDOW')",
     options: () => null,
@@ -135,7 +136,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.QUERY_PARAMS_FIELD]: {
-    label: () => "Query params",
+    label: () => $t('FieldConfig.22d9b18f81662743'),
     defaultText: "",
     exampleText: "navigateTo('Page1', { a: 1 }, 'SAME_WINDOW')",
     options: () => null,
@@ -163,7 +164,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.NAVIGATION_TARGET_FIELD]: {
-    label: () => "Target",
+    label: () => $t('FieldConfig.d4b7ff16fa0e30b9'),
     exampleText: "navigateTo('Page1', { a: 1 }, 'SAME_WINDOW')",
     options: () => NAVIGATION_TARGET_FIELD_OPTIONS,
     defaultText: NAVIGATION_TARGET_FIELD_OPTIONS[0].label,
@@ -201,7 +202,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
   },
   // Integration
   [FieldType.PARAMS_FIELD]: {
-    label: () => "Params",
+    label: () => $t('FieldConfig.bedeb01ef066a202'),
     defaultText: "{{\n{}\n}}",
     exampleText: "Api1.run({ a: 1 })",
     options: () => null,
@@ -222,7 +223,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.KEY_TEXT_FIELD_REMOVE_VALUE]: {
-    label: () => "Key",
+    label: () => $t('FieldConfig.6ae340466eb0a513'),
     defaultText: "",
     exampleText: "removeValue('a')",
     options: () => null,
@@ -240,7 +241,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
   },
   // storeValue
   [FieldType.KEY_TEXT_FIELD_STORE_VALUE]: {
-    label: () => "Key",
+    label: () => $t('FieldConfig.6ae340466eb0a513'),
     defaultText: "",
     exampleText: "storeValue('a', 'b')",
     options: () => null,
@@ -257,7 +258,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.VALUE_TEXT_FIELD]: {
-    label: () => "Value",
+    label: () => $t('FieldConfig.406fa1ea903f3b04'),
     defaultText: "",
     exampleText: "storeValue('a', 'b')",
     options: () => null,
@@ -281,9 +282,9 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
   },
   // download()
   [FieldType.DOWNLOAD_DATA_FIELD]: {
-    label: () => "Data to download",
+    label: () => $t('FieldConfig.212095f3a02cc0ae'),
     defaultText: "",
-    exampleText: "download('Image', 'img.png', 'image/png')",
+    exampleText: "download($t('FieldConfig.496a0118d9d54a02'), 'img.png', 'image/png')",
     options: () => null,
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -298,9 +299,9 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.DOWNLOAD_FILE_NAME_FIELD]: {
-    label: () => "File name with extension",
+    label: () => $t('FieldConfig.0f0082509b0ca567'),
     defaultText: "",
-    exampleText: "download('Image', 'img.png', 'image/png')",
+    exampleText: "download($t('FieldConfig.496a0118d9d54a02'), 'img.png', 'image/png')",
     options: () => null,
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -321,7 +322,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.COPY_TEXT_FIELD]: {
-    label: () => "Text to be copied to clipboard",
+    label: () => $t('FieldConfig.719e31de19b58e03'),
     defaultText: "",
     exampleText: "copyToClipboard('example')",
     options: () => null,
@@ -338,7 +339,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.CALLBACK_FUNCTION_FIELD_GEOLOCATION]: {
-    label: () => "Callback function",
+    label: () => $t('FieldConfig.494ed8d8855aca08'),
     defaultText: "",
     exampleText: `appsmith.geolocation.getCurrentPosition((location) => { console.log(location) })`,
     options: () => null,
@@ -352,7 +353,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
   },
   // setInterval
   [FieldType.CALLBACK_FUNCTION_FIELD_SET_INTERVAL]: {
-    label: () => "Callback function",
+    label: () => $t('FieldConfig.494ed8d8855aca08'),
     defaultText: "",
     exampleText: `setInterval(() => {
       const a = 0;
@@ -367,7 +368,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.DELAY_FIELD]: {
-    label: () => "Delay (ms)",
+    label: () => $t('FieldConfig.c85a451d129aa993'),
     defaultText: "",
     exampleText: `setInterval(() => {
       const a = 0;
@@ -394,7 +395,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.ID_FIELD]: {
-    label: () => "Id",
+    label: () => $t('FieldConfig.f58a7798bdd4bce5'),
     defaultText: "",
     exampleText: "interval-id",
     options: () => null,
@@ -421,7 +422,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.CLEAR_INTERVAL_ID_FIELD]: {
-    label: () => "Id",
+    label: () => $t('FieldConfig.f58a7798bdd4bce5'),
     defaultText: "",
     exampleText: "clearInterval('1')",
     options: () => null,
@@ -434,9 +435,9 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.SHOW_MODAL_FIELD]: {
-    label: () => "Modal name",
+    label: () => $t('FieldConfig.7cc894d5abc23b38'),
     options: (props: FieldProps) => props.modalDropdownList,
-    defaultText: "Select modal",
+    defaultText: $t('FieldConfig.faa44c8e441b9fd8'),
     exampleText: "showModal(Modal1.name)",
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -451,9 +452,9 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.SELECTOR_VIEW,
   },
   [FieldType.CLOSE_MODAL_FIELD]: {
-    label: () => "Modal name",
+    label: () => $t('FieldConfig.7cc894d5abc23b38'),
     options: (props: FieldProps) => props.modalDropdownList,
-    defaultText: "Select modal",
+    defaultText: $t('FieldConfig.faa44c8e441b9fd8'),
     exampleText: "closeModal(Modal1.name)",
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -468,10 +469,10 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.SELECTOR_VIEW,
   },
   [FieldType.WIDGET_NAME_FIELD]: {
-    label: () => "Widget",
+    label: () => $t('FieldConfig.528367aaa79d4f07'),
     exampleText: "resetWidget('Modal1', true)",
     options: (props: FieldProps) => props.widgetOptionTree,
-    defaultText: "Select widget",
+    defaultText: $t('FieldConfig.53477550c3b4f06b'),
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     getter: (value: any) => {
@@ -485,7 +486,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.SELECTOR_VIEW,
   },
   [FieldType.RESET_CHILDREN_FIELD]: {
-    label: () => "Reset Children",
+    label: () => $t('FieldConfig.33f7e013629237d0'),
     options: () => RESET_CHILDREN_OPTIONS,
     defaultText: "true",
     exampleText: "resetWidget('Modal1', true)",
@@ -508,10 +509,10 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.SELECTOR_VIEW,
   },
   [FieldType.PAGE_SELECTOR_FIELD]: {
-    label: () => "Choose page",
+    label: () => $t('FieldConfig.56b1ee4d79e3a179'),
     exampleText: "navigateTo('Page1', { a: 1 }, 'SAME_WINDOW')",
     options: (props: FieldProps) => props.pageDropdownOptions,
-    defaultText: "Select page",
+    defaultText: $t('FieldConfig.a98f703142f7b337'),
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     getter: (value: any) => {
@@ -525,10 +526,10 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.SELECTOR_VIEW,
   },
   [FieldType.DOWNLOAD_FILE_TYPE_FIELD]: {
-    label: () => "Type",
-    exampleText: "download('Image', 'img.png', 'image/png')",
+    label: () => $t('FieldConfig.1619a52a7e5758d3'),
+    exampleText: "download($t('FieldConfig.496a0118d9d54a02'), 'img.png', 'image/png')",
     options: () => FILE_TYPE_OPTIONS,
-    defaultText: "Select file type (optional)",
+    defaultText: $t('FieldConfig.3b3ac4683e01cb72'),
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     getter: (value: any) => {
@@ -557,7 +558,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     label: () => "",
     exampleText: "",
     options: (props: FieldProps) => props.integrationOptions,
-    defaultText: "Select Action",
+    defaultText: $t('FieldConfig.832505c357a06a93'),
     view: ViewTypes.NO_VIEW,
     getter: () => "",
     setter: () => "",
@@ -566,13 +567,13 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     label: () => "",
     exampleText: "",
     options: (props: FieldProps) => props.integrationOptions,
-    defaultText: "Select Action",
+    defaultText: $t('FieldConfig.832505c357a06a93'),
     view: ViewTypes.NO_VIEW,
     getter: () => "",
     setter: () => "",
   },
   [FieldType.PAGE_NAME_AND_URL_TAB_SELECTOR_FIELD]: {
-    label: () => "Type",
+    label: () => $t('FieldConfig.1619a52a7e5758d3'),
     defaultText: "",
     exampleText: "navigateTo('Page1', { a: 1 }, 'SAME_WINDOW')",
     options: () => null,
@@ -590,7 +591,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
   },
   [FieldType.KEY_VALUE_FIELD]: {
     label: () => "",
-    defaultText: "Select Action",
+    defaultText: $t('FieldConfig.832505c357a06a93'),
     exampleText: "",
     options: (props: FieldProps) => props.integrationOptions,
     // TODO: Fix this the next time the file is edited
@@ -627,11 +628,11 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.MESSAGE_FIELD]: {
-    label: () => "Message",
+    label: () => $t('FieldConfig.604f4525e63ce839'),
     defaultText: "",
     options: () => null,
     exampleText: "postWindowMessage('hi', 'window', '*')",
-    toolTip: "Data to be sent to the target iframe",
+    toolTip: $t('FieldConfig.ed7304af1b8565a2'),
     getter: (value: string) => {
       return textGetter(value, 0);
     },
@@ -641,11 +642,11 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.TARGET_ORIGIN_FIELD]: {
-    label: () => "Allowed origins",
+    label: () => $t('FieldConfig.679e7135bec82901'),
     defaultText: "",
     options: () => null,
     exampleText: "postWindowMessage('hi', 'window', '*')",
-    toolTip: "Restricts domains to which the message can be sent",
+    toolTip: $t('FieldConfig.0006aedd8e7b8bb0'),
     getter: (value: string) => {
       return textGetter(value, 2);
     },
@@ -667,11 +668,11 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TEXT_VIEW,
   },
   [FieldType.SOURCE_FIELD]: {
-    label: () => "Target",
-    defaultText: "Window",
+    label: () => $t('FieldConfig.d4b7ff16fa0e30b9'),
+    defaultText: $t('FieldConfig.4733107884a6a871'),
     options: (props: FieldProps) => {
       const { widgetOptionTree } = props;
-      const defaultOption = { label: "Window", value: "'window'" };
+      const defaultOption = { label: $t('FieldConfig.4733107884a6a871'), value: "'window'" };
 
       return [
         defaultOption,
@@ -684,7 +685,7 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
       ];
     },
     exampleText: "postWindowMessage('hi', 'window', '*')",
-    toolTip: "Specifies the target iframe widget name or parent window",
+    toolTip: $t('FieldConfig.b2cc9fd1ed915e3e'),
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     getter: (value: any) => {
@@ -721,9 +722,9 @@ export const FIELD_CONFIG: AppsmithFunctionConfigType = {
     view: ViewTypes.TAB_VIEW,
   },
   [FieldType.CALLBACK_FUNCTION_API_AND_QUERY]: {
-    label: () => "Callback function",
+    label: () => $t('FieldConfig.494ed8d8855aca08'),
     defaultText: "",
-    exampleText: `() => { showAlert("Some message!") }`,
+    exampleText: `() => { showAlert($t('FieldConfig.327741106f95e4d4')) }`,
     options: () => null,
     getter: (value: string, argNumber = 0) => {
       return callBackFieldGetter(value, argNumber);

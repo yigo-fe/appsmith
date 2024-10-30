@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import styled, { css } from "styled-components";
 import type {
   TableSizes,
@@ -398,7 +399,7 @@ export const CellWrapper = styled.div<{
   white-space: nowrap;
   opacity: ${(props) => (props.isHidden ? "0.6" : "1")};
   ${TableStyles};
-  padding: ${(props) => (props.isPadding ? "0 10px" : " 0px")};
+  padding: ${(props) => (props.isPadding ? $t('TableStyledWrappers.fa370e72c035726c') : " 0px")};
   line-height: 28px;
   .${Classes.POPOVER_WRAPPER}, > span > span > span {
     width: 100%;

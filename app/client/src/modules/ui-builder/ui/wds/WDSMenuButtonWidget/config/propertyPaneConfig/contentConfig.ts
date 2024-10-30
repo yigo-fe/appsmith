@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
 import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
@@ -9,12 +10,12 @@ import type { PropertyPaneConfig } from "constants/PropertyControlConstants";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Basic",
+    sectionName: $t('contentConfig.8f07cc3ecdd0cd95'),
     children: [
       {
         propertyName: "label",
-        helpText: "Sets the label of a menu",
-        label: "Label",
+        helpText: $t('contentConfig.a019702d4a810598'),
+        label: $t('contentConfig.356526fc6b6bc61a'),
         controlType: "INPUT_TEXT",
         placeholderText: "Open The Menu…",
         isBindProperty: true,
@@ -23,18 +24,18 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "menuItemsSource",
-        helpText: "Sets the source for the menu items",
-        label: "Menu items source",
+        helpText: $t('contentConfig.82e5c4d00c1b7de5'),
+        label: $t('contentConfig.2e1da07ee9f060ea'),
         controlType: "ICON_TABS",
         defaultValue: "static",
         fullWidth: true,
         options: [
           {
-            label: "Static",
+            label: $t('contentConfig.92698851631bb8c6'),
             value: "static",
           },
           {
-            label: "Dynamic",
+            label: $t('contentConfig.43bcbeaa9b4ce45d'),
             value: "dynamic",
           },
         ],
@@ -46,10 +47,10 @@ export const propertyPaneContentConfig = [
         dependencies: ["sourceData", "configureMenuItems"],
       },
       {
-        helpText: "Menu items",
+        helpText: $t('contentConfig.d66d317eab38c187'),
         propertyName: "menuItems",
         controlType: "MENU_ITEMS",
-        label: "Menu items",
+        label: $t('contentConfig.d66d317eab38c187'),
         isBindProperty: false,
         isTriggerProperty: false,
         hidden: (props: MenuButtonWidgetProps) =>
@@ -58,9 +59,9 @@ export const propertyPaneContentConfig = [
         panelConfig: menuItemsConfig,
       },
       {
-        helpText: "Takes in an array of items to display the menu items.",
+        helpText: $t('contentConfig.a517cff4fc629a0c'),
         propertyName: "sourceData",
-        label: "Source data",
+        label: $t('contentConfig.53481872b42b4c47'),
         controlType: "INPUT_TEXT",
         placeholderText: "{{Query1.data}}",
         inputType: "ARRAY",
@@ -83,14 +84,14 @@ export const propertyPaneContentConfig = [
         dependencies: ["menuItemsSource"],
       },
       {
-        helpText: "Configure how each menu item will appear.",
+        helpText: $t('contentConfig.8b033dd10acc50a4'),
         propertyName: "configureMenuItems",
         controlType: "OPEN_CONFIG_PANEL",
         buttonConfig: {
-          label: "Configure",
+          label: $t('contentConfig.d63349049900513a'),
           icon: "settings-2-line",
         },
-        label: "Configure menu items",
+        label: $t('contentConfig.fc8ca855c848a2fb'),
         isBindProperty: false,
         isTriggerProperty: false,
         hidden: (props: MenuButtonWidgetProps) =>
@@ -101,12 +102,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.fea71fb36fc1de7a'),
     children: [
       {
         propertyName: "isVisible",
-        helpText: "Controls the visibility of the widget",
-        label: "Visible",
+        helpText: $t('contentConfig.9778c462c7e7415c'),
+        label: $t('contentConfig.8c6d1cd93894a29a'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -115,8 +116,8 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "isDisabled",
-        helpText: "Disables input to the widget",
-        label: "Disabled",
+        helpText: $t('contentConfig.f9115500535ebfc8'),
+        label: $t('contentConfig.db23fee0bc6f9f73'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -125,9 +126,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.6db22b0d0aa0c5de'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.73039dc39af63cf1'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,

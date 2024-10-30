@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
@@ -255,7 +256,7 @@ class DatasourceHomeScreen extends React.Component<Props> {
                 >
                   <CardContentWrapper data-testid="newapi-datasource-content-wrapper">
                     <img
-                      alt="New"
+                      alt={$t('DatasourceHome.c2ed0b2467c8a375')}
                       className="curlImage t--plusImage content-icon"
                       src={PlusLogo}
                     />
@@ -284,7 +285,7 @@ class DatasourceHomeScreen extends React.Component<Props> {
               >
                 <DatasourceContentWrapper data-testid="database-datasource-content-wrapper">
                   <img
-                    alt="Datasource"
+                    alt={$t('DatasourceHome.30bd22234c3968a1')}
                     className="dataSourceImage"
                     data-testid="database-datasource-image"
                     src={getAssetUrl(pluginImages[plugin.id])}

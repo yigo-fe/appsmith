@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState } from "react";
 import type { FieldGroupProps, SwitchType } from "../types";
 import { Field } from "../Field";
@@ -13,7 +14,7 @@ function FieldGroup(props: FieldGroupProps) {
   const NAVIGATE_TO_TAB_SWITCHER: Array<SwitchType> = [
     {
       id: "page-name",
-      text: "Page name",
+      text: $t('index.1f4bd33bd6ba7fd6'),
       action: () => {
         setActiveTabNavigateTo(NAVIGATE_TO_TAB_SWITCHER[0]);
       },

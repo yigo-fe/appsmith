@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import BaseWidget from "widgets/BaseWidget";
@@ -45,12 +46,12 @@ class ExternalWidget extends BaseWidget<ExternalWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.639dc4456685cb7c'),
         children: [
           {
             propertyName: "defaultModel",
-            helpText: "The data that needs to be injected into the widget",
-            label: "Model",
+            helpText: $t('index.1a4717cdab77fb6b'),
+            label: $t('index.fe4bd3e211ca4959'),
             controlType: "INPUT_TEXT",
             placeholderText: "{}",
             isBindProperty: true,
@@ -68,7 +69,7 @@ class ExternalWidget extends BaseWidget<ExternalWidgetProps, WidgetState> {
           // },
           {
             propertyName: "srcDoc",
-            helpText: "Inline HTML to embed, overriding the src attribute",
+            helpText: $t('index.ea4470790b4b352f'),
             label: "srcDoc",
             controlType: "HTML_DOCUMENT_BUILDER",
             placeholderText: "<p>Inline HTML</p>",
@@ -82,7 +83,7 @@ class ExternalWidget extends BaseWidget<ExternalWidgetProps, WidgetState> {
           },
           {
             propertyName: "src",
-            helpText: "Url of the hosted widget",
+            helpText: $t('index.d4e208aea9d45ae2'),
             label: "src",
             controlType: "HTML_DOCUMENT_BUILDER",
             placeholderText: "https://deployed.somewhere.com/mycomponent",
@@ -99,7 +100,7 @@ class ExternalWidget extends BaseWidget<ExternalWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.68c35c74676e3f59'),
         hasDynamicProperties: true,
         generateDynamicProperties: (widgetProps: WidgetProps) => {
           return widgetProps.events.map((event: string) => ({
@@ -118,14 +119,14 @@ class ExternalWidget extends BaseWidget<ExternalWidgetProps, WidgetState> {
             controlType: "BUTTON",
             isJSConvertible: false,
             isBindProperty: false,
-            buttonLabel: "Add Event",
+            buttonLabel: $t('index.12e25f5a928205c4'),
             onClick: ({
               batchUpdateProperties,
               widgetProperties,
             }: OnButtonClickProps) => {
               const events = widgetProperties.events;
 
-              const eventName = prompt("what is the event name");
+              const eventName = prompt($t('index.3fcf3026d6651927'));
 
               batchUpdateProperties({
                 events: [...events, eventName],

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { SendTestEmailPayload } from "ee/api/UserApi";
 import UserApi from "ee/api/UserApi";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
@@ -95,7 +96,7 @@ export function* SaveAdminSettingsSaga(
     const isValidResponse: boolean = yield validateResponse(response);
 
     if (isValidResponse) {
-      toast.show("Successfully saved", {
+      toast.show($t('SuperUserSagas.5fc3664d420576de'), {
         kind: "success",
       });
 

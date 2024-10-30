@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState } from "react";
 import {
   DemoImage,
@@ -112,7 +113,7 @@ function GenerateSSH({
             </CollapsibleHeader>
             <CollapsibleContent>
               <DemoImage
-                alt={`Copy and paste remote url from ${value?.gitProvider}`}
+                alt={$t('GenerateSSH.55bf20249bfb3d9e', {value__gitProvider: value?.gitProvider})}
                 src={
                   GIT_DEMO_GIF.copy_remoteurl[value?.gitProvider || "github"]
                 }

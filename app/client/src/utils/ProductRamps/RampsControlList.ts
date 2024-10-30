@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { SupportedRampsType } from "./RampTypes";
 
 export const RAMP_NAME = {
@@ -8,10 +9,10 @@ export const RAMP_NAME = {
 };
 
 export const RAMP_FOR_ROLES = {
-  SUPER_USER: "Super User",
+  SUPER_USER: $t('RampsControlList.daad03bbe51a9c25'),
   ADMIN: "Administrator",
-  DEVELOPER: "Developer",
-  APP_VIEWER: "App Viewer",
+  DEVELOPER: $t('RampsControlList.53570f1a2e3f5fdb'),
+  APP_VIEWER: $t('RampsControlList.4b663024d3c5aad5'),
 };
 
 export enum RampSection {

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { ControlProps } from "./BaseControl";
 import BaseControl from "./BaseControl";
@@ -102,7 +103,7 @@ export function Pagination(props: {
         <FormControl
           config={{
             ...limitFieldConfig,
-            label: "Pagination Limit",
+            label: $t('PaginationControl.20c2cde8535c7ee1'),
             defaultStyles,
             configProperty: limitPath,
             placeholderText:
@@ -121,7 +122,7 @@ export function Pagination(props: {
         <FormControl
           config={{
             ...offsetFieldConfig,
-            label: "Pagination Offset",
+            label: $t('PaginationControl.e9827baf3f6ff748'),
             defaultStyles,
             configProperty: offsetPath,
             placeholderText:

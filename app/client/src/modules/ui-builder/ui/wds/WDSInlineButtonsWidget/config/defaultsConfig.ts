@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ResponsiveBehavior } from "layoutSystems/common/utils/constants";
 import type { WidgetDefaultProps } from "WidgetProvider/constants";
 
@@ -10,7 +11,7 @@ export const defaultsConfig = {
   responsiveBehavior: ResponsiveBehavior.Fill,
   buttonsList: {
     button1: {
-      label: "Delete",
+      label: $t('defaultsConfig.06e95fc5a2b77052'),
       isVisible: true,
       isDisabled: false,
       id: "button1",
@@ -19,7 +20,7 @@ export const defaultsConfig = {
       color: "negative",
     },
     button2: {
-      label: "Separator",
+      label: $t('defaultsConfig.c9b4b02db09d35fb'),
       isVisible: true,
       isDisabled: false,
       id: "button2",
@@ -28,7 +29,7 @@ export const defaultsConfig = {
       itemType: "SEPARATOR",
     },
     button3: {
-      label: "Cancel",
+      label: $t('defaultsConfig.7e9eb8899322f8b3'),
       isVisible: true,
       isDisabled: false,
       widgetId: "",
@@ -38,7 +39,7 @@ export const defaultsConfig = {
       color: "accent",
     },
     button4: {
-      label: "Save Changes",
+      label: $t('defaultsConfig.bc29f66350552e22'),
       isVisible: true,
       isDisabled: false,
       widgetId: "",

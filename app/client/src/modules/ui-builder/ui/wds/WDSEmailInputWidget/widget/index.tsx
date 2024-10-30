@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { WDSInputWidget } from "modules/ui-builder/ui/wds/WDSInputWidget";
 import { EmailInputIcon, EmailInputThumbnail } from "appsmith-icons";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
@@ -12,7 +13,7 @@ class WDSEmailInputWidget extends WDSInputWidget {
       ...super.getConfig(),
       displayOrder: undefined,
       tags: [WIDGET_TAGS.INPUTS],
-      name: "Email Input",
+      name: $t('index.bb4b69fad52b5b14'),
     };
   }
 

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useRef, useState } from "react";
 import styled, { createGlobalStyle, css } from "styled-components";
 import Interweave from "interweave";
@@ -244,7 +245,7 @@ BaseButton.defaultProps = {
   buttonColor: Colors.GREEN,
   buttonVariant: ButtonVariantTypes.PRIMARY,
   disabled: false,
-  text: "Button Text",
+  text: $t('index.53ec6f5322dec061'),
   minimal: true,
 };
 

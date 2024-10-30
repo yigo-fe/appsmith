@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import log from "loglevel";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -118,7 +119,7 @@ function MapScriptWrapper(props: MapScriptWrapperProps) {
 
           setTitle(value);
         }}
-        placeholder="Enter location"
+        placeholder={$t('LocationSearchControl.78f87d614d859651')}
         ref={props.onSearchBoxMounted}
         tabIndex={-1}
       />

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState } from "react";
 
 import { HELP_MODAL_WIDTH } from "constants/HelpConstants";
@@ -75,12 +76,12 @@ interface HelpItem {
 const HELP_MENU_ITEMS: HelpItem[] = [
   {
     icon: "book-line",
-    label: "Documentation",
+    label: $t('HelpButton.d8014645394eb142'),
     link: "https://docs.appsmith.com/",
   },
   {
     icon: "bug-line",
-    label: "Report a bug",
+    label: $t('HelpButton.32c7b24673efc215'),
     link: "https://github.com/appsmithorg/appsmith/issues/new/choose",
   },
 ];
@@ -88,7 +89,7 @@ const HELP_MENU_ITEMS: HelpItem[] = [
 if (intercomAppID && window.Intercom) {
   HELP_MENU_ITEMS.push({
     icon: "chat-help",
-    label: "Chat with us",
+    label: $t('HelpButton.abaef5ada46ddd30'),
     id: "intercom-trigger",
   });
 }

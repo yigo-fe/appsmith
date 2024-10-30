@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { isString } from "lodash";
 import moment from "moment";
 import type { IconName } from "@blueprintjs/icons";
@@ -601,10 +602,10 @@ export const TABLE_SCROLLBAR_WIDTH = 10;
 export const TABLE_SCROLLBAR_HEIGHT = 8;
 
 export const POPOVER_ITEMS_TEXT_MAP = {
-  SORT_ASC: "Sort column ascending",
-  SORT_DSC: "Sort column descending",
-  FREEZE_LEFT: "Freeze column left",
-  FREEZE_RIGHT: "Freeze column right",
+  SORT_ASC: $t('Constants.50f9548ca79ed531'),
+  SORT_DSC: $t('Constants.8a85c7c88df7df24'),
+  FREEZE_LEFT: $t('Constants.fd26f8613403c5d9'),
+  FREEZE_RIGHT: $t('Constants.fabf1830204912d2'),
 };
 
 export const HEADER_MENU_PORTAL_CLASS = ".header-menu-portal";

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ExecuteTriggerPayload } from "constants/AppsmithActionConstants/ActionConstants";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import type { SetterConfig, Stylesheet } from "entities/AppTheming";
@@ -26,7 +27,7 @@ class MenuButtonWidget extends BaseWidget<MenuButtonWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Menu button",
+      name: $t('index.5e2b731502adff6a'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.BUTTONS],
@@ -35,7 +36,7 @@ class MenuButtonWidget extends BaseWidget<MenuButtonWidgetProps, WidgetState> {
 
   static getDefaults() {
     return {
-      label: "Open Menu",
+      label: $t('index.55087b78942cb811'),
       menuVariant: ButtonVariantTypes.PRIMARY,
       placement: ButtonPlacementTypes.CENTER,
       isCompact: false,
@@ -45,7 +46,7 @@ class MenuButtonWidget extends BaseWidget<MenuButtonWidgetProps, WidgetState> {
       menuItemsSource: MenuItemsSource.STATIC,
       menuItems: {
         menuItem1: {
-          label: "First Menu Item",
+          label: $t('index.642dfdc38137e5a0'),
           id: "menuItem1",
           widgetId: "",
           isVisible: true,
@@ -53,7 +54,7 @@ class MenuButtonWidget extends BaseWidget<MenuButtonWidgetProps, WidgetState> {
           index: 0,
         },
         menuItem2: {
-          label: "Second Menu Item",
+          label: $t('index.f804aff6d6a9deb9'),
           id: "menuItem2",
           widgetId: "",
           isVisible: true,
@@ -61,7 +62,7 @@ class MenuButtonWidget extends BaseWidget<MenuButtonWidgetProps, WidgetState> {
           index: 1,
         },
         menuItem3: {
-          label: "Third Menu Item",
+          label: $t('index.8be0690ed6ebc9dc'),
           id: "menuItem3",
           widgetId: "",
           isVisible: true,
@@ -135,7 +136,7 @@ class MenuButtonWidget extends BaseWidget<MenuButtonWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Menu button widget is used to represent a set of actions in a group.",
+        $t('index.c0ef8b84091c568f'),
       "!url": "https://docs.appsmith.com/widget-reference/menu-button",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       label: "string",

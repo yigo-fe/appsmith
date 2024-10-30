@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   PropertyPaneConfig,
   PropertyPaneSectionConfig,
@@ -203,7 +204,7 @@ class WidgetFactory {
     } else {
       const ex: WidgetCreationException = {
         message:
-          "Widget Builder not registered for widget type" + widgetData.type,
+          $t('index.585dc3bf6ffd58e1') + widgetData.type,
       };
 
       log.error(ex);

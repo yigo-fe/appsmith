@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ButtonBorderRadius } from "components/constants";
 import Skeleton from "components/utils/Skeleton";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
@@ -43,7 +44,7 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Video",
+      name: $t('index.942a029c2e2d59d4'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.MEDIA],
@@ -56,7 +57,7 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
     return {
       rows: 28,
       columns: 24,
-      widgetName: "Video",
+      widgetName: $t('index.942a029c2e2d59d4'),
       url: getAssetUrl(`${ASSETS_CDN_URL}/widgets/bird.mp4`),
       autoPlay: false,
       version: 1,
@@ -114,14 +115,14 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.1291cac1458f4cbb'),
         children: [
           {
             propertyName: "url",
             label: "URL",
-            helpText: "Link to the video file which should be played",
+            helpText: $t('index.f970fd5804ec2a08'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter URL",
+            placeholderText: $t('index.8f0147e00562d8cd'),
             inputType: "TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -141,13 +142,13 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.13dfdd7463563e02'),
         children: [
           {
             propertyName: "autoPlay",
-            label: "Autoplay",
+            label: $t('index.8b7d8467b3d4b2a1'),
             helpText:
-              "Video will be automatically played, by enabling this feature, video will be muted by default.",
+              $t('index.ed997bea9e3ed489'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -155,9 +156,9 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.cef5da52d341ece4'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.79a339d6a1ac6940'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -166,9 +167,9 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.bab94e45b600207f'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.438205ed69700642'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -178,10 +179,10 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.b1c0aa5ecdb9a2ff'),
         children: [
           {
-            helpText: "when the video is played",
+            helpText: $t('index.fcda6c242e88e6db'),
             propertyName: "onPlay",
             label: "onPlay",
             controlType: "ACTION_SELECTOR",
@@ -190,7 +191,7 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the video is paused",
+            helpText: $t('index.5188ba62a686ffc1'),
             propertyName: "onPause",
             label: "onPause",
             controlType: "ACTION_SELECTOR",
@@ -199,7 +200,7 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the video ends",
+            helpText: $t('index.f7e4d4edb96c7d9f'),
             propertyName: "onEnd",
             label: "onEnd",
             controlType: "ACTION_SELECTOR",
@@ -235,12 +236,12 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Color",
+        sectionName: $t('index.6573ca231d5b6f65'),
         children: [
           {
             propertyName: "backgroundColor",
-            helpText: "Sets the background color of the widget",
-            label: "Background color",
+            helpText: $t('index.afab796c66be6202'),
+            label: $t('index.269a806450acf450'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -250,13 +251,13 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.fbeb4677c7ead5bc'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.7b1992f7d228c798'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.832f66a3cbb74ba0'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -265,9 +266,9 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.8357f8cca7432d7b'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.679ad7e59acbf0b4'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -301,7 +302,7 @@ class VideoWidget extends BaseWidget<VideoWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Video widget can be used for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia, Mixcloud, and DailyMotion.",
+        $t('index.72d4394441278746'),
       "!url": "https://docs.appsmith.com/widget-reference/video",
       playState: "number",
       autoPlay: "bool",

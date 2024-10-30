@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useContext, useMemo, useRef } from "react";
 import styled from "styled-components";
 import type { LabelInValueType, DraftValueType } from "rc-select/lib/Select";
@@ -54,9 +55,9 @@ const COMPONENT_DEFAULT_VALUES: MultiSelectComponentProps = {
   labelTextSize: BASE_LABEL_TEXT_SIZE,
   serverSideFiltering: false,
   options: [
-    { label: "Blue", value: "BLUE" },
-    { label: "Green", value: "GREEN" },
-    { label: "Red", value: "RED" },
+    { label: $t('MultiSelectField.4cb109526a47fb77'), value: "BLUE" },
+    { label: $t('MultiSelectField.38f5ac09b28a2d07'), value: "GREEN" },
+    { label: $t('MultiSelectField.662ca29e0becabc2'), value: "RED" },
   ],
 };
 

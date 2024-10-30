@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as React from "react";
 
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
@@ -64,7 +65,7 @@ class RangeSliderWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Range Slider",
+      name: $t('index.0a19eb3434756a4b'),
       needsMeta: true,
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
@@ -89,7 +90,7 @@ class RangeSliderWidget extends BaseWidget<
       isVisible: true,
       isDisabled: false,
       tooltipAlwaysOn: false,
-      labelText: "Percentage",
+      labelText: $t('index.f8af14faa50db3e4'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 8,
@@ -171,7 +172,7 @@ class RangeSliderWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Range slider widget is used to capture user feedback from a range of values",
+        $t('index.d10b9ae33048bf50'),
       "!url": "https://docs.appsmith.com/widget-reference/circular-progress",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       start: "number",

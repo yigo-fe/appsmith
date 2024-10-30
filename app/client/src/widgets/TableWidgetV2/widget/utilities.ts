@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Colors } from "constants/Colors";
 import { FontStyleTypes } from "constants/WidgetConstants";
 import _, { filter, isBoolean, isObject, uniq, without } from "lodash";
@@ -639,8 +640,8 @@ export const getEditActionColumnProperties = () => ({
   isDiscardVisible: true,
   saveIconAlign: "left",
   discardIconAlign: "left",
-  saveActionLabel: "Save",
-  discardActionLabel: "Discard",
+  saveActionLabel: $t('utilities.81c0c1b4663bbe8f'),
+  discardActionLabel: $t('utilities.3b4160adb5977d39'),
   saveButtonColor: Colors.GREEN,
   discardButtonColor: Colors.GREEN,
 });
@@ -699,7 +700,7 @@ export const createEditActionColumn = (props: TableWidgetProps) => {
     ...getEditActionColumnProperties(),
     ...themeProps,
     columnType: ColumnTypes.EDIT_ACTIONS,
-    label: "Save / Discard",
+    label: $t('utilities.ae8b667cb5c3ad2d'),
     discardButtonVariant: ButtonVariantTypes.TERTIARY,
     discardButtonColor: Colors.DANGER_SOLID,
     sticky: StickyType.RIGHT,

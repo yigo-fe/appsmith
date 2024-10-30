@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useContext } from "react";
 import { Alignment } from "@blueprintjs/core";
 import { isNumber } from "lodash";
@@ -35,8 +36,8 @@ const COMPONENT_DEFAULT_VALUES: RadioGroupComponentProps = {
   label: "",
   labelTextSize: BASE_LABEL_TEXT_SIZE,
   options: [
-    { label: "Yes", value: "Y" },
-    { label: "No", value: "N" },
+    { label: $t('RadioGroupField.f52d3c6a5d84e801'), value: "Y" },
+    { label: $t('RadioGroupField.beb42a8ad5ef2423'), value: "N" },
   ],
 };
 

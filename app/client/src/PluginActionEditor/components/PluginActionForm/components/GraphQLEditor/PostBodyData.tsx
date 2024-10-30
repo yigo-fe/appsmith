@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import {
@@ -46,11 +47,11 @@ function PostBodyData(props: Props) {
       <Section isFullWidth>
         <Zone layout="single_column">
           <div className="t--graphql-query-editor">
-            <StyledFormLabel>Query</StyledFormLabel>
+            <StyledFormLabel>{$t('PostBodyData.4d15f96f3e6be60c')}</StyledFormLabel>
             <DynamicTextField
               border={CodeEditorBorder.ALL_SIDE}
               dataTreePath={`${actionName}.config.body`}
-              evaluatedPopUpLabel={"Query"}
+              evaluatedPopUpLabel={$t('PostBodyData.4d15f96f3e6be60c')}
               mode={EditorModes.GRAPHQL_WITH_BINDING}
               name="actionConfiguration.body"
               placeholder={`{{\n\t{name: inputName.property, preference: dropdownName.property}\n}}`}
@@ -63,11 +64,11 @@ function PostBodyData(props: Props) {
         </Zone>
         <Zone layout="single_column">
           <div className="t--graphql-variable-editor">
-            <StyledFormLabel>Query variables</StyledFormLabel>
+            <StyledFormLabel>{$t('PostBodyData.3ef030fde5165b90')}</StyledFormLabel>
             <DynamicTextField
               border={CodeEditorBorder.ALL_SIDE}
               dataTreePath={`${props.actionName}.config.pluginSpecifiedTemplates[1].value`}
-              evaluatedPopUpLabel={"Query variables"}
+              evaluatedPopUpLabel={$t('PostBodyData.3ef030fde5165b90')}
               expected={EXPECTED_VARIABLE}
               height="100%"
               mode={EditorModes.JSON_WITH_BINDING}

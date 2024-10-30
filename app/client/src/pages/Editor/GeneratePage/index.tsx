@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import PageContent from "./components/PageContent";
@@ -27,7 +28,7 @@ const Header = styled.div`
 
 function GeneratePage() {
   const isGenerateFormPage = window.location.pathname.includes("/form");
-  const heading = isGenerateFormPage ? "Quick page wizard" : "New page";
+  const heading = isGenerateFormPage ? $t('index.b56339660426855d') : $t('index.1f71671ca775eb60');
 
   return (
     <Container>

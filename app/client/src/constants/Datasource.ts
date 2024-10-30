@@ -1,5 +1,6 @@
+import {$t} from "locale/index";
 export const TEMP_DATASOURCE_ID = "temp-id-0";
-export const DATASOURCE_NAME_DEFAULT_PREFIX = "Untitled datasource ";
+export const DATASOURCE_NAME_DEFAULT_PREFIX = $t('Datasource.76f61f33e55ecc20');
 export const GOOGLE_SHEET_SPECIFIC_SHEETS_SCOPE =
   "https://www.googleapis.com/auth/drive.file";
 export const GOOGLE_SHEET_FILE_PICKER_OVERLAY_CLASS = "overlay";

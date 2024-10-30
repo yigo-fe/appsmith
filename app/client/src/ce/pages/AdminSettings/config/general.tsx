@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { isEmail } from "utils/formhelpers";
 import type {
@@ -22,7 +23,7 @@ export const APPSMITH_INSTANCE_NAME_SETTING_SETTING: Setting = {
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.TEXTINPUT,
   controlSubType: SettingSubtype.TEXT,
-  label: "Instance name",
+  label: $t('general.d199062d6d8ccfff'),
   placeholder: "appsmith/prod",
 };
 
@@ -31,7 +32,7 @@ export const APPSMITH_ADMIN_EMAILS_SETTING: Setting = {
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.TAGINPUT,
   controlSubType: SettingSubtype.EMAIL,
-  label: "Admin email",
+  label: $t('general.6c0e8aaea95ef82e'),
   subText: "* Emails of the users who can modify instance settings",
   placeholder: "Jane@example.com",
   validate: (value: string) => {
@@ -41,7 +42,7 @@ export const APPSMITH_ADMIN_EMAILS_SETTING: Setting = {
         .split(",")
         .reduce((prev, curr) => prev && isEmail(curr.trim()), true)
     ) {
-      return "Please enter valid email id(s)";
+      return $t('general.8ba689b33e07fe73');
     }
   },
 };
@@ -51,8 +52,8 @@ export const APPSMITH_DISABLE_TELEMETRY_SETTING: Setting = {
   name: "APPSMITH_DISABLE_TELEMETRY",
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.CHECKBOX,
-  label: "Anonymous usage data",
-  text: "Share anonymous usage data to help improve the product",
+  label: $t('general.e19dcdcf16f088fc'),
+  text: $t('general.9164905c0e6ac589'),
 };
 
 export const APPSMITH_HIDE_WATERMARK_SETTING: Setting = {
@@ -72,8 +73,8 @@ export const APPSMITH_SHOW_ROLES_AND_GROUPS_SETTING: Setting = {
   name: "showRolesAndGroups",
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.CHECKBOX,
-  label: "Programmatic access control",
-  text: "Access roles and user groups in code for conditional business logic",
+  label: $t('general.6dc18c9b83a4a166'),
+  text: $t('general.25da33aff60e91f0'),
   isFeatureEnabled: false,
   isDisabled: () => true,
 };
@@ -83,8 +84,8 @@ export const APPSMITH_SINGLE_USER_PER_SESSION_SETTING: Setting = {
   name: "singleSessionPerUserEnabled",
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.CHECKBOX,
-  label: "User session limit",
-  text: "Limit users to a single active session",
+  label: $t('general.e3d3778ff240c2ad'),
+  text: $t('general.81b5834d6aec3959'),
   isFeatureEnabled: false,
   isDisabled: () => true,
 };
@@ -94,11 +95,11 @@ export const APPSMITH_USER_SESSION_TIMEOUT_SETTING: Setting = {
   name: "userSessionTimeoutInMinutes",
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.TEXTINPUT,
-  label: "Session Timeout",
+  label: $t('general.e819df2565b1a5c6'),
   subText:
     "* Default duration is 30 days. To change, enter the new duration in DD:HH:MM format",
   helpText:
-    "Users' session will automatically end if there's no activity for the specified duration, requiring them to log in again for security. The duration can be set between 1 minute and 30 days.",
+    $t('general.2b2d117b30a0f82c'),
   isFeatureEnabled: false,
   isEnterprise: true,
   isDisabled: () => true,
@@ -109,8 +110,8 @@ export const APPSMITH_IS_ATOMIC_PUSH_ALLOWED: Setting = {
   name: "isAtomicPushAllowed",
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.CHECKBOX,
-  label: "Allow atomic pushes",
-  text: "Git operations on this tenant should attempt to perform pushes atomically",
+  label: $t('general.1f6e48d89f0522a0'),
+  text: $t('general.8d50d01437d50f0b'),
 };
 
 export const APPSMITH_ALLOWED_FRAME_ANCESTORS_SETTING: Setting = {
@@ -118,30 +119,30 @@ export const APPSMITH_ALLOWED_FRAME_ANCESTORS_SETTING: Setting = {
   name: "APPSMITH_ALLOWED_FRAME_ANCESTORS",
   category: SettingCategories.GENERAL,
   controlType: SettingTypes.RADIO,
-  label: "Embed settings",
+  label: $t('general.a65f3737416956b7'),
   controlTypeProps: {
     options: [
       {
-        badge: "Not recommended",
+        badge: $t('general.f68220121d5534a2'),
         tooltip: {
           icon: "question-line",
           text: "Lets all domains, including malicious ones, embed your Appsmith apps. ",
-          linkText: "Find out why it's risky",
+          linkText: $t('general.78c8c05b98c5ae8e'),
           link: "https://docs.appsmith.com/getting-started/setup/instance-configuration/frame-ancestors#why-should-i-control-this",
         },
-        label: "Allow embedding everywhere",
+        label: $t('general.5fedcf92d06d00aa'),
         value: AppsmithFrameAncestorsSetting.ALLOW_EMBEDDING_EVERYWHERE,
       },
       {
-        label: "Limit embedding to certain URLs",
+        label: $t('general.df3ed0a010a7edd0'),
         value: AppsmithFrameAncestorsSetting.LIMIT_EMBEDDING,
-        nodeLabel: "You can add one or more URLs",
+        nodeLabel: $t('general.c664753ca516b5eb'),
         node: <TagInput input={{}} placeholder={""} type={"text"} />,
         nodeInputPath: "input",
         nodeParentClass: "tag-input",
       },
       {
-        label: "Disable embedding everywhere",
+        label: $t('general.d1cbf6df1ac610f9'),
         value: AppsmithFrameAncestorsSetting.DISABLE_EMBEDDING_EVERYWHERE,
       },
     ],
@@ -175,7 +176,7 @@ export const APPSMITH_ALLOWED_FRAME_ANCESTORS_SETTING: Setting = {
   },
   validate: (value: string) => {
     if (!value) {
-      return "This field cannot be empty";
+      return $t('general.8bd8751b233d0d01');
     }
   },
 };
@@ -185,7 +186,7 @@ export const config: AdminConfigType = {
   type: SettingCategories.GENERAL,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.GROUP,
-  title: "General",
+  title: $t('general.5cbe4154706ef887'),
   canSave: true,
   settings: [
     APPSMITH_INSTANCE_NAME_SETTING_SETTING,

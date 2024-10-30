@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { GitStatusData } from "reducers/uiReducers/gitSyncReducer";
 import { Icon, Text } from "@appsmith/ads";
@@ -48,12 +49,12 @@ const allStaticChangeDefs: Record<
   }),
   [StaticChangeKind.SETTINGS]: (status: GitStatusData) => ({
     condition: status.modified.includes("application.json"),
-    message: "Application settings modified",
+    message: $t('StaticChange.4502aafbaddbd286'),
     iconName: "settings-2-line",
   }),
   [StaticChangeKind.THEME]: (status: GitStatusData) => ({
     condition: status.modified.includes("theme.json"),
-    message: "Theme modified",
+    message: $t('StaticChange.5e154affb16f65a9'),
     iconName: "sip-line",
   }),
   [StaticChangeKind.PACKAGES]: (status: GitStatusData) => ({

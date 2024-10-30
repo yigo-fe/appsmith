@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { getAssetUrl } from "ee/utils/airgapHelpers";
 import { APPLICATIONS_URL, AUTH_LOGIN_URL } from "constants/routes";
 import { ANONYMOUS_USERNAME } from "constants/userConstants";
@@ -246,7 +247,7 @@ function EntitySearchBar(props: any) {
           {tenantConfig.brandLogoUrl && (
             <Link className="t--appsmith-logo" to={APPLICATIONS_URL}>
               <img
-                alt="Logo"
+                alt={$t('EntitySearchBar.b5bb0faf3674863a')}
                 className="h-6"
                 src={getAssetUrl(tenantConfig.brandLogoUrl)}
               />
@@ -289,7 +290,7 @@ function EntitySearchBar(props: any) {
               intent={"primary"}
               onClick={() => history.push(loginUrl)}
               size="small"
-              text="Sign In"
+              text=$t('EntitySearchBar.52e3ffd64746c053')
             />
           ) : (
             <div className="flex gap-2">

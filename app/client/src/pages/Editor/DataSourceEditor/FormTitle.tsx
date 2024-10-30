@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import styled from "styled-components";
 import React, { useCallback, useEffect, useState } from "react";
 import EditableText, {
@@ -86,9 +87,9 @@ function FormTitle(props: FormTitleProps) {
   const isInvalidDatasourceName = React.useCallback(
     (name: string): string | boolean => {
       if (!name || name.trim().length === 0) {
-        return "Please enter a valid name";
+        return $t('FormTitle.264e95affde29d0f');
       } else if (hasNameConflict(name)) {
-        return `${name} is already being used or is a restricted keyword.`;
+        return $t('FormTitle.ac82472c973e1c7d', {name: name});
       }
 
       return false;
@@ -98,8 +99,8 @@ function FormTitle(props: FormTitleProps) {
 
   const handleDatasourceNameChange = useCallback(
     (name: string) => {
-      // Check if the datasource name equals "Untitled datasource ABC" if no , use the name passed.
-      const datsourceName = name || "Untitled datasource ABC";
+      // Check if the datasource name equals $t('FormTitle.655f42668f05f2a1') if no , use the name passed.
+      const datsourceName = name || $t('FormTitle.655f42668f05f2a1');
 
       if (
         !isInvalidDatasourceName(name) &&
@@ -149,7 +150,7 @@ function FormTitle(props: FormTitleProps) {
         isInvalid={isInvalidDatasourceName}
         maxLength={30}
         onTextChanged={handleDatasourceNameChange}
-        placeholder="Datasource name"
+        placeholder=$t('FormTitle.3667636cb1f108d9')
         type="text"
         underline
         updating={saveStatus.isSaving}

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get, isEmpty, isUndefined, set } from "lodash";
 import type { JSActionEntity } from "ee/entities/DataTree/types";
 import type { ConfigTree, DataTree } from "entities/DataTree/dataTreeTypes";
@@ -232,7 +233,7 @@ export function saveResolvedFunctionsAndJSUpdates(
         entity: entity,
         propertyPath: entityName + ".body",
       },
-      message: "Start object with export default",
+      message: $t('index.cd3617f8e96ac2fc'),
     };
 
     dataTreeEvalRef.errors.push(errors);

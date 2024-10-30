@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { useDispatch } from "react-redux";
@@ -80,7 +81,7 @@ export type AppViewerProps = RouteComponentProps<BuilderRouteParams>;
 
 type Props = AppViewerProps & RouteComponentProps<AppViewerRouteParams>;
 
-const DEFAULT_FONT_NAME = "System Default";
+const DEFAULT_FONT_NAME = $t('index.b16824ec75f3ac9a');
 
 function AppViewer(props: Props) {
   const dispatch = useDispatch();

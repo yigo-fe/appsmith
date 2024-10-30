@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { ResponsiveBehavior } from "layoutSystems/common/utils/constants";
 import type { WidgetDefaultProps } from "WidgetProvider/constants";
 
 export const defaultsConfig = {
-  label: "Label",
+  label: $t('defaultsConfig.a09ce75146b9180d'),
   defaultCheckedState: true,
   widgetName: "Checkbox",
   version: 1,

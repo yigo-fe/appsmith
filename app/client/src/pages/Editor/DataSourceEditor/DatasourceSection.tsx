@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { Datasource } from "entities/Datasource";
 import { map, get, isArray } from "lodash";
@@ -235,11 +236,11 @@ export function renderDatasourceSection(
                       <Table
                         columns={[
                           {
-                            Header: "Name",
+                            Header: $t('DatasourceSection.85469b72bd63a91f'),
                             accessor: "name",
                           },
                           {
-                            Header: "Size",
+                            Header: $t('DatasourceSection.efc725a0a5f8332b'),
                             accessor: "size",
                             // TODO: Fix this the next time the file is edited
                             // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import {
   ReduxActionTypes,
@@ -113,7 +114,7 @@ export function* updateTenantConfigSaga(
       });
 
       if (action.payload.isOnlyTenantSettings) {
-        toast.show("Successfully saved", {
+        toast.show($t('tenantSagas.19132bdc2c956632'), {
           kind: "success",
         });
       }

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useContext, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -77,10 +78,9 @@ export function useSheets() {
     error: sheets?.error,
     options,
     isLoading,
-    labelText: "Select sheet from " + config.table,
+    labelText: $t('useSheets.777b69419fb1dd89') + config.table,
     label: (
-      <Label>
-        Select sheet from <Bold>{config.table}</Bold>
+      <Label>{$t('useSheets.777b69419fb1dd89')}<Bold>{config.table}</Bold>
       </Label>
     ),
     onSelect,

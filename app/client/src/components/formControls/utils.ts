@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { DATA_BIND_REGEX_GLOBAL } from "constants/BindingsConstants";
 import { isBoolean, get, set, isString } from "lodash";
 import type {
@@ -172,7 +173,7 @@ export const validate = (
       const value = _.get(values, fieldConfigProperty);
 
       if (_.isNil(value) || (isString(value) && _.isEmpty(value.trim()))) {
-        _.set(errors, fieldConfigProperty, "This field is required");
+        _.set(errors, fieldConfigProperty, $t('utils.0b7c81fe8a9f9061'));
       }
     }
   });

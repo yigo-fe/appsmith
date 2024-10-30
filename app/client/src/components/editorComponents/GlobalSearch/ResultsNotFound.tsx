@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import NoSearchDataImage from "assets/images/no_search_data.png";
@@ -53,7 +54,7 @@ function ResultsNotFound() {
 
   return (
     <Container>
-      <img alt="No data" src={NoSearchDataImage} />
+      <img alt={$t('ResultsNotFound.8e8571520f446cc2')} src={NoSearchDataImage} />
       <div className="no-data-title">{NO_SEARCH_DATA_TEXT()}</div>
       {!isAirgappedInstance && (
         <span className="discord">

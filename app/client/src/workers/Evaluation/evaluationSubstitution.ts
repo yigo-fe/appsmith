@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { getType, Types } from "utils/TypeHelpers";
 import _ from "lodash";
 import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
@@ -83,7 +84,7 @@ export const parameterSubstituteDynamicValues = (
   // if only one binding is provided in the whole string, we need to throw an error
   if (subSegments.length === 1 && subBindings.length === 1) {
     throw Error(
-      "Dynamic bindings in prepared statements are only used to provide parameters inside SQL query. No SQL query found.",
+      $t('evaluationSubstitution.825be29fd3595412'),
     );
   }
 

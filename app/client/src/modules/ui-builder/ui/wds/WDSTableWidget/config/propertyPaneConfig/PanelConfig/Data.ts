@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import {
@@ -19,25 +20,25 @@ import { composePropertyUpdateHook } from "widgets/WidgetUtils";
 import { CurrencyDropdownOptions } from "widgets/CurrencyInputWidget/component/CurrencyCodeDropdown";
 
 export default {
-  sectionName: "Data",
+  sectionName: $t('Data.783ab4594ede6a67'),
   children: [
     {
       propertyName: "columnType",
-      label: "Column type",
+      label: $t('Data.dd1f5ed82c55ae41'),
       helpText:
-        "Type of column to be shown corresponding to the data of the column",
+        $t('Data.6c372eef08dd382a'),
       controlType: "DROP_DOWN",
       options: [
         {
-          label: "Button",
+          label: $t('Data.f53b5b6315a19be5'),
           value: ColumnTypes.BUTTON,
         },
         {
-          label: "Number",
+          label: $t('Data.3e7387db134f932e'),
           value: ColumnTypes.NUMBER,
         },
         {
-          label: "Plain text",
+          label: $t('Data.ce123cd13d07c308'),
           value: ColumnTypes.TEXT,
         },
         {
@@ -45,7 +46,7 @@ export default {
           value: ColumnTypes.URL,
         },
         {
-          label: "Date",
+          label: $t('Data.9a55b1440fa2429a'),
           value: ColumnTypes.DATE,
         },
       ],
@@ -64,12 +65,12 @@ export default {
       },
     },
     {
-      helpText: "The alias that you use in selectedrow",
+      helpText: $t('Data.85d586f52e5fdc7b'),
       propertyName: "alias",
-      label: "Property Name",
+      label: $t('Data.835b1288451e3482'),
       controlType: "INPUT_TEXT",
       helperText: () =>
-        "Changing the name of the column overrides any changes to this field",
+        $t('Data.6d6240fbe092856e'),
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         const columnId = propertyPath.match(/primaryColumns\.(.*)\.alias/);
         let isDerivedProperty = false;
@@ -108,8 +109,8 @@ export default {
     },
     {
       propertyName: "displayText",
-      label: "Display text",
-      helpText: "The text to be displayed in the column",
+      label: $t('Data.9f66829626081b6f'),
+      helpText: $t('Data.ea4d5bbd8777fba7'),
       controlType: "INPUT_TEXT",
       hidden: (props: TableWidgetProps, propertyPath: string) => {
         const baseProperty = getBasePropertyPath(propertyPath);
@@ -123,16 +124,16 @@ export default {
     },
     {
       propertyName: "inputFormat",
-      label: "Date format",
-      helpText: "Date format of incoming data to the column",
+      label: $t('Data.fab8302d04483aa2'),
+      helpText: $t('Data.66b1df73ca44a658'),
       controlType: "DROP_DOWN",
       options: [
         {
-          label: "UNIX timestamp (s)",
+          label: $t('Data.f2d3e5b7e4b2e0bc'),
           value: DateInputFormat.EPOCH,
         },
         {
-          label: "UNIX timestamp (ms)",
+          label: $t('Data.8848dc7404239852'),
           value: DateInputFormat.MILLISECONDS,
         },
         {
@@ -253,17 +254,17 @@ export default {
     },
     {
       propertyName: "outputFormat",
-      label: "Display format",
-      helpText: "Date format to be shown to users",
+      label: $t('Data.4cb089748f4269d2'),
+      helpText: $t('Data.7e106c61abc587e5'),
       controlType: "DROP_DOWN",
       isJSConvertible: true,
       options: [
         {
-          label: "UNIX timestamp (s)",
+          label: $t('Data.f2d3e5b7e4b2e0bc'),
           value: DateInputFormat.EPOCH,
         },
         {
-          label: "UNIX timestamp (ms)",
+          label: $t('Data.8848dc7404239852'),
           value: DateInputFormat.MILLISECONDS,
         },
         {
@@ -382,13 +383,13 @@ export default {
       isTriggerProperty: false,
     },
     {
-      helpText: "Changes the type of currency",
+      helpText: $t('Data.60f6bf8799ce944f'),
       propertyName: "currencyCode",
-      label: "Currency",
+      label: $t('Data.a6740427efe8b60a'),
       enableSearch: true,
       dropdownHeight: "156px",
       controlType: "DROP_DOWN",
-      searchPlaceholderText: "Search by code or name",
+      searchPlaceholderText: $t('Data.dc880338de076b5f'),
       options: CurrencyDropdownOptions,
       virtual: true,
       isJSConvertible: true,
@@ -411,9 +412,9 @@ export default {
       dependencies: ["primaryColumns", "columnType"],
     },
     {
-      helpText: "No. of decimals in currency input",
+      helpText: $t('Data.5ee72d5a77dd8ffd'),
       propertyName: "decimals",
-      label: "Decimals allowed",
+      label: $t('Data.35b79355249040f7'),
       controlType: "DROP_DOWN",
       options: [
         {
@@ -451,8 +452,8 @@ export default {
     },
     {
       propertyName: "thousandSeparator",
-      helpText: "formats the currency with a thousand separator",
-      label: "Thousand separator",
+      helpText: $t('Data.a49f3851acf1b2de'),
+      label: $t('Data.2b26b1429b4bb065'),
       controlType: "SWITCH",
       dependencies: ["primaryColumns", "columnType"],
       isJSConvertible: true,
@@ -468,16 +469,16 @@ export default {
     },
     {
       propertyName: "notation",
-      helpText: "Displays the currency in standard or compact notation",
-      label: "Notation",
+      helpText: $t('Data.bc9a0d44a6c2f60a'),
+      label: $t('Data.1357b8459c845df4'),
       controlType: "DROP_DOWN",
       options: [
         {
-          label: "Standard",
+          label: $t('Data.6b47a7718e987511'),
           value: "standard",
         },
         {
-          label: "Compact",
+          label: $t('Data.00c8228885b6ce8d'),
           value: "compact",
         },
       ],

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   HTTP_PROTOCOL_INPUT_PLACEHOLDER,
   createMessage,
@@ -13,34 +14,34 @@ export default [
     id: 1,
     children: [
       {
-        label: "Run API on page load",
+        label: $t('ApiSettingsConfig.dd9f58931691be09'),
         configProperty: "executeOnLoad",
         controlType: "SWITCH",
       },
       {
-        label: "Request confirmation before running API",
+        label: $t('ApiSettingsConfig.fe7ebc6a234eebb5'),
         configProperty: "confirmBeforeExecute",
         controlType: "SWITCH",
         tooltipText:
-          "Ask confirmation from the user each time before refreshing data",
+          $t('ApiSettingsConfig.fd9351347efeed0e'),
       },
       {
-        label: "Encode query params",
+        label: $t('ApiSettingsConfig.af607447918e7020'),
         configProperty: "actionConfiguration.encodeParamsToggle",
         controlType: "SWITCH",
         tooltipText:
-          "Encode query params for all APIs. Also encode form body when Content-Type header is set to x-www-form-encoded",
+          $t('ApiSettingsConfig.b97be24fcbe7a527'),
       },
       {
-        label: "Smart JSON substitution",
+        label: $t('ApiSettingsConfig.8b4ee6cadcfd10d8'),
         configProperty: "actionConfiguration.pluginSpecifiedTemplates[0].value",
         controlType: "SWITCH",
         tooltipText:
-          "Turning on this property fixes the JSON substitution of bindings in API body by adding/removing quotes intelligently and reduces developer errors",
+          $t('ApiSettingsConfig.7471e8183ab43061'),
         initialValue: true,
       },
       {
-        label: "Protocol",
+        label: $t('ApiSettingsConfig.71b82df46c0e0b3a'),
         configProperty: "actionConfiguration.httpVersion",
         name: "actionConfiguration.httpVersion",
         controlType: "DROP_DOWN",
@@ -49,8 +50,8 @@ export default [
         placeholder: createMessage(HTTP_PROTOCOL_INPUT_PLACEHOLDER),
       },
       {
-        label: "API timeout (in milliseconds)",
-        subtitle: "Maximum time after which the API will return",
+        label: $t('ApiSettingsConfig.c4e8ce4edcafe885'),
+        subtitle: $t('ApiSettingsConfig.76903dd923c597df'),
         controlType: "INPUT_TEXT",
         configProperty: "actionConfiguration.timeoutInMillisecond",
         dataType: "NUMBER",

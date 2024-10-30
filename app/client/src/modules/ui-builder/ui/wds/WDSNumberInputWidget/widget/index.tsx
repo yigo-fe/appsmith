@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 import { WDSInputWidget } from "modules/ui-builder/ui/wds/WDSInputWidget";
 import { NumberInputIcon, NumberInputThumbnail } from "appsmith-icons";
@@ -12,7 +13,7 @@ class WDSNumberInputWidget extends WDSInputWidget {
       ...super.getConfig(),
       displayOrder: undefined,
       tags: [WIDGET_TAGS.INPUTS],
-      name: "Number Input",
+      name: $t('index.69b2884fef8fea5d'),
     };
   }
 

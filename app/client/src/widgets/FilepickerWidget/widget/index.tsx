@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Uppy } from "@uppy/core";
 import type Dashboard from "@uppy/dashboard";
 import type {
@@ -57,7 +58,7 @@ class FilePickerWidget extends BaseWidget<
       files: [],
       selectedFiles: [],
       allowedFileTypes: [],
-      label: "Select Files",
+      label: $t('index.b74e01ffa09c2fb4'),
       columns: 16,
       maxNumFiles: 1,
       maxFileSize: 5,
@@ -99,7 +100,7 @@ class FilePickerWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Filepicker widget is used to allow users to upload files from their local machines to any cloud storage via API. Cloudinary and Amazon S3 have simple APIs for cloud storage uploads",
+        $t('index.8b2e440b2fc199f8'),
       "!url": "https://docs.appsmith.com/widget-reference/filepicker",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       files: "[$__file__$]",
@@ -110,14 +111,14 @@ class FilePickerWidget extends BaseWidget<
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.073b7fd377b3a645'),
         children: [
           {
             propertyName: "label",
-            label: "Label",
+            label: $t('index.a7e3a674bf9533fc'),
             controlType: "INPUT_TEXT",
-            helpText: "Sets the label of the button",
-            placeholderText: "Enter label text",
+            helpText: $t('index.76aba83410b9e083'),
+            placeholderText: $t('index.7bf9b3597173f5a4'),
             inputType: "TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -125,11 +126,11 @@ class FilePickerWidget extends BaseWidget<
           },
           {
             propertyName: "maxNumFiles",
-            label: "Max No. files",
+            label: $t('index.4b36f63e90747a60'),
             helpText:
-              "Sets the maximum number of files that can be uploaded at once",
+              $t('index.93150dd945f7e2d2'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter no. of files",
+            placeholderText: $t('index.cef09cafcfa4ff60'),
             inputType: "INTEGER",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -137,10 +138,10 @@ class FilePickerWidget extends BaseWidget<
           },
           {
             propertyName: "maxFileSize",
-            helpText: "Sets the maximum size of each file that can be uploaded",
-            label: "Max file size(Mb)",
+            helpText: $t('index.4c46e840562fa1a5'),
+            label: $t('index.b4a466f2f2be05cf'),
             controlType: "INPUT_TEXT",
-            placeholderText: "File size in mb",
+            placeholderText: $t('index.b4a1d8da39fd0e78'),
             inputType: "INTEGER",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -156,18 +157,18 @@ class FilePickerWidget extends BaseWidget<
           },
           {
             propertyName: "allowedFileTypes",
-            helpText: "Restricts the type of files which can be uploaded",
-            label: "Allowed file types",
+            helpText: $t('index.8b3a0c6638ec9939'),
+            label: $t('index.9d1edcf996bc1ca5'),
             controlType: "DROP_DOWN",
             isMultiSelect: true,
-            placeholderText: "Select file types",
+            placeholderText: $t('index.f7b932444687b4b2'),
             options: [
               {
-                label: "Any File",
+                label: $t('index.20cda324f0f9d226'),
                 value: "*",
               },
               {
-                label: "Images",
+                label: $t('index.89911ed7bbf2e98c'),
                 value: "image/*",
               },
               {
@@ -414,7 +415,7 @@ class FilePickerWidget extends BaseWidget<
         },
         locale: {
           strings: {
-            closeModal: "Close",
+            closeModal: $t('index.62eca15398de5e17'),
           },
         },
       })

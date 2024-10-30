@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { MutableRefObject } from "react";
 import { useState } from "react";
 import React, { useEffect, useRef } from "react";
@@ -139,7 +140,7 @@ export function PeekOverlayPopUpContent(
         style={{
           height: "24px",
           color: "var(--appsmith-color-black-700)",
-          padding: "4px 0px 4px 12px",
+          padding: $t('PeekOverlayPopup.738a5ae04063cf51'),
           fontSize: "10px",
         }}
       >
@@ -151,7 +152,7 @@ export function PeekOverlayPopUpContent(
         ref={dataWrapperRef}
         style={{
           minHeight: "20px",
-          padding: "2px 0px 2px 12px",
+          padding: $t('PeekOverlayPopup.d14487e1336f23b9'),
           fontSize: "10px",
         }}
       >

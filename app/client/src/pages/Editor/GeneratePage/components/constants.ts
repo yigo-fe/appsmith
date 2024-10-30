@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { DropdownOption } from "@appsmith/ads-old";
 import type { DatasourceTable } from "entities/Datasource";
 import { PluginPackageName } from "entities/Action";
@@ -53,5 +54,5 @@ export const ALLOWED_SEARCH_DATATYPE = [
   "char",
   "varchar",
   "character",
-  "text string",
+  $t('constants.de8445f6bd7fda3b'),
 ];

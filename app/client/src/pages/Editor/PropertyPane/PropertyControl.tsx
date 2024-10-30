@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import _, { get, isFunction, merge } from "lodash";
 import equal from "fast-deep-equal/es6";
@@ -336,7 +337,7 @@ const PropertyControl = memo((props: Props) => {
         );
         AppsmithConsole.info({
           logType: LOG_TYPE.WIDGET_UPDATE,
-          text: "Widget properties were updated",
+          text: $t('PropertyControl.0a3364f9b295d526'),
           source: {
             type: ENTITY_TYPE.WIDGET,
             name: widgetProperties.widgetName,
@@ -371,7 +372,7 @@ const PropertyControl = memo((props: Props) => {
 
         AppsmithConsole.info({
           logType: LOG_TYPE.WIDGET_UPDATE,
-          text: "Widget properties were updated",
+          text: $t('PropertyControl.0a3364f9b295d526'),
           source: {
             type: ENTITY_TYPE.WIDGET,
             name: widgetProperties.widgetName,
@@ -786,7 +787,7 @@ const PropertyControl = memo((props: Props) => {
     if (widgetProperties.isPropertyDynamicTrigger) {
       config.validationMessage = "";
       config.expected = {
-        example: 'showAlert("There was an error!", "error")',
+        example: 'showAlert($t('PropertyControl.d89f6b9153531d31'), "error")',
         type: "Function",
         autocompleteDataType: AutocompleteDataType.FUNCTION,
       };
@@ -884,7 +885,7 @@ const PropertyControl = memo((props: Props) => {
 
     const helpText =
       config.controlType === "ACTION_SELECTOR"
-        ? `Configure one or chain multiple actions. ${props.helpText}. All nested actions run at the same time.`
+        ? $t('PropertyControl.438dbf23067d8128', {props_helpText: props.helpText})
         : props.helpText;
 
     if (config.controlType === "ACTION_SELECTOR") {
@@ -952,7 +953,7 @@ const PropertyControl = memo((props: Props) => {
                       resetEditing();
                     }
                   }}
-                  placeholder="Enter label"
+                  placeholder={$t('PropertyControl.076e4f3399d13b8f')}
                   value={editedName}
                 />
               </div>

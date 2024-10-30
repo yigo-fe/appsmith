@@ -1,15 +1,16 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { ModalWidgetProps } from "../../widget/types";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.07af7a52d480ec48'),
     children: [
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.32c598d1bdebc7fe'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.0039a108802403b7'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -18,16 +19,16 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "size",
-        label: "Size",
-        helpText: "Size of the modal",
+        label: $t('contentConfig.d7af982193a0ae5b'),
+        helpText: $t('contentConfig.a59feb05a900f6a9'),
         controlType: "DROP_DOWN",
         options: [
           {
-            label: "Small",
+            label: $t('contentConfig.5ebdb5cbe42dbecc'),
             value: "small",
           },
-          { label: "Medium", value: "medium" },
-          { label: "Large", value: "large" },
+          { label: $t('contentConfig.c368a336b5523c86'), value: "medium" },
+          { label: $t('contentConfig.9279ce77ce0270e4'), value: "large" },
         ],
         isBindProperty: false,
         isTriggerProperty: false,
@@ -35,44 +36,44 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Header",
+    sectionName: $t('contentConfig.8451f080b09ecd7b'),
     children: [
       {
         propertyName: "showHeader",
-        label: "Header",
-        helpText: "Show or hide the header",
+        label: $t('contentConfig.8451f080b09ecd7b'),
+        helpText: $t('contentConfig.5904025f7c1e6b61'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
       },
       {
         propertyName: "title",
-        label: "Title",
-        helpText: "Title of the modal",
+        label: $t('contentConfig.c431969c01b2c355'),
+        helpText: $t('contentConfig.a4cea120cf795aa5'),
         controlType: "INPUT_TEXT",
         hidden: (props: ModalWidgetProps) => !props.showHeader,
         dependencies: ["showHeader"],
         isBindProperty: false,
         isTriggerProperty: false,
-        placeholderText: "Record details",
+        placeholderText: $t('contentConfig.9bd347af09b03351'),
       },
     ],
   },
   {
-    sectionName: "Footer",
+    sectionName: $t('contentConfig.6fb841223268dcdb'),
     children: [
       {
         propertyName: "showFooter",
-        label: "Footer",
-        helpText: "Show or hide the footer",
+        label: $t('contentConfig.6fb841223268dcdb'),
+        helpText: $t('contentConfig.e23d702c30a900b2'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
       },
       {
         propertyName: "showSubmitButton",
-        label: "Submit",
-        helpText: "Show or hide the submit button",
+        label: $t('contentConfig.3a177e2c286a2e45'),
+        helpText: $t('contentConfig.735b00fc308da2ea'),
         controlType: "SWITCH",
         hidden: (props: ModalWidgetProps) => !props.showFooter,
         dependencies: ["showFooter"],
@@ -81,35 +82,35 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "submitButtonText",
-        label: "Submit Button Text",
-        helpText: "Label for the Submit Button",
+        label: $t('contentConfig.7848992e1db9fd65'),
+        helpText: $t('contentConfig.f42dbf5d7bfc01a0'),
         controlType: "INPUT_TEXT",
         hidden: (props: ModalWidgetProps) =>
           !props.showSubmitButton || !props.showFooter,
         dependencies: ["showSubmitButton", "showFooter"],
         isBindProperty: false,
         isTriggerProperty: false,
-        placeholderText: "Submit",
+        placeholderText: $t('contentConfig.3a177e2c286a2e45'),
       },
 
       {
         propertyName: "cancelButtonText",
-        label: "Cancel Button Text",
-        helpText: "Label for the Cancel Button",
+        label: $t('contentConfig.f975efa0a41d01ab'),
+        helpText: $t('contentConfig.7ebfe57fc4faabbc'),
         controlType: "INPUT_TEXT",
         hidden: (props: ModalWidgetProps) => !props.showFooter,
         dependencies: ["showCancelButton", "showFooter"],
         isBindProperty: false,
         isTriggerProperty: false,
-        placeholderText: "Cancel",
+        placeholderText: $t('contentConfig.b77814ddc651defe'),
       },
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.2d52570b724ae8da'),
     children: [
       {
-        helpText: "Trigger an action when the modal is closed",
+        helpText: $t('contentConfig.021651435975e44a'),
         propertyName: "onClose",
         label: "onClose",
         controlType: "ACTION_SELECTOR",
@@ -119,9 +120,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "closeOnSubmit",
-        label: "Close on submit",
+        label: $t('contentConfig.5d24fc0911454aed'),
         helpText:
-          "Set the modal to automatically close on submit button click. Note: If an action is configured for the onSubmit action, it would be ideal to toggle this off and configure a 'Close Modal' action in the onSuccess and/or onFailure callback of the onSubmit action",
+          $t('contentConfig.8dfaef149709e37c'),
         controlType: "SWITCH",
         hidden: (props: ModalWidgetProps) =>
           !props.showFooter || !props.showSubmitButton,
@@ -130,7 +131,7 @@ export const propertyPaneContentConfig = [
         isTriggerProperty: false,
       },
       {
-        helpText: "Trigger an action when the submit button is pressed",
+        helpText: $t('contentConfig.dff463987e60ae9c'),
         propertyName: "onSubmit",
         hidden: (props: ModalWidgetProps) =>
           !props.showFooter || !props.showSubmitButton,

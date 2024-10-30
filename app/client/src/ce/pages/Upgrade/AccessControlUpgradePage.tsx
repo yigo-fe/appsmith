@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { Carousel, Header } from "./types";
 import UpgradePage from "./UpgradePage";
@@ -23,7 +24,7 @@ import { RampFeature, RampSection } from "utils/ProductRamps/RampsControlList";
 export function AccessControlUpgradePage() {
   const { onUpgrade } = useOnUpgrade({
     logEventName: "GAC_UPGRADE_CLICK_ADMIN_SETTINGS",
-    logEventData: { source: "Granular Access Control" },
+    logEventData: { source: $t('AccessControlUpgradePage.7d22ee6c66c361da') },
     featureName: RampFeature.Gac,
     sectionName: RampSection.AdminSettings,
   });

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Log } from "entities/AppsmithConsole";
 import {
   getModuleInstanceInvalidErrors,
@@ -223,11 +224,11 @@ export function* evalErrorHandler(
           // Add more info about node for the toast
           const { dependencyMap, diffs, entityType, node } = error.context;
 
-          toast.show(`${error.message} Node was: ${node}`, {
+          toast.show($t('EvalErrorHandler.198967fdc84d4316', {error_message: error.message,node: node}), {
             kind: "error",
           });
           AppsmithConsole.error({
-            text: `${error.message} Node was: ${node}`,
+            text: $t('EvalErrorHandler.198967fdc84d4316', {error_message: error.message,node: node}),
           });
 
           if (error.context.logToSentry) {

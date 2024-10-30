@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, {
   useCallback,
   useEffect,
@@ -193,7 +194,7 @@ function StatusIcon(props: {
 
   if (status === InstallState.Failed)
     return (
-      <Tooltip content="Download failed, please try again." trigger="hover">
+      <Tooltip content={$t('Installer.0e8d2d1b78fd43f6')} trigger="hover">
         <Icon className="failed" name="warning-line" size="md" />
       </Tooltip>
     );
@@ -315,7 +316,7 @@ export function Installer() {
 
     return {
       isValid,
-      message: isValid ? "" : "Please enter a valid URL",
+      message: isValid ? "" : $t('Installer.009ddb01e5fefbaa'),
     };
   }, []);
 
@@ -371,7 +372,7 @@ export function Installer() {
                 data-testid="library-url"
                 errorMessage={errorMessage}
                 isValid={isValid}
-                label={"Library URL"}
+                label={$t('Installer.6a065b0b9b8390bf')}
                 labelPosition="top"
                 onChange={updateURL}
                 placeholder="https://cdn.jsdelivr.net/npm/example@1.1.1/example.min.js"

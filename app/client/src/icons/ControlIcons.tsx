@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 // TODO (tanvi): Figure out why this file is still here and if it's safe to delete it.
 
 import type { JSXElementConstructor } from "react";
@@ -297,7 +298,7 @@ export const ControlIcons: {
   PLAY_VIDEO: (props: IconProps & React.HTMLAttributes<HTMLDivElement>) => (
     <IconWrapper {...props}>
       <img
-        alt="Datasource"
+        alt={$t('ControlIcons.cf61fbd5a21ca21c')}
         src={PlayIcon}
         style={{ height: "30px", width: "30px" }}
       />

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   FlattenedWidgetProps,
   WidgetBlueprint,
@@ -234,7 +235,7 @@ export function* addNewAnvilWidgetToDSL(
   // In this case we may listen to `WIDGET_CHILD_ADDED` action.
   // https://github.com/appsmithorg/appsmith/issues/35161
   AppsmithConsole.info({
-    text: "Widget was created",
+    text: $t('helpers.24bf13ae0e5057d4'),
     source: {
       type: ENTITY_TYPE.WIDGET,
       id: widgetId,

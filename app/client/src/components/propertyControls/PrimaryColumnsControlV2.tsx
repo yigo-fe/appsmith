@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AppState } from "ee/reducers";
 import * as Sentry from "@sentry/react";
 import type { CodeEditorExpected } from "components/editorComponents/CodeEditor";
@@ -221,7 +222,7 @@ class PrimaryColumnsControlV2 extends BaseControl<ControlProps, State> {
               renderComponent={(props: any) =>
                 DraggableListCard({
                   ...props,
-                  placeholder: "Column title",
+                  placeholder: $t('PrimaryColumnsControlV2.074e19ae1ac44a5a'),
                 })
               }
               toggleCheckbox={this.toggleCheckbox}

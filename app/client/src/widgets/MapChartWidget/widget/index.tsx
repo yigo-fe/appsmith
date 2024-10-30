@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { Suspense, lazy } from "react";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -79,7 +80,7 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Map Chart", // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
+      name: $t('index.2abddbd244811888'), // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.DISPLAY],
@@ -96,7 +97,7 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
       widgetName: "MapChart",
       version: 1,
       mapType: MapTypes.WORLD,
-      mapTitle: "Global Population",
+      mapTitle: $t('index.65e228a8ce0e9385'),
       showLabels: true,
       data: dataSetForWorld,
       colorRange: [
@@ -153,7 +154,7 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Map Chart widget shows the graphical representation of your data on the map.",
+        $t('index.eba99ca7d8e09d3c'),
       "!url": "https://docs.appsmith.com/widget-reference/map-chart",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       selectedDataPoint: {
@@ -180,44 +181,44 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.52a0dfc53814028f'),
         children: [
           {
-            helpText: "Sets the map type",
+            helpText: $t('index.6d3ff98a832fc3f5'),
             propertyName: "mapType",
-            label: "Map Type",
+            label: $t('index.d0adf5772d457c30'),
             controlType: "DROP_DOWN",
             options: [
               {
-                label: "World",
+                label: $t('index.d36b3bd6b1d48aae'),
                 value: MapTypes.WORLD,
               },
               {
-                label: "World with Antarctica",
+                label: $t('index.4a7d97c365f1b7c2'),
                 value: MapTypes.WORLD_WITH_ANTARCTICA,
               },
               {
-                label: "Europe",
+                label: $t('index.6b7b253523f7a35e'),
                 value: MapTypes.EUROPE,
               },
               {
-                label: "North America",
+                label: $t('index.b37189e900698de1'),
                 value: MapTypes.NORTH_AMERICA,
               },
               {
-                label: "South America",
+                label: $t('index.2263b30dc6ae7e82'),
                 value: MapTypes.SOURTH_AMERICA,
               },
               {
-                label: "Asia",
+                label: $t('index.4e9288a5849f969e'),
                 value: MapTypes.ASIA,
               },
               {
-                label: "Oceania",
+                label: $t('index.f82d48c7e66fc882'),
                 value: MapTypes.OCEANIA,
               },
               {
-                label: "Africa",
+                label: $t('index.e36f00fc068dcb13'),
                 value: MapTypes.AFRICA,
               },
               {
@@ -247,9 +248,9 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
             },
           },
           {
-            helpText: "Populates the map with the data",
+            helpText: $t('index.79d8e3e3675ae94a'),
             propertyName: "data",
-            label: "Chart Data",
+            label: $t('index.63912d8d827dedd8'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -288,13 +289,13 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.ae132ce1cdacfeaa'),
         children: [
           {
-            helpText: "Sets the map title",
-            placeholderText: "Enter title",
+            helpText: $t('index.823f39563fc1ab00'),
+            placeholderText: $t('index.73267fec2b493313'),
             propertyName: "mapTitle",
-            label: "Title",
+            label: $t('index.ae3a1a42f3e03604'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -302,8 +303,8 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.9b1a402204976d09'),
+            helpText: $t('index.24202ed43d289be2'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -312,8 +313,8 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
           },
           {
             propertyName: "showLabels",
-            label: "Show Labels",
-            helpText: "Sets whether entity labels will be shown or hidden",
+            label: $t('index.ed724b1c48f5064e'),
+            helpText: $t('index.008940c41bf56777'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -323,10 +324,10 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.ba7264223c9e1214'),
         children: [
           {
-            helpText: "when the map chart data point is clicked",
+            helpText: $t('index.aa512094dbc03101'),
             propertyName: "onDataPointClick",
             label: "onDataPointClick",
             controlType: "ACTION_SELECTOR",
@@ -351,15 +352,15 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.ae132ce1cdacfeaa'),
         children: [
           {
             helpText:
-              "Defines ranges for categorizing entities on a map based on their data values.",
+              $t('index.2832319177b95ec8'),
             propertyName: "colorRange",
-            label: "Color Range",
+            label: $t('index.74d1cac36a227432'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Color range object",
+            placeholderText: $t('index.4183acf0e45d396a'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -393,7 +394,7 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
                         type: ValidationTypes.TEXT,
                         params: {
                           expected: {
-                            type: "Hex color (6-digit)",
+                            type: $t('index.2bc2949f12f825db'),
                             example: "#FF04D7",
                             autocompleteDataType: AutocompleteDataType.STRING,
                           },
@@ -418,13 +419,13 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.6209db0f561270c9'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.ed843f5584d2a31f'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.1aa65c03901a977c'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -433,9 +434,9 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.db3a0e7b0db40288'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.f1d1f7231f7c1cc0'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -469,7 +470,7 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
         return [
           {
             message:
-              "Map chart widget switched from using Fusion chart library to Echarts. Please verify that the chart is displaying properly",
+              $t('index.5a210cdc4c49ac89'),
           },
         ];
       },
@@ -505,7 +506,7 @@ class MapChartWidget extends BaseWidget<MapChartWidgetProps, WidgetState> {
           caption={mapTitle || ""}
           colorRange={colorRange}
           data={data}
-          fontFamily={this.props.fontFamily ?? "Nunito Sans"}
+          fontFamily={this.props.fontFamily ?? $t('index.1879b1421372ae17')}
           height={this.props.componentHeight}
           isVisible={isVisible}
           onDataPointClick={this.handleDataPointClick}

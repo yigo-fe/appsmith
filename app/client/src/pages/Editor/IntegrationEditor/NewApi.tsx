@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback, useEffect, useState } from "react";
 import { connect, useSelector } from "react-redux";
 import styled from "styled-components";
@@ -263,7 +264,7 @@ function NewApiScreen(props: Props) {
             >
               <CardContentWrapper data-testid="newapi-datasource-content-wrapper">
                 <img
-                  alt="New"
+                  alt={$t('NewApi.b18468b1bef77ea8')}
                   className="curlImage t--plusImage content-icon"
                   src={PlusLogo}
                 />
@@ -278,7 +279,7 @@ function NewApiScreen(props: Props) {
             >
               <CardContentWrapper>
                 <img
-                  alt="New"
+                  alt=$t('NewApi.b18468b1bef77ea8')
                   className="curlImage t--plusImage content-icon"
                   src={GraphQLLogo}
                 />
@@ -292,7 +293,7 @@ function NewApiScreen(props: Props) {
               >
                 <CardContentWrapper>
                   <img
-                    alt="OAuth2"
+                    alt={$t('NewApi.bd096f9173100d10')}
                     className="authApiImage t--authApiImage content-icon"
                     src={getAssetUrl(authApiPlugin.iconLocation)}
                   />

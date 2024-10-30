@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { memo, useMemo, useCallback, useEffect, useRef } from "react";
 import styled from "styled-components";
 import type { AppState } from "ee/reducers";
@@ -215,8 +216,8 @@ function OptionNode(props: any) {
 const TriggerNode = (props: TriggerNodeProps) => {
   const ENTITY = props.entityCount > 1 ? "entities" : "entity";
   const tooltipText = !!props.entityCount
-    ? `See ${props.connectionType.toLowerCase()} connections`
-    : `No ${props.connectionType.toLowerCase()} connections`;
+    ? $t('PropertyPaneConnections.c20a40837e4f5cc8', {props_connectionType_toLowerCase__: props.connectionType.toLowerCase()})
+    : $t('PropertyPaneConnections.c92cec4471085d92', {props_connectionType_toLowerCase__: props.connectionType.toLowerCase()});
 
   const onClick = () => {
     AnalyticsUtil.logEvent("ASSOCIATED_ENTITY_DROPDOWN_CLICK");
@@ -237,7 +238,7 @@ const TriggerNode = (props: TriggerNodeProps) => {
         size="sm"
         startIcon={props.iconAlignment === "LEFT" ? "right-arrow" : ""}
       >
-        {props.entityCount ? `${props.entityCount} ${ENTITY}` : "No entity"}
+        {props.entityCount ? `${props.entityCount} ${ENTITY}` : $t('PropertyPaneConnections.28a2838fee7fa36b')}
       </Button>
     </Tooltip>
   );

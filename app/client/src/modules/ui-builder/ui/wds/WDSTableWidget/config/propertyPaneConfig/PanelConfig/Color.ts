@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { COLORS } from "@appsmith/wds";
 import capitalize from "lodash/capitalize";
@@ -8,17 +9,17 @@ import {
 import { showByColumnType } from "modules/ui-builder/ui/wds/WDSTableWidget/widget/propertyUtils";
 
 export default {
-  sectionName: "Color",
+  sectionName: $t('Color.9d8c1042809a32a3'),
   children: [
     {
       propertyName: "cellColor",
-      label: "Cell color",
+      label: $t('Color.184143641463c0f0'),
       controlType: "DROP_DOWN",
       fullWidth: true,
-      helpText: "Sets the semantic color of the cell",
+      helpText: $t('Color.bc55f4a1c148a27a'),
       options: [
         {
-          label: "Default",
+          label: $t('Color.b72ed93b6effa6e6'),
           value: "default",
         },
         ...Object.values(COLORS).map((semantic) => ({
@@ -42,10 +43,10 @@ export default {
     },
     {
       propertyName: "buttonColor",
-      label: "Button color",
+      label: $t('Color.65d8ed38c2d76b2a'),
       controlType: "DROP_DOWN",
       fullWidth: true,
-      helpText: "Sets the semantic color of the button",
+      helpText: $t('Color.09cb3bd11651e95b'),
       options: Object.values(COLORS).map((semantic) => ({
         label: capitalize(semantic),
         value: semantic,

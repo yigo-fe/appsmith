@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Text } from "@appsmith/ads";
 import PreviewBox from "./PreviewBox";
@@ -13,7 +14,7 @@ const NotFoundPreview = (props: PreviewsProps) => {
       style={{
         backgroundColor: shades?.background,
       }}
-      title="404 page"
+      title=$t('NotFoundPreview.3774aec55b1c8137')
     >
       <ContentBox className="flex flex-col items-center justify-center bg-white border-t border-l border-r w-7/12 h-4/5">
         <div className="flex items-center justify-center h-8 font-semibold">

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 
 export function defaultOptionValidation(
@@ -19,7 +20,7 @@ export function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('defaultOptionValidation.49532d536de9312e'),
         },
       ],
     };
@@ -33,7 +34,7 @@ export function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('defaultOptionValidation.49532d536de9312e'),
         },
       ],
     };
@@ -63,7 +64,7 @@ export function defaultOptionValidation(
       messages: [
         {
           name: "ValidationError",
-          message: `Default value is missing in options. Please update the value.`,
+          message: $t('defaultOptionValidation.9a78c692bac3e94a'),
         },
       ],
     };

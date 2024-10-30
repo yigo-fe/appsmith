@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import moment from "moment";
@@ -113,8 +114,8 @@ const ReadMore = ({
       startIcon=""
     >
       {currentState === ReleaseComponentViewState.collapsed
-        ? "Read more"
-        : "Read less"}
+        ? $t('ReleaseComponent.5c59a7924e69f83b')
+        : $t('ReleaseComponent.f2fb1564fd5fb54c')}
     </Button>
   </ReadMoreContainer>
 );

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import clsx from "classnames";
@@ -34,7 +35,7 @@ export const FileTab = ({
     >
       {children}
       <Styled.CloseButton
-        aria-label="Close tab"
+        aria-label=$t('FileTab.d0077cceb0e1144f')
         className="tab-close"
         data-testid={DATA_TEST_ID.CLOSE_BUTTON}
         onClick={onClose}

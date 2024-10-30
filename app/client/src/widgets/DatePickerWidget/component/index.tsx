@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import {
@@ -157,7 +158,7 @@ class DatePickerComponent extends React.Component<
               minDate={minDate}
               onChange={this.onDateSelected}
               parseDate={this.parseDate}
-              placeholder={"Select Date"}
+              placeholder={$t('index.4936bdee96a799b3')}
               showActionsBar
               timePrecision={TimePrecision.MINUTE}
               value={value}

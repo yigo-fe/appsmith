@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { compact, isArray, isNumber } from "lodash";
 import React from "react";
@@ -84,7 +85,7 @@ export function optionsCustomValidation(
         message = {
           name: "ValidationError",
           message:
-            "Invalid entry at index: " + i + ". Missing required key: label",
+            $t('index.cb86b8f5fb22c19f') + i + ". Missing required key: label",
         };
         break;
       }
@@ -99,7 +100,7 @@ export function optionsCustomValidation(
         message = {
           name: "ValidationError",
           message:
-            "Invalid entry at index: " +
+            $t('index.cb86b8f5fb22c19f') +
             i +
             ". Value of key: label is invalid: This value does not evaluate to type string",
         };
@@ -111,7 +112,7 @@ export function optionsCustomValidation(
         _isValid = false;
         message = {
           name: "TypeError",
-          message: "All value properties in options must have the same type",
+          message: $t('index.e004aa5f62b016ec'),
         };
         break;
       }
@@ -179,7 +180,7 @@ function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('index.3aea79c0282daa5e'),
         },
       ],
     };
@@ -193,7 +194,7 @@ function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('index.3aea79c0282daa5e'),
         },
       ],
     };
@@ -210,7 +211,7 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Radio Group",
+      name: $t('index.28eef5413f14dbcc'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.TOGGLES],
@@ -233,14 +234,14 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
       rows: 6,
       columns: 20,
       animateLoading: true,
-      label: "Label",
+      label: $t('index.dc2c0c68f2a8552c'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelTextSize: "0.875rem",
       labelWidth: 5,
       options: [
-        { label: "Yes", value: "Y" },
-        { label: "No", value: "N" },
+        { label: $t('index.77f396ba4bd1e12e'), value: "Y" },
+        { label: $t('index.cf520ef6e6b2ce53'), value: "N" },
       ],
       defaultOptionValue: "Y",
       isRequired: false,
@@ -313,7 +314,7 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Radio widget lets the user choose only one option from a predefined set of options. It is quite similar to a SingleSelect Dropdown in its functionality",
+        $t('index.9c7dd6bc58e16971'),
       "!url": "https://docs.appsmith.com/widget-reference/radio",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       options: "[$__dropdownOption__$]",
@@ -325,12 +326,12 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.5054901264a21270'),
         children: [
           {
-            helpText: "Displays a list of unique options",
+            helpText: $t('index.664bb01a93309aaa'),
             propertyName: "options",
-            label: "Options",
+            label: $t('index.70a0cc5742e868f8'),
             controlType: "OPTION_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -350,9 +351,9 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
               EvaluationSubstitutionType.SMART_SUBSTITUTE,
           },
           {
-            helpText: "Sets a default selected option",
+            helpText: $t('index.5e953acb6cfb2812'),
             propertyName: "defaultOptionValue",
-            label: "Default selected value",
+            label: $t('index.5af1f0f8762e00ec'),
             placeholderText: "Y",
             controlType: "INPUT_TEXT",
             isBindProperty: true,
@@ -377,29 +378,29 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.dc2c0c68f2a8552c'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.61b26e430ae224d0'),
             propertyName: "label",
-            label: "Text",
+            label: $t('index.17d7ccb625a1575a'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.e137e5e05a6d77d2'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.a7e3151c96ffa79b'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.b9dfead5c73a2c5a'),
             controlType: "ICON_TABS",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.d46bf109a0786f48'), value: LabelPosition.Auto },
+              { label: $t('index.b298285c1525e963'), value: LabelPosition.Left },
+              { label: $t('index.03c2c48799dce9f7'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -407,9 +408,9 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.0876fe3f0c357180'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.5873d45cfaf4cccc'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -431,9 +432,9 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.0aa7f3de26cf3c3e'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.c4e95e0f396a231a'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -452,12 +453,12 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.c72d396a9cc58ed0'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.1e31a5e6f01c5e45'),
+            helpText: $t('index.4a696ce980a460aa'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -467,22 +468,22 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.4494a11a908ca822'),
         children: [
           {
-            helpText: "Show help text or details about current input",
+            helpText: $t('index.546c5e724332943e'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.6d9ab41e2231e7df'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Value must be atleast 6 chars",
+            placeholderText: $t('index.6195e173cc27f846'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.431608506103960b'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.d2ac2221595e111e'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -491,8 +492,8 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.308cf673f4cfdc0b'),
+            helpText: $t('index.41b9e389fb862f46'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -502,8 +503,8 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
           {
             propertyName: "isInline",
             helpText:
-              "Whether the radio buttons are to be displayed inline horizontally",
-            label: "Inline",
+              $t('index.a0715e2b784f4bc8'),
+            label: $t('index.476c5621969653ee'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -512,9 +513,9 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.b395ca95b7a002d0'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.4990b2d6234c3a89'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -524,10 +525,10 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.4a1ca8734743e80a'),
         children: [
           {
-            helpText: "when a user changes the selected option",
+            helpText: $t('index.dd80f824e57f2bf8'),
             propertyName: "onSelectionChange",
             label: "onSelectionChange",
             controlType: "ACTION_SELECTOR",
@@ -543,12 +544,12 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.1f68b8bc81e4f5d6'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.824f020d452fa99a'),
+            helpText: $t('index.58ce4fe20b3be0b2'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -557,8 +558,8 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.c4e66ab140ba5dde'),
+            helpText: $t('index.91a61751d4de97e9'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             options: [
@@ -600,8 +601,8 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.9e74eaee90bd661c'),
+            helpText: $t('index.ae3e157aad20970a'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -621,12 +622,12 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.4494a11a908ca822'),
         children: [
           {
             propertyName: "alignment",
-            helpText: "Sets the alignment of the widget",
-            label: "Alignment",
+            helpText: $t('index.733ef10dafe6a49d'),
+            label: $t('index.5873d45cfaf4cccc'),
             controlType: "ICON_TABS",
             defaultValue: Alignment.LEFT,
             fullWidth: true,
@@ -646,12 +647,12 @@ class RadioGroupWidget extends BaseWidget<RadioGroupWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.4563c82045b1a989'),
         children: [
           {
             propertyName: "accentColor",
-            helpText: "Sets the accent color of the widget",
-            label: "Accent color",
+            helpText: $t('index.193b0f727e26fcb1'),
+            label: $t('index.e9f7062679bea303'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,

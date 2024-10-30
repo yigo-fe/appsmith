@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 
@@ -138,7 +139,7 @@ class ColumnActionSelectorControl extends BaseControl<ColumnActionSelectorContro
     const columnActions = this.props.propertyValue || [];
     const update = columnActions.concat([
       {
-        label: "Action",
+        label: $t('ColumnActionSelectorControl.88677cb44c6e70b4'),
         id: generateReactKey(),
         actionPayloads: [],
       },

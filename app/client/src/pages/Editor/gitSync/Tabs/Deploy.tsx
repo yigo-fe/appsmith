@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useRef, useState } from "react";
 import {
   ARE_YOU_SURE,
@@ -79,8 +80,8 @@ const Row = styled.div`
   align-items: center;
 `;
 
-const FIRST_COMMIT = "First Commit";
-const NO_CHANGES_TO_COMMIT = "No changes to commit";
+const FIRST_COMMIT = $t('Deploy.92f2383ccf5e2473');
+const NO_CHANGES_TO_COMMIT = $t('Deploy.83506dc6d61e6ca5');
 
 function SubmitWrapper(props: {
   children: React.ReactNode;
@@ -326,7 +327,7 @@ function Deploy() {
                   </Row>
                 }
                 onChange={setCommitMessage}
-                placeholder={"Your commit message here"}
+                placeholder={$t('Deploy.89b55bc99de74ef9')}
                 ref={commitInputRef}
                 renderAs="textarea"
                 size="md"

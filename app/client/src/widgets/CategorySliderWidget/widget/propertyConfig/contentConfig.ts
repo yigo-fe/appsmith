@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { LabelPosition } from "components/constants";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -12,12 +13,12 @@ import {
 
 export default [
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.ef2d3c7a258a1c5f'),
     children: [
       {
-        helpText: "Displays a list of unique options",
+        helpText: $t('contentConfig.0d899582ec934572'),
         propertyName: "options",
-        label: "Options",
+        label: $t('contentConfig.7f2d5c1fbd9693a3'),
         controlType: "OPTION_INPUT",
         isJSConvertible: true,
         isBindProperty: true,
@@ -36,9 +37,9 @@ export default [
         evaluationSubstitutionType: EvaluationSubstitutionType.SMART_SUBSTITUTE,
       },
       {
-        helpText: "Sets a default selected option",
+        helpText: $t('contentConfig.a2048a76d1dbf0b4'),
         propertyName: "defaultOptionValue",
-        label: "Default value",
+        label: $t('contentConfig.0e69b42adf82d94a'),
         placeholderText: "Y",
         controlType: "INPUT_TEXT",
         isBindProperty: true,
@@ -63,28 +64,28 @@ export default [
     ],
   },
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.67ad5e0b949cd42a'),
     children: [
       {
-        helpText: "Sets the label text of the widget",
+        helpText: $t('contentConfig.0eda7355e172bb4d'),
         propertyName: "labelText",
-        label: "Text",
+        label: $t('contentConfig.4e9746ca88402848'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Enter label text",
+        placeholderText: $t('contentConfig.c54e6f5d5939677a'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Sets the label position of the widget",
+        helpText: $t('contentConfig.349222208d8bd432'),
         propertyName: "labelPosition",
-        label: "Position",
+        label: $t('contentConfig.922d2aa115987499'),
         controlType: "ICON_TABS",
         fullWidth: true,
         hidden: isAutoLayout,
         options: [
-          { label: "Left", value: LabelPosition.Left },
-          { label: "Top", value: LabelPosition.Top },
+          { label: $t('contentConfig.26cfd92dc8f1583b'), value: LabelPosition.Left },
+          { label: $t('contentConfig.e41247682918c931'), value: LabelPosition.Top },
         ],
         defaultValue: LabelPosition.Left,
         isBindProperty: false,
@@ -92,9 +93,9 @@ export default [
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Sets the label alignment of the widget",
+        helpText: $t('contentConfig.da9e381286fe7329'),
         propertyName: "labelAlignment",
-        label: "Alignment",
+        label: $t('contentConfig.43d0a25f39db9c04'),
         controlType: "LABEL_ALIGNMENT_OPTIONS",
         fullWidth: false,
         options: [
@@ -115,9 +116,9 @@ export default [
         dependencies: ["labelPosition"],
       },
       {
-        helpText: "Sets the label width of the widget as the number of columns",
+        helpText: $t('contentConfig.2a11b9464c20308a'),
         propertyName: "labelWidth",
-        label: "Width (in columns)",
+        label: $t('contentConfig.36ea0253c096cd63'),
         controlType: "NUMERIC_INPUT",
         isJSConvertible: true,
         isBindProperty: true,
@@ -136,22 +137,22 @@ export default [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.2e3d817fcea4933c'),
     children: [
       {
-        helpText: "Show help text or details about current input",
+        helpText: $t('contentConfig.0bfe094a9b7cfd64'),
         propertyName: "labelTooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.6183ee91057742f2'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Value must be atleast 6 chars",
+        placeholderText: $t('contentConfig.92a8815bad462aac'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
         propertyName: "showMarksLabel",
-        helpText: "Controls the visibility of the marks Label widget",
-        label: "Show marks",
+        helpText: $t('contentConfig.fbeb6b1e30341b32'),
+        label: $t('contentConfig.7df5734c6f0f6d3d'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -160,8 +161,8 @@ export default [
       },
       {
         propertyName: "isVisible",
-        helpText: "Controls the visibility of the widget",
-        label: "Visible",
+        helpText: $t('contentConfig.8a09bd90ffaf3c3c'),
+        label: $t('contentConfig.68ee3d435ba014d2'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -170,9 +171,9 @@ export default [
       },
       {
         propertyName: "isDisabled",
-        label: "Disabled",
+        label: $t('contentConfig.fa9bc8a6104f8735'),
         controlType: "SWITCH",
-        helpText: "Disables clicks to this widget",
+        helpText: $t('contentConfig.f65e3a54ac4c44bd'),
         isJSConvertible: true,
         isBindProperty: true,
         isTriggerProperty: false,
@@ -180,9 +181,9 @@ export default [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.130444f8339a53ce'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.143a966f0a1082d3'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -192,10 +193,10 @@ export default [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.09762a1c2172d193'),
     children: [
       {
-        helpText: "when a user changes the slider value",
+        helpText: $t('contentConfig.06fe46762ffc351e'),
         propertyName: "onChange",
         label: "onChange",
         controlType: "ACTION_SELECTOR",

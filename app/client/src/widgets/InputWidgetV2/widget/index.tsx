@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   AnvilConfig,
   AutocompletionDefinitions,
@@ -63,11 +64,11 @@ export function defaultValueValidation(
 ): ValidationResponse {
   const STRING_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be string",
+    message: $t('index.eb0a16239a276d7a'),
   };
   const NUMBER_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be number",
+    message: $t('index.6aa61de472e4a85a'),
   };
   const EMPTY_ERROR_MESSAGE = { name: "", message: "" };
 
@@ -182,7 +183,7 @@ export function minValueValidation(min: any, props: InputWidgetProps, _?: any) {
       messages: [
         {
           name: "TypeError",
-          message: "This value must be number",
+          message: $t('index.6aa61de472e4a85a'),
         },
       ],
     };
@@ -193,7 +194,7 @@ export function minValueValidation(min: any, props: InputWidgetProps, _?: any) {
       messages: [
         {
           name: "RangeError",
-          message: "This value must be lesser than max value",
+          message: $t('index.baee532f84ac1914'),
         },
       ],
     };
@@ -237,7 +238,7 @@ export function maxValueValidation(max: any, props: InputWidgetProps, _?: any) {
       messages: [
         {
           name: "TypeError",
-          message: "This value must be number",
+          message: $t('index.6aa61de472e4a85a'),
         },
       ],
     };
@@ -248,7 +249,7 @@ export function maxValueValidation(max: any, props: InputWidgetProps, _?: any) {
       messages: [
         {
           name: "RangeError",
-          message: "This value must be greater than min value",
+          message: $t('index.49745ec9008b9a8f'),
         },
       ],
     };
@@ -311,12 +312,12 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Input",
+      name: $t('index.e7bdfa7619dab3bd'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.SUGGESTED_WIDGETS, WIDGET_TAGS.INPUTS],
       needsMeta: true,
-      searchTags: ["form", "text input", "number", "textarea"],
+      searchTags: ["form", $t('index.e9c4f1ec5fc7b7bc'), "number", "textarea"],
     };
   }
 
@@ -336,7 +337,7 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
       rows: 7,
       labelPosition: LabelPosition.Top,
       inputType: "TEXT",
-      widgetName: "Input",
+      widgetName: $t('index.e7bdfa7619dab3bd'),
       version: 2,
       showStepArrows: false,
       responsiveBehavior: ResponsiveBehavior.Fill,
@@ -403,11 +404,11 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     const definitions: AutocompletionDefinitions = {
       "!doc":
-        "An input text field is used to capture a users textual input such as their names, numbers, emails etc. Inputs are used in forms and can have custom validations.",
+        $t('index.c252c8b92d85b224'),
       "!url": "https://docs.appsmith.com/widget-reference/input",
       text: {
         "!type": "string",
-        "!doc": "The text value of the input",
+        "!doc": $t('index.e3c957bb77e4e630'),
         "!url": "https://docs.appsmith.com/widget-reference/input",
       },
       isValid: "bool",
@@ -421,32 +422,32 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
     return mergeWidgetConfig(
       [
         {
-          sectionName: "Data",
+          sectionName: $t('index.1c7544340d099bfd'),
           children: [
             {
-              helpText: "Changes the type of data captured in the input",
+              helpText: $t('index.de798715be764d98'),
               propertyName: "inputType",
-              label: "Data type",
+              label: $t('index.17dd0a5111242e5d'),
               controlType: "DROP_DOWN",
               options: [
                 {
-                  label: "Single-line text",
+                  label: $t('index.17cfeb9b35ea1799'),
                   value: "TEXT",
                 },
                 {
-                  label: "Multi-line text",
+                  label: $t('index.29eaec256a43104c'),
                   value: "MULTI_LINE_TEXT",
                 },
                 {
-                  label: "Number",
+                  label: $t('index.a27533bf3d7e2beb'),
                   value: "NUMBER",
                 },
                 {
-                  label: "Password",
+                  label: $t('index.11ce026d6830ab9b'),
                   value: "PASSWORD",
                 },
                 {
-                  label: "Email",
+                  label: $t('index.8966361c5fad9c16'),
                   value: "EMAIL",
                 },
               ],
@@ -457,11 +458,11 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
             },
             {
               helpText:
-                "Sets the default text of the widget. The text is updated if the default text changes",
+                $t('index.63389bd673eef254'),
               propertyName: "defaultText",
-              label: "Default value",
+              label: $t('index.b867178444e007cd'),
               controlType: "INPUT_TEXT",
-              placeholderText: "John Doe",
+              placeholderText: $t('index.103d2220b40d5c06'),
               isBindProperty: true,
               isTriggerProperty: false,
               validation: {
@@ -480,16 +481,16 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
           ],
         },
         {
-          sectionName: "Label",
+          sectionName: $t('index.14582218596537a9'),
           children: [],
         },
         {
-          sectionName: "Validation",
+          sectionName: $t('index.681efe2a20274112'),
           children: [
             {
               propertyName: "isRequired",
-              label: "Required",
-              helpText: "Makes input to the widget mandatory",
+              label: $t('index.84600edb1c0ef4f0'),
+              helpText: $t('index.a5e3b3f4672fbea3'),
               controlType: "SWITCH",
               isJSConvertible: true,
               isBindProperty: true,
@@ -497,9 +498,9 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
               validation: { type: ValidationTypes.BOOLEAN },
             },
             {
-              helpText: "Sets maximum allowed text length",
+              helpText: $t('index.efc043aa17fd6266'),
               propertyName: "maxChars",
-              label: "Max characters",
+              label: $t('index.8dcf1921a867e5c2'),
               controlType: "INPUT_TEXT",
               placeholderText: "255",
               isBindProperty: true,
@@ -514,9 +515,9 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
               dependencies: ["inputType"],
             },
             {
-              helpText: "Sets the minimum allowed value",
+              helpText: $t('index.069d2a70b2d8d084'),
               propertyName: "minNum",
-              label: "Min",
+              label: $t('index.e3a7044d4b15dc00'),
               controlType: "INPUT_TEXT",
               placeholderText: "1",
               isBindProperty: true,
@@ -538,9 +539,9 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
               dependencies: ["inputType"],
             },
             {
-              helpText: "Sets the maximum allowed value",
+              helpText: $t('index.49fe16f974e5bbb0'),
               propertyName: "maxNum",
-              label: "Max",
+              label: $t('index.4d9dde4188688bce'),
               controlType: "INPUT_TEXT",
               placeholderText: "100",
               isBindProperty: true,
@@ -567,8 +568,8 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
       super.getPropertyPaneContentConfig([
         {
           propertyName: "rtl",
-          label: "Enable RTL",
-          helpText: "Enables right to left text direction",
+          label: $t('index.860cfa3a8a223998'),
+          helpText: $t('index.53ff923ea5ebefbb'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -588,12 +589,12 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
     return mergeWidgetConfig(
       [
         {
-          sectionName: "Icon",
+          sectionName: $t('index.36c89a426c1d948d'),
           children: [
             {
               propertyName: "iconName",
-              label: "Icon",
-              helpText: "Sets the icon to be used in input field",
+              label: $t('index.36c89a426c1d948d'),
+              helpText: $t('index.3f9dc981329d9985'),
               controlType: "ICON_SELECT",
               isBindProperty: true,
               isTriggerProperty: false,
@@ -609,8 +610,8 @@ class InputWidget extends BaseInputWidget<InputWidgetProps, WidgetState> {
             },
             {
               propertyName: "iconAlign",
-              label: "Position",
-              helpText: "Sets the icon alignment of input field",
+              label: $t('index.0d1a73481e3e7ae4'),
+              helpText: $t('index.1b71b204575d755b'),
               controlType: "ICON_TABS",
               defaultValue: "left",
               fullWidth: false,

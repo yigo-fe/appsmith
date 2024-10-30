@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useMemo, useState } from "react";
 import { getTypographyByKey } from "@appsmith/ads-old";
 import styled, { useTheme } from "styled-components";
@@ -144,7 +145,7 @@ function CreateNewBranch({
           size="lg"
         />
         <CreateNewBranchContainer className={className} ref={itemRef}>
-          <div className="large-text">{`Create branch: ${branch} `}</div>
+          <div className="large-text">{$t('BranchList.830a508515eb5135', {branch: branch})}</div>
           <div className="small-text">{`from '${currentBranch}'`}</div>
         </CreateNewBranchContainer>
       </div>

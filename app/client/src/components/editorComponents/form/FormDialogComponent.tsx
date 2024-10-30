@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState, useEffect } from "react";
 import {
   Button,
@@ -60,7 +61,7 @@ export function FormDialogComponent(props: FormDialogComponentProps) {
         <ModalContent style={{ width: "640px" }}>
           <ModalHeader>
             <div className="text-ellipsis overflow-hidden whitespace-nowrap">
-              {props.title || `Invite users to ${props.workspace.name}`}
+              {props.title || $t('FormDialogComponent.2fccad40c1a885de', {props_workspace_name: props.workspace.name})}
             </div>
           </ModalHeader>
           <ModalBody>

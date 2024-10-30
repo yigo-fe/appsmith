@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { TYPOGRAPHY_VARIANTS } from "@appsmith/wds-theming";
 import { ValidationTypes } from "constants/WidgetValidation";
 
@@ -5,29 +6,29 @@ import { fontSizeUpdateHook } from "../../helpers";
 
 export const propertyPaneStyleConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('styleConfig.34738fdb3b9a7b28'),
     children: [
       {
         propertyName: "fontSize",
-        label: "Font size",
-        helpText: "Controls the size of the font used",
+        label: $t('styleConfig.24a34676e59b8f96'),
+        helpText: $t('styleConfig.7c44447c46b3d756'),
         controlType: "DROP_DOWN",
         defaultValue: "body",
         options: [
           {
-            label: "Body",
+            label: $t('styleConfig.8ab37b61be52ed98'),
             value: "body",
           },
           {
-            label: "Subtitle",
+            label: $t('styleConfig.54cd6670451931b5'),
             value: "subtitle",
           },
           {
-            label: "Title",
+            label: $t('styleConfig.b8ea2b7641535943'),
             value: "title",
           },
           {
-            label: "Heading",
+            label: $t('styleConfig.5352c2dfaafbb359'),
             value: "heading",
           },
         ],
@@ -46,12 +47,12 @@ export const propertyPaneStyleConfig = [
     ],
   },
   {
-    sectionName: "Text formatting",
+    sectionName: $t('styleConfig.53d403d0a4b2cf2d'),
     children: [
       {
         propertyName: "textAlign",
-        label: "Alignment",
-        helpText: "Controls the horizontal alignment of the text",
+        label: $t('styleConfig.efe83e7ca1eafc09'),
+        helpText: $t('styleConfig.4bcee2152aa6528b'),
         controlType: "ICON_TABS",
         fullWidth: true,
         options: [
@@ -83,8 +84,8 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "fontStyle",
-        label: "Emphasis",
-        helpText: "Controls the font emphasis of the text displayed",
+        label: $t('styleConfig.1a979b8979193be5'),
+        helpText: $t('styleConfig.38a53a9c5c3a0a3f'),
         controlType: "BUTTON_GROUP",
         options: [
           {

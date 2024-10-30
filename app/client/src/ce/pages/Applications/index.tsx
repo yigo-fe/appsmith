@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { updateApplication } from "ee/actions/applicationActions";
 import {
   deleteWorkspace,
@@ -295,7 +296,7 @@ export function LeftPaneSection(props: {
     await submitCreateWorkspaceForm(
       {
         name: getNextEntityName(
-          "Untitled workspace ",
+          $t('index.f58e09a928ebe233'),
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           fetchedWorkspaces.map((el: any) => el.name),
@@ -724,7 +725,7 @@ export function ApplicationsSection(props: any) {
         <CreateNewLabel type={TextType.H4}>
           {createMessage(NO_APPS_FOUND)}
         </CreateNewLabel>
-        <NoSearchResultImg alt="No result found" src={NoSearchImage} />
+        <NoSearchResultImg alt={$t('index.18bc047d9c24522d')} src={NoSearchImage} />
       </CenteredWrapper>
     );
   } else {
@@ -752,7 +753,7 @@ export function ApplicationsSection(props: any) {
       ) {
         createNewApplication(
           getNextEntityName(
-            isAnvilEnabled ? "AI app " : "Untitled application ",
+            isAnvilEnabled ? $t('index.3ee51fc536dfe3db') : $t('index.484b55e87f9e577c'),
             // TODO: Fix this the next time the file is edited
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             applications.map((el: any) => el.name),

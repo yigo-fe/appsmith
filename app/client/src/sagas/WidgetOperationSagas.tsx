@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   ReduxAction,
   ReduxActionType,
@@ -1112,7 +1113,7 @@ function* copyWidgetSaga(action: ReduxAction<{ isShortcut: boolean }>) {
       createMessage(
         WIDGET_COPY,
         selectedWidgetProps.length > 1
-          ? `${selectedWidgetProps.length} Widgets`
+          ? $t('WidgetOperationSagas.fdd328eca0bbc81b', {selectedWidgetProps_length: selectedWidgetProps.length})
           : selectedWidgetProps[0].widgetName,
       ),
       {
@@ -1779,7 +1780,7 @@ function* cutWidgetSaga() {
       createMessage(
         WIDGET_CUT,
         selectedWidgetProps.length > 1
-          ? `${selectedWidgetProps.length} Widgets`
+          ? $t('WidgetOperationSagas.fdd328eca0bbc81b', {selectedWidgetProps_length: selectedWidgetProps.length})
           : selectedWidgetProps[0].widgetName,
       ),
       {

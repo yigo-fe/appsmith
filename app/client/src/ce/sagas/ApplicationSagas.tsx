@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import {
   ReduxActionErrorTypes,
@@ -562,12 +563,12 @@ export function* createApplicationSaga(
 
     if (existingApplication) {
       yield call(reject, {
-        _error: "An application with this name already exists",
+        _error: $t('ApplicationSagas.2f1813d4663c6105'),
       });
       yield put({
         type: ReduxActionErrorTypes.CREATE_APPLICATION_ERROR,
         payload: {
-          error: "Could not create application",
+          error: $t('ApplicationSagas.af7719c1574f0c1d'),
           show: false,
         },
       });

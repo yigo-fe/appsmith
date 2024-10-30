@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback } from "react";
 import { Button, Flex, Text } from "@appsmith/ads";
 import { useSelector } from "react-redux";
@@ -35,7 +36,7 @@ const AddWidgets = (props: { focusSearchInput?: boolean }) => {
           {createMessage(EDITOR_PANE_TEXTS.widgets_create_tab_title)}
         </Text>
         <Button
-          aria-label="Close pane"
+          aria-label={$t('Add.8c34c87fe581e866')}
           data-testid="t--add-pane-close-icon"
           isIconButton
           kind={"tertiary"}

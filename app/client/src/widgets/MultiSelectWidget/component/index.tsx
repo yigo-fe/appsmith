@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /* eslint-disable no-console */
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import type { SelectProps } from "rc-select";
@@ -143,7 +144,7 @@ function MultiSelectComponent({
             alignIndicator="left"
             checked={isSelectAll}
             className={`all-options ${isSelectAll ? "selected" : ""}`}
-            label="Select all"
+            label={$t('index.9dba88fde24404bf')}
             onChange={handleSelectAll}
           />
         ) : null}
@@ -230,7 +231,7 @@ function MultiSelectComponent({
         maxTagPlaceholder={(e) => `+${e.length} more`}
         menuItemSelectedIcon={menuItemSelectedIcon}
         mode="multiple"
-        notFoundContent="No Results Found"
+        notFoundContent=$t('index.b56d4009511d137b')
         onBlur={onBlur}
         onChange={onChange}
         onDropdownVisibleChange={onClose}

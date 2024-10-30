@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type Dashboard from "@uppy/dashboard";
 import type { Uppy } from "@uppy/core";
 import type { UppyFile } from "@uppy/utils";
@@ -32,7 +33,7 @@ import ThumbnailSVG from "../thumbnail.svg";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 import { klonaRegularWithTelemetry } from "utils/helpers";
 
-const CSV_ARRAY_LABEL = "Array of Objects (CSV, XLS(X), JSON, TSV)";
+const CSV_ARRAY_LABEL = $t('index.3c5652b40f54ddd5');
 
 const ARRAY_CSV_HELPER_TEXT = `All non CSV, XLS(X), JSON or TSV filetypes will have an empty value. \n Large files used in widgets directly might slow down the app.`;
 
@@ -71,7 +72,7 @@ class FilePickerWidget extends BaseWidget<
       files: [],
       selectedFiles: [],
       allowedFileTypes: [],
-      label: "Select Files",
+      label: $t('index.7162a76567024577'),
       columns: 16,
       maxNumFiles: 1,
       maxFileSize: 5,
@@ -131,7 +132,7 @@ class FilePickerWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Filepicker widget is used to allow users to upload files from their local machines to any cloud storage via API. Cloudinary and Amazon S3 have simple APIs for cloud storage uploads",
+        $t('index.2be37cff34c18122'),
       "!url": "https://docs.appsmith.com/widget-reference/filepicker",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       files: "[$__file__$]",
@@ -144,22 +145,22 @@ class FilePickerWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Basic",
+        sectionName: $t('index.faae6db259e7bb58'),
         children: [
           {
             propertyName: "allowedFileTypes",
-            helpText: "Restricts the type of files which can be uploaded",
-            label: "Allowed file types",
+            helpText: $t('index.7bdd42a9e1c004bd'),
+            label: $t('index.fc3690614e2779ee'),
             controlType: "DROP_DOWN",
             isMultiSelect: true,
-            placeholderText: "Select File types",
+            placeholderText: $t('index.a06fb243025e126c'),
             options: [
               {
-                label: "Any File",
+                label: $t('index.b03e8b75f5c125f6'),
                 value: "*",
               },
               {
-                label: "Images",
+                label: $t('index.c05f4f6746b55d59'),
                 value: "image/*",
               },
               {
@@ -270,7 +271,7 @@ class FilePickerWidget extends BaseWidget<
             label: "Text",
             controlType: "INPUT_TEXT",
             helpText: "Sets the label of the button",
-            placeholderText: "Select Files",
+            placeholderText: $t('index.7162a76567024577'),
             inputType: "TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -546,7 +547,7 @@ class FilePickerWidget extends BaseWidget<
         },
         locale: {
           strings: {
-            closeModal: "Close",
+            closeModal: $t('index.b37354cfe81fe123'),
           },
         },
       })

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { CurrencyTypeOptions } from "constants/Currency";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
@@ -13,13 +14,13 @@ const inputTypeSectionConfig = WdsInputWidgetPropertyPaneContentConfig.find(
 export const propertyPaneContentConfig = [
   inputTypeSectionConfig,
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.34226c387038ecc8'),
     children: [
       {
         helpText:
-          "Sets the default text of the widget. The text is updated if the default text changes",
+          $t('contentConfig.a81ee880b37cb417'),
         propertyName: "defaultText",
-        label: "Default value",
+        label: $t('contentConfig.3d697f8042d2b2c8'),
         controlType: "INPUT_TEXT",
         placeholderText: "42",
         isBindProperty: true,
@@ -38,13 +39,13 @@ export const propertyPaneContentConfig = [
         dependencies: ["decimals"],
       },
       {
-        helpText: "Changes the type of currency",
+        helpText: $t('contentConfig.7c965346a49ac566'),
         propertyName: "defaultCurrencyCode",
-        label: "Currency",
+        label: $t('contentConfig.ebea73e90ec51aa2'),
         enableSearch: true,
         dropdownHeight: "156px",
         controlType: "DROP_DOWN",
-        searchPlaceholderText: "Search by code or name",
+        searchPlaceholderText: $t('contentConfig.a1ed68568c08c672'),
         options: CurrencyTypeOptions.map((item) => {
           return {
             leftElement: countryToFlag(item.code),
@@ -63,9 +64,9 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "No. of decimals in currency input",
+        helpText: $t('contentConfig.6ed1e8966bef0828'),
         propertyName: "decimals",
-        label: "Decimals allowed",
+        label: $t('contentConfig.eafb2fbc6b708b57'),
         controlType: "DROP_DOWN",
         options: [
           {
@@ -95,16 +96,16 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.843fe02b363301e1'),
     children: [],
   },
   {
-    sectionName: "Validation",
+    sectionName: $t('contentConfig.cec57bb7e7c07227'),
     children: [
       {
         propertyName: "isRequired",
-        label: "Required",
-        helpText: "Makes input to the widget mandatory",
+        label: $t('contentConfig.0ad4945ccb3d384e'),
+        helpText: $t('contentConfig.68d31c6f7ad0c7ba'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,

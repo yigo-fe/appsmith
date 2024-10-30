@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useLocation } from "react-router";
 import {
@@ -67,7 +68,7 @@ const EditableTextWrapper = styled.div<{
           ? "var(--ads-v2-color-bg-subtle)"
           : "none"};
       cursor: pointer;
-      padding: ${(props) => (!props.minimal ? "5px 5px" : "0px")};
+      padding: ${(props) => (!props.minimal ? $t('EditableText.110fc6886acd6a5d') : "0px")};
       border-radius: var(--ads-v2-border-radius);
       text-transform: none;
       max-width: 100%;

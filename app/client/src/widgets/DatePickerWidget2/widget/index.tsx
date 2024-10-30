@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import type { TextSize } from "constants/WidgetConstants";
 import React from "react";
@@ -57,7 +58,7 @@ function allowedRange(value: any) {
       : [
           {
             name: "RangeError",
-            message: "Number should be between 0-6.",
+            message: $t('index.ad2d7d8a7d7ef672'),
           },
         ],
   };
@@ -92,7 +93,7 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
       isDisabled: false,
       datePickerType: "DATE_PICKER",
       rows: 7,
-      label: "Label",
+      label: $t('index.1210bc7e5e73ee8a'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
@@ -174,7 +175,7 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Datepicker is used to capture the date and time from a user. It can be used to filter data base on the input date range as well as to capture personal information such as date of birth",
+        $t('index.a01a6cf7778f1c79'),
       "!url": "https://docs.appsmith.com/widget-reference/datepicker",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       selectedDate: "string",
@@ -210,12 +211,12 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.22e9e0c08b46cb9c'),
         children: [
           {
-            helpText: "Sets the format of the selected date",
+            helpText: $t('index.65059844f87dcfb1'),
             propertyName: "dateFormat",
-            label: "Date format",
+            label: $t('index.75a9f319f19ab6f2'),
             controlType: "DROP_DOWN",
             isJSConvertible: true,
             optionWidth: "340px",
@@ -227,11 +228,11 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "defaultDate",
-            label: "Default Date",
+            label: $t('index.389c8f0c1c0e0af8'),
             helpText:
-              "Sets the default date of the widget. The date is updated if the default date changes",
+              $t('index.deb14c2a5560d910'),
             controlType: "DATE_PICKER",
-            placeholderText: "Enter Default Date",
+            placeholderText: $t('index.4eb7a9bee86ed768'),
             useValidationMessage: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -240,8 +241,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "firstDayOfWeek",
-            label: "First Day Of Week",
-            helpText: "Defines the first day of the week for calendar",
+            label: $t('index.81e3ca3bd5114c12'),
+            helpText: $t('index.197fe313acdf01b7'),
             controlType: "INPUT_TEXT",
             defaultValue: "0",
             inputType: "INTEGER",
@@ -261,21 +262,21 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "timePrecision",
-            label: "Time Precision",
+            label: $t('index.6c7faaf23918c45c'),
             controlType: "DROP_DOWN",
-            helpText: "Sets the different time picker or hide.",
+            helpText: $t('index.c5e35a5469205987'),
             defaultValue: TimePrecision.MINUTE,
             options: [
               {
-                label: "None",
+                label: $t('index.30458ea62e25fef4'),
                 value: TimePrecision.NONE,
               },
               {
-                label: "Minute",
+                label: $t('index.d3197f5053f2d1a7'),
                 value: TimePrecision.MINUTE,
               },
               {
-                label: "Second",
+                label: $t('index.913ed352fbc4d80d'),
                 value: TimePrecision.SECOND,
               },
             ],
@@ -297,29 +298,29 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.1210bc7e5e73ee8a'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.5b5f2a2fe254fb69'),
             propertyName: "label",
-            label: "Text",
+            label: $t('index.8ad94526638bffc6'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.7694605d1fd2bb0d'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.89298c9d7a59a9b2'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.61a75d005ce288eb'),
             controlType: "ICON_TABS",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.78234c248e7319e9'), value: LabelPosition.Auto },
+              { label: $t('index.e1e5e5038fde48cf'), value: LabelPosition.Left },
+              { label: $t('index.3f37dd9698028638'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -327,9 +328,9 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.e817ade165ed8ed0'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.5985397f5100a58f'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -351,9 +352,9 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.bfcd5a2239772843'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.4b73c2b0a53895cc'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -372,12 +373,12 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
         ],
       },
       {
-        sectionName: "Validation",
+        sectionName: $t('index.7fe3bc256483e84c'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.2459eb84e63cd1dc'),
+            helpText: $t('index.df4e0c2a97d4c75f'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -386,8 +387,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "minDate",
-            label: "Min Date",
-            helpText: "Defines the min date for this widget",
+            label: $t('index.ccdd939aa5fcbe35'),
+            helpText: $t('index.23d75e63e12aa262'),
             controlType: "DATE_PICKER",
             useValidationMessage: true,
             isJSConvertible: true,
@@ -397,8 +398,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "maxDate",
-            label: "Max Date",
-            helpText: "Defines the max date for this widget",
+            label: $t('index.86759978ba1ced96'),
+            helpText: $t('index.0cdfa208a980525e'),
             controlType: "DATE_PICKER",
             useValidationMessage: true,
             isJSConvertible: true,
@@ -409,22 +410,22 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.f4e0eedadb035e02'),
         children: [
           {
-            helpText: "Show help text or details about current selection",
+            helpText: $t('index.fbd6b49670e81e36'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.6cc8543bb7f8c665'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Add tooltip text here",
+            placeholderText: $t('index.a0ac444431c45f3a'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.04c37c90d8d93252'),
+            helpText: $t('index.f288a30fa7df5912'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -433,8 +434,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.d799c9b718fbf151'),
+            helpText: $t('index.8b0441ab5aaabee3'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -443,9 +444,9 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.06c191d8166bac0b'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.1a9b84fb32e4b334'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -454,8 +455,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "shortcuts",
-            label: "Show Shortcuts",
-            helpText: "Choose to show shortcut menu",
+            label: $t('index.d6ab7bbe10aff096'),
+            helpText: $t('index.adf546e853fa20b5'),
             controlType: "SWITCH",
             isJSConvertible: false,
             isBindProperty: true,
@@ -464,8 +465,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "closeOnSelection",
-            label: "Close On Selection",
-            helpText: "Calender should close when a date is selected",
+            label: $t('index.44fbd45ad878b0ea'),
+            helpText: $t('index.3ad3950f53874825'),
             controlType: "SWITCH",
             defaultValue: true,
             isJSConvertible: false,
@@ -476,12 +477,12 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.02c0645fe314e657'),
         children: [
           {
             propertyName: "onDateSelected",
             label: "onDateSelected",
-            helpText: "when a date is selected in the calendar",
+            helpText: $t('index.9bfa24c4732d192e'),
             controlType: "ACTION_SELECTOR",
             isJSConvertible: true,
             isBindProperty: true,
@@ -490,7 +491,7 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           {
             propertyName: "onFocus",
             label: "onFocus",
-            helpText: "when the date picker receives focus",
+            helpText: $t('index.008459da327d3a84'),
             controlType: "ACTION_SELECTOR",
             isJSConvertible: true,
             isBindProperty: true,
@@ -499,7 +500,7 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           {
             propertyName: "onBlur",
             label: "onBlur",
-            helpText: "when the date picker loses focus",
+            helpText: $t('index.dc5584b51832273c'),
             controlType: "ACTION_SELECTOR",
             isJSConvertible: true,
             isBindProperty: true,
@@ -513,12 +514,12 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.664001b829dec0a2'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.3192a407526b3fe3'),
+            helpText: $t('index.160c9f4c6cd075fd'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -527,8 +528,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.e39fe8be9dae9223'),
+            helpText: $t('index.9cb957539ad6e97a'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             hidden: isAutoLayout,
@@ -571,8 +572,8 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.fbce535b6553717d'),
+            helpText: $t('index.9c1cac0fc70801ea'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -592,11 +593,11 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.a262b2664b1a9a5f'),
         children: [
           {
             propertyName: "accentColor",
-            label: "Accent color",
+            label: $t('index.6c763c462ad1efb0'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -606,9 +607,9 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.e93dce154d816ee5'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.9d81fea53e3b23e6'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -617,9 +618,9 @@ class DatePickerWidget extends BaseWidget<DatePickerWidget2Props, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.3f7b128ea9731552'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.3900c6ca677bd957'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

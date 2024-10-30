@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useMemo } from "react";
 import type { ActionResponse } from "api/ActionAPI";
 import { Callout, Flex } from "@appsmith/ads";
@@ -58,7 +59,7 @@ export function ApiResponseHeaders(props: {
   const errorCalloutLinks = useMemo(() => {
     return [
       {
-        children: "Debug",
+        children: $t('ApiResponseHeaders.3209b6e7f498f09e'),
         endIcon: "bug",
         onClick: props.onDebugClick,
         to: "",

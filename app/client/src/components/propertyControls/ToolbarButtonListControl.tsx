@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { generateReactKey } from "utils/generators";
 
 import {
@@ -18,7 +19,7 @@ class ToolbarButtonListControl extends ButtonListControl {
         id: newGroupButtonId,
         index: groupButtonsArray.length,
         label: isSeparator
-          ? "Separator"
+          ? $t('ToolbarButtonListControl.bafd6cce0ba32ef9')
           : createMessage(BUTTON_WIDGET_DEFAULT_LABEL),
         widgetId: generateReactKey(),
         isDisabled: false,

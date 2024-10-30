@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import AdminConfig from "ee/pages/AdminSettings/config";
@@ -122,7 +123,7 @@ export function Categories({
     const source: any = {
       "audit-logs": "AuditLogs",
       "access-control": "AccessControl",
-      provisioning: "Provisioning",
+      provisioning: $t('LeftPane.a9f50f434806586e'),
     };
 
     AnalyticsUtil.logEvent("ADMIN_SETTINGS_CLICK", {

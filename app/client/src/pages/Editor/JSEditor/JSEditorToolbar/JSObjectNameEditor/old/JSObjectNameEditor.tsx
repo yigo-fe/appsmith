@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -100,7 +101,7 @@ export function JSObjectNameEditor(props: JSObjectNameEditorProps) {
               isEditingDefault={isNew}
               isInvalid={isInvalidNameForEntity}
               onTextChanged={handleNameChange}
-              placeholder={createMessage(ACTION_NAME_PLACEHOLDER, "JS Object")}
+              placeholder={createMessage(ACTION_NAME_PLACEHOLDER, $t('JSObjectNameEditor.6854fcdd66371629'))}
               type="text"
               underline
               updating={saveStatus.isSaving}

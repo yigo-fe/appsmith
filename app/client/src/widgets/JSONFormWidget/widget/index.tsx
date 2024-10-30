@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import equal from "fast-deep-equal/es6";
 import { debounce, difference, isEmpty, merge, noop } from "lodash";
@@ -155,7 +156,7 @@ class JSONFormWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "JSON Form",
+      name: $t('index.c09b8a5a6cb22192'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.LAYOUT],
@@ -188,7 +189,7 @@ class JSONFormWidget extends BaseWidget<
       schema: {},
       scrollContents: true,
       showReset: true,
-      title: "Form",
+      title: $t('index.09eb5a9535e145b3'),
       version: 1,
       borderWidth: "1",
       borderColor: Colors.GREY_5,
@@ -196,8 +197,8 @@ class JSONFormWidget extends BaseWidget<
       autoGenerateForm: true,
       fieldLimitExceeded: false,
       sourceData: "",
-      submitButtonLabel: "Submit",
-      resetButtonLabel: "Reset",
+      submitButtonLabel: $t('index.d7aa81e3705411c6'),
+      resetButtonLabel: $t('index.40196c32dda9de83'),
       blueprint: {
         operations: [
           {
@@ -282,7 +283,7 @@ class JSONFormWidget extends BaseWidget<
             sourceData: `{{_.pick(${
               formConfig?.otherFields?.defaultValues
             },${selectedColumnNames.map((name) => `'${name}'`).join(",")})}}`,
-            title: `Update Row ${primaryKey} {{${formConfig?.otherFields?.defaultValues}.${primaryKey}}}`,
+            title: $t('index.84cc8b848e055156', {primaryKey: primaryKey,formConfig__otherFields__defaultValues: formConfig?.otherFields?.defaultValues,primaryKey: primaryKey}),
             onSubmit: queryConfig?.update.run,
           };
         }
@@ -465,7 +466,7 @@ class JSONFormWidget extends BaseWidget<
     return (widget: JSONFormWidgetProps) => {
       const definitions: AutocompletionDefinitions = {
         "!doc":
-          "JSON Form widget can be used to auto-generate forms by providing a JSON source data.",
+          $t('index.1070abae6e83209c'),
         // TODO: Update the url
         "!url": "https://docs.appsmith.com/widget-reference",
         formData: generateTypeDef(widget.formData),

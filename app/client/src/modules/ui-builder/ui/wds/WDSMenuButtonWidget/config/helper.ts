@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { MenuButtonWidgetProps } from "../widget/types";
 import { isArray } from "lodash";
 
@@ -25,11 +26,11 @@ export const updateMenuItemsSource = (
       propertiesToUpdate.push({
         propertyPath: "configureMenuItems",
         propertyValue: {
-          label: "Configure menu items",
+          label: $t('helper.cd3dc4d539dcd812'),
           id: "config",
           config: {
             id: "config",
-            label: "Menu Item",
+            label: $t('helper.c10e07df779914d1'),
             isVisible: true,
             isDisabled: false,
           },

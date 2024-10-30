@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { WidgetState } from "widgets/BaseWidget";
 import type { PhoneInputComponentProps } from "../component";
@@ -51,7 +52,7 @@ export function defaultValueValidation(
 ): ValidationResponse {
   const STRING_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be string",
+    message: $t('index.33de1fe701804d07'),
   };
   const EMPTY_ERROR_MESSAGE = { name: "", message: "" };
 
@@ -92,7 +93,7 @@ class PhoneInputWidget extends BaseInputWidget<
 
   static getConfig() {
     return {
-      name: "Phone Input",
+      name: $t('index.a6bed61a1e6842d4'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.INPUTS],
@@ -170,13 +171,13 @@ class PhoneInputWidget extends BaseInputWidget<
     return mergeWidgetConfig(
       [
         {
-          sectionName: "Data",
+          sectionName: $t('index.a4379dcf54f7ea9b'),
           children: [
             {
               helpText:
-                "Sets the default text of the widget. The text is updated if the default text changes",
+                $t('index.09bdea34631b7179'),
               propertyName: "defaultText",
-              label: "Default value",
+              label: $t('index.6d3e3ad1c1d5f210'),
               controlType: "INPUT_TEXT",
               placeholderText: "(000) 000-0000",
               isBindProperty: true,
@@ -194,13 +195,13 @@ class PhoneInputWidget extends BaseInputWidget<
               },
             },
             {
-              helpText: "Changes the country code",
+              helpText: $t('index.7ce25f2e9d3a981a'),
               propertyName: "defaultDialCode",
-              label: "Default country code",
+              label: $t('index.6120f78b1c6c4ad4'),
               enableSearch: true,
               dropdownHeight: "156px",
               controlType: "DROP_DOWN",
-              searchPlaceholderText: "Search by code or country name",
+              searchPlaceholderText: $t('index.aec1d234363ca037'),
               options: ISDCodeDropdownOptions,
               virtual: true,
               isJSConvertible: true,
@@ -212,8 +213,8 @@ class PhoneInputWidget extends BaseInputWidget<
             },
             {
               propertyName: "allowDialCodeChange",
-              label: "Change country code",
-              helpText: "Search by country",
+              label: $t('index.899e267f9a45a815'),
+              helpText: $t('index.6061069685ade695'),
               controlType: "SWITCH",
               isJSConvertible: true,
               isBindProperty: true,
@@ -223,16 +224,16 @@ class PhoneInputWidget extends BaseInputWidget<
           ],
         },
         {
-          sectionName: "Label",
+          sectionName: $t('index.a7fa0dbcc6ae5c63'),
           children: [],
         },
         {
-          sectionName: "Validation",
+          sectionName: $t('index.82ca1ab540059fd0'),
           children: [
             {
               propertyName: "isRequired",
-              label: "Required",
-              helpText: "Makes input to the widget mandatory",
+              label: $t('index.86d6b531edc739eb'),
+              helpText: $t('index.1e4bc27e5ad33706'),
               controlType: "SWITCH",
               isJSConvertible: true,
               isBindProperty: true,
@@ -264,16 +265,16 @@ class PhoneInputWidget extends BaseInputWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "An input text field is used to capture a phone number. Inputs are used in forms and can have custom validations.",
+        $t('index.8fb7a45b867b21f0'),
       "!url": "https://docs.appsmith.com/widget-reference/phone-input",
       text: {
         "!type": "string",
-        "!doc": "The text value of the input",
+        "!doc": $t('index.f5d1b6780d76d7d9'),
         "!url": "https://docs.appsmith.com/widget-reference/phone-input",
       },
       value: {
         "!type": "string",
-        "!doc": "The unformatted text value of the input",
+        "!doc": $t('index.ebf46419783d1866'),
         "!url": "https://docs.appsmith.com/widget-reference/phone-input",
       },
       isValid: "bool",
@@ -281,11 +282,11 @@ class PhoneInputWidget extends BaseInputWidget<
       isDisabled: "bool",
       countryCode: {
         "!type": "string",
-        "!doc": "Selected country code for Phone Number",
+        "!doc": $t('index.86208fe7a07964fe'),
       },
       dialCode: {
         "!type": "string",
-        "!doc": "Selected dialing code for Phone Number",
+        "!doc": $t('index.26850ef8bb759c61'),
       },
     };
   }

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import { ColumnTypes } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
@@ -6,7 +7,7 @@ import { allowedFirstDayOfWeekRange } from "../../../widget/propertyUtils";
 import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
 
 export default {
-  sectionName: "Date Settings",
+  sectionName: $t('DateProperties.c5b40cfee37c4dc1'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     const columnType = get(props, `${propertyPath}.columnType`, "");
     const isEditable = get(props, `${propertyPath}.isEditable`, "");
@@ -16,8 +17,8 @@ export default {
   children: [
     {
       propertyName: "firstDayOfWeek",
-      label: "First Day Of Week",
-      helpText: "Defines the first day of the week for calendar",
+      label: $t('DateProperties.c3d2b7d98a0ad621'),
+      helpText: $t('DateProperties.66859c07a6844f71'),
       controlType: "INPUT_TEXT",
       defaultValue: "0",
       inputType: "NUMBER",
@@ -38,8 +39,8 @@ export default {
     },
     {
       propertyName: "shortcuts",
-      label: "Show Shortcuts",
-      helpText: "Choose to show shortcut menu",
+      label: $t('DateProperties.ca48a7bca7dbead5'),
+      helpText: $t('DateProperties.73321ef75e61f972'),
       controlType: "SWITCH",
       isJSConvertible: false,
       isBindProperty: true,

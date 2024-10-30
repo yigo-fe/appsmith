@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import tinycolor from "tinycolor2";
@@ -356,6 +357,6 @@ BaseButton.defaultProps = {
   buttonStyle: "SECONDARY",
   buttonVariant: ButtonVariantTypes.PRIMARY,
   disabled: false,
-  text: "Button Text",
+  text: $t('BaseButton.c08ba9021259e312'),
   minimal: true,
 };

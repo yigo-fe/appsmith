@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -70,7 +71,7 @@ function NavigationLogo(props: NavigationLogoProps) {
       to={pageUrl}
     >
       <StyledImage
-        alt="Application's logo"
+        alt=$t('NavigationLogo.968a64674063dd56')
         src={getAssetUrl(`/api/v1/assets/${logoAssetId}`)}
       />
     </Link>

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { InputWidgetProps } from "../../../widget/types";
 
 // TODO: Fix this the next time the file is edited
@@ -28,7 +29,7 @@ export function minValueValidation(min: any, props: InputWidgetProps, _?: any) {
       messages: [
         {
           name: "TypeError",
-          message: "This value must be number",
+          message: $t('minValueValidation.36f8785edff6e56d'),
         },
       ],
     };
@@ -41,7 +42,7 @@ export function minValueValidation(min: any, props: InputWidgetProps, _?: any) {
       messages: [
         {
           name: "RangeError",
-          message: "This value must be lesser than max value",
+          message: $t('minValueValidation.46e4bc084c816962'),
         },
       ],
     };

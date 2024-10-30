@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { createMessage, FIELD_REQUIRED_ERROR } from "ee/constants/messages";
 import type { ValidationConfig } from "constants/PropertyControlConstants";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -37,7 +38,7 @@ export function getExpectedValue(
     case ValidationTypes.FUNCTION:
       return {
         type: config.params?.expected?.type || "unknown",
-        example: config.params?.expected?.example || "No Example available",
+        example: config.params?.expected?.example || $t('common.ed2956e31cb56cb4'),
         autocompleteDataType:
           config.params?.expected?.autocompleteDataType ||
           AutocompleteDataType.UNKNOWN,
@@ -96,7 +97,7 @@ export function getExpectedValue(
       }
 
       if (config.params?.required) {
-        numberType = `${numberType} Required`;
+        numberType = $t('common.6ce96ed580a6059a', {numberType: numberType});
       }
 
       return {

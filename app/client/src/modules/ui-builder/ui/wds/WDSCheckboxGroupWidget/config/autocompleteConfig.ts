@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "Checkbox group widget allows users to easily configure multiple checkboxes together.",
+    $t('autocompleteConfig.43ea869e514c55e4'),
   "!url": "https://docs.appsmith.com/widget-reference/checkbox-group",
   isVisible: DefaultAutocompleteDefinitions.isVisible,
   isDisabled: "bool",

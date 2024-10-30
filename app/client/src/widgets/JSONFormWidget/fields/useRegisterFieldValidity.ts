@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as Sentry from "@sentry/react";
 import { set } from "lodash";
 import type { ControllerProps } from "react-hook-form";
@@ -47,7 +48,7 @@ function useRegisterFieldValidity({
             startAndEndSpanForFn("JSONFormWidget.setError", {}, () => {
               setError(fieldName, {
                 type: fieldType,
-                message: "Invalid field",
+                message: $t('useRegisterFieldValidity.c71a3f0f9c2e3dec'),
               });
             });
           }

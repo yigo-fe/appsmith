@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ResponsiveBehavior } from "layoutSystems/common/utils/constants";
 import type { WidgetDefaultProps } from "WidgetProvider/constants";
 
@@ -13,7 +14,7 @@ export const defaultsConfig = {
   responsiveBehavior: ResponsiveBehavior.Fill,
   buttonsList: {
     button1: {
-      label: "Add",
+      label: $t('defaultsConfig.63727ad3e1da4e1b'),
       isVisible: true,
       isDisabled: false,
       widgetId: "",
@@ -23,7 +24,7 @@ export const defaultsConfig = {
       iconPosition: "start",
     },
     button2: {
-      label: "Edit",
+      label: $t('defaultsConfig.58385649c5534ec8'),
       isVisible: true,
       isDisabled: false,
       widgetId: "",
@@ -33,7 +34,7 @@ export const defaultsConfig = {
       iconPosition: "start",
     },
     button3: {
-      label: "Copy",
+      label: $t('defaultsConfig.1d135453a399369a'),
       isVisible: true,
       isDisabled: false,
       widgetId: "",
@@ -49,11 +50,11 @@ export const defaultsConfig = {
       widgetId: "",
       id: "separator",
       index: 2,
-      label: "Separator",
+      label: $t('defaultsConfig.67d5c60df6f478a8'),
       itemType: "SEPARATOR",
     },
     button4: {
-      label: "Delete",
+      label: $t('defaultsConfig.e348fe900b4938c6'),
       isVisible: true,
       isDisabled: false,
       widgetId: "",

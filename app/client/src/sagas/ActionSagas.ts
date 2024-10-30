@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { toast } from "@appsmith/ads";
 import { objectKeys } from "@appsmith/utils";
 import { fetchDatasourceStructure } from "actions/datasourceActions";
@@ -150,7 +151,7 @@ import {
 import { handleQueryEntityRedirect } from "./IDESaga";
 
 export const DEFAULT_PREFIX = {
-  QUERY: "Query",
+  QUERY: $t('ActionSagas.7eb47b82f0174af1'),
   API: "Api",
 } as const;
 
@@ -226,7 +227,7 @@ export function* createDefaultActionPayload({
       id: datasourceId,
     },
     eventData: {
-      actionType: pluginType === PluginType.DB ? "Query" : "API",
+      actionType: pluginType === PluginType.DB ? $t('ActionSagas.7eb47b82f0174af1') : "API",
       from: from,
       dataSource: datasource.name,
       datasourceId: datasourceId,
@@ -352,7 +353,7 @@ export function* createActionSaga(
       });
 
       AppsmithConsole.info({
-        text: `Action created`,
+        text: $t('ActionSagas.326285daae1e73d3'),
         source: {
           type: ENTITY_TYPE.ACTION,
           // since resources are recognized by their baseId in console
@@ -646,7 +647,7 @@ export function* deleteActionSaga(
 
     AppsmithConsole.info({
       logType: LOG_TYPE.ENTITY_DELETED,
-      text: "Action was deleted",
+      text: $t('ActionSagas.680c06d74b1833e4'),
       source: {
         type: ENTITY_TYPE.ACTION,
         name: response.data.name,
@@ -677,7 +678,7 @@ function* moveActionSaga(
 ) {
   const actionObject = shouldBeDefined<Action>(
     yield select(getAction, action.payload.id),
-    `Action not found for id - ${action.payload.id}`,
+    $t('ActionSagas.4f2a1791bb8971d3', {action_payload_id: action.payload.id}),
   );
   const newName: string = yield select(getNewEntityName, {
     prefix: action.payload.name,
@@ -762,7 +763,7 @@ function* copyActionSaga(
     prefix: name,
     parentEntityId: destinationEntityId,
     parentEntityKey,
-    suffix: "Copy",
+    suffix: $t('ActionSagas.9a8f220f436d1f4f'),
     startWithoutIndex: true,
   });
 
@@ -1097,7 +1098,7 @@ function* handleMoveOrCopySaga(actionPayload: ReduxAction<Action>) {
   if (isSaas) {
     const plugin = shouldBeDefined<Plugin>(
       yield select(getPlugin, pluginId),
-      `Plugin not found for pluginId - ${pluginId}`,
+      $t('ActionSagas.8248779cecb2a0f2', {pluginId: pluginId}),
     );
 
     history.push(

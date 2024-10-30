@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import _ from "lodash";
 import React from "react";
 import log from "loglevel";
@@ -79,7 +80,7 @@ class WDSCurrencyInputWidget extends WDSBaseInputWidget<
 
     parentConfig[labelSectionIndex].children[labelPropertyIndex] = {
       ...parentConfig[labelSectionIndex].children[labelPropertyIndex],
-      placeholderText: "Current Price",
+      placeholderText: $t('index.f8b22f61d9a107e2'),
       // TODO: Fix this the next time the file is edited
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any;
@@ -94,7 +95,7 @@ class WDSCurrencyInputWidget extends WDSBaseInputWidget<
     parentConfig[generalSectionIndex].children[tooltipPropertyIndex] = {
       ...parentConfig[generalSectionIndex].children[tooltipPropertyIndex],
       placeholderText:
-        "Prices in other currencies should be recalculated in USD",
+        $t('index.a160f355806610bd'),
       // TODO: Fix this the next time the file is edited
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any;

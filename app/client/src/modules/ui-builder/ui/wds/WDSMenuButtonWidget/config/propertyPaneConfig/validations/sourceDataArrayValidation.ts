@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import type { MenuButtonWidgetProps } from "modules/ui-builder/ui/wds/WDSMenuButtonWidget/widget/types";
 
@@ -19,7 +20,7 @@ export function sourceDataArrayValidation(
     messages: [
       {
         name: "TypeError",
-        message: "This value does not evaluate to type Array",
+        message: $t('sourceDataArrayValidation.08c700005bfdb7d0'),
       },
     ],
   };
@@ -37,7 +38,7 @@ export function sourceDataArrayValidation(
         isValid = false;
         message = {
           name: "RangeError",
-          message: "Source data cannot have more than 10 items",
+          message: $t('sourceDataArrayValidation.0dbc7071b8c3681d'),
         };
       }
 

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Text, TextType } from "@appsmith/ads-old";
 import { Icon, Tooltip } from "@appsmith/ads";
@@ -76,7 +77,7 @@ function ListItemWrapper(props: {
       className={`t--ds-list ${selected ? "active" : ""}`}
       onClick={() => onClick(ds)}
     >
-      <PluginImage alt="Datasource" src={getAssetUrl(plugin?.iconLocation)} />
+      <PluginImage alt={$t('DatasourceListItem.373e653e05f293dd')} src={getAssetUrl(plugin?.iconLocation)} />
       <ListLabels>
         <Tooltip content={ds.name} placement="left">
           <DsTitle>

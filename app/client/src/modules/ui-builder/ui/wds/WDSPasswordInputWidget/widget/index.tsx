@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 import { WDSInputWidget } from "modules/ui-builder/ui/wds/WDSInputWidget";
 import { INPUT_TYPES } from "modules/ui-builder/ui/wds/WDSBaseInputWidget/constants";
@@ -12,7 +13,7 @@ class WDSPasswordInputWidget extends WDSInputWidget {
       ...super.getConfig(),
       displayOrder: undefined,
       tags: [WIDGET_TAGS.INPUTS],
-      name: "Password Input",
+      name: $t('index.cf6093120401086d'),
     };
   }
 

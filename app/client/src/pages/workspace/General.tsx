@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import {
@@ -197,10 +198,10 @@ export function GeneralSettings() {
                 data-testid="t--workspace-name-input"
                 defaultValue={currentWorkspace && currentWorkspace.name}
                 isRequired
-                label="Workspace name"
+                label=$t('General.de025fafcf38e32f')
                 labelPosition="top"
                 onChange={onWorkspaceNameChange}
-                placeholder="Workspace name"
+                placeholder=$t('General.de025fafcf38e32f')
                 renderAs="input"
                 size="md"
                 type="text"
@@ -238,7 +239,7 @@ export function GeneralSettings() {
                 defaultValue={
                   (currentWorkspace && currentWorkspace.website) || ""
                 }
-                label="Website"
+                label=$t('General.3b53bf0505028c90')
                 labelPosition="top"
                 onChange={onWebsiteChange}
                 placeholder="Your website"
@@ -259,10 +260,10 @@ export function GeneralSettings() {
                 defaultValue={
                   (currentWorkspace && currentWorkspace.email) || ""
                 }
-                label="Email"
+                label=$t('General.beeee928de8746ed')
                 labelPosition="top"
                 onChange={onEmailChange}
-                placeholder="Email"
+                placeholder=$t('General.beeee928de8746ed')
                 renderAs="input"
                 size="md"
                 type="text"

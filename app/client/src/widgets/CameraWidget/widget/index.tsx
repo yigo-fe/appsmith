@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
@@ -40,19 +41,19 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Camera", // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
+      name: $t('index.9fdc8a56a74f8685'), // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.EXTERNAL],
       needsMeta: true, // Defines if this widget adds any meta properties
       isCanvas: false, // Defines if this widget has a canvas within in which we can drop other widgets
-      searchTags: ["photo", "video recorder"],
+      searchTags: ["photo", $t('index.6bc2e6a86955b423')],
     };
   }
 
   static getDefaults() {
     return {
-      widgetName: "Camera",
+      widgetName: $t('index.9fdc8a56a74f8685'),
       rows: 33,
       columns: 25,
       mode: CameraModeTypes.CAMERA,
@@ -96,7 +97,7 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Camera widget allows users to take a picture or record videos through their system camera using browser permissions.",
+        $t('index.f189147aa6fa8640'),
       "!url": "https://docs.appsmith.com/widget-reference/camera",
       imageBlobURL: "string",
       imageDataURL: "string",
@@ -110,22 +111,22 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.4e9b92d629d15474'),
         children: [
           {
             propertyName: "mode",
-            label: "Mode",
+            label: $t('index.db5ad044e7ac8ad3'),
             controlType: "ICON_TABS",
             defaultValue: "CAMERA",
             fullWidth: true,
-            helpText: "Whether a picture is taken or a video is recorded",
+            helpText: $t('index.020f7f8b4d3f0610'),
             options: [
               {
-                label: "Image",
+                label: $t('index.7d615845be7366e5'),
                 value: "CAMERA",
               },
               {
-                label: "Video",
+                label: $t('index.30b95e569320ab9b'),
                 value: "VIDEO",
               },
             ],
@@ -140,8 +141,8 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.841232183cb62d13'),
+            helpText: $t('index.a231982fb551eb99'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -150,9 +151,9 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.313b90fec980ea6c'),
             controlType: "SWITCH",
-            helpText: "Disables clicks to this widget",
+            helpText: $t('index.2a9bd46569105512'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -160,8 +161,8 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
           },
           {
             propertyName: "isMirrored",
-            label: "Mirrored",
-            helpText: "Show camera preview and get the screenshot mirrored",
+            label: $t('index.67ee15203377fce4'),
+            helpText: $t('index.f9a5f3f6f86b0790'),
             controlType: "SWITCH",
             dependencies: ["mode"],
             isJSConvertible: true,
@@ -201,10 +202,10 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.5874f0626e01f86c'),
         children: [
           {
-            helpText: "when the image is captured",
+            helpText: $t('index.17f282554f75b2f6'),
             propertyName: "onImageCapture",
             label: "OnImageCapture",
             controlType: "ACTION_SELECTOR",
@@ -215,7 +216,7 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the image is saved",
+            helpText: $t('index.a3552c75b6a20857'),
             propertyName: "onImageSave",
             label: "onImageCapture",
             controlType: "ACTION_SELECTOR",
@@ -227,7 +228,7 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the video recording get started",
+            helpText: $t('index.754a914279ddd489'),
             propertyName: "onRecordingStart",
             label: "OnRecordingStart",
             controlType: "ACTION_SELECTOR",
@@ -238,7 +239,7 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the video recording stops",
+            helpText: $t('index.16f34201862df236'),
             propertyName: "onRecordingStop",
             label: "OnRecordingStop",
             controlType: "ACTION_SELECTOR",
@@ -249,7 +250,7 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the video recording is saved",
+            helpText: $t('index.35e46d5a1d07280c'),
             propertyName: "onVideoSave",
             label: "onVideoSave",
             controlType: "ACTION_SELECTOR",
@@ -268,13 +269,13 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.adc66c8d851c0e03'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.8fd10495d5cfab8c'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.817bba6fb3dac62b'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -283,9 +284,9 @@ class CameraWidget extends BaseWidget<CameraWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.c3c1d00e9ab4b793'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.57a4d7014b0d037e'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

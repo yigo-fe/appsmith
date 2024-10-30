@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { debounce } from "lodash";
 import styled from "styled-components";
 import { isValidColor } from "utils/helpers";
@@ -105,7 +106,7 @@ function WDSThemePropertyPane() {
   return (
     <main className={styles.main}>
       {/* COLORS */}
-      <SettingSection className="px-4 pb-3" isDefaultOpen title="Color">
+      <SettingSection className="px-4 pb-3" isDefaultOpen title={$t('index.e0c205fb43283486')}>
         <section className="space-y-2">
           <SegmentedControl
             data-testid="t--anvil-theme-settings-color-mode"
@@ -126,7 +127,7 @@ function WDSThemePropertyPane() {
             inputRef={inputRef}
             leftIcon={<LeftIcon color={accentColor} />}
             onChange={onColorInputChange}
-            placeholder={"Enter color name or hex"}
+            placeholder={$t('index.098a896789c9c6ee')}
             type="text"
             value={accentColor}
           />
@@ -179,7 +180,7 @@ function WDSThemePropertyPane() {
       <SettingSection
         className="px-4 py-3 border-t"
         isDefaultOpen
-        title="Dimensions"
+        title=$t('index.451206beb4f8e768')
       >
         <section className="space-y-2">
           <SubText>Density</SubText>
@@ -217,7 +218,7 @@ function WDSThemePropertyPane() {
       <SettingSection
         className="px-4 py-3 border-t "
         isDefaultOpen
-        title="Corners"
+        title=$t('index.5b283e459dc6b188')
       >
         <section className="space-y-2">
           <SegmentedControl
@@ -239,7 +240,7 @@ function WDSThemePropertyPane() {
       <SettingSection
         className="px-4 py-3 border-t"
         isDefaultOpen
-        title="Layout"
+        title=$t('index.15f90a7e65c50c8e')
       >
         <section className="space-y-2">
           <SubText>Max app width</SubText>

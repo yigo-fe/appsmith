@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { RefObject } from "react";
 import React, { createRef } from "react";
 import { sortBy } from "lodash";
@@ -657,7 +658,7 @@ class ButtonGroupComponent extends React.Component<
               loading={!!loadedBtnId}
               onClick={getOnClick(button)}
               renderMode={this.props.renderMode}
-              style={{ flex: "1 1 auto" }}
+              style={{ flex: $t('index.7f21c1617d50aa35') }}
             >
               <StyledButton
                 borderRadius={this.props.borderRadius}

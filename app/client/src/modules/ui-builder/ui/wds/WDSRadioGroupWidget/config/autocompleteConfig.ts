@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "Radio widget lets the user choose only one option from a predefined set of options. It is quite similar to a SingleSelect Dropdown in its functionality",
+    $t('autocompleteConfig.a984004275a92c74'),
   "!url": "https://docs.appsmith.com/widget-reference/radio",
   isVisible: DefaultAutocompleteDefinitions.isVisible,
   options: "[$__dropdownOption__$]",

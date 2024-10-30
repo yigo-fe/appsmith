@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, {
   useCallback,
   useContext,
@@ -191,7 +192,7 @@ function Files() {
       }
       isSticky
       key={parentEntityId + "_actions"}
-      name="Queries/JS"
+      name=$t('index.7fd0414fe23f6459')
       onCreate={onCreate}
       onToggle={onFilesToggle}
       searchKeyword={""}
@@ -222,6 +223,6 @@ function Files() {
   );
 }
 
-Files.displayName = "Files";
+Files.displayName = $t('index.dc3d0fbded60fffd');
 
 export default React.memo(Files);

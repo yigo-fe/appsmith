@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { memo, useRef, useCallback, useState } from "react";
 import type { WrappedFieldInputProps, WrappedFieldMetaProps } from "redux-form";
 import { Field } from "redux-form";
@@ -200,7 +201,7 @@ export const ColorInput = (props: ColorInputProps) => {
         className={`mb-2 ${className ? className : ""}`}
         leftIcon={<LeftIcon onChange={onColorInputChange} value={hex} />}
         onChange={onColorInputChange}
-        placeholder="enter color name or hex"
+        placeholder=$t('ColorInput.c5232db3f7ff9600')
         value={value[selectedIndex]}
       />
     </>

@@ -1,7 +1,8 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 
 export const metaConfig = {
-  name: "Currency Input",
+  name: $t('metaConfig.4f453de22d29b361'),
   tags: [WIDGET_TAGS.INPUTS],
   needsMeta: true,
   searchTags: [
@@ -17,7 +18,7 @@ export const metaConfig = {
     "prompt",
     "field",
     "textfield",
-    "text field",
+    $t('metaConfig.e71aa6a7e32682f3'),
     "enter",
     "cash",
     "expense",

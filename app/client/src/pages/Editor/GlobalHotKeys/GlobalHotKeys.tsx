@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { connect } from "react-redux";
 import type { AppState } from "ee/reducers";
@@ -131,7 +132,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="mod + f"
           global
-          label="Search entities"
+          label=$t('GlobalHotKeys.fc982db04c015a08')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -149,14 +150,14 @@ class GlobalHotKeys extends React.Component<Props> {
           allowInInput
           combo="mod + p"
           global
-          label="Navigate"
+          label=$t('GlobalHotKeys.10c4843a289f5137')
           onKeyDown={(e) => this.onOnmnibarHotKeyDown(e)}
         />
         <Hotkey
           allowInInput
           combo="mod + plus"
           global
-          label="Create new"
+          label=$t('GlobalHotKeys.63bebb413c88b944')
           onKeyDown={(e) =>
             this.onOnmnibarHotKeyDown(e, SEARCH_CATEGORY_ID.ACTION_OPERATION)
           }
@@ -165,7 +166,7 @@ class GlobalHotKeys extends React.Component<Props> {
           allowInInput
           combo="mod + k"
           global
-          label="Show omnibar"
+          label=$t('GlobalHotKeys.ea39f4df806d778e')
           onKeyDown={(e) =>
             this.onOnmnibarHotKeyDown(e, SEARCH_CATEGORY_ID.INIT)
           }
@@ -175,7 +176,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="mod + d"
           global
           group="Canvas"
-          label="Open Debugger"
+          label=$t('GlobalHotKeys.3984607840fe4138')
           onKeyDown={this.props.toggleDebugger}
           preventDefault
         />
@@ -183,7 +184,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="mod + c"
           global
           group="Canvas"
-          label="Copy widget"
+          label=$t('GlobalHotKeys.ff6af575555bf8ad')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -196,7 +197,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="mod + v"
           global
           group="Canvas"
-          label="Paste Widget"
+          label=$t('GlobalHotKeys.8c684aeb64b47c00')
           onKeyDown={() => {
             if (matchBuilderPath(window.location.pathname)) {
               this.props.pasteCopiedWidget(
@@ -209,7 +210,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="backspace"
           global
           group="Canvas"
-          label="Delete widget"
+          label=$t('GlobalHotKeys.3df3d8ca4c0b6216')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -222,7 +223,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="del"
           global
           group="Canvas"
-          label="Delete widget"
+          label=$t('GlobalHotKeys.3df3d8ca4c0b6216')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -235,7 +236,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="mod + x"
           global
           group="Canvas"
-          label="Cut Widget"
+          label=$t('GlobalHotKeys.297438bd071de061')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -249,7 +250,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="mod + a"
           global
           group="Canvas"
-          label="Select all Widget"
+          label=$t('GlobalHotKeys.46da20540f1f7bc1')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -263,7 +264,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="esc"
           global
           group="Canvas"
-          label="Deselect all Widget"
+          label=$t('GlobalHotKeys.3d6223749768c856')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -281,7 +282,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="v"
           global
-          label="Edit Mode"
+          label=$t('GlobalHotKeys.42c516a9798095a2')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -293,7 +294,7 @@ class GlobalHotKeys extends React.Component<Props> {
           allowInInput
           combo="mod + enter"
           global
-          label="Execute Action"
+          label=$t('GlobalHotKeys.4fce3576e956e195')
           onKeyDown={this.props.executeAction}
           preventDefault
           stopPropagation
@@ -301,7 +302,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="mod + z"
           global
-          label="Undo change in canvas"
+          label=$t('GlobalHotKeys.e2d5462191151b11')
           onKeyDown={this.props.undo}
           preventDefault
           stopPropagation
@@ -309,7 +310,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="mod + shift + z"
           global
-          label="Redo change in canvas"
+          label=$t('GlobalHotKeys.6b126b27408b546a')
           onKeyDown={this.props.redo}
           preventDefault
           stopPropagation
@@ -317,7 +318,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="mod + y"
           global
-          label="Redo change in canvas"
+          label=$t('GlobalHotKeys.6b126b27408b546a')
           onKeyDown={this.props.redo}
           preventDefault
           stopPropagation
@@ -326,7 +327,7 @@ class GlobalHotKeys extends React.Component<Props> {
           combo="mod + g"
           global
           group="Canvas"
-          label="Cut Widgets for grouping"
+          label=$t('GlobalHotKeys.b9c2bfe3a1d10823')
           // TODO: Fix this the next time the file is edited
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onKeyDown={(e: any) => {
@@ -338,7 +339,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="mod + s"
           global
-          label="Save progress"
+          label=$t('GlobalHotKeys.7b467222abe5d4fa')
           onKeyDown={() => {
             toast.show(createMessage(SAVE_HOTKEY_TOASTER_MESSAGE), {
               kind: "info",
@@ -350,7 +351,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="alt + p"
           global
-          label="Preview Mode"
+          label=$t('GlobalHotKeys.b0839084c7c73621')
           onKeyDown={() => {
             this.props.setPreviewModeInitAction(!this.props.isPreviewMode);
           }}
@@ -358,7 +359,7 @@ class GlobalHotKeys extends React.Component<Props> {
         <Hotkey
           combo="ctrl + shift + g"
           global
-          label="Show git commit modal"
+          label=$t('GlobalHotKeys.855321442914d116')
           onKeyDown={() => {
             this.props.showCommitModal();
           }}

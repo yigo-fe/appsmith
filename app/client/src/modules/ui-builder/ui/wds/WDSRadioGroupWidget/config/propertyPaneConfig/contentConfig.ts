@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
 
@@ -9,12 +10,12 @@ import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.b06194d3d42962f8'),
     children: [
       {
-        helpText: "Displays a list of unique options",
+        helpText: $t('contentConfig.cb83ccfd50ccbbb7'),
         propertyName: "options",
-        label: "Options",
+        label: $t('contentConfig.047a25e1be317195'),
         controlType: "OPTION_INPUT",
         isJSConvertible: true,
         isBindProperty: true,
@@ -33,9 +34,9 @@ export const propertyPaneContentConfig = [
         evaluationSubstitutionType: EvaluationSubstitutionType.SMART_SUBSTITUTE,
       },
       {
-        helpText: "Sets a default selected option",
+        helpText: $t('contentConfig.f509187800f681d6'),
         propertyName: "defaultOptionValue",
-        label: "Default selected value",
+        label: $t('contentConfig.74d106614257806d'),
         placeholderText: "L",
         controlType: "INPUT_TEXT",
         isBindProperty: true,
@@ -58,18 +59,18 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "Controls widget orientation",
+        helpText: $t('contentConfig.b796a2f7252f1133'),
         propertyName: "orientation",
-        label: "Orientation",
+        label: $t('contentConfig.1f18c17cf0a2b439'),
         controlType: "ICON_TABS",
         fullWidth: true,
         options: [
           {
-            label: "Horizontal",
+            label: $t('contentConfig.6fdf2d73886db9c3'),
             value: "horizontal",
           },
           {
-            label: "Vertical",
+            label: $t('contentConfig.5b3e26b98157ccfb'),
             value: "vertical",
           },
         ],
@@ -81,24 +82,24 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.1c03ca9de92ff556'),
     children: [
       {
-        helpText: "Sets the label text of the options widget",
+        helpText: $t('contentConfig.b5135e44c5d93d8a'),
         propertyName: "label",
-        label: "Text",
+        label: $t('contentConfig.c9635569e8b956a9'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Label",
+        placeholderText: $t('contentConfig.1c03ca9de92ff556'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Show help text or details about current input",
+        helpText: $t('contentConfig.a892f12549462a68'),
         propertyName: "labelTooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.577e4ad49ac077e6'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Unisex shirt sizes, relaxed fit",
+        placeholderText: $t('contentConfig.c33b5d0beea31f69'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -106,12 +107,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Validations",
+    sectionName: $t('contentConfig.8252ecefbf62d72b'),
     children: [
       {
         propertyName: "isRequired",
-        label: "Required",
-        helpText: "Makes input to the widget mandatory",
+        label: $t('contentConfig.54e5885503110be8'),
+        helpText: $t('contentConfig.bd153706cd7e860f'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -121,12 +122,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.82c1863d3f42e562'),
     children: [
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('contentConfig.3c668153b631936a'),
         propertyName: "isVisible",
-        label: "Visible",
+        label: $t('contentConfig.a49a4620a311c2d2'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -135,8 +136,8 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "isDisabled",
-        label: "Disabled",
-        helpText: "Disables input to this widget",
+        label: $t('contentConfig.305f9c76dfc0be0d'),
+        helpText: $t('contentConfig.39206f391d6b0114'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -145,9 +146,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.e04e29664772b843'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.7c4d1722eb97a96c'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -157,10 +158,10 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.117d901e31cb59ae'),
     children: [
       {
-        helpText: "when a user changes the selected option",
+        helpText: $t('contentConfig.77fa6bc5feb3f057'),
         propertyName: "onSelectionChange",
         label: "onSelectionChange",
         controlType: "ACTION_SELECTOR",

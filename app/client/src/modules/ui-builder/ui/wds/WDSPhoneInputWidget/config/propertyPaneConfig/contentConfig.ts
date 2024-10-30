@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ISDCodeOptions } from "constants/ISDCodes_v2";
 import type { ISDCodeProps } from "constants/ISDCodes_v2";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -14,13 +15,13 @@ const inputTypeSectionConfig = WdsInputWidgetPropertyPaneContentConfig.find(
 export const propertyPaneContentConfig = [
   inputTypeSectionConfig,
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.80ec853bbba568fe'),
     children: [
       {
         helpText:
-          "Sets the default text of the widget. The text is updated if the default text changes",
+          $t('contentConfig.36c447fcee07b23f'),
         propertyName: "defaultText",
-        label: "Default value",
+        label: $t('contentConfig.c425e86aa86b622d'),
         controlType: "INPUT_TEXT",
         placeholderText: "(123) 456-7890",
         isBindProperty: true,
@@ -38,13 +39,13 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "Changes the country code",
+        helpText: $t('contentConfig.00600fa34b1f0e75'),
         propertyName: "defaultDialCode",
-        label: "Default country code",
+        label: $t('contentConfig.5a452312a5efbbb9'),
         enableSearch: true,
         dropdownHeight: "156px",
         controlType: "DROP_DOWN",
-        searchPlaceholderText: "Search by code or country name",
+        searchPlaceholderText: $t('contentConfig.cb02999e5b5ffbd2'),
         options: ISDCodeOptions.map((item: ISDCodeProps) => {
           return {
             leftElement: countryToFlag(item.dial_code),
@@ -65,16 +66,16 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.38d044332265a609'),
     children: [],
   },
   {
-    sectionName: "Validation",
+    sectionName: $t('contentConfig.00af5ac543185e6d'),
     children: [
       {
         propertyName: "isRequired",
-        label: "Required",
-        helpText: "Makes input to the widget mandatory",
+        label: $t('contentConfig.52225e4d7aa8cc00'),
+        helpText: $t('contentConfig.68adf633e925a14e'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,

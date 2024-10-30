@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { createRef, useState } from "react";
 import styled from "styled-components";
 import copy from "copy-to-clipboard";
@@ -55,7 +56,7 @@ function CopyToClipboard(props: any) {
         onClick={() => {
           copyToClipboard(copyText);
         }}
-        text={isCopied ? "Copied" : "Copy"}
+        text={isCopied ? $t('CopyToClipBoard.6aa1a263517ebe2c') : $t('CopyToClipBoard.f26accae17d38afa')}
       />
     </Wrapper>
   );

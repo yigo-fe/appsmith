@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import type { CurrencyOptionProps } from "constants/Currency";
@@ -112,8 +113,8 @@ export const getSelectedCurrency = (
     selectedCurrency = {
       code: "US",
       currency: "USD",
-      currency_name: "US Dollar",
-      label: "United States",
+      currency_name: $t('CurrencyCodeDropdown.aa1e580ed2f30c83'),
+      label: $t('CurrencyCodeDropdown.9be36507dc8ad889'),
       phone: "1",
       symbol_native: "$",
     };
@@ -166,7 +167,7 @@ export default function CurrencyTypeDropdown(props: CurrencyDropdownProps) {
         optionWidth="340px"
         options={props.options}
         portalClassName={`country-type-filter-dropdown-${props.widgetId}`}
-        searchPlaceholder="Search by currency or country"
+        searchPlaceholder=$t('CurrencyCodeDropdown.4b0ce2dc00a690e7')
         selected={props.selected}
         showLabelOnly
       />

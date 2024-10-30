@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
@@ -8,9 +9,9 @@ import {
 
 export default [
   {
-    helpText: "Sets the minimum allowed value",
+    helpText: $t('Number.e0fdf089a67f89db'),
     propertyName: "validation.min",
-    label: "Min",
+    label: $t('Number.ff092c6c372b5a28'),
     controlType: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",
     placeholderText: "1",
     isBindProperty: true,
@@ -32,9 +33,9 @@ export default [
     dependencies: ["primaryColumns"],
   },
   {
-    helpText: "Sets the maximum allowed value",
+    helpText: $t('Number.16d0aedf51343dbc'),
     propertyName: "validation.max",
-    label: "Max",
+    label: $t('Number.385615313fe1c35b'),
     controlType: "TABLE_INLINE_EDIT_VALIDATION_CONTROL",
     placeholderText: "100",
     isBindProperty: true,

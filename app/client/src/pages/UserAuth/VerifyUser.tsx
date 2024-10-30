@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import Container from "./Container";
 import type { RouteComponentProps } from "react-router-dom";
@@ -21,7 +22,7 @@ const VerifyUser = (
 
   useEffect(() => {
     if (!token || !email) {
-      Sentry.captureMessage("User email verification link is damaged");
+      Sentry.captureMessage($t('VerifyUser.dd2ce6ef087f2a9d'));
     }
 
     const formElement: HTMLFormElement = document.getElementById(
@@ -45,7 +46,7 @@ const VerifyUser = (
   }
 
   return (
-    <Container title={"Verifying"}>
+    <Container title={$t('VerifyUser.d1f57bb87913e87d')}>
       <form action={submitUrl} id="verification-form" method="POST">
         {Array.from(queryParams.entries()).map((param) => {
           return (

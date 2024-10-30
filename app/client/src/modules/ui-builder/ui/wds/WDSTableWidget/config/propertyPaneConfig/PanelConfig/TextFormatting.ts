@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import {
@@ -7,7 +8,7 @@ import {
 import { ColumnTypes } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 
 export default {
-  sectionName: "Text formatting",
+  sectionName: $t('TextFormatting.ec8117af5e6a5bee'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return showByColumnType(
       props,
@@ -19,8 +20,8 @@ export default {
   children: [
     {
       propertyName: "fontStyle",
-      label: "Emphasis",
-      helpText: "Controls the style of the text in the column",
+      label: $t('TextFormatting.be6e3a8c92496a3b'),
+      helpText: $t('TextFormatting.1859be79bb3c669b'),
       controlType: "BUTTON_GROUP",
       options: [
         {

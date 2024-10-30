@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import EditableText, {
   EditInteractionKind,
 } from "components/editorComponents/EditableText";
@@ -190,7 +191,7 @@ export const EntityName = React.memo(
               minimal
               onBlur={props.exitEditMode}
               onTextChanged={handleNameChange}
-              placeholder="Name"
+              placeholder={$t('Name.c2820af02974a9cb')}
               type="text"
               valueTransform={props.nameTransformFn || removeSpecialChars}
             />

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get } from "lodash";
 import type { TableWidgetProps } from "../constants";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -79,15 +80,15 @@ const HIDE_BY_COLUMN_TYPES = {
 
 export default [
   {
-    sectionName: "General",
+    sectionName: $t('propertyConfig.971f5046d9453a97'),
     children: [
       {
         helpText:
-          "Takes in an array of objects to display rows in the table. Bind data from an API using {{}}",
+          $t('propertyConfig.bccd60e4f62f3605'),
         propertyName: "tableData",
-        label: "Table data",
+        label: $t('propertyConfig.dec5a1050eec6049'),
         controlType: "INPUT_TEXT",
-        placeholderText: '[{ "name": "John" }]',
+        placeholderText: '[{ "name": $t('propertyConfig.3768034abb9d57d3') }]',
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -100,10 +101,10 @@ export default [
         evaluationSubstitutionType: EvaluationSubstitutionType.SMART_SUBSTITUTE,
       },
       {
-        helpText: "Columns",
+        helpText: $t('propertyConfig.def4222e90c2b6e9'),
         propertyName: "primaryColumns",
         controlType: "PRIMARY_COLUMNS",
-        label: "Columns",
+        label: $t('propertyConfig.def4222e90c2b6e9'),
         updateHook: updateDerivedColumnsHook,
         dependencies: ["derivedColumns", "columnOrder", "childStylesheet"],
         isBindProperty: false,
@@ -127,16 +128,16 @@ export default [
           dependencies: ["primaryColumns", "derivedColumns", "columnOrder"],
           children: [
             {
-              sectionName: "Column Control",
+              sectionName: $t('propertyConfig.90f0890f93f9e9ea'),
               children: [
                 {
                   propertyName: "columnType",
-                  label: "Column type",
+                  label: $t('propertyConfig.8bd62fb077258a00'),
                   controlType: "DROP_DOWN",
                   customJSControl: "COMPUTE_VALUE",
                   options: [
                     {
-                      label: "Plain text",
+                      label: $t('propertyConfig.b7ea8a5515caf055'),
                       value: "text",
                     },
                     {
@@ -144,31 +145,31 @@ export default [
                       value: "url",
                     },
                     {
-                      label: "Number",
+                      label: $t('propertyConfig.02c8499b7f263013'),
                       value: "number",
                     },
                     {
-                      label: "Image",
+                      label: $t('propertyConfig.8caad9d3f2916804'),
                       value: "image",
                     },
                     {
-                      label: "Video",
+                      label: $t('propertyConfig.d7ee8b26fdd81e9d'),
                       value: "video",
                     },
                     {
-                      label: "Date",
+                      label: $t('propertyConfig.c8b465efb5af66c0'),
                       value: "date",
                     },
                     {
-                      label: "Button",
+                      label: $t('propertyConfig.9bec8ae1c632983a'),
                       value: "button",
                     },
                     {
-                      label: "Menu button",
+                      label: $t('propertyConfig.4801ac3198421b81'),
                       value: "menuButton",
                     },
                     {
-                      label: "Icon button",
+                      label: $t('propertyConfig.d13180a158648d34'),
                       value: "iconButton",
                     },
                   ],
@@ -184,7 +185,7 @@ export default [
                 },
                 {
                   propertyName: "displayText",
-                  label: "Display text",
+                  label: $t('propertyConfig.3fac1a2a800e7c9a'),
                   controlType: "COMPUTE_VALUE",
                   customJSControl: "COMPUTE_VALUE",
                   updateHook: updateDerivedColumnsHook,
@@ -208,9 +209,9 @@ export default [
                 },
                 {
                   helpText:
-                    "The value computed & shown in each cell. Use {{currentRow}} to reference each row in the table. This property is not accessible outside the column settings.",
+                    $t('propertyConfig.14a263011eb3424c'),
                   propertyName: "computedValue",
-                  label: "Computed value",
+                  label: $t('propertyConfig.3927695adf51c391'),
                   controlType: "COMPUTE_VALUE",
                   updateHook: updateDerivedColumnsHook,
                   hidden: (props: TableWidgetProps, propertyPath: string) => {
@@ -235,8 +236,8 @@ export default [
                     "derivedColumns",
                     "columnType",
                   ],
-                  label: "Visible",
-                  helpText: "Controls the visibility of the cell in the column",
+                  label: $t('propertyConfig.e3abcca425b39d02'),
+                  helpText: $t('propertyConfig.f22ce1f9af912f60'),
                   updateHook: updateDerivedColumnsHook,
                   defaultValue: true,
                   controlType: "SWITCH",
@@ -253,7 +254,7 @@ export default [
                 },
                 {
                   propertyName: "isDisabled",
-                  label: "Disabled",
+                  label: $t('propertyConfig.34f4b4b7e0c85683'),
                   updateHook: updateDerivedColumnsHook,
                   defaultValue: false,
                   controlType: "SWITCH",
@@ -282,9 +283,9 @@ export default [
                 },
                 {
                   propertyName: "isCompact",
-                  helpText: "Decides if menu items will consume lesser space",
+                  helpText: $t('propertyConfig.cf12e6938c31eaa9'),
                   updateHook: updateDerivedColumnsHook,
-                  label: "Compact",
+                  label: $t('propertyConfig.143731bde66527b3'),
                   controlType: "SWITCH",
                   customJSControl: "COMPUTE_VALUE",
                   isJSConvertible: true,
@@ -311,15 +312,15 @@ export default [
                 },
                 {
                   propertyName: "inputFormat",
-                  label: "Original Date Format",
+                  label: $t('propertyConfig.67b59fdcd95d7fbe'),
                   controlType: "DROP_DOWN",
                   options: [
                     {
-                      label: "UNIX timestamp (s)",
+                      label: $t('propertyConfig.a39fff0f39648f4e'),
                       value: "Epoch",
                     },
                     {
-                      label: "UNIX timestamp (ms)",
+                      label: $t('propertyConfig.983c409623189fb0'),
                       value: "Milliseconds",
                     },
                     {
@@ -450,17 +451,17 @@ export default [
                 },
                 {
                   propertyName: "outputFormat",
-                  label: "Display Date Format",
+                  label: $t('propertyConfig.f12c4b63a75eecd8'),
                   controlType: "DROP_DOWN",
                   customJSControl: "COMPUTE_VALUE",
                   isJSConvertible: true,
                   options: [
                     {
-                      label: "UNIX timestamp (s)",
+                      label: $t('propertyConfig.a39fff0f39648f4e'),
                       value: "Epoch",
                     },
                     {
-                      label: "UNIX timestamp (ms)",
+                      label: $t('propertyConfig.983c409623189fb0'),
                       value: "Milliseconds",
                     },
                     {
@@ -614,7 +615,7 @@ export default [
               ],
             },
             {
-              sectionName: "Styles",
+              sectionName: $t('propertyConfig.7408ae09a238b3c2'),
               hidden: (props: TableWidgetProps, propertyPath: string) => {
                 return hideByColumnType(
                   props,
@@ -627,7 +628,7 @@ export default [
               children: [
                 {
                   propertyName: "horizontalAlignment",
-                  label: "Text align",
+                  label: $t('propertyConfig.b38bdf4b3d0aba77'),
                   controlType: "ICON_TABS",
                   options: [
                     {
@@ -666,7 +667,7 @@ export default [
                 },
                 {
                   propertyName: "textSize",
-                  label: "Text size",
+                  label: $t('propertyConfig.9d98bff8891358d0'),
                   controlType: "DROP_DOWN",
                   isJSConvertible: true,
                   customJSControl: "COMPUTE_VALUE",
@@ -709,7 +710,7 @@ export default [
                 },
                 {
                   propertyName: "fontStyle",
-                  label: "Font Style",
+                  label: $t('propertyConfig.34580a93f662aed4'),
                   controlType: "BUTTON_GROUP",
                   options: [
                     {
@@ -744,7 +745,7 @@ export default [
                 },
                 {
                   propertyName: "verticalAlignment",
-                  label: "Vertical alignment",
+                  label: $t('propertyConfig.5d3bbb5badd4c4ce'),
                   controlType: "ICON_TABS",
                   options: [
                     {
@@ -783,7 +784,7 @@ export default [
                 },
                 {
                   propertyName: "textColor",
-                  label: "Text color",
+                  label: $t('propertyConfig.7a3d534e039b979f'),
                   controlType: "PRIMARY_COLUMNS_COLOR_PICKER",
                   isJSConvertible: true,
                   customJSControl: "COMPUTE_VALUE",
@@ -807,7 +808,7 @@ export default [
                 },
                 {
                   propertyName: "cellBackground",
-                  label: "Cell Background",
+                  label: $t('propertyConfig.20846cef0d5a94ea'),
                   controlType: "PRIMARY_COLUMNS_COLOR_PICKER",
                   isJSConvertible: true,
                   customJSControl: "COMPUTE_VALUE",
@@ -832,7 +833,7 @@ export default [
               ],
             },
             {
-              sectionName: "Button Properties",
+              sectionName: $t('propertyConfig.f2bdd7c1c09b0e40'),
               hidden: (props: TableWidgetProps, propertyPath: string) => {
                 return hideByColumnType(
                   props,
@@ -844,8 +845,8 @@ export default [
               children: [
                 {
                   propertyName: "iconName",
-                  label: "Icon",
-                  helpText: "Sets the icon to be used for the icon button",
+                  label: $t('propertyConfig.75f866f3268395f4'),
+                  helpText: $t('propertyConfig.07456af95ef5993c'),
                   hidden: (props: TableWidgetProps, propertyPath: string) => {
                     return hideByColumnType(
                       props,
@@ -876,8 +877,8 @@ export default [
                 },
                 {
                   propertyName: "iconAlign",
-                  label: "Icon Alignment",
-                  helpText: "Sets the icon alignment of the menu button",
+                  label: $t('propertyConfig.da2e8424e52aef1e'),
+                  helpText: $t('propertyConfig.e57eed6ac62d8fae'),
                   controlType: "ICON_TABS",
                   defaultValue: "left",
                   options: [
@@ -914,7 +915,7 @@ export default [
                 },
                 {
                   propertyName: "buttonLabel",
-                  label: "Label",
+                  label: $t('propertyConfig.4e3748d3e26b37f4'),
                   controlType: "COMPUTE_VALUE",
                   defaultValue: "Action",
                   updateHook: updateDerivedColumnsHook,
@@ -935,7 +936,7 @@ export default [
                 },
                 {
                   propertyName: "menuButtonLabel",
-                  label: "Label",
+                  label: $t('propertyConfig.4e3748d3e26b37f4'),
                   controlType: "COMPUTE_VALUE",
                   defaultValue: "Open Menu",
                   updateHook: updateDerivedColumnsHook,
@@ -957,9 +958,9 @@ export default [
                 {
                   propertyName: "buttonColor",
                   getStylesheetValue: getPrimaryColumnStylesheetValue,
-                  label: "Button color",
+                  label: $t('propertyConfig.4a1a87198955d2ca'),
                   controlType: "PRIMARY_COLUMNS_COLOR_PICKER",
-                  helpText: "Changes the color of the button",
+                  helpText: $t('propertyConfig.702f4c501e72d565'),
                   isJSConvertible: true,
                   customJSControl: "COMPUTE_VALUE",
                   updateHook: updateDerivedColumnsHook,
@@ -989,12 +990,12 @@ export default [
                 },
                 {
                   propertyName: "buttonVariant",
-                  label: "Button variant",
+                  label: $t('propertyConfig.516aaf67494443a8'),
                   controlType: "DROP_DOWN",
                   customJSControl: "COMPUTE_VALUE",
                   defaultValue: ButtonVariantTypes.PRIMARY,
                   isJSConvertible: true,
-                  helpText: "Sets the variant",
+                  helpText: $t('propertyConfig.47f9c8eb2e592776'),
                   hidden: (props: TableWidgetProps, propertyPath: string) => {
                     return hideByColumnType(
                       props,
@@ -1009,15 +1010,15 @@ export default [
                   ],
                   options: [
                     {
-                      label: "Primary",
+                      label: $t('propertyConfig.07a171fda0260038'),
                       value: ButtonVariantTypes.PRIMARY,
                     },
                     {
-                      label: "Secondary",
+                      label: $t('propertyConfig.21d00eb36a68f30e'),
                       value: ButtonVariantTypes.SECONDARY,
                     },
                     {
-                      label: "Tertiary",
+                      label: $t('propertyConfig.2dc83614410de920'),
                       value: ButtonVariantTypes.TERTIARY,
                     },
                   ],
@@ -1040,12 +1041,12 @@ export default [
                 },
                 {
                   propertyName: "borderRadius",
-                  label: "Border radius",
+                  label: $t('propertyConfig.629494e280dfd7f0'),
                   customJSControl: "COMPUTE_VALUE",
                   isJSConvertible: true,
                   getStylesheetValue: getPrimaryColumnStylesheetValue,
                   helpText:
-                    "Rounds the corners of the icon button's outer border edge",
+                    $t('propertyConfig.86ea86a9ff0b519b'),
                   controlType: "BORDER_RADIUS_OPTIONS",
                   hidden: (props: TableWidgetProps, propertyPath: string) => {
                     return hideByColumnType(
@@ -1070,9 +1071,9 @@ export default [
                 },
                 {
                   propertyName: "boxShadow",
-                  label: "Box shadow",
+                  label: $t('propertyConfig.6855540cb6f55de8'),
                   helpText:
-                    "Enables you to cast a drop shadow from the frame of the widget",
+                    $t('propertyConfig.11da0ea7d7c09a1c'),
                   controlType: "BOX_SHADOW_OPTIONS",
                   customJSControl: "COMPUTE_VALUE",
                   isJSConvertible: true,
@@ -1101,8 +1102,8 @@ export default [
                 {
                   propertyName: "menuColor",
                   helpText:
-                    "Sets the custom color preset based on the menu button variant",
-                  label: "Menu Color",
+                    $t('propertyConfig.177a2f594b2f7a83'),
+                  label: $t('propertyConfig.2dcbbd1570a44eaf'),
                   controlType: "PRIMARY_COLUMNS_COLOR_PICKER",
                   customJSControl: "COMPUTE_VALUE",
                   isJSConvertible: true,
@@ -1136,20 +1137,20 @@ export default [
                 },
                 {
                   propertyName: "menuVariant",
-                  label: "Menu Variant",
+                  label: $t('propertyConfig.c88218b2bf70dc75'),
                   controlType: "DROP_DOWN",
-                  helpText: "Sets the variant of the menu button",
+                  helpText: $t('propertyConfig.44c9920baccd6da6'),
                   options: [
                     {
-                      label: "Primary",
+                      label: $t('propertyConfig.07a171fda0260038'),
                       value: ButtonVariantTypes.PRIMARY,
                     },
                     {
-                      label: "Secondary",
+                      label: $t('propertyConfig.21d00eb36a68f30e'),
                       value: ButtonVariantTypes.SECONDARY,
                     },
                     {
-                      label: "Tertiary",
+                      label: $t('propertyConfig.2dc83614410de920'),
                       value: ButtonVariantTypes.TERTIARY,
                     },
                   ],
@@ -1182,7 +1183,7 @@ export default [
                   },
                 },
                 {
-                  helpText: "when the button is clicked",
+                  helpText: $t('propertyConfig.946a8c1b5af668af'),
                   propertyName: "onClick",
                   label: "onClick",
                   controlType: "ACTION_SELECTOR",
@@ -1213,7 +1214,7 @@ export default [
               ],
             },
             {
-              sectionName: "Menu items",
+              sectionName: $t('propertyConfig.5dfdde7aa5b27e98'),
               hidden: (props: TableWidgetProps, propertyPath: string) => {
                 return hideByColumnType(
                   props,
@@ -1225,7 +1226,7 @@ export default [
               updateHook: updateDerivedColumnsHook,
               children: [
                 {
-                  helpText: "Menu items",
+                  helpText: $t('propertyConfig.5dfdde7aa5b27e98'),
                   propertyName: "menuItems",
                   controlType: "MENU_ITEMS",
                   label: "",
@@ -1244,14 +1245,14 @@ export default [
                     ],
                     children: [
                       {
-                        sectionName: "General",
+                        sectionName: $t('propertyConfig.971f5046d9453a97'),
                         children: [
                           {
                             propertyName: "label",
-                            helpText: "Sets the label of a menu item",
-                            label: "Label",
+                            helpText: $t('propertyConfig.462544a51a65a6ea'),
+                            label: $t('propertyConfig.4e3748d3e26b37f4'),
                             controlType: "INPUT_TEXT",
-                            placeholderText: "Enter label",
+                            placeholderText: $t('propertyConfig.415922b362e3abcb'),
                             isBindProperty: true,
                             isTriggerProperty: false,
                             validation: { type: ValidationTypes.TEXT },
@@ -1266,8 +1267,8 @@ export default [
                           {
                             propertyName: "backgroundColor",
                             helpText:
-                              "Sets the background color of a menu item",
-                            label: "Background color",
+                              $t('propertyConfig.185b0d3dfcb0db5b'),
+                            label: $t('propertyConfig.26c5db2109847630'),
                             controlType: "PRIMARY_COLUMNS_COLOR_PICKER",
                             isJSConvertible: true,
                             isBindProperty: true,
@@ -1283,8 +1284,8 @@ export default [
                           },
                           {
                             propertyName: "textColor",
-                            helpText: "Sets the text color of a menu item",
-                            label: "Text color",
+                            helpText: $t('propertyConfig.03b829e49df04dd3'),
+                            label: $t('propertyConfig.7a3d534e039b979f'),
                             controlType: "PRIMARY_COLUMNS_COLOR_PICKER",
                             isBindProperty: false,
                             isTriggerProperty: false,
@@ -1298,8 +1299,8 @@ export default [
                           },
                           {
                             propertyName: "isDisabled",
-                            helpText: "Disables input to the widget",
-                            label: "Disabled",
+                            helpText: $t('propertyConfig.43455e16911773f7'),
+                            label: $t('propertyConfig.34f4b4b7e0c85683'),
                             controlType: "SWITCH",
                             isJSConvertible: true,
                             isBindProperty: true,
@@ -1315,8 +1316,8 @@ export default [
                           },
                           {
                             propertyName: "isVisible",
-                            helpText: "Controls the visibility of the widget",
-                            label: "Visible",
+                            helpText: $t('propertyConfig.a0a18b6fa5645e22'),
+                            label: $t('propertyConfig.e3abcca425b39d02'),
                             controlType: "SWITCH",
                             isJSConvertible: true,
                             isBindProperty: true,
@@ -1333,13 +1334,13 @@ export default [
                         ],
                       },
                       {
-                        sectionName: "Icon Options",
+                        sectionName: $t('propertyConfig.cdf444f024a8be4d'),
                         children: [
                           {
                             propertyName: "iconName",
-                            label: "Icon",
+                            label: $t('propertyConfig.75f866f3268395f4'),
                             helpText:
-                              "Sets the icon to be used for a menu item",
+                              $t('propertyConfig.2f1631fea8f224b1'),
                             controlType: "ICON_SELECT",
                             isBindProperty: false,
                             isTriggerProperty: false,
@@ -1353,8 +1354,8 @@ export default [
                           },
                           {
                             propertyName: "iconColor",
-                            helpText: "Sets the icon color of a menu item",
-                            label: "Icon color",
+                            helpText: $t('propertyConfig.16b158bdb3581073'),
+                            label: $t('propertyConfig.8404f7033884cffa'),
                             controlType: "PRIMARY_COLUMNS_COLOR_PICKER",
                             isBindProperty: false,
                             isTriggerProperty: false,
@@ -1368,8 +1369,8 @@ export default [
                           },
                           {
                             propertyName: "iconAlign",
-                            label: "Icon alignment",
-                            helpText: "Sets the icon alignment of a menu item",
+                            label: $t('propertyConfig.419187d820c70728'),
+                            helpText: $t('propertyConfig.8860a9c391a09a1d'),
                             controlType: "ICON_TABS",
                             defaultValue: "left",
                             options: [
@@ -1396,10 +1397,10 @@ export default [
                         ],
                       },
                       {
-                        sectionName: "Events",
+                        sectionName: $t('propertyConfig.1fd8503d2f1a4f1a'),
                         children: [
                           {
-                            helpText: "when the menu item is clicked",
+                            helpText: $t('propertyConfig.b530660a3ecda27d'),
                             propertyName: "onClick",
                             label: "onItemClick",
                             controlType: "ACTION_SELECTOR",
@@ -1424,10 +1425,10 @@ export default [
       },
       {
         helpText:
-          "Assigns a unique column which helps maintain selectedRows and triggeredRows based on value",
+          $t('propertyConfig.427a3a2b09cfa6f7'),
         propertyName: "primaryColumnId",
         dependencies: ["primaryColumns"],
-        label: "Primary key column",
+        label: $t('propertyConfig.c0854c157d57d161'),
         controlType: "PRIMARY_COLUMNS_DROPDOWN",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -1435,7 +1436,7 @@ export default [
       },
       {
         propertyName: "defaultSearchText",
-        label: "Default search text",
+        label: $t('propertyConfig.c3f23eed2a8104af'),
         controlType: "INPUT_TEXT",
         placeholderText: "{{appsmith.user.name}}",
         isBindProperty: true,
@@ -1443,9 +1444,9 @@ export default [
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Selects row(s) by default",
+        helpText: $t('propertyConfig.d335bac7f011f63f'),
         propertyName: "defaultSelectedRow",
-        label: "Default selected row",
+        label: $t('propertyConfig.e80ec555aff50741'),
         controlType: "INPUT_TEXT",
         placeholderText: "0",
         isBindProperty: true,
@@ -1455,7 +1456,7 @@ export default [
           params: {
             fn: defaultSelectedRowValidation,
             expected: {
-              type: "Index of row(s)",
+              type: $t('propertyConfig.d6c23bc6fb8c445b'),
               example: "0 | [0, 1]",
               autocompleteDataType: AutocompleteDataType.STRING,
             },
@@ -1465,19 +1466,19 @@ export default [
       },
       {
         propertyName: "compactMode",
-        helpText: "Selects row height",
-        label: "Default row height",
+        helpText: $t('propertyConfig.666ceb39acc600c3'),
+        label: $t('propertyConfig.b150a3b581b6dab9'),
         controlType: "DROP_DOWN",
         defaultValue: "DEFAULT",
         isBindProperty: true,
         isTriggerProperty: false,
         options: [
           {
-            label: "Short",
+            label: $t('propertyConfig.001f627c7ca6247c'),
             value: "SHORT",
           },
           {
-            label: "Default",
+            label: $t('propertyConfig.e9d9d1e2ff9ecfc1'),
             value: "DEFAULT",
           },
           {
@@ -1488,9 +1489,9 @@ export default [
       },
       {
         helpText:
-          "Bind the Table.pageNo property in your API and call it onPageChange",
+          $t('propertyConfig.52aec12ebbfc8631'),
         propertyName: "serverSidePaginationEnabled",
-        label: "Server side pagination",
+        label: $t('propertyConfig.b7c23c293bf16596'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -1498,9 +1499,9 @@ export default [
       {
         helpText: createMessage(TABLE_WIDGET_TOTAL_RECORD_TOOLTIP),
         propertyName: "totalRecordsCount",
-        label: "Total Record Count",
+        label: $t('propertyConfig.e9e6b3f25f354d59'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Enter total record count",
+        placeholderText: $t('propertyConfig.aa4afe541a2e7b4b'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: {
@@ -1508,7 +1509,7 @@ export default [
           params: {
             fn: totalRecordsCountValidation,
             expected: {
-              type: "Number",
+              type: $t('propertyConfig.02c8499b7f263013'),
               example: "10",
               autocompleteDataType: AutocompleteDataType.STRING,
             },
@@ -1519,10 +1520,10 @@ export default [
         dependencies: ["serverSidePaginationEnabled"],
       },
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('propertyConfig.a0a18b6fa5645e22'),
         propertyName: "isVisible",
         isJSConvertible: true,
-        label: "Visible",
+        label: $t('propertyConfig.e3abcca425b39d02'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -1532,9 +1533,9 @@ export default [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('propertyConfig.79a2b7664c636caf'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('propertyConfig.5b366e9d81a621f9'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -1542,10 +1543,10 @@ export default [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Controls sorting in View Mode",
+        helpText: $t('propertyConfig.152a6563796af6ee'),
         propertyName: "isSortable",
         isJSConvertible: true,
-        label: "Sortable",
+        label: $t('propertyConfig.4a85a2f58d2f9ce6'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -1558,14 +1559,14 @@ export default [
       },
       {
         propertyName: "multiRowSelection",
-        label: "Enable multi row selection",
+        label: $t('propertyConfig.155b56634414c628'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
       },
       {
         propertyName: "enableClientSideSearch",
-        label: "Enable client side search",
+        label: $t('propertyConfig.ab5a48254845eb57'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -1573,10 +1574,10 @@ export default [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('propertyConfig.1fd8503d2f1a4f1a'),
     children: [
       {
-        helpText: "when a table row is selected",
+        helpText: $t('propertyConfig.5c93b26355c7787a'),
         propertyName: "onRowSelected",
         label: "onRowSelected",
         controlType: "ACTION_SELECTOR",
@@ -1585,7 +1586,7 @@ export default [
         isTriggerProperty: true,
       },
       {
-        helpText: "when a table page is changed",
+        helpText: $t('propertyConfig.d4b7ceea01ada2ba'),
         propertyName: "onPageChange",
         label: "onPageChange",
         controlType: "ACTION_SELECTOR",
@@ -1594,7 +1595,7 @@ export default [
         isTriggerProperty: true,
       },
       {
-        helpText: "when a table page size is changed",
+        helpText: $t('propertyConfig.86b88d596752c7c4'),
         propertyName: "onPageSizeChange",
         label: "onPageSizeChange",
         controlType: "ACTION_SELECTOR",
@@ -1611,7 +1612,7 @@ export default [
         isTriggerProperty: true,
       },
       {
-        helpText: "when a table column is sorted",
+        helpText: $t('propertyConfig.3672b297b56ef53f'),
         propertyName: "onSort",
         label: "onSort",
         controlType: "ACTION_SELECTOR",
@@ -1622,12 +1623,12 @@ export default [
     ],
   },
   {
-    sectionName: "Header options",
+    sectionName: $t('propertyConfig.e72406a9413dc99b'),
     children: [
       {
-        helpText: "Toggle visibility of the search box",
+        helpText: $t('propertyConfig.a83b93cd87fedeef'),
         propertyName: "isVisibleSearch",
-        label: "Search",
+        label: $t('propertyConfig.bf38970ba0191d17'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -1635,9 +1636,9 @@ export default [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Toggle visibility of the filters",
+        helpText: $t('propertyConfig.3fe2b5367a5ef005'),
         propertyName: "isVisibleFilters",
-        label: "Filters",
+        label: $t('propertyConfig.ffce05ea1f7bac5d'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -1645,9 +1646,9 @@ export default [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Toggle visibility of the data download",
+        helpText: $t('propertyConfig.9701a97a1401b969'),
         propertyName: "isVisibleDownload",
-        label: "Download",
+        label: $t('propertyConfig.be9922b5f743004e'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -1655,9 +1656,9 @@ export default [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Toggle visibility of the pagination",
+        helpText: $t('propertyConfig.b588e428f3e2a2c7'),
         propertyName: "isVisiblePagination",
-        label: "Pagination",
+        label: $t('propertyConfig.a053e370fbc8472a'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -1666,10 +1667,10 @@ export default [
       },
       {
         propertyName: "delimiter",
-        label: "CSV separator",
+        label: $t('propertyConfig.c25c97cdd1b26507'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Enter CSV separator",
-        helpText: "The character used for separating the CSV download file.",
+        placeholderText: $t('propertyConfig.30fc7db192d7b726'),
+        helpText: $t('propertyConfig.404c8da1b3cf3ad4'),
         isBindProperty: true,
         isTriggerProperty: false,
         defaultValue: ",",
@@ -1682,11 +1683,11 @@ export default [
     ],
   },
   {
-    sectionName: "Styles",
+    sectionName: $t('propertyConfig.7408ae09a238b3c2'),
     children: [
       {
         propertyName: "cellBackground",
-        label: "Cell background color",
+        label: $t('propertyConfig.2c140d992a2b5548'),
         controlType: "COLOR_PICKER",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns", "derivedColumns"],
@@ -1697,7 +1698,7 @@ export default [
       },
       {
         propertyName: "accentColor",
-        label: "Accent color",
+        label: $t('propertyConfig.3936ffca7c980aae'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -1707,7 +1708,7 @@ export default [
       },
       {
         propertyName: "textColor",
-        label: "Text color",
+        label: $t('propertyConfig.7a3d534e039b979f'),
         controlType: "COLOR_PICKER",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns", "derivedColumns"],
@@ -1718,7 +1719,7 @@ export default [
       },
       {
         propertyName: "textSize",
-        label: "Text size",
+        label: $t('propertyConfig.9d98bff8891358d0'),
         controlType: "DROP_DOWN",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns", "derivedColumns"],
@@ -1751,7 +1752,7 @@ export default [
       },
       {
         propertyName: "fontStyle",
-        label: "Font Style",
+        label: $t('propertyConfig.34580a93f662aed4'),
         controlType: "BUTTON_GROUP",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns", "derivedColumns"],
@@ -1770,7 +1771,7 @@ export default [
       },
       {
         propertyName: "horizontalAlignment",
-        label: "Text align",
+        label: $t('propertyConfig.b38bdf4b3d0aba77'),
         controlType: "ICON_TABS",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns", "derivedColumns"],
@@ -1794,7 +1795,7 @@ export default [
       },
       {
         propertyName: "verticalAlignment",
-        label: "Vertical alignment",
+        label: $t('propertyConfig.5d3bbb5badd4c4ce'),
         controlType: "ICON_TABS",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns", "derivedColumns"],
@@ -1818,8 +1819,8 @@ export default [
       },
       {
         propertyName: "borderRadius",
-        label: "Border radius",
-        helpText: "Rounds the corners of the icon button's outer border edge",
+        label: $t('propertyConfig.629494e280dfd7f0'),
+        helpText: $t('propertyConfig.86ea86a9ff0b519b'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -1828,9 +1829,9 @@ export default [
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
+        label: $t('propertyConfig.6855540cb6f55de8'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('propertyConfig.11da0ea7d7c09a1c'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,

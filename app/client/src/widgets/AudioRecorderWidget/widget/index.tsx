@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
@@ -41,12 +42,12 @@ class AudioRecorderWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Audio Recorder",
+      name: $t('index.0167e11c909f9cf6'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.EXTERNAL],
       needsMeta: true,
-      searchTags: ["sound recorder", "voice recorder"],
+      searchTags: [$t('index.01d580fe27dcc83d'), $t('index.90586e47fea0d594')],
     };
   }
 
@@ -99,7 +100,7 @@ class AudioRecorderWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Audio recorder widget allows users to record using their microphone, listen to the playback, and export the data to a data source.",
+        $t('index.b323071643bd794b'),
       "!url": "https://docs.appsmith.com/widget-reference/recorder",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       blobURL: "string",
@@ -111,12 +112,12 @@ class AudioRecorderWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.9e4187771f54cfef'),
         children: [
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.7d55ebe9319a4be0'),
+            helpText: $t('index.178e81d3a5c2564c'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -127,9 +128,9 @@ class AudioRecorderWidget extends BaseWidget<
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.1c413b0e9d909958'),
             controlType: "SWITCH",
-            helpText: "Disables input to this widget",
+            helpText: $t('index.3ac45f14dace9218'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -139,9 +140,9 @@ class AudioRecorderWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.259295379a72bd2b'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.da4aab8034715299'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -151,10 +152,10 @@ class AudioRecorderWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.2762d0abbcb2a101'),
         children: [
           {
-            helpText: "when the recording starts",
+            helpText: $t('index.f749e3f32881e345'),
             propertyName: "onRecordingStart",
             label: "onRecordingStart",
             controlType: "ACTION_SELECTOR",
@@ -163,7 +164,7 @@ class AudioRecorderWidget extends BaseWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "when the recording ends",
+            helpText: $t('index.d8243369d554970c'),
             propertyName: "onRecordingComplete",
             label: "onRecordingComplete",
             controlType: "ACTION_SELECTOR",
@@ -178,20 +179,20 @@ class AudioRecorderWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Styles",
+        sectionName: $t('index.51413b645ff46fb4'),
         children: [
           {
             propertyName: "iconColor",
-            helpText: "Sets the icon color of the widget",
-            label: "Icon color",
+            helpText: $t('index.a14fd9935a717d4c'),
+            label: $t('index.f43e7a89e3ecc13e'),
             controlType: "COLOR_PICKER",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "accentColor",
-            helpText: "Changes the color of the recorder button",
-            label: "Button color",
+            helpText: $t('index.6fd360cc56c1d942'),
+            label: $t('index.e2dd0eae9a832e24'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -201,13 +202,13 @@ class AudioRecorderWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.be9dd60e8f5d1e39'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.0275ee4a45e09335'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.3afc9a9c23fda8ff'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -216,9 +217,9 @@ class AudioRecorderWidget extends BaseWidget<
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.d7e63282ff8e997e'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.63fbef0f74893d17'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

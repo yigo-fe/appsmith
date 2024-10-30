@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { memo } from "react";
 import {
   Popover,
@@ -88,11 +89,11 @@ interface DownloadOptionProps {
 
 const dowloadOptions: DownloadOptionProps[] = [
   {
-    label: "Download as CSV",
+    label: $t('Download.65ad24e6f82967af'),
     value: "CSV",
   },
   {
-    label: "Download as Excel",
+    label: $t('Download.95f7190c204c2a89'),
     value: "EXCEL",
   },
 ];
@@ -221,7 +222,7 @@ function TableDataDownload(props: TableDataDownloadProps) {
         <IconWrapper color={Colors.CADET_BLUE} height={20} width={20}>
           <DownloadIcon />
         </IconWrapper>
-        <span className="action-title">Download</span>
+        <span className="action-title">{$t('Download.eae4d3494fcaf9f2')}</span>
       </TableIconWrapper>
     );
   }
@@ -243,7 +244,7 @@ function TableDataDownload(props: TableDataDownloadProps) {
           icon="download"
           selectMenu={selectMenu}
           selected={selected}
-          title="Download"
+          title={$t('Download.eae4d3494fcaf9f2')}
           width={16}
         />
         <DropDownWrapper>

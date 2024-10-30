@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState, useMemo } from "react";
 import styled from "styled-components";
 import TagListField from "components/editorComponents/form/fields/TagListField";
@@ -465,9 +466,9 @@ function InviteUsersForm(props: any) {
             customError={(err: string) => errorHandler(err)}
             data-testid="t--invite-email-input"
             intent="success"
-            label="Emails"
+            label={$t('InviteUsersForm.5aa4f25d955e98d0')}
             name="users"
-            placeholder={placeholder || "Enter email address(es)"}
+            placeholder={placeholder || $t('InviteUsersForm.d0e8d7827fc1649d')}
             type="email"
           />
           {emailError && (
@@ -491,7 +492,7 @@ function InviteUsersForm(props: any) {
             onDeselect={onRemoveOptions}
             onSelect={onSelect}
             optionLabelProp="label"
-            placeholder="Select a role"
+            placeholder={$t('InviteUsersForm.0999df6383309c1f')}
             value={selectedOption}
           >
             {styledRoles.map((role: DefaultOptionType) => (

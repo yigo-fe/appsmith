@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { LoDashStatic } from "lodash";
 import type { ValidationResponse } from "constants/WidgetValidation";
 
@@ -12,11 +13,11 @@ export function defaultValueValidation(
 ): ValidationResponse {
   const NUMBER_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be number",
+    message: $t('defaultValueValidation.66791dfd2c6cfc8b'),
   };
   const DECIMAL_SEPARATOR_ERROR_MESSAGE = {
     name: "ValidationError",
-    message: "Please use . as the decimal separator for default values.",
+    message: $t('defaultValueValidation.4edf46289ceb9d3b'),
   };
   const EMPTY_ERROR_MESSAGE = {
     name: "",
@@ -92,7 +93,7 @@ export function defaultValueValidation(
         {
           name: "RangeError",
           message:
-            "No. of decimals are higher than the decimals field set. Please update the default or the decimals field",
+            $t('defaultValueValidation.8a7c2b83ca8a0e1f'),
         },
       ];
     } else {

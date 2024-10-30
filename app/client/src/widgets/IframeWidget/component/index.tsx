@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { hexToRgba } from "widgets/WidgetUtils";
@@ -124,7 +125,7 @@ function IframeComponent(props: IframeComponentProps) {
     if (source || srcDoc) {
       setMessage("");
     } else {
-      setMessage("Valid source URL is required");
+      setMessage($t('index.3502038c6cd82397'));
     }
   }, [source]);
 
@@ -140,7 +141,7 @@ function IframeComponent(props: IframeComponentProps) {
     if (srcDoc || source) {
       setMessage("");
     } else {
-      setMessage("At least either of source URL or srcDoc is required");
+      setMessage($t('index.0922c95d0af4257d'));
     }
   }, [srcDoc]);
 

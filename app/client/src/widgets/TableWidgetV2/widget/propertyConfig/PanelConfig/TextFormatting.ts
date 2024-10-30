@@ -1,10 +1,11 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
 import { hideByColumnType, showByColumnType } from "../../propertyUtils";
 
 export default {
-  sectionName: "Text formatting",
+  sectionName: $t('TextFormatting.bf75ea56a1778172'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return showByColumnType(
       props,
@@ -16,8 +17,8 @@ export default {
   children: [
     {
       propertyName: "textSize",
-      label: "Text size",
-      helpText: "Controls the size of text in the column",
+      label: $t('TextFormatting.caa80ec731074348'),
+      helpText: $t('TextFormatting.c2eb16f627918088'),
       controlType: "DROP_DOWN",
       isJSConvertible: true,
       customJSControl: "TABLE_COMPUTE_VALUE",
@@ -64,8 +65,8 @@ export default {
     },
     {
       propertyName: "fontStyle",
-      label: "Emphasis",
-      helpText: "Controls the style of the text in the column",
+      label: $t('TextFormatting.0ad73c46cc1cf26f'),
+      helpText: $t('TextFormatting.45085207dda3118d'),
       controlType: "BUTTON_GROUP",
       options: [
         {
@@ -104,8 +105,8 @@ export default {
     },
     {
       propertyName: "horizontalAlignment",
-      label: "Text align",
-      helpText: "Sets the horizontal alignment of the content in the column",
+      label: $t('TextFormatting.f2a9bb395fb48bdb'),
+      helpText: $t('TextFormatting.413fdff4f2ca40ac'),
       controlType: "ICON_TABS",
       fullWidth: true,
       options: [
@@ -151,8 +152,8 @@ export default {
     },
     {
       propertyName: "verticalAlignment",
-      label: "Vertical alignment",
-      helpText: "Sets the vertical alignment of the content in the column",
+      label: $t('TextFormatting.0a7698e5fc254618'),
+      helpText: $t('TextFormatting.44a6e40b46fe2ae5'),
       controlType: "ICON_TABS",
       fullWidth: true,
       options: [

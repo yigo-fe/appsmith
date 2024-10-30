@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { EMAIL_SETUP_DOC } from "constants/ThirdPartyConstants";
 import { isEmail } from "utils/formhelpers";
 import type { Dispatch } from "react";
@@ -21,14 +22,14 @@ export const config: AdminConfigType = {
   type: SettingCategories.EMAIL,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.GROUP,
-  title: "Email",
+  title: $t('email.27f75ee3b884cd05'),
   canSave: true,
   settings: [
     {
       id: "APPSMITH_MAIL_READ_MORE",
       category: SettingCategories.EMAIL,
       controlType: SettingTypes.CALLOUT,
-      label: "How to configure?",
+      label: $t('email.1d5b95d571ceeae9'),
       url: EMAIL_SETUP_DOC,
     },
     {
@@ -43,7 +44,7 @@ export const config: AdminConfigType = {
       category: SettingCategories.EMAIL,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "SMTP host",
+      label: $t('email.c4ee9429dc6fc115'),
       placeholder: "email-smtp.us-east-2.amazonaws.com",
     },
     {
@@ -52,12 +53,12 @@ export const config: AdminConfigType = {
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.NUMBER,
       placeholder: "25",
-      label: "SMTP port",
+      label: $t('email.6ed1c0ba2db7e152'),
       validate: (value: string) => {
         const port = parseInt(value);
 
         if (value && (port < 0 || port > 65535)) {
-          return "Please enter a valid port";
+          return $t('email.aaf5aecd8195aae9');
         }
       },
     },
@@ -66,11 +67,11 @@ export const config: AdminConfigType = {
       category: SettingCategories.EMAIL,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "From address",
+      label: $t('email.bc058dc723706d9a'),
       placeholder: "admin@appsmith.com",
       validate: (value: string) => {
         if (value && !isEmail(value)) {
-          return "Please enter a valid email id";
+          return $t('email.99e2b2c194ce9d43');
         }
       },
       subText:
@@ -81,11 +82,11 @@ export const config: AdminConfigType = {
       category: SettingCategories.EMAIL,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "Reply-to address",
+      label: $t('email.f98fd2b174e841b1'),
       placeholder: "admin@appsmith.com",
       validate: (value: string) => {
         if (value && !isEmail(value)) {
-          return "Please enter a valid email id";
+          return $t('email.99e2b2c194ce9d43');
         }
       },
       subText:
@@ -95,21 +96,21 @@ export const config: AdminConfigType = {
       id: "APPSMITH_MAIL_SMTP_TLS_ENABLED",
       category: SettingCategories.EMAIL,
       controlType: SettingTypes.TOGGLE,
-      label: "TLS protected connection",
+      label: $t('email.c2cd63cf9f81255c'),
     },
     {
       id: "APPSMITH_MAIL_USERNAME",
       category: SettingCategories.EMAIL,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.TEXT,
-      label: "SMTP username",
+      label: $t('email.48c559c8b15ae0dc'),
     },
     {
       id: "APPSMITH_MAIL_PASSWORD",
       category: SettingCategories.EMAIL,
       controlType: SettingTypes.TEXTINPUT,
       controlSubType: SettingSubtype.PASSWORD,
-      label: "SMTP password",
+      label: $t('email.6586e8e542dab812'),
     },
     {
       id: "APPSMITH_MAIL_TEST_EMAIL",
@@ -144,7 +145,7 @@ export const config: AdminConfigType = {
           !settings["APPSMITH_MAIL_FROM"]
         );
       },
-      text: "Send test email",
+      text: $t('email.6b6514128a41a483'),
     },
   ],
 };

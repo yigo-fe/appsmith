@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
 import { ICON_NAMES } from "widgets/MenuButtonWidget/constants";
@@ -16,13 +17,13 @@ export default {
   panelIdPropertyName: "id",
   contentChildren: [
     {
-      sectionName: "General",
+      sectionName: $t('configureMenuItemsConfig.b8954b582513f1fb'),
       children: [
         {
           propertyName: "label",
           helpText:
-            "Sets the label of a menu item using the {{currentItem}} binding.",
-          label: "Label",
+            $t('configureMenuItemsConfig.fa0a5d88153b4ace'),
+          label: $t('configureMenuItemsConfig.05431ed0e85f98e3'),
           controlType: "MENU_BUTTON_DYNAMIC_ITEMS",
           placeholderText: "{{currentItem.name}}",
           isBindProperty: true,
@@ -43,8 +44,8 @@ export default {
         {
           propertyName: "isVisible",
           helpText:
-            "Controls the visibility of the widget. Can also be configured the using {{currentItem}} binding.",
-          label: "Visible",
+            $t('configureMenuItemsConfig.1ad4b2a9e6aec0f5'),
+          label: $t('configureMenuItemsConfig.f81e4d36db838749'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -61,8 +62,8 @@ export default {
         {
           propertyName: "isDisabled",
           helpText:
-            "Disables input to the widget. Can also be configured the using {{currentItem}} binding.",
-          label: "Disabled",
+            $t('configureMenuItemsConfig.7a87abb4adbe2765'),
+          label: $t('configureMenuItemsConfig.ccf1ab5aaf5d4294'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -79,7 +80,7 @@ export default {
       ],
     },
     {
-      sectionName: "Events",
+      sectionName: $t('configureMenuItemsConfig.7e250b52f34721f0'),
       children: [
         {
           helpText:
@@ -99,13 +100,13 @@ export default {
   ],
   styleChildren: [
     {
-      sectionName: "Icon",
+      sectionName: $t('configureMenuItemsConfig.3bb83dd4e511a165'),
       children: [
         {
           propertyName: "iconName",
-          label: "Icon",
+          label: $t('configureMenuItemsConfig.3bb83dd4e511a165'),
           helpText:
-            "Sets the icon to be used for a menu item. Can also be configured the using {{currentItem}} binding.",
+            $t('configureMenuItemsConfig.e1cc37ddc6d4c4b3'),
           controlType: "ICON_SELECT",
           isBindProperty: true,
           isTriggerProperty: false,
@@ -122,9 +123,9 @@ export default {
         },
         {
           propertyName: "iconAlign",
-          label: "Position",
+          label: $t('configureMenuItemsConfig.95c020f3f25f5a68'),
           helpText:
-            "Sets the icon alignment of a menu item. Can also be configured the using {{currentItem}} binding.",
+            $t('configureMenuItemsConfig.a569fcd3888fbf23'),
           controlType: "ICON_TABS",
           defaultValue: "left",
           fullWidth: false,
@@ -154,13 +155,13 @@ export default {
       ],
     },
     {
-      sectionName: "Color",
+      sectionName: $t('configureMenuItemsConfig.dc075056b5c40569'),
       children: [
         {
           propertyName: "iconColor",
           helpText:
-            "Sets the icon color of a menu item. Can also be configured the using {{currentItem}} binding.",
-          label: "Icon color",
+            $t('configureMenuItemsConfig.d93371ef3bf90628'),
+          label: $t('configureMenuItemsConfig.530f71619139f45f'),
           controlType: "COLOR_PICKER",
           isBindProperty: true,
           isTriggerProperty: false,
@@ -178,8 +179,8 @@ export default {
         {
           propertyName: "backgroundColor",
           helpText:
-            "Sets the background color of a menu item. Can also be configured the using {{currentItem}} binding.",
-          label: "Background color",
+            $t('configureMenuItemsConfig.92445009f81b78e3'),
+          label: $t('configureMenuItemsConfig.a2a3d5f809529462'),
           controlType: "COLOR_PICKER",
           isBindProperty: true,
           isTriggerProperty: false,
@@ -197,8 +198,8 @@ export default {
         {
           propertyName: "textColor",
           helpText:
-            "Sets the text color of a menu item. Can also be configured the using {{currentItem}} binding.",
-          label: "Text color",
+            $t('configureMenuItemsConfig.2e0c944b55b9751e'),
+          label: $t('configureMenuItemsConfig.d77d14b4fe749fe6'),
           controlType: "COLOR_PICKER",
           isBindProperty: true,
           isTriggerProperty: false,

@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "Switch is a simple UI widget you can use when you want users to make a binary choice",
+    $t('autocompleteConfig.e5182abe7ea2307e'),
   "!url": "https://docs.appsmith.com/widget-reference/switch",
   isVisible: DefaultAutocompleteDefinitions.isVisible,
   isSwitchedOn: "bool",

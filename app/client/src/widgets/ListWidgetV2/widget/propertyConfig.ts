@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get, isPlainObject } from "lodash";
 import log from "loglevel";
 
@@ -49,7 +50,7 @@ export const primaryColumnValidation = (
             {
               name: "ValidationError",
               message:
-                "This data identifier evaluates to an empty array. Please use an identifier that evaluates to a valid value.",
+                $t('propertyConfig.142ee2938555c183'),
             },
           ],
         };
@@ -64,7 +65,7 @@ export const primaryColumnValidation = (
             {
               name: "ValidationError",
               message:
-                "This identifier isn't a data attribute. Use an existing data attribute as your data identifier.",
+                $t('propertyConfig.0be45d6f5f90e48e'),
             },
           ],
         };
@@ -79,7 +80,7 @@ export const primaryColumnValidation = (
             {
               name: "ValidationError",
               message:
-                "This data identifier evaluates to null or undefined. Please use an identifier that evaluates to a valid value.",
+                $t('propertyConfig.5e0cb870a5139589'),
             },
           ],
         };
@@ -101,15 +102,15 @@ export const primaryColumnValidation = (
             {
               name: "ValidationError",
               message:
-                "This data identifier is evaluating to a duplicate value. Please use an identifier that evaluates to a unique value.",
+                $t('propertyConfig.e936b0be0bde11a5'),
             },
           ],
         };
       }
     } else {
       const message = isJSModeEnabled
-        ? "Use currentItem or currentIndex to find a good data identifier. You can also combine two or more data attributes or columns."
-        : "Select an option from the dropdown or toggle JS on to define a data identifier.";
+        ? $t('propertyConfig.e58aa8b18baae5d7')
+        : $t('propertyConfig.12f43d9fce4649dc');
 
       return {
         isValid: false,
@@ -137,7 +138,7 @@ export function defaultSelectedItemValidation(
 ): ValidationResponse {
   const TYPE_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be string or number",
+    message: $t('propertyConfig.45c376e4be4aafa0'),
   };
 
   const EMPTY_ERROR_MESSAGE = { name: "", message: "" };
@@ -232,14 +233,14 @@ export const primaryKeyOptions = (props: ListWidgetProps) => {
 
 export const PropertyPaneContentConfig = [
   {
-    sectionName: "Data",
+    sectionName: $t('propertyConfig.79971c7dc2a720e9'),
     children: [
       {
         propertyName: "listData",
-        helpText: "Reference or write an array to display in the List.",
-        label: "Items",
+        helpText: $t('propertyConfig.3695a1d118f46028'),
+        label: $t('propertyConfig.e7d8f5c15ae0818a'),
         controlType: "INPUT_TEXT",
-        placeholderText: '[{ "name": "John" }]',
+        placeholderText: '[{ "name": $t('propertyConfig.130e7699407a4b7d') }]',
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -254,8 +255,8 @@ export const PropertyPaneContentConfig = [
       {
         propertyName: "primaryKeys",
         helperText:
-          "Like keys in React, you must include a primary data identifier, often a column from your datasource. You could also combine two columns or data attributes.",
-        label: "Data Identifier",
+          $t('propertyConfig.2b58b88b7db34b79'),
+        label: $t('propertyConfig.196cc8d29a7083ab'),
         controlType: "DROP_DOWN",
         dropdownUsePropertyValue: true,
         customJSControl: "LIST_COMPUTE_CONTROL",
@@ -280,7 +281,7 @@ export const PropertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Pagination",
+    sectionName: $t('propertyConfig.d70df00a97273820'),
     children: [
       // Disabling till List V2.1
       // {
@@ -298,8 +299,8 @@ export const PropertyPaneContentConfig = [
       {
         propertyName: "serverSidePagination",
         helpText:
-          "Triggered by onPageChange, this helps you show your data one page at a time for better performance.",
-        label: "Server side pagination",
+          $t('propertyConfig.6a2ecd82b8234cb6'),
+        label: $t('propertyConfig.4f4fb2fa02b7e90b'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -307,12 +308,12 @@ export const PropertyPaneContentConfig = [
       {
         propertyName: "totalRecordsCount",
         helpText: createMessage(LIST_WIDGET_V2_TOTAL_RECORD_TOOLTIP),
-        label: "Total Records",
+        label: $t('propertyConfig.4c38ba93e09320a7'),
         controlType: "INPUT_TEXT",
         inputType: "INTEGER",
         isBindProperty: true,
         isTriggerProperty: false,
-        placeholderText: "Enter total record count",
+        placeholderText: $t('propertyConfig.10f354e889b4f966'),
         validation: {
           type: ValidationTypes.NUMBER,
           params: {
@@ -327,7 +328,7 @@ export const PropertyPaneContentConfig = [
       {
         propertyName: "onPageChange",
         helpText:
-          "Configure one or chain multiple actions when the page is changed in a List. All nested Actions run at the same time.",
+          $t('propertyConfig.a1edb180184a7227'),
         label: "onPageChange",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
@@ -340,12 +341,12 @@ export const PropertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Item selection",
+    sectionName: $t('propertyConfig.cb0ffe0cc9523332'),
     children: [
       {
         propertyName: "defaultSelectedItem",
-        helpText: "Selects Item by default by using a valid data identifier",
-        label: "Default selected item",
+        helpText: $t('propertyConfig.35e68da7498316a4'),
+        label: $t('propertyConfig.f7eef3cad2cd1231'),
         controlType: "INPUT_TEXT",
         placeholderText: "001",
         isBindProperty: true,
@@ -367,7 +368,7 @@ export const PropertyPaneContentConfig = [
       },
       {
         propertyName: "onItemClick",
-        helpText: "Triggers an action when an item in this List is clicked",
+        helpText: $t('propertyConfig.f39cfc779133504a'),
         label: "onItemClick",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
@@ -397,12 +398,12 @@ export const PropertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('propertyConfig.9101ba82f37769dc'),
     children: [
       {
         propertyName: "isVisible",
-        label: "Visible",
-        helpText: "Toggles the visibility of this List to end users",
+        label: $t('propertyConfig.223b5632f95afd7b'),
+        helpText: $t('propertyConfig.3ed605922a1e6b76'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -413,10 +414,10 @@ export const PropertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('propertyConfig.68057a4c22328533'),
         controlType: "SWITCH",
         helpText:
-          "Toggles the loading animation of this List on and off for end-users",
+          $t('propertyConfig.d422937efce6f8ad'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -429,13 +430,13 @@ export const PropertyPaneContentConfig = [
 
 export const PropertyPaneStyleConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('propertyConfig.9101ba82f37769dc'),
     children: [
       {
         propertyName: "itemSpacing",
-        helpText: "Sets the spacing between items in pixels to a max 16 px",
+        helpText: $t('propertyConfig.8eb2adee45c08bab'),
         placeholderText: "0",
-        label: "Item Spacing (px)",
+        label: $t('propertyConfig.10be76acc5ac419c'),
         controlType: "INPUT_TEXT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -448,12 +449,12 @@ export const PropertyPaneStyleConfig = [
     ],
   },
   {
-    sectionName: "Color",
+    sectionName: $t('propertyConfig.b6f01f5ee5b18a68'),
     children: [
       {
         propertyName: "backgroundColor",
-        label: "Background color",
-        helpText: "Sets the background color of this List",
+        label: $t('propertyConfig.04843b10ef2c17ad'),
+        helpText: $t('propertyConfig.0a457a4c821f2faf'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -472,12 +473,12 @@ export const PropertyPaneStyleConfig = [
     ],
   },
   {
-    sectionName: "Border and shadow",
+    sectionName: $t('propertyConfig.7e2884d88df4841a'),
     children: [
       {
         propertyName: "borderRadius",
-        label: "Border radius",
-        helpText: "Rounds the corners of the List's border",
+        label: $t('propertyConfig.3a0f6b2a135980e0'),
+        helpText: $t('propertyConfig.fb9956b01e21718d'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -486,8 +487,8 @@ export const PropertyPaneStyleConfig = [
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
-        helpText: "Drops a shadow from the frame of this List",
+        label: $t('propertyConfig.d2844ff5e5df942b'),
+        helpText: $t('propertyConfig.e4094e64a20f24e0'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,

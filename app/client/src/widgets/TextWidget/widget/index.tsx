@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReactNode } from "react";
 import React from "react";
 import type { TextSize } from "constants/WidgetConstants";
@@ -42,7 +43,7 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Text",
+      name: $t('index.bf2ffdf120aded59'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.SUGGESTED_WIDGETS, WIDGET_TAGS.CONTENT],
@@ -68,7 +69,7 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
       textColor: "#231F20",
       rows: 4,
       columns: 16,
-      widgetName: "Text",
+      widgetName: $t('index.bf2ffdf120aded59'),
       shouldTruncate: false,
       overflow: OverflowTypes.NONE,
       version: 1,
@@ -168,14 +169,14 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.e00bbba440295dea'),
         children: [
           {
             propertyName: "text",
-            helpText: "Sets the text of the widget",
-            label: "Text",
+            helpText: $t('index.fef9f2770f20e541'),
+            label: $t('index.bf2ffdf120aded59'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Name:",
+            placeholderText: $t('index.0dbea76087bb17f2'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -185,21 +186,21 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "overflow",
-            label: "Overflow Text",
-            helpText: "Controls the text behavior when length of text exceeds",
+            label: $t('index.75402289c3b295b3'),
+            helpText: $t('index.e0790fae91b00df9'),
             controlType: "ICON_TABS",
             fullWidth: true,
             options: [
               {
-                label: "Scroll",
+                label: $t('index.cecd7681df11aab0'),
                 value: OverflowTypes.SCROLL,
               },
               {
-                label: "Truncate",
+                label: $t('index.5fe102f3c314c572'),
                 value: OverflowTypes.TRUNCATE,
               },
               {
-                label: "None",
+                label: $t('index.736fb2a4bce4ae2d'),
                 value: OverflowTypes.NONE,
               },
             ],
@@ -209,8 +210,8 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "isVisible",
-            helpText: "Controls the visibility of the widget",
-            label: "Visible",
+            helpText: $t('index.8477701922c49195'),
+            label: $t('index.0da829eb96800596'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -219,9 +220,9 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.cbaccfe90c5fec78'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.2baaaaf496001005'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -230,8 +231,8 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "disableLink",
-            helpText: "Controls parsing text as Link",
-            label: "Disable link",
+            helpText: $t('index.db8702086cac0abc'),
+            label: $t('index.4dbbd423bed09d73'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -254,56 +255,56 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.e00bbba440295dea'),
         children: [
           {
             propertyName: "fontFamily",
-            label: "Font family",
-            helpText: "Controls the font family being used",
+            label: $t('index.9bdeecacf43c8197'),
+            helpText: $t('index.6960ce3be9106b84'),
             controlType: "DROP_DOWN",
             options: [
               {
-                label: "System Default",
-                value: "System Default",
+                label: $t('index.eaf41be77907aad8'),
+                value: $t('index.eaf41be77907aad8'),
               },
               {
-                label: "Nunito Sans",
-                value: "Nunito Sans",
+                label: $t('index.596e44b6c2cb99a6'),
+                value: $t('index.596e44b6c2cb99a6'),
               },
               {
-                label: "Poppins",
-                value: "Poppins",
+                label: $t('index.624329fdfcde5772'),
+                value: $t('index.624329fdfcde5772'),
               },
               {
-                label: "Inter",
-                value: "Inter",
+                label: $t('index.7a73a1016d9369de'),
+                value: $t('index.7a73a1016d9369de'),
               },
               {
                 label: "Montserrat",
                 value: "Montserrat",
               },
               {
-                label: "Noto Sans",
-                value: "Noto Sans",
+                label: $t('index.11f94b8fad06761a'),
+                value: $t('index.11f94b8fad06761a'),
               },
               {
-                label: "Open Sans",
-                value: "Open Sans",
+                label: $t('index.9c41ba58b7e8c8b6'),
+                value: $t('index.9c41ba58b7e8c8b6'),
               },
               {
-                label: "Roboto",
-                value: "Roboto",
+                label: $t('index.038ae35eecacafbe'),
+                value: $t('index.038ae35eecacafbe'),
               },
               {
-                label: "Rubik",
-                value: "Rubik",
+                label: $t('index.9c8586ed5b7903b9'),
+                value: $t('index.9c8586ed5b7903b9'),
               },
               {
-                label: "Ubuntu",
-                value: "Ubuntu",
+                label: $t('index.2d1a29632541527c'),
+                value: $t('index.2d1a29632541527c'),
               },
             ],
-            defaultValue: "System Default",
+            defaultValue: $t('index.eaf41be77907aad8'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -313,8 +314,8 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "fontSize",
-            label: "Font size",
-            helpText: "Controls the size of the font used",
+            label: $t('index.f44ac906ad29d1df'),
+            helpText: $t('index.2cc5ff42732c02e2'),
             controlType: "DROP_DOWN",
             defaultValue: "1rem",
             options: [
@@ -359,12 +360,12 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.13c94a89d72fb5ab'),
         children: [
           {
             propertyName: "textColor",
-            label: "Text color",
-            helpText: "Controls the color of the text displayed",
+            label: $t('index.4874630a98db9159'),
+            helpText: $t('index.62c82f37b17c4f54'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -378,8 +379,8 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "backgroundColor",
-            label: "Background color",
-            helpText: "Background color of the text added",
+            label: $t('index.cf891ed519230622'),
+            helpText: $t('index.037b85c2fddf8191'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -397,10 +398,10 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
             },
           },
           {
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.8439996b91928382'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
             propertyName: "borderColor",
-            label: "Border color",
+            label: $t('index.22b1ef4d311e4248'),
             controlType: "COLOR_PICKER",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -408,8 +409,8 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "truncateButtonColor",
-            label: "Truncate button color",
-            helpText: "Controls the color of the truncate button",
+            label: $t('index.e0c7f366ad7beffd'),
+            helpText: $t('index.9457131cde766663'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -428,12 +429,12 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Text formatting",
+        sectionName: $t('index.871545143a8b804c'),
         children: [
           {
             propertyName: "textAlign",
-            label: "Alignment",
-            helpText: "Controls the horizontal alignment of the text",
+            label: $t('index.67a2bb50ef2bedbd'),
+            helpText: $t('index.3b9e0b3a4778eb1b'),
             controlType: "ICON_TABS",
             fullWidth: true,
             options: [
@@ -458,8 +459,8 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
           },
           {
             propertyName: "fontStyle",
-            label: "Emphasis",
-            helpText: "Controls the font emphasis of the text displayed",
+            label: $t('index.dcd9682efd865cca'),
+            helpText: $t('index.818e80abba2167e7'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -479,14 +480,14 @@ class TextWidget extends BaseWidget<TextWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.0d1a8f660c7a9cef'),
         children: [
           {
             helpText:
-              "Enter value for border width which can also use as margin",
+              $t('index.ed77ace144bcb6e1'),
             propertyName: "borderWidth",
-            label: "Border width",
-            placeholderText: "Enter value in px",
+            label: $t('index.78af939906594d11'),
+            placeholderText: $t('index.91e5dbe9acc319b9'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,

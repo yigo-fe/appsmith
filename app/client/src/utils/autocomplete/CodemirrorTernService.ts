@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // Heavily inspired from https://github.com/codemirror/CodeMirror/blob/master/addon/tern/tern.js
 import type { Server, Def, QueryRegistry } from "tern";
@@ -769,7 +770,7 @@ class CodeMirrorTernService {
       const tip = this.elt(
         "span",
         null,
-        this.elt("strong", null, data.type || "not found"),
+        this.elt("strong", null, data.type || $t('CodemirrorTernService.df06d5dd0f556407')),
       );
 
       if (data.doc) tip.appendChild(document.createTextNode(" — " + data.doc));

@@ -1,7 +1,8 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 
 export const metaConfig = {
-  name: "Switch",
+  name: $t('metaConfig.d142caf5f2cd1dfb'),
   tags: [WIDGET_TAGS.TOGGLES],
   needsMeta: true,
   searchTags: [

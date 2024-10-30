@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { MutableRefObject } from "react";
 import React, { useCallback, useRef } from "react";
 import styled from "styled-components";
@@ -172,7 +173,7 @@ const Name = styled.div`
 const Version = styled.div<{ version?: string }>`
   flex-shrink: 0;
   display: ${(props) => (props.version ? "block" : "none")};
-  margin: ${(props) => (props.version ? "0 8px" : "0")};
+  margin: ${(props) => (props.version ? $t('index.4af1f6a8e65a3e4f') : "0")};
 `;
 
 const PrimaryCTA = function ({ lib }: { lib: JSLibrary }) {
@@ -226,7 +227,7 @@ export function LibraryEntity({ lib }: { lib: JSLibrary }) {
 
   const copyToClipboard = useCallback(() => {
     write(lib.accessor[lib.accessor.length - 1]);
-    toast.show("Copied to clipboard", {
+    toast.show($t('index.59cf6ba46bd6cabf'), {
       kind: "success",
     });
   }, [lib.accessor]);
@@ -364,7 +365,7 @@ function JSDependencies() {
       icon={null}
       isDefaultExpanded={isOpen}
       isSticky
-      name="Libraries"
+      name=$t('index.a56794ac76656b41')
       showAddButton={canCreateActions && !isAirgappedInstance}
       step={0}
     >

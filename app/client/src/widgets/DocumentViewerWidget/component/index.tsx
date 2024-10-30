@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { Suspense, lazy } from "react";
 import styled from "styled-components";
 import { DocumentViewer } from "react-documents";
@@ -125,7 +126,7 @@ export const getDocViewerConfigs = (docUrl: string): ConfigResponse => {
   let viewer = "url" as ViewerType;
   let url = docUrl;
   let blob;
-  let errorMessage = !!docUrl ? "" : "No document url provided for viewer";
+  let errorMessage = !!docUrl ? "" : $t('index.c7c8128458a0a1d2');
   let renderer: Renderer = errorMessage
     ? Renderers.ERROR
     : Renderers.DOCUMENT_VIEWER;
@@ -148,7 +149,7 @@ export const getDocViewerConfigs = (docUrl: string): ConfigResponse => {
         renderer = Renderers.ERROR;
       }
     } else {
-      errorMessage = "Current file type is not supported " + extension;
+      errorMessage = $t('index.23acbae8d796e231') + extension;
       renderer = Renderers.ERROR;
     }
 
@@ -193,7 +194,7 @@ export const getDocViewerConfigs = (docUrl: string): ConfigResponse => {
         renderer = Renderers.DOCUMENT_VIEWER;
       }
     } else {
-      errorMessage = "Current file type is not supported";
+      errorMessage = $t('index.23acbae8d796e231');
       renderer = Renderers.ERROR;
     }
   }

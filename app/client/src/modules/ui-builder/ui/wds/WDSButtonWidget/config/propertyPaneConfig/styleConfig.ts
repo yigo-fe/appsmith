@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { capitalize } from "lodash";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { COLORS, BUTTON_VARIANTS } from "@appsmith/wds";
@@ -5,14 +6,14 @@ import { objectKeys } from "@appsmith/utils";
 
 export const propertyPaneStyleConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('styleConfig.ff680bb6bfa3de22'),
     children: [
       {
         propertyName: "buttonVariant",
-        label: "Button variant",
+        label: $t('styleConfig.da5cfeb3aa566d16'),
         controlType: "ICON_TABS",
         fullWidth: true,
-        helpText: "Sets the variant of the button",
+        helpText: $t('styleConfig.b55924df11139ba7'),
         options: objectKeys(BUTTON_VARIANTS).map((variant) => ({
           label: BUTTON_VARIANTS[variant],
           value: variant,
@@ -31,10 +32,10 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "buttonColor",
-        label: "Button color",
+        label: $t('styleConfig.e741dfeb1ec9c4a4'),
         controlType: "DROP_DOWN",
         fullWidth: true,
-        helpText: "Sets the semantic color of the button",
+        helpText: $t('styleConfig.0a4289c4ac13d10c'),
         options: Object.values(COLORS).map((semantic) => ({
           label: capitalize(semantic),
           value: semantic,
@@ -54,12 +55,12 @@ export const propertyPaneStyleConfig = [
     ],
   },
   {
-    sectionName: "Icon",
+    sectionName: $t('styleConfig.1757fac359f6b58d'),
     children: [
       {
         propertyName: "iconName",
-        label: "Select icon",
-        helpText: "Sets the icon to be used for the button",
+        label: $t('styleConfig.67928040743b5ec2'),
+        helpText: $t('styleConfig.278935f27dd81628'),
         controlType: "ICON_SELECT_V2",
         isJSConvertible: true,
         isBindProperty: true,
@@ -70,8 +71,8 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "iconAlign",
-        label: "Position",
-        helpText: "Sets the icon alignment of the button",
+        label: $t('styleConfig.2afc8de984167290'),
+        helpText: $t('styleConfig.c2261c0a6225dcb0'),
         controlType: "ICON_TABS",
         defaultValue: "start",
         fullWidth: false,

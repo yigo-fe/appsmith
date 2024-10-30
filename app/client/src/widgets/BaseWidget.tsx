@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /**
  * Widget are responsible for accepting the abstraction layer inputs, interpretting them into rederable props and
  * spawing components based on those props
@@ -217,7 +218,7 @@ abstract class BaseWidget<
 
     actionPayload.triggerPropertyName &&
       AppsmithConsole.info({
-        text: `${actionPayload.triggerPropertyName} triggered`,
+        text: $t('BaseWidget.cabc359e7803eb29', {actionPayload_triggerPropertyName: actionPayload.triggerPropertyName}),
         source: {
           type: ENTITY_TYPE.WIDGET,
           id: this.props.widgetId,

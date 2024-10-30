@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import {
   ReduxActionErrorTypes,
@@ -361,7 +362,7 @@ export function* getUpdateDslAfterCreatingChild(
 
   widgets[parent.widgetId] = parent;
   AppsmithConsole.info({
-    text: "Widget was created",
+    text: $t('WidgetAdditionSagas.1c667bd934eb34d4'),
     source: {
       type: ENTITY_TYPE.WIDGET,
       id: childWidgetPayload.widgetId,
@@ -495,7 +496,7 @@ function* addNewTabChildSaga(
   const newTabWidgetId = generateReactKey();
   const newTabId = generateReactKey({ prefix: "tab" });
   const newTabLabel = getNextEntityName(
-    "Tab ",
+    $t('WidgetAdditionSagas.f3bed7e457ed7f4c'),
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     tabsArray.map((tab: any) => tab.label),

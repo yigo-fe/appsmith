@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { WidgetState } from "widgets/BaseWidget";
 import BaseWidget from "widgets/BaseWidget";
 import type {
@@ -21,7 +22,7 @@ function migrateTabsDataUsingMigrator(currentDSL: DSLWidget) {
       currentDSL.version = 1;
     } catch (error) {
       Sentry.captureException({
-        message: "Tabs Migration Failed",
+        message: $t('index.8497016e1a38822a'),
         oldData: currentDSL.tabs,
       });
       currentDSL.tabsObj = {};
@@ -117,7 +118,7 @@ const migrateTabsData = (currentDSL: DSLWidget) => {
       delete currentDSL.tabs;
     } catch (error) {
       Sentry.captureException({
-        message: "Tabs Migration Failed",
+        message: $t('index.8497016e1a38822a'),
         oldData: currentDSL.tabs,
       });
       currentDSL.tabsObj = {};
@@ -162,13 +163,13 @@ class TabsMigratorWidget extends BaseWidget<
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.16fe4747efedf6ef'),
         children: [
           {
-            helpText: "Takes an array of tab names to render tabs",
+            helpText: $t('index.7489ab2180bd2631'),
             propertyName: "tabs",
             isJSConvertible: true,
-            label: "Tabs",
+            label: $t('index.a67f94ce64bb6243'),
             controlType: "TABS_INPUT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -202,17 +203,17 @@ class TabsMigratorWidget extends BaseWidget<
           {
             propertyName: "shouldShowTabs",
             helpText:
-              "Hides the tabs so that different widgets can be displayed based on the default tab",
-            label: "Show tabs",
+              $t('index.159fcfa66fac0d63'),
+            label: $t('index.849a5b40fa9cb963'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "defaultTab",
-            helpText: "Selects a tab name specified by default",
-            placeholderText: "Enter tab name",
-            label: "Default tab",
+            helpText: $t('index.d65c49f1e720b259'),
+            placeholderText: $t('index.1c994f6de685b3f0'),
+            label: $t('index.ed958632b0ecad96'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -221,8 +222,8 @@ class TabsMigratorWidget extends BaseWidget<
               params: {
                 fn: selectedTabValidation,
                 expected: {
-                  type: "Tab Name (string)",
-                  example: "Tab 1",
+                  type: $t('index.0993306c037daab3'),
+                  example: $t('index.7cd0ace17535df6a'),
                   autocompleteDataType: AutocompleteDataType.STRING,
                 },
               },
@@ -230,17 +231,17 @@ class TabsMigratorWidget extends BaseWidget<
             dependencies: ["tabsObj", "tabs"],
           },
           {
-            helpText: "Enables scrolling for content inside the widget",
+            helpText: $t('index.f0fecd5b4b45e614'),
             propertyName: "shouldScrollContents",
-            label: "Scroll contents",
+            label: $t('index.0ecb7066c512037a'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.7d5d6c086f054944'),
+            helpText: $t('index.e9a8b836008400b1'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -249,9 +250,9 @@ class TabsMigratorWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.0c4bf5addaf37d4a'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.a4fa569f5cd7dbbf'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -261,10 +262,10 @@ class TabsMigratorWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.8875c957bbee6fd3'),
         children: [
           {
-            helpText: "when the button is clicked",
+            helpText: $t('index.2aa30e73cfd92ad1'),
             propertyName: "onTabSelected",
             label: "onTabSelected",
             controlType: "ACTION_SELECTOR",

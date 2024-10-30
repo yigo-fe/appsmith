@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { memo, useCallback, useMemo } from "react";
 import { useSelector } from "react-redux";
 import Entity from "../Entity";
@@ -74,7 +75,7 @@ export const ExplorerWidgetGroup = memo((props: ExplorerWidgetGroupProps) => {
       isDefaultExpanded={isWidgetsOpen}
       isSticky
       key={basePageId + "_widgets"}
-      name="Widgets"
+      name=$t('WidgetGroup.f1de3ab1b44e70fd')
       onCreate={props.addWidgetsFn}
       onToggle={onWidgetToggle}
       searchKeyword={props.searchKeyword}

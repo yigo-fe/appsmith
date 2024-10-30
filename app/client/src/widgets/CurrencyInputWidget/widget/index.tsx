@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { WidgetState } from "widgets/BaseWidget";
 import type { CurrencyInputComponentProps } from "../component";
@@ -56,11 +57,11 @@ export function defaultValueValidation(
 ): ValidationResponse {
   const NUMBER_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be number",
+    message: $t('index.332aed4861ee32bf'),
   };
   const DECIMAL_SEPARATOR_ERROR_MESSAGE = {
     name: "ValidationError",
-    message: "Please use . as the decimal separator for default values.",
+    message: $t('index.e7e8ca3ca3739281'),
   };
   const EMPTY_ERROR_MESSAGE = {
     name: "",
@@ -136,7 +137,7 @@ export function defaultValueValidation(
         {
           name: "RangeError",
           message:
-            "No. of decimals are higher than the decimals field set. Please update the default or the decimals field",
+            $t('index.43a20c0f371cb20f'),
         },
       ];
     } else {
@@ -162,7 +163,7 @@ class CurrencyInputWidget extends BaseInputWidget<
 
   static getConfig() {
     return {
-      name: "Currency Input",
+      name: $t('index.43df0096363329de'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.INPUTS],
@@ -240,16 +241,16 @@ class CurrencyInputWidget extends BaseInputWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "An input text field is used to capture a currency value. Inputs are used in forms and can have custom validations.",
+        $t('index.75cb52b09d2c2a42'),
       "!url": "https://docs.appsmith.com/widget-reference/currency-input",
       text: {
         "!type": "string",
-        "!doc": "The formatted text value of the input",
+        "!doc": $t('index.12d7e1a5d3b19205'),
         "!url": "https://docs.appsmith.com/widget-reference/currency-input",
       },
       value: {
         "!type": "number",
-        "!doc": "The value of the input",
+        "!doc": $t('index.f8db2ae9a64f453a'),
         "!url": "https://docs.appsmith.com/widget-reference/currency-input",
       },
       isValid: "bool",
@@ -257,11 +258,11 @@ class CurrencyInputWidget extends BaseInputWidget<
       isDisabled: "bool",
       countryCode: {
         "!type": "string",
-        "!doc": "Selected country code for Currency",
+        "!doc": $t('index.b5adf003e046704a'),
       },
       currencyCode: {
         "!type": "string",
-        "!doc": "Selected Currency code",
+        "!doc": $t('index.78b72ec83f5bba73'),
       },
     };
   }
@@ -294,13 +295,13 @@ class CurrencyInputWidget extends BaseInputWidget<
     return mergeWidgetConfig(
       [
         {
-          sectionName: "Data",
+          sectionName: $t('index.e1b73faece92e274'),
           children: [
             {
               helpText:
-                "Sets the default text of the widget. The text is updated if the default text changes",
+                $t('index.c493eef665b482cd'),
               propertyName: "defaultText",
-              label: "Default value",
+              label: $t('index.ef77703aed18a8d8'),
               controlType: "INPUT_TEXT",
               placeholderText: "100",
               isBindProperty: true,
@@ -319,13 +320,13 @@ class CurrencyInputWidget extends BaseInputWidget<
               dependencies: ["decimals"],
             },
             {
-              helpText: "Changes the type of currency",
+              helpText: $t('index.d4df8a9aaab352f6'),
               propertyName: "defaultCurrencyCode",
-              label: "Currency",
+              label: $t('index.cfa3f7dbb27a53c7'),
               enableSearch: true,
               dropdownHeight: "156px",
               controlType: "DROP_DOWN",
-              searchPlaceholderText: "Search by code or name",
+              searchPlaceholderText: $t('index.9daaa89eb4c524e4'),
               options: CurrencyDropdownOptions,
               virtual: true,
               isJSConvertible: true,
@@ -337,8 +338,8 @@ class CurrencyInputWidget extends BaseInputWidget<
             },
             {
               propertyName: "allowCurrencyChange",
-              label: "Allow currency change",
-              helpText: "Search by currency or country",
+              label: $t('index.9d182e3c37f5f86d'),
+              helpText: $t('index.4b38b4d9e03ea604'),
               controlType: "SWITCH",
               isJSConvertible: true,
               isBindProperty: true,
@@ -346,9 +347,9 @@ class CurrencyInputWidget extends BaseInputWidget<
               validation: { type: ValidationTypes.BOOLEAN },
             },
             {
-              helpText: "No. of decimals in currency input",
+              helpText: $t('index.968eddf6ab463121'),
               propertyName: "decimals",
-              label: "Decimals allowed",
+              label: $t('index.093b58c1f5365af0'),
               controlType: "DROP_DOWN",
               options: [
                 {
@@ -394,16 +395,16 @@ class CurrencyInputWidget extends BaseInputWidget<
           ],
         },
         {
-          sectionName: "Label",
+          sectionName: $t('index.26479ce83c48ba05'),
           children: [],
         },
         {
-          sectionName: "Validation",
+          sectionName: $t('index.435e7ba2457ac489'),
           children: [
             {
               propertyName: "isRequired",
-              label: "Required",
-              helpText: "Makes input to the widget mandatory",
+              label: $t('index.0d7b61e6e464bdbd'),
+              helpText: $t('index.0d15c0bae45d7eae'),
               controlType: "SWITCH",
               isJSConvertible: true,
               isBindProperty: true,

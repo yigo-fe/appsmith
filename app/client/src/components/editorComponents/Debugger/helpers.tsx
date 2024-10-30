@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Log } from "entities/AppsmithConsole";
 import { LOG_CATEGORY, Severity } from "entities/AppsmithConsole";
 import React from "react";
@@ -67,7 +68,7 @@ const truncate = (input: string, suffix = "", truncLen = 100) => {
       return "";
     }
   } catch (error) {
-    return `Invalid log: ${JSON.stringify(error)}`;
+    return $t('helpers.7b5005b9d51db2d7', {JSON_stringify_error_: JSON.stringify(error)});
   }
 };
 
@@ -84,11 +85,11 @@ export function createLogTitleString(data: any[]) {
       }
 
       if (curr === null || curr === undefined) {
-        return `${acc} undefined`;
+        return $t('helpers.a4788fa6fe7dedc4', {acc: acc});
       }
 
       if (curr instanceof Promise) {
-        return `${acc} Promise ${curr.constructor.name}`;
+        return $t('helpers.1d84c2c0095a7480', {acc: acc,curr_constructor_name: curr.constructor.name});
       }
 
       if (typeof curr === "string") {
@@ -100,7 +101,7 @@ export function createLogTitleString(data: any[]) {
       }
 
       if (typeof curr === "function") {
-        return `${acc} func() ${curr.name}`;
+        return $t('helpers.49da2f94e168c0aa', {acc: acc,curr_name: curr.name});
       }
 
       if (typeof curr === "object") {
@@ -116,7 +117,7 @@ export function createLogTitleString(data: any[]) {
       acc = `${acc} -`;
     }, "");
   } catch (error) {
-    return `Error in parsing log: ${JSON.stringify(error)}`;
+    return $t('helpers.4143ae286edd0a0b', {JSON_stringify_error_: JSON.stringify(error)});
   }
 }
 

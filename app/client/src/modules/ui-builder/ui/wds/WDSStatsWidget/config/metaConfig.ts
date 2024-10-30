@@ -1,7 +1,8 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 
 export const metaConfig = {
-  name: "Stats",
+  name: $t('metaConfig.df962976423b6691'),
   needsMeta: false,
   isCanvas: false,
   searchTags: [

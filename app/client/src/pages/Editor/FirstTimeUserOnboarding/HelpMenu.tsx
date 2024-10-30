@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Text, Button } from "@appsmith/ads";
 import { getAppsmithConfigs } from "ee/configs";
@@ -20,12 +21,12 @@ interface HelpItem {
 const HELP_MENU_ITEMS: HelpItem[] = [
   {
     icon: "book-line",
-    label: "Documentation",
+    label: $t('HelpMenu.f2a90e35adc53e35'),
     link: DOCS_BASE_URL,
   },
   {
     icon: "bug-line",
-    label: "Report a bug",
+    label: $t('HelpMenu.d4877ee13c65ecba'),
     link: "https://github.com/appsmithorg/appsmith/issues/new/choose",
   },
 ];
@@ -33,7 +34,7 @@ const HELP_MENU_ITEMS: HelpItem[] = [
 if (intercomAppID && window.Intercom) {
   HELP_MENU_ITEMS.push({
     icon: "chat-help",
-    label: "Chat with us",
+    label: $t('HelpMenu.cbf1177d6440bf8d'),
     id: "intercom-trigger",
   });
 }

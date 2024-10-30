@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { Icon, Classes } from "@blueprintjs/core";
@@ -176,11 +177,11 @@ function Actions(props: ActionsPropsType) {
                 borderRadius={props.borderRadius}
                 className="t--add-new-row"
                 disabled={props.disableAddNewRow}
-                disabledMessage="Save or discard the unsaved row to add a new row"
+                disabledMessage=$t('index.4aa7530a3a3ee8d8')
                 icon="add"
                 selectMenu={props.onAddNewRow}
                 selected={false}
-                title="Add new row"
+                title=$t('index.6477bda3d662b9ee')
                 width={12}
               />
             )}

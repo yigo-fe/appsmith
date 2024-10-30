@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { LabelPosition } from "components/constants";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
@@ -65,7 +66,7 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Select",
+      name: $t('index.9505d3dd212f20ba'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.SUGGESTED_WIDGETS, WIDGET_TAGS.SELECT],
@@ -88,16 +89,16 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
     return {
       rows: 7,
       columns: 20,
-      placeholderText: "Select option",
-      labelText: "Label",
+      placeholderText: $t('index.05ef31de83d798f9'),
+      labelText: $t('index.0edfffde6a4ff462'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
       sourceData: JSON.stringify(
         [
-          { name: "Blue", code: "BLUE" },
-          { name: "Green", code: "GREEN" },
-          { name: "Red", code: "RED" },
+          { name: $t('index.1156e7fecc4ef1dc'), code: "BLUE" },
+          { name: $t('index.1535d4e2443def04'), code: "GREEN" },
+          { name: $t('index.44656a6a077c5344'), code: "RED" },
         ],
         null,
         2,
@@ -105,7 +106,7 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
       optionLabel: "name",
       optionValue: "code",
       serverSideFiltering: false,
-      widgetName: "Select",
+      widgetName: $t('index.9505d3dd212f20ba'),
       defaultOptionValue: "GREEN",
       version: 1,
       isFilterable: true,
@@ -225,21 +226,21 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Select is used to capture user input/s from a specified list of permitted inputs. A Select can capture a single choice",
+        $t('index.cfe7452962657f9f'),
       "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       filterText: {
         "!type": "string",
-        "!doc": "The filter text for Server side filtering",
+        "!doc": $t('index.40c8958a4fbfbf37'),
       },
       selectedOptionValue: {
         "!type": "string",
-        "!doc": "The value selected in a single select dropdown",
+        "!doc": $t('index.95eb545dbd144217'),
         "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       },
       selectedOptionLabel: {
         "!type": "string",
-        "!doc": "The selected option label in a single select dropdown",
+        "!doc": $t('index.acf98db472da5be6'),
         "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       },
       isDisabled: "bool",
@@ -252,13 +253,13 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.deb9ddd12bd38217'),
         children: [
           {
             helpText:
-              "Takes in an array of objects to display options. Bind data from an API using {{}}",
+              $t('index.829a5094a88acc78'),
             propertyName: "sourceData",
-            label: "Source Data",
+            label: $t('index.9b70188749f6bab1'),
             controlType: "ONE_CLICK_BINDING_CONTROL",
             controlConfig: {
               aliases: [
@@ -274,9 +275,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
               ],
               sampleData: JSON.stringify(
                 [
-                  { name: "Blue", code: "BLUE" },
-                  { name: "Green", code: "GREEN" },
-                  { name: "Red", code: "RED" },
+                  { name: $t('index.1156e7fecc4ef1dc'), code: "BLUE" },
+                  { name: $t('index.1535d4e2443def04'), code: "GREEN" },
+                  { name: $t('index.44656a6a077c5344'), code: "RED" },
                 ],
                 null,
                 2,
@@ -302,9 +303,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Choose or set a field from source data as the display label",
+              $t('index.924b1f46e6a84248'),
             propertyName: "optionLabel",
-            label: "Label key",
+            label: $t('index.574b2fc543387c54'),
             controlType: "DROP_DOWN",
             customJSControl: "WRAPPED_CODE_EDITOR",
             controlConfig: {
@@ -334,9 +335,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
             additionalAutoComplete: getLabelValueAdditionalAutocompleteData,
           },
           {
-            helpText: "Choose or set a field from source data as the value",
+            helpText: $t('index.44335de815abc481'),
             propertyName: "optionValue",
-            label: "Value key",
+            label: $t('index.9639a09c52c2c5aa'),
             controlType: "DROP_DOWN",
             customJSControl: "WRAPPED_CODE_EDITOR",
             controlConfig: {
@@ -366,9 +367,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
             additionalAutoComplete: getLabelValueAdditionalAutocompleteData,
           },
           {
-            helpText: "Selects the option with value by default",
+            helpText: $t('index.49993ea1f25f6997'),
             propertyName: "defaultOptionValue",
-            label: "Default selected value",
+            label: $t('index.5a99fedc56dd8e27'),
             controlType: "WRAPPED_CODE_EDITOR",
             controlConfig: {
               wrapperCode: {
@@ -401,28 +402,28 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.0edfffde6a4ff462'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.5684812dfae8e86e'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.d29461114e090e6f'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.6fc795649327932f'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.7596afe276015191'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.49060d0a1f176a80'),
             controlType: "ICON_TABS",
             fullWidth: true,
             options: [
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
-              { label: "Auto", value: LabelPosition.Auto },
+              { label: $t('index.a818079adf8d3077'), value: LabelPosition.Left },
+              { label: $t('index.2d8b95495b2b3b53'), value: LabelPosition.Top },
+              { label: $t('index.14fe5dd7fd2cd578'), value: LabelPosition.Auto },
             ],
             hidden: isAutoLayout,
             defaultValue: LabelPosition.Top,
@@ -431,9 +432,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.2d905ed6ef3487d5'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.6b93108c568ee203'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -455,9 +456,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.7bc676e3b08ba025'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.c2ef3187a01e7d7b'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -476,12 +477,12 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Search & filters",
+        sectionName: $t('index.f1d13b3d9e7eb237'),
         children: [
           {
             propertyName: "isFilterable",
-            label: "Allow searching",
-            helpText: "Makes the dropdown list filterable",
+            label: $t('index.afc82e456223b89b'),
+            helpText: $t('index.704888ff65ebc1f2'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -489,9 +490,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Enables server side filtering of the data",
+            helpText: $t('index.2b8aefe734b30bda'),
             propertyName: "serverSideFiltering",
-            label: "Server side filtering",
+            label: $t('index.6ec8f74a8b2c5d45'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -499,7 +500,7 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Trigger an action on change of filterText",
+            helpText: $t('index.4b96644fba301996'),
             hidden: (props: SelectWidgetProps) => !props.serverSideFiltering,
             dependencies: ["serverSideFiltering"],
             propertyName: "onFilterUpdate",
@@ -512,12 +513,12 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.439c23bf5ccb95d8'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.eb2f67c8fcf5a3df'),
+            helpText: $t('index.a47e34985ed9c0e1'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -527,32 +528,32 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.1128bdaae5675688'),
         children: [
           {
-            helpText: "Show help text or details about current selection",
+            helpText: $t('index.0d9b40806e37f105'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.2be8a8696a6ad988'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Add tooltip text here",
+            placeholderText: $t('index.2b5ab9b6b1ded276'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets a Placeholder Text",
+            helpText: $t('index.01034932e8ac586c'),
             propertyName: "placeholderText",
-            label: "Placeholder",
+            label: $t('index.ebe2d057b0da51cd'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter placeholder text",
+            placeholderText: $t('index.b2e6e9acd877f7ba'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.8f59c8fdce1cb469'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.f0e22791d1e5f7db'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -561,8 +562,8 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.1620e423f34d9c84'),
+            helpText: $t('index.25adb0c8c24c63e5'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -571,9 +572,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.84ace7b998898ded'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.051f748c749f7aef'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -582,8 +583,8 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             propertyName: "rtl",
-            label: "Enable RTL",
-            helpText: "Enables right to left text direction",
+            label: $t('index.b4c1afd8d162e795'),
+            helpText: $t('index.5f8947141571483a'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -598,10 +599,10 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.1f1b260d32df6b06'),
         children: [
           {
-            helpText: "when a user selects an option",
+            helpText: $t('index.7abf92842a4349a7'),
             propertyName: "onOptionChange",
             label: "onOptionChange",
             controlType: "ACTION_SELECTOR",
@@ -610,7 +611,7 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the dropdown opens",
+            helpText: $t('index.1010431004baccdb'),
             propertyName: "onDropdownOpen",
             label: "onDropdownOpen",
             controlType: "ACTION_SELECTOR",
@@ -619,7 +620,7 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the dropdown closes",
+            helpText: $t('index.f29fc13749361aa8'),
             propertyName: "onDropdownClose",
             label: "onDropdownClose",
             controlType: "ACTION_SELECTOR",
@@ -635,12 +636,12 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.ea9ad203c51fbf62'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.1419e1e8f2257424'),
+            helpText: $t('index.ef07781b07fab3be'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -649,8 +650,8 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.ee3519516cd4eec5'),
+            helpText: $t('index.dedb1bfe08857fa4'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             hidden: isAutoLayout,
@@ -693,8 +694,8 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.3452b56c8927bbe7'),
+            helpText: $t('index.2cb6a1076c13132f'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -714,13 +715,13 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.8ecb3dd53b8ac7f0'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.90aabb098593eaf3'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.b845df065bb2aedd'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -729,9 +730,9 @@ class SelectWidget extends BaseWidget<SelectWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.1bf748da18b8c0f6'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.7f2e9a2481ca8eab'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { Component } from "react";
 import type { AppState } from "ee/reducers";
 import { connect } from "react-redux";
@@ -166,7 +167,7 @@ class PrimaryColumnsControl extends BaseControl<ControlProps, State> {
               DraggableListCard({
                 ...props,
                 isDelete: false,
-                placeholder: "Column title",
+                placeholder: $t('PrimaryColumnsControl.e2ad7bb9fab71762'),
               })
             }
             toggleVisibility={this.toggleVisibility}

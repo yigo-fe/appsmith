@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import type { RenderMode } from "constants/WidgetConstants";
@@ -46,7 +47,7 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Modal",
+      name: $t('index.3e73985c7265d1b0'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.LAYOUT],
@@ -78,7 +79,7 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
       detachFromLayout: true,
       canOutsideClickClose: true,
       shouldScrollContents: true,
-      widgetName: "Modal",
+      widgetName: $t('index.3e73985c7265d1b0'),
       children: [],
       version: 2,
       blueprint: {
@@ -120,7 +121,7 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
                       cols: 40,
                     },
                     props: {
-                      text: "Modal Title",
+                      text: $t('index.5deb3b8bf6b18c1d'),
                       fontSize: "1.25rem",
                       version: 1,
                     },
@@ -136,7 +137,7 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
                       cols: 16,
                     },
                     props: {
-                      text: "Close",
+                      text: $t('index.96e86646ec3f1f95'),
                       buttonStyle: "PRIMARY",
                       buttonVariant: ButtonVariantTypes.SECONDARY,
                       version: 1,
@@ -153,7 +154,7 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
                       cols: 16,
                     },
                     props: {
-                      text: "Confirm",
+                      text: $t('index.0dd3ae0290ce0212'),
                       buttonStyle: "PRIMARY_BUTTON",
                       version: 1,
                     },
@@ -201,7 +202,7 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
                         widget.children.find(
                           (child) =>
                             child.type === "BUTTON_WIDGET" &&
-                            child.text === "Close",
+                            child.text === $t('index.96e86646ec3f1f95'),
                         );
 
                       if (cancelBtnChild && parent) {
@@ -372,7 +373,7 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       name: {
         "!type": "string",
-        "!doc": "Returns the modal name",
+        "!doc": $t('index.ad320abcd63a4dae'),
       },
     };
   }
@@ -392,21 +393,21 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.6aecd5d81961da23'),
         children: [
           {
-            helpText: "Enables scrolling for content inside the widget",
+            helpText: $t('index.78b3099c7f33a1a5'),
             propertyName: "shouldScrollContents",
-            label: "Scroll contents",
+            label: $t('index.c42b56b05a298b2a'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.3ad022d65a3bfc9f'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.24deed8d841175a1'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -415,8 +416,8 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
           },
           {
             propertyName: "canOutsideClickClose",
-            label: "Quick Dismiss",
-            helpText: "Allows dismissing the modal when user taps outside",
+            label: $t('index.621c5c27fc850a4b'),
+            helpText: $t('index.91ed9d474f65616f'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
@@ -425,10 +426,10 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.d455fdc7f92eed84'),
         children: [
           {
-            helpText: "when the modal is closed",
+            helpText: $t('index.049cf38cc601c076'),
             propertyName: "onClose",
             label: "onClose",
             controlType: "ACTION_SELECTOR",
@@ -444,12 +445,12 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Color",
+        sectionName: $t('index.5a27a70c4236ff53'),
         children: [
           {
             propertyName: "backgroundColor",
-            helpText: "Sets the background color of the widget",
-            label: "Background color",
+            helpText: $t('index.1f02dff0a33404c7'),
+            label: $t('index.aec39660b42dc545'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -459,13 +460,13 @@ export class ModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.f14f942d87c3880a'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.881f64df3b4a2cc8'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.99341cda1961e3ee'),
             controlType: "BORDER_RADIUS_OPTIONS",
 
             isJSConvertible: true,

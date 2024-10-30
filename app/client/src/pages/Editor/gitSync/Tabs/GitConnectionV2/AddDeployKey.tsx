@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState } from "react";
 import {
   DemoImage,
@@ -209,7 +210,7 @@ function AddDeployKey({
     ) {
       generateSSHKey(sshKeyType, {
         onSuccessCallback: () => {
-          toast.show("SSH Key generated successfully", { kind: "success" });
+          toast.show($t('AddDeployKey.2eadeaf62bf3bdd1'), { kind: "success" });
         },
       });
     }
@@ -325,7 +326,7 @@ function AddDeployKey({
             </CollapsibleHeader>
             <CollapsibleContent>
               <DemoImage
-                alt={`Add deploy key in ${value?.gitProvider}`}
+                alt={$t('AddDeployKey.0451783257b4441a', {value__gitProvider: value?.gitProvider})}
                 src={GIT_DEMO_GIF.add_deploykey[value?.gitProvider || "github"]}
               />
             </CollapsibleContent>

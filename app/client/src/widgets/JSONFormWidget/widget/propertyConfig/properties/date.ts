@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { FieldType } from "widgets/JSONFormWidget/constants";
 import type { HiddenFnParams } from "../helper";
@@ -9,9 +10,9 @@ const PROPERTIES = {
   content: {
     data: [
       {
-        helpText: "Sets the format of the selected date",
+        helpText: $t('date.227079a71b0ba219'),
         propertyName: "dateFormat",
-        label: "Date format",
+        label: $t('date.cedb9c91caaf5ffc'),
         controlType: "DROP_DOWN",
         isJSConvertible: true,
         customJSControl: "JSON_FORM_COMPUTE_VALUE",
@@ -27,11 +28,11 @@ const PROPERTIES = {
       },
       {
         propertyName: "defaultValue",
-        label: "Default Date",
+        label: $t('date.97e77060bf631b0a'),
         helpText:
-          "Sets the default date of the widget. The date is updated if the default date changes",
+          $t('date.2481375124c7d4d5'),
         controlType: "DATE_PICKER",
-        placeholderText: "Enter Default Date",
+        placeholderText: $t('date.b4d20b59196526c7'),
         useValidationMessage: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -44,22 +45,22 @@ const PROPERTIES = {
       },
       {
         propertyName: "timePrecision",
-        label: "Time precision",
+        label: $t('date.791ad50acd432062'),
         controlType: "ICON_TABS",
         fullWidth: true,
-        helpText: "Sets the different time picker or hide.",
+        helpText: $t('date.753fe0de1f13770b'),
         defaultValue: TimePrecision.MINUTE,
         options: [
           {
-            label: "None",
+            label: $t('date.210b1909d177db98'),
             value: TimePrecision.NONE,
           },
           {
-            label: "Minute",
+            label: $t('date.9161cefa97a12443'),
             value: TimePrecision.MINUTE,
           },
           {
-            label: "Second",
+            label: $t('date.7a78f4620852972e'),
             value: TimePrecision.SECOND,
           },
         ],
@@ -85,8 +86,8 @@ const PROPERTIES = {
     validation: [
       {
         propertyName: "minDate",
-        label: "Min Date",
-        helpText: "Defines the min date for the field",
+        label: $t('date.a83afe35b59c37f7'),
+        helpText: $t('date.8fde19283234a99c'),
         controlType: "DATE_PICKER",
         useValidationMessage: true,
         isJSConvertible: true,
@@ -100,8 +101,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "maxDate",
-        label: "Max Date",
-        helpText: "Defines the max date for the field",
+        label: $t('date.ae9e2859e8df0280'),
+        helpText: $t('date.7d21416aaea55146'),
         controlType: "DATE_PICKER",
         useValidationMessage: true,
         isJSConvertible: true,
@@ -117,9 +118,9 @@ const PROPERTIES = {
     general: [
       {
         propertyName: "convertToISO",
-        label: "Convert to ISO format",
+        label: $t('date.8afa33dcc6f9dd56'),
         helpText:
-          "Enabling this always converts the value in ISO form in the formData irrespective of the 'Date format' selected",
+          $t('date.a7481224a0b038b3'),
         controlType: "SWITCH",
         isJSConvertible: false,
         isBindProperty: true,
@@ -132,8 +133,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "shortcuts",
-        label: "Show Shortcuts",
-        helpText: "Choose to show shortcut menu",
+        label: $t('date.1def4afe96f52454'),
+        helpText: $t('date.7e056b0ecb1da50b'),
         controlType: "SWITCH",
         isJSConvertible: false,
         isBindProperty: true,
@@ -146,8 +147,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "closeOnSelection",
-        label: "Close On Selection",
-        helpText: "Calender should close when a date is selected",
+        label: $t('date.6ba55642f141a52f'),
+        helpText: $t('date.133e8721449d9ac5'),
         controlType: "SWITCH",
         isJSConvertible: false,
         isBindProperty: true,
@@ -163,7 +164,7 @@ const PROPERTIES = {
       {
         propertyName: "onDateSelected",
         label: "onDateSelected",
-        helpText: "when a date is selected in the calendar",
+        helpText: $t('date.404550288179635d'),
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
         isBindProperty: true,

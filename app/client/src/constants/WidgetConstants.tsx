@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { SupportedLayouts } from "reducers/entityReducers/pageListReducer";
 import type { WidgetType as FactoryWidgetType } from "WidgetProvider/factory";
 import { THEMEING_TEXT_SIZES } from "./ThemeConstants";
@@ -229,17 +230,17 @@ export const MAX_MODAL_WIDTH_FROM_MAIN_WIDTH = 0.95;
 export const FILE_SIZE_LIMIT_FOR_BLOBS = 5000 * 1024; // 5MB
 
 export const WIDGET_TAGS = {
-  SUGGESTED_WIDGETS: "Suggested",
-  INPUTS: "Inputs",
-  BUTTONS: "Buttons",
-  SELECT: "Select",
-  DISPLAY: "Display",
-  LAYOUT: "Layout",
-  MEDIA: "Media",
-  TOGGLES: "Toggles",
-  SLIDERS: "Sliders",
-  CONTENT: "Content",
-  EXTERNAL: "External",
+  SUGGESTED_WIDGETS: $t('WidgetConstants.48226aa289cf8e80'),
+  INPUTS: $t('WidgetConstants.382565ea29e5d329'),
+  BUTTONS: $t('WidgetConstants.85203a4d61b5160a'),
+  SELECT: $t('WidgetConstants.3f86af49af2a70c5'),
+  DISPLAY: $t('WidgetConstants.90b2d7e59d735ce4'),
+  LAYOUT: $t('WidgetConstants.817f0a88c471e09f'),
+  MEDIA: $t('WidgetConstants.16b572cf648b6e3c'),
+  TOGGLES: $t('WidgetConstants.787338c8d62a90c6'),
+  SLIDERS: $t('WidgetConstants.e45ebdb7b4531f68'),
+  CONTENT: $t('WidgetConstants.4f0b19853121400c'),
+  EXTERNAL: $t('WidgetConstants.ed642e4ae327c3b0'),
   BUILDING_BLOCKS: "Building Blocks",
 } as const;
 

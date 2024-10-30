@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { call, put, select } from "redux-saga/effects";
 import type {
   ReduxAction,
@@ -222,7 +223,7 @@ export function* deleteWorkspaceUserSaga(
       }
 
       //@ts-expect-error: response is of type unknown
-      toast.show(`${response.data.username} has been removed successfully`, {
+      toast.show($t('WorkspaceSagas.c5eba7611d9b0f90', {response_data_username: response.data.username}), {
         kind: "success",
       });
     }
@@ -380,7 +381,7 @@ export function* uploadWorkspaceLogoSaga(
             logoUrl: response.data.logoUrl,
           },
         });
-        toast.show("Logo uploaded successfully", {
+        toast.show($t('WorkspaceSagas.8ee38b03e0ae8389'), {
           kind: "success",
         });
       }
@@ -414,7 +415,7 @@ export function* deleteWorkspaceLogoSaga(action: ReduxAction<{ id: string }>) {
             logoUrl: response.data.logoUrl,
           },
         });
-        toast.show("Logo removed successfully", {
+        toast.show($t('WorkspaceSagas.c14290ee4a3b1129'), {
           kind: "success",
         });
       }

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
@@ -91,7 +92,7 @@ function accessorValidation(
       messages: [
         {
           name: "ValidationError",
-          message: "Property Name cannot be empty",
+          message: $t('common.a7e64697b713ba0d'),
         },
       ],
     };
@@ -109,7 +110,7 @@ function accessorValidation(
       messages: [
         {
           name: "ValidationError",
-          message: "Property name already in use.",
+          message: $t('common.f0fba3eb15db2a4f'),
         },
       ],
     };
@@ -122,7 +123,7 @@ function accessorValidation(
       messages: [
         {
           name: "ValidationError",
-          message: "This is a restricted Property Name",
+          message: $t('common.948df7f0be9f4987'),
         },
       ],
     };
@@ -140,8 +141,8 @@ const COMMON_PROPERTIES = {
     data: [
       {
         propertyName: "fieldType",
-        label: "Field Type",
-        helpText: "Type of the widget to be used corresponding to the field",
+        label: $t('common.8a5a4f8f5b1aa40a'),
+        helpText: $t('common.589783cde6f017cb'),
         controlType: "DROP_DOWN",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -155,8 +156,8 @@ const COMMON_PROPERTIES = {
       {
         propertyName: "accessor",
         helpText:
-          "Sets the property name of the field which can be used to access the value in formData and fieldState.",
-        label: "Property Name",
+          $t('common.d818efa7d67f5546'),
+        label: $t('common.c650b2455bce2e23'),
         controlType: "INPUT_TEXT",
         placeholderText: "name",
         isBindProperty: true,
@@ -184,8 +185,8 @@ const COMMON_PROPERTIES = {
       {
         propertyName: "options",
         helpText:
-          "Allows users to select from the given option(s). Values must be unique",
-        label: "Options",
+          $t('common.aa2e648c94d427c6'),
+        label: $t('common.f4fc480aa7b0ed94'),
         controlType: "INPUT_TEXT",
         placeholderText: '[{ "label": "Option1", "value": "Option2" }]',
         isBindProperty: true,
@@ -229,10 +230,10 @@ const COMMON_PROPERTIES = {
     general: [
       {
         propertyName: "tooltip",
-        helpText: "Show help text or details about current field",
-        label: "Tooltip",
+        helpText: $t('common.f107b8d915334a6f'),
+        label: $t('common.1756c956aae7f8ce'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
-        placeholderText: "Passwords must be at-least 6 chars",
+        placeholderText: $t('common.466d70f85c64b411'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -243,10 +244,10 @@ const COMMON_PROPERTIES = {
     label: [
       {
         propertyName: "label",
-        helpText: "Sets the label text of the field",
-        label: "Text",
+        helpText: $t('common.677d8c7f59bc8c54'),
+        label: $t('common.360089b75a50cd2a'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Name:",
+        placeholderText: $t('common.6b9b29b5f611ff9d'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -257,8 +258,8 @@ const COMMON_PROPERTIES = {
     generalSwitch: [
       {
         propertyName: "isVisible",
-        helpText: "Controls the visibility of the field",
-        label: "Visible",
+        helpText: $t('common.8bdc63104169ee4b'),
+        label: $t('common.d7e57f9a67590f41'),
         controlType: "SWITCH",
         defaultValue: true,
         isJSConvertible: true,
@@ -275,8 +276,8 @@ const COMMON_PROPERTIES = {
       },
       {
         propertyName: "isDisabled",
-        helpText: "Disables the field",
-        label: "Disabled",
+        helpText: $t('common.217b719c4b530fe4'),
+        label: $t('common.8ad563e88bc4e1a1'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -288,8 +289,8 @@ const COMMON_PROPERTIES = {
       },
       {
         propertyName: "shouldAllowAutofill",
-        label: "Allow autofill",
-        helpText: "Allow users to autofill values from browser",
+        label: $t('common.fd3c10561fb2c087'),
+        helpText: $t('common.0a498fd124778d73'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -342,8 +343,8 @@ const COMMON_PROPERTIES = {
     label: [
       {
         propertyName: "labelTextColor",
-        label: "Font color",
-        helpText: "Control the color of the label associated",
+        label: $t('common.d54eaa3261c71b15'),
+        helpText: $t('common.f9efa609a452765f'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -359,8 +360,8 @@ const COMMON_PROPERTIES = {
       },
       {
         propertyName: "labelTextSize",
-        label: "Font size",
-        helpText: "Control the font size of the label associated",
+        label: $t('common.ae5f5532709a87d3'),
+        helpText: $t('common.6886a53f1e80fd32'),
         defaultValue: "0.875rem",
         controlType: "DROP_DOWN",
         options: [
@@ -402,8 +403,8 @@ const COMMON_PROPERTIES = {
       },
       {
         propertyName: "labelStyle",
-        label: "Emphasis",
-        helpText: "Control if the label should be bold or italics",
+        label: $t('common.62757c654d306a06'),
+        helpText: $t('common.4d08850bab1c0832'),
         controlType: "BUTTON_GROUP",
         options: [
           {
@@ -426,8 +427,8 @@ const COMMON_PROPERTIES = {
     borderShadow: [
       {
         propertyName: "borderRadius",
-        label: "Border radius",
-        helpText: "Rounds the corners of the icon button's outer border edge",
+        label: $t('common.52ca554cb610a843'),
+        helpText: $t('common.df65271fe8dd96c4'),
         controlType: "BORDER_RADIUS_OPTIONS",
         customJSControl: "JSON_FORM_COMPUTE_VALUE",
         isJSConvertible: true,
@@ -443,9 +444,9 @@ const COMMON_PROPERTIES = {
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
+        label: $t('common.fc4820bf1fb40a40'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('common.5200761fe04ca404'),
         controlType: "BOX_SHADOW_OPTIONS",
         customJSControl: "JSON_FORM_COMPUTE_VALUE",
         isJSConvertible: true,
@@ -461,8 +462,8 @@ const COMMON_PROPERTIES = {
     color: [
       {
         propertyName: "accentColor",
-        helpText: "Sets the accent color",
-        label: "Accent color",
+        helpText: $t('common.e85c739aafcb4f2e'),
+        label: $t('common.78925b9014021e9f'),
         controlType: "COLOR_PICKER",
         customJSControl: "JSON_FORM_COMPUTE_VALUE",
         isJSConvertible: true,

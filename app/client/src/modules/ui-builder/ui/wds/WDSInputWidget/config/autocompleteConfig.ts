@@ -1,12 +1,13 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "An input text field is used to capture a users textual input such as their names, numbers, emails etc. Inputs are used in forms and can have custom validations.",
+    $t('autocompleteConfig.9a55dd69908d5400'),
   "!url": "https://docs.appsmith.com/widget-reference/input",
   parsedText: {
     "!type": "string",
-    "!doc": "The text value of the input",
+    "!doc": $t('autocompleteConfig.6628410765f02a4a'),
     "!url": "https://docs.appsmith.com/widget-reference/input",
   },
   isValid: "bool",

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import log from "loglevel";
 import merge from "lodash/merge";
@@ -63,7 +64,7 @@ class WDSPhoneInputWidget extends WDSBaseInputWidget<
 
     parentConfig[labelSectionIndex].children[labelPropertyIndex] = {
       ...parentConfig[labelSectionIndex].children[labelPropertyIndex],
-      placeholderText: "Phone Number",
+      placeholderText: $t('index.c6fa0858a2755079'),
       // TODO: Fix this the next time the file is edited
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any;
@@ -77,7 +78,7 @@ class WDSPhoneInputWidget extends WDSBaseInputWidget<
 
     parentConfig[generalSectionIndex].children[tooltipPropertyIndex] = {
       ...parentConfig[generalSectionIndex].children[tooltipPropertyIndex],
-      placeholderText: "You may skip local prefixes",
+      placeholderText: $t('index.cc03204a92e934c1'),
       // TODO: Fix this the next time the file is edited
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any;

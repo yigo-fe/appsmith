@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import type { CategorySliderWidgetProps, SliderOption } from "./widget";
 
@@ -18,7 +19,7 @@ export function optionsCustomValidation(
         messages: [
           {
             name: "ValidationError",
-            message: "Please have at-least 2 options",
+            message: $t('validations.24a41f9f6e9ec298'),
           },
         ],
       };
@@ -57,7 +58,7 @@ export function optionsCustomValidation(
         message = {
           name: "ValidationError",
           message:
-            "Invalid entry at index: " + i + ". Missing required key: label",
+            $t('validations.37fb93fe63cfbb74') + i + ". Missing required key: label",
         };
         break;
       }
@@ -72,7 +73,7 @@ export function optionsCustomValidation(
         message = {
           name: "ValidationError",
           message:
-            "Invalid entry at index: " +
+            $t('validations.37fb93fe63cfbb74') +
             i +
             ". Value of key: label is invalid: This value does not evaluate to type string",
         };
@@ -84,7 +85,7 @@ export function optionsCustomValidation(
         _isValid = false;
         message = {
           name: "TypeError",
-          message: "All value properties in options must have the same type",
+          message: $t('validations.2b41a1ce7df1a89f'),
         };
         break;
       }
@@ -150,7 +151,7 @@ export function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('validations.3a311305bfc6cdfa'),
         },
       ],
     };
@@ -164,7 +165,7 @@ export function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('validations.3a311305bfc6cdfa'),
         },
       ],
     };
@@ -183,7 +184,7 @@ export function defaultOptionValidation(
         {
           name: "ValidationError",
           message:
-            "Default value is missing in options. Please update the value.",
+            $t('validations.596eaf7e5ae1c8d1'),
         },
       ],
     };

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReactNode } from "react";
 import React, { useCallback, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -172,7 +173,7 @@ export function PageContextMenu(props: {
       // Possibly support ReactNode in TreeOption
       label: (
         <CustomLabel>
-          {props.isHidden ? "Show" : "Hide"}
+          {props.isHidden ? $t('PageContextMenu.2825f9a7edf928af') : $t('PageContextMenu.b4b509ba677cf5e3')}
           <Icon name={props.isHidden ? "eye-on" : "eye-off"} size="md" />
         </CustomLabel>
       ) as ReactNode as string,

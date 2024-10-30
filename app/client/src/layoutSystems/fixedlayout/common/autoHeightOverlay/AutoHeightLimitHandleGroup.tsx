@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useRef } from "react";
 import styled from "styled-components";
 import AutoHeightLimitHandleBorder from "./ui/AutoHeightLimitHandleBorder";
@@ -154,7 +155,7 @@ const AutoHeightLimitHandleGroup: React.FC<AutoHeightLimitHandleGroupProps> = ({
         isActive={isMaxDotActive}
         isColliding={false}
         isDragging={isMaxDotDragging}
-        label={isColliding ? "Height" : "Max-Height"}
+        label={isColliding ? $t('AutoHeightLimitHandleGroup.3971249e884e6128') : "Max-Height"}
         onDragCallbacks={onMaxLimitDragCallbacks}
         onMouseHoverFunctions={onMaxLimitMouseHoverCallbacks}
       />

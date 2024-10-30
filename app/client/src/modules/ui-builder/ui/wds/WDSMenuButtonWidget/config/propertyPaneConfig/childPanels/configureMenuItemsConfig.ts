@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { getKeysFromSourceDataForEventAutocomplete } from "../../helper";
 import type { MenuButtonWidgetProps } from "modules/ui-builder/ui/wds/WDSMenuButtonWidget/widget/types";
@@ -12,13 +13,13 @@ export const configureMenuItemsConfig = {
   panelIdPropertyName: "id",
   contentChildren: [
     {
-      sectionName: "General",
+      sectionName: $t('configureMenuItemsConfig.fdd46b1573ad0ef8'),
       children: [
         {
           propertyName: "label",
           helpText:
-            "Sets the label of a menu item using the {{currentItem}} binding.",
-          label: "Label",
+            $t('configureMenuItemsConfig.90c1c2c93b522766'),
+          label: $t('configureMenuItemsConfig.a9d92294d0f7b567'),
           controlType: "MENU_BUTTON_DYNAMIC_ITEMS",
           placeholderText: "{{currentItem.name}}",
           isBindProperty: true,
@@ -34,8 +35,8 @@ export const configureMenuItemsConfig = {
         {
           propertyName: "isVisible",
           helpText:
-            "Controls the visibility of the widget. Can also be configured the using {{currentItem}} binding.",
-          label: "Visible",
+            $t('configureMenuItemsConfig.8837a17473d7c7e7'),
+          label: $t('configureMenuItemsConfig.466b343425cda493'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -52,8 +53,8 @@ export const configureMenuItemsConfig = {
         {
           propertyName: "isDisabled",
           helpText:
-            "Disables input to the widget. Can also be configured the using {{currentItem}} binding.",
-          label: "Disabled",
+            $t('configureMenuItemsConfig.c8ac231091405005'),
+          label: $t('configureMenuItemsConfig.87cfb518fa63b624'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -70,7 +71,7 @@ export const configureMenuItemsConfig = {
       ],
     },
     {
-      sectionName: "Events",
+      sectionName: $t('configureMenuItemsConfig.80c2616f3fcd3a66'),
       children: [
         {
           helpText:

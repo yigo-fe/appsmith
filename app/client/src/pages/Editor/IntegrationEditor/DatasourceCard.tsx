@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Datasource } from "entities/Datasource";
 import { isStoredDatasource, PluginType } from "entities/Action";
 import React, { memo, useCallback, useEffect, useState } from "react";
@@ -312,7 +313,7 @@ function DatasourceCard(props: DatasourceCardProps) {
             <DatasourceNameWrapper>
               <DatasourceIconWrapper data-testid="active-datasource-icon-wrapper">
                 <DatasourceImage
-                  alt="Datasource"
+                  alt={$t('DatasourceCard.386d5d33a04e34fc')}
                   data-testid="active-datasource-image"
                   src={getAssetUrl(pluginImages[datasource.pluginId])}
                 />
@@ -326,8 +327,8 @@ function DatasourceCard(props: DatasourceCardProps) {
               data-testid="active-datasource-queries"
             >
               {queriesWithThisDatasource
-                ? `${queriesWithThisDatasource} ${QUERY} on this page`
-                : "No query in this application is using this datasource"}
+                ? $t('DatasourceCard.4f724ef833efcab1', {queriesWithThisDatasource: queriesWithThisDatasource,QUERY: QUERY})
+                : $t('DatasourceCard.7e6cffd38eb8fead')}
             </Queries>
           </div>
           <ButtonsWrapper className="action-wrapper">
@@ -437,8 +438,8 @@ function DatasourceCard(props: DatasourceCardProps) {
           }}
         >
           <CollapseComponent
-            openTitle="Show less"
-            title="Show more"
+            openTitle={$t('DatasourceCard.63d9a5268e13362b')}
+            title={$t('DatasourceCard.badb88d0f45b99a2')}
             titleStyle={{ maxWidth: 120 }}
           >
             <DatasourceInfo>

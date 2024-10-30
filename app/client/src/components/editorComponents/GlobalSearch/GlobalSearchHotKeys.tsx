@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Hotkey, Hotkeys, HotkeysTarget } from "@blueprintjs/core";
 import type { SearchItem, SelectEvent } from "./utils";
@@ -25,7 +26,7 @@ class GlobalSearchHotKeys extends React.Component<Props> {
         hideWhenModalClosed: true,
         allowInInput: true,
         group: "Omnibar",
-        label: "Move up the list",
+        label: $t('GlobalSearchHotKeys.a1a33ecaec7cd848'),
       },
       {
         combo: "down",
@@ -33,7 +34,7 @@ class GlobalSearchHotKeys extends React.Component<Props> {
         hideWhenModalClosed: true,
         allowInInput: true,
         group: "Omnibar",
-        label: "Move down the list",
+        label: $t('GlobalSearchHotKeys.a8284c5bdf773e06'),
       },
       {
         combo: "return",
@@ -48,7 +49,7 @@ class GlobalSearchHotKeys extends React.Component<Props> {
         hideWhenModalClosed: true,
         allowInInput: true,
         group: "Omnibar",
-        label: "Navigate",
+        label: $t('GlobalSearchHotKeys.a87b841b558357ab'),
       },
     ].filter(
       ({ hideWhenModalClosed }) =>

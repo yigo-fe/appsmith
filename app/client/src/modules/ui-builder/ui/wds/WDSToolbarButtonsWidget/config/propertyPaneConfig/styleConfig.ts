@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { BUTTON_VARIANTS, COLORS } from "@appsmith/wds";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { capitalize } from "lodash";
@@ -5,14 +6,14 @@ import { objectKeys } from "@appsmith/utils";
 
 export const propertyPaneStyleConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('styleConfig.f6feda0fcc517b05'),
     children: [
       {
         propertyName: "variant",
-        label: "Button variant",
+        label: $t('styleConfig.99752e3f3ea0228b'),
         controlType: "ICON_TABS",
         fullWidth: true,
-        helpText: "Sets the variant of the button",
+        helpText: $t('styleConfig.be40d93a6e4061d7'),
         options: objectKeys(BUTTON_VARIANTS).map((variant) => ({
           label: BUTTON_VARIANTS[variant],
           value: variant,
@@ -31,11 +32,11 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "color",
-        label: "Button color",
+        label: $t('styleConfig.65282f2f042eee79'),
         controlType: "DROP_DOWN",
         defaultValue: "accent",
         fullWidth: true,
-        helpText: "Sets the semantic color of the button",
+        helpText: $t('styleConfig.3160c1fa1eec9830'),
         options: Object.values(COLORS).map((semantic) => ({
           label: capitalize(semantic),
           value: semantic,
@@ -53,8 +54,8 @@ export const propertyPaneStyleConfig = [
       },
       {
         propertyName: "alignment",
-        helpText: "Sets the alignment of the widget",
-        label: "Alignment",
+        helpText: $t('styleConfig.6ecb4b3989a0bf95'),
+        label: $t('styleConfig.02c07baeaedc81f3'),
         controlType: "ICON_TABS",
         defaultValue: "start",
         isBindProperty: true,

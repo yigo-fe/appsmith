@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import isEqual from "fast-deep-equal/es6";
 import log from "loglevel";
 import memoize from "micro-memoize";
@@ -156,7 +157,7 @@ class ListWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "List",
+      name: $t('index.ac03f5452fbfa6a2'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.DISPLAY],
@@ -185,7 +186,7 @@ class ListWidget extends BaseWidget<
       getOneClickBindingConnectableWidgetConfig: (widget: WidgetProps) => {
         return {
           widgetBindPath: `${widget.widgetName}.selectedItem`,
-          message: `Make sure ${widget.widgetName} data matches the column names in the connected datasource and has a default selected item`,
+          message: $t('index.e7ebbdf3ec725ec2', {widget_widgetName: widget.widgetName}),
         };
       },
     };
@@ -239,7 +240,7 @@ class ListWidget extends BaseWidget<
     return (widget: ListWidgetProps, extraDefsToDefine?: ExtraDef) => {
       const obj = {
         "!doc":
-          "Containers are used to group widgets together to form logical higher order widgets. Containers let you organize your page better and move all the widgets inside them together.",
+          $t('index.559ecd44e26f6b60'),
         "!url": "https://docs.appsmith.com/widget-reference/list",
         backgroundColor: {
           "!type": "string",

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AdminConfigType } from "ee/pages/AdminSettings/config/types";
 import {
   CategoryType,
@@ -12,7 +13,7 @@ export const config: AdminConfigType = {
   categoryType: CategoryType.OTHER,
   controlType: SettingTypes.PAGE,
   component: AuditLogsUpgradePage,
-  title: "Audit logs",
+  title: $t('auditlogs.e238b9c450b93378'),
   canSave: false,
   isFeatureEnabled: false,
 } as AdminConfigType;

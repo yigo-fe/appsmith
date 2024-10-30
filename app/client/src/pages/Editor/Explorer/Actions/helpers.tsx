@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReactNode } from "react";
 import React from "react";
 import {
@@ -78,7 +79,7 @@ export const resolveActionURL = ({
 /*eslint-disable react/display-name */
 export const ACTION_PLUGIN_MAP: Array<ActionGroupConfig | undefined> = [
   {
-    groupName: "Datasources",
+    groupName: $t('helpers.7e84873a1cc7cab0'),
     types: [
       PluginType.API,
       PluginType.SAAS,

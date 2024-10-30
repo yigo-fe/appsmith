@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import {
   ReduxActionErrorTypes,
@@ -82,7 +83,7 @@ export function* createActionsForOneClickBindingSaga(
       });
 
       AppsmithConsole.info({
-        text: `Action created from one click binding`,
+        text: $t('OneClickBindingSaga.e1eade37a95125cb'),
         source: {
           type: ENTITY_TYPE.ACTION,
           id: response.data.id,
@@ -282,7 +283,7 @@ function* BindWidgetToDatasource(
         const successMessage = `${
           alertMessage?.success
             ? alertMessage.success?.update
-            : "Successfully saved!"
+            : $t('OneClickBindingSaga.33d0e0fe7a366ad3')
         }`;
 
         queryBindingConfig[QUERY_TYPE.UPDATE] = {
@@ -291,7 +292,7 @@ function* BindWidgetToDatasource(
             showAlert("${successMessage}");
             ${selectQuery.toString()}
           }, () => {
-            showAlert("Unable to save!");
+            showAlert($t('OneClickBindingSaga.182faec40234b47e'));
           })}}`,
         };
       }
@@ -304,7 +305,7 @@ function* BindWidgetToDatasource(
         const successMessage = `${
           alertMessage?.success
             ? alertMessage.success?.create
-            : "Successfully created!"
+            : $t('OneClickBindingSaga.b26a30aa24bfc234')
         }`;
 
         queryBindingConfig[QUERY_TYPE.CREATE] = {
@@ -313,7 +314,7 @@ function* BindWidgetToDatasource(
             showAlert("${successMessage}");
             ${selectQuery.toString()}
           }, () => {
-            showAlert("Unable to create!");
+            showAlert($t('OneClickBindingSaga.bf4a02b3a65a7b07'));
           })}}`,
         };
       }
@@ -382,7 +383,7 @@ function* BindWidgetToDatasource(
       payload: {
         show: true,
         error: {
-          message: e instanceof Error ? e.message : "Failed to Bind to widget",
+          message: e instanceof Error ? e.message : $t('OneClickBindingSaga.ce0efa2db3728793'),
         },
       },
     });

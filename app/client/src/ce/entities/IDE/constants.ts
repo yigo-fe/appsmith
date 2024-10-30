@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   ADD_PATH,
   API_EDITOR_ID_ADD_PATH,
@@ -31,13 +32,13 @@ export enum EditorState {
 }
 
 export const SidebarTopButtonTitles = {
-  DATA: "Data",
-  EDITOR: "Editor",
+  DATA: $t('constants.37fd0fe598975ddd'),
+  EDITOR: $t('constants.9703866be95a1328'),
 };
 
 export const SidebarBottomButtonTitles = {
-  SETTINGS: "Settings",
-  LIBRARIES: "Libraries",
+  SETTINGS: $t('constants.280fd7e3aa64383a'),
+  LIBRARIES: $t('constants.58ffa389ddffe599'),
 };
 
 export enum EditorEntityTab {

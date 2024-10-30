@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { RouteComponentProps } from "react-router";
 import { connect } from "react-redux";
@@ -220,7 +221,7 @@ class QueryEditor extends React.Component<Props> {
 
     if (!pluginIds?.length) {
       return (
-        <EmptyStateContainer>{"Plugin is not installed"}</EmptyStateContainer>
+        <EmptyStateContainer>{$t('Editor.36392582d8dc4a2d')}</EmptyStateContainer>
       );
     }
 

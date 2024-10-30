@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
@@ -31,7 +32,7 @@ function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('radioGroup.008a54b21f3ee228'),
         },
       ],
     };
@@ -45,7 +46,7 @@ function defaultOptionValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string or number",
+          message: $t('radioGroup.008a54b21f3ee228'),
         },
       ],
     };
@@ -63,8 +64,8 @@ const PROPERTIES = {
       {
         propertyName: "options",
         helpText:
-          "Allows users to select from the given option(s). Values must be unique",
-        label: "Options",
+          $t('radioGroup.db5ee4761d931384'),
+        label: $t('radioGroup.ade13d5cd47fc6cb'),
         controlType: "INPUT_TEXT",
         placeholderText: '[{ "label": "Option1", "value": "Option2" }]',
         isBindProperty: true,
@@ -87,8 +88,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "defaultValue",
-        helpText: "Sets a default selected option",
-        label: "Default selected value",
+        helpText: $t('radioGroup.ebf217b7c3ea7479'),
+        label: $t('radioGroup.f8b3c4e3d2958ad2'),
         placeholderText: "Y",
         controlType: "JSON_FORM_COMPUTE_VALUE",
         isBindProperty: true,
@@ -112,7 +113,7 @@ const PROPERTIES = {
     events: [
       {
         propertyName: "onSelectionChange",
-        helpText: "when a user changes the selected option",
+        helpText: $t('radioGroup.d39b28ee400b6d72'),
         label: "onSelectionChange",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,

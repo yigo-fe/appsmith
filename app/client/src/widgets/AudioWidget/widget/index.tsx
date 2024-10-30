@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import Skeleton from "components/utils/Skeleton";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -36,7 +37,7 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Audio",
+      name: $t('index.d6275c5800693e08'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.MEDIA],
@@ -49,7 +50,7 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
     return {
       rows: 4,
       columns: 28,
-      widgetName: "Audio",
+      widgetName: $t('index.d6275c5800693e08'),
       url: getAssetUrl(`${ASSETS_CDN_URL}/widgets/birds_chirping.mp3`),
       autoPlay: false,
       version: 1,
@@ -93,7 +94,7 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Audio widget can be used for playing a variety of audio formats like MP3, AAC etc.",
+        $t('index.cd480e6eb083085d'),
       "!url": "https://docs.appsmith.com/widget-reference/audio",
       playState: "number",
       autoPlay: "bool",
@@ -123,14 +124,14 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.4cc896b78bf9f1a0'),
         children: [
           {
             propertyName: "url",
             label: "URL",
-            helpText: "Link to the audio file which should be played",
+            helpText: $t('index.a83c14c37bdd2366'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter url",
+            placeholderText: $t('index.fc400dbfcece4ea8'),
             inputType: "TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -152,12 +153,12 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.bab72933a13b70af'),
         children: [
           {
             propertyName: "autoPlay",
-            label: "Autoplay",
-            helpText: "Audio will be automatically played",
+            label: $t('index.c9fa99a9b5b3e160'),
+            helpText: $t('index.256fb5f70af1c8c3'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -165,9 +166,9 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.ce37d2b98f4ea2c6'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.29bc7ca26a077766'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -176,9 +177,9 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.7c139ebdee141760'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.897feacee767138f'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -188,10 +189,10 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.9994f43bb285751b'),
         children: [
           {
-            helpText: "when the audio is played",
+            helpText: $t('index.b24b20ccb4a46fc7'),
             propertyName: "onPlay",
             label: "onPlay",
             controlType: "ACTION_SELECTOR",
@@ -200,7 +201,7 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the audio is paused",
+            helpText: $t('index.b34318cd27f54a67'),
             propertyName: "onPause",
             label: "onPause",
             controlType: "ACTION_SELECTOR",
@@ -209,7 +210,7 @@ class AudioWidget extends BaseWidget<AudioWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "when the audio ends",
+            helpText: $t('index.e05fbdbe421140b3'),
             propertyName: "onEnd",
             label: "onEnd",
             controlType: "ACTION_SELECTOR",

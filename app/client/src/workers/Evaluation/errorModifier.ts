@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ConfigTree, DataTree } from "entities/DataTree/dataTreeTypes";
 import { getAllAsyncFunctions } from "ee/workers/Evaluation/Actions";
 import type { EvaluationError } from "utils/DynamicBindingUtils";
@@ -37,9 +38,9 @@ type Modifier = (
 }>;
 
 const FOUND_ACTION_IN_DATA_FIELD_EVAL_MESSAGE =
-  "Found an action invocation during evaluation. Data fields cannot execute actions.";
+  $t('errorModifier.183afc810d5b4673');
 const UNDEFINED_ACTION_IN_SYNC_EVAL_ERROR =
-  "Please remove any direct/indirect references to {{actionName}} and try again. Data fields cannot execute framework actions.";
+  $t('errorModifier.2667d665598fa96e');
 
 class ErrorModifier {
   private asyncFunctionsNameMap: Record<string, true> = {};
@@ -156,7 +157,7 @@ class ErrorModifier {
 export const errorModifier = new ErrorModifier();
 
 const FOUND_PROMISE_IN_SYNC_EVAL_MESSAGE =
-  "Found a Promise() during evaluation. Data fields cannot execute asynchronous code.";
+  $t('errorModifier.ae5ca348b1a8472b');
 
 export class FoundPromiseInSyncEvalError extends Error {
   constructor() {
@@ -171,7 +172,7 @@ export class ActionCalledInSyncFieldError extends Error {
     super(actionName);
 
     if (!actionName) {
-      this.message = "Async function called in a data field";
+      this.message = $t('errorModifier.a41d50ff9c28ddb9');
 
       return;
     }
@@ -282,7 +283,7 @@ export const TypeErrorModifier: Modifier = (
   if (
     error.name === "TypeError" &&
     errorMessage.message.startsWith(
-      "Cannot read properties of undefined (reading",
+      $t('errorModifier.74a8679621b62e20'),
     )
   ) {
     const matchedString = errorMessage.message.match(
@@ -331,7 +332,7 @@ export const TypeErrorModifier: Modifier = (
       possibleCausesArr.length === 1
         ? `${possibleCausesArr[0]} is undefined`
         : `${Array.from(possibleCauses).join(", ")} could be undefined`
-    } . Please fix ${source || "the binding"}.`;
+    } . Please fix ${source || $t('errorModifier.0428756f013faff0')}.`;
 
     return {
       errorMessage,
@@ -353,7 +354,7 @@ export const PrimitiveErrorModifier: Modifier = (error) => {
     // These types of errors might have a name/message but are not an instance of Error class
     const message = convertAllDataTypesToString(error);
     const errorMessage = {
-      name: error?.name || "Error",
+      name: error?.name || $t('errorModifier.78a3c1b457faab87'),
       message: error?.message || message,
     };
 

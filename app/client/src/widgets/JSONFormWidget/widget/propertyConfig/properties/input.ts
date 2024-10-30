@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
 import { CurrencyDropdownOptions } from "widgets/CurrencyInputWidget/component/CurrencyCodeDropdown";
 import { FieldType, INPUT_TYPES } from "widgets/JSONFormWidget/constants";
@@ -58,7 +59,7 @@ function defaultValueValidation(
           messages: [
             {
               name: "TypeError",
-              message: "This value must be a number",
+              message: $t('input.51f4077b64b70e53'),
             },
           ],
         };
@@ -79,7 +80,7 @@ function defaultValueValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be string",
+          message: $t('input.bc1fa552a59f0764'),
         },
       ],
     };
@@ -99,7 +100,7 @@ function defaultValueValidation(
         messages: [
           {
             name: "TypeError",
-            message: "This value must be string",
+            message: $t('input.bc1fa552a59f0764'),
           },
         ],
       };
@@ -147,7 +148,7 @@ export function minValueValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be number",
+          message: $t('input.eceec2d68b3af321'),
         },
       ],
     };
@@ -158,7 +159,7 @@ export function minValueValidation(
       messages: [
         {
           name: "RangeError",
-          message: "This value must be lesser than max value",
+          message: $t('input.ccb3a66af0973b3a'),
         },
       ],
     };
@@ -205,7 +206,7 @@ export function maxValueValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be number",
+          message: $t('input.eceec2d68b3af321'),
         },
       ],
     };
@@ -216,7 +217,7 @@ export function maxValueValidation(
       messages: [
         {
           name: "RangeError",
-          message: "This value must be greater than min value",
+          message: $t('input.d5863e9a4d9cc0f7'),
         },
       ],
     };
@@ -235,10 +236,10 @@ const PROPERTIES = {
       {
         propertyName: "defaultValue",
         helpText:
-          "Sets the default text of the field. The text is updated if the default text changes",
-        label: "Default value",
+          $t('input.1cf0b2f72c3cf6fd'),
+        label: $t('input.44f2875d436b6ba4'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
-        placeholderText: "John Doe",
+        placeholderText: $t('input.0ed6e70d6f20942f'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: {
@@ -259,9 +260,9 @@ const PROPERTIES = {
       },
       {
         helpText:
-          "Sets the default text of the widget. The text is updated if the default text changes",
+          $t('input.84125238835d924d'),
         propertyName: "defaultValue",
-        label: "Default value",
+        label: $t('input.44f2875d436b6ba4'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
         placeholderText: "(000) 000-0000",
         isBindProperty: true,
@@ -285,13 +286,13 @@ const PROPERTIES = {
       },
       {
         propertyName: "dialCode",
-        helpText: "Changes the country code",
-        label: "Default country code",
+        helpText: $t('input.f08aa5f4b6b9223c'),
+        label: $t('input.fe87145916d58ebd'),
         enableSearch: true,
         dropdownHeight: "195px",
         controlType: "DROP_DOWN",
         virtual: true,
-        searchPlaceholderText: "Search by code or country name",
+        searchPlaceholderText: $t('input.36521bc395abed9f'),
         options: ISDCodeDropdownOptions,
         hidden: (...args: HiddenFnParams) =>
           getSchemaItem(...args).fieldTypeNotMatches(
@@ -303,13 +304,13 @@ const PROPERTIES = {
       },
       {
         propertyName: "currencyCountryCode",
-        helpText: "Changes the type of currency",
-        label: "Currency",
+        helpText: $t('input.d4eeb812590fad6f'),
+        label: $t('input.a3ef1603c2e084ac'),
         enableSearch: true,
         dropdownHeight: "195px",
         controlType: "DROP_DOWN",
         virtual: true,
-        searchPlaceholderText: "Search by code or name",
+        searchPlaceholderText: $t('input.75e7d28ca93b371e'),
         options: CurrencyDropdownOptions,
         hidden: (...args: HiddenFnParams) =>
           getSchemaItem(...args).fieldTypeNotMatches(FieldType.CURRENCY_INPUT),
@@ -319,8 +320,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "allowDialCodeChange",
-        label: "Allow Country Code Change",
-        helpText: "Search by country",
+        label: $t('input.2bc57b7768da1c8f'),
+        helpText: $t('input.09525bd115221533'),
         controlType: "SWITCH",
         isJSConvertible: false,
         isBindProperty: true,
@@ -334,8 +335,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "allowCurrencyChange",
-        label: "Allow currency change",
-        helpText: "Search by currency or country",
+        label: $t('input.55b8dee554f57f51'),
+        helpText: $t('input.37e40b8ae698a7fd'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -346,8 +347,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "decimalsInCurrency",
-        helpText: "No. of decimals in currency input",
-        label: "Decimals allowed",
+        helpText: $t('input.26f0dce55308fb2f'),
+        label: $t('input.56f0b489e34b2fd6'),
         controlType: "DROP_DOWN",
         options: [
           {
@@ -389,10 +390,10 @@ const PROPERTIES = {
     general: [
       {
         propertyName: "placeholderText",
-        helpText: "Sets a placeholder text for the input",
-        label: "Placeholder",
+        helpText: $t('input.d3c1aec633c6e253'),
+        label: $t('input.288745eddee63e13'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
-        placeholderText: "Placeholder",
+        placeholderText: $t('input.288745eddee63e13'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -404,8 +405,8 @@ const PROPERTIES = {
     validation: [
       {
         propertyName: "isRequired",
-        label: "Required",
-        helpText: "Makes input to the widget mandatory",
+        label: $t('input.cf6e0e0303595dec'),
+        helpText: $t('input.282e78a4971fecd2'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -423,8 +424,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "maxChars",
-        helpText: "Sets maximum allowed text length",
-        label: "Max Chars",
+        helpText: $t('input.683eb50925ed5dd2'),
+        label: $t('input.fc12abb8787ad394'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
         placeholderText: "255",
         isBindProperty: true,
@@ -436,8 +437,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "minNum",
-        helpText: "Sets the minimum allowed value",
-        label: "Min",
+        helpText: $t('input.94dc1e678022550c'),
+        label: $t('input.ac74e7d17a97606d'),
         controlType: "INPUT_TEXT",
         placeholderText: "1",
         isBindProperty: true,
@@ -459,8 +460,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "maxNum",
-        helpText: "Sets the maximum allowed value",
-        label: "Max",
+        helpText: $t('input.d4c007d1a847f668'),
+        label: $t('input.1c599abee1bf9b0d'),
         controlType: "INPUT_TEXT",
         placeholderText: "100",
         isBindProperty: true,
@@ -483,8 +484,8 @@ const PROPERTIES = {
       {
         propertyName: "regex",
         helpText:
-          "Adds a validation to the input which displays an error on failure",
-        label: "Regex",
+          $t('input.65c54cedd0897445'),
+        label: $t('input.f205925496f24f52'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
         placeholderText: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$",
         inputType: "TEXT",
@@ -497,8 +498,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "validation",
-        helpText: "Sets the input validity based on a JS expression",
-        label: "Valid",
+        helpText: $t('input.eae69e6ccde9be8d'),
+        label: $t('input.7ec3acb86cd53757'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
         placeholderText: "{{ Input1.text.length > 0 }}",
         inputType: "TEXT",
@@ -515,10 +516,10 @@ const PROPERTIES = {
       {
         propertyName: "errorMessage",
         helpText:
-          "The error message to display if the regex or valid property check fails",
-        label: "Error message",
+          $t('input.f9ecc7723a7eca31'),
+        label: $t('input.f213708498d336d5'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
-        placeholderText: "Not a valid email!",
+        placeholderText: $t('input.6faf74674ac07cca'),
         inputType: "TEXT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -529,9 +530,9 @@ const PROPERTIES = {
       },
       {
         propertyName: "isSpellCheck",
-        label: "Spellcheck",
+        label: $t('input.c300ada647def2e6'),
         helpText:
-          "Defines whether the text input may be checked for spelling errors",
+          $t('input.c813972be0ac30dd'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -544,7 +545,7 @@ const PROPERTIES = {
     events: [
       {
         propertyName: "onTextChanged",
-        helpText: "when the text is changed",
+        helpText: $t('input.483e511b70e824f2'),
         label: "onTextChanged",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
@@ -574,8 +575,8 @@ const PROPERTIES = {
     icon: [
       {
         propertyName: "iconName",
-        label: "Icon",
-        helpText: "Sets the icon to be used in input field",
+        label: $t('input.346394088cba2e02'),
+        helpText: $t('input.01a3b14f75bb100a'),
         controlType: "ICON_SELECT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -597,8 +598,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "iconAlign",
-        label: "Position",
-        helpText: "Sets the icon position of input field",
+        label: $t('input.0f3bb658ccc55be1'),
+        helpText: $t('input.fd3a4b446ed465e1'),
         controlType: "ICON_TABS",
         defaultValue: "left",
         fullWidth: false,

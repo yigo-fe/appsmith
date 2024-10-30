@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   Collapsible,
   CollapsibleContent,
@@ -71,16 +72,16 @@ const allChangeDefs: Record<
     modified: status.jsObjectsModified,
     added: status.jsObjectsAdded,
     removed: status.jsObjectsRemoved,
-    singular: "js object",
-    plural: "js objects",
+    singular: $t('ExpandableChange.1a2e30a0ab0f10a3'),
+    plural: $t('ExpandableChange.9f5cf21cd58937f7'),
     iconName: "js",
   }),
   [ExpandableChangeKind.JSLIBS]: (status: GitStatusData) => ({
     modified: status.jsLibsModified,
     added: status.jsLibsAdded,
     removed: status.jsLibsRemoved,
-    singular: "js lib",
-    plural: "js libs",
+    singular: $t('ExpandableChange.f7dc2bd71e291830'),
+    plural: $t('ExpandableChange.0458077689b56901'),
     iconName: "package",
   }),
 };

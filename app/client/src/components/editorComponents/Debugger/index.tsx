@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DebuggerTabs from "./DebuggerTabs";
@@ -29,7 +30,7 @@ export function DebuggerTrigger() {
       ? `View details for ${messageCounters.errors} ${
           messageCounters.errors > 1 ? "errors" : "error"
         }`
-      : `No errors`;
+      : $t('index.017ff7f4c3f03d06');
 
   return (
     <Tooltip content={tooltipContent}>

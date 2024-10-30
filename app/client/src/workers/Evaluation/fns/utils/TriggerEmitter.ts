@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { EventEmitter } from "events";
 import { MAIN_THREAD_ACTION } from "ee/workers/Evaluation/evalWorkerActions";
 import { WorkerMessenger } from "workers/Evaluation/fns/utils/Messenger";
@@ -119,7 +120,7 @@ const fnExecutionDataHandler = deferredBatchedActionHandler((data) => {
       } catch (e) {
         acc.JSExecutionData[name] = undefined;
         acc.JSExecutionErrors[name] = {
-          message: `Execution of ${name} returned an unserializable data`,
+          message: $t('TriggerEmitter.c4c8456975a28a4f', {name: name}),
         };
       }
 

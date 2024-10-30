@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { WORKSPACE_INVITE_USERS_PAGE_URL } from "constants/routes";
@@ -18,7 +19,7 @@ export function WorkspaceMembers() {
           iconAlignment="left"
           intent="primary"
           onClick={() => history.push(WORKSPACE_INVITE_USERS_PAGE_URL)}
-          text="Invite Users"
+          text={$t('index.02d7005a3b8b8f8a')}
         />
       </PageSectionHeader>
     </PageWrapper>

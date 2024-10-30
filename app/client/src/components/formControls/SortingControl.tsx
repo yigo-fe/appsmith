@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useMemo, useRef } from "react";
 import { useSelector } from "react-redux";
 import FormControl from "pages/Editor/FormControl";
@@ -28,7 +29,7 @@ const columnFieldConfig: any = {
   controlType: "QUERY_DYNAMIC_INPUT_TEXT",
   initialValue: "",
   inputType: "TEXT",
-  placeholderText: "Column name",
+  placeholderText: $t('SortingControl.dc881c18f8edf3b1'),
 };
 
 // Form config for the order field
@@ -66,9 +67,9 @@ const SortingDropdownContainer = styled.div`
 const SortingFields = styled.div<{ isBreakpointSmall: boolean }>`
   display: grid;
   grid-template-columns: ${({ isBreakpointSmall }) =>
-    isBreakpointSmall ? "1fr" : "1fr 180px"};
+    isBreakpointSmall ? "1fr" : $t('SortingControl.aad9b0f59573f434')};
   grid-template-rows: ${({ isBreakpointSmall }) =>
-    isBreakpointSmall ? "1fr 1fr" : "1fr"};
+    isBreakpointSmall ? $t('SortingControl.eca17b2b3b5c484e') : "1fr"};
   gap: 5px;
 `;
 

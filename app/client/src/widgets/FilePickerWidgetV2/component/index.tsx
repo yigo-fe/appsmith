@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { ComponentProps } from "widgets/BaseComponent";
 import { BaseButton } from "widgets/ButtonWidget/component";
@@ -7,7 +8,7 @@ function FilePickerComponent(props: FilePickerComponentProps) {
   let computedLabel = props.label;
 
   if (props.files && props.files.length) {
-    computedLabel = `${props.files.length} files selected`;
+    computedLabel = $t('index.2e8647f6f2ce880f', {props_files_length: props.files.length});
   }
 
   return (

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 // This constant lists all the support HTTP methods & their color in
 // the entity explorer
 export enum HTTP_METHOD {
@@ -118,4 +119,4 @@ export interface MULTI_PART_DROPDOWN_OPTION {
 export const MULTI_PART_DROPDOWN_OPTIONS: MULTI_PART_DROPDOWN_OPTION[] =
   Object.values(MultiPartOptionTypes).map((value) => ({ label: value, value }));
 
-export const DEFAULT_MULTI_PART_DROPDOWN_PLACEHOLDER = "Type";
+export const DEFAULT_MULTI_PART_DROPDOWN_PLACEHOLDER = $t('CommonApiConstants.8501dcc3a15e9c63');

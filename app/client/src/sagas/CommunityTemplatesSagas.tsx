@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import {
   ReduxActionErrorTypes,
@@ -88,7 +89,7 @@ function* publishCommunityTemplateSaga(
     const isValid: boolean = yield validateResponse(response);
 
     if (isValid) {
-      toast.show(`Template published to community`, {
+      toast.show($t('CommunityTemplatesSagas.89abfd71cab836f5'), {
         kind: "success",
       });
       yield put({

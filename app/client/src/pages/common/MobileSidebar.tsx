@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { Colors } from "constants/Colors";
@@ -131,7 +132,7 @@ export default function MobileSideBar(props: MobileSideBarProps) {
               type: ReduxActionTypes.LOGOUT_USER_INIT,
             })
           }
-          text="Sign Out"
+          text=$t('MobileSidebar.ab0b1f4bb19a1fbd')
         />
       </Section>
       <Section>
@@ -140,7 +141,7 @@ export default function MobileSideBar(props: MobileSideBarProps) {
           onSelect={() => {
             window.open(DISCORD_URL, "_blank");
           }}
-          text={"Join our discord"}
+          text={$t('MobileSidebar.6a02a3e39712113a')}
         />
         <StyledMenuItem
           icon="book"

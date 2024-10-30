@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { Button } from "@appsmith/ads";
@@ -61,7 +62,7 @@ function EntityNotFoundPane(props: Props) {
   return (
     <Wrapper>
       <img
-        alt="Page Unavailable"
+        alt=$t('EntityNotFoundPane.e831bcc7701727f7')
         className="page-unavailable-img"
         src={PageUnavailableImage}
       />

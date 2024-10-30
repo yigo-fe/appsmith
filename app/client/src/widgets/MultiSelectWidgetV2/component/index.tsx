@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /* eslint-disable no-console */
 import type { ChangeEvent } from "react";
 import React, {
@@ -279,7 +280,7 @@ function MultiSelectComponent({
               alignIndicator="left"
               checked={isSelectAll}
               className={`all-options ${isSelectAll ? "selected" : ""}`}
-              label="Select all"
+              label={$t('index.9c12c6f08e104361')}
               onChange={handleSelectAll}
             />
           ) : null}
@@ -366,7 +367,7 @@ function MultiSelectComponent({
           maxTagPlaceholder={(e) => `+${e.length} more`}
           menuItemSelectedIcon={menuItemSelectedIcon}
           mode="multiple"
-          notFoundContent="No Results Found"
+          notFoundContent=$t('index.f8809ff48b45260a')
           onChange={onChange}
           onDropdownVisibleChange={onDropdownVisibleChange}
           open={isOpen}

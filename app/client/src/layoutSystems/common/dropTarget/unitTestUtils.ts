@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 export const unitTestBaseMockStore = {
   entities: {
     pageList: {
@@ -26,13 +27,13 @@ export const unitTestBaseMockStore = {
       user: {
         email: "jacques@adasdsad.com",
         username: "jacques@adasdsad.com",
-        useCase: "personal project",
+        useCase: $t('unitTestUtils.ff467b8f27f8a4ec'),
         enableTelemetry: true,
         roles: [
-          "Upgrade to business plan to access roles and groups for conditional business logic",
+          $t('unitTestUtils.1c80afe6ecee471a'),
         ],
         groups: [
-          "Upgrade to business plan to access roles and groups for conditional business logic",
+          $t('unitTestUtils.1c80afe6ecee471a'),
         ],
         emptyInstance: false,
         accountNonExpired: true,
@@ -477,7 +478,7 @@ export const unitTestBaseMockStore = {
           "delete:applications",
           "makePublic:applications",
         ],
-        name: "My first application",
+        name: $t('unitTestUtils.690a1b5d1c0cd159'),
         workspaceId: "659d2e14d0cbfb0c5e0a7424",
         isPublic: false,
         appIsExample: false,

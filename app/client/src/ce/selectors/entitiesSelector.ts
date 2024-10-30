@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AppState } from "ee/reducers";
 import type {
   ActionData,
@@ -1688,7 +1689,7 @@ export const getDatasourceUsageCountForApp = createSelector(
     const actionDsMap: Record<string, string> = {};
 
     datasources.forEach((ds) => {
-      actionDsMap[ds.id] = `No queries in this ${editorType}`;
+      actionDsMap[ds.id] = $t('entitiesSelector.a3608d00ba13a0f7', {editorType: editorType});
     });
     Object.keys(actionCount).forEach((dsId) => {
       actionDsMap[dsId] = `${actionCount[dsId]} queries in this ${editorType}`;

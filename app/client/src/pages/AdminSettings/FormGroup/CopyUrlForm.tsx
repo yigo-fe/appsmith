@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useMemo } from "react";
 import styled from "styled-components";
 import copy from "copy-to-clipboard";
@@ -54,7 +55,7 @@ function CopyUrlForm(props: {
 
   const handleCopy = () => {
     copy(fieldValue);
-    toast.show(`${props.title} copied to clipboard`, {
+    toast.show($t('CopyUrlForm.3c163eaa33682a0b', {props_title: props.title}), {
       kind: "success",
     });
     AnalyticsUtil.logEvent("URL_COPIED", { snippet: fieldValue });

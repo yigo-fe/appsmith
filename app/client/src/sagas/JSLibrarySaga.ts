@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ApiResponse } from "api/ApiResponses";
 import LibraryApi from "api/LibraryAPI";
 import { createMessage, customJSLibraryMessages } from "ee/constants/messages";
@@ -52,7 +53,7 @@ function* handleInstallationFailure(
   }
 
   AppsmithConsole.error({
-    text: `Failed to install library script at ${url}`,
+    text: $t('JSLibrarySaga.c9a5d0855ce39ead', {url: url}),
   });
 
   const applicationid: ReturnType<typeof getCurrentApplicationId> =
@@ -63,7 +64,7 @@ function* handleInstallationFailure(
     payload: {
       url,
       show: true,
-      message: message || `Failed to install library script at ${url}`,
+      message: message || $t('JSLibrarySaga.c9a5d0855ce39ead', {url: url}),
     },
   });
   AnalyticsUtil.logEvent("INSTALL_LIBRARY", {
@@ -187,7 +188,7 @@ export function* installLibrarySaga(lib: Partial<JSLibrary>) {
       },
     );
     AppsmithConsole.warning({
-      text: `Failed to generate code definitions for ${name}`,
+      text: $t('JSLibrarySaga.0ce217b33d9a703b', {name: name}),
     });
     AnalyticsUtil.logEvent("DEFINITIONS_GENERATION", { url, success: false });
     log.debug("Failed to update Tern defs", e);
@@ -235,7 +236,7 @@ export function* installLibrarySaga(lib: Partial<JSLibrary>) {
   });
 
   AppsmithConsole.info({
-    text: `${name} installed successfully`,
+    text: $t('JSLibrarySaga.d569c35b7668e7e7', {name: name}),
   });
 }
 

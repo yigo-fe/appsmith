@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { WrappedFieldInputProps, WrappedFieldMetaProps } from "redux-form";
 import { Field } from "redux-form";
 import { Button } from "@appsmith/ads";
@@ -67,7 +68,7 @@ export const ImageInput = (props: ImageInputProps) => {
       }`}
     >
       <img
-        alt="Preview"
+        alt={$t('ImageInput.87a299580843e6e4')}
         className="h-8"
         // TODO: Fix this the next time the file is edited
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

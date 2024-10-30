@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import scrollIntoView from "scroll-into-view-if-needed";
 import {
   modText,
@@ -100,7 +101,7 @@ export const showUndoRedoToast = (
       ? `${modText()} ${shiftText()} Z`
       : `${modText()} Y`;
 
-  toast.show(`${actionText}. Press ${actionKey} to ${action}`);
+  toast.show($t('replayHelpers.36da9e08508bb92b', {actionText: actionText,actionKey: actionKey,action: action}));
 };
 
 function getWidgetDescription(isCreated: boolean, isMultiple: boolean) {

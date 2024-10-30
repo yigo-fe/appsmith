@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { getAssetUrl } from "ee/utils/airgapHelpers";
 import React from "react";
 import styled from "styled-components";
@@ -76,10 +77,10 @@ function LeftSideContent() {
         <div className="left-description-author">
           <Avatar
             image={`${getAssetUrl(`${ASSETS_CDN_URL}/thomas-zwick.png`)}`}
-            label="Thomas Zwick"
+            label={$t('LeftSideContent.df68a0b51bc1a767')}
             size="sm"
           />
-          <div>Thomas Zwick</div>
+          <div>{$t('LeftSideContent.df68a0b51bc1a767')}</div>
           <div className="dot">&#183;</div>
           <div>Director, Omron</div>
         </div>
@@ -91,23 +92,23 @@ function LeftSideContent() {
         </div>
         <div className="client-logo-section">
           <img
-            alt="GSK logo"
+            alt={$t('LeftSideContent.b0ac9146896d7e99')}
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/gsk-logo-grey.svg`)}`}
           />
           <img
-            alt="Omron logo"
+            alt=$t('LeftSideContent.ea3205a06cf830a7')
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/omron-logo.svg`)}`}
           />
           <img
-            alt="Dropbox logo"
+            alt=$t('LeftSideContent.74ed257247039fea')
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/dropbox-text-logo.svg`)}`}
           />
           <img
-            alt="AWS logo"
+            alt=$t('LeftSideContent.ac4a025a5bfa26e6')
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/aws-logo-grey.svg`)}`}
           />
           <img
-            alt="Twilio logo"
+            alt=$t('LeftSideContent.c2973c9363125113')
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/twilio-logo.svg`)}`}
           />
         </div>

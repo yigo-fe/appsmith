@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import { ValidationTypes } from "constants/WidgetValidation";
 import React from "react";
@@ -58,7 +59,7 @@ export function documentUrlValidation(value: unknown): ValidationResponse {
           messages: [
             {
               name: "ValidationError",
-              message: "Provided URL / Base64 is invalid.",
+              message: $t('index.d28017e2eb3ea8ac'),
             },
           ],
         };
@@ -77,7 +78,7 @@ export function documentUrlValidation(value: unknown): ValidationResponse {
         messages: [
           {
             name: "ValidationError",
-            message: "Provided URL / Base64 is invalid.",
+            message: $t('index.d28017e2eb3ea8ac'),
           },
         ],
       };
@@ -100,7 +101,7 @@ class DocumentViewerWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Document Viewer", // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
+      name: $t('index.12e3db4ddd8db627'), // The display name which will be made in uppercase and show in the widgets panel ( can have spaces )
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.MEDIA],
@@ -156,15 +157,15 @@ class DocumentViewerWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.968c02dad7db861c'),
         children: [
           {
             helpText:
               "Preview document URL supports txt, pdf, docx, ppt, pptx, xlsx file formats, but base64 ppt/pptx are not supported.",
             propertyName: "docUrl",
-            label: "Document link",
+            label: $t('index.55981c1c22d92288'),
             controlType: "INPUT_TEXT",
-            placeholderText: "URL / Base64",
+            placeholderText: $t('index.5e03558e42631bb0'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -172,7 +173,7 @@ class DocumentViewerWidget extends BaseWidget<
               params: {
                 fn: documentUrlValidation,
                 expected: {
-                  type: "URL / Base64",
+                  type: $t('index.5e03558e42631bb0'),
                   example: "https://www.example.com",
                   autocompleteDataType: AutocompleteDataType.STRING,
                 },
@@ -182,12 +183,12 @@ class DocumentViewerWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.bc6fbc3e1b0f97a9'),
         children: [
           {
-            helpText: "Controls visibility of the widget",
+            helpText: $t('index.3bc55e5cd21672e2'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.b62a94b6e9c9b221'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -196,9 +197,9 @@ class DocumentViewerWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.7259384e87d01c3b'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.b74158bd7370adc2'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -227,7 +228,7 @@ class DocumentViewerWidget extends BaseWidget<
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
-      "!doc": "Document viewer widget is used to show documents on a page",
+      "!doc": $t('index.8b8a1c69c76e6d0d'),
       "!url": "https://docs.appsmith.com/reference/widgets/document-viewer",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       docUrl: "string",

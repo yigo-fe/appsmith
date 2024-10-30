@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Button, Flex, Text } from "@appsmith/ads";
 import { createMessage } from "ee/constants/messages";
@@ -27,7 +28,7 @@ const SegmentAddHeader = (props: Props) => {
       </Text>
       {isSideBySideEnabled ? null : (
         <Button
-          aria-label="Close pane"
+          aria-label={$t('SegmentAddHeader.8853c0b147bae87d')}
           data-testid="t--add-pane-close-icon"
           isIconButton
           kind={"secondary"}

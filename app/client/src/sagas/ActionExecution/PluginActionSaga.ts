@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   all,
   call,
@@ -568,7 +569,7 @@ export default function* executePluginActionTriggerSaga(
 
   const action = shouldBeDefined<Action>(
     yield select(getAction, actionId),
-    `Action not found for id - ${actionId}`,
+    $t('PluginActionSaga.d134b8762d561878', {actionId: actionId}),
   );
   // TODO: Fix this the next time the file is edited
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -599,7 +600,7 @@ export default function* executePluginActionTriggerSaga(
         : undefined;
 
   AppsmithConsole.info({
-    text: "Execution started from widget request",
+    text: $t('PluginActionSaga.1d5529a70e08c91d'),
     source: {
       type: ENTITY_TYPE.ACTION,
       name: pluginActionNameToDisplay,
@@ -624,7 +625,7 @@ export default function* executePluginActionTriggerSaga(
           id: actionId,
           iconId: action.pluginId,
           logType: LOG_TYPE.ACTION_EXECUTION_ERROR,
-          text: `Execution failed with status ${payload.statusCode}`,
+          text: $t('PluginActionSaga.d5a2210a88d0e440', {payload_statusCode: payload.statusCode}),
           environmentName: currentEnvDetails.name,
           source: {
             type: ENTITY_TYPE.ACTION,
@@ -672,7 +673,7 @@ export default function* executePluginActionTriggerSaga(
     AnalyticsUtil.logEvent("EXECUTE_ACTION_SUCCESS", actionExecutionAnalytics);
     AppsmithConsole.info({
       logType: LOG_TYPE.ACTION_EXECUTION_SUCCESS,
-      text: "Executed successfully from widget request",
+      text: $t('PluginActionSaga.12aec98ad248f0aa'),
       timeTaken: payload.duration,
       source: {
         type: ENTITY_TYPE.ACTION,
@@ -790,7 +791,7 @@ export function* runActionSaga(
   );
 
   AppsmithConsole.info({
-    text: "Execution started from user request",
+    text: $t('PluginActionSaga.b25144d562399b64'),
     source: {
       type: ENTITY_TYPE.ACTION,
       name: actionObject.name,
@@ -885,7 +886,7 @@ export function* runActionSaga(
 
   // Error should be readable error if present.
   // Otherwise, payload's body.
-  // Default to "An unexpected error occurred" if none is available
+  // Default to $t('PluginActionSaga.cb477ee2c105943c') if none is available
 
   const readableError = payload.readableError
     ? {
@@ -911,7 +912,7 @@ export function* runActionSaga(
 
   const defaultError = {
     name: "PluginExecutionError",
-    message: "An unexpected error occurred",
+    message: $t('PluginActionSaga.cb477ee2c105943c'),
   };
 
   const allowedActionAnalyticsKeys = getAllowedActionAnalyticsKeys(
@@ -1019,7 +1020,7 @@ export function* runActionSaga(
   if (payload.isExecutionSuccess) {
     AppsmithConsole.info({
       logType: LOG_TYPE.ACTION_EXECUTION_SUCCESS,
-      text: "Executed successfully from user request",
+      text: $t('PluginActionSaga.42b5ff749678051a'),
       timeTaken: payload.duration,
       source: {
         type: ENTITY_TYPE.ACTION,
@@ -1222,7 +1223,7 @@ function* executePageLoadAction(
             iconId: action.pluginId,
             logType: LOG_TYPE.ACTION_EXECUTION_ERROR,
             environmentName: currentEnvDetails.name,
-            text: `Execution failed with status ${payload.statusCode}`,
+            text: $t('PluginActionSaga.d5a2210a88d0e440', {payload_statusCode: payload.statusCode}),
             source: {
               type: ENTITY_TYPE.ACTION,
               name: actionName,
@@ -1471,7 +1472,7 @@ function* executePluginActionSaga(
       if (!!pluginAction.pluginId) {
         plugin = shouldBeDefined<Plugin>(
           yield select(getPlugin, pluginAction.pluginId),
-          `Plugin not found for id - ${pluginAction.pluginId}`,
+          $t('PluginActionSaga.d4cd73ffc7261060', {pluginAction_pluginId: pluginAction.pluginId}),
         );
       }
 

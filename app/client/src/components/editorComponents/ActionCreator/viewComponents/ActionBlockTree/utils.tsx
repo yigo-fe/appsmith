@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Icon } from "@appsmith/ads";
 import { AppsmithFunction, FieldType } from "../../constants";
@@ -101,33 +102,33 @@ function getActionHeading(
 ) {
   switch (actionType) {
     case AppsmithFunction.none:
-      return "Select an action";
+      return $t('utils.acecb26da9b76275');
 
     case AppsmithFunction.navigateTo:
       return (
         FIELD_CONFIG[FieldType.PAGE_SELECTOR_FIELD].getter(code).slice(1, -1) ||
-        "Select page"
+        $t('utils.1194241b73e94c1a')
       );
 
     case AppsmithFunction.showAlert:
       return (
-        FIELD_CONFIG[FieldType.ALERT_TEXT_FIELD].getter(code) || "Add message"
+        FIELD_CONFIG[FieldType.ALERT_TEXT_FIELD].getter(code) || $t('utils.3350ca1d3143faca')
       );
 
     case AppsmithFunction.storeValue:
       return (
         FIELD_CONFIG[FieldType.KEY_TEXT_FIELD_STORE_VALUE].getter(code) ||
-        "Add key"
+        $t('utils.a0b4f68efb489584')
       );
 
     case AppsmithFunction.copyToClipboard:
-      return FIELD_CONFIG[FieldType.COPY_TEXT_FIELD].getter(code) || "Add text";
+      return FIELD_CONFIG[FieldType.COPY_TEXT_FIELD].getter(code) || $t('utils.51455e521f2c9c42');
 
     case AppsmithFunction.download:
       const fileName =
         FIELD_CONFIG[FieldType.DOWNLOAD_FILE_NAME_FIELD].getter(code);
 
-      return fileName ? fileName : "Add data to download";
+      return fileName ? fileName : $t('utils.b151c1cbd5839c3c');
 
     case AppsmithFunction.jsFunction:
       if (minimal) {
@@ -151,19 +152,19 @@ function getActionHeading(
     case AppsmithFunction.showModal:
       return (
         FIELD_CONFIG[FieldType.SHOW_MODAL_FIELD].getter(code).split(".")[0] ||
-        "Select modal"
+        $t('utils.8e313cad167d6911')
       );
 
     case AppsmithFunction.closeModal:
       return (
         FIELD_CONFIG[FieldType.CLOSE_MODAL_FIELD].getter(code).split(".")[0] ||
-        "Select modal"
+        $t('utils.8e313cad167d6911')
       );
 
     case AppsmithFunction.resetWidget:
       return (
         FIELD_CONFIG[FieldType.WIDGET_NAME_FIELD].getter(code).slice(1, -1) ||
-        "Select widget"
+        $t('utils.93a2001de9f8566b')
       );
 
     case AppsmithFunction.clearStore:
@@ -172,18 +173,18 @@ function getActionHeading(
     case AppsmithFunction.removeValue:
       return (
         FIELD_CONFIG[FieldType.KEY_TEXT_FIELD_REMOVE_VALUE].getter(code) ||
-        "Add key"
+        $t('utils.a0b4f68efb489584')
       );
 
     case AppsmithFunction.setInterval:
       return (
         getCodeFromMoustache(FIELD_CONFIG[FieldType.DELAY_FIELD].getter(code)) +
-          "ms" || "Add interval"
+          "ms" || $t('utils.e321f4b16aaac199')
       );
 
     case AppsmithFunction.clearInterval:
       return (
-        FIELD_CONFIG[FieldType.CLEAR_INTERVAL_ID_FIELD].getter(code) || "Add Id"
+        FIELD_CONFIG[FieldType.CLEAR_INTERVAL_ID_FIELD].getter(code) || $t('utils.177b0d69ca0e264a')
       );
 
     case AppsmithFunction.getGeolocation:
@@ -192,7 +193,7 @@ function getActionHeading(
           FIELD_CONFIG[FieldType.CALLBACK_FUNCTION_FIELD_GEOLOCATION].getter(
             code,
           ),
-        ) || "Add callback"
+        ) || $t('utils.a565adf25839684c')
       );
 
     case AppsmithFunction.watchGeolocation:
@@ -203,7 +204,7 @@ function getActionHeading(
 
     case AppsmithFunction.postWindowMessage:
       return (
-        FIELD_CONFIG[FieldType.MESSAGE_FIELD].getter(code) || "Add message"
+        FIELD_CONFIG[FieldType.MESSAGE_FIELD].getter(code) || $t('utils.3350ca1d3143faca')
       );
   }
 

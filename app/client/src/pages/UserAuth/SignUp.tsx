@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import type { InjectedFormProps } from "redux-form";
 import { reduxForm, formValueSelector } from "redux-form";
@@ -135,7 +136,7 @@ export function SignUp(props: SignUpFormProps) {
   if (queryParams.get("error")) {
     errorMessage = queryParams.get("error") || "";
     showError = true;
-    Sentry.captureException("Sign up failed", {
+    Sentry.captureException($t('SignUp.9fd0027e322ee940'), {
       level: Severity.Error,
       extra: {
         error: new Error(errorMessage),

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ReduxActionTypes } from "ee/constants/ReduxActionConstants";
 import {
   FlexVerticalAlignment,
@@ -58,7 +59,7 @@ export function selectedTabValidation(
     messages: [
       {
         name: "ValidationError",
-        message: `Tab name ${value} does not exist`,
+        message: $t('index.0e28eabd523c6416', {value: value}),
       },
     ],
   };
@@ -71,7 +72,7 @@ class TabsWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Tabs",
+      name: $t('index.a2ce41af6c05dcbd'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.LAYOUT],
@@ -97,7 +98,7 @@ class TabsWidget extends BaseWidget<
       rows: WidgetHeightLimits.MIN_CANVAS_HEIGHT_IN_ROWS + 5,
       columns: 24,
       shouldScrollContents: false,
-      widgetName: "Tabs",
+      widgetName: $t('index.a2ce41af6c05dcbd'),
       animateLoading: true,
       borderWidth: 1,
       borderColor: Colors.GREY_5,
@@ -105,7 +106,7 @@ class TabsWidget extends BaseWidget<
       minDynamicHeight: WidgetHeightLimits.MIN_CANVAS_HEIGHT_IN_ROWS + 5,
       tabsObj: {
         tab1: {
-          label: "Tab 1",
+          label: $t('index.5165b73fa4e9c224'),
           id: "tab1",
           widgetId: "",
           isVisible: true,
@@ -113,7 +114,7 @@ class TabsWidget extends BaseWidget<
           positioning: Positioning.Vertical,
         },
         tab2: {
-          label: "Tab 2",
+          label: $t('index.bbb7e6cf1eddcdf7'),
           id: "tab2",
           widgetId: "",
           isVisible: true,
@@ -122,7 +123,7 @@ class TabsWidget extends BaseWidget<
         },
       },
       shouldShowTabs: true,
-      defaultTab: "Tab 1",
+      defaultTab: $t('index.5165b73fa4e9c224'),
       blueprint: {
         view: [
           {
@@ -135,7 +136,7 @@ class TabsWidget extends BaseWidget<
               isDisabled: false,
               shouldScrollContents: false,
               tabId: "tab1",
-              tabName: "Tab 1",
+              tabName: $t('index.5165b73fa4e9c224'),
               children: [],
               version: 1,
               bottomRow: WidgetHeightLimits.MIN_CANVAS_HEIGHT_IN_ROWS,
@@ -151,7 +152,7 @@ class TabsWidget extends BaseWidget<
               isDisabled: false,
               shouldScrollContents: false,
               tabId: "tab2",
-              tabName: "Tab 2",
+              tabName: $t('index.bbb7e6cf1eddcdf7'),
               children: [],
               version: 1,
               bottomRow: WidgetHeightLimits.MIN_CANVAS_HEIGHT_IN_ROWS,
@@ -257,13 +258,13 @@ class TabsWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.e5d33dcbce772603'),
         children: [
           {
             propertyName: "tabsObj",
             isJSConvertible: false,
-            label: "Tabs",
-            helpText: "Tabs",
+            label: $t('index.a2ce41af6c05dcbd'),
+            helpText: $t('index.a2ce41af6c05dcbd'),
             controlType: "TABS_INPUT",
             isBindProperty: false,
             isTriggerProperty: false,
@@ -315,12 +316,12 @@ class TabsWidget extends BaseWidget<
               },
               children: [
                 {
-                  sectionName: "General",
+                  sectionName: $t('index.7a0de49d0de2ab9e'),
                   children: [
                     {
                       propertyName: "isVisible",
-                      label: "Visible",
-                      helpText: "Controls the visibility of the tab",
+                      label: $t('index.8bf1c3c85d6761a3'),
+                      helpText: $t('index.a2d947e60fd8b005'),
                       controlType: "SWITCH",
                       useValidationMessage: true,
                       isJSConvertible: true,
@@ -335,9 +336,9 @@ class TabsWidget extends BaseWidget<
           },
           {
             propertyName: "defaultTab",
-            helpText: "Selects a tab name specified by default",
-            placeholderText: "Tab 1",
-            label: "Default tab",
+            helpText: $t('index.c080295848c2c61b'),
+            placeholderText: $t('index.5165b73fa4e9c224'),
+            label: $t('index.1c5f0111839208a1'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -346,8 +347,8 @@ class TabsWidget extends BaseWidget<
               params: {
                 fn: selectedTabValidation,
                 expected: {
-                  type: "Tab Name (string)",
-                  example: "Tab 1",
+                  type: $t('index.b15e7cda819a6950'),
+                  example: $t('index.5165b73fa4e9c224'),
                   autocompleteDataType: AutocompleteDataType.STRING,
                 },
               },
@@ -357,12 +358,12 @@ class TabsWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.7a0de49d0de2ab9e'),
         children: [
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.8bf1c3c85d6761a3'),
+            helpText: $t('index.f391e8615343ca7c'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -370,18 +371,18 @@ class TabsWidget extends BaseWidget<
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Enables scrolling for content inside the widget",
+            helpText: $t('index.02bcca5d315dc901'),
             propertyName: "shouldScrollContents",
-            label: "Scroll contents",
+            label: $t('index.b0a95c1c93e3b716'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.8854f8843223b935'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.7125a2bbd9a43b38'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -391,8 +392,8 @@ class TabsWidget extends BaseWidget<
           {
             propertyName: "shouldShowTabs",
             helpText:
-              "Hides the tabs so that different widgets can be displayed based on the default tab",
-            label: "Show tabs",
+              $t('index.71fde1cdb99cd6b4'),
+            label: $t('index.abd277aaab4b61e7'),
             controlType: "SWITCH",
             isBindProperty: false,
             isTriggerProperty: false,
@@ -401,10 +402,10 @@ class TabsWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.b58e1af13b1413c7'),
         children: [
           {
-            helpText: "when the button is clicked",
+            helpText: $t('index.eb6ade1a06056194'),
             propertyName: "onTabSelected",
             label: "onTabSelected",
             controlType: "ACTION_SELECTOR",
@@ -420,12 +421,12 @@ class TabsWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Colors, Borders and Shadows",
+        sectionName: $t('index.5c0d5d6b2f5d3c59'),
         children: [
           {
             propertyName: "accentColor",
-            helpText: "Sets the color of the selected tab's underline ",
-            label: "Accent color",
+            helpText: $t('index.0d5b60efd66a3e14'),
+            label: $t('index.c935e7db765fa21b'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -433,10 +434,10 @@ class TabsWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.d7613808923be722'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
             propertyName: "backgroundColor",
-            label: "Background color",
+            label: $t('index.76dc4c6798fe82c6'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -444,20 +445,20 @@ class TabsWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Use a html color name, HEX, RGB or RGBA value",
+            helpText: $t('index.d7613808923be722'),
             placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
             propertyName: "borderColor",
-            label: "Border color",
+            label: $t('index.855c79357857fef7'),
             controlType: "COLOR_PICKER",
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Enter value for border width",
+            helpText: $t('index.91f82d13aa70c740'),
             propertyName: "borderWidth",
-            label: "Border width",
-            placeholderText: "Enter value in px",
+            label: $t('index.9279d109b525e5f9'),
+            placeholderText: $t('index.25e36e89476b2324'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -466,9 +467,9 @@ class TabsWidget extends BaseWidget<
           },
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.f5c33c2fef2f3a18'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.3fc1baae0d477878'),
             controlType: "BORDER_RADIUS_OPTIONS",
 
             isJSConvertible: true,
@@ -478,9 +479,9 @@ class TabsWidget extends BaseWidget<
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.7297ce3447d0b48b'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.fb76f82692816d13'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

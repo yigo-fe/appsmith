@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
 import { get } from "lodash";
 import { hideByColumnType } from "../../../widget/propertyUtils";
@@ -7,7 +8,7 @@ import dateTypeValidations from "./Validations/Date";
 import { ColumnTypes } from "../../../constants";
 
 export default {
-  sectionName: "Validation",
+  sectionName: $t('Validation.2a5b92db160d7f34'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     const isEditable = get(props, `${propertyPath}.isEditable`, "");
 

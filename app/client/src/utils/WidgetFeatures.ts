@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ReduxActionTypes } from "ee/constants/ReduxActionConstants";
 import type {
   PropertyPaneConfig,
@@ -160,11 +161,11 @@ export const WidgetFeaturePropertyPaneEnhancements: Record<
         dynamicHeight: {
           options: [
             {
-              label: "Auto Height",
+              label: $t('WidgetFeatures.c8bec468b8e33282'),
               value: DynamicHeight.AUTO_HEIGHT,
             },
             {
-              label: "Fixed",
+              label: $t('WidgetFeatures.6c5b6260b403820f'),
               value: DynamicHeight.FIXED,
             },
           ],
@@ -311,7 +312,7 @@ function updateMinMaxDynamicHeight(
 // TODO FEATURE:(abhinav) Add validations to these properties
 
 const CONTAINER_SCROLL_HELPER_TEXT =
-  "This widget shows an internal scroll when you add widgets in edit mode. It'll resize after you've added widgets. The scroll won't exist in view mode.";
+  $t('WidgetFeatures.adcaefa5446d7c22');
 
 export const PropertyPaneConfigTemplates: Record<
   RegisteredWidgetFeatures,
@@ -320,9 +321,9 @@ export const PropertyPaneConfigTemplates: Record<
   [RegisteredWidgetFeatures.DYNAMIC_HEIGHT]: (featureConfig) => [
     {
       helpText:
-        "Auto Height: Configure the way the widget height reacts to content changes.",
+        $t('WidgetFeatures.2f3d69efe7284748'),
       propertyName: "dynamicHeight",
-      label: "Height",
+      label: $t('WidgetFeatures.d063bcf52cb71646'),
       controlType: "DROP_DOWN",
       isBindProperty: false,
       isTriggerProperty: false,
@@ -347,15 +348,15 @@ export const PropertyPaneConfigTemplates: Record<
       },
       options: [
         {
-          label: "Auto Height",
+          label: $t('WidgetFeatures.c8bec468b8e33282'),
           value: DynamicHeight.AUTO_HEIGHT,
         },
         {
-          label: "Auto Height with limits",
+          label: $t('WidgetFeatures.4600939b06809d3c'),
           value: DynamicHeight.AUTO_HEIGHT_WITH_LIMITS,
         },
         {
-          label: "Fixed",
+          label: $t('WidgetFeatures.6c5b6260b403820f'),
           value: DynamicHeight.FIXED,
         },
       ],

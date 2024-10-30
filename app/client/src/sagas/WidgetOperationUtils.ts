@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { WidgetEntity } from "ee/entities/DataTree/types";
 import { isWidget } from "ee/workers/Evaluation/evaluationUtils";
 import WidgetFactory from "WidgetProvider/factory";
@@ -1536,7 +1537,7 @@ export function getNextWidgetName(
 
   if (options && options.prefix) {
     prefix = `${options.prefix}${
-      widgetNames.indexOf(options.prefix as string) > -1 ? "Copy" : ""
+      widgetNames.indexOf(options.prefix as string) > -1 ? $t('WidgetOperationUtils.f44424e0a8d9c230') : ""
     }`;
   }
 

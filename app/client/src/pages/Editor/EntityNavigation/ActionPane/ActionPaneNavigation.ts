@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Action } from "entities/Action";
 import type { EntityInfo } from "../types";
 import {
@@ -38,7 +39,7 @@ export default class ActionPaneNavigation extends PaneNavigation {
     );
 
     if (!action)
-      throw Error(`Couldn't find action with id: ${this.entityInfo.id}`);
+      throw Error($t('ActionPaneNavigation.1d081c499761a7eb', {this_entityInfo_id: this.entityInfo.id}));
 
     this.action = action;
   }

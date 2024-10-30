@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import type { IconName } from "@blueprintjs/icons";
 import type {
@@ -52,7 +53,7 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
 
   static getConfig() {
     return {
-      name: "Button",
+      name: $t('index.fc6d85e40c6c79ca'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.BUTTONS],
@@ -64,12 +65,12 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
   static getDefaults() {
     return {
       animateLoading: true,
-      text: "Submit",
+      text: $t('index.9cd41fdee70e5a41'),
       buttonVariant: ButtonVariantTypes.PRIMARY,
       placement: ButtonPlacementTypes.CENTER,
       rows: 4,
       columns: 16,
-      widgetName: "Button",
+      widgetName: $t('index.fc6d85e40c6c79ca'),
       isDisabled: false,
       isVisible: true,
       isDefaultClickDisabled: true,
@@ -141,7 +142,7 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Buttons are used to capture user intent and trigger actions based on that intent",
+        $t('index.fb948c3434386921'),
       "!url": "https://docs.appsmith.com/widget-reference/button",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       text: "string",
@@ -153,20 +154,20 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Basic",
+        sectionName: $t('index.b0297e0a1e46c8d3'),
         children: [
           {
             propertyName: "text",
-            label: "Label",
-            helpText: "Sets the label of the button",
+            label: $t('index.c458e7f75518734e'),
+            helpText: $t('index.f78e3cba1c1575b8'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Submit",
+            placeholderText: $t('index.9cd41fdee70e5a41'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "when the button is clicked",
+            helpText: $t('index.6c0d4b8937944943'),
             propertyName: "onClick",
             label: "onClick",
             controlType: "ACTION_SELECTOR",
@@ -177,22 +178,22 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.0792fdbbf175aaec'),
         children: [
           {
-            helpText: "Show helper text with button on hover",
+            helpText: $t('index.9d401bcc931c3f7e'),
             propertyName: "tooltip",
-            label: "Tooltip",
+            label: $t('index.b4826e6d6b940ff8'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Submits Form",
+            placeholderText: $t('index.b3c1b2fec36f4b18'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.2c9f2d9ffb74f793'),
+            helpText: $t('index.95e104dc7e971e97'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -201,9 +202,9 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.a776e901141e8cb2'),
             controlType: "SWITCH",
-            helpText: "Disables clicks to this widget",
+            helpText: $t('index.0d1908d7c48e95bb'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -211,9 +212,9 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.0d5d42ea2840f748'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.9805519624b750e7'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -223,7 +224,7 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
         ],
       },
       {
-        sectionName: "Validation",
+        sectionName: $t('index.1ebbe264651fd616'),
         hidden: isAirgapped,
         children: [
           {
@@ -231,7 +232,7 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
             label: "Google reCAPTCHA key",
             helpText: "Sets Google reCAPTCHA site key for the button",
             controlType: "INPUT_TEXT",
-            placeholderText: "reCAPTCHA Key",
+            placeholderText: $t('index.325f94a0aef9bc65'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
@@ -240,14 +241,14 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
             propertyName: "recaptchaType",
             label: "Google reCAPTCHA version",
             controlType: "DROP_DOWN",
-            helpText: "Select reCAPTCHA version",
+            helpText: $t('index.4406d541d45e8800'),
             options: [
               {
-                label: "reCAPTCHA v3",
+                label: $t('index.09b40f7a785142df'),
                 value: RecaptchaTypes.V3,
               },
               {
-                label: "reCAPTCHA v2",
+                label: $t('index.e0be1e21294b7212'),
                 value: RecaptchaTypes.V2,
               },
             ],
@@ -265,13 +266,13 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
       },
       // TODO: refactor widgetParentProps implementation when we address #10659
       {
-        sectionName: "Form settings",
+        sectionName: $t('index.bcc14d99f1896f4f'),
         children: [
           {
             helpText:
-              "Disabled if the form is invalid, if this widget exists directly within a Form widget.",
+              $t('index.6c9a30a65264e4a2'),
             propertyName: "disabledWhenInvalid",
-            label: "Disabled invalid forms",
+            label: $t('index.7d11d824bff120ca'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -280,9 +281,9 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
           },
           {
             helpText:
-              "Resets the fields of the form, on click, if this widget exists directly within a Form widget.",
+              $t('index.69a337006d297ff7'),
             propertyName: "resetFormOnClick",
-            label: "Reset form on success",
+            label: $t('index.abe4041fad876a2f'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -297,26 +298,26 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.0792fdbbf175aaec'),
         children: [
           {
             propertyName: "buttonVariant",
-            label: "Button variant",
+            label: $t('index.9036456c4cea4d58'),
             controlType: "ICON_TABS",
             defaultValue: ButtonVariantTypes.PRIMARY,
             fullWidth: true,
-            helpText: "Sets the variant of the icon button",
+            helpText: $t('index.5e12a59e3444cc4e'),
             options: [
               {
-                label: "Primary",
+                label: $t('index.9df7c667a9e51686'),
                 value: ButtonVariantTypes.PRIMARY,
               },
               {
-                label: "Secondary",
+                label: $t('index.d78134cd98ce256e'),
                 value: ButtonVariantTypes.SECONDARY,
               },
               {
-                label: "Tertiary",
+                label: $t('index.7959378f6554b680'),
                 value: ButtonVariantTypes.TERTIARY,
               },
             ],
@@ -338,12 +339,12 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
         ],
       },
       {
-        sectionName: "Icon",
+        sectionName: $t('index.0ece27ab033e5b88'),
         children: [
           {
             propertyName: "iconName",
-            label: "Select icon",
-            helpText: "Sets the icon to be used for the button",
+            label: $t('index.5554dddd31d22855'),
+            helpText: $t('index.73f3893034d57c1b'),
             controlType: "ICON_SELECT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -371,8 +372,8 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
           },
           {
             propertyName: "iconAlign",
-            label: "Position",
-            helpText: "Sets the icon alignment of the button",
+            label: $t('index.90cba3c0217a79eb'),
+            helpText: $t('index.9d5e9c8d8b4922ac'),
             controlType: "ICON_TABS",
             defaultValue: "left",
             fullWidth: false,
@@ -397,21 +398,21 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
           },
           {
             propertyName: "placement",
-            label: "Placement",
+            label: $t('index.058314430f2f572b'),
             controlType: "ICON_TABS",
             fullWidth: true,
-            helpText: "Sets the space between items",
+            helpText: $t('index.31ccfead2451a666'),
             options: [
               {
-                label: "Start",
+                label: $t('index.9ef4dd32ac5ff287'),
                 value: ButtonPlacementTypes.START,
               },
               {
-                label: "Between",
+                label: $t('index.7b2df661607d9692'),
                 value: ButtonPlacementTypes.BETWEEN,
               },
               {
-                label: "Center",
+                label: $t('index.9eb6a649bedf113c'),
                 value: ButtonPlacementTypes.CENTER,
               },
             ],
@@ -434,12 +435,12 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.04ebc367a8f4faaa'),
         children: [
           {
             propertyName: "buttonColor",
-            helpText: "Changes the color of the button",
-            label: "Button color",
+            helpText: $t('index.eb82d11f0c5121f7'),
+            label: $t('index.cc2ad0b56394b7f0'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -449,13 +450,13 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.35f66a39a47d31c7'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.1c2b139464f43148'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.d3fdb1eec46f30ee'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isBindProperty: true,
             isJSConvertible: true,
@@ -466,9 +467,9 @@ class ButtonWidget extends BaseWidget<ButtonWidgetProps, ButtonWidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.544cf733266c9d17'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.b26ad5f8769d1577'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

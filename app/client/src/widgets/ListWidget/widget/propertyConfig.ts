@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get } from "lodash";
 import type { WidgetProps } from "widgets/BaseWidget";
 import type { ListWidgetProps } from "../constants";
@@ -8,14 +9,14 @@ import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
 import { EVAL_VALUE_PATH } from "utils/DynamicBindingUtils";
 export const PropertyPaneContentConfig = [
   {
-    sectionName: "Data",
+    sectionName: $t('propertyConfig.1ec7b6bf5af8b025'),
     children: [
       {
-        helpText: "Takes in an array of objects to display items in the list.",
+        helpText: $t('propertyConfig.072339a97e21447f'),
         propertyName: "listData",
-        label: "Items",
+        label: $t('propertyConfig.9db45760671631fd'),
         controlType: "INPUT_TEXT",
-        placeholderText: '[{ "name": "John" }]',
+        placeholderText: '[{ "name": $t('propertyConfig.9d38471c8641e1d5') }]',
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -25,19 +26,19 @@ export const PropertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Pagination",
+    sectionName: $t('propertyConfig.5b1eb715c000146d'),
     children: [
       {
         helpText:
-          "Bind the List.pageNo property in your API and call it onPageChange",
+          $t('propertyConfig.3c64b1e6a813fbea'),
         propertyName: "serverSidePaginationEnabled",
-        label: "Server side pagination",
+        label: $t('propertyConfig.101ea126c9e5c0b8'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
       },
       {
-        helpText: "when a list page is changed",
+        helpText: $t('propertyConfig.c46a5bb389363d46'),
         propertyName: "onPageChange",
         label: "onPageChange",
         controlType: "ACTION_SELECTOR",
@@ -49,7 +50,7 @@ export const PropertyPaneContentConfig = [
         dependencies: ["serverSidePaginationEnabled"],
       },
       {
-        helpText: "when a list page size is changed",
+        helpText: $t('propertyConfig.1324799087d11ec5'),
         propertyName: "onPageSizeChange",
         label: "onPageSizeChange",
         controlType: "ACTION_SELECTOR",
@@ -63,12 +64,12 @@ export const PropertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('propertyConfig.6c800bb701698adc'),
     children: [
       {
         propertyName: "isVisible",
-        label: "Visible",
-        helpText: "Controls the visibility of the widget",
+        label: $t('propertyConfig.25de00d3caf8846b'),
+        helpText: $t('propertyConfig.06fe955c35835d2a'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -79,9 +80,9 @@ export const PropertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('propertyConfig.8b4af8912d0645bd'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('propertyConfig.9c2c15d92688595f'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -91,10 +92,10 @@ export const PropertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('propertyConfig.bb5495ab06667f34'),
     children: [
       {
-        helpText: "when a grid list item is clicked",
+        helpText: $t('propertyConfig.032d0d7e60fe8ec1'),
         propertyName: "onListItemClick",
         label: "onListItemClick",
         controlType: "ACTION_SELECTOR",
@@ -127,13 +128,13 @@ export const PropertyPaneContentConfig = [
 
 export const PropertyPaneStyleConfig = [
   {
-    sectionName: "General",
+    sectionName: $t('propertyConfig.6c800bb701698adc'),
     children: [
       {
-        helpText: "Spacing between items in Pixels",
+        helpText: $t('propertyConfig.5db8c5164211a78f'),
         placeholderText: "0",
         propertyName: "gridGap",
-        label: "Item Spacing (px)",
+        label: $t('propertyConfig.c760a8a492c3c602'),
         controlType: "INPUT_TEXT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -143,12 +144,12 @@ export const PropertyPaneStyleConfig = [
     ],
   },
   {
-    sectionName: "Color",
+    sectionName: $t('propertyConfig.3e933f9cb28a051a'),
     children: [
       {
         propertyName: "itemBackgroundColor",
-        label: "Item Background color",
-        helpText: "Background color of the list item",
+        label: $t('propertyConfig.f75b897b73aaebdf'),
+        helpText: $t('propertyConfig.64b8a79b0ed876a3'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -167,8 +168,8 @@ export const PropertyPaneStyleConfig = [
       },
       {
         propertyName: "backgroundColor",
-        label: "Background color",
-        helpText: "Background color of the list container",
+        label: $t('propertyConfig.193a3ddb323c0e87'),
+        helpText: $t('propertyConfig.2f7573331227c1d7'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -187,12 +188,12 @@ export const PropertyPaneStyleConfig = [
     ],
   },
   {
-    sectionName: "Border and shadow",
+    sectionName: $t('propertyConfig.331dd778874949e2'),
     children: [
       {
         propertyName: "borderRadius",
-        label: "Border radius",
-        helpText: "Rounds the corners of the icon button's outer border edge",
+        label: $t('propertyConfig.0eb48790c9a33e52'),
+        helpText: $t('propertyConfig.71fc9a173f055d9d'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -201,9 +202,9 @@ export const PropertyPaneStyleConfig = [
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
+        label: $t('propertyConfig.864b8dbd48fda82d'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('propertyConfig.15b226a4bac68e8f'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,

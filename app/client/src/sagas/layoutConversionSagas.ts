@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { setLayoutConversionStateAction } from "actions/autoLayoutActions";
 import { ReduxActionTypes } from "ee/constants/ReduxActionConstants";
 import type { Page } from "entities/Page";
@@ -96,7 +97,7 @@ function* convertFromAutoToFixedSaga(action: ReduxAction<SupportedLayouts>) {
     let error: Error = e;
 
     if (error) {
-      error.message = `Layout conversion error - while converting from auto-layout to fixed layout: ${error.message}`;
+      error.message = $t('layoutConversionSagas.20d5200ecd673235', {error_message: error.message});
     } else {
       error = new Error(
         "Layout conversion error - while converting from auto-layout to fixed layout",
@@ -182,7 +183,7 @@ function* convertFromFixedToAutoSaga() {
     let error: Error = e;
 
     if (error) {
-      error.message = `Layout conversion error - while converting from fixed layout to auto-layout: ${error.message}`;
+      error.message = $t('layoutConversionSagas.fe8f7baf3a3253ea', {error_message: error.message});
     } else {
       error = new Error(
         "Layout conversion error - while converting from fixed layout to auto-layout",

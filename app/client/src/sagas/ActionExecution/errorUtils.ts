@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   createMessage,
   TRIGGER_ACTION_VALIDATION_ERROR,
@@ -109,7 +110,7 @@ export class PluginActionExecutionError extends Error {
  */
 export class UserCancelledActionExecutionError extends PluginActionExecutionError {
   constructor() {
-    super("User cancelled action execution", true);
+    super($t('errorUtils.8883fac23c882177'), true);
     this.name = "UserCancelledActionExecutionError";
   }
 }

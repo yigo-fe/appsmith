@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { PrivateWidgets } from "ee/entities/DataTree/types";
 import { getAssetUrl } from "ee/utils/airgapHelpers";
 import type {
@@ -90,7 +91,7 @@ class ListWidget extends BaseWidget<ListWidgetProps<WidgetProps>, WidgetState> {
 
   static getConfig() {
     return {
-      name: "List",
+      name: $t('index.1cf267fef2be61ba'),
       iconSVG: IconSVG,
       needsMeta: true,
       isCanvas: true,
@@ -178,21 +179,21 @@ class ListWidget extends BaseWidget<ListWidgetProps<WidgetProps>, WidgetState> {
       listData: [
         {
           id: "001",
-          name: "Blue",
+          name: $t('index.c26b32c3a63961f2'),
           img: getAssetUrl(`${ASSETS_CDN_URL}/widgets/default.png`),
         },
         {
           id: "002",
-          name: "Green",
+          name: $t('index.bd8f8a20292c21e5'),
           img: getAssetUrl(`${ASSETS_CDN_URL}/widgets/default.png`),
         },
         {
           id: "003",
-          name: "Red",
+          name: $t('index.d13bed8c0e5f50b1'),
           img: getAssetUrl(`${ASSETS_CDN_URL}/widgets/default.png`),
         },
       ],
-      widgetName: "List",
+      widgetName: $t('index.1cf267fef2be61ba'),
       children: [],
       blueprint: {
         view: [
@@ -491,7 +492,7 @@ class ListWidget extends BaseWidget<ListWidgetProps<WidgetProps>, WidgetState> {
 
                 return {
                   widgets,
-                  message: `This widget cannot be used inside the list widget.`,
+                  message: $t('index.f3b65190e34270d1'),
                 };
               }
 
@@ -570,7 +571,7 @@ class ListWidget extends BaseWidget<ListWidgetProps<WidgetProps>, WidgetState> {
       extraDefsToDefine?: ExtraDef,
     ) => ({
       "!doc":
-        "Containers are used to group widgets together to form logical higher order widgets. Containers let you organize your page better and move all the widgets inside them together.",
+        $t('index.b6ad123e0405d955'),
       "!url": "https://docs.appsmith.com/widget-reference/list",
       backgroundColor: {
         "!type": "string",

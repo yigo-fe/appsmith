@@ -1,14 +1,15 @@
+import {$t} from "locale/index";
 import { ICONS } from "@appsmith/wds";
 import { ValidationTypes } from "constants/WidgetValidation";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Basic",
+    sectionName: $t('contentConfig.c892f7df776b2cb0'),
     children: [
       {
         propertyName: "iconName",
-        label: "Icon",
-        helpText: "Sets the icon to be used for the icon button",
+        label: $t('contentConfig.0ef27d8c0843f3ee'),
+        helpText: $t('contentConfig.dbd02741fd151499'),
         controlType: "ICON_SELECT_V2",
         defaultIconName: "plus",
         hideNoneIcon: true,
@@ -24,7 +25,7 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "when the button is clicked",
+        helpText: $t('contentConfig.ad859263f4bea283'),
         propertyName: "onClick",
         label: "onClick",
         controlType: "ACTION_SELECTOR",
@@ -35,22 +36,22 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.ec0c9711f7802780'),
     children: [
       {
-        helpText: "Show helper text with button on hover",
+        helpText: $t('contentConfig.88e7b8563c396363'),
         propertyName: "tooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.12f032b110f08097'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Add new item",
+        placeholderText: $t('contentConfig.cdad260019b4e24b'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
         propertyName: "isVisible",
-        helpText: "Controls the visibility of the widget",
-        label: "Visible",
+        helpText: $t('contentConfig.f95e55bb3b200e7b'),
+        label: $t('contentConfig.4f80a804814cfab9'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -59,8 +60,8 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "isDisabled",
-        helpText: "Disables input to the widget",
-        label: "Disabled",
+        helpText: $t('contentConfig.e4e6ab97a49bf9ec'),
+        label: $t('contentConfig.82e677f0af1e10ed'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -69,9 +70,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.9b9dc6cbdae98953'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.08565b63ad2777c2'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,

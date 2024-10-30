@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get } from "lodash";
 
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -9,9 +10,9 @@ import { getStylesheetValue } from "../helper";
 const objectStyleProperties = [
   {
     propertyName: "backgroundColor",
-    label: "Background color",
+    label: $t('object.964f29c75472086c'),
     controlType: "COLOR_PICKER",
-    helpText: "Changes the background color",
+    helpText: $t('object.5b8d4b8e1bcf7a5f'),
     isJSConvertible: true,
     isBindProperty: true,
     isTriggerProperty: false,
@@ -26,8 +27,8 @@ const objectStyleProperties = [
   },
   {
     propertyName: "borderColor",
-    label: "Border color",
-    helpText: "Changes the border color of Object",
+    label: $t('object.7ce1a98ec60a3be8'),
+    helpText: $t('object.19806ec11b7e95d3'),
     controlType: "COLOR_PICKER",
     isJSConvertible: true,
     isBindProperty: true,
@@ -43,9 +44,9 @@ const objectStyleProperties = [
   },
   {
     propertyName: "borderWidth",
-    helpText: "Enter value for border width",
-    label: "Border width",
-    placeholderText: "Enter value in px",
+    helpText: $t('object.35a2e8ce9b731a30'),
+    label: $t('object.55cbeae7fcd65207'),
+    placeholderText: $t('object.b374919af0ec13de'),
     controlType: "INPUT_TEXT",
     isBindProperty: true,
     isTriggerProperty: false,
@@ -53,8 +54,8 @@ const objectStyleProperties = [
   },
   {
     propertyName: "borderRadius",
-    label: "Border radius",
-    helpText: "Rounds the corners of the icon button's outer border edge",
+    label: $t('object.609baa113e141917'),
+    helpText: $t('object.c5c273c281dce734'),
     controlType: "BORDER_RADIUS_OPTIONS",
     customJSControl: "JSON_FORM_COMPUTE_VALUE",
     isJSConvertible: true,
@@ -66,8 +67,8 @@ const objectStyleProperties = [
   },
   {
     propertyName: "boxShadow",
-    label: "Box shadow",
-    helpText: "Enables you to cast a drop shadow from the frame of the widget",
+    label: $t('object.6283e2fdc96dbeaf'),
+    helpText: $t('object.1d82169262ac5d34'),
     controlType: "BOX_SHADOW_OPTIONS",
     customJSControl: "JSON_FORM_COMPUTE_VALUE",
     isJSConvertible: true,
@@ -83,7 +84,7 @@ const PROPERTIES = {
   style: {
     root: [
       {
-        sectionName: "Object Styles",
+        sectionName: $t('object.7c33775b84472cb4'),
         children: objectStyleProperties,
         hidden: (props: JSONFormWidgetProps, propertyPath: string) => {
           const schemaItem: SchemaItem = get(props, propertyPath, {});
@@ -95,13 +96,13 @@ const PROPERTIES = {
         },
       },
       {
-        sectionName: "Item Styles",
+        sectionName: $t('object.1d9ffe3b813c1872'),
         children: [
           {
             propertyName: "cellBackgroundColor",
-            label: "Background color",
+            label: $t('object.964f29c75472086c'),
             controlType: "COLOR_PICKER",
-            helpText: "Changes the background color of the item",
+            helpText: $t('object.f9abc147fdd6e36c'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -116,8 +117,8 @@ const PROPERTIES = {
           },
           {
             propertyName: "cellBorderColor",
-            label: "Border color",
-            helpText: "Changes the border color of the item",
+            label: $t('object.7ce1a98ec60a3be8'),
+            helpText: $t('object.d132f72c43fff065'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -133,9 +134,9 @@ const PROPERTIES = {
           },
           {
             propertyName: "cellBorderWidth",
-            helpText: "Enter value for border width of the item",
-            label: "Border width",
-            placeholderText: "Enter value in px",
+            helpText: $t('object.d2cc58a90889ca9a'),
+            label: $t('object.55cbeae7fcd65207'),
+            placeholderText: $t('object.b374919af0ec13de'),
             controlType: "INPUT_TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
@@ -143,9 +144,9 @@ const PROPERTIES = {
           },
           {
             propertyName: "cellBorderRadius",
-            label: "Border radius",
+            label: $t('object.609baa113e141917'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('object.c5c273c281dce734'),
             controlType: "BORDER_RADIUS_OPTIONS",
             customJSControl: "JSON_FORM_COMPUTE_VALUE",
             isJSConvertible: true,
@@ -157,9 +158,9 @@ const PROPERTIES = {
           },
           {
             propertyName: "cellBoxShadow",
-            label: "Box shadow",
+            label: $t('object.6283e2fdc96dbeaf'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('object.1d82169262ac5d34'),
             controlType: "BOX_SHADOW_OPTIONS",
             customJSControl: "JSON_FORM_COMPUTE_VALUE",
             isJSConvertible: true,
@@ -184,7 +185,7 @@ const PROPERTIES = {
          * This is for an edge case where an array item is an object
          * Here we only want to change the cell** styles
          */
-        sectionName: "Styles",
+        sectionName: $t('object.8218efeec998849a'),
         children: objectStyleProperties,
         hidden: (props: JSONFormWidgetProps, propertyPath: string) => {
           const schemaItem: SchemaItem = get(props, propertyPath, {});

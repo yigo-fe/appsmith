@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IconWrapper } from "constants/IconConstants";
@@ -127,7 +128,7 @@ function TableFilters(props: TableFilterProps) {
         }
         selectMenu={toggleFilterPane}
         selected={isTableFilterPaneVisible}
-        title={`Filters${hasAnyFilters ? ` (${filters.length})` : ""}`}
+        title={$t('TableFilters.52344711a218450b', {}) (${filters.length})` : ""}`}
         titleColor={hasAnyFilters ? Colors.CODE_GRAY : Colors.GRAY}
       >
         <FilterIcon />

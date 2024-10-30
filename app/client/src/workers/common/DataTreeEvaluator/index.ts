@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type {
   DataTreeEvaluationProps,
   EvalError as TEvalError,
@@ -1392,7 +1393,7 @@ export default class DataTreeEvaluator {
 
       this.errors.push({
         type: EvalErrorTypes.CYCLICAL_DEPENDENCY_ERROR,
-        message: "Cyclic dependency found while evaluating.",
+        message: $t('index.abb76e1ff368b9f2'),
         context: {
           node,
           entityType,

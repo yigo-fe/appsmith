@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 
 import { isReadOnlyUpdateHook } from "../helpers";
@@ -5,14 +6,14 @@ import type { BaseInputWidgetProps } from "../widget/types";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.a104d842c2c86097'),
     children: [
       {
-        helpText: "Sets the label text of the widget",
+        helpText: $t('contentConfig.41fda92eee35d363'),
         propertyName: "label",
-        label: "Text",
+        label: $t('contentConfig.910bd1357a5c345a'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Label",
+        placeholderText: $t('contentConfig.a104d842c2c86097'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -20,13 +21,13 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Validation",
+    sectionName: $t('contentConfig.73ae6e8af233868c'),
     children: [
       {
         helpText:
-          "Adds a validation to the input which displays an error on failure",
+          $t('contentConfig.905f3d6d174e2b85'),
         propertyName: "regex",
-        label: "Regex",
+        label: $t('contentConfig.c27f7108fa2c80b6'),
         controlType: "INPUT_TEXT",
         placeholderText: "^\\w+@[a-zA-Z_]$",
         isBindProperty: true,
@@ -34,9 +35,9 @@ export const propertyPaneContentConfig = [
         validation: { type: ValidationTypes.REGEX },
       },
       {
-        helpText: "Sets the input validity based on a JS expression",
+        helpText: $t('contentConfig.d1198aada5418387'),
         propertyName: "validation",
-        label: "Valid",
+        label: $t('contentConfig.75abd450e061f65b'),
         controlType: "INPUT_TEXT",
         placeholderText: "{{ Input1.isValid }}",
         isBindProperty: true,
@@ -50,11 +51,11 @@ export const propertyPaneContentConfig = [
       },
       {
         helpText:
-          "The error message to display if the regex or valid property check fails",
+          $t('contentConfig.dfc4845ee9bb4923'),
         propertyName: "errorMessage",
-        label: "Error message",
+        label: $t('contentConfig.6fa71f8974c08a7d'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Not a valid value!",
+        placeholderText: $t('contentConfig.d21efaad42b885eb'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -62,14 +63,14 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.7a1243c1e36d557a'),
     children: [
       {
-        helpText: "Show help text or details about current input",
+        helpText: $t('contentConfig.59b2f91ca6fb4163'),
         propertyName: "tooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.a558addb45140570'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Tooltips show contextual help",
+        placeholderText: $t('contentConfig.cbc11ecf5e9440e5'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -78,11 +79,11 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "Sets a placeholder text for the input",
+        helpText: $t('contentConfig.47374b78328d097b'),
         propertyName: "placeholderText",
-        label: "Placeholder",
+        label: $t('contentConfig.f5ac6aa1ac5287c7'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Value placeholder",
+        placeholderText: $t('contentConfig.ce50baf0d5aa784b'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -91,9 +92,9 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('contentConfig.df8b538f07db1baf'),
         propertyName: "isVisible",
-        label: "Visible",
+        label: $t('contentConfig.0cafd30801ee3bc7'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -101,9 +102,9 @@ export const propertyPaneContentConfig = [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Disables input to this widget",
+        helpText: $t('contentConfig.ad90691cdc7bca62'),
         propertyName: "isDisabled",
-        label: "Disabled",
+        label: $t('contentConfig.b455fb41c8b43ed8'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -115,9 +116,9 @@ export const propertyPaneContentConfig = [
       },
       {
         helpText:
-          "Whether the input can be selected but not changed by the user. Readonly has a higher priority than disabled.",
+          $t('contentConfig.03f71b69ac917db0'),
         propertyName: "isReadOnly",
-        label: "Readonly",
+        label: $t('contentConfig.7be93588ee2bb987'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -128,9 +129,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.a608df2519104f9f'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.636c5021313c113e'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -138,9 +139,9 @@ export const propertyPaneContentConfig = [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Focus input automatically on load",
+        helpText: $t('contentConfig.435fa4087cc89125'),
         propertyName: "autoFocus",
-        label: "Auto focus",
+        label: $t('contentConfig.c972ddb184c438f0'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -152,8 +153,8 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "allowFormatting",
-        label: "Enable formatting",
-        helpText: "Formats the phone number as per the country selected",
+        label: $t('contentConfig.b8b3555f757a1c36'),
+        helpText: $t('contentConfig.c597f889bcb631a0'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -166,13 +167,13 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.a273f3674f0cc0dd'),
     hidden: (props: BaseInputWidgetProps) => {
       return Boolean(props.isReadOnly);
     },
     children: [
       {
-        helpText: "when the text is changed",
+        helpText: $t('contentConfig.959de05b9b258d0a'),
         propertyName: "onTextChanged",
         label: "onTextChanged",
         controlType: "ACTION_SELECTOR",
@@ -181,7 +182,7 @@ export const propertyPaneContentConfig = [
         isTriggerProperty: true,
       },
       {
-        helpText: "when the input field receives focus",
+        helpText: $t('contentConfig.3a5c34d2de004532'),
         propertyName: "onFocus",
         label: "onFocus",
         controlType: "ACTION_SELECTOR",
@@ -190,7 +191,7 @@ export const propertyPaneContentConfig = [
         isTriggerProperty: true,
       },
       {
-        helpText: "when the input field loses focus",
+        helpText: $t('contentConfig.d02e2928817b82a2'),
         propertyName: "onBlur",
         label: "onBlur",
         controlType: "ACTION_SELECTOR",
@@ -208,9 +209,9 @@ export const propertyPaneContentConfig = [
         isTriggerProperty: true,
       },
       {
-        helpText: "Clears the input value after submit",
+        helpText: $t('contentConfig.e8f948b3721ec797'),
         propertyName: "resetOnSubmit",
-        label: "Reset on submit",
+        label: $t('contentConfig.29fc83c03bd301bd'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { CUSTOM_WIDGET_ONREADY_DOC_URL } from "pages/Editor/CustomWidgetBuilder/constants";
 
 export default {
@@ -71,14 +72,14 @@ function App() {
 		<Card className="app">
 			<div className="tip-container">
 				<div className="tip-header">
-					<h2>Custom Widget</h2>
+					<h2>{$t('defaultApp.357b379c37a4671b')}</h2>
 					<div>{currentIndex + 1} / {appsmith.model.tips.length}		</div>
 				</div>
 				<Markdown>{appsmith.model.tips[currentIndex]}</Markdown>
 			</div>
 			<div className="button-container">
-				<Button className="primary" onClick={handleNext} type="primary">Next Tip</Button>
-				<Button className="reset" disabled={currentIndex === 0} onClick={handleReset}>Reset</Button>
+				<Button className="primary" onClick={handleNext} type="primary">{$t('defaultApp.e95a0f9e89ef208b')}</Button>
+				<Button className="reset" disabled={currentIndex === 0} onClick={handleReset}>{$t('defaultApp.cfd8478fc23ca547')}</Button>
 			</div>
 	</Card>
 );
@@ -161,17 +162,17 @@ function App() {
     className: "tip-container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "tip-header"
-  }, /*#__PURE__*/React.createElement("h2", null, "Custom Widget"), /*#__PURE__*/React.createElement("div", null, currentIndex + 1, " / ", appsmith.model.tips.length, "  ")), /*#__PURE__*/React.createElement(Markdown, null, appsmith.model.tips[currentIndex])), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h2", null, $t('defaultApp.357b379c37a4671b')), /*#__PURE__*/React.createElement("div", null, currentIndex + 1, " / ", appsmith.model.tips.length, "  ")), /*#__PURE__*/React.createElement(Markdown, null, appsmith.model.tips[currentIndex])), /*#__PURE__*/React.createElement("div", {
     className: "button-container"
   }, /*#__PURE__*/React.createElement(Button, {
     className: "primary",
     onClick: handleNext,
     type: "primary"
-  }, "Next Tip"), /*#__PURE__*/React.createElement(Button, {
+  }, $t('defaultApp.e95a0f9e89ef208b')), /*#__PURE__*/React.createElement(Button, {
 	className: "reset",
 	disabled: currentIndex === 0,
     onClick: handleReset
-  }, "Reset")));
+  }, $t('defaultApp.cfd8478fc23ca547'))));
 }
 appsmith.onReady(() => {
   reactDom.render( /*#__PURE__*/React.createElement(App, null), document.getElementById("root"));

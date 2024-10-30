@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { WDSBaseInputWidget } from "modules/ui-builder/ui/wds/WDSBaseInputWidget";
 import { ResponsiveBehavior } from "layoutSystems/common/utils/constants";
 import type { WidgetDefaultProps } from "WidgetProvider/constants";
@@ -12,5 +13,5 @@ export const defaultsConfig = {
   allowDialCodeChange: false,
   allowFormatting: true,
   responsiveBehavior: ResponsiveBehavior.Fill,
-  label: "Phone number",
+  label: $t('defaultsConfig.bd5e5e2422a33daa'),
 } as WidgetDefaultProps;

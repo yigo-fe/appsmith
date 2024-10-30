@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { WidgetState } from "widgets/BaseWidget";
 import BaseWidget from "widgets/BaseWidget";
@@ -30,16 +31,16 @@ class CodeScannerWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Code Scanner",
+      name: $t('index.9ca85844f987084d'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.EXTERNAL],
       needsMeta: true,
       searchTags: [
-        "barcode scanner",
-        "qr scanner",
-        "code detector",
-        "barcode reader",
+        $t('index.4887b77ac38e2faa'),
+        $t('index.9448bfaca8147558'),
+        $t('index.5b7c156ea3b264f3'),
+        $t('index.34d6c80b1b18cf3c'),
       ],
     };
   }
@@ -47,7 +48,7 @@ class CodeScannerWidget extends BaseWidget<
   static getDefaults() {
     return {
       rows: 33,
-      label: "Scan a QR/Barcode",
+      label: $t('index.9c72c534f406ac57'),
       columns: 25,
       widgetName: "CodeScanner",
       isDefaultClickDisabled: true,
@@ -126,7 +127,7 @@ class CodeScannerWidget extends BaseWidget<
 
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
-      "!doc": "Scan a Code",
+      "!doc": $t('index.1f6d2210ed06afd1'),
       "!url": "https://docs.appsmith.com/reference/widgets/code-scanner",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       isDisabled: "bool",

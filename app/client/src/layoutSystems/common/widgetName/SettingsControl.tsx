@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Colors } from "constants/Colors";
 import type { CSSProperties } from "react";
 import React from "react";
@@ -109,7 +110,7 @@ export function SettingsControl(props: SettingsControlProps) {
     <Tooltip
       content={
         <Text color="var(--ads-v2-color-white)">
-          {isSnipingMode ? `Bind to widget ${props.name}` : `Edit widget`}
+          {isSnipingMode ? $t('SettingsControl.462e12946b2e53d5', {props_name: props.name}) : $t('SettingsControl.5186671ffb7dec56')}
         </Text>
       }
       mouseEnterDelay={0}
@@ -132,7 +133,7 @@ export function SettingsControl(props: SettingsControlProps) {
           />
         )}
         <WidgetName className="t--widget-name">
-          {isSnipingMode ? `Bind to ${props.name}` : props.name}
+          {isSnipingMode ? $t('SettingsControl.481bafd3a266883c', {props_name: props.name}) : props.name}
         </WidgetName>
       </SettingsWrapper>
     </Tooltip>

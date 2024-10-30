@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   createMessage,
   TABLE_WIDGET_TOTAL_RECORD_TOOLTIP,
@@ -27,18 +28,18 @@ import Widget from "../index";
 
 export default [
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.9ccfc1c37c7ce79c'),
     children: [
       {
         helpText:
-          "Takes in an array of objects to display rows in the table. Bind data from an API using {{}}",
+          $t('contentConfig.ea5dccc6186d994e'),
         propertyName: "tableData",
-        label: "Table data",
+        label: $t('contentConfig.fd97f353568ae63b'),
         controlType: "ONE_CLICK_BINDING_CONTROL",
         controlConfig: {
           searchableColumn: true,
         },
-        placeholderText: '[{ "name": "John" }]',
+        placeholderText: '[{ "name": $t('contentConfig.e6d48978a218e759') }]',
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -49,7 +50,7 @@ export default [
             fn: tableDataValidation,
             expected: {
               type: "Array",
-              example: `[{ "name": "John" }]`,
+              example: `[{ "name": $t('contentConfig.e6d48978a218e759') }]`,
               autocompleteDataType: AutocompleteDataType.ARRAY,
             },
           },
@@ -64,7 +65,7 @@ export default [
       {
         propertyName: "primaryColumns",
         controlType: "PRIMARY_COLUMNS_V2",
-        label: "Columns",
+        label: $t('contentConfig.240ce484a221b492'),
         updateHook: composePropertyUpdateHook([
           updateColumnOrderHook,
           updateInlineEditingOptionDropdownVisibilityHook,
@@ -99,8 +100,8 @@ export default [
       },
       {
         propertyName: "inlineEditingSaveOption",
-        helpText: "Choose the save experience to save the edited cell",
-        label: "Update mode",
+        helpText: $t('contentConfig.63c15a27592a8177'),
+        label: $t('contentConfig.d652eaef33402171'),
         controlType: "ICON_TABS",
         defaultValue: InlineEditingSaveOptions.ROW_LEVEL,
         fullWidth: true,
@@ -122,11 +123,11 @@ export default [
         ],
         options: [
           {
-            label: "Single Row",
+            label: $t('contentConfig.e00ce22933c43664'),
             value: InlineEditingSaveOptions.ROW_LEVEL,
           },
           {
-            label: "Multi Row",
+            label: $t('contentConfig.19ced2431d0e932a'),
             value: InlineEditingSaveOptions.CUSTOM,
           },
         ],
@@ -134,10 +135,10 @@ export default [
       },
       {
         helpText:
-          "Assigns a unique column which helps maintain selectedRows and triggeredRows based on value",
+          $t('contentConfig.7eda510b7c0191c5'),
         propertyName: "primaryColumnId",
         dependencies: ["primaryColumns"],
-        label: "Primary key column",
+        label: $t('contentConfig.96626e41bee2bfe6'),
         controlType: "PRIMARY_COLUMNS_DROPDOWN",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -152,12 +153,12 @@ export default [
     expandedByDefault: true,
   },
   {
-    sectionName: "Pagination",
+    sectionName: $t('contentConfig.d203f99b9b70bceb'),
     children: [
       {
         propertyName: "isVisiblePagination",
-        helpText: "Toggle visibility of the pagination",
-        label: "Show pagination",
+        helpText: $t('contentConfig.615adb8c37c9245f'),
+        label: $t('contentConfig.be540f6ffd6a39c4'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -166,9 +167,9 @@ export default [
       },
       {
         helpText:
-          "Bind the Table.pageNo property in your API and call it onPageChange",
+          $t('contentConfig.5fb3940cd17f20ab'),
         propertyName: "serverSidePaginationEnabled",
-        label: "Server side pagination",
+        label: $t('contentConfig.44f0e769c3ae2167'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -176,9 +177,9 @@ export default [
       {
         helpText: createMessage(TABLE_WIDGET_TOTAL_RECORD_TOOLTIP),
         propertyName: "totalRecordsCount",
-        label: "Total Records",
+        label: $t('contentConfig.8c070aad8cf3d9fb'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Enter total record count",
+        placeholderText: $t('contentConfig.71efffd3048462be'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: {
@@ -196,7 +197,7 @@ export default [
         dependencies: ["serverSidePaginationEnabled"],
       },
       {
-        helpText: "when a table page is changed",
+        helpText: $t('contentConfig.b94e9fd8193e8514'),
         propertyName: "onPageChange",
         label: "onPageChange",
         controlType: "ACTION_SELECTOR",
@@ -207,7 +208,7 @@ export default [
         dependencies: ["serverSidePaginationEnabled"],
       },
       {
-        helpText: "when a table page size is changed",
+        helpText: $t('contentConfig.c3cb2af57685ebb3'),
         propertyName: "onPageSizeChange",
         label: "onPageSizeChange",
         controlType: "ACTION_SELECTOR",
@@ -221,12 +222,12 @@ export default [
     expandedByDefault: false,
   },
   {
-    sectionName: "Search & filters",
+    sectionName: $t('contentConfig.69cf74198f9c4951'),
     children: [
       {
         propertyName: "isVisibleSearch",
-        helpText: "Toggle visibility of the search box",
-        label: "Allow searching",
+        helpText: $t('contentConfig.c5ea6ed3afa270d6'),
+        label: $t('contentConfig.71a48812501f3f26'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -235,8 +236,8 @@ export default [
       },
       {
         propertyName: "enableClientSideSearch",
-        label: "Client side search",
-        helpText: "Searches all results only on the data which is loaded",
+        label: $t('contentConfig.e6dadce2bd1f727c'),
+        helpText: $t('contentConfig.a26f24a9ba92dc08'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -245,8 +246,8 @@ export default [
       },
       {
         propertyName: "enableServerSideFiltering",
-        label: "Server side filtering",
-        helpText: "Filters all the results on the server side",
+        label: $t('contentConfig.9da42a91bcbd36d2'),
+        helpText: $t('contentConfig.6cb042d6c0bd0025'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -257,7 +258,7 @@ export default [
       {
         propertyName: "onTableFilterUpdate",
         label: "onTableFilterUpdate",
-        helpText: "when table filter is modified by the user",
+        helpText: $t('contentConfig.6f83b904fa6d3579'),
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
         isBindProperty: true,
@@ -267,8 +268,8 @@ export default [
       },
       {
         propertyName: "defaultSearchText",
-        label: "Default search text",
-        helpText: "Adds a search text by default",
+        label: $t('contentConfig.e0d5a6a708859d33'),
+        helpText: $t('contentConfig.9e129931ec09b812'),
         controlType: "INPUT_TEXT",
         placeholderText: "{{appsmith.user.name}}",
         isBindProperty: true,
@@ -280,7 +281,7 @@ export default [
       {
         propertyName: "onSearchTextChanged",
         label: "onSearchTextChanged",
-        helpText: "when search text is modified by the user",
+        helpText: $t('contentConfig.db2cbf4a87512e76'),
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
         isBindProperty: true,
@@ -290,8 +291,8 @@ export default [
       },
       {
         propertyName: "isVisibleFilters",
-        helpText: "Toggle visibility of the filters",
-        label: "Allow filtering",
+        helpText: $t('contentConfig.46353b7714102c6c'),
+        label: $t('contentConfig.5f2b391f14354dc1'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -302,12 +303,12 @@ export default [
     expandedByDefault: false,
   },
   {
-    sectionName: "Row selection",
+    sectionName: $t('contentConfig.bf25a28235e856ce'),
     children: [
       {
-        helpText: "Selects row(s) by default",
+        helpText: $t('contentConfig.03616f2a99cd83f6'),
         propertyName: "defaultSelectedRowIndices",
-        label: "Default selected rows",
+        label: $t('contentConfig.b6b1a19aaf175727'),
         controlType: "INPUT_TEXT",
         placeholderText: "[0]",
         isBindProperty: true,
@@ -330,9 +331,9 @@ export default [
         dependencies: ["multiRowSelection"],
       },
       {
-        helpText: "Selects row by default",
+        helpText: $t('contentConfig.a5fcfbcda297820f'),
         propertyName: "defaultSelectedRowIndex",
-        label: "Default selected row",
+        label: $t('contentConfig.e3e035bc1ad8c781'),
         controlType: "INPUT_TEXT",
         defaultValue: 0,
         isBindProperty: true,
@@ -351,14 +352,14 @@ export default [
       },
       {
         propertyName: "multiRowSelection",
-        label: "Enable multi-row selection",
-        helpText: "Allows users to select multiple rows",
+        label: $t('contentConfig.0f9ba427e6572916'),
+        helpText: $t('contentConfig.4e630100aff10f5a'),
         controlType: "SWITCH",
         isBindProperty: false,
         isTriggerProperty: false,
       },
       {
-        helpText: "when a table row is selected",
+        helpText: $t('contentConfig.3c4511e7ab301449'),
         propertyName: "onRowSelected",
         label: "onRowSelected",
         controlType: "ACTION_SELECTOR",
@@ -370,13 +371,13 @@ export default [
     expandedByDefault: false,
   },
   {
-    sectionName: "Sorting",
+    sectionName: $t('contentConfig.8af11dd0027d869c'),
     children: [
       {
-        helpText: "Controls sorting in View Mode",
+        helpText: $t('contentConfig.badf07db1f15ac54'),
         propertyName: "isSortable",
         isJSConvertible: true,
-        label: "Column sorting",
+        label: $t('contentConfig.f81e9241f061d092'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -388,7 +389,7 @@ export default [
         },
       },
       {
-        helpText: "when a table column is sorted",
+        helpText: $t('contentConfig.eacf5e50a2469492'),
         propertyName: "onSort",
         label: "onSort",
         controlType: "ACTION_SELECTOR",
@@ -402,13 +403,13 @@ export default [
     expandedByDefault: false,
   },
   {
-    sectionName: "Adding a row",
+    sectionName: $t('contentConfig.c810eddf7e591334'),
     children: [
       {
         propertyName: "allowAddNewRow",
-        helpText: "Enables adding a new row",
+        helpText: $t('contentConfig.f3d7eabe30acf0ef'),
         isJSConvertible: true,
-        label: "Allow adding a row",
+        label: $t('contentConfig.322a01c965a3e5fb'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -418,7 +419,7 @@ export default [
       },
       {
         propertyName: "onAddNewRowSave",
-        helpText: "when a add new row save button is clicked",
+        helpText: $t('contentConfig.a99a6b64a03d15c4'),
         label: "onSave",
         controlType: "ACTION_SELECTOR",
         hidden: (props: TableWidgetProps) => {
@@ -446,7 +447,7 @@ export default [
       },
       {
         propertyName: "onAddNewRowDiscard",
-        helpText: "when a add new row discard button is clicked",
+        helpText: $t('contentConfig.7541edde730ddab4'),
         label: "onDiscard",
         controlType: "ACTION_SELECTOR",
         hidden: (props: TableWidgetProps) => {
@@ -459,8 +460,8 @@ export default [
       },
       {
         propertyName: "defaultNewRow",
-        helpText: "Default new row values",
-        label: "Default values",
+        helpText: $t('contentConfig.2a85a2e3c2c83f37'),
+        label: $t('contentConfig.ce8d259d3b88d3d0'),
         controlType: "INPUT_TEXT",
         dependencies: ["allowAddNewRow"],
         hidden: (props: TableWidgetProps) => {
@@ -479,13 +480,13 @@ export default [
     expandedByDefault: false,
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.f9b25cbf6ee525b1'),
     children: [
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('contentConfig.61e3d272fdda0b5a'),
         propertyName: "isVisible",
         isJSConvertible: true,
-        label: "Visible",
+        label: $t('contentConfig.3a64bd86a953b9ff'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -495,9 +496,9 @@ export default [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.a2bd6a9b5f322a53'),
         controlType: "SWITCH",
-        helpText: "Controls the animation loading of the widget",
+        helpText: $t('contentConfig.494572adc37c3a76'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -506,9 +507,9 @@ export default [
       },
       {
         propertyName: "customIsLoading",
-        label: `Custom loading state`,
+        label: $t('contentConfig.ff9b092202c159f7'),
         controlType: "SWITCH",
-        helpText: "Defines a custom value for the loading state",
+        helpText: $t('contentConfig.784f42bfa66adf42'),
         defaultValue: false,
         isBindProperty: true,
         isTriggerProperty: false,
@@ -517,7 +518,7 @@ export default [
       },
       {
         propertyName: "customIsLoadingValue",
-        label: "isLoading value",
+        label: $t('contentConfig.957bdd94b158bde2'),
         controlType: "INPUT_TEXT",
         defaultValue: "",
         isBindProperty: true,
@@ -528,8 +529,8 @@ export default [
       },
       {
         propertyName: "isVisibleDownload",
-        helpText: "Toggle visibility of the data download",
-        label: "Allow download",
+        helpText: $t('contentConfig.5d17d5b089680f0f'),
+        label: $t('contentConfig.3ced1ad601645bfd'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -538,8 +539,8 @@ export default [
       },
       {
         propertyName: "canFreezeColumn",
-        helpText: "Controls whether the user can freeze columns",
-        label: "Allow column freeze",
+        helpText: $t('contentConfig.5707018c02bee944'),
+        label: $t('contentConfig.9137e38830e58efa'),
         controlType: "SWITCH",
         defaultValue: true,
         isJSConvertible: true,
@@ -549,10 +550,10 @@ export default [
       },
       {
         propertyName: "delimiter",
-        label: "CSV separator",
+        label: $t('contentConfig.f66afd359d767102'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Enter CSV separator",
-        helpText: "The character used for separating the CSV download file.",
+        placeholderText: $t('contentConfig.99c3bd40d7afa023'),
+        helpText: $t('contentConfig.f74770eda5cd046b'),
         isBindProperty: true,
         isTriggerProperty: false,
         defaultValue: ",",

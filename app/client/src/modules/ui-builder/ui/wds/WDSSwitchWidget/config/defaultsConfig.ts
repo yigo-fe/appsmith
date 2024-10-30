@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { ResponsiveBehavior } from "layoutSystems/common/utils/constants";
 import type { WidgetDefaultProps } from "WidgetProvider/constants";
 
 export const defaultsConfig = {
-  label: "Label",
+  label: $t('defaultsConfig.fa76f8f16eb96cb3'),
   defaultSwitchState: true,
   widgetName: "Switch",
   labelPosition: "start",

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { getFetchedWorkspaces } from "ee/selectors/workspaceSelectors";
@@ -130,7 +131,7 @@ export default function Settings() {
         <StyledStickyHeader isMobile={isMobile}>
           <BackButton />
           <SettingsPageHeader
-            buttonText="Add users"
+            buttonText=$t('settings.1c3361c6f4af0a2f')
             onButtonClick={onButtonClick}
             onSearch={onSearch}
             pageMenuItems={pageMenuItems}

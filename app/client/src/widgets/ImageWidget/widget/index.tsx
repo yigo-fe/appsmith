@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { RenderModes } from "constants/WidgetConstants";
 import * as React from "react";
 import type { WidgetProps, WidgetState } from "widgets/BaseWidget";
@@ -30,7 +31,7 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Image",
+      name: $t('index.1bd07bd5564fb05d'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.MEDIA],
@@ -48,7 +49,7 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
       image: "",
       rows: 12,
       columns: 12,
-      widgetName: "Image",
+      widgetName: $t('index.1bd07bd5564fb05d'),
       version: 1,
       animateLoading: true,
       flexVerticalAlignment: FlexVerticalAlignment.Top,
@@ -111,24 +112,24 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.c1b70c17f26d9d45'),
         children: [
           {
-            helpText: "Sets the image to be displayed",
+            helpText: $t('index.10ecdece85e30b27'),
             propertyName: "image",
-            label: "Image",
+            label: $t('index.1bd07bd5564fb05d'),
             controlType: "INPUT_TEXT",
-            placeholderText: "URL / Base64",
+            placeholderText: $t('index.19fd752a9baee077'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.IMAGE_URL },
           },
           {
-            helpText: "Sets the default image to be displayed when load fails",
+            helpText: $t('index.1d7be3310138e36b'),
             propertyName: "defaultImage",
-            label: "Default image",
+            label: $t('index.7610addcb8efa929'),
             controlType: "INPUT_TEXT",
-            placeholderText: "URL / Base64",
+            placeholderText: $t('index.19fd752a9baee077'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.IMAGE_URL },
@@ -136,26 +137,26 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.3ed7002d83889844'),
         children: [
           {
             helpText:
-              "Sets how the Image should be resized to fit its container.",
+              $t('index.cd0bd90a0ba613fa'),
             propertyName: "objectFit",
-            label: "Object fit",
+            label: $t('index.679e74d18763d583'),
             controlType: "DROP_DOWN",
             defaultValue: "contain",
             options: [
               {
-                label: "Contain",
+                label: $t('index.a3c26ec70ae3bdcd'),
                 value: "contain",
               },
               {
-                label: "Cover",
+                label: $t('index.1b50827ce91ac5c0'),
                 value: "cover",
               },
               {
-                label: "Auto",
+                label: $t('index.8a4e02b682f62761'),
                 value: "auto",
               },
             ],
@@ -170,9 +171,9 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
             },
           },
           {
-            helpText: "Controls the max zoom of the widget",
+            helpText: $t('index.a0444827e676ac16'),
             propertyName: "maxZoomLevel",
-            label: "Max zoom level",
+            label: $t('index.a16f4b792b473425'),
             controlType: "DROP_DOWN",
             options: [
               {
@@ -205,9 +206,9 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
             },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.3935eeab69d6d67d'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.2de0d156fef98ee5'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -216,9 +217,9 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.11fe5df6726188bd'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.bb26e6401e8ba0ec'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -226,9 +227,9 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls if the image is allowed to rotate",
+            helpText: $t('index.34126cc73f0574a5'),
             propertyName: "enableRotation",
-            label: "Enable rotation",
+            label: $t('index.a2c4126b7974a967'),
             controlType: "SWITCH",
             isJSConvertible: false,
             isBindProperty: true,
@@ -236,9 +237,9 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls if the image is allowed to download",
+            helpText: $t('index.f070cd06b5740a50'),
             propertyName: "enableDownload",
-            label: "Enable download",
+            label: $t('index.7d4f9cacee2c0b17'),
             controlType: "SWITCH",
             isJSConvertible: false,
             isBindProperty: true,
@@ -248,10 +249,10 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.b88fcc62a36278a9'),
         children: [
           {
-            helpText: "when user clicks on an image",
+            helpText: $t('index.3889ee531b85ee47'),
             propertyName: "onClick",
             label: "onClick",
             controlType: "ACTION_SELECTOR",
@@ -267,13 +268,13 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.08c7db44205802cf'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.553855fd6b2ee013'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.4f4229aec1bac859'),
             controlType: "BORDER_RADIUS_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,
@@ -282,9 +283,9 @@ class ImageWidget extends BaseWidget<ImageWidgetProps, WidgetState> {
           },
           {
             propertyName: "boxShadow",
-            label: "Box shadow",
+            label: $t('index.d11332a8ed3749ef'),
             helpText:
-              "Enables you to cast a drop shadow from the frame of the widget",
+              $t('index.d2186bec8bb6ec85'),
             controlType: "BOX_SHADOW_OPTIONS",
             isJSConvertible: true,
             isBindProperty: true,

@@ -1,8 +1,9 @@
+import {$t} from "locale/index";
 import { DefaultAutocompleteDefinitions } from "widgets/WidgetUtils";
 
 export const autocompleteConfig = {
   "!doc":
-    "Switch group widget allows users to create many switch components which can easily by used in a form",
+    $t('autocompleteConfig.ce28b27b6654809f'),
   "!url": "https://docs.appsmith.com/widget-reference/switch-group",
   isVisible: DefaultAutocompleteDefinitions.isVisible,
   isDisabled: "bool",

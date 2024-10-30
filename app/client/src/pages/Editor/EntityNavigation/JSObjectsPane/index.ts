@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { getCurrentBasePageId } from "selectors/editorSelectors";
 import PaneNavigation from "../PaneNavigation";
 import type { JSCollection } from "entities/JSCollection";
@@ -36,7 +37,7 @@ export default class JSObjectsPaneNavigation extends PaneNavigation {
     );
 
     if (!jsCollection)
-      throw Error(`Couldn't find jsCollection with id: ${this.entityInfo.id}`);
+      throw Error($t('index.465ac64be908105b', {this_entityInfo_id: this.entityInfo.id}));
 
     this.jsCollection = jsCollection;
   }

@@ -1,14 +1,15 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { updateColumnStyles } from "../propertyUtils";
 
 export default [
   {
-    sectionName: "General",
+    sectionName: $t('styleConfig.ea011e31a9b1d4f8'),
     children: [
       {
         propertyName: "compactMode",
-        helpText: "Selects row height",
-        label: "Default row height",
+        helpText: $t('styleConfig.4cc9fbb697939a62'),
+        label: $t('styleConfig.3e1cc1a3d0afce22'),
         controlType: "ICON_TABS",
         fullWidth: true,
         defaultValue: "DEFAULT",
@@ -16,11 +17,11 @@ export default [
         isTriggerProperty: false,
         options: [
           {
-            label: "Short",
+            label: $t('styleConfig.d9fdffb703b4ec28'),
             value: "SHORT",
           },
           {
-            label: "Default",
+            label: $t('styleConfig.ff166617e73f81b7'),
             value: "DEFAULT",
           },
           {
@@ -32,12 +33,12 @@ export default [
     ],
   },
   {
-    sectionName: "Text formatting",
+    sectionName: $t('styleConfig.5790c761d806da34'),
     children: [
       {
         propertyName: "textSize",
-        label: "Text size",
-        helpText: "Controls the size of text in the column",
+        label: $t('styleConfig.da27f9a488011210'),
+        helpText: $t('styleConfig.a8f3074789e718d8'),
         controlType: "DROP_DOWN",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns"],
@@ -70,8 +71,8 @@ export default [
       },
       {
         propertyName: "fontStyle",
-        label: "Emphasis",
-        helpText: "Controls the style of the text in the column",
+        label: $t('styleConfig.367f151724282123'),
+        helpText: $t('styleConfig.5fb1db95c54933ba'),
         controlType: "BUTTON_GROUP",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns"],
@@ -92,8 +93,8 @@ export default [
       },
       {
         propertyName: "horizontalAlignment",
-        label: "Text align",
-        helpText: "Sets the horizontal alignment of the content in the column",
+        label: $t('styleConfig.3e311c3825489bad'),
+        helpText: $t('styleConfig.e6c28b3f3feefbde'),
         controlType: "ICON_TABS",
         fullWidth: true,
         updateHook: updateColumnStyles,
@@ -125,8 +126,8 @@ export default [
       },
       {
         propertyName: "verticalAlignment",
-        label: "Vertical alignment",
-        helpText: "Sets the vertical alignment of the content in the column",
+        label: $t('styleConfig.8026b958ce709073'),
+        helpText: $t('styleConfig.c6566bffa4190547'),
         controlType: "ICON_TABS",
         fullWidth: true,
         updateHook: updateColumnStyles,
@@ -159,12 +160,12 @@ export default [
     ],
   },
   {
-    sectionName: "Color",
+    sectionName: $t('styleConfig.5f875a6af53045f5'),
     children: [
       {
         propertyName: "cellBackground",
-        label: "Cell background color",
-        helpText: "Changes the background color of the cell",
+        label: $t('styleConfig.512841ab4d1c89e5'),
+        helpText: $t('styleConfig.b608eaeea4ca9f5f'),
         controlType: "COLOR_PICKER",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns"],
@@ -175,7 +176,7 @@ export default [
       },
       {
         propertyName: "accentColor",
-        label: "Accent color",
+        label: $t('styleConfig.acf8f4ac516296ec'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -185,8 +186,8 @@ export default [
       },
       {
         propertyName: "textColor",
-        label: "Text color",
-        helpText: "Controls the color of text in the column",
+        label: $t('styleConfig.2be58cc1f283ea2e'),
+        helpText: $t('styleConfig.9622e6e03218c2da'),
         controlType: "COLOR_PICKER",
         updateHook: updateColumnStyles,
         dependencies: ["primaryColumns"],
@@ -198,35 +199,35 @@ export default [
     ],
   },
   {
-    sectionName: "Border and shadow",
+    sectionName: $t('styleConfig.3558e5947982079c'),
     children: [
       {
         propertyName: "variant",
-        helpText: "Selects the variant",
-        label: "Cell borders",
+        helpText: $t('styleConfig.ec9ed46152c4bc03'),
+        label: $t('styleConfig.198f36c1cfe4cd1d'),
         controlType: "DROP_DOWN",
         defaultValue: "DEFAULT",
         isBindProperty: true,
         isTriggerProperty: false,
         options: [
           {
-            label: "Default",
+            label: $t('styleConfig.ff166617e73f81b7'),
             value: "DEFAULT",
           },
           {
-            label: "No borders",
+            label: $t('styleConfig.771963a93b05a56f'),
             value: "VARIANT2",
           },
           {
-            label: "Horizonal borders only",
+            label: $t('styleConfig.26054aff608c6fe5'),
             value: "VARIANT3",
           },
         ],
       },
       {
         propertyName: "borderRadius",
-        label: "Border radius",
-        helpText: "Rounds the corners of the icon button's outer border edge",
+        label: $t('styleConfig.3effb1c6a846bb81'),
+        helpText: $t('styleConfig.d9b7f94ce3063f94'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -235,9 +236,9 @@ export default [
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
+        label: $t('styleConfig.388e41d5107fb9b6'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('styleConfig.36d5ecb06a7d721c'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -245,20 +246,20 @@ export default [
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Use a html color name, HEX, RGB or RGBA value",
+        helpText: $t('styleConfig.ce27d1b4336523c4'),
         placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
         propertyName: "borderColor",
-        label: "Border color",
+        label: $t('styleConfig.6b043175372ae9af'),
         controlType: "COLOR_PICKER",
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Enter value for border width",
+        helpText: $t('styleConfig.8e1b526c8a924b4a'),
         propertyName: "borderWidth",
-        label: "Border width",
-        placeholderText: "Enter value in px",
+        label: $t('styleConfig.6f144cf08a8c67b8'),
+        placeholderText: $t('styleConfig.bf9e7f5b0131deb5'),
         controlType: "INPUT_TEXT",
         isBindProperty: true,
         isTriggerProperty: false,

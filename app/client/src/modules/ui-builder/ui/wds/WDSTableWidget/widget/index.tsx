@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import log from "loglevel";
 import React, { lazy, Suspense } from "react";
 import memoizeOne from "memoize-one";
@@ -1607,7 +1608,7 @@ export class WDSTableWidget extends BaseWidget<TableWidgetProps, WidgetState> {
         return (
           <ButtonCell
             buttonColor={cellProperties.buttonColor}
-            buttonLabel={cellProperties.buttonLabel || "Action"}
+            buttonLabel={cellProperties.buttonLabel || $t('index.bf34cc1703afb3d5')}
             buttonVariant={cellProperties.buttonVariant}
             excludeFromTabOrder={this.props.disableWidgetInteraction}
             isCellVisible={cellProperties.isCellVisible ?? true}

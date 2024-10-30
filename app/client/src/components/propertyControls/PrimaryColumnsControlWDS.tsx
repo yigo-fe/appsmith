@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { Component } from "react";
 import type { AppState } from "ee/reducers";
 import { connect } from "react-redux";
@@ -221,7 +222,7 @@ class PrimaryColumnsControlWDS extends BaseControl<ControlProps, State> {
                 DraggableListCard({
                   ...props,
                   showCheckbox: false,
-                  placeholder: "Column title",
+                  placeholder: $t('PrimaryColumnsControlWDS.e43664927ae0606d'),
                 })
               }
               toggleCheckbox={this.toggleCheckbox}

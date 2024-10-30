@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   FIELD_REQUIRED_ERROR,
   INPUT_DEFAULT_TEXT_MAX_CHAR_ERROR,
@@ -83,7 +84,7 @@ export function defaultValueValidation(
           messages: [
             {
               name: "TypeError",
-              message: "This value must be a number",
+              message: $t('index.a4dc5d638d941480'),
             },
           ],
         };
@@ -108,7 +109,7 @@ export function defaultValueValidation(
       messages: [
         {
           name: "TypeError",
-          message: "This value must be string",
+          message: $t('index.f63303bee1fa7059'),
         },
       ],
     };
@@ -127,7 +128,7 @@ export function defaultValueValidation(
         messages: [
           {
             name: "TypeError",
-            message: "This value must be string",
+            message: $t('index.f63303bee1fa7059'),
           },
         ],
       };
@@ -153,7 +154,7 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Input",
+      name: $t('index.0a03659303782b3a'),
       iconSVG: IconSVG,
       needsMeta: true,
       hideCard: true,
@@ -172,7 +173,7 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
       columns: 20,
-      widgetName: "Input",
+      widgetName: $t('index.0a03659303782b3a'),
       version: 1,
       defaultText: "",
       iconAlign: "left",
@@ -214,11 +215,11 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     const definitions = {
       "!doc":
-        "An input text field is used to capture a users textual input such as their names, numbers, emails etc. Inputs are used in forms and can have custom validations.",
+        $t('index.28a5aa78dc26b11d'),
       "!url": "https://docs.appsmith.com/widget-reference/input",
       text: {
         "!type": "string",
-        "!doc": "The text value of the input",
+        "!doc": $t('index.7b3d653095402f41'),
         "!url": "https://docs.appsmith.com/widget-reference/input",
       },
       isValid: "bool",
@@ -226,11 +227,11 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
       isDisabled: "bool",
       countryCode: {
         "!type": "string",
-        "!doc": "Selected country code for Phone Number type input",
+        "!doc": $t('index.e4c5d4305be85f25'),
       },
       currencyCountryCode: {
         "!type": "string",
-        "!doc": "Selected country code for Currency type input",
+        "!doc": $t('index.d38017ea695d2edd'),
       },
     };
 
@@ -240,36 +241,36 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.47ea111d8127c025'),
         children: [
           {
-            helpText: "Changes the type of data captured in the input",
+            helpText: $t('index.32edfbbf94e22ebf'),
             propertyName: "inputType",
-            label: "Data type",
+            label: $t('index.ee0611fe4695dfab'),
             controlType: "DROP_DOWN",
             options: [
               {
-                label: "Text",
+                label: $t('index.6f5359ed76cbbfd7'),
                 value: "TEXT",
               },
               {
-                label: "Number",
+                label: $t('index.20c06e31e80bf8ae'),
                 value: "NUMBER",
               },
               {
-                label: "Password",
+                label: $t('index.217f20d7a5e50350'),
                 value: "PASSWORD",
               },
               {
-                label: "Email",
+                label: $t('index.c9a30dfaefe5195f'),
                 value: "EMAIL",
               },
               {
-                label: "Currency",
+                label: $t('index.fbc47e83b5852850'),
                 value: "CURRENCY",
               },
               {
-                label: "Phone Number",
+                label: $t('index.adbf289f3bd0d956'),
                 value: "PHONE_NUMBER",
               },
             ],
@@ -278,8 +279,8 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             propertyName: "allowCurrencyChange",
-            label: "Allow currency change",
-            helpText: "Search by currency or country",
+            label: $t('index.42092e6bbd35289c'),
+            helpText: $t('index.ac94bad659714dc8'),
             controlType: "SWITCH",
             isJSConvertible: false,
             isBindProperty: true,
@@ -291,13 +292,13 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             dependencies: ["inputType"],
           },
           {
-            helpText: "Changes the country code",
+            helpText: $t('index.29b670dcfd49ce2e'),
             propertyName: "phoneNumberCountryCode",
-            label: "Default country code",
+            label: $t('index.95b3521d804643b0'),
             enableSearch: true,
             dropdownHeight: "195px",
             controlType: "DROP_DOWN",
-            searchPlaceholderText: "Search by code or country name",
+            searchPlaceholderText: $t('index.78089102be55e284'),
             options: ISDCodeDropdownOptions,
             hidden: (props: InputWidgetProps) => {
               return props.inputType !== InputTypes.PHONE_NUMBER;
@@ -307,13 +308,13 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             isTriggerProperty: false,
           },
           {
-            helpText: "Changes the type of currency",
+            helpText: $t('index.d1c9b6062acd019a'),
             propertyName: "currencyCountryCode",
-            label: "Currency",
+            label: $t('index.fbc47e83b5852850'),
             enableSearch: true,
             dropdownHeight: "195px",
             controlType: "DROP_DOWN",
-            searchPlaceholderText: "Search by code or name",
+            searchPlaceholderText: $t('index.c38670aa267a6069'),
             options: CurrencyDropdownOptions,
             hidden: (props: InputWidgetProps) => {
               return props.inputType !== InputTypes.CURRENCY;
@@ -323,9 +324,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             isTriggerProperty: false,
           },
           {
-            helpText: "No. of decimals in currency input",
+            helpText: $t('index.2be9c01e05be9f07'),
             propertyName: "decimalsInCurrency",
-            label: "Decimals",
+            label: $t('index.f1f01a859d57ff00'),
             controlType: "DROP_DOWN",
             options: [
               {
@@ -345,9 +346,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             isTriggerProperty: false,
           },
           {
-            helpText: "Sets maximum allowed text length",
+            helpText: $t('index.3c5e34c0661c26c9'),
             propertyName: "maxChars",
-            label: "Max Chars",
+            label: $t('index.0940fd85e9391016'),
             controlType: "INPUT_TEXT",
             placeholderText: "255",
             isBindProperty: true,
@@ -360,11 +361,11 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Sets the default text of the widget. The text is updated if the default text changes",
+              $t('index.7e00cfb63fe78ef4'),
             propertyName: "defaultText",
-            label: "Default Text",
+            label: $t('index.01bbdcf58bb2dd93'),
             controlType: "INPUT_TEXT",
-            placeholderText: "John Doe",
+            placeholderText: $t('index.f956b994d0d05702'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {
@@ -382,9 +383,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Adds a validation to the input which displays an error on failure",
+              $t('index.80f541970d4e9e8f'),
             propertyName: "regex",
-            label: "Regex",
+            label: $t('index.30035838ea41c678'),
             controlType: "INPUT_TEXT",
             placeholderText: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$",
             inputType: "TEXT",
@@ -393,9 +394,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.REGEX },
           },
           {
-            helpText: "Sets the input validity based on a JS expression",
+            helpText: $t('index.c32918f67e943a4c'),
             propertyName: "validation",
-            label: "Valid",
+            label: $t('index.742eeedd50e96ba8'),
             controlType: "INPUT_TEXT",
             placeholderText: "{{ Input1.text.length > 0 }}",
             inputType: "TEXT",
@@ -405,40 +406,40 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "The error message to display if the regex or valid property check fails",
+              $t('index.e535e9d534068eb3'),
             propertyName: "errorMessage",
-            label: "Error message",
+            label: $t('index.2656cb7e01791f10'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Not a valid email!",
+            placeholderText: $t('index.1b8b111eaf5ed869'),
             inputType: "TEXT",
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets a placeholder text for the input",
+            helpText: $t('index.bf0f1af360ae1bb6'),
             propertyName: "placeholderText",
-            label: "Placeholder",
+            label: $t('index.2b2aea56a670bea7'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Placeholder",
+            placeholderText: $t('index.2b2aea56a670bea7'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Show help text or details about current input",
+            helpText: $t('index.286414e186c1695b'),
             propertyName: "tooltip",
-            label: "Tooltip",
+            label: $t('index.941cd2abb4876f12'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Passwords must be atleast 6 chars",
+            placeholderText: $t('index.dfde75e621c8c922'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.ffa14730a966b7d4'),
+            helpText: $t('index.baa8e1e593308e00'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -446,9 +447,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.a2ff28d672ea4d37'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.edbfc0dd76485945'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -456,9 +457,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Disables input to this widget",
+            helpText: $t('index.ad94ca8f022fcc79'),
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.1d8afbca01a9e815'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -467,9 +468,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.0af7558e239ffa38'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.eff638a6cd5f20e1'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -477,9 +478,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Clears the input value after submit",
+            helpText: $t('index.f0a978e80eb08776'),
             propertyName: "resetOnSubmit",
-            label: "Reset on submit",
+            label: $t('index.ee8290d9f5b5b8a8'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -487,9 +488,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Focus input automatically on load",
+            helpText: $t('index.4783967a7dec04fd'),
             propertyName: "autoFocus",
-            label: "Auto focus",
+            label: $t('index.7939c48df5cc32b4'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -498,9 +499,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             propertyName: "isSpellCheck",
-            label: "Spellcheck",
+            label: $t('index.593aaa24ee0e3302'),
             helpText:
-              "Defines whether the text input may be checked for spelling errors",
+              $t('index.7abea20cc72018b2'),
             controlType: "SWITCH",
             isJSConvertible: false,
             isBindProperty: true,
@@ -514,27 +515,27 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.df8126d3e4ee7dc2'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.bdc8053173bfb941'),
             propertyName: "label",
-            label: "Text",
+            label: $t('index.6f5359ed76cbbfd7'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Name:",
+            placeholderText: $t('index.cdf8b60f622c0ecd'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.32db17fd11ab20f5'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.8840093754c850fa'),
             controlType: "DROP_DOWN",
             options: [
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
-              { label: "Auto", value: LabelPosition.Auto },
+              { label: $t('index.66c9389c59265d5e'), value: LabelPosition.Left },
+              { label: $t('index.478e784032a20090'), value: LabelPosition.Top },
+              { label: $t('index.f14f96c03b696873'), value: LabelPosition.Auto },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -542,9 +543,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.211af5613fe509bc'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.216acda61f803aec'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -566,9 +567,9 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.e3d12681b9fa7dd8'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.cbe9a79d9419e764'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -587,10 +588,10 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.d48b4017cac27349'),
         children: [
           {
-            helpText: "when the text is changed",
+            helpText: $t('index.355b3a7ab39151bd'),
             propertyName: "onTextChanged",
             label: "onTextChanged",
             controlType: "ACTION_SELECTOR",
@@ -610,11 +611,11 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.86c4686398a75c2f'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Text color",
+            label: $t('index.bd77833b8a41cb46'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -628,7 +629,7 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelTextSize",
-            label: "Text size",
+            label: $t('index.8845811297a2af69'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             options: [
@@ -670,7 +671,7 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelStyle",
-            label: "Label Font Style",
+            label: $t('index.c90a4775ab018e30'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -690,7 +691,7 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Icon Options",
+        sectionName: $t('index.d2828a20bc4bbe39'),
         hidden: (props: InputWidgetProps) => {
           const { inputType } = props;
 
@@ -700,8 +701,8 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
         children: [
           {
             propertyName: "iconName",
-            label: "Icon",
-            helpText: "Sets the icon to be used in input field",
+            label: $t('index.8fed4885bee18073'),
+            helpText: $t('index.dc76350c93085c4b'),
             controlType: "ICON_SELECT",
             isBindProperty: false,
             isTriggerProperty: false,
@@ -709,8 +710,8 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
           },
           {
             propertyName: "iconAlign",
-            label: "Icon alignment",
-            helpText: "Sets the icon alignment of input field",
+            label: $t('index.53a7223257b5725f'),
+            helpText: $t('index.2104ddbb8267fb78'),
             controlType: "ICON_TABS",
             defaultValue: "left",
             options: [
@@ -732,12 +733,12 @@ class InputWidget extends BaseWidget<InputWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Styles",
+        sectionName: $t('index.48af94a9bbcba60c'),
         children: [
           {
             propertyName: "backgroundColor",
-            helpText: "Sets the background color of the widget",
-            label: "Background color",
+            helpText: $t('index.fef669b1cbccba99'),
+            label: $t('index.6090c62801ecda8b'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,

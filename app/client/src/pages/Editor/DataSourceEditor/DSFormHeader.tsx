@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 /* DO NOT INTRODUCE PAGE AND APPLICATION DEPENDENCIES IN THIS COMPONENT */
 import React, { useState } from "react";
 import FormTitle from "./FormTitle";
@@ -175,7 +176,7 @@ export const DSFormHeader = (props: DSFormHeaderProps) => {
   return (
     <Header noBottomBorder={!!noBottomBorder}>
       <FormTitleContainer>
-        <PluginImage alt="Datasource" src={getAssetUrl(pluginImage)} />
+        <PluginImage alt={$t('DSFormHeader.f8adce0b4cf9f1fb')} src={getAssetUrl(pluginImage)} />
         <FormTitle
           datasourceId={datasourceId}
           disabled={!isNewDatasource && !canManageDatasource}

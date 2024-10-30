@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { Workspace } from "ee/constants/workspaceConstants";
 import type { AppState } from "ee/reducers";
 import { getDefaultPlugins } from "ee/selectors/entitiesSelector";
@@ -104,7 +105,7 @@ export const getFilteredTemplateList = createSelector(
   (templates, templatesFilters, numberOfFiltersApplied) => {
     const result: Template[] = [];
     const activeTemplateIds: string[] = [];
-    const ALL_TEMPLATES_FILTER_VALUE = "All";
+    const ALL_TEMPLATES_FILTER_VALUE = $t('templatesSelectors.3f545036c87fb23e');
 
     if (!numberOfFiltersApplied) {
       return templates;

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { APPSMITH_NAMESPACED_FUNCTIONS as EE_APPSMITH_NAMESPACED_FUNCTIONS } from "ee/entities/Engine/actionHelpers";
 
 export enum APPSMITH_GLOBAL_FUNCTIONS {
@@ -46,8 +47,8 @@ export const RESET_CHILDREN_OPTIONS = [
 ];
 
 export const FILE_TYPE_OPTIONS = [
-  { label: "Select file type (optional)", value: "", id: "" },
-  { label: "Plain text", value: "'text/plain'", id: "text/plain" },
+  { label: $t('constants.3282722c72e97918'), value: "", id: "" },
+  { label: $t('constants.ed940f9af09b5944'), value: "'text/plain'", id: "text/plain" },
   { label: "HTML", value: "'text/html'", id: "text/html" },
   { label: "CSV", value: "'text/csv'", id: "text/csv" },
   { label: "JSON", value: "'application/json'", id: "application/json" },
@@ -58,12 +59,12 @@ export const FILE_TYPE_OPTIONS = [
 
 export const NAVIGATION_TARGET_FIELD_OPTIONS = [
   {
-    label: "Same window",
+    label: $t('constants.c28818a6bb1cef0e'),
     value: "'SAME_WINDOW'",
     id: "SAME_WINDOW",
   },
   {
-    label: "New window",
+    label: $t('constants.9a2c4fbaa0c08ec0'),
     value: "'NEW_WINDOW'",
     id: "NEW_WINDOW",
   },
@@ -84,12 +85,12 @@ export const NAVIGATE_TO_TAB_OPTIONS = {
   URL: "url",
 };
 
-export const NEW_MODAL_LABEL = "New Modal";
-const SELECT_OPTIONS_LABEL = "Select file type (optional)";
+export const NEW_MODAL_LABEL = $t('constants.44a927e3631f5513');
+const SELECT_OPTIONS_LABEL = $t('constants.3282722c72e97918');
 
 export const DEFAULT_LABELS = [NEW_MODAL_LABEL, SELECT_OPTIONS_LABEL];
 
-export const DEFAULT_SELECTOR_VIEW_TEXT = "Select Action";
+export const DEFAULT_SELECTOR_VIEW_TEXT = $t('constants.89cd710602feac7d');
 
 export const EMPTY_BINDING = "{{}}";
 export const EMPTY_BINDING_WITH_EMPTY_OBJECT = "{{{}}}";

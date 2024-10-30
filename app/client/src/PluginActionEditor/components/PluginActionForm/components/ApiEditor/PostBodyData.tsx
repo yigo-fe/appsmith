@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
@@ -96,7 +97,7 @@ function PostBodyData(props: Props) {
             <DynamicTextField
               border={CodeEditorBorder.ALL_SIDE}
               dataTreePath={`${dataTreePath}.body`}
-              evaluatedPopUpLabel={"Body"}
+              evaluatedPopUpLabel={$t('PostBodyData.334fac633aabe214')}
               expected={expectedPostBody}
               mode={EditorModes.JSON_WITH_BINDING}
               name="actionConfiguration.body"

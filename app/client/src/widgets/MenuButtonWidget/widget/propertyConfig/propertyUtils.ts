@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { MenuButtonWidgetProps } from "../../constants";
 import { MenuItemsSource } from "../../constants";
 
@@ -26,11 +27,11 @@ export const updateMenuItemsSource = (
       propertiesToUpdate.push({
         propertyPath: "configureMenuItems",
         propertyValue: {
-          label: "Configure menu items",
+          label: $t('propertyUtils.5df262abcfc3fc26'),
           id: "config",
           config: {
             id: "config",
-            label: "Menu Item",
+            label: $t('propertyUtils.7bf6489332b5af93'),
             isVisible: true,
             isDisabled: false,
           },

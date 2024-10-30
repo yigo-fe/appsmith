@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { EventType } from "constants/AppsmithActionConstants/ActionConstants";
 import type { ValidationResponse } from "constants/WidgetValidation";
 import { ValidationTypes } from "constants/WidgetValidation";
@@ -81,14 +82,14 @@ class MultiSelectWidget extends BaseWidget<
       rows: 7,
       columns: 20,
       animateLoading: true,
-      labelText: "Label",
+      labelText: $t('index.7b5b3725894c56e1'),
       labelPosition: LabelPosition.Left,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
       options: [
-        { label: "Blue", value: "BLUE" },
-        { label: "Green", value: "GREEN" },
-        { label: "Red", value: "RED" },
+        { label: $t('index.093eafc11f0d7b40'), value: "BLUE" },
+        { label: $t('index.e099f30376e081a8'), value: "GREEN" },
+        { label: $t('index.dcf5f4a8c3c21a93'), value: "RED" },
       ],
       widgetName: "MultiSelect",
       serverSideFiltering: false,
@@ -96,7 +97,7 @@ class MultiSelectWidget extends BaseWidget<
       version: 1,
       isRequired: false,
       isDisabled: false,
-      placeholderText: "Select option(s)",
+      placeholderText: $t('index.820046beff49f3aa'),
       responsiveBehavior: ResponsiveBehavior.Fill,
       minWidth: FILL_WIDGET_MIN_WIDTH,
     };
@@ -119,22 +120,22 @@ class MultiSelectWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "MultiSelect is used to capture user input/s from a specified list of permitted inputs. A MultiSelect captures multiple choices from a list of options",
+        $t('index.01e2d5d29f4c837c'),
       "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       filterText: {
         "!type": "string",
-        "!doc": "The filter text for Server side filtering",
+        "!doc": $t('index.d6ef0c88099b878f'),
       },
       selectedOptionValues: {
         "!type": "[string]",
-        "!doc": "The array of values selected in a multi select dropdown",
+        "!doc": $t('index.dc53ab60b6502a57'),
         "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       },
       selectedOptionLabels: {
         "!type": "[string]",
         "!doc":
-          "The array of selected option labels in a multi select dropdown",
+          $t('index.51c760d233c17005'),
         "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       },
       isDisabled: "bool",
@@ -145,13 +146,13 @@ class MultiSelectWidget extends BaseWidget<
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.1c57d7bf83b59674'),
         children: [
           {
             helpText:
-              "Allows users to select multiple options. Values must be unique",
+              $t('index.549dff1d986d6828'),
             propertyName: "options",
-            label: "Options",
+            label: $t('index.63699c0c69278685'),
             controlType: "INPUT_TEXT",
             placeholderText: '[{ "label": "Option1", "value": "Option2" }]',
             isBindProperty: true,
@@ -190,9 +191,9 @@ class MultiSelectWidget extends BaseWidget<
               EvaluationSubstitutionType.SMART_SUBSTITUTE,
           },
           {
-            helpText: "Selects the option with value by default",
+            helpText: $t('index.048a555db15f63e2'),
             propertyName: "defaultOptionValue",
-            label: "Default value",
+            label: $t('index.86e6785ec4a5f5f1'),
             controlType: "INPUT_TEXT",
             placeholderText: "[GREEN]",
             isBindProperty: true,
@@ -210,19 +211,19 @@ class MultiSelectWidget extends BaseWidget<
             },
           },
           {
-            helpText: "Sets a Placeholder Text",
+            helpText: $t('index.5c3b877483c3db73'),
             propertyName: "placeholderText",
-            label: "Placeholder",
+            label: $t('index.2f18320101cb8cc9'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Search",
+            placeholderText: $t('index.ebc73848ca2521fe'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.f029aea95e3c8b8f'),
+            helpText: $t('index.a9d76a23e311a734'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -230,9 +231,9 @@ class MultiSelectWidget extends BaseWidget<
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.ff2611612e241f51'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.f3fbe4f9194adb27'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -241,8 +242,8 @@ class MultiSelectWidget extends BaseWidget<
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.e26c12aff693bfef'),
+            helpText: $t('index.b33c23d2841e8a54'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -251,9 +252,9 @@ class MultiSelectWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.8c9bc8d0bd913d23'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.ab4b51d3da4ff491'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -261,9 +262,9 @@ class MultiSelectWidget extends BaseWidget<
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Enables server side filtering of the data",
+            helpText: $t('index.68522c496c803657'),
             propertyName: "serverSideFiltering",
-            label: "Server side filtering",
+            label: $t('index.b8cd7dceb3f4a133'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -272,9 +273,9 @@ class MultiSelectWidget extends BaseWidget<
           },
           {
             helpText:
-              "Controls the visibility of select all option in dropdown.",
+              $t('index.54ab5494ebf0929e'),
             propertyName: "allowSelectAll",
-            label: "Allow select all",
+            label: $t('index.69e265b32da49443'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -284,27 +285,27 @@ class MultiSelectWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.7b5b3725894c56e1'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.c8e330ddae3bf04a'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.0fc5bf6c06c95b12'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.2790432813bf4a9c'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.7807cfe4a9e11d12'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.c9eb850cf18895f2'),
             controlType: "DROP_DOWN",
             options: [
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
-              { label: "Auto", value: LabelPosition.Auto },
+              { label: $t('index.84567d189b44f5b2'), value: LabelPosition.Left },
+              { label: $t('index.c12f08306ddea336'), value: LabelPosition.Top },
+              { label: $t('index.e36fde080ee4c87a'), value: LabelPosition.Auto },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -312,9 +313,9 @@ class MultiSelectWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.00fcb9714bb2823b'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.4d26431111694cee'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -336,9 +337,9 @@ class MultiSelectWidget extends BaseWidget<
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.a464b756704e3552'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.313b1cccb83ea34d'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -357,11 +358,11 @@ class MultiSelectWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Styles",
+        sectionName: $t('index.ff46ec6f3ce72c02'),
         children: [
           {
             propertyName: "accentColor",
-            label: "Accent color",
+            label: $t('index.8a0f4be802b5d039'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -371,7 +372,7 @@ class MultiSelectWidget extends BaseWidget<
           },
           {
             propertyName: "labelTextColor",
-            label: "Label text color",
+            label: $t('index.d9d58bb0c04c5530'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -380,7 +381,7 @@ class MultiSelectWidget extends BaseWidget<
           },
           {
             propertyName: "labelTextSize",
-            label: "Label text size",
+            label: $t('index.b62592f8d909d584'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             options: [
@@ -422,7 +423,7 @@ class MultiSelectWidget extends BaseWidget<
           },
           {
             propertyName: "labelStyle",
-            label: "Label Font Style",
+            label: $t('index.f6182f7da9f8cfb7'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -442,10 +443,10 @@ class MultiSelectWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Actions",
+        sectionName: $t('index.0647cb9b3e04c0d1'),
         children: [
           {
-            helpText: "when a user selects an option",
+            helpText: $t('index.f90653e997407dc5'),
             propertyName: "onOptionChange",
             label: "onOptionChange",
             controlType: "ACTION_SELECTOR",
@@ -454,7 +455,7 @@ class MultiSelectWidget extends BaseWidget<
             isTriggerProperty: true,
           },
           {
-            helpText: "Trigger an action on change of filterText",
+            helpText: $t('index.3c5c15f57d8b92f5'),
             hidden: (props: MultiSelectWidgetProps) =>
               !props.serverSideFiltering,
             dependencies: ["serverSideFiltering"],
@@ -469,12 +470,12 @@ class MultiSelectWidget extends BaseWidget<
       },
 
       {
-        sectionName: "Styles",
+        sectionName: $t('index.ff46ec6f3ce72c02'),
         children: [
           {
             propertyName: "backgroundColor",
-            helpText: "Sets the background color of the widget",
-            label: "Background color",
+            helpText: $t('index.fa77c22df218faf4'),
+            label: $t('index.a935ff8f81bf54f2'),
             controlType: "COLOR_PICKER",
             isBindProperty: false,
             isTriggerProperty: false,

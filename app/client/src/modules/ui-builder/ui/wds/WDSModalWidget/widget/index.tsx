@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { ModalWidgetProps } from "./types";
 import type { WidgetState } from "widgets/BaseWidget";
 import BaseWidget from "widgets/BaseWidget";
@@ -131,10 +132,10 @@ class WDSModalWidget extends BaseWidget<ModalWidgetProps, WidgetState> {
   };
 
   getWidgetView() {
-    const closeText = this.props.cancelButtonText || "Cancel";
+    const closeText = this.props.cancelButtonText || $t('index.1f1d6cfac6d63fb2');
 
     const submitText = this.props.showSubmitButton
-      ? this.props.submitButtonText || "Submit"
+      ? this.props.submitButtonText || $t('index.fa85b05282f5a059')
       : undefined;
     const modalClassNames = `${this.getModalClassNames()}`;
 

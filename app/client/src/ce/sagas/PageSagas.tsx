@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AppState } from "ee/reducers";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
 import {
@@ -821,7 +822,7 @@ export function* deletePageSaga(action: ReduxAction<DeletePageActionPayload>) {
     const currentPageId: string = yield select(getCurrentPageId);
 
     if (defaultPageId === pageId) {
-      throw Error("Cannot delete the home page.");
+      throw Error($t('PageSagas.00ced670cc0ced29'));
     } else {
       const params = { pageId: pageId };
       const response: ApiResponse = yield call(PageApi.deletePage, params);
@@ -1086,7 +1087,7 @@ export function* updateWidgetNameSaga(
           type: ReduxActionErrorTypes.UPDATE_WIDGET_NAME_ERROR,
           payload: {
             error: {
-              message: `Entity name: ${action.payload.newName} is already being used or is a restricted keyword.`,
+              message: $t('PageSagas.51849fc20aa3af48', {action_payload_newName: action.payload.newName}),
             },
           },
         });
@@ -1357,7 +1358,7 @@ export function* generateTemplatePageSaga(
         }),
       );
       // TODO : Add it to onSuccessCallback
-      toast.show("Successfully generated a page", {
+      toast.show($t('PageSagas.4824e1582a863f38'), {
         kind: "success",
       });
 

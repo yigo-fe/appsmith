@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { createReducer } from "utils/ReducerUtils";
 import type { JSAction, JSCollection } from "entities/JSCollection";
 import type { ReduxAction } from "ee/constants/ReduxActionConstants";
@@ -96,7 +97,7 @@ export const handlers = {
             ? {
                 ...action.payload.data,
                 isMainJSCollection: true,
-                displayName: "Main",
+                displayName: $t('jsActionsReducer.95cf10ba469877cd'),
               }
             : {
                 ...action.payload.data,
@@ -126,7 +127,7 @@ export const handlers = {
             ? {
                 ...action.payload.data,
                 isMainJSCollection: true,
-                displayName: "Main",
+                displayName: $t('jsActionsReducer.95cf10ba469877cd'),
               }
             : {
                 ...action.payload.data,
@@ -161,7 +162,7 @@ export const handlers = {
             ? {
                 ...action.payload.data,
                 isMainJSCollection: true,
-                displayName: "Main",
+                displayName: $t('jsActionsReducer.95cf10ba469877cd'),
               }
             : action.payload.data,
         };

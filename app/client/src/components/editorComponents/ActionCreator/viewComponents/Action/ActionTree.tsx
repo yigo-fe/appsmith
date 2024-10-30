@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import styled from "styled-components";
 import TreeStructure from "components/utils/TreeStructure";
 import { Text, Icon, Button, Tooltip } from "@appsmith/ads";
@@ -174,20 +175,20 @@ export default function ActionTree(props: {
 
   const callbackBlocks = [
     {
-      label: "On success",
+      label: $t('ActionTree.da51471076e28023'),
       handleAddBlock: handleAddSuccessBlock,
       callbacks: successBlocks,
       blockType: "success",
       tooltipContent:
-        "Show a message, chain other actions, or both when the parent action block runs successfully. All nested actions run at the same time.",
+        $t('ActionTree.879f74e87e2b80cb'),
     },
     {
-      label: "On failure",
+      label: $t('ActionTree.553c925d13e270af'),
       handleAddBlock: handleAddErrorBlock,
       callbacks: errorBlocks,
       blockType: "failure",
       tooltipContent:
-        "Show a message, chain actions, or both when the parent action block fails to run. All nested actions run at the same time.",
+        $t('ActionTree.65dc25906bad3616'),
     },
   ];
 
@@ -224,7 +225,7 @@ export default function ActionTree(props: {
           <Text kind="action-s">Callbacks</Text>
           <div className="flex items-center gap-1">
             <Text kind="action-s">
-              {actionsCount > 0 ? actionsCount : "No"} actions
+              {actionsCount > 0 ? actionsCount : $t('ActionTree.f60a3cf0874cc2fd')} actions
             </Text>
             <Icon
               name={callbacksExpanded ? "expand-less" : "expand-more"}

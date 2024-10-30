@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { ControlProps } from "./BaseControl";
 import BaseControl from "./BaseControl";
@@ -60,7 +61,7 @@ function TabControlComponent(props: RenderComponentProps<DroppableItem>) {
       {...props}
       deleteOption={deleteOption}
       isDelete
-      placeholder="Tab title"
+      placeholder=$t('TabControl.6459a4a8f35d9f79')
     />
   );
 }
@@ -132,7 +133,7 @@ class TabControl extends BaseControl<ControlProps, State> {
         return parsedData;
       } catch (error) {
         Sentry.captureException({
-          message: "Tab Migration Failed",
+          message: $t('TabControl.f8829054dd08faa3'),
           oldData: this.props.propertyValue,
         });
       }

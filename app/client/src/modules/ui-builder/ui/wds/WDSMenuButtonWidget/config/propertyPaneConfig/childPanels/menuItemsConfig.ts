@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   BUTTON_WIDGET_DEFAULT_LABEL,
   createMessage,
@@ -24,12 +25,12 @@ export const menuItemsConfig = {
   },
   contentChildren: [
     {
-      sectionName: "General",
+      sectionName: $t('menuItemsConfig.c71fb8696dd552c6'),
       children: [
         {
           propertyName: "label",
-          helpText: "Sets the label of a menu item",
-          label: "Label",
+          helpText: $t('menuItemsConfig.7a28f27b57f30fc3'),
+          label: $t('menuItemsConfig.8c4dabaa7b654d46'),
           controlType: "INPUT_TEXT",
           placeholderText: createMessage(BUTTON_WIDGET_DEFAULT_LABEL),
           isBindProperty: true,
@@ -38,8 +39,8 @@ export const menuItemsConfig = {
         },
         {
           propertyName: "isVisible",
-          helpText: "Controls the visibility of the widget",
-          label: "Visible",
+          helpText: $t('menuItemsConfig.82361b44480e95a5'),
+          label: $t('menuItemsConfig.947dc3a1e9cc75d5'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -48,8 +49,8 @@ export const menuItemsConfig = {
         },
         {
           propertyName: "isDisabled",
-          helpText: "Disables input to the widget",
-          label: "Disabled",
+          helpText: $t('menuItemsConfig.03960ca5cc11f429'),
+          label: $t('menuItemsConfig.0ac18b7a40ccc04b'),
           controlType: "SWITCH",
           isJSConvertible: true,
           isBindProperty: true,
@@ -59,10 +60,10 @@ export const menuItemsConfig = {
       ],
     },
     {
-      sectionName: "Events",
+      sectionName: $t('menuItemsConfig.15a1f99be9eb0669'),
       children: [
         {
-          helpText: "when the menu item is clicked",
+          helpText: $t('menuItemsConfig.ee45101f31d1e6cb'),
           propertyName: "onClick",
           label: "onClick",
           controlType: "ACTION_SELECTOR",

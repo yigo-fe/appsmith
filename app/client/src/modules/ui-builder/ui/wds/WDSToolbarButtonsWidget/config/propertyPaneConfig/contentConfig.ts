@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import {
   BUTTON_WIDGET_DEFAULT_LABEL,
   createMessage,
@@ -6,13 +7,13 @@ import { ValidationTypes } from "constants/WidgetValidation";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.ea062684a47ddbfc'),
     children: [
       {
-        helpText: "Group Buttons",
+        helpText: $t('contentConfig.65e404c5086014d0'),
         propertyName: "buttonsList",
         controlType: "TOOLBAR_BUTTONS",
-        label: "Buttons",
+        label: $t('contentConfig.745ffbf7dd3fab9c'),
         allowSeparators: true,
         dependencies: ["childStylesheet", "orientation"],
         isBindProperty: false,
@@ -37,12 +38,12 @@ export const propertyPaneContentConfig = [
           },
           contentChildren: [
             {
-              sectionName: "Label",
+              sectionName: $t('contentConfig.febdc87f9d299ba8'),
               children: [
                 {
                   propertyName: "label",
-                  helpText: "Sets the label of the button",
-                  label: "Text",
+                  helpText: $t('contentConfig.3dbdec334a935d19'),
+                  label: $t('contentConfig.c64772b7fbd1d894'),
                   controlType: "INPUT_TEXT",
                   placeholderText: createMessage(BUTTON_WIDGET_DEFAULT_LABEL),
                   isBindProperty: true,
@@ -52,12 +53,12 @@ export const propertyPaneContentConfig = [
               ],
             },
             {
-              sectionName: "General",
+              sectionName: $t('contentConfig.3452ee9fc1f407ec'),
               children: [
                 {
                   propertyName: "isVisible",
-                  helpText: "Controls the visibility of the widget",
-                  label: "Visible",
+                  helpText: $t('contentConfig.3b2aec8523d0088b'),
+                  label: $t('contentConfig.cb4d56e9358ece05'),
                   controlType: "SWITCH",
                   isJSConvertible: true,
                   isBindProperty: true,
@@ -66,8 +67,8 @@ export const propertyPaneContentConfig = [
                 },
                 {
                   propertyName: "isDisabled",
-                  helpText: "Disables input to the widget",
-                  label: "Disabled",
+                  helpText: $t('contentConfig.0e25337c8bc1ab60'),
+                  label: $t('contentConfig.4e53b89e0b413b7a'),
                   controlType: "SWITCH",
                   isJSConvertible: true,
                   isBindProperty: true,
@@ -77,10 +78,10 @@ export const propertyPaneContentConfig = [
               ],
             },
             {
-              sectionName: "Events",
+              sectionName: $t('contentConfig.2f7d78ba7e18e1d2'),
               children: [
                 {
-                  helpText: "when the button is clicked",
+                  helpText: $t('contentConfig.035d21d30551e9ca'),
                   propertyName: "onClick",
                   label: "onClick",
                   controlType: "ACTION_SELECTOR",
@@ -93,12 +94,12 @@ export const propertyPaneContentConfig = [
           ],
           styleChildren: [
             {
-              sectionName: "Icon",
+              sectionName: $t('contentConfig.5d3393b4743ba6a0'),
               children: [
                 {
                   propertyName: "icon",
-                  label: "Icon",
-                  helpText: "Sets the icon to be used for a button",
+                  label: $t('contentConfig.5d3393b4743ba6a0'),
+                  helpText: $t('contentConfig.ec9008303542b03d'),
                   controlType: "ICON_SELECT_V2",
                   isJSConvertible: true,
                   isBindProperty: true,
@@ -107,8 +108,8 @@ export const propertyPaneContentConfig = [
                 },
                 {
                   propertyName: "iconPosition",
-                  label: "Position",
-                  helpText: "Sets the icon alignment of the button",
+                  label: $t('contentConfig.7536959aef7e37c6'),
+                  helpText: $t('contentConfig.990221dd7edaf5a3'),
                   controlType: "ICON_TABS",
                   fullWidth: false,
                   defaultValue: "start",
@@ -139,12 +140,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.3452ee9fc1f407ec'),
     children: [
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('contentConfig.3b2aec8523d0088b'),
         propertyName: "isVisible",
-        label: "Visible",
+        label: $t('contentConfig.cb4d56e9358ece05'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -153,9 +154,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.3c84921bf37257e4'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.969598676a7c6d1b'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,

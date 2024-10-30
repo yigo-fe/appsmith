@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import {
   GridDefaults,
@@ -742,7 +743,7 @@ export const howMuchTimeBeforeText = (
   else if (minutes > 0) return `${minutes} min${minutes > 1 ? "s" : ""}`;
   else
     return lessThanAMinute
-      ? "less than a minute"
+      ? $t('helpers.1da30f5294f7f953')
       : `${seconds} sec${seconds > 1 ? "s" : ""}`;
 };
 

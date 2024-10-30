@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
 import { FieldType } from "widgets/JSONFormWidget/constants";
 import type { HiddenFnParams } from "../helper";
@@ -129,8 +130,8 @@ const PROPERTIES = {
   general: [
     {
       propertyName: "defaultValue",
-      helpText: "Selects the option with value by default",
-      label: "Default value",
+      helpText: $t('multiSelect.49b83b256a8af264'),
+      label: $t('multiSelect.4fdb0234e0b390fa'),
       controlType: "JSON_FORM_COMPUTE_VALUE",
       placeholderText: "[GREEN]",
       isBindProperty: true,
@@ -153,10 +154,10 @@ const PROPERTIES = {
     },
     {
       propertyName: "placeholderText",
-      helpText: "Sets a Placeholder text",
-      label: "Placeholder",
+      helpText: $t('multiSelect.17bfe45328a3907c'),
+      label: $t('multiSelect.0bafb81747d3c784'),
       controlType: "JSON_FORM_COMPUTE_VALUE",
-      placeholderText: "Search",
+      placeholderText: $t('multiSelect.b0e4a51de62e9069'),
       isBindProperty: true,
       isTriggerProperty: false,
       validation: { type: ValidationTypes.TEXT },
@@ -166,8 +167,8 @@ const PROPERTIES = {
     },
     {
       propertyName: "isFilterable",
-      label: "Filterable",
-      helpText: "Makes the dropdown list filterable",
+      label: $t('multiSelect.36adae0381811eea'),
+      helpText: $t('multiSelect.77400ec230d220f2'),
       controlType: "SWITCH",
       isJSConvertible: true,
       isBindProperty: true,
@@ -179,8 +180,8 @@ const PROPERTIES = {
     },
     {
       propertyName: "serverSideFiltering",
-      helpText: "Enables server side filtering of the data",
-      label: "Server side filtering",
+      helpText: $t('multiSelect.92a790c30c36e70b'),
+      label: $t('multiSelect.1a04467cf9c674f3'),
       controlType: "SWITCH",
       isJSConvertible: true,
       isBindProperty: true,
@@ -193,8 +194,8 @@ const PROPERTIES = {
     },
     {
       propertyName: "allowSelectAll",
-      helpText: "Controls the visibility of select all option in dropdown.",
-      label: "Allow select all",
+      helpText: $t('multiSelect.bcb5500f8da7e143'),
+      label: $t('multiSelect.ffa28cf90564aa78'),
       controlType: "SWITCH",
       isJSConvertible: true,
       isBindProperty: true,
@@ -208,7 +209,7 @@ const PROPERTIES = {
   actions: [
     {
       propertyName: "onOptionChange",
-      helpText: "when a user selects an option",
+      helpText: $t('multiSelect.eb288d4dce91fc60'),
       label: "onOptionChange",
       controlType: "ACTION_SELECTOR",
       isJSConvertible: true,
@@ -220,7 +221,7 @@ const PROPERTIES = {
         getSchemaItem(...args).fieldTypeNotMatches(FieldType.MULTISELECT),
     },
     {
-      helpText: "Trigger an action on change of filterText",
+      helpText: $t('multiSelect.26ad405cd18bde1a'),
       propertyName: "onFilterUpdate",
       label: "onFilterUpdate",
       controlType: "ACTION_SELECTOR",
@@ -243,8 +244,8 @@ const PROPERTIES = {
     data: [
       {
         propertyName: "defaultValue",
-        helpText: "Selects the option with value by default",
-        label: "Default selected values",
+        helpText: $t('multiSelect.49b83b256a8af264'),
+        label: $t('multiSelect.7a809073c70896af'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
         placeholderText: "[GREEN]",
         isBindProperty: true,
@@ -269,10 +270,10 @@ const PROPERTIES = {
     general: [
       {
         propertyName: "placeholderText",
-        helpText: "Sets a Placeholder text",
-        label: "Placeholder",
+        helpText: $t('multiSelect.17bfe45328a3907c'),
+        label: $t('multiSelect.0bafb81747d3c784'),
         controlType: "JSON_FORM_COMPUTE_VALUE",
-        placeholderText: "Search",
+        placeholderText: $t('multiSelect.b0e4a51de62e9069'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -284,8 +285,8 @@ const PROPERTIES = {
     toggles: [
       {
         propertyName: "allowSelectAll",
-        helpText: "Controls the visibility of select all option in dropdown.",
-        label: "Allow select all",
+        helpText: $t('multiSelect.bcb5500f8da7e143'),
+        label: $t('multiSelect.ffa28cf90564aa78'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -299,7 +300,7 @@ const PROPERTIES = {
     events: [
       {
         propertyName: "onOptionChange",
-        helpText: "when a user selects an option",
+        helpText: $t('multiSelect.eb288d4dce91fc60'),
         label: "onOptionChange",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
@@ -314,8 +315,8 @@ const PROPERTIES = {
     searchAndFilters: [
       {
         propertyName: "isFilterable",
-        label: "Allow searching",
-        helpText: "Makes the dropdown list filterable",
+        label: $t('multiSelect.d2d20683957d36f5'),
+        helpText: $t('multiSelect.77400ec230d220f2'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -327,8 +328,8 @@ const PROPERTIES = {
       },
       {
         propertyName: "serverSideFiltering",
-        helpText: "Enables server side filtering of the data",
-        label: "Server side filtering",
+        helpText: $t('multiSelect.92a790c30c36e70b'),
+        label: $t('multiSelect.1a04467cf9c674f3'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -340,7 +341,7 @@ const PROPERTIES = {
           getSchemaItem(...args).fieldTypeNotMatches(FieldType.MULTISELECT),
       },
       {
-        helpText: "Trigger an action on change of filterText",
+        helpText: $t('multiSelect.26ad405cd18bde1a'),
         propertyName: "onFilterUpdate",
         label: "onFilterUpdate",
         controlType: "ACTION_SELECTOR",

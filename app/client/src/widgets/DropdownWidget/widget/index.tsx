@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import type {
   AutocompletionDefinitions,
@@ -37,7 +38,7 @@ function defaultOptionValueValidation(value: unknown): ValidationResponse {
       messages: [
         {
           name: "TypeError",
-          message: "This value does not evaluate to type: string",
+          message: $t('index.7f313c22ed6acb3b'),
         },
       ],
     };
@@ -50,7 +51,7 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
 
   static getConfig() {
     return {
-      name: "Select",
+      name: $t('index.ada4d1c6039fd0dd'),
       iconSVG: IconSVG,
       needsMeta: true,
       hideCard: true,
@@ -64,19 +65,19 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
     return {
       rows: 7,
       columns: 20,
-      placeholderText: "Select option",
-      labelText: "Label",
+      placeholderText: $t('index.8fbd4d00beb3c237'),
+      labelText: $t('index.90e64188033848d5'),
       labelPosition: LabelPosition.Left,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
       selectionType: "SINGLE_SELECT",
       options: [
-        { label: "Blue", value: "BLUE" },
-        { label: "Green", value: "GREEN" },
-        { label: "Red", value: "RED" },
+        { label: $t('index.2157c831d54dfc9d'), value: "BLUE" },
+        { label: $t('index.f41b9797b441f2d0'), value: "GREEN" },
+        { label: $t('index.ad824e9d30939510'), value: "RED" },
       ],
       serverSideFiltering: false,
-      widgetName: "Select",
+      widgetName: $t('index.ada4d1c6039fd0dd'),
       defaultOptionValue: "GREEN",
       version: 1,
       isFilterable: false,
@@ -114,21 +115,21 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Select is used to capture user input/s from a specified list of permitted inputs. A Select can capture a single choice",
+        $t('index.be4b6940036f7b42'),
       "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       filterText: {
         "!type": "string",
-        "!doc": "The filter text for Server side filtering",
+        "!doc": $t('index.faa19bc47d265992'),
       },
       selectedOptionValue: {
         "!type": "string",
-        "!doc": "The value selected in a single select dropdown",
+        "!doc": $t('index.4e5b6a495ef85a96'),
         "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       },
       selectedOptionLabel: {
         "!type": "string",
-        "!doc": "The selected option label in a single select dropdown",
+        "!doc": $t('index.7f2bdde5aba1cc2a'),
         "!url": "https://docs.appsmith.com/widget-reference/dropdown",
       },
       isDisabled: "bool",
@@ -139,13 +140,13 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
   static getPropertyPaneConfig() {
     return [
       {
-        sectionName: "General",
+        sectionName: $t('index.67209b7c5c094e4b'),
         children: [
           {
             helpText:
-              "Allows users to select a single option. Values must be unique",
+              $t('index.b471fb962d22a9cb'),
             propertyName: "options",
-            label: "Options",
+            label: $t('index.28d59b25140c38ee'),
             controlType: "INPUT_TEXT",
             placeholderText: '[{ "label": "Option1", "value": "Option2" }]',
             isBindProperty: true,
@@ -183,9 +184,9 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
               EvaluationSubstitutionType.SMART_SUBSTITUTE,
           },
           {
-            helpText: "Selects the option with value by default",
+            helpText: $t('index.a83459a1c62147b6'),
             propertyName: "defaultOptionValue",
-            label: "Default Option",
+            label: $t('index.8841d095fc18f212'),
             controlType: "INPUT_TEXT",
             placeholderText: "GREEN",
             isBindProperty: true,
@@ -204,19 +205,19 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
             dependencies: ["selectionType"],
           },
           {
-            helpText: "Sets a Placeholder Text",
+            helpText: $t('index.f5f41c71d9911a0b'),
             propertyName: "placeholderText",
-            label: "Placeholder",
+            label: $t('index.af12f209b8ac0854'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter placeholder text",
+            placeholderText: $t('index.e4498e4751507434'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.09ed9082d4e4ff7f'),
+            helpText: $t('index.520df99072a84e22'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -224,9 +225,9 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Controls the visibility of the widget",
+            helpText: $t('index.31abc8e44cb38413'),
             propertyName: "isVisible",
-            label: "Visible",
+            label: $t('index.80c3f150bca88ef2'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -235,8 +236,8 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
-            helpText: "Disables input to this widget",
+            label: $t('index.169bf3c7e0cbcd5a'),
+            helpText: $t('index.57ea92516a5db13d'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -245,9 +246,9 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.065d71b23f64b13f'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.54c172187d722ba9'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -256,8 +257,8 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
           },
           {
             propertyName: "isFilterable",
-            label: "Filterable",
-            helpText: "Makes the dropdown list filterable",
+            label: $t('index.c78f4d5868ceba45'),
+            helpText: $t('index.edca462bcbc346fd'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -265,9 +266,9 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.BOOLEAN },
           },
           {
-            helpText: "Enables server side filtering of the data",
+            helpText: $t('index.14c4e8512577ca9f'),
             propertyName: "serverSideFiltering",
-            label: "Server side filtering",
+            label: $t('index.6fb7fa9884691161'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -277,27 +278,27 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.90e64188033848d5'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.95ffa326a5f6517d'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.586152aa2a16c3dd'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.0279b6c98687e129'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.bcaa17edbd211200'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.076f01bf125782cf'),
             controlType: "DROP_DOWN",
             options: [
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
-              { label: "Auto", value: LabelPosition.Auto },
+              { label: $t('index.17a822c5e0fcac96'), value: LabelPosition.Left },
+              { label: $t('index.12ee1ead92c8a506'), value: LabelPosition.Top },
+              { label: $t('index.1b2f0f23b38442da'), value: LabelPosition.Auto },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -305,9 +306,9 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.dfae106037ac73e7'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.cd10e82f1278f22f'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -329,9 +330,9 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.0c1f9152496754e2'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.c2b606c5370de9a6'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -350,11 +351,11 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Styles",
+        sectionName: $t('index.a7ba2b1375f6b1f2'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Label text color",
+            label: $t('index.549057ea7138a345'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -363,7 +364,7 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelTextSize",
-            label: "Label text size",
+            label: $t('index.e1fdc18ecbf48b49'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             options: [
@@ -405,7 +406,7 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
           },
           {
             propertyName: "labelStyle",
-            label: "Label Font Style",
+            label: $t('index.2c38014b9dabc132'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -425,10 +426,10 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
         ],
       },
       {
-        sectionName: "Actions",
+        sectionName: $t('index.994ef490875f4022'),
         children: [
           {
-            helpText: "when a user selects an option",
+            helpText: $t('index.ff352b4be1a5a55f'),
             propertyName: "onOptionChange",
             label: "onOptionChange",
             controlType: "ACTION_SELECTOR",
@@ -437,7 +438,7 @@ class DropdownWidget extends BaseWidget<DropdownWidgetProps, WidgetState> {
             isTriggerProperty: true,
           },
           {
-            helpText: "Trigger an action on change of filterText",
+            helpText: $t('index.d04b234a72b6f988'),
             hidden: (props: DropdownWidgetProps) => !props.serverSideFiltering,
             dependencies: ["serverSideFiltering"],
             propertyName: "onFilterUpdate",

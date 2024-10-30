@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import log from "loglevel";
 import type { MomentInput } from "moment";
 import moment from "moment";
@@ -71,7 +72,7 @@ export const transformDataPureFn = (
                   newRow[alias] = "";
                 }
               } else if (value) {
-                newRow[alias] = "Invalid Value";
+                newRow[alias] = $t('transformDataPureFn.00eaff6431f26b89');
               } else {
                 newRow[alias] = "";
               }

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Callout, Text, toast } from "@appsmith/ads";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -83,7 +84,7 @@ function ReconnectSSHError() {
 
   return (
     <StyledCallout kind="error">
-      {errorData.error?.message || "There was an unexpected error"}
+      {errorData.error?.message || $t('ReconnectSSHError.bda098a0846b87fe')}
     </StyledCallout>
   );
 }

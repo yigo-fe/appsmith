@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import * as Sentry from "@sentry/react";
 import classNames from "classnames";
 import React, {
@@ -158,7 +159,7 @@ export const EntityExplorerSidebar = memo(({ children }: Props) => {
           })}
         >
           <Tooltip
-            content="Drag to resize"
+            content={$t('EntityExplorerSidebar.36aade1647c0e5fc')}
             mouseEnterDelay={0.2}
             placement="right"
             visible={tooltipIsOpen && !resizer.resizing}

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get } from "lodash";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "modules/ui-builder/ui/wds/WDSTableWidget/constants";
@@ -10,7 +11,7 @@ import { ButtonVariantTypes } from "components/constants";
 import { ICON_NAMES } from "WidgetProvider/constants";
 
 export default {
-  sectionName: "Discard Button",
+  sectionName: $t('DiscardButtonproperties.b7c04aa0303e74fb'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return hideByColumnType(
       props,
@@ -21,13 +22,13 @@ export default {
   },
   children: [
     {
-      sectionName: "Label",
+      sectionName: $t('DiscardButtonproperties.57b3d0b8e84fe776'),
       collapsible: false,
       children: [
         {
           propertyName: "discardActionLabel",
-          label: "Text",
-          helpText: "Sets the label text of the button",
+          label: $t('DiscardButtonproperties.a8c844c48543c753'),
+          helpText: $t('DiscardButtonproperties.a4468f1c868a2012'),
 
           dependencies: ["primaryColumns"],
           isBindProperty: true,
@@ -36,13 +37,13 @@ export default {
       ],
     },
     {
-      sectionName: "General",
+      sectionName: $t('DiscardButtonproperties.c534aded34aceb95'),
       collapsible: false,
       children: [
         {
           propertyName: "onDiscard",
           label: "onDiscard",
-          helpText: "when the discard button is clicked",
+          helpText: $t('DiscardButtonproperties.df99a4664de28ec1'),
           controlType: "ACTION_SELECTOR",
           hidden: (props: TableWidgetProps, propertyPath: string) => {
             const baseProperty = getBasePropertyPath(propertyPath);
@@ -58,8 +59,8 @@ export default {
         {
           propertyName: "isDiscardVisible",
           dependencies: ["primaryColumns"],
-          label: "Visible",
-          helpText: "Controls the visibility of the discard button",
+          label: $t('DiscardButtonproperties.92a793f28aa06a92'),
+          helpText: $t('DiscardButtonproperties.72c7f5740f4de214'),
           defaultValue: true,
           controlType: "SWITCH",
 
@@ -75,8 +76,8 @@ export default {
         },
         {
           propertyName: "isDiscardDisabled",
-          label: "Disabled",
-          helpText: "Disables clicks to the discard button",
+          label: $t('DiscardButtonproperties.606ff9f36cd1d651'),
+          helpText: $t('DiscardButtonproperties.b3b7819cc8573536'),
           defaultValue: false,
           controlType: "SWITCH",
 
@@ -97,7 +98,7 @@ export default {
 };
 
 export const discardButtonStyleConfig = {
-  sectionName: "Discard Button",
+  sectionName: $t('DiscardButtonproperties.b7c04aa0303e74fb'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return hideByColumnType(
       props,
@@ -108,14 +109,14 @@ export const discardButtonStyleConfig = {
   },
   children: [
     {
-      sectionName: "General",
+      sectionName: $t('DiscardButtonproperties.c534aded34aceb95'),
       collapsible: false,
       children: [
         {
           propertyName: "discardButtonColor",
-          label: "Button color",
+          label: $t('DiscardButtonproperties.d0596d9b0542c8e1'),
           controlType: "PRIMARY_COLUMNS_COLOR_PICKER_V2",
-          helpText: "Changes the color of the button",
+          helpText: $t('DiscardButtonproperties.c8d1591758501dc5'),
           isJSConvertible: true,
 
           dependencies: ["primaryColumns"],
@@ -133,24 +134,24 @@ export const discardButtonStyleConfig = {
         },
         {
           propertyName: "discardButtonVariant",
-          label: "Button variant",
+          label: $t('DiscardButtonproperties.9a5a70b6df9f14a5'),
           controlType: "ICON_TABS",
           fullWidth: true,
 
           isJSConvertible: true,
-          helpText: "Sets the variant of the discard button",
+          helpText: $t('DiscardButtonproperties.f1ea6253caf72c67'),
           dependencies: ["primaryColumns"],
           options: [
             {
-              label: "Primary",
+              label: $t('DiscardButtonproperties.79c5f9a25ae26945'),
               value: ButtonVariantTypes.PRIMARY,
             },
             {
-              label: "Secondary",
+              label: $t('DiscardButtonproperties.75120b6cf616db5b'),
               value: ButtonVariantTypes.SECONDARY,
             },
             {
-              label: "Tertiary",
+              label: $t('DiscardButtonproperties.d8fa4ba76f8c58d4'),
               value: ButtonVariantTypes.TERTIARY,
             },
           ],
@@ -174,11 +175,11 @@ export const discardButtonStyleConfig = {
         },
         {
           propertyName: "discardBorderRadius",
-          label: "Border radius",
+          label: $t('DiscardButtonproperties.206c5c687832f796'),
 
           isJSConvertible: true,
           helpText:
-            "Rounds the corners of the discard button's outer border edge",
+            $t('DiscardButtonproperties.0b0c1315b4780e71'),
           controlType: "BORDER_RADIUS_OPTIONS",
           dependencies: ["primaryColumns"],
           isBindProperty: true,
@@ -193,13 +194,13 @@ export const discardButtonStyleConfig = {
       ],
     },
     {
-      sectionName: "Icon",
+      sectionName: $t('DiscardButtonproperties.b4ec17da872730cd'),
       collapsible: false,
       children: [
         {
           propertyName: "discardActionIconName",
-          label: "Icon",
-          helpText: "Sets the icon to be used for the discard action button",
+          label: $t('DiscardButtonproperties.b4ec17da872730cd'),
+          helpText: $t('DiscardButtonproperties.6def62449e968861'),
           dependencies: ["primaryColumns", "columnOrder"],
           controlType: "ICON_SELECT",
 
@@ -218,8 +219,8 @@ export const discardButtonStyleConfig = {
         },
         {
           propertyName: "discardIconAlign",
-          label: "Position",
-          helpText: "Sets the icon alignment of the discard button",
+          label: $t('DiscardButtonproperties.b723da686b94d8e8'),
+          helpText: $t('DiscardButtonproperties.6e7577f2c8aca68f'),
           controlType: "ICON_TABS",
           fullWidth: false,
           defaultValue: "left",

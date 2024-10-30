@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 
@@ -104,19 +105,19 @@ export default function Pagination(props: PaginationProps) {
           name="actionConfiguration.paginationType"
           options={[
             {
-              label: "None",
+              label: $t('Pagination.0d016e7c9c3a5d21'),
               value: PaginationType.NONE,
             },
             {
-              label: "Paginate with table page number",
+              label: $t('Pagination.ef9fda2921b3e2e4'),
               value: PaginationType.PAGE_NO,
             },
             {
-              label: "Paginate with response URL",
+              label: $t('Pagination.fc9d207e07494745'),
               value: PaginationType.URL,
             },
           ]}
-          placeholder="Method"
+          placeholder=$t('Pagination.b264012cb4e31ff4')
           rows={3}
           selectedOptionElements={[
             null,
@@ -157,14 +158,14 @@ export default function Pagination(props: PaginationProps) {
                   </Text>
                 </StepTitle>
                 <Step type={TextType.P1}>Configure next and previous URL </Step>
-                <Step type={TextType.P1}>Previous URL</Step>
+                <Step type={TextType.P1}>{$t('Pagination.3bc76d38d2c93a38')}</Step>
                 <PaginationFieldWrapper
                   data-location-id={btoa("actionConfiguration.prev")}
                 >
                   <DynamicTextField
                     border={CodeEditorBorder.ALL_SIDE}
                     className="t--apiFormPaginationPrev"
-                    evaluatedPopUpLabel="Previous URL"
+                    evaluatedPopUpLabel={$t('Pagination.3bc76d38d2c93a38')}
                     fill={!!true}
                     focusElementName={`${props.actionName}.actionConfiguration.prev`}
                     height="100%"
@@ -182,14 +183,14 @@ export default function Pagination(props: PaginationProps) {
                     Test
                   </Button>
                 </PaginationFieldWrapper>
-                <Step type={TextType.P1}>Next URL</Step>
+                <Step type={TextType.P1}>{$t('Pagination.61caf27eb4b81fee')}</Step>
                 <PaginationFieldWrapper
                   data-location-id={btoa("actionConfiguration.next")}
                 >
                   <DynamicTextField
                     border={CodeEditorBorder.ALL_SIDE}
                     className="t--apiFormPaginationNext"
-                    evaluatedPopUpLabel="Next URL"
+                    evaluatedPopUpLabel={$t('Pagination.61caf27eb4b81fee')}
                     fill={!!true}
                     focusElementName={`${props.actionName}.actionConfiguration.next`}
                     height="100%"

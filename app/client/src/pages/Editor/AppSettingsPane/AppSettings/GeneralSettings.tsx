@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { updateApplication } from "ee/actions/applicationActions";
 import type { UpdateApplicationPayload } from "ee/api/ApplicationApi";
 import {
@@ -120,7 +121,7 @@ function GeneralSettings() {
               updateAppSettings();
             }
           }}
-          placeholder="App name"
+          placeholder=$t('GeneralSettings.132dc271a4df47ec')
           size="md"
           type="text"
           value={applicationName}

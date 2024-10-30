@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useContext } from "react";
 import styles from "./styles.module.css";
 import Layout from "./Layouts";
@@ -25,7 +26,7 @@ export default function Editor() {
               children: (props: ContentProps) => <HTMLEditor {...props} />,
             },
             {
-              title: "Style",
+              title: $t('index.16afd75ead25753c'),
               titleControls: <TitleControls />,
               children: (props: ContentProps) => <StyleEditor {...props} />,
             },

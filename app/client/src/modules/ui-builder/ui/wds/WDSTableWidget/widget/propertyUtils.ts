@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import type { ColumnProperties } from "../component/Constants";
 import { StickyType } from "../component/Constants";
@@ -21,7 +22,7 @@ export function totalRecordsCountValidation(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   _?: any,
 ) {
-  const ERROR_MESSAGE = "This value must be a number";
+  const ERROR_MESSAGE = $t('propertyUtils.d51e0fd5ccb87ec3');
   const defaultValue = 0;
 
   /*
@@ -73,7 +74,7 @@ export function uniqueColumnNameValidation(
     return {
       isValid: false,
       parsed: value,
-      messages: ["Column names should be unique."],
+      messages: [$t('propertyUtils.1b1b88e6a56d7a79')],
     };
   } else {
     return {
@@ -100,13 +101,13 @@ export function uniqueColumnAliasValidation(
     return {
       isValid: false,
       parsed: value,
-      messages: ["Property name should not be empty."],
+      messages: [$t('propertyUtils.95305d95a68e196f')],
     };
   } else if (value && !!duplicates) {
     return {
       isValid: false,
       parsed: value,
-      messages: ["Property names should be unique."],
+      messages: [$t('propertyUtils.2890c9418e929df5')],
     };
   } else {
     return {
@@ -472,7 +473,7 @@ export const SelectColumnOptionsValidations = (
   let isValid = true;
   let parsed = value;
   let message = "";
-  const expectedMessage = "value should be an array of string";
+  const expectedMessage = $t('propertyUtils.a8769082a3d508bc');
 
   if (typeof value === "string" && value.trim() !== "") {
     /*
@@ -667,7 +668,7 @@ export const allowedFirstDayOfWeekRange = (value: number) => {
   return {
     isValid: isValid,
     parsed: isValid ? Number(value) : 0,
-    messages: isValid ? [] : ["Number should be between 0-6."],
+    messages: isValid ? [] : [$t('propertyUtils.a56b36d83ae96364')],
   };
 };
 
@@ -734,11 +735,11 @@ export const updateMenuItemsSource = (
         propertiesToUpdate.push({
           propertyPath: `${baseProperty}.configureMenuItems`,
           propertyValue: {
-            label: "Configure menu items",
+            label: $t('propertyUtils.f6a11f59be39f455'),
             id: "config",
             config: {
               id: "config",
-              label: "Menu Item",
+              label: $t('propertyUtils.9c9c5319adb54278'),
               isVisible: true,
               isDisabled: false,
             },
@@ -816,7 +817,7 @@ export function selectColumnOptionsValidation(
     optionIndex: number,
   ) => {
     return `Invalid entry at${
-      rowIndex !== null ? ` Row: ${rowIndex}` : ""
+      rowIndex !== null ? $t('propertyUtils.f251fed7191cd6a5', {rowIndex: rowIndex}) : ""
     } index: ${optionIndex}.`;
   };
 
@@ -887,7 +888,7 @@ export function selectColumnOptionsValidation(
 
     if (uniqueValues.has(option.value)) {
       // 6
-      return `Duplicate values found for the following properties, in the array entries, that must be unique -- value.`;
+      return $t('propertyUtils.74cb4e6b0ad42b25');
     } else {
       uniqueValues.add(option.value);
     }
@@ -1033,7 +1034,7 @@ export const tableDataValidation = (
       messages: [
         {
           name: "ValidationError",
-          message: "Data is undefined, re-run your query or fix the data",
+          message: $t('propertyUtils.c30214c89524eba2'),
         },
       ],
     };
@@ -1069,7 +1070,7 @@ export const tableDataValidation = (
           messages: [
             {
               name: "ValidationError",
-              message: `Invalid object at index ${i}`,
+              message: $t('propertyUtils.9caaaa4970a8721a', {i: i}),
             },
           ],
         };
@@ -1102,7 +1103,7 @@ export function textForEachRowValidation(
 
   const DEFAULT_MESSAGE = {
     name: "TypeError",
-    message: "The evaluated value should be either a string or a number.",
+    message: $t('propertyUtils.5832f79a4f23496c'),
   };
 
   if (
@@ -1163,7 +1164,7 @@ export function booleanForEachRowValidation(
 
   const DEFAULT_MESSAGE = {
     name: "TypeError",
-    message: "The evaluated value should be a boolean.",
+    message: $t('propertyUtils.e15707cce5fa8eb7'),
   };
 
   if (isBoolean(value)) {
@@ -1345,7 +1346,7 @@ function colorForEachRowValidation(
 
   const DEFAULT_MESSAGE = {
     name: "TypeError",
-    message: `The evaluated value should match ${config?.params?.regex}`,
+    message: $t('propertyUtils.b447a279a928cd9f', {config__params__regex: config?.params?.regex}),
   };
 
   const isColor = (value: unknown) => {

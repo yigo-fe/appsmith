@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { WIDGET_TAGS } from "constants/WidgetConstants";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { WDSParagraphWidget } from "modules/ui-builder/ui/wds/WDSParagraphWidget";
@@ -11,7 +12,7 @@ class WDSHeadingWidget extends WDSParagraphWidget {
     return {
       ...super.getConfig(),
       tags: [WIDGET_TAGS.SUGGESTED_WIDGETS, WIDGET_TAGS.CONTENT],
-      name: "Heading",
+      name: $t('index.a173b4c846289cac'),
     };
   }
 
@@ -19,8 +20,8 @@ class WDSHeadingWidget extends WDSParagraphWidget {
     return {
       ...super.getDefaults(),
       fontSize: "heading",
-      widgetName: "Heading",
-      text: "Header",
+      widgetName: $t('index.a173b4c846289cac'),
+      text: $t('index.35cb40e57ab6ecfa'),
     };
   }
 
@@ -47,10 +48,10 @@ class WDSHeadingWidget extends WDSParagraphWidget {
 
     parentConfig[generelSectionIndex].children[textPropertyIndex] = {
       propertyName: "text",
-      helpText: "Sets the text of the widget",
-      label: "Text",
+      helpText: $t('index.666c7f2f5ad17889'),
+      label: $t('index.13f2ca7180dd6c65'),
       controlType: "INPUT_TEXT",
-      placeholderText: "Header",
+      placeholderText: $t('index.35cb40e57ab6ecfa'),
       isBindProperty: true,
       isTriggerProperty: false,
       validation: {

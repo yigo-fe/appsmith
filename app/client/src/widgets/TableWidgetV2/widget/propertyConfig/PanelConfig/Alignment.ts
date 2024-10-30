@@ -1,10 +1,11 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import type { TableWidgetProps } from "widgets/TableWidgetV2/constants";
 import { ColumnTypes } from "widgets/TableWidgetV2/constants";
 import { hideByColumnType } from "../../propertyUtils";
 
 export default {
-  sectionName: "Alignment",
+  sectionName: $t('Alignment.314702536730f3c9'),
   hidden: (props: TableWidgetProps, propertyPath: string) => {
     return hideByColumnType(
       props,
@@ -16,8 +17,8 @@ export default {
   children: [
     {
       propertyName: "horizontalAlignment",
-      label: "Horizontal Alignment",
-      helpText: "Sets the horizontal alignment of the content in the column",
+      label: $t('Alignment.ae0e9896c5fb2d7f'),
+      helpText: $t('Alignment.7ff5dae77ba1c45a'),
       controlType: "ICON_TABS",
       options: [
         {
@@ -62,8 +63,8 @@ export default {
     },
     {
       propertyName: "verticalAlignment",
-      label: "Vertical alignment",
-      helpText: "Sets the vertical alignment of the content in the column",
+      label: $t('Alignment.3259221539840094'),
+      helpText: $t('Alignment.0f561c9eda57c9ef'),
       controlType: "ICON_TABS",
       options: [
         {

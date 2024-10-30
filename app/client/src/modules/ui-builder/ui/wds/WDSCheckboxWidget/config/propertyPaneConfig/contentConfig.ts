@@ -1,15 +1,16 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.f17927bd6453de00'),
     children: [
       {
         propertyName: "label",
-        label: "Text",
+        label: $t('contentConfig.b98a68c70309fef2'),
         controlType: "INPUT_TEXT",
-        helpText: "Displays a label next to the widget",
-        placeholderText: "Label",
+        helpText: $t('contentConfig.b549866838109691'),
+        placeholderText: $t('contentConfig.f17927bd6453de00'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -17,12 +18,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Validations",
+    sectionName: $t('contentConfig.ac969234f7fe2377'),
     children: [
       {
         propertyName: "isRequired",
-        label: "Required",
-        helpText: "Makes input to the widget mandatory",
+        label: $t('contentConfig.d8afa550b803c350'),
+        helpText: $t('contentConfig.66641512abc62467'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -32,12 +33,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.fdee062c5fa1b075'),
     children: [
       {
         propertyName: "defaultCheckedState",
-        label: "Default state",
-        helpText: "Sets the default checked state of the widget",
+        label: $t('contentConfig.694a62e6bdc0ddf9'),
+        helpText: $t('contentConfig.c9b720b70e507881'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -46,8 +47,8 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "isVisible",
-        label: "Visible",
-        helpText: "Controls the visibility of the widget",
+        label: $t('contentConfig.67bb9cec65535191'),
+        helpText: $t('contentConfig.03de27ed28e2b2d4'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -56,9 +57,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "isDisabled",
-        label: "Disabled",
+        label: $t('contentConfig.c155873ac13f0db7'),
         controlType: "SWITCH",
-        helpText: "Disables input to this widget",
+        helpText: $t('contentConfig.6d27fafade45d871'),
         isJSConvertible: true,
         isBindProperty: true,
         isTriggerProperty: false,
@@ -66,9 +67,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.7b6b97c3f831a0d6'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.1501803500f314a6'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -78,10 +79,10 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.77e1fbf7029b35a3'),
     children: [
       {
-        helpText: "when the check state is changed",
+        helpText: $t('contentConfig.f6c9ccabbe5c7cd8'),
         propertyName: "onCheckChange",
         label: "onCheckChange",
         controlType: "ACTION_SELECTOR",

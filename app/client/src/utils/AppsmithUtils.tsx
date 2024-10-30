@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { getAppsmithConfigs } from "ee/configs";
 import { ERROR_CODES } from "ee/constants/ApiConstants";
 import { createMessage, ERROR_500 } from "ee/constants/messages";
@@ -241,7 +242,7 @@ export const createNewJSFunctionName = (
     .filter((a: any) => a.config[key] === entityId)
     .map((a) => a.config.name);
 
-  return getNextEntityName("JSObject", pageJsFunctionNames);
+  return getNextEntityName($t('AppsmithUtils.1a8f347a28d23ca9'), pageJsFunctionNames);
 };
 
 export const noop = () => {
@@ -257,7 +258,7 @@ export const stopEventPropagation = (e: any) => {
 export const createNewQueryName = (
   queries: ActionDataState,
   entityId: string,
-  prefix = "Query",
+  prefix = $t('AppsmithUtils.3e379b488f175c0d'),
   key: CreateNewActionKeyInterface = CreateNewActionKey.PAGE,
 ) => {
   const pageApiNames = queries // TODO: Fix this the next time the file is edited

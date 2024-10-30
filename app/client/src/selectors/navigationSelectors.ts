@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { EntityTypeValue } from "ee/entities/DataTree/types";
 import { ACTION_TYPE, JSACTION_TYPE } from "ee/entities/DataTree/types";
 import type { DataTree } from "entities/DataTree/dataTreeTypes";
@@ -122,7 +123,7 @@ export const getEntitiesForNavigation = createSelector(
         datasourceId: datasource?.id,
         isMock: datasource?.isMock,
         actionType:
-          action.config.pluginType === PluginType.DB ? "Query" : "API",
+          action.config.pluginType === PluginType.DB ? $t('navigationSelectors.6df728c1a1f49614') : "API",
       });
     });
 

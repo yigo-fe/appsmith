@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
@@ -100,7 +101,7 @@ function DataSourceOption({
 
   return (
     <Tooltip
-      content="Not supported for template generation"
+      content=$t('DataSourceOption.b8eb4cf41cb924a2')
       isDisabled={
         isSupportedForTemplate || isSelectedNode || isConnectNewDataSourceBtn
       }

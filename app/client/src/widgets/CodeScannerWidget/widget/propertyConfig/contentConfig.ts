@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { PropertyPaneConfig } from "constants/PropertyControlConstants";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { isAutoLayout } from "layoutSystems/autolayout/utils/flexWidgetUtils";
@@ -13,23 +14,23 @@ import {
 import { DefaultMobileCameraTypes } from "WidgetProvider/constants";
 export default [
   {
-    sectionName: "Basic",
+    sectionName: $t('contentConfig.278832b9f24baf2f'),
     children: [
       {
         propertyName: "scannerLayout",
-        label: "Scanner layout",
+        label: $t('contentConfig.ed00f601fd59214d'),
         controlType: "ICON_TABS",
         defaultValue: ScannerLayout.ALWAYS_ON,
         fullWidth: true,
         helpText:
-          'Sets how the code scanner will look and behave. If set to "Always on", the scanner will be visible and scanning all the time. If set to "Click to Scan", the scanner will pop up inside a modal and start scanning when the user clicks on the button.',
+          $t('contentConfig.8a8b61788d8b8efa'),
         options: [
           {
-            label: "Always on",
+            label: $t('contentConfig.1db6379416f615ca'),
             value: ScannerLayout.ALWAYS_ON,
           },
           {
-            label: "Click to scan",
+            label: $t('contentConfig.3594357586626fb2'),
             value: ScannerLayout.CLICK_TO_SCAN,
           },
         ],
@@ -40,10 +41,10 @@ export default [
       },
       {
         propertyName: "label",
-        label: "Text",
+        label: $t('contentConfig.0b76e9567e53bc59'),
         controlType: "INPUT_TEXT",
-        helpText: "Sets the label of the button",
-        placeholderText: "Scan a QR/Barcode",
+        helpText: $t('contentConfig.e3fa0db256a6e191'),
+        placeholderText: $t('contentConfig.0c0811122827c9de'),
         inputType: "TEXT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -55,12 +56,12 @@ export default [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.9fb05902c9030c6f'),
     children: [
       {
         propertyName: "isVisible",
-        label: "Visible",
-        helpText: "Controls the visibility of the widget",
+        label: $t('contentConfig.0b4113a34bff8875'),
+        helpText: $t('contentConfig.e7f8ad23cccc5e20'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -69,8 +70,8 @@ export default [
       },
       {
         propertyName: "isDisabled",
-        label: "Disabled",
-        helpText: "Disables input to this widget",
+        label: $t('contentConfig.5601e21e91cd83ef'),
+        helpText: $t('contentConfig.effe3148dd2cdbd4'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -79,9 +80,9 @@ export default [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.924ac4314889076f'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.c99b6faf6a42ad10'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -89,11 +90,11 @@ export default [
         validation: { type: ValidationTypes.BOOLEAN },
       },
       {
-        helpText: "Show helper text with button on hover",
+        helpText: $t('contentConfig.cc386ffc8f5d4ad1'),
         propertyName: "tooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.ca404f23718d709b'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Add Input Field",
+        placeholderText: $t('contentConfig.3f8d54c646975d46'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -134,10 +135,10 @@ export default [
   },
 
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.a2bf39d5f777335a'),
     children: [
       {
-        helpText: "when a valid code is detected",
+        helpText: $t('contentConfig.4479111caad48924'),
         propertyName: "onCodeDetected",
         label: "onCodeDetected",
         controlType: "ACTION_SELECTOR",

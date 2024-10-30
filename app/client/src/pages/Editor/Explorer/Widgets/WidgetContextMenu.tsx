@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { initExplorerEntityNameEdit } from "actions/explorerActions";
@@ -80,7 +81,7 @@ export function WidgetContextMenu(props: {
     {
       value: "showBinding",
       onSelect: () => showBinding(props.widgetId, widget.widgetName),
-      label: "Show bindings",
+      label: $t('WidgetContextMenu.01c54043a87232b3'),
     },
   ];
 
@@ -88,7 +89,7 @@ export function WidgetContextMenu(props: {
     const option: TreeDropdownOption = {
       value: "rename",
       onSelect: editWidgetName,
-      label: "Rename",
+      label: $t('WidgetContextMenu.107ddd14c74ec7fc'),
     };
 
     optionTree.push(option);
@@ -98,7 +99,7 @@ export function WidgetContextMenu(props: {
     const option: TreeDropdownOption = {
       value: "delete",
       onSelect: dispatchDelete,
-      label: "Delete",
+      label: $t('WidgetContextMenu.00df18baf78b21de'),
       intent: "danger",
       confirmDelete: true,
     };

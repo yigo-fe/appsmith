@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import type { CurrencyOptionProps } from "constants/Currency";
@@ -175,8 +176,8 @@ export const getDefaultCurrency = () => {
   return {
     code: "IN",
     currency: "INR",
-    currency_name: "Indian Rupee",
-    label: "India",
+    currency_name: $t('CurrencyCodeDropdown.90faf5eab01ac6bc'),
+    label: $t('CurrencyCodeDropdown.f8855e5993cf0c50'),
     phone: "91",
     symbol_native: "₹",
   };
@@ -261,7 +262,7 @@ export default function CurrencyTypeDropdown(props: CurrencyDropdownProps) {
         portalClassName={`country-type-filter-dropdown-${props.widgetId}`}
         portalContainer={document.getElementById(CANVAS_ART_BOARD) || undefined}
         searchAutoFocus
-        searchPlaceholder="Search by currency or country"
+        searchPlaceholder=$t('CurrencyCodeDropdown.5654e4c3bbac517e')
         selected={selectedOption}
         showEmptyOptions
         showLabelOnly

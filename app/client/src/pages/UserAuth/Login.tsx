@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { Redirect, useLocation } from "react-router-dom";
 import { connect, useSelector } from "react-redux";
@@ -114,7 +115,7 @@ export function Login(props: LoginFormProps) {
   if (queryParams.get("error")) {
     errorMessage = queryParams.get("message") || queryParams.get("error") || "";
     showError = true;
-    Sentry.captureException("Login failed", {
+    Sentry.captureException($t('Login.49dfa57ca66dc2c7'), {
       level: Severity.Error,
       extra: {
         error: new Error(errorMessage),

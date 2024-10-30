@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { SettingComponentProps } from "./Common";
 import { FormGroup } from "./Common";
@@ -23,7 +24,7 @@ export default function DropDown(
         name={setting.id}
         options={dropdownOptions}
         outline={false}
-        placeholder="Select an option"
+        placeholder=$t('Dropdown.418fac53e713fdc2')
         size="large"
       />
     </FormGroup>

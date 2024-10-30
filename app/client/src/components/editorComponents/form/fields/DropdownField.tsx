@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import _ from "lodash";
 import type { BaseFieldProps, WrappedFieldProps } from "redux-form";
@@ -43,7 +44,7 @@ const renderDropdown = (
           <Container>
             {option.image && (
               <img
-                alt="Datasource"
+                alt={$t('DropdownField.fc72dac41942a34c')}
                 className="plugin-image"
                 src={getAssetUrl(option.image)}
               />

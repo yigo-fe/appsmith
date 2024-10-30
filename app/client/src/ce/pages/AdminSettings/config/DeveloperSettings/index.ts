@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { AdminConfigType } from "ee/pages/AdminSettings/config/types";
 import {
   CategoryType,
@@ -11,7 +12,7 @@ export const config: AdminConfigType = {
   type: SettingCategories.DEVELOPER_SETTINGS,
   categoryType: CategoryType.GENERAL,
   controlType: SettingTypes.GROUP,
-  title: "Developer settings",
+  title: $t('index.c38cd3a8f9b12504'),
   canSave: true,
   settings: [...googleMapsConfig],
 };

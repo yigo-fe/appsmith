@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { get, isEmpty } from "lodash";
 
 import type { PanelConfig } from "constants/PropertyControlConstants";
@@ -30,7 +31,7 @@ function generatePanelPropertyConfig(
     panelIdPropertyName: "identifier",
     contentChildren: [
       {
-        sectionName: "Data",
+        sectionName: $t('generatePanelPropertyConfig.67397d97fdee8fe1'),
         children: [
           ...COMMON_PROPERTIES.content.data,
           ...INPUT_PROPERTIES.content.data,
@@ -43,8 +44,8 @@ function generatePanelPropertyConfig(
           ...ARRAY_PROPERTIES.content.data,
           {
             propertyName: "children",
-            label: "Field configuration",
-            helpText: "Field configuration",
+            label: $t('generatePanelPropertyConfig.8d92f8b41dce5c10'),
+            helpText: $t('generatePanelPropertyConfig.8d92f8b41dce5c10'),
             controlType: "FIELD_CONFIGURATION",
             isBindProperty: false,
             isTriggerProperty: false,
@@ -62,7 +63,7 @@ function generatePanelPropertyConfig(
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('generatePanelPropertyConfig.67b7ca824dd3aea2'),
         children: [
           ...COMMON_PROPERTIES.content.label,
           ...CHECKBOX_PROPERTIES.content.label,
@@ -70,7 +71,7 @@ function generatePanelPropertyConfig(
         ],
       },
       {
-        sectionName: "Search and Filters",
+        sectionName: $t('generatePanelPropertyConfig.fd3617abb60b9822'),
         children: [
           ...SELECT_PROPERTIES.content.searchAndFilters,
           ...MULTI_SELECT_PROPERTIES.content.searchAndFilters,
@@ -85,7 +86,7 @@ function generatePanelPropertyConfig(
         },
       },
       {
-        sectionName: "Validation",
+        sectionName: $t('generatePanelPropertyConfig.e1e5f5efe0082b5a'),
         children: [
           ...INPUT_PROPERTIES.content.validation,
           ...DATE_PROPERTIES.content.validation,
@@ -93,7 +94,7 @@ function generatePanelPropertyConfig(
         hidden: isFieldTypeArrayOrObject,
       },
       {
-        sectionName: "General",
+        sectionName: $t('generatePanelPropertyConfig.aeab8bb434891b40'),
         children: [
           ...COMMON_PROPERTIES.content.general,
           ...INPUT_PROPERTIES.content.general,
@@ -106,7 +107,7 @@ function generatePanelPropertyConfig(
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('generatePanelPropertyConfig.40deb0906babb248'),
         children: [
           ...CHECKBOX_PROPERTIES.content.events,
           ...DATE_PROPERTIES.content.events,
@@ -122,11 +123,11 @@ function generatePanelPropertyConfig(
     ],
     styleChildren: [
       {
-        sectionName: "Label styles",
+        sectionName: $t('generatePanelPropertyConfig.b18810e44862acd0'),
         children: [...COMMON_PROPERTIES.style.label],
       },
       {
-        sectionName: "Icon",
+        sectionName: $t('generatePanelPropertyConfig.1fda21123abd99dc'),
         children: [...INPUT_PROPERTIES.style.icon],
         hidden: (props: JSONFormWidgetProps, propertyPath: string) => {
           const schemaItem: SchemaItem = get(props, propertyPath, {});
@@ -140,12 +141,12 @@ function generatePanelPropertyConfig(
         },
       },
       {
-        sectionName: "Color",
+        sectionName: $t('generatePanelPropertyConfig.f1f75840d2ba8586'),
         children: [...COMMON_PROPERTIES.style.color],
         hidden: isFieldTypeArrayOrObject,
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('generatePanelPropertyConfig.cc5e5b8cd8c064b6'),
         children: [...COMMON_PROPERTIES.style.borderShadow],
         hidden: (props: JSONFormWidgetProps, propertyPath: string) => {
           const schemaItem: SchemaItem = get(props, propertyPath, {});

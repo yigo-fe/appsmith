@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { CurrencyTypeOptions } from "constants/Currency";
 import { countryToFlag } from "./widget/helpers";
 
@@ -19,8 +20,8 @@ export const getDefaultCurrency = () => {
   return {
     code: "US",
     currency: "USD",
-    currency_name: "United States Dollar",
-    label: "United States",
+    currency_name: $t('constants.71f5c09dda04e839'),
+    label: $t('constants.3b16f2841dfdce03'),
     phone: "1",
     symbol_native: "$",
   };

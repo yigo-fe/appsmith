@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type { LoDashStatic } from "lodash";
 import type { PhoneInputWidgetProps } from "../../../widget/types";
 
@@ -10,7 +11,7 @@ export function defaultValueValidation(
 ) {
   const STRING_ERROR_MESSAGE = {
     name: "TypeError",
-    message: "This value must be string",
+    message: $t('defaultValueValidation.8c1f8d2eaac88e60'),
   };
   const EMPTY_ERROR_MESSAGE = { name: "", message: "" };
 

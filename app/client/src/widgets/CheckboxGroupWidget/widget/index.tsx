@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import {
   CheckboxGroupAlignmentTypes,
@@ -79,7 +80,7 @@ class CheckboxGroupWidget extends BaseWidget<
 
   static getConfig() {
     return {
-      name: "Checkbox Group",
+      name: $t('index.1dbb66dc0f9d6c5b'),
       iconSVG: IconSVG,
       thumbnailSVG: ThumbnailSVG,
       tags: [WIDGET_TAGS.TOGGLES],
@@ -94,16 +95,16 @@ class CheckboxGroupWidget extends BaseWidget<
       animateLoading: true,
       labelTextSize: "0.875rem",
       options: [
-        { label: "Blue", value: "BLUE" },
-        { label: "Green", value: "GREEN" },
-        { label: "Red", value: "RED" },
+        { label: $t('index.44cda9842bf75c52'), value: "BLUE" },
+        { label: $t('index.ba47ee9818d94ad5'), value: "GREEN" },
+        { label: $t('index.bd664c876c5deca6'), value: "RED" },
       ],
       defaultSelectedValues: ["BLUE"],
       isDisabled: false,
       isInline: true,
       isRequired: false,
       isVisible: true,
-      labelText: "Label",
+      labelText: $t('index.edf9b796d9363751'),
       labelPosition: LabelPosition.Top,
       labelAlignment: Alignment.LEFT,
       labelWidth: 5,
@@ -172,7 +173,7 @@ class CheckboxGroupWidget extends BaseWidget<
   static getAutocompleteDefinitions(): AutocompletionDefinitions {
     return {
       "!doc":
-        "Checkbox group widget allows users to easily configure multiple checkboxes together.",
+        $t('index.969ac434fac9bb4f'),
       "!url": "https://docs.appsmith.com/widget-reference/checkbox-group",
       isVisible: DefaultAutocompleteDefinitions.isVisible,
       isDisabled: "bool",
@@ -185,12 +186,12 @@ class CheckboxGroupWidget extends BaseWidget<
   static getPropertyPaneContentConfig() {
     return [
       {
-        sectionName: "Data",
+        sectionName: $t('index.6c81b487c38d043c'),
         children: [
           {
-            helpText: "Displays a list of unique checkbox options",
+            helpText: $t('index.7d6a5b6c4f661710'),
             propertyName: "options",
-            label: "Options",
+            label: $t('index.c3de38402707efa3'),
             controlType: "OPTION_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -229,9 +230,9 @@ class CheckboxGroupWidget extends BaseWidget<
               EvaluationSubstitutionType.SMART_SUBSTITUTE,
           },
           {
-            helpText: "Sets the values of the options checked by default",
+            helpText: $t('index.dfc3623eb194e993'),
             propertyName: "defaultSelectedValues",
-            label: "Default selected values",
+            label: $t('index.cbc6524db95098a6'),
             placeholderText: '["apple", "orange"]',
             controlType: "INPUT_TEXT",
             isBindProperty: true,
@@ -251,29 +252,29 @@ class CheckboxGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Label",
+        sectionName: $t('index.edf9b796d9363751'),
         children: [
           {
-            helpText: "Sets the label text of the widget",
+            helpText: $t('index.d22fc428292d0c67'),
             propertyName: "labelText",
-            label: "Text",
+            label: $t('index.ea0ce90f7d75d2e3'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Enter label text",
+            placeholderText: $t('index.864409573b26cbaf'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label position of the widget",
+            helpText: $t('index.4be47c734f6cc74e'),
             propertyName: "labelPosition",
-            label: "Position",
+            label: $t('index.54df6391997a4398'),
             controlType: "ICON_TABS",
             fullWidth: true,
             hidden: isAutoLayout,
             options: [
-              { label: "Auto", value: LabelPosition.Auto },
-              { label: "Left", value: LabelPosition.Left },
-              { label: "Top", value: LabelPosition.Top },
+              { label: $t('index.b0fe1f3c3735907f'), value: LabelPosition.Auto },
+              { label: $t('index.a5b0175a884fe84f'), value: LabelPosition.Left },
+              { label: $t('index.063a0f17ae0b968a'), value: LabelPosition.Top },
             ],
             defaultValue: LabelPosition.Top,
             isBindProperty: false,
@@ -281,9 +282,9 @@ class CheckboxGroupWidget extends BaseWidget<
             validation: { type: ValidationTypes.TEXT },
           },
           {
-            helpText: "Sets the label alignment of the widget",
+            helpText: $t('index.53cf094282f8574f'),
             propertyName: "labelAlignment",
-            label: "Alignment",
+            label: $t('index.ac06a0b6fc193575'),
             controlType: "LABEL_ALIGNMENT_OPTIONS",
             fullWidth: false,
             options: [
@@ -305,9 +306,9 @@ class CheckboxGroupWidget extends BaseWidget<
           },
           {
             helpText:
-              "Sets the label width of the widget as the number of columns",
+              $t('index.4d0fd8ecc55c1b21'),
             propertyName: "labelWidth",
-            label: "Width (in columns)",
+            label: $t('index.05f6b4042baa78fc'),
             controlType: "NUMERIC_INPUT",
             isJSConvertible: true,
             isBindProperty: true,
@@ -326,12 +327,12 @@ class CheckboxGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Validations",
+        sectionName: $t('index.fe4328151ff5aa3e'),
         children: [
           {
             propertyName: "isRequired",
-            label: "Required",
-            helpText: "Makes input to the widget mandatory",
+            label: $t('index.70ee4944560967a2'),
+            helpText: $t('index.349535c315889fe0'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -343,22 +344,22 @@ class CheckboxGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.b081d4eff407faa4'),
         children: [
           {
-            helpText: "Show help text or details about current input",
+            helpText: $t('index.51a45d678891b671'),
             propertyName: "labelTooltip",
-            label: "Tooltip",
+            label: $t('index.48080000aa8c755f'),
             controlType: "INPUT_TEXT",
-            placeholderText: "Value must be atleast 6 chars",
+            placeholderText: $t('index.76ed48244dd63330'),
             isBindProperty: true,
             isTriggerProperty: false,
             validation: { type: ValidationTypes.TEXT },
           },
           {
             propertyName: "isVisible",
-            label: "Visible",
-            helpText: "Controls the visibility of the widget",
+            label: $t('index.c13162cb349e3c74'),
+            helpText: $t('index.423e0459a3e6fd4a'),
             controlType: "SWITCH",
             isJSConvertible: true,
             isBindProperty: true,
@@ -369,9 +370,9 @@ class CheckboxGroupWidget extends BaseWidget<
           },
           {
             propertyName: "isDisabled",
-            label: "Disabled",
+            label: $t('index.97347b82d00926fd'),
             controlType: "SWITCH",
-            helpText: "Disables input to this widget",
+            helpText: $t('index.e502f5d31c64d956'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -381,9 +382,9 @@ class CheckboxGroupWidget extends BaseWidget<
           },
           {
             propertyName: "isInline",
-            label: "Inline",
+            label: $t('index.8f3e76aefcca5810'),
             controlType: "SWITCH",
-            helpText: "Displays the checkboxes horizontally",
+            helpText: $t('index.53383722025dcf9d'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -393,9 +394,9 @@ class CheckboxGroupWidget extends BaseWidget<
           },
           {
             propertyName: "isSelectAll",
-            label: "Select all options",
+            label: $t('index.1eab8e9b7fc9cb91'),
             controlType: "SWITCH",
-            helpText: "Controls whether select all option is shown",
+            helpText: $t('index.24359c37740c0030'),
             isJSConvertible: true,
             isBindProperty: true,
             isTriggerProperty: false,
@@ -405,9 +406,9 @@ class CheckboxGroupWidget extends BaseWidget<
           },
           {
             propertyName: "animateLoading",
-            label: "Animate loading",
+            label: $t('index.d5d4cfce7e62a1d9'),
             controlType: "SWITCH",
-            helpText: "Controls the loading of the widget",
+            helpText: $t('index.c3315da50b7a5ab4'),
             defaultValue: true,
             isJSConvertible: true,
             isBindProperty: true,
@@ -417,10 +418,10 @@ class CheckboxGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Events",
+        sectionName: $t('index.07efa61d400821d1'),
         children: [
           {
-            helpText: "when the check state is changed",
+            helpText: $t('index.5ca01f39ec8d0a38'),
             propertyName: "onSelectionChange",
             label: "onSelectionChange",
             controlType: "ACTION_SELECTOR",
@@ -436,12 +437,12 @@ class CheckboxGroupWidget extends BaseWidget<
   static getPropertyPaneStyleConfig() {
     return [
       {
-        sectionName: "Label styles",
+        sectionName: $t('index.6d0aabd6d6e0c981'),
         children: [
           {
             propertyName: "labelTextColor",
-            label: "Font color",
-            helpText: "Control the color of the label associated",
+            label: $t('index.f2bbc0cd3fcdf256'),
+            helpText: $t('index.0948a5180bab6528'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -450,8 +451,8 @@ class CheckboxGroupWidget extends BaseWidget<
           },
           {
             propertyName: "labelTextSize",
-            label: "Font size",
-            helpText: "Control the font size of the label associated",
+            label: $t('index.ab37ba76c04945cd'),
+            helpText: $t('index.f083e0fa3f996de1'),
             controlType: "DROP_DOWN",
             defaultValue: "0.875rem",
             options: [
@@ -493,8 +494,8 @@ class CheckboxGroupWidget extends BaseWidget<
           },
           {
             propertyName: "labelStyle",
-            label: "Emphasis",
-            helpText: "Control if the label should be bold or italics",
+            label: $t('index.949fed5f5588ce06'),
+            helpText: $t('index.31df797b3aff78be'),
             controlType: "BUTTON_GROUP",
             options: [
               {
@@ -514,36 +515,36 @@ class CheckboxGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "General",
+        sectionName: $t('index.b081d4eff407faa4'),
         children: [
           {
             propertyName: "optionAlignment",
-            label: "Alignment",
+            label: $t('index.ac06a0b6fc193575'),
             controlType: "DROP_DOWN",
-            helpText: "Sets alignment between options.",
+            helpText: $t('index.7e1bfcab149a0381'),
             options: [
               {
-                label: "None",
+                label: $t('index.115eedd409765dab'),
                 value: CheckboxGroupAlignmentTypes.NONE,
               },
               {
-                label: "Start",
+                label: $t('index.69dc8638ef9c27ca'),
                 value: CheckboxGroupAlignmentTypes.START,
               },
               {
-                label: "End",
+                label: $t('index.3303ea7b06048153'),
                 value: CheckboxGroupAlignmentTypes.END,
               },
               {
-                label: "Center",
+                label: $t('index.b607ace6b2e53e7f'),
                 value: CheckboxGroupAlignmentTypes.CENTER,
               },
               {
-                label: "Between",
+                label: $t('index.4812ef05da0ee374'),
                 value: CheckboxGroupAlignmentTypes.SPACE_BETWEEN,
               },
               {
-                label: "Around",
+                label: $t('index.4b32a9523fec4799'),
                 value: CheckboxGroupAlignmentTypes.SPACE_AROUND,
               },
             ],
@@ -567,12 +568,12 @@ class CheckboxGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Color",
+        sectionName: $t('index.662d8d4c322746c8'),
         children: [
           {
             propertyName: "accentColor",
-            helpText: "Sets the checked state color of the checkbox",
-            label: "Accent color",
+            helpText: $t('index.496c5cb7a9b86f03'),
+            label: $t('index.3f961c155a1ca515'),
             controlType: "COLOR_PICKER",
             isJSConvertible: true,
             isBindProperty: true,
@@ -582,13 +583,13 @@ class CheckboxGroupWidget extends BaseWidget<
         ],
       },
       {
-        sectionName: "Border and shadow",
+        sectionName: $t('index.97616f55f8b6d03f'),
         children: [
           {
             propertyName: "borderRadius",
-            label: "Border radius",
+            label: $t('index.93b93114c3a0b75b'),
             helpText:
-              "Rounds the corners of the icon button's outer border edge",
+              $t('index.cf6ffd51c04624c2'),
             controlType: "BORDER_RADIUS_OPTIONS",
 
             isJSConvertible: true,

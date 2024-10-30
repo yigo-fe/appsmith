@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Doc, Map, UndoManager } from "yjs";
 import { captureException } from "@sentry/react";
 import { diff as deepDiff, applyChange, revertChange } from "deep-diff";
@@ -122,7 +123,7 @@ export default class ReplayDSL {
     const endTime = performance.now();
 
     this.logs.push({
-      log: "replay updating",
+      log: $t('ReplayDSL.4484919f77869064'),
       updateTime: `${endTime - startTime} ms`,
     });
   }

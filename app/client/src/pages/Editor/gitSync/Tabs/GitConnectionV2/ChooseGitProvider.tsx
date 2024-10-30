@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import {
   DemoImage,
@@ -193,7 +194,7 @@ function ChooseGitProvider({
                 </CollapsibleHeader>
                 <CollapsibleContent>
                   <DemoImage
-                    alt={`Create an empty repo in ${value?.gitProvider}}`}
+                    alt={$t('ChooseGitProvider.c44c1c51cf776a59', {value__gitProvider: value?.gitProvider})}
                     src={
                       GIT_DEMO_GIF.create_repo[value?.gitProvider || "github"]
                     }
@@ -215,7 +216,7 @@ function ChooseGitProvider({
           kind="info"
           links={
             hasCreateNewApplicationPermission
-              ? [{ children: "Import via git", onClick: handleImport }]
+              ? [{ children: $t('ChooseGitProvider.f56cc857d382e4c7'), onClick: handleImport }]
               : []
           }
         >

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { ValidationTypes } from "constants/WidgetValidation";
 import { EvaluationSubstitutionType } from "entities/DataTree/dataTreeFactory";
 import { AutocompleteDataType } from "utils/autocomplete/AutocompleteDataType";
@@ -13,15 +14,15 @@ type WidgetTypeValue = "SELECT" | "COMBOBOX";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.4d2c46db0b62abe9'),
     children: [
       {
         propertyName: "widgetType",
-        label: "Data type",
+        label: $t('contentConfig.b2623ad8a8531857'),
         controlType: "DROP_DOWN",
         options: [
           {
-            label: "Select",
+            label: $t('contentConfig.43e379c814a5519b'),
             value: "SELECT",
           },
           {
@@ -64,9 +65,9 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "Displays a list of unique options",
+        helpText: $t('contentConfig.335c821fb6ced8b7'),
         propertyName: "options",
-        label: "Options",
+        label: $t('contentConfig.060b768f7f2b9682'),
         controlType: "OPTION_INPUT",
         isJSConvertible: true,
         isBindProperty: true,
@@ -86,9 +87,9 @@ export const propertyPaneContentConfig = [
         evaluationSubstitutionType: EvaluationSubstitutionType.SMART_SUBSTITUTE,
       },
       {
-        helpText: "Sets a default selected option",
+        helpText: $t('contentConfig.3595038715ad9f99'),
         propertyName: "defaultOptionValue",
-        label: "Default selected value",
+        label: $t('contentConfig.2d8bc3ecdb60f86d'),
         placeholderText: "",
         controlType: "INPUT_TEXT",
         isBindProperty: true,
@@ -114,14 +115,14 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Label",
+    sectionName: $t('contentConfig.8d2544c7dd3e3c80'),
     children: [
       {
-        helpText: "Sets the label text of the options widget",
+        helpText: $t('contentConfig.d2fddbe62f6614cd'),
         propertyName: "label",
-        label: "Text",
+        label: $t('contentConfig.366a407517138e2b'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Label",
+        placeholderText: $t('contentConfig.8d2544c7dd3e3c80'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
@@ -129,12 +130,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Validations",
+    sectionName: $t('contentConfig.f364c8503871cc56'),
     children: [
       {
         propertyName: "isRequired",
-        label: "Required",
-        helpText: "Makes input to the widget mandatory",
+        label: $t('contentConfig.ff39625562b5006f'),
+        helpText: $t('contentConfig.fc6ed6dbe5c39bd3'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -144,12 +145,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.4e381424c579de83'),
     children: [
       {
-        helpText: "Show help text or details about current input",
+        helpText: $t('contentConfig.3eedd4d9a295fcfc'),
         propertyName: "labelTooltip",
-        label: "Tooltip",
+        label: $t('contentConfig.6f9a0d5539278025'),
         controlType: "INPUT_TEXT",
         placeholderText: "",
         isBindProperty: true,
@@ -157,9 +158,9 @@ export const propertyPaneContentConfig = [
         validation: { type: ValidationTypes.TEXT },
       },
       {
-        helpText: "Sets a placeholder text for the select",
+        helpText: $t('contentConfig.6636002dd21877e2'),
         propertyName: "placeholderText",
-        label: "Placeholder",
+        label: $t('contentConfig.a02cdda06ab512f0'),
         controlType: "INPUT_TEXT",
         placeholderText: "",
         isBindProperty: true,
@@ -170,9 +171,9 @@ export const propertyPaneContentConfig = [
         },
       },
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('contentConfig.177ace888d31c559'),
         propertyName: "isVisible",
-        label: "Visible",
+        label: $t('contentConfig.fdf0c63a4975734f'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -181,8 +182,8 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "isDisabled",
-        label: "Disabled",
-        helpText: "Disables input to this widget",
+        label: $t('contentConfig.2c9aacd2d518d2da'),
+        helpText: $t('contentConfig.375ff87856ee641f'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -191,9 +192,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.483a33d7da79af22'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.2c04f9ca7e730104'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -203,10 +204,10 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "Events",
+    sectionName: $t('contentConfig.e2b1295175739787'),
     children: [
       {
-        helpText: "when a user changes the selected option",
+        helpText: $t('contentConfig.fa15bdf1756f39dc'),
         propertyName: "onSelectionChange",
         label: "onSelectionChange",
         controlType: "ACTION_SELECTOR",

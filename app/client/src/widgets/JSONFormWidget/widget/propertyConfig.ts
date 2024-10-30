@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { Alignment } from "@blueprintjs/core";
 import { ButtonPlacementTypes, ButtonVariantTypes } from "components/constants";
 import type { OnButtonClickProps } from "components/propertyControls/ButtonControl";
@@ -46,7 +47,7 @@ export const sourceDataValidationFn = (
       messages: [
         {
           name: "ValidationError",
-          message: `Data is undefined`,
+          message: $t('propertyConfig.21ae21acb480d80e'),
         },
       ],
     };
@@ -59,7 +60,7 @@ export const sourceDataValidationFn = (
       messages: [
         {
           name: "ValidationError",
-          message: "Data is empty",
+          message: $t('propertyConfig.78bb2d49f4cb6e11'),
         },
       ],
     };
@@ -72,7 +73,7 @@ export const sourceDataValidationFn = (
       messages: [
         {
           name: "ValidationError",
-          message: `Source data cannot be ${value}`,
+          message: $t('propertyConfig.08e7c3d3d1d204ae', {value: value}),
         },
       ],
     };
@@ -92,7 +93,7 @@ export const sourceDataValidationFn = (
       messages: [
         {
           name: "TypeError",
-          message: `The value does not evaluate to type Object`,
+          message: $t('propertyConfig.9a9c2ddf77b9913a'),
         },
       ],
     };
@@ -172,12 +173,12 @@ const generateFormCTADisabled = (widgetProps: JSONFormWidgetProps) =>
 
 export const contentConfig = [
   {
-    sectionName: "Data",
+    sectionName: $t('propertyConfig.2ceeba750b780ac6'),
     children: [
       {
         propertyName: "sourceData",
-        helpText: "Input JSON sample for default form layout",
-        label: "Source data",
+        helpText: $t('propertyConfig.17004d8220629411'),
+        label: $t('propertyConfig.bba4b236e8f03544'),
         controlType: "ONE_CLICK_BINDING_CONTROL",
         controlConfig: {
           showEditFieldsModal: true, // Shows edit field modals button in the datasource table control
@@ -193,7 +194,7 @@ export const contentConfig = [
           /* other form config options like create or update flow, get default values from widget and data identifier to be used in the generated query as primary key*/
           otherFields: [
             {
-              label: "Form Type",
+              label: $t('propertyConfig.25748ce9532c1373'),
               name: "formType",
               fieldType: FieldType.SELECT,
               optionType: FieldOptionsType.CUSTOM, // Dropdown options can be custom ( options provided by the widget config like Line 193 ) or widgets ( connectable widgets in the page ) or columns ( columns from the datasource )
@@ -204,12 +205,12 @@ export const contentConfig = [
               allowClear: false, // whether the dropdown should have a clear option
               options: [
                 {
-                  label: "Create records",
+                  label: $t('propertyConfig.44a6940116fca938'),
                   value: "create",
                   id: "create",
                 },
                 {
-                  label: "Edit records",
+                  label: $t('propertyConfig.bcab694dd35a155c'),
                   value: "edit",
                   id: "edit",
                 },
@@ -222,7 +223,7 @@ export const contentConfig = [
               },
             },
             {
-              label: "Get values from",
+              label: $t('propertyConfig.85d0e3b121fb36aa'),
               name: "defaultValues",
               fieldType: FieldType.SELECT,
               optionType: FieldOptionsType.WIDGETS,
@@ -234,7 +235,7 @@ export const contentConfig = [
               },
             },
             {
-              label: "Data Identifier",
+              label: $t('propertyConfig.e211759027cc27da'),
               name: "dataIdentifier",
               isDataIdentifier: true, // Whether the field is a data identifier or not
               fieldType: FieldType.SELECT,
@@ -252,7 +253,7 @@ export const contentConfig = [
           ],
         },
         isJSConvertible: true,
-        placeholderText: '{ "name": "John", "age": 24 }',
+        placeholderText: '{ "name": $t('propertyConfig.fc167480aca97d1c'), "age": 24 }',
         isBindProperty: true,
         isTriggerProperty: false,
         validation: {
@@ -261,7 +262,7 @@ export const contentConfig = [
             fn: sourceDataValidationFn,
             expected: {
               type: "JSON",
-              example: `{ "name": "John Doe", "age": 29 }`,
+              example: `{ "name": $t('propertyConfig.e460ccfa172d1a1f'), "age": 29 }`,
               autocompleteDataType: AutocompleteDataType.OBJECT,
             },
           },
@@ -271,8 +272,8 @@ export const contentConfig = [
       {
         propertyName: "autoGenerateForm",
         helpText:
-          "Caution: When auto generate form is enabled, the form fields would regenerate if there is any change of source data (keys change or value type changes eg from string to number). If disabled then the fields and their configuration won't change with the change of source data.",
-        label: "Auto generate form",
+          $t('propertyConfig.b8408172831592ea'),
+        label: $t('propertyConfig.351bde99befdd3ff'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -286,7 +287,7 @@ export const contentConfig = [
         controlType: "BUTTON",
         isJSConvertible: false,
         isBindProperty: false,
-        buttonLabel: "Generate form",
+        buttonLabel: $t('propertyConfig.4c5167d592c41c40'),
         onClick: onGenerateFormClick,
         isDisabled: generateFormCTADisabled,
         isTriggerProperty: false,
@@ -301,8 +302,8 @@ export const contentConfig = [
       },
       {
         propertyName: `schema.${ROOT_SCHEMA_KEY}.children`,
-        helpText: "Field configuration",
-        label: "Field configuration",
+        helpText: $t('propertyConfig.8e8e24d6a0b40a2a'),
+        label: $t('propertyConfig.8e8e24d6a0b40a2a'),
         controlType: "FIELD_CONFIGURATION",
         isBindProperty: false,
         isTriggerProperty: false,
@@ -313,22 +314,22 @@ export const contentConfig = [
     expandedByDefault: true,
   },
   {
-    sectionName: "General",
+    sectionName: $t('propertyConfig.127f2c5ccb941b6c'),
     children: [
       {
         propertyName: "title",
-        label: "Title",
-        helpText: "Sets the title of the form",
+        label: $t('propertyConfig.3fbedea68e45b44a'),
+        helpText: $t('propertyConfig.81f95fe5cf06816b'),
         controlType: "INPUT_TEXT",
-        placeholderText: "Update Order",
+        placeholderText: $t('propertyConfig.b19553bde9ef93f5'),
         isBindProperty: true,
         isTriggerProperty: false,
         validation: { type: ValidationTypes.TEXT },
       },
       {
         propertyName: "isVisible",
-        helpText: "Controls the visibility of the widget",
-        label: "Visible",
+        helpText: $t('propertyConfig.84b4713da59dd9dc'),
+        label: $t('propertyConfig.e1c8b96c5b078bb1'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -337,8 +338,8 @@ export const contentConfig = [
       },
       {
         propertyName: "useSourceData",
-        helpText: "Use source data for hidden fields to show them in form data",
-        label: "Hidden fields in data",
+        helpText: $t('propertyConfig.81df2af9ca41eaf5'),
+        label: $t('propertyConfig.cb140a70a76a6757'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -347,9 +348,9 @@ export const contentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('propertyConfig.76a4c0c73905b053'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('propertyConfig.0605957850abb3d5'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,
@@ -359,8 +360,8 @@ export const contentConfig = [
       {
         propertyName: "disabledWhenInvalid",
         helpText:
-          "Disables the submit button when the parent form has a required widget that is not filled",
-        label: "Disabled invalid forms",
+          $t('propertyConfig.74ff5038dc0131c6'),
+        label: $t('propertyConfig.a2594a2dc6a95b6f'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -369,8 +370,8 @@ export const contentConfig = [
       },
       {
         propertyName: "fixedFooter",
-        helpText: "Makes the footer always stick to the bottom of the form",
-        label: "Fixed Footer",
+        helpText: $t('propertyConfig.a2bca9a9e904d10d'),
+        label: $t('propertyConfig.a93ab9d551aa320d'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -379,8 +380,8 @@ export const contentConfig = [
       },
       {
         propertyName: "scrollContents",
-        helpText: "Allows scrolling of the form",
-        label: "Scroll contents",
+        helpText: $t('propertyConfig.002233f12712c487'),
+        label: $t('propertyConfig.d580dc40e5bb830a'),
         controlType: "SWITCH",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -388,8 +389,8 @@ export const contentConfig = [
       },
       {
         propertyName: "showReset",
-        helpText: "Show/hide reset form button",
-        label: "Show reset",
+        helpText: $t('propertyConfig.f9ba2db192d46709'),
+        label: $t('propertyConfig.f7e4f0ff2ffead35'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -398,8 +399,8 @@ export const contentConfig = [
       },
       {
         propertyName: "submitButtonLabel",
-        helpText: "Changes the label of the submit button",
-        label: "Submit button label",
+        helpText: $t('propertyConfig.596dce5e048740aa'),
+        label: $t('propertyConfig.e8bc567374d4ff43'),
         controlType: "INPUT_TEXT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -407,8 +408,8 @@ export const contentConfig = [
       },
       {
         propertyName: "resetButtonLabel",
-        helpText: "Changes the label of the reset button",
-        label: "Reset button label",
+        helpText: $t('propertyConfig.ced8309d1034e772'),
+        label: $t('propertyConfig.f76dad4f75753495'),
         controlType: "INPUT_TEXT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -418,11 +419,11 @@ export const contentConfig = [
     expandedByDefault: false,
   },
   {
-    sectionName: "Events",
+    sectionName: $t('propertyConfig.e9e03d24b6507a23'),
     children: [
       {
         propertyName: "onSubmit",
-        helpText: "when the submit button is clicked",
+        helpText: $t('propertyConfig.aad2fbd054a862d7'),
         label: "onSubmit",
         controlType: "ACTION_SELECTOR",
         isJSConvertible: true,
@@ -436,13 +437,13 @@ export const contentConfig = [
 
 const generateButtonStyleControlsV2For = (prefix: string) => [
   {
-    sectionName: "General",
+    sectionName: $t('propertyConfig.127f2c5ccb941b6c'),
     collapsible: false,
     children: [
       {
         propertyName: `${prefix}.buttonColor`,
-        helpText: "Changes the color of the button",
-        label: "Button color",
+        helpText: $t('propertyConfig.53533753fb284591'),
+        label: $t('propertyConfig.0b83062349d6919c'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -451,22 +452,22 @@ const generateButtonStyleControlsV2For = (prefix: string) => [
       },
       {
         propertyName: `${prefix}.buttonVariant`,
-        label: "Button variant",
+        label: $t('propertyConfig.9a630069ebec7ff0'),
         controlType: "ICON_TABS",
         defaultValue: ButtonVariantTypes.PRIMARY,
         fullWidth: true,
-        helpText: "Sets the variant of the icon button",
+        helpText: $t('propertyConfig.092df7813f8ff00a'),
         options: [
           {
-            label: "Primary",
+            label: $t('propertyConfig.0141cafef20fdf2a'),
             value: ButtonVariantTypes.PRIMARY,
           },
           {
-            label: "Secondary",
+            label: $t('propertyConfig.7e8efcb7bc58ef55'),
             value: ButtonVariantTypes.SECONDARY,
           },
           {
-            label: "Tertiary",
+            label: $t('propertyConfig.7d891920a986fdc9'),
             value: ButtonVariantTypes.TERTIARY,
           },
         ],
@@ -487,8 +488,8 @@ const generateButtonStyleControlsV2For = (prefix: string) => [
       },
       {
         propertyName: `${prefix}.borderRadius`,
-        label: "Border radius",
-        helpText: "Rounds the corners of the icon button's outer border edge",
+        label: $t('propertyConfig.70f897e8b627933e'),
+        helpText: $t('propertyConfig.3497debbf7f7ea6e'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -497,9 +498,9 @@ const generateButtonStyleControlsV2For = (prefix: string) => [
       },
       {
         propertyName: `${prefix}.boxShadow`,
-        label: "Box shadow",
+        label: $t('propertyConfig.71f0e50f653597b4'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('propertyConfig.e8ecc8c49f71ec07'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -511,13 +512,13 @@ const generateButtonStyleControlsV2For = (prefix: string) => [
     ],
   },
   {
-    sectionName: "Icon",
+    sectionName: $t('propertyConfig.adfb342f14f259ef'),
     collapsible: false,
     children: [
       {
         propertyName: `${prefix}.iconName`,
-        label: "Icon",
-        helpText: "Sets the icon to be used for the button",
+        label: $t('propertyConfig.adfb342f14f259ef'),
+        helpText: $t('propertyConfig.2418dbf0fccda56e'),
         controlType: "ICON_SELECT",
         isJSConvertible: true,
         isBindProperty: true,
@@ -544,8 +545,8 @@ const generateButtonStyleControlsV2For = (prefix: string) => [
       },
       {
         propertyName: `${prefix}.iconAlign`,
-        label: "Position",
-        helpText: "Sets the icon alignment of the button",
+        label: $t('propertyConfig.947927d9ccebabae'),
+        helpText: $t('propertyConfig.e177dd4ed634eb05'),
         controlType: "ICON_TABS",
         defaultValue: "left",
         fullWidth: false,
@@ -571,21 +572,21 @@ const generateButtonStyleControlsV2For = (prefix: string) => [
       },
       {
         propertyName: `${prefix}.placement`,
-        label: "Placement",
+        label: $t('propertyConfig.7a562682068ed6ce'),
         controlType: "ICON_TABS",
         fullWidth: true,
-        helpText: "Sets the space between items",
+        helpText: $t('propertyConfig.fc306983dee91b63'),
         options: [
           {
-            label: "Start",
+            label: $t('propertyConfig.5b724744252ef165'),
             value: ButtonPlacementTypes.START,
           },
           {
-            label: "Between",
+            label: $t('propertyConfig.68d91c9d0d12e5a1'),
             value: ButtonPlacementTypes.BETWEEN,
           },
           {
-            label: "Center",
+            label: $t('propertyConfig.d97a7561e30d17d9'),
             value: ButtonPlacementTypes.CENTER,
           },
         ],
@@ -611,13 +612,13 @@ const generateButtonStyleControlsV2For = (prefix: string) => [
 
 export const styleConfig = [
   {
-    sectionName: "Color",
+    sectionName: $t('propertyConfig.928b63cb91829eaa'),
     children: [
       {
         propertyName: "backgroundColor",
-        helpText: "Use a html color name, HEX, RGB or RGBA value",
+        helpText: $t('propertyConfig.6436a5e224504589'),
         placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
-        label: "Background color",
+        label: $t('propertyConfig.49cedb9419a24d07'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -626,9 +627,9 @@ export const styleConfig = [
       },
       {
         propertyName: "borderColor",
-        helpText: "Use a html color name, HEX, RGB or RGBA value",
+        helpText: $t('propertyConfig.6436a5e224504589'),
         placeholderText: "#FFFFFF / Gray / rgb(255, 99, 71)",
-        label: "Border color",
+        label: $t('propertyConfig.d21555c7dcc1485f'),
         controlType: "COLOR_PICKER",
         isJSConvertible: true,
         isBindProperty: true,
@@ -638,13 +639,13 @@ export const styleConfig = [
     ],
   },
   {
-    sectionName: "Border and shadow",
+    sectionName: $t('propertyConfig.715d172840283e0b'),
     children: [
       {
         propertyName: "borderWidth",
-        helpText: "Enter value for border width",
-        label: "Border width",
-        placeholderText: "Enter value in px",
+        helpText: $t('propertyConfig.a5182fd0d47e0272'),
+        label: $t('propertyConfig.8b6f766dc2a834f3'),
+        placeholderText: $t('propertyConfig.3dbac89070b2a172'),
         controlType: "INPUT_TEXT",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -652,8 +653,8 @@ export const styleConfig = [
       },
       {
         propertyName: "borderRadius",
-        helpText: "Enter value for border radius",
-        label: "Border radius",
+        helpText: $t('propertyConfig.3a5bbb843e78114f'),
+        label: $t('propertyConfig.70f897e8b627933e'),
         controlType: "BORDER_RADIUS_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -662,9 +663,9 @@ export const styleConfig = [
       },
       {
         propertyName: "boxShadow",
-        label: "Box shadow",
+        label: $t('propertyConfig.71f0e50f653597b4'),
         helpText:
-          "Enables you to cast a drop shadow from the frame of the widget",
+          $t('propertyConfig.e8ecc8c49f71ec07'),
         controlType: "BOX_SHADOW_OPTIONS",
         isJSConvertible: true,
         isBindProperty: true,
@@ -674,11 +675,11 @@ export const styleConfig = [
     ],
   },
   {
-    sectionName: "Submit button styles",
+    sectionName: $t('propertyConfig.2c418f4da3f2a1d4'),
     children: generateButtonStyleControlsV2For("submitButtonStyles"),
   },
   {
-    sectionName: "Reset button styles",
+    sectionName: $t('propertyConfig.6a7580d9a608a89c'),
     children: generateButtonStyleControlsV2For("resetButtonStyles"),
     dependencies: ["showReset"],
     hidden: (props: JSONFormWidgetProps) => !props.showReset,

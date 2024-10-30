@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import type { Carousel, Header } from "./types";
 import UpgradePage from "./UpgradePage";
@@ -19,7 +20,7 @@ import { RampFeature, RampSection } from "utils/ProductRamps/RampsControlList";
 export function ProvisioningUpgradePage() {
   const { onUpgrade } = useOnUpgrade({
     logEventName: "PROVISIONING_UPGRADE_ADMIN_SETTINGS",
-    logEventData: { source: "Provisioning" },
+    logEventData: { source: $t('ProvisioningUpgradePage.eb75abf2ce5efe40') },
     featureName: RampFeature.Provisioning,
     sectionName: RampSection.AdminSettings,
     isEnterprise: true,

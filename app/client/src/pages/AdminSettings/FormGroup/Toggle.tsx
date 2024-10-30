@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { memo } from "react";
 import type { WrappedFieldInputProps, WrappedFieldMetaProps } from "redux-form";
 import { Field, getFormValues } from "redux-form";
@@ -53,7 +54,7 @@ function FieldToggleWithToggleText(
           <ToggleStatus>
             {typeof toggleText == "function"
               ? createMessage(() => toggleText(val))
-              : createMessage(() => `${label ? `Enable ${label}` : "Enable"}`)}
+              : createMessage(() => `${label ? $t('Toggle.6833cc558258b443', {label: label}) : $t('Toggle.1a9862e15d9ddb86')}`)}
           </ToggleStatus>
         </Switch>
       </ToggleWrapper>

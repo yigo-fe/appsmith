@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { APPLICATIONS_URL } from "constants/routes";
@@ -39,7 +40,7 @@ function PageNotFound(props: Props) {
           {createMessage(BACK_TO_HOMEPAGE)}
         </Button>
       }
-      description="Either this page doesn't exist, or you don't have access to this page"
+      description=$t('PageNotFound.c4b2b5eb1aff156d')
       errorCode={createMessage(PAGE_NOT_FOUND_TITLE)}
       title={createMessage(PAGE_NOT_FOUND)}
     />

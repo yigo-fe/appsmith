@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { BUTTON_VARIANTS, COLORS } from "@appsmith/wds";
 import {
   BUTTON_WIDGET_DEFAULT_LABEL,
@@ -9,14 +10,14 @@ import { objectKeys } from "@appsmith/utils";
 
 export const propertyPaneContentConfig = [
   {
-    sectionName: "Data",
+    sectionName: $t('contentConfig.c9b81664b15d3d08'),
     children: [
       {
-        helpText: "Group Buttons",
+        helpText: $t('contentConfig.43e2e541cd01b8f5'),
         propertyName: "buttonsList",
         controlType: "GROUP_BUTTONS",
         allowSpatialGrouping: true,
-        label: "Buttons",
+        label: $t('contentConfig.1f39ea68694a6f99'),
         dependencies: ["childStylesheet", "orientation"],
         isBindProperty: false,
         isTriggerProperty: false,
@@ -40,12 +41,12 @@ export const propertyPaneContentConfig = [
           },
           contentChildren: [
             {
-              sectionName: "Label",
+              sectionName: $t('contentConfig.d1d688d799cf9885'),
               children: [
                 {
                   propertyName: "label",
-                  helpText: "Sets the label of the button",
-                  label: "Text",
+                  helpText: $t('contentConfig.e075c2fc64fd802f'),
+                  label: $t('contentConfig.4c2f8be633b5f7e5'),
                   controlType: "INPUT_TEXT",
                   placeholderText: createMessage(BUTTON_WIDGET_DEFAULT_LABEL),
                   isBindProperty: true,
@@ -55,12 +56,12 @@ export const propertyPaneContentConfig = [
               ],
             },
             {
-              sectionName: "General",
+              sectionName: $t('contentConfig.d593b4d3b188fe5f'),
               children: [
                 {
                   propertyName: "isVisible",
-                  helpText: "Controls the visibility of the widget",
-                  label: "Visible",
+                  helpText: $t('contentConfig.f60d4127d2c0b3c2'),
+                  label: $t('contentConfig.3e9468fc78055bc6'),
                   controlType: "SWITCH",
                   isJSConvertible: true,
                   isBindProperty: true,
@@ -69,8 +70,8 @@ export const propertyPaneContentConfig = [
                 },
                 {
                   propertyName: "isDisabled",
-                  helpText: "Disables input to the widget",
-                  label: "Disabled",
+                  helpText: $t('contentConfig.c174d4eeab654ac8'),
+                  label: $t('contentConfig.f9bd586fb72ed77c'),
                   controlType: "SWITCH",
                   isJSConvertible: true,
                   isBindProperty: true,
@@ -80,10 +81,10 @@ export const propertyPaneContentConfig = [
               ],
             },
             {
-              sectionName: "Events",
+              sectionName: $t('contentConfig.125a959727ad20cc'),
               children: [
                 {
-                  helpText: "when the button is clicked",
+                  helpText: $t('contentConfig.6eb92f4327a135db'),
                   propertyName: "onClick",
                   label: "onClick",
                   controlType: "ACTION_SELECTOR",
@@ -96,14 +97,14 @@ export const propertyPaneContentConfig = [
           ],
           styleChildren: [
             {
-              sectionName: "General",
+              sectionName: $t('contentConfig.d593b4d3b188fe5f'),
               children: [
                 {
                   propertyName: "variant",
-                  label: "Button variant",
+                  label: $t('contentConfig.b0d578b7055ce0a5'),
                   controlType: "ICON_TABS",
                   fullWidth: true,
-                  helpText: "Sets the variant of the button",
+                  helpText: $t('contentConfig.7de42249622c871e'),
                   options: objectKeys(BUTTON_VARIANTS).map((variant) => ({
                     label: BUTTON_VARIANTS[variant],
                     value: variant,
@@ -122,11 +123,11 @@ export const propertyPaneContentConfig = [
                 },
                 {
                   propertyName: "color",
-                  label: "Button color",
+                  label: $t('contentConfig.ab19b9a7fad729e4'),
                   controlType: "DROP_DOWN",
                   defaultValue: COLORS.accent,
                   fullWidth: true,
-                  helpText: "Sets the semantic color of the button",
+                  helpText: $t('contentConfig.c27f7d98cd3d36cf'),
                   options: Object.values(COLORS).map((semantic) => ({
                     label: capitalize(semantic),
                     value: semantic,
@@ -146,12 +147,12 @@ export const propertyPaneContentConfig = [
               ],
             },
             {
-              sectionName: "Icon",
+              sectionName: $t('contentConfig.aed029b17fa68705'),
               children: [
                 {
                   propertyName: "icon",
-                  label: "Icon",
-                  helpText: "Sets the icon to be used for a button",
+                  label: $t('contentConfig.aed029b17fa68705'),
+                  helpText: $t('contentConfig.a9e83f84512fc18c'),
                   controlType: "ICON_SELECT_V2",
                   isJSConvertible: true,
                   isBindProperty: true,
@@ -160,8 +161,8 @@ export const propertyPaneContentConfig = [
                 },
                 {
                   propertyName: "iconPosition",
-                  label: "Position",
-                  helpText: "Sets the icon alignment of the button",
+                  label: $t('contentConfig.c279a88a64e64e4d'),
+                  helpText: $t('contentConfig.c6e4a304f22414c9'),
                   controlType: "ICON_TABS",
                   fullWidth: false,
                   defaultValue: "start",
@@ -192,12 +193,12 @@ export const propertyPaneContentConfig = [
     ],
   },
   {
-    sectionName: "General",
+    sectionName: $t('contentConfig.d593b4d3b188fe5f'),
     children: [
       {
-        helpText: "Controls the visibility of the widget",
+        helpText: $t('contentConfig.f60d4127d2c0b3c2'),
         propertyName: "isVisible",
-        label: "Visible",
+        label: $t('contentConfig.3e9468fc78055bc6'),
         controlType: "SWITCH",
         isJSConvertible: true,
         isBindProperty: true,
@@ -206,9 +207,9 @@ export const propertyPaneContentConfig = [
       },
       {
         propertyName: "animateLoading",
-        label: "Animate loading",
+        label: $t('contentConfig.78183b76f93e438f'),
         controlType: "SWITCH",
-        helpText: "Controls the loading of the widget",
+        helpText: $t('contentConfig.02d0e206d2916adc'),
         defaultValue: true,
         isJSConvertible: true,
         isBindProperty: true,

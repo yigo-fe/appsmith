@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { fetchGheetSheets } from "actions/datasourceActions";
 import { useCallback, useContext, useMemo } from "react";
@@ -147,7 +148,7 @@ export function useTableOrSpreadsheet() {
     error: isGoogleSheetPluginDS(selectedDatasourcePluginPackageName)
       ? spreadSheets?.error
       : datasourceStructure?.error?.message,
-    labelText: `Select ${fieldName} from ${selectedDatasource?.name}`,
+    labelText: $t('useTableOrSpreadsheet.ad7b0f13a984b34a', {fieldName: fieldName,selectedDatasource__name: selectedDatasource?.name}),
     label: (
       <Label>
         Select {fieldName} from <Bold>{selectedDatasource?.name}</Bold>

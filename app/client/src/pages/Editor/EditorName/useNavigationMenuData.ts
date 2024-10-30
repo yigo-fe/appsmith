@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import type React from "react";
 import { useCallback, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -82,7 +83,7 @@ export const useNavigationMenuData = ({
       link.click();
     }
 
-    toast.show(`Successfully exported ${currentApplication?.name}`, {
+    toast.show($t('useNavigationMenuData.3c6c03ab3fab16b1', {currentApplication__name: currentApplication?.name}), {
       kind: "success",
     });
   }, [
@@ -101,7 +102,7 @@ export const useNavigationMenuData = ({
       });
       history.push(APPLICATIONS_URL);
     } else {
-      toast.show("Error while deleting Application", {
+      toast.show($t('useNavigationMenuData.e56d636bf784988b'), {
         kind: "error",
       });
     }
@@ -111,26 +112,26 @@ export const useNavigationMenuData = ({
     () =>
       [
         {
-          text: "Rename",
+          text: $t('useNavigationMenuData.fc436c306d4a7e8b'),
           onClick: editMode,
           type: MenuTypes.MENU,
           isVisible: true,
         },
         {
-          text: "Fork application",
+          text: $t('useNavigationMenuData.191b31fc7be2be14'),
           onClick: () => setForkApplicationModalOpen(true),
           type: MenuTypes.MENU,
           isVisible: isApplicationIdPresent && hasEditPermission,
         },
         {
-          text: "Export application",
+          text: $t('useNavigationMenuData.75d28840cb71507c'),
           onClick: exportAppAsJSON,
           type: MenuTypes.MENU,
           isVisible: isApplicationIdPresent && hasExportPermission,
         },
         hasDeletePermission && {
-          text: "Delete application",
-          confirmText: "Are you sure?",
+          text: $t('useNavigationMenuData.a7b4f6c063b138ce'),
+          confirmText: $t('useNavigationMenuData.1813af931c528135'),
           onClick: deleteApplication,
           type: MenuTypes.RECONFIRM,
           isVisible: isApplicationIdPresent,
@@ -142,19 +143,19 @@ export const useNavigationMenuData = ({
           isVisible: true,
         },
         {
-          text: "Help",
+          text: $t('useNavigationMenuData.ff2faea220eb1450'),
           type: MenuTypes.PARENT,
           isVisible: true,
           children: [
             {
-              text: "Documentation",
+              text: $t('useNavigationMenuData.c93f52189bcde593'),
               onClick: () => openExternalLink(DOCS_BASE_URL),
               type: MenuTypes.MENU,
               isVisible: true,
               startIcon: "book-line",
             },
             {
-              text: "Report a bug",
+              text: $t('useNavigationMenuData.8c9b572e7fa966d8'),
               onClick: () =>
                 openExternalLink(
                   "https://github.com/appsmithorg/appsmith/issues/new/choose",
@@ -165,7 +166,7 @@ export const useNavigationMenuData = ({
             },
             {
               startIcon: "chat-help",
-              text: "Chat with us",
+              text: $t('useNavigationMenuData.a38f14009c087a51'),
               onClick: () => {
                 if (cloudHosting || isIntercomConsentGiven) {
                   window.Intercom("show");

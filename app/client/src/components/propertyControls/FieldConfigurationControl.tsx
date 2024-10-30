@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import log from "loglevel";
 import { isEmpty, isString, maxBy, set, sortBy } from "lodash";
@@ -300,7 +301,7 @@ class FieldConfigurationControl extends BaseControl<ControlProps, State> {
               toggleVisibility:
                 id !== ARRAY_ITEM_KEY ? props.toggleVisibility : undefined,
               isDelete: isCustomField && id !== ARRAY_ITEM_KEY,
-              placeholder: "Field label",
+              placeholder: $t('FieldConfigurationControl.f9221172a9c2d9a9'),
             });
           }}
           toggleVisibility={this.toggleVisibility}

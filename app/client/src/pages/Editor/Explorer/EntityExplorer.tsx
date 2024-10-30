@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React, { useRef, useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { NonIdealState, Classes } from "@blueprintjs/core";
@@ -118,9 +119,9 @@ function EntityExplorer({ isActive }: { isActive: boolean }) {
       {noResults && (
         <NoResult
           className={Classes.DARK}
-          description="Try modifying the search keyword."
+          description=$t('EntityExplorer.d332d71c96123344')
           icon={<NoEntityFoundSvg />}
-          title="No entities found"
+          title=$t('EntityExplorer.eaf1adb5c228ddd2')
         />
       )}
     </EntityExplorerWrapper>

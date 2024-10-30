@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Icon } from "@appsmith/ads";
@@ -91,7 +92,7 @@ const DatasourceSelector = (props: Props) => {
         isDisabled={!isChangePermitted}
         name="datasource.id"
         options={DATASOURCES_OPTIONS}
-        placeholder="Datasource"
+        placeholder=$t('DatasourceSelector.84c0db547f89be95')
       >
         {canCreateDatasource && (
           // this additional div is here so that rc-select can render the child with the onClick correctly

@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { SEARCH_TEMPLATES, createMessage } from "ee/constants/messages";
 import {
   filterTemplates,
@@ -47,8 +48,8 @@ interface FilterWrapperProps {
   stickySearchBar?: boolean;
 }
 
-const ALL_TEMPLATES_UPDATED_LABEL = "All Templates";
-const ALL_TEMPLATES_FILTER_VALUE = "All";
+const ALL_TEMPLATES_UPDATED_LABEL = $t('index.17f887e955d13653');
+const ALL_TEMPLATES_FILTER_VALUE = $t('index.b864525fbfe67918');
 
 const FilterItem = ({
   item,
@@ -88,18 +89,18 @@ const FilterItem = ({
 function modifyAndSortFilterList(originalFilterList: Filter[]) {
   // Define the order of filter categories
   const filterOrder = [
-    "All Templates",
-    "Building Blocks",
-    "Customer Support",
-    "Operations",
-    "Human Resources (HR)",
-    "Finance",
-    "Sales",
-    "Marketing",
-    "Other",
+    $t('index.17f887e955d13653'),
+    $t('index.07df9552d206c7c8'),
+    $t('index.88e74b3ad3cc2b08'),
+    $t('index.44614b622445d3ff'),
+    $t('index.870e2b8c57a3be11'),
+    $t('index.0c046b7171d92ae7'),
+    $t('index.25d2cd0b989c0d73'),
+    $t('index.8b889bba6aaf4185'),
+    $t('index.4730355c4e9f7cf3'),
   ];
 
-  // Change the label from "All" to "All Templates"
+  // Change the label from $t('index.b864525fbfe67918') to $t('index.17f887e955d13653')
   const modifiedFilterList = originalFilterList.map((filter) => {
     if (filter.label === ALL_TEMPLATES_FILTER_VALUE) {
       return { ...filter, label: ALL_TEMPLATES_UPDATED_LABEL };
@@ -143,30 +144,30 @@ const FilterCategory = ({
   );
   const dispatch = useDispatch();
   const onSelectFilter = (item: string, type: "add" | "remove") => {
-    // Check if "All" or "All Templates" is selected
+    // Check if $t('index.b864525fbfe67918') or $t('index.17f887e955d13653') is selected
     const allTemplatesFilterSelected =
       item === ALL_TEMPLATES_FILTER_VALUE ||
       item === ALL_TEMPLATES_UPDATED_LABEL;
 
     if (type === "add") {
-      // If "All" or "All Templates" is selected, set filterList to ["All"] only
+      // If $t('index.b864525fbfe67918') or $t('index.17f887e955d13653') is selected, set filterList to [$t('index.b864525fbfe67918')] only
       const filterList = allTemplatesFilterSelected
         ? [ALL_TEMPLATES_FILTER_VALUE]
         : [
             ...selectedFilters.filter(
-              (selectedItem) => selectedItem !== ALL_TEMPLATES_FILTER_VALUE, // Remove "All" if it exists
+              (selectedItem) => selectedItem !== ALL_TEMPLATES_FILTER_VALUE, // Remove $t('index.b864525fbfe67918') if it exists
             ),
             item,
           ];
 
       dispatch(filterTemplates(label, filterList));
     } else {
-      // If "All" or "All Templates" is selected for removal, do nothing
+      // If $t('index.b864525fbfe67918') or $t('index.17f887e955d13653') is selected for removal, do nothing
       if (allTemplatesFilterSelected) return;
 
       const filterList =
         selectedFilters.length === 1
-          ? [ALL_TEMPLATES_FILTER_VALUE] // If this is the last filter, set filterList to default ["All"]
+          ? [ALL_TEMPLATES_FILTER_VALUE] // If this is the last filter, set filterList to default [$t('index.b864525fbfe67918')]
           : selectedFilters.filter((selectedItem) => selectedItem !== item);
 
       dispatch(filterTemplates(label, filterList));
@@ -215,14 +216,14 @@ const TemplateFilters = (props: FilterWrapperProps) => {
     AnalyticsUtil.logEvent("TEMPLATES_SEARCH_INPUT_EVENT", { query });
   }, INPUT_DEBOUNCE_TIMER);
 
-  // Set default filter to "All" on mount
+  // Set default filter to $t('index.b864525fbfe67918') on mount
   useEffect(() => {
     if (props.initialFilters) {
       Object.keys(props.initialFilters).forEach((filter) => {
         dispatch(filterTemplates(filter, props.initialFilters![filter]));
       });
     } else {
-      dispatch(filterTemplates("functions", ["All"]));
+      dispatch(filterTemplates("functions", [$t('index.b864525fbfe67918')]));
     }
   }, [props.initialFilters]);
 

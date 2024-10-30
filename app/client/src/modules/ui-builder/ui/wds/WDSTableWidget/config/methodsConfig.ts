@@ -1,3 +1,4 @@
+import {$t} from "locale/index";
 import { merge } from "lodash";
 import type {
   PropertyUpdates,
@@ -60,7 +61,7 @@ export const methodsConfig = {
   getOneClickBindingConnectableWidgetConfig: (widget: WidgetProps) => {
     return {
       widgetBindPath: `${widget.widgetName}.selectedRow`,
-      message: `Make sure ${widget.widgetName} is bound to the same data source`,
+      message: $t('methodsConfig.6a6efe87a724b6f1', {widget_widgetName: widget.widgetName}),
     };
   },
 };
