@@ -122,8 +122,8 @@ async function run(){
 			const tanslateText = text.replace(/\n/g, ' ')
 			console.log('执行翻译中=', tanslateText)
 			try{
-				// zh = await translate(tanslateText, {from: 'en', to: 'zh'})
-				// ja = await translate(tanslateText, {from: 'en', to: 'jp'})
+				zh = await translate(tanslateText, {from: 'en', to: 'zh'})
+				ja = await translate(tanslateText, {from: 'en', to: 'jp'})
 			}catch(e){
 				console.log('翻译异常', e)
 			}
