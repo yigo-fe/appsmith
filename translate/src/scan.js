@@ -232,6 +232,8 @@ async function checkNoTranslate(scanPath){
 	const allText = scanRes.text
 	const textPathObj = scanRes.path
 
+	console.log('--------正在生成文件中--------')
+
 	await writeFile(path.resolve(__dirname, '../local/text.txt'), allText.join('\n'))
 	await writeFile(path.resolve(__dirname, '../local/path.json'), textPathObj)
 	if(allText.length > 0){
