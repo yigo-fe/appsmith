@@ -57,7 +57,7 @@ const texts = [
 	// "Phone number": "(555) 123-4567",
     {
         file: '',
-        text: [/(\s|\n)("|')(\w|\s)+("|')\s*:/g],
+        text: [/(\s|\n)("|')(\w|\s)+("|'):/g],
     },
 	// <Tab key="Debugger" value="Debugger">
 	// entityId="Pages"
