@@ -165,7 +165,7 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
                         expected={expected}
                         hoverInteraction
                         name={`${field}.key`}
-                        placeholder={$t('KeyValueFieldArray.59a2f23a171290eb')}
+                        placeholder={$t('KeyValueFieldArray.59a2f23a171290eb', {index: index + 1})}
                         size={EditorSize.COMPACT_RETAIN_FORMATTING}
                         theme={props.theme}
                       />
@@ -191,7 +191,7 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
                       expected={expected}
                       hoverInteraction
                       name={`${field}.key`}
-                      placeholder={$t('KeyValueFieldArray.59a2f23a171290eb', {})}
+                      placeholder={$t('KeyValueFieldArray.59a2f23a171290eb', {index: index + 1})}
                       size={EditorSize.COMPACT_RETAIN_FORMATTING}
                       theme={props.theme}
                     />
@@ -208,7 +208,7 @@ function KeyValueRow(props: Props & WrappedFieldArrayProps) {
                       expected={expected}
                       hoverInteraction
                       name={`${field}.value`}
-                      placeholder={$t('KeyValueFieldArray.cfe356493e18ae97')}
+                      placeholder={$t('KeyValueFieldArray.cfe356493e18ae97', {index: index + 1})}
                       size={EditorSize.COMPACT_RETAIN_FORMATTING}
                       theme={props.theme}
                     />

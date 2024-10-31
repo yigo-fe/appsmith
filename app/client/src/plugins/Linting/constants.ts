@@ -99,8 +99,8 @@ export const CUSTOM_LINT_ERRORS: Record<
     const bindings = dataFieldBindings.join(" , ");
 
     return isMarkedAsync
-      ? $t('constants.c87f16597c581b6a')
-      : $t('constants.22aa93b13f0a593e');
+      ? $t('constants.c87f16597c581b6a', {fullName, hasMultipleBindings: hasMultipleBindings ? "fields" : "field", bindings})
+      : $t('constants.22aa93b13f0a593e', {fullName, hasMultipleBindings: hasMultipleBindings ? "fields" : "field", bindings});
   },
   [CustomLintErrorCode.INVALID_WIDGET_PROPERTY_SETTER]: (
     methodName: string,
@@ -122,12 +122,12 @@ export const CUSTOM_LINT_ERRORS: Record<
     return $t('constants.f74238d062141ac2');
   },
   [CustomLintErrorCode.ACTION_MODAL_STRING]: (modalName: string) => {
-    return $t('constants.a05f027c8edc14ee', {modalName: modalName,modalName: modalName});
+    return $t('constants.a05f027c8edc14ee', {modalName: modalName});
   },
   [CustomLintErrorCode.INVALID_INPUTS]: (
     inputs: string[],
     invalidKey: string,
   ) => {
-    return $t('constants.54060ed4b11bb2d8', {invalidKey: invalidKey});
+    return $t('constants.54060ed4b11bb2d8', {invalidKey: invalidKey, inputs: inputs.join(", ")});
   },
 };

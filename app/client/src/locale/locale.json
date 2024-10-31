@@ -8,7 +8,7 @@
         "14a263011eb3424c": {
             "zh": "每个单元格中计算和显示的值。使用｛｛currentRow｝｝引用表中的每一行。在列设置之外无法访问此属性。",
             "en": "The value computed & shown in each cell. Use {{currentRow}} to reference each row in the table. This property is not accessible outside the column settings.",
-            "ja": "各セルに計算され、表示される値。＃＃＃currentRow＃を使用して、テーブルの各行を参照します。この属性には、カラム設定以外ではアクセスできません。"
+            "ja": "各セルに計算され、表示される値。｛｛currentRow｝｝を使用して、テーブルの各行を参照します。この属性には、カラム設定以外ではアクセスできません。"
         },
         "2b58b88b7db34b79": {
             "zh": "与React中的键一样，您必须包含一个主数据标识符，通常是数据源中的一列。您还可以组合两列或数据属性。",
@@ -53,7 +53,7 @@
         "bccd60e4f62f3605": {
             "zh": "接收一组对象以在表中显示行。使用｛｛｝｝从API绑定数据",
             "en": "Takes in an array of objects to display rows in the table. Bind data from an API using {{}}",
-            "ja": "テーブルにローを表示するためにオブジェクトのセットを受信します。＃＃＃＃＃＃＃＃＃＃を使用してAPIからデータをバインドする"
+            "ja": "テーブルにローを表示するためにオブジェクトのセットを受信します。｛｛｝｝を使用してAPIからデータをバインドする"
         },
         "427a3a2b09cfa6f7": {
             "zh": "分配一个唯一的列，该列有助于根据值维护选定行和触发行",
@@ -1505,12 +1505,12 @@
         "513ba09f3861d75d": {
             "zh": "接收一组对象以在表中显示行。使用｛｛｝｝从API绑定数据",
             "en": "Takes in an array of objects to display rows in the table. Bind data from an API using {{}}",
-            "ja": "テーブルにローを表示するためにオブジェクトのセットを受信します。＃＃＃＃＃＃＃＃＃＃を使用してAPIからデータをバインドする"
+            "ja": "テーブルにローを表示するためにオブジェクトのセットを受信します。｛｛｝｝を使用してAPIからデータをバインドする"
         },
         "ea5dccc6186d994e": {
             "zh": "接收一组对象以在表中显示行。使用｛｛｝｝从API绑定数据",
             "en": "Takes in an array of objects to display rows in the table. Bind data from an API using {{}}",
-            "ja": "テーブルにローを表示するためにオブジェクトのセットを受信します。＃＃＃＃＃＃＃＃＃＃を使用してAPIからデータをバインドする"
+            "ja": "テーブルにローを表示するためにオブジェクトのセットを受信します。｛｛｝｝を使用してAPIからデータをバインドする"
         },
         "ab471b1b5beaa727": {
             "zh": "分配一个唯一的列，该列有助于根据值维护选定行和触发行",
@@ -4975,9 +4975,9 @@
             "ja": "私たちにレポートを送ってください。レポートを送信すると、障害が発生したことだけが通知され、Eメールアドレスが送信されます。"
         },
         "218b0052da934abb": {
-            "zh": "${email}在您的组织之外。如果你正在为别人构建这个应用程序，你应该看看我们的合作伙伴计划。",
-            "en": "${email} is outside your organisation. If you’re building this app\nfor someone else, you should check out our partner program.",
-            "ja": "${email}はあなたの組織の外にあります。他の人のためにこのアプリケーションを構築している場合は、パートナープログラムを見てみてください。"
+            "zh": "{email}在您的组织之外。如果你正在为别人构建这个应用程序，你应该看看我们的合作伙伴计划。",
+            "en": "{email} is outside your organisation. If you’re building this app\nfor someone else, you should check out our partner program.",
+            "ja": "{email}はあなたの組織の外にあります。他の人のためにこのアプリケーションを構築している場合は、パートナープログラムを見てみてください。"
         },
         "5d577b2eff179ef7": {
             "zh": "这是应用程序的基本分支。从仪表板启动应用程序的用户将看到此分支的部署版本。",
@@ -5005,9 +5005,9 @@
             "ja": "驚くべき！入力ウィジェットをテーブルの選択した行に接続します。入力すると、選択した行のデータが常に表示されます。"
         },
         "14dc078910ed51db": {
-            "zh": "库${name}已安装。如果要安装其他版本，请先卸载库。",
-            "en": "The library ${name} is already installed.\n  If you are trying to install a different version, uninstall the library first.",
-            "ja": "ライブラリ${name}がインストールされています。別のバージョンをインストールする場合は、まずライブラリをアンインストールしてください。"
+            "zh": "库{name}已安装。如果要安装其他版本，请先卸载库。",
+            "en": "The library {name} is already installed.\n  If you are trying to install a different version, uninstall the library first.",
+            "ja": "ライブラリ{name}がインストールされています。別のバージョンをインストールする場合は、まずライブラリをアンインストールしてください。"
         },
         "9a4ea2ccd0897b7f": {
             "zh": "您可以从这里开始继续构建应用程序。如果您仍然不确定，请查看我们的文档或尝试导游。",
@@ -5075,9 +5075,9 @@
             "ja": "最初のステップはデータベースを問い合わせることです。ここでは、顧客データが埋め込まれたPostgresデータベースを検索しています。"
         },
         "08223fd9e0f80577": {
-            "zh": "测试成功，{datasourceName}${environmentName.toLowerCase（）}环境配置正确。",
+            "zh": "测试成功，{datasourceName}{environmentName_toLowerCase__}环境配置正确。",
             "en": "Test was successful, {datasourceName} {environmentName_toLowerCase__} environment is correctly configured.",
-            "ja": "テストに成功しました。{datasourceName}${environmentName.toLowerCase（）}環境設定は正しいです。"
+            "ja": "テストに成功しました。{datasourceName}{environmentName_toLowerCase__}環境設定は正しいです。"
         },
         "48e95729f757d197": {
             "zh": "由于取消选择自定义小部件，连接丢失。请重新选择此小部件以继续编辑。",
@@ -5100,9 +5100,9 @@
             "ja": "最新の{widgetName}をドラッグして新機能をロック解除し、このウィジェットが寿命が切れたときに問題になるのを防ぎます。"
         },
         "4fb76cf067488c19": {
-            "zh": "将您的环境切换到${environment.toLowerCase（）}，并运行所有相关的页面加载操作",
+            "zh": "将您的环境切换到{environment_toLowerCase__}，并运行所有相关的页面加载操作",
             "en": "Switching your environment to {environment_toLowerCase__}, and running all associated pageload actions",
-            "ja": "環境を${environment.toLowerCase（）}に切り替え、関連するすべてのページロード操作を実行します"
+            "ja": "環境を{environment_toLowerCase__}に切り替え、関連するすべてのページロード操作を実行します"
         },
         "4ec2e28641baa5c2": {
             "zh": "用户将可以访问工作区中的所有应用程序。对于应用程序级访问，请尝试我们的",
@@ -5575,9 +5575,9 @@
             "ja": "以前のレイアウトのスナップショットは{timeTillExpiration}で期限切れになります"
         },
         "396713839fe74564": {
-            "zh": "环境已成功切换到${Environment.toLowerCase（）}",
+            "zh": "环境已成功切换到{environment_toLowerCase__}",
             "en": "Environment switched to {environment_toLowerCase__} successfully",
-            "ja": "環境が${Environment.toLowerCase()に正常に切り替わりました}"
+            "ja": "環境が{environment_toLowerCase__}に正常に切り替わりました"
         },
         "db1da337067486be": {
             "zh": "移动用户的默认选择。不适用于其他设备",
@@ -5717,7 +5717,7 @@
         "1f62506c2dfcc9a4": {
             "zh": "无法卸载{name}。请稍后再试。",
             "en": "Couldn't uninstall {name}. Please try again after sometime.",
-            "ja": "$＃name＃をアンインストールできません。後で再試行してください。"
+            "ja": "{name}をアンインストールできません。後で再試行してください。"
         },
         "70dcc6887ab7e5dc": {
             "zh": "{actionName}操作已成功移动到页面{pageName}",
@@ -5812,12 +5812,12 @@
         "6e2dc8d0049fa108": {
             "zh": "未能为{name}生成自动补全定义。",
             "en": "Failed to generate autocomplete definitions for {name}.",
-            "ja": "$＃name＃のオート補完定義を生成できませんでした。"
+            "ja": "{name}のオート補完定義を生成できませんでした。"
         },
         "f081599cac618ae9": {
-            "zh": "转到商业计划${trailingChar？trailingChar：“”}",
-            "en": "Move to Business plan${trailingChar ? trailingChar : \"\"}",
-            "ja": "ビジネスプランに移動${trailingChar？trailingChar:'}"
+            "zh": "转到商业计划{trailingChar}",
+            "en": "Move to Business plan{trailingChar}",
+            "ja": "ビジネスプランに移動{trailingChar}"
         },
         "4af1b63047855b67": {
             "zh": "从数据源生成表单或编写JSON模式",
@@ -5837,7 +5837,7 @@
         "e564715d152199cb": {
             "zh": "评估触发器{propertyName}时出错",
             "en": "Error occurred while evaluating trigger {propertyName}",
-            "ja": "トリガ$＃propertyName＃の評価中にエラー"
+            "ja": "トリガ{propertyName}の評価中にエラー"
         },
         "efbee0eeecc32b4f": {
             "zh": "此应用程序将不再显示Git功能",
@@ -5992,7 +5992,7 @@
         "2d5b3805883ff578": {
             "zh": "评估触发器时出错：{message}",
             "en": "Error occurred while evaluating trigger: {message}",
-            "ja": "トリガの評価中にエラーが発生しました:$＃message＃"
+            "ja": "トリガの評価中にエラーが発生しました:{message}"
         },
         "7c0a457e7cd7058c": {
             "zh": "将作为主要身份验证方法删除",
@@ -6435,9 +6435,9 @@
             "ja": "最小限の権限でアプリケーションを保護"
         },
         "c8b8f4f975c3d6d3": {
-            "zh": "未能加载代码编辑器${消息？",
-            "en": "Failed to load the code editor${message ?",
-            "ja": "コードエディタ${メッセージをロードできませんでしたか？"
+            "zh": "未能加载代码编辑器{message}",
+            "en": "Failed to load the code editor {message}",
+            "ja": "コードエディタ{message}をロードできませんでしたか？"
         },
         "a9c0c3c3f8932d56": {
             "zh": "无法安装{url}处的脚本。",
@@ -6462,7 +6462,7 @@
         "c2a49db5cd9aea91": {
             "zh": "复制操作{actionName}时出错",
             "en": "Error while copying action {actionName}",
-            "ja": "オペレーション$＃actionName＃のコピー中にエラーが発生しました"
+            "ja": "オペレーション{actionName}のコピー中にエラーが発生しました"
         },
         "03f887e21942eac2": {
             "zh": "重新连接丢失的数据源凭据",
@@ -6502,7 +6502,7 @@
         "7f85e0d8cffc4c4f": {
             "zh": "移动操作时出错{actionName}",
             "en": "Error while moving action {actionName}",
-            "ja": "移動操作中にエラー$＃actionName＃"
+            "ja": "移動操作中にエラー{actionName}"
         },
         "08f16fdd63b2022a": {
             "zh": "{propertyPath}处的值无效",
@@ -6515,14 +6515,14 @@
             "ja": "データソースをテストし、エラーを修正します。"
         },
         "09dc354869c62566": {
-            "zh": "${methodName}身份验证已启用",
-            "en": "${methodName} authentication is enabled",
-            "ja": "${methodName}認証が有効になりました"
+            "zh": "{methodName}身份验证已启用",
+            "en": "{methodName} authentication is enabled",
+            "ja": "{methodName}認証が有効になりました"
         },
         "177117bf5a81fff1": {
-            "zh": "已更新默认分支${！！branchName？",
-            "en": "Updated default branch ${!!branchName ?",
-            "ja": "デフォルトブランチ${！！branchName？"
+            "zh": "已更新默认分支{branchName}",
+            "en": "Updated default branch {branchName}",
+            "ja": "デフォルトブランチ{branchName}"
         },
         "df2ff6d8f98b4082": {
             "zh": "徽标的高度应至少为256px",
@@ -6635,9 +6635,9 @@
             "ja": "プライベート埋め込みは、"
         },
         "736865c39ee2a78d": {
-            "zh": "检测到名称冲突：${访问者}",
+            "zh": "检测到名称冲突：{accessors}",
             "en": "Name collision detected: {accessors}",
-            "ja": "名前の競合が検出されました:${ビジター}"
+            "ja": "名前の競合が検出されました:{accessors}"
         },
         "97416c8d883412de": {
             "zh": "请提供有效的电子邮件地址",
@@ -6987,7 +6987,7 @@
         "cac6c3092caed919": {
             "zh": "{actionName}API已添加到页面",
             "en": "{actionName} API added to page",
-            "ja": "$＃actionName＃APIがページに追加されました"
+            "ja": "{actionName}APIがページに追加されました"
         },
         "cf1d09957ad632ca": {
             "zh": "{actionName}执行失败",
@@ -10782,14 +10782,14 @@
     },
     "constants": {
         "22aa93b13f0a593e": {
-            "zh": "绑定到数据字段的函数不能执行异步代码。删除下面突出显示的异步语句，或删除以下数据${hasMultipleBindings？“fields”：“field”}:${bindings}上对“${fullName}”的引用",
-            "en": "Functions bound to data fields cannot execute async code. Remove async statements highlighted below or remove references to \"${fullName}\" on the following data ${\n          hasMultipleBindings ? \"fields\" : \"field\"\n        }: ${bindings}",
-            "ja": "データフィールドにバインドされた関数は非同期コードを実行できません。下に強調表示されている非同期文を削除するか、次のデータ${hasMultipleBindings?\"fields\":\"field\"}:${bindings}の\"${fullName}への参照を削除します。"
+            "zh": "绑定到数据字段的函数不能执行异步代码。删除下面突出显示的异步语句，或删除以下数据{hasMultipleBindings}: {bindings}上对“{fullName}”的引用",
+            "en": "Functions bound to data fields cannot execute async code. Remove async statements highlighted below or remove references to \"{fullName}\" on the following data {hasMultipleBindings}: {bindings}",
+            "ja": "データフィールドにバインドされた関数は非同期コードを実行できません。下に強調表示されている非同期文を削除するか、次のデータ{hasMultipleBindings}: {bindings} \"{fullName}\"への参照を削除します。"
         },
         "c87f16597c581b6a": {
-            "zh": "无法将异步函数绑定到数据字段。将其转换为同步函数，或删除以下数据${hasMultipleBindings？“fields”：“field”}:${bindings}上对“${fullName}”的引用",
-            "en": "Cannot bind async functions to data fields. Convert this to a sync function or remove references to \"${fullName}\" on the following data ${\n          hasMultipleBindings ? \"fields\" : \"field\"\n        }: ${bindings}",
-            "ja": "非同期関数をデータフィールドにバインドできません。同期関数に変換するか、次のデータ${hasMultipleBindings?\"fields\":\"field\"}:${bindings}から\"${fullName}への参照を削除します。"
+            "zh": "无法将异步函数绑定到数据字段。将其转换为同步函数，或删除以下数据{hasMultipleBindings}: {bindings}上对“{fullName}”的引用",
+            "en": "Cannot bind async functions to data fields. Convert this to a sync function or remove references to \"{fullName}\" on the following data {hasMultipleBindings}: {bindings}",
+            "ja": "非同期関数をデータフィールドにバインドできません。同期関数に変換するか、次のデータ{hasMultipleBindings}: {bindings}\"{fullName}\"への参照を削除します。"
         },
         "10807741bf54dc3e": {
             "zh": "自定义融合图表将于2024年3月1日停止支持。将图表类型更改为电子图表自定义以进行切换。",
@@ -10797,14 +10797,14 @@
             "ja": "カスタム融合グラフは2024年3月1日にサポートを停止します。グラフの種類を電子グラフのカスタマイズに変更して切り替えます。"
         },
         "488f16a047afa6c5": {
-            "zh": "不支持直接修改小部件属性${建议句}",
+            "zh": "不支持直接修改小部件属性{suggestionSentence}",
             "en": "Direct mutation of widget properties is not supported. {suggestionSentence}",
-            "ja": "ウィジェット属性の直接変更はサポートされていません${アドバイス文}"
+            "ja": "ウィジェット属性の直接変更はサポートされていません{suggestionSentence}"
         },
         "54060ed4b11bb2d8": {
-            "zh": "{invalidKey}在有效的输入列表中不存在：${inputs.join（“，”）}",
-            "en": "{invalidKey} doesn't exist in valid list of inputs: ${inputs.join(\", \")}",
-            "ja": "{invalidKey}は有効な入力リストに存在しません:${inputs.join(\"，\")}"
+            "zh": "{invalidKey}在有效的输入列表中不存在：{inputs}",
+            "en": "{invalidKey} doesn't exist in valid list of inputs: {inputs}",
+            "ja": "{invalidKey}は有効な入力リストに存在しません:{inputs}"
         },
         "66c59ba70e68474c": {
             "zh": "精通发展。具有复杂编码任务的经验。",
@@ -10827,14 +10827,14 @@
             "ja": "{objectName}{propertyName}という名前の属性はありません"
         },
         "a05f027c8edc14ee": {
-            "zh": "使用{modalName}.name而不是“${modal name}”作为字符串",
+            "zh": "使用{modalName}.name而不是“{modalName}”作为字符串",
             "en": "Use {modalName}.name instead of \"{modalName}\" as a string",
             "ja": "文字列として{modalName}.nameを使用します。"
         },
         "a83fe3adb1308ca3": {
-            "zh": "JSObject必须以“${JS_OBJECT_start_STATENT}”开头",
+            "zh": "JSObject必须以“{JS_OBJECT_START_STATEMENT}”开头",
             "en": "JSObject must start with '{JS_OBJECT_START_STATEMENT}'",
-            "ja": "JSObjectは「${JS _ OBJECT _ start _ STATENT}」で始まる必要があります"
+            "ja": "JSObjectは{JS_OBJECT_START_STATEMENT}で始まる必要があります"
         },
         "55cb242915c23e6b": {
             "zh": "在默认模型字段中将数据传递给此小部件",
@@ -12373,9 +12373,19 @@
             "ja": "Selectは、指定した入力許可リストからユーザー入力を取得するために使用します。A Selectは単一のオプションをキャプチャできます"
         },
         "f7689eac3f0745c5": {
-            "zh": "保存或放弃${this.props.isAddowInProgress？“新添加”：“未保存”}行，以便在此处开始编辑",
-            "en": "Save or discard the ${\n      this.props.isAddRowInProgress ? \"newly added\" : \"unsaved\"\n    } row to start editing here",
-            "ja": "${this.props.isAddowInProgress?[新規追加]：[保存されていません]}行を保存または破棄して、ここで編集を開始します"
+            "zh": "保存或放弃{isAddRowInProgress}行，以便在此处开始编辑",
+            "en": "Save or discard the {isAddRowInProgress} row to start editing here",
+            "ja": "{isAddRowInProgress}行を保存または破棄して、ここで編集を開始します"
+        },
+        "newlyAdded": {
+            "zh": "新添加",
+            "en": "newly added",
+            "ja": "新規追加"
+        },
+        "unsaved": {
+            "zh": "未保存",
+            "en": "unsaved",
+            "ja": "保存されていません"
         },
         "f189147aa6fa8640": {
             "zh": "相机小部件允许用户使用浏览器权限通过系统相机拍照或录制视频。",
@@ -12508,9 +12518,9 @@
             "ja": "ウィジェットのデフォルト日付を設定します。デフォルトの日付が変更された場合、更新日"
         },
         "84cc8b848e055156": {
-            "zh": "更新行{primaryKey}{{${formConfig？.otherFields？.defaultValues}{primaryKey}}}",
+            "zh": "更新行{primaryKey} {{{formConfig__otherFields__defaultValues}.{primaryKey}}}",
             "en": "Update Row {primaryKey} {{{formConfig__otherFields__defaultValues}.{primaryKey}}}",
-            "ja": "更新行{primaryKey}{${formConfig？.otherFields？.defaultValues}{primaryKey}}}"
+            "ja": "更新行{primaryKey} {{{formConfig__otherFields__defaultValues}.{primaryKey}}}"
         },
         "1070abae6e83209c": {
             "zh": "JSON Form小部件可用于通过提供JSON源数据自动生成表单。",
@@ -12540,12 +12550,12 @@
         "3e706355c0cb40e7": {
             "zh": "接收一组对象以显示选项。使用｛｛｝｝从API绑定数据",
             "en": "Takes in an array of objects to display options. Bind data from an API using {{}}",
-            "ja": "オプションを表示するためにオブジェクトのセットを受信します。＃＃＃＃＃＃＃＃＃＃を使用してAPIからデータをバインドする"
+            "ja": "オプションを表示するためにオブジェクトのセットを受信します。｛｛｝｝を使用してAPIからデータをバインドする"
         },
         "829a5094a88acc78": {
             "zh": "接收一组对象以显示选项。使用｛｛｝｝从API绑定数据",
             "en": "Takes in an array of objects to display options. Bind data from an API using {{}}",
-            "ja": "オプションを表示するためにオブジェクトのセットを受信します。＃＃＃＃＃＃＃＃＃＃を使用してAPIからデータをバインドする"
+            "ja": "オプションを表示するためにオブジェクトのセットを受信します。｛｛｝｝を使用してAPIからデータをバインドする"
         },
         "fb948c3434386921": {
             "zh": "按钮用于捕捉用户意图并根据该意图触发操作",
@@ -13050,7 +13060,7 @@
         "ae2c139aa4ad2df8": {
             "zh": "此值的计算结果不符合类型：Date{dateFormat}",
             "en": "This value does not evaluate to type: Date {dateFormat}",
-            "ja": "この値の計算結果はタイプに一致しません：Date$＃dateFormat＃"
+            "ja": "この値の計算結果はタイプに一致しません：Date{dateFormat}"
         },
         "3b4fea51dea29c79": {
             "zh": "进度条是一个简单的UI小部件，用于显示进度",
@@ -13360,7 +13370,7 @@
         "f7c76380a5b107fa": {
             "zh": "找不到id为{entityInfo_id}的操作",
             "en": "Couldn't find action with id: {entityInfo_id}",
-            "ja": "idが$＃entityInfo.id＃のアクションが見つかりません"
+            "ja": "idが{entityInfo_id}のアクションが見つかりません"
         },
         "777de3f41e924fe3": {
             "zh": "控制标签是粗体还是斜体",
@@ -15768,9 +15778,9 @@
             "ja": "金利が変化した場合"
         },
         "f115413ff862d3c2": {
-            "zh": "过滤器${hasAnyFilters？",
-            "en": "Filters${hasAnyFilters ?",
-            "ja": "フィルタ${hasAnyFilters？"
+            "zh": "过滤器{hasAnyFilters}",
+            "en": "Filters{hasAnyFilters}",
+            "ja": "フィルタ{hasAnyFilters}"
         },
         "fcda6c242e88e6db": {
             "zh": "播放视频时",
@@ -22223,7 +22233,7 @@
         "d2bf55b9e3986081": {
             "zh": "每个单元格中计算和显示的值。使用｛｛currentRow｝｝引用表中的每一行。在列设置之外无法访问此属性。",
             "en": "The value computed & shown in each cell. Use {{currentRow}} to reference each row in the table. This property is not accessible outside the column settings.",
-            "ja": "各セルに計算され、表示される値。＃＃＃currentRow＃を使用して、テーブルの各行を参照します。この属性には、カラム設定以外ではアクセスできません。"
+            "ja": "各セルに計算され、表示される値。｛｛currentRow｝｝を使用して、テーブルの各行を参照します。この属性には、カラム設定以外ではアクセスできません。"
         },
         "6d6240fbe092856e": {
             "zh": "更改列的名称会覆盖对此字段的任何更改",
@@ -22558,14 +22568,14 @@
     },
     "validations": {
         "e5b4708338462e80": {
-            "zh": "在数组条目中发现以下属性的重复值，这些值必须是唯一的--${uniqueKeys.join（“，”，）}。",
-            "en": "Duplicate values found for the following properties, in the array entries, that must be unique -- ${uniqueKeys.join(\n              \",\",\n            )}.",
-            "ja": "配列エントリには、次の属性の重複する値が見つかりました。これらの値は一意でなければなりません--${uniqueKeys.join(\"，\"，)}。"
+            "zh": "在数组条目中发现以下属性的重复值，这些值必须是唯一的--{uniqueKeys}。",
+            "en": "Duplicate values found for the following properties, in the array entries, that must be unique -- {uniqueKeys}.",
+            "ja": "配列エントリには、次の属性の重複する値が見つかりました。これらの値は一意でなければなりません--{uniqueKeys}。"
         },
         "0f5384623e158d2b": {
             "zh": "警告：文本中的新行超过{MAX_ALLOWED_LINE_BREAKS}。显示的文本将不包含任何新行。",
             "en": "Warning: New lines in the text exceed {MAX_ALLOWED_LINE_BREAKS}. The text displayed will not contain any new lines.",
-            "ja": "警告：テキスト内の新しいローは${MAX _ ALLOWED _ LINE _ BREAKS}を超えています。表示されるテキストには新しい行は含まれません。"
+            "ja": "警告：テキスト内の新しいローは{MAX_ALLOWED_LINE_BREAKS}を超えています。表示されるテキストには新しい行は含まれません。"
         },
         "14bc141fe02b6a31": {
             "zh": "没有换行符的文本长度过长。渲染子字符串以避免应用程序崩溃。",
@@ -22600,7 +22610,7 @@
         "11ee2db701593831": {
             "zh": "键的值：{entryName}无效：{message_message}",
             "en": "Value of key: {entryName} is invalid: {message_message}",
-            "ja": "キーの値：$＃entryName＃無効：$＃message.message＃"
+            "ja": "キーの値：{entryName}無効：{message_message}"
         },
         "2b41a1ce7df1a89f": {
             "zh": "选项中的所有值属性必须具有相同的类型",
@@ -22628,9 +22638,9 @@
             "ja": "この値はステップサイズ以上でなければなりません"
         },
         "bc43bc5fa9b5fa67": {
-            "zh": "索引处的条目无效：{index}{message_message}",
+            "zh": "索引处的条目无效：{index}.{message_message}",
             "en": "Invalid entry at index: {index}. {message_message}",
-            "ja": "インデックスのエントリが無効です:$＄index＄{message_message}"
+            "ja": "インデックスのエントリが無効です:{index}.{message_message}"
         },
         "2499806779e149b2": {
             "zh": "此值必须大于defaultStart值",
@@ -22643,9 +22653,9 @@
             "ja": "この値はminRange以下でなければなりません"
         },
         "c687d97952ed1582": {
-            "zh": "值不匹配：$｛getExpectedType（config）｝",
+            "zh": "值不匹配：{getExpectedType_config_}",
             "en": "Value does not match: {getExpectedType_config_}",
-            "ja": "値が一致しません:$＄getExpectedType（config）＄"
+            "ja": "値が一致しません:{getExpectedType_config_}"
         },
         "2c2d432e26d818b6": {
             "zh": "此值必须小于defaultEnd值",
@@ -22655,7 +22665,7 @@
         "26f3abf6e953003b": {
             "zh": "此数组中不允许有值：{entry}",
             "en": "Value is not allowed in this array: {entry}",
-            "ja": "この配列には値が許可されていません:$＃＃entry＃"
+            "ja": "この配列には値が許可されていません:{entry}"
         },
         "3bf202b98a548f47": {
             "zh": "此值必须小于{sliderRange}",
@@ -22735,7 +22745,7 @@
         "9e5f4e5d72e879ef": {
             "zh": "索引{index}处的对象无效",
             "en": "Invalid object at index {index}",
-            "ja": "インデックス$＃index＃で無効なオブジェクト"
+            "ja": "インデックス{index}で無効なオブジェクト"
         },
         "0db9393679af5250": {
             "zh": "验证配置无效",
@@ -23244,9 +23254,9 @@
     },
     "MultiFilePickerControl": {
         "403ae942f1e44aa8": {
-            "zh": "文件总大小超过了允许的最大大小${formatFileSize（maxFileSizeInBytes，）}",
-            "en": "Total file sizes execceds the maximum allowed size of ${formatFileSize(\n          maxFileSizeInBytes,\n        )}",
-            "ja": "ファイルの合計サイズが許容最大サイズ${formatFileSize（maxFileSizeInBytes，）}を超えています。"
+            "zh": "文件总大小超过了允许的最大大小{maxFileSizeInBytes}",
+            "en": "Total file sizes execceds the maximum allowed size of {maxFileSizeInBytes}",
+            "ja": "ファイルの合計サイズが許容最大サイズ{maxFileSizeInBytes}を超えています。"
         },
         "b6fc85332baabe76": {
             "zh": "上传文件时出错",
@@ -23398,12 +23408,12 @@
             "ja": "計算値は文字列または数値でなければなりません。"
         },
         "b447a279a928cd9f": {
-            "zh": "计算值应与${config？.params？.regex}匹配",
+            "zh": "计算值应与{config__params__regex}匹配",
             "en": "The evaluated value should match {config__params__regex}",
             "ja": "計算値は{config__params__regex}と一致する必要があります"
         },
         "c94e9f8103f2cff4": {
-            "zh": "计算值应与${config？.params？.regex}匹配",
+            "zh": "计算值应与{config__params__regex}匹配",
             "en": "The evaluated value should match {config__params__regex}",
             "ja": "計算値は{config__params__regex}と一致する必要があります"
         },
@@ -23495,12 +23505,12 @@
         "9caaaa4970a8721a": {
             "zh": "索引{i}处的对象无效",
             "en": "Invalid object at index {i}",
-            "ja": "インデックス$＃i＃のオブジェクトが無効です"
+            "ja": "インデックス{i}のオブジェクトが無効です"
         },
         "f27f365dc19e1fa0": {
             "zh": "索引{i}处的对象无效",
             "en": "Invalid object at index {i}",
-            "ja": "インデックス$＃i＃のオブジェクトが無効です"
+            "ja": "インデックス{i}のオブジェクトが無効です"
         },
         "d51e0fd5ccb87ec3": {
             "zh": "此值必须是数字",
@@ -24025,26 +24035,26 @@
         "20d5200ecd673235": {
             "zh": "布局转换错误-从自动布局转换为固定布局时：{error_message}",
             "en": "Layout conversion error - while converting from auto-layout to fixed layout: {error_message}",
-            "ja": "レイアウト変換エラー-自動レイアウトから固定レイアウトに変換するとき：$＄error.message＄"
+            "ja": "レイアウト変換エラー-自動レイアウトから固定レイアウトに変換するとき：{error_message}"
         },
         "fe8f7baf3a3253ea": {
             "zh": "布局转换错误-从固定布局转换为自动布局时：{error_message}",
             "en": "Layout conversion error - while converting from fixed layout to auto-layout: {error_message}",
-            "ja": "レイアウト変換エラー-固定レイアウトから自動レイアウトに変換するとき：$＃＃error.message＃"
+            "ja": "レイアウト変換エラー-固定レイアウトから自動レイアウトに変換するとき：{error_message}"
         }
     },
     "DropdownOption": {
         "3a360605d5e97e85": {
-            "zh": "加载${props.count-DEFAULT_QUERY_OPTIONS_UNTS_TO_SHOW}更多",
-            "en": "Load ${\n              props.count - DEFAULT_QUERY_OPTIONS_COUNTS_TO_SHOW\n            } more",
-            "ja": "${props.count-DEFAULT _ QUERY _ OPTIONS _ UNTS _ TO _ SHOW}より多くのロード"
+            "zh": "加载{count}更多",
+            "en": "Load {count} more",
+            "ja": "{count}より多くのロード"
         }
     },
     "PageSagas": {
         "51849fc20aa3af48": {
-            "zh": "实体名称：$｛action.packload.newName｝已被使用或是受限制的关键字。",
+            "zh": "实体名称：{action_payload_newName}已被使用或是受限制的关键字。",
             "en": "Entity name: {action_payload_newName} is already being used or is a restricted keyword.",
-            "ja": "エンティティ名：$＃action.packload.newName＃が使用されているか、制限されているキーワード。"
+            "ja": "エンティティ名：{action_payload_newName}が使用されているか、制限されているキーワード。"
         },
         "4824e1582a863f38": {
             "zh": "已成功生成页面",
@@ -24628,9 +24638,9 @@
     },
     "TemplatesSagas": {
         "ba2f2599075336fc": {
-            "zh": "已成功添加“${action.packload.templateName}”模板中的页面",
+            "zh": "已成功添加“{action_payload_templateName}”模板中的页面",
             "en": "Pages from '{action_payload_templateName}' template added successfully",
-            "ja": "'${action.packload.templateName}テンプレートのページが正常に追加されました"
+            "ja": "{action_payload_templateName}テンプレートのページが正常に追加されました"
         }
     },
     "radioGroup": {
@@ -24676,7 +24686,7 @@
         "7422bb2ca3691e93": {
             "zh": "布局转换错误-还原快照时：{error_message}",
             "en": "Layout conversion error - while restoring snapshot: {error_message}",
-            "ja": "レイアウト変換エラー-スナップショットを復元するとき：$＃＃error.message＃"
+            "ja": "レイアウト変換エラー-スナップショットを復元するとき：{error_message}"
         }
     },
     "General": {
@@ -25588,9 +25598,9 @@
     },
     "EvaluatedValuePopup": {
         "341403ea942c7555": {
-            "zh": "此值的计算结果不是类型“${expected？.type}”。",
+            "zh": "此值的计算结果不是类型“{expected__type}”。",
             "en": "This value does not evaluate to type \"{expected__type}\".",
-            "ja": "この値の計算結果はタイプ'${expected？.type}'ではありません。"
+            "ja": "この値の計算結果はタイプ'{expected__type}'ではありません。"
         },
         "9ad646838055be91": {
             "zh": "已将评估值复制到剪贴板",
@@ -25603,9 +25613,9 @@
             "ja": "準備されたレポートには値がありません"
         },
         "e3daad42d61f0abe": {
-            "zh": "参见错误（${modText（）}D）",
+            "zh": "参见错误（{modText__}D）",
             "en": "See error ({modText__} D)",
-            "ja": "エラー（${modText（）}D）を参照）"
+            "ja": "エラー（{modText__}D）を参照）"
         }
     },
     "SaveButtonProperties": {
@@ -25842,19 +25852,19 @@
     },
     "DatasourcesSagas": {
         "daebd121a750ea4d": {
-            "zh": "找不到id-$｛actionPayload.packload.id｝的数据源",
+            "zh": "找不到id-{actionPayload_payload_id}的数据源",
             "en": "Datasource not found for id - {actionPayload_payload_id}",
-            "ja": "id-$＃actionPayload.packload.id＃のデータソースが見つかりません"
+            "ja": "id-{actionPayload_payload_id}のデータソースが見つかりません"
         },
         "5b87d7fc9e227d82": {
-            "zh": "找不到它的数据源-$｛action.packload.id｝",
+            "zh": "找不到它的数据源-{action_payload_id}",
             "en": "Datasource is not found for it - {action_payload_id}",
-            "ja": "データソースが見つかりません-$＄action.packload.id＄"
+            "ja": "データソースが見つかりません-{action_payload_id}"
         },
         "feb84bfa18a5a552": {
-            "zh": "找不到id为${action.packload.id}的数据源",
+            "zh": "找不到id为{action_payload_id}的数据源",
             "en": "Datasource not found for id - {action_payload_id}",
-            "ja": "idが${action.packload.id}のデータソースが見つかりません"
+            "ja": "idが{action_payload_id}のデータソースが見つかりません"
         },
         "05087cbe40a9690f": {
             "zh": "无法检索数据源结构",
@@ -26631,9 +26641,9 @@
             "ja": "このアプリケーションにはこのデータソースを使用するクエリがありません"
         },
         "4f724ef833efcab1": {
-            "zh": "${queriesWithThis数据源}{QUERY}在此页面上",
+            "zh": "{queriesWithThisDatasource} {QUERY}在此页面上",
             "en": "{queriesWithThisDatasource} {QUERY} on this page",
-            "ja": "${queriesWithThisデータソース}{QUERY}このページ"
+            "ja": "{queriesWithThisDatasource} {QUERY}このページ"
         },
         "386d5d33a04e34fc": {
             "zh": "数据来源",
@@ -26653,14 +26663,14 @@
     },
     "PropertyPaneConnections": {
         "c20a40837e4f5cc8": {
-            "zh": "请参阅${props.connectionType.toLowerCase（）}连接",
+            "zh": "请参阅{props_connectionType_toLowerCase__}连接",
             "en": "See {props_connectionType_toLowerCase__} connections",
-            "ja": "${props.connectionType.toLowerCase()を参照してください}接続"
+            "ja": "{props_connectionType_toLowerCase__}接続"
         },
         "c92cec4471085d92": {
-            "zh": "没有${props.connectionType.toLowerCase（）}连接",
+            "zh": "没有{props_connectionType_toLowerCase__}连接",
             "en": "No {props_connectionType_toLowerCase__} connections",
-            "ja": "${props.connectionType.toLowerCase（）}接続がありません"
+            "ja": "{props_connectionType_toLowerCase__}接続がありません"
         },
         "28a2838fee7fa36b": {
             "zh": "无实体",
@@ -26670,7 +26680,7 @@
     },
     "useTableOrSpreadsheet": {
         "ad7b0f13a984b34a": {
-            "zh": "从${selectedDatasource？.name}中选择{fieldName}",
+            "zh": "从{selectedDatasource__name}中选择{fieldName}",
             "en": "Select {fieldName} from {selectedDatasource__name}",
             "ja": "{selectedDatasource__name}から{fieldName}を選択"
         }
@@ -26769,9 +26779,9 @@
     },
     "GenerateSSH": {
         "55bf20249bfb3d9e": {
-            "zh": "从${value？.gitProvider}复制并粘贴远程url",
+            "zh": "从{value__gitProvider}复制并粘贴远程url",
             "en": "Copy and paste remote url from {value__gitProvider}",
-            "ja": "${value？.gitProvider}からリモートurlをコピーして貼り付けます"
+            "ja": "{value__gitProvider}からリモートurlをコピーして貼り付けます"
         }
     },
     "TriggerEmitter": {
@@ -26839,7 +26849,7 @@
     },
     "useNavigationMenuData": {
         "3c6c03ab3fab16b1": {
-            "zh": "已成功导出${currentApplication？.name}",
+            "zh": "已成功导出{currentApplication__name}",
             "en": "Successfully exported {currentApplication__name}",
             "ja": "{currentApplication__name}のエクスポートに成功しました"
         },
@@ -26981,9 +26991,9 @@
     },
     "helpers": {
         "4143ae286edd0a0b": {
-            "zh": "分析日志时出错：${JSON.stringify（错误）}",
+            "zh": "分析日志时出错：{JSON_stringify_error_}",
             "en": "Error in parsing log: {JSON_stringify_error_}",
-            "ja": "ログの解析中にエラーが発生しました:${JSON.stringify（エラー）}"
+            "ja": "ログの解析中にエラーが発生しました:{JSON_stringify_error_}"
         },
         "1d84c2c0095a7480": {
             "zh": "{acc}承诺{curr_constructor_name}",
@@ -26996,9 +27006,9 @@
             "ja": "再試行検証用の電子メールが見つかりませんでした"
         },
         "7b5005b9d51db2d7": {
-            "zh": "无效日志：$｛JSON.stringify（错误）｝",
+            "zh": "无效日志：{JSON_stringify_error_}",
             "en": "Invalid log: {JSON_stringify_error_}",
-            "ja": "無効なログ：$＄JSON.stringify（エラー）＄"
+            "ja": "無効なログ：{JSON_stringify_error_}"
         },
         "49da2f94e168c0aa": {
             "zh": "{acc}函数（）{curr_name}",
@@ -27115,9 +27125,9 @@
     },
     "ChooseGitProvider": {
         "c44c1c51cf776a59": {
-            "zh": "在${value？.gitProvider}}中创建一个空仓库",
-            "en": "Create an empty repo in {value__gitProvider}}",
-            "ja": "${value？.gitProvider}で空の倉庫を作成する"
+            "zh": "在{value__gitProvider}中创建一个空仓库",
+            "en": "Create an empty repo in {value__gitProvider}",
+            "ja": "{value__gitProvider}で空の倉庫を作成する"
         },
         "f56cc857d382e4c7": {
             "zh": "通过git导入",
@@ -27127,9 +27137,9 @@
     },
     "ActionSagas": {
         "4f2a1791bb8971d3": {
-            "zh": "找不到id为${Action.packload.id}的操作",
+            "zh": "找不到id为{action_payload_id}的操作",
             "en": "Action not found for id - {action_payload_id}",
-            "ja": "idが${Action.packload.id}のアクションが見つかりません"
+            "ja": "idが{action_payload_id}のアクションが見つかりません"
         },
         "8248779cecb2a0f2": {
             "zh": "未找到pluginId的插件-{pluginId}",
@@ -30076,9 +30086,9 @@
     },
     "AddDeployKey": {
         "0451783257b4441a": {
-            "zh": "在${value？.gitProvider}中添加部署密钥",
+            "zh": "在{value__gitProvider}中添加部署密钥",
             "en": "Add deploy key in {value__gitProvider}",
-            "ja": "${value？.gitProvider}に配備鍵を追加"
+            "ja": "{value__gitProvider}に配備鍵を追加"
         },
         "2eadeaf62bf3bdd1": {
             "zh": "SSH密钥生成成功",
@@ -30146,9 +30156,9 @@
     },
     "EmbeddedDatasourcePathField": {
         "10fefd9a1e92cfbb": {
-            "zh": "数据源${datasourceObject？.name}",
+            "zh": "数据源{datasourceObject__name}",
             "en": "Datasource {datasourceObject__name}",
-            "ja": "データソース${datasourceObject？.name}"
+            "ja": "データソース{datasourceObject__name}"
         }
     },
     "dataTreeWidget": {
@@ -30203,9 +30213,9 @@
     },
     "EvalErrorHandler": {
         "198967fdc84d4316": {
-            "zh": "{error_message}节点为：${Node}",
+            "zh": "{error_message}节点为：{Node}",
             "en": "{error_message} Node was: {node}",
-            "ja": "{error_message}ノードは、${Node}です。"
+            "ja": "{error_message}ノードは、{Node}です。"
         }
     },
     "EntityExplorer": {
@@ -31782,9 +31792,9 @@
     },
     "generateQuickCommands": {
         "0ca18ef4301872a9": {
-            "zh": "新建${data.displayText}查询",
-            "en": "New ${data.displayText} query",
-            "ja": "新規${data.displayText}クエリー"
+            "zh": "新建{displayText}查询",
+            "en": "New {displayText} query",
+            "ja": "新規{displayText}クエリー"
         },
         "0fe151e41800430d": {
             "zh": "创建查询",
@@ -31954,9 +31964,9 @@
     },
     "PagesSection": {
         "65cac89befad0f00": {
-            "zh": "所有页面（${Pages.length}）",
+            "zh": "所有页面（{pages_length}）",
             "en": "All Pages ({pages_length})",
-            "ja": "すべてのページ（${Pages.length}）"
+            "ja": "すべてのページ（{pages_length}）"
         }
     },
     "BindingPrompt": {
@@ -32157,9 +32167,9 @@
     },
     "EntityDependecies": {
         "632ea9a7addabc71": {
-            "zh": "打开${实体描述}",
+            "zh": "打开{entityDescription}",
             "en": "Open {entityDescription}",
-            "ja": "${エンティティの説明を開く}"
+            "ja": "{entityDescription}を開く"
         }
     },
     "Deploy": {
@@ -32539,9 +32549,9 @@
     },
     "TableFilters": {
         "52344711a218450b": {
-            "zh": "过滤器${hasAnyFilters？",
-            "en": "Filters${hasAnyFilters ?",
-            "ja": "フィルタ${hasAnyFilters？"
+            "zh": "过滤器{filters}",
+            "en": "Filters{filters}",
+            "ja": "フィルタ{filters}"
         }
     },
     "InviteUsersForm": {
@@ -32927,14 +32937,14 @@
     },
     "KeyValueFieldArray": {
         "cfe356493e18ae97": {
-            "zh": "值${索引+1}",
-            "en": "Value ${index + 1}",
-            "ja": "値${インデックス+1}"
+            "zh": "值{index}",
+            "en": "Value {index}",
+            "ja": "値{index}"
         },
         "59a2f23a171290eb": {
-            "zh": "关键字${索引+1}",
-            "en": "Key ${index + 1}",
-            "ja": "キーワード${インデックス+1}"
+            "zh": "关键字{index}",
+            "en": "Key {index}",
+            "ja": "キーワード{index}"
         },
         "390642d11233a4e5": {
             "zh": "价值观",

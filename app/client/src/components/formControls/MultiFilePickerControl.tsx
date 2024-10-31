@@ -127,7 +127,9 @@ function FilePicker(props: FilePickerProps) {
 
     if (totalSize > maxFileSizeInBytes) {
       toast.show(
-        $t('MultiFilePickerControl.403ae942f1e44aa8'),
+        $t('MultiFilePickerControl.403ae942f1e44aa8', {maxFileSizeInBytes: formatFileSize(
+          maxFileSizeInBytes,
+        )}),
         {
           kind: "error",
         },

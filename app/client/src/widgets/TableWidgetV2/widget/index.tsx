@@ -2004,7 +2004,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
         this.props.updatedRowIndices.indexOf(originalIndex) === -1) ||
       (this.hasInvalidColumnCell() && !isNewRow);
 
-    const disabledEditMessage = $t('index.f7689eac3f0745c5');
+    const disabledEditMessage = $t('index.f7689eac3f0745c5', {isAddRowInProgress: this.props.isAddRowInProgress ? $t('index.newlyAdded') : $t('index.unsaved')});
 
     if (this.props.isAddRowInProgress) {
       cellProperties.isCellDisabled = rowIndex !== 0;

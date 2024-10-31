@@ -204,7 +204,7 @@ export const NO_USERS_INVITED = () => $t('messages.3a8778fb75ec3753');
 export const BUSINESS_EDITION_TEXT = () => $t('messages.d668ba6d56d40ec1');
 export const PARTNER_PROGRAM_CALLOUT = (
   email: string,
-) => $t('messages.218b0052da934abb');
+) => $t('messages.218b0052da934abb', {email});
 export const PARTNER_PROGRAM_CALLOUT_LINK = () =>
   `Learn about Appsmith Partner Program`;
 export const NEW_APPLICATION = () => $t('messages.a15561ab43301aa1');
@@ -1128,7 +1128,7 @@ export const NOW_PROTECT_BRANCH = () =>
 export const APPSMITH_ENTERPRISE = () => "Appsmith Enterprise";
 export const PROTECT_BRANCH_SUCCESS = () => $t('messages.b3b3d9ed8ba20ff7');
 export const UPDATE_DEFAULT_BRANCH_SUCCESS = (branchName: string) =>
-  $t('messages.177117bf5a81fff1', {})to ${branchName}` : ""}`;
+  $t('messages.177117bf5a81fff1', {branchName: branchName || ''});
 export const CONTACT_ADMIN_FOR_GIT = () =>
   $t('messages.35f8879a5a843427');
 export const BRANCH_PROTECTION_CALLOUT_MSG = () =>
@@ -1886,7 +1886,7 @@ export const PAGE_SETTINGS_ACTION_NAME_CONFLICT_ERROR = (name: string) =>
   $t('messages.eed3d9ae7ecf876f', {name: name});
 
 export const CODE_EDITOR_LOADING_ERROR = (message?: string) =>
-  $t('messages.c8b8f4f975c3d6d3', {}): ${message}` : ""}`;
+  $t('messages.c8b8f4f975c3d6d3', {message: message || ''});
 
 export const UPDATE_VIA_IMPORT_SETTING = {
   settingHeader: () => $t('messages.f5ffd795eb412a2d'),
@@ -2106,7 +2106,7 @@ export const customJSLibraryMessages = {
   CLIENT_LOAD_FAILED: (url: string) => $t('messages.fb65d4c4f8174859', {url: url}),
   LIB_OVERRIDE_ERROR: (
     name: string,
-  ) => $t('messages.14dc078910ed51db'),
+  ) => $t('messages.14dc078910ed51db', {name}),
   DEFS_FAILED_ERROR: (name: string) =>
     $t('messages.6e2dc8d0049fa108', {name: name}),
   IMPORT_URL_ERROR: (url: string) =>
@@ -2117,7 +2117,7 @@ export const customJSLibraryMessages = {
 
 // Business Plan upgrade page
 export const MOVE_TO_BUSINESS_EDITION = (trailingChar: string) =>
-  $t('messages.f081599cac618ae9', {});
+  $t('messages.f081599cac618ae9', {trailingChar: trailingChar || ''});
 
 //Datasource environment
 export const START_SWITCH_ENVIRONMENT = (environment: string) =>

@@ -283,7 +283,7 @@ class JSONFormWidget extends BaseWidget<
             sourceData: `{{_.pick(${
               formConfig?.otherFields?.defaultValues
             },${selectedColumnNames.map((name) => `'${name}'`).join(",")})}}`,
-            title: $t('index.84cc8b848e055156', {primaryKey: primaryKey,formConfig__otherFields__defaultValues: formConfig?.otherFields?.defaultValues,primaryKey: primaryKey}),
+            title: $t('index.84cc8b848e055156', {primaryKey: primaryKey,formConfig__otherFields__defaultValues: formConfig?.otherFields?.defaultValues}),
             onSubmit: queryConfig?.update.run,
           };
         }

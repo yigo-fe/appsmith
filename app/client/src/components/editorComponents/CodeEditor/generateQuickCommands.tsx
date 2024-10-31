@@ -387,7 +387,7 @@ export const generateQuickCommands = (
         );
 
         ReactDOM.render(
-          <Command icon={icon} name={$t('generateQuickCommands.0ca18ef4301872a9')} />,
+          <Command icon={icon} name={$t('generateQuickCommands.0ca18ef4301872a9', {displayText: data.displayText})} />,
           element,
         );
       },

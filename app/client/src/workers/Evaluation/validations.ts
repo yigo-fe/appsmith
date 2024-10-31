@@ -222,7 +222,9 @@ function validateArray(
         messages: [
           {
             name: "ValidationError",
-            message: $t('validations.e5b4708338462e80'),
+            message: $t('validations.e5b4708338462e80', {uniqueKeys: uniqueKeys.join(
+              ",",
+            )}),
           },
         ],
       };

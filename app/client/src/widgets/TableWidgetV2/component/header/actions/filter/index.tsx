@@ -99,7 +99,7 @@ function TableFilters(props: TableFilterProps) {
         icon="filter"
         selectMenu={toggleFilterPane}
         selected={isTableFilterPaneVisible}
-        title={$t('index.f115413ff862d3c2', {}) (${filters.length})` : ""}`}
+        title={$t('index.f115413ff862d3c2', {hasAnyFilters: hasAnyFilters ? ` (${filters.length})` : ""})}
         titleColor={hasAnyFilters ? Colors.CODE_GRAY : Colors.GRAY}
         width={16}
       />

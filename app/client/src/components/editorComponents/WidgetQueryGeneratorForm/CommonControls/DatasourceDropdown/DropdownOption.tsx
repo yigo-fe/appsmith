@@ -70,7 +70,7 @@ export function LoadMoreOptions(props: LoadmoreProps) {
           }}
         >
           <DropdownOption
-            label={$t('DropdownOption.3a360605d5e97e85')}
+            label={$t('DropdownOption.3a360605d5e97e85', {count: props.count - DEFAULT_QUERY_OPTIONS_COUNTS_TO_SHOW})}
             leftIcon={<Icon name="context-menu" size="md" />}
           />
         </div>

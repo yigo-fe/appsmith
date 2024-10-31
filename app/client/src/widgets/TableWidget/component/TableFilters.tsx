@@ -128,7 +128,7 @@ function TableFilters(props: TableFilterProps) {
         }
         selectMenu={toggleFilterPane}
         selected={isTableFilterPaneVisible}
-        title={$t('TableFilters.52344711a218450b', {}) (${filters.length})` : ""}`}
+        title={$t('TableFilters.52344711a218450b', {filters: hasAnyFilters ? ` (${filters.length})` : ""})}
         titleColor={hasAnyFilters ? Colors.CODE_GRAY : Colors.GRAY}
       >
         <FilterIcon />
