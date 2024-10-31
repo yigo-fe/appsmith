@@ -174,7 +174,7 @@ function ThemeEditor() {
         <SettingSection
           className="px-4 py-3 border-t"
           isDefaultOpen
-          title=$t('ThemeEditor.bf0d4575b0644c97')
+          title={$t('ThemeEditor.bf0d4575b0644c97')}
         >
           <section className="space-y-2">
             <ThemeColorControl
@@ -188,7 +188,7 @@ function ThemeEditor() {
         <SettingSection
           className="px-4 py-3 border-t "
           isDefaultOpen
-          title=$t('ThemeEditor.c46186c3f11e30d1')
+          title={$t('ThemeEditor.c46186c3f11e30d1')}
         >
           {Object.keys(selectedTheme.config.borderRadius).map(
             (borderRadiusSectionName: string, index: number) => {
@@ -221,7 +221,7 @@ function ThemeEditor() {
         <SettingSection
           className="px-4 py-3 border-t "
           isDefaultOpen
-          title=$t('ThemeEditor.de846dc58c587c27')
+          title={$t('ThemeEditor.de846dc58c587c27')}
         >
           {Object.keys(selectedTheme.config.boxShadow).map(
             (boxShadowSectionName: string, index: number) => {

@@ -132,7 +132,7 @@ export default function MobileSideBar(props: MobileSideBarProps) {
               type: ReduxActionTypes.LOGOUT_USER_INIT,
             })
           }
-          text=$t('MobileSidebar.ab0b1f4bb19a1fbd')
+          text={$t('MobileSidebar.ab0b1f4bb19a1fbd')}
         />
       </Section>
       <Section>

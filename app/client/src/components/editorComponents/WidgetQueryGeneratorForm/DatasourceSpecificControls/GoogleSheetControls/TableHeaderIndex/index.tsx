@@ -48,7 +48,7 @@ export default memo(function TableHeaderIndex() {
           isRequired
           labelPosition="top"
           onChange={onChange}
-          placeholder=$t('index.019f41ed014e5fde')
+          placeholder={$t('index.019f41ed014e5fde')}
           size="md"
           type="number"
           value={value.toString()}

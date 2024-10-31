@@ -167,7 +167,7 @@ export default function CurrencyTypeDropdown(props: CurrencyDropdownProps) {
         optionWidth="340px"
         options={props.options}
         portalClassName={`country-type-filter-dropdown-${props.widgetId}`}
-        searchPlaceholder=$t('CurrencyCodeDropdown.4b0ce2dc00a690e7')
+        searchPlaceholder={$t('CurrencyCodeDropdown.4b0ce2dc00a690e7')}
         selected={props.selected}
         showLabelOnly
       />

@@ -290,7 +290,7 @@ function EntitySearchBar(props: any) {
               intent={"primary"}
               onClick={() => history.push(loginUrl)}
               size="small"
-              text=$t('EntitySearchBar.52e3ffd64746c053')
+              text={$t('EntitySearchBar.52e3ffd64746c053')}
             />
           ) : (
             <div className="flex gap-2">

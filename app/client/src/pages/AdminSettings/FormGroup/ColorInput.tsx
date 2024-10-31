@@ -201,7 +201,7 @@ export const ColorInput = (props: ColorInputProps) => {
         className={`mb-2 ${className ? className : ""}`}
         leftIcon={<LeftIcon onChange={onColorInputChange} value={hex} />}
         onChange={onColorInputChange}
-        placeholder=$t('ColorInput.c5232db3f7ff9600')
+        placeholder={$t('ColorInput.c5232db3f7ff9600')}
         value={value[selectedIndex]}
       />
     </>

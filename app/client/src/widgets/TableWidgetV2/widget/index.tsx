@@ -2509,7 +2509,7 @@ class TableWidgetV2 extends BaseWidget<TableWidgetProps, WidgetState> {
             timePrecision={cellProperties.timePrecision || TimePrecision.NONE}
             toggleCellEditMode={this.toggleCellEditMode}
             updateNewRowValues={this.updateNewRowValues}
-            validationErrorMessage=$t('index.1b6f6eb9eeafc966')
+            validationErrorMessage={$t('index.1b6f6eb9eeafc966')}
             value={props.cell.value}
             verticalAlignment={cellProperties.verticalAlignment}
             widgetId={this.props.widgetId}

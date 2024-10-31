@@ -161,7 +161,7 @@ export default function ISDCodeDropdown(props: ISDCodeDropdownProps) {
         optionWidth="340px"
         options={props.options}
         portalClassName={`country-type-filter-dropdown-${props.widgetId}`}
-        searchPlaceholder=$t('ISDCodeDropdown.1f9f8c2414262732')
+        searchPlaceholder={$t('ISDCodeDropdown.1f9f8c2414262732')}
         selected={props.selected}
         showLabelOnly
       />

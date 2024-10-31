@@ -240,7 +240,7 @@ export const PropertyPaneContentConfig = [
         helpText: $t('propertyConfig.3695a1d118f46028'),
         label: $t('propertyConfig.e7d8f5c15ae0818a'),
         controlType: "INPUT_TEXT",
-        placeholderText: '[{ "name": $t('propertyConfig.130e7699407a4b7d') }]',
+        placeholderText: `[{ "name": ${$t('propertyConfig.130e7699407a4b7d')} }]`,
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,

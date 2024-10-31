@@ -72,7 +72,7 @@ function AppViewerPageContainer(props: AppViewerPageContainerProps) {
             iconSize={theme.fontSizes[9]}
           />
         }
-        title=$t('AppViewerPageContainer.abd7dec3960a8f4d')
+        title={$t('AppViewerPageContainer.abd7dec3960a8f4d')}
       />
     </Centered>
   );

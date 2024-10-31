@@ -62,7 +62,7 @@ function EntityNotFoundPane(props: Props) {
   return (
     <Wrapper>
       <img
-        alt=$t('EntityNotFoundPane.e831bcc7701727f7')
+        alt={$t('EntityNotFoundPane.e831bcc7701727f7')}
         className="page-unavailable-img"
         src={PageUnavailableImage}
       />

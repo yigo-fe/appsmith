@@ -88,7 +88,7 @@ export default [
         propertyName: "tableData",
         label: $t('propertyConfig.dec5a1050eec6049'),
         controlType: "INPUT_TEXT",
-        placeholderText: '[{ "name": $t('propertyConfig.3768034abb9d57d3') }]',
+        placeholderText: `[{ "name": ${$t('propertyConfig.3768034abb9d57d3')} }]`,
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,

@@ -110,7 +110,7 @@ const MapComponent = (props: MapComponentProps) => {
         />
         <Map.SearchBox
           isEnabled={enableSearch}
-          placeholder=$t('index.01d3657350d0b4a2')
+          placeholder={$t('index.01d3657350d0b4a2')}
           updateCenter={updateCenter}
         />
       </Map>

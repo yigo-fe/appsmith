@@ -59,7 +59,7 @@ const MoreDropdownButton = ({
       >
         <>
           <MenuText
-            name=$t('MoreDropdownButton.cbd8ff0eba6b636d')
+            name={$t('MoreDropdownButton.cbd8ff0eba6b636d')}
             navColorStyle={navColorStyle}
             primaryColor={primaryColor}
           />

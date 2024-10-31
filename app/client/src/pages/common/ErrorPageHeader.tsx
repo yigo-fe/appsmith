@@ -87,7 +87,7 @@ export function ErrorPageHeader(props: ErrorPageHeaderProps) {
             to={APPLICATIONS_URL}
           >
             <img
-              alt=$t('ErrorPageHeader.2d0d8b2787716e7b')
+              alt={$t('ErrorPageHeader.2d0d8b2787716e7b')}
               className="h-6"
               src={getAssetUrl(tenantConfig.brandLogoUrl)}
             />
@@ -104,7 +104,7 @@ export function ErrorPageHeader(props: ErrorPageHeaderProps) {
                 flushErrorsAndRedirect(loginUrl);
               }}
               size="small"
-              text=$t('ErrorPageHeader.de5b2bdf6b33a929')
+              text={$t('ErrorPageHeader.de5b2bdf6b33a929')}
             />
           ) : (
             <ProfileDropdown

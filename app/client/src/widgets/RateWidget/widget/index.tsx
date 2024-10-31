@@ -276,7 +276,7 @@ class RateWidget extends BaseWidget<RateWidgetProps, WidgetState> {
             helpText: $t('index.c6659846dd73e7fd'),
             label: $t('index.ec866f7981fabc3f'),
             controlType: "INPUT_TEXT",
-            placeholderText: '[$t('index.35ae7a9501b555d4'), $t('index.ab6c6cf996bb32cb'), "Good"]',
+            placeholderText: `[${$t('index.35ae7a9501b555d4')}, ${$t('index.ab6c6cf996bb32cb')}, "Good"]`,
             isBindProperty: true,
             isTriggerProperty: false,
             validation: {

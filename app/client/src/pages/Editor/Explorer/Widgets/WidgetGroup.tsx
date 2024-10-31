@@ -75,7 +75,7 @@ export const ExplorerWidgetGroup = memo((props: ExplorerWidgetGroupProps) => {
       isDefaultExpanded={isWidgetsOpen}
       isSticky
       key={basePageId + "_widgets"}
-      name=$t('WidgetGroup.f1de3ab1b44e70fd')
+      name={$t('WidgetGroup.f1de3ab1b44e70fd')}
       onCreate={props.addWidgetsFn}
       onToggle={onWidgetToggle}
       searchKeyword={props.searchKeyword}

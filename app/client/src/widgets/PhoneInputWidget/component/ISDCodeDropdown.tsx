@@ -288,7 +288,7 @@ export default function ISDCodeDropdown(props: ISDCodeDropdownProps) {
         portalClassName={`country-type-filter-dropdown-${props.widgetId}`}
         portalContainer={document.getElementById(CANVAS_ART_BOARD) || undefined}
         searchAutoFocus
-        searchPlaceholder=$t('ISDCodeDropdown.ffffa943d77e9490')
+        searchPlaceholder={$t('ISDCodeDropdown.ffffa943d77e9490')}
         selected={props.selected}
         showEmptyOptions
         showLabelOnly

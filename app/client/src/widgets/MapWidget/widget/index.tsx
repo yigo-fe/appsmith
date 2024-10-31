@@ -574,7 +574,7 @@ class MapWidget extends BaseWidget<MapWidgetProps, WidgetState> {
               {$t('index.f8de31e4084992ae')}
               <a
                 href="https://docs.appsmith.com/getting-started/setup/instance-configuration/google-maps"
-                rel=$t('index.58c7c90062ba669d')
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 {" documentation "}

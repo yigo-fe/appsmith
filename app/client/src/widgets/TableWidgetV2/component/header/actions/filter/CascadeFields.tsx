@@ -310,7 +310,7 @@ function RenderInput(props: {
       className={props.className}
       defaultValue={value}
       onChange={onChange}
-      placeholder=$t('CascadeFields.91759c5b0db32ad8')
+      placeholder={$t('CascadeFields.91759c5b0db32ad8')}
       type="text"
     />
   );

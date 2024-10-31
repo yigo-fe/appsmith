@@ -68,7 +68,7 @@ const texts = [
 	// <Tabs value={"Debugger"}></Tabs>
     {
         file: '',
-        text: [/\s(key|value|entityId)=\{("|')(\w|\s)+("|')\}/g],
+        text: [/\s(key|value|entityId|rel)=\{("|')(\w|\s)+("|')\}/g],
     },
 	// key={entity.name || "Queries"}
     {

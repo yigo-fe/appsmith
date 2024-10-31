@@ -231,7 +231,7 @@ function MultiSelectComponent({
         maxTagPlaceholder={(e) => `+${e.length} more`}
         menuItemSelectedIcon={menuItemSelectedIcon}
         mode="multiple"
-        notFoundContent=$t('index.b56d4009511d137b')
+        notFoundContent={$t('index.b56d4009511d137b')}
         onBlur={onBlur}
         onChange={onChange}
         onDropdownVisibleChange={onClose}

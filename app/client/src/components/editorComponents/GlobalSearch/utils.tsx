@@ -44,9 +44,9 @@ export interface RecentEntity {
 }
 
 export enum SEARCH_CATEGORY_ID {
-  NAVIGATION = $t('utils.a0e5875eb363c33d'),
+  NAVIGATION = "Navigate",
   INIT = "INIT",
-  ACTION_OPERATION = $t('utils.7dd80d8b72903b76'),
+  ACTION_OPERATION = "Create new",
 }
 
 export enum SEARCH_ITEM_TYPES {

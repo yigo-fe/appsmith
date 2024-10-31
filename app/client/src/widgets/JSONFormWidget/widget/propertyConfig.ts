@@ -253,7 +253,7 @@ export const contentConfig = [
           ],
         },
         isJSConvertible: true,
-        placeholderText: '{ "name": $t('propertyConfig.fc167480aca97d1c'), "age": 24 }',
+        placeholderText: `{ "name": ${$t('propertyConfig.fc167480aca97d1c')}, "age": 24 }`,
         isBindProperty: true,
         isTriggerProperty: false,
         validation: {

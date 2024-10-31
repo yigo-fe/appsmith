@@ -117,7 +117,7 @@ export default function Pagination(props: PaginationProps) {
               value: PaginationType.URL,
             },
           ]}
-          placeholder=$t('Pagination.b264012cb4e31ff4')
+          placeholder={$t('Pagination.b264012cb4e31ff4')}
           rows={3}
           selectedOptionElements={[
             null,

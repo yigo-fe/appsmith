@@ -60,7 +60,7 @@ function AddNewRowBannerComponent(props: AddNewRowBannerType) {
               setIsDiscardLoading(false),
             );
           }}
-          text=$t('AddNewRowBanner.0df6f5728c7183fd')
+          text={$t('AddNewRowBanner.0df6f5728c7183fd')}
         />
         <BaseButton
           borderRadius={props.borderRadius}
@@ -77,7 +77,7 @@ function AddNewRowBannerComponent(props: AddNewRowBannerType) {
               setIsSaveLoading(false),
             );
           }}
-          text=$t('AddNewRowBanner.af50b32d2ccaf9f1')
+          text={$t('AddNewRowBanner.af50b32d2ccaf9f1')}
         />
       </ActionContainer>
     </Container>

@@ -247,7 +247,7 @@ function TableFilterPaneContent(props: TableFilterProps) {
               intent="primary"
               onClick={addFilter}
               size="small"
-              text=$t('TableFilterPaneContent.279a2b0dab941e64')
+              text={$t('TableFilterPaneContent.279a2b0dab941e64')}
             />
             <ButtonActionsWrapper>
               <Button

@@ -92,7 +92,7 @@ const DatasourceSelector = (props: Props) => {
         isDisabled={!isChangePermitted}
         name="datasource.id"
         options={DATASOURCES_OPTIONS}
-        placeholder=$t('DatasourceSelector.84c0db547f89be95')
+        placeholder={$t('DatasourceSelector.84c0db547f89be95')}
       >
         {canCreateDatasource && (
           // this additional div is here so that rc-select can render the child with the onClick correctly

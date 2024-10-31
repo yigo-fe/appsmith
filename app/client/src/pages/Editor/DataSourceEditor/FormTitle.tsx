@@ -150,7 +150,7 @@ function FormTitle(props: FormTitleProps) {
         isInvalid={isInvalidDatasourceName}
         maxLength={30}
         onTextChanged={handleDatasourceNameChange}
-        placeholder=$t('FormTitle.3667636cb1f108d9')
+        placeholder={$t('FormTitle.3667636cb1f108d9')}
         type="text"
         underline
         updating={saveStatus.isSaving}

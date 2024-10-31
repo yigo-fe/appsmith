@@ -17,7 +17,7 @@ class JSObjectHotKeys extends React.Component<Props> {
           allowInInput
           combo="mod + enter"
           global
-          label=$t('JSObjectHotKeys.6b309119cfd45041')
+          label={$t('JSObjectHotKeys.6b309119cfd45041')}
           onKeyDown={this.props.runActiveJSFunction}
         />
       </Hotkeys>

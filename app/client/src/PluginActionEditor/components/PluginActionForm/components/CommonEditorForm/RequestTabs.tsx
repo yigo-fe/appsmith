@@ -97,9 +97,9 @@ export function RequestTabs(props: {
           actionConfig={props.actionConfigurationHeaders}
           dataTreePath={`${props.actionName}.config.headers`}
           hideHeader
-          label=$t('RequestTabs.f0b7cfb1c8a9fa3b')
+          label={$t('RequestTabs.f0b7cfb1c8a9fa3b')}
           name="actionConfiguration.headers"
-          placeholder=$t('RequestTabs.6ee9f29506831738')
+          placeholder={$t('RequestTabs.6ee9f29506831738')}
           pushFields={props.pushFields}
           theme={props.theme}
         />
@@ -113,7 +113,7 @@ export function RequestTabs(props: {
           actionConfig={props.actionConfigurationParams}
           dataTreePath={`${props.actionName}.config.queryParameters`}
           hideHeader
-          label=$t('RequestTabs.a4bda9ccb98168b2')
+          label={$t('RequestTabs.a4bda9ccb98168b2')}
           name="actionConfiguration.queryParameters"
           pushFields={props.pushFields}
           theme={props.theme}

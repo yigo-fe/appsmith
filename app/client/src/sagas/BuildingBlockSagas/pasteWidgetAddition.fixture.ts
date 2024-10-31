@@ -1145,7 +1145,7 @@ export const copiedWidgets: CopiedWidgetGroup[] = [
         ],
         labelPosition: $t('pasteWidgetAdditionfixture.9ef8786f305f75ff'),
         sourceData:
-          '[\n  {\n    "name": $t('pasteWidgetAdditionfixture.7290aa61f0700fbd'),\n    "code": "newest"\n  },\n  {\n    "name": $t('pasteWidgetAdditionfixture.f40f60d5447504c9'),\n    "code": "oldest"\n  }\n]',
+          `[\n  {\n    "name": ${$t('pasteWidgetAdditionfixture.7290aa61f0700fbd')},\n    "code": "newest"\n  },\n  {\n    "name": ${$t('pasteWidgetAdditionfixture.f40f60d5447504c9')},\n    "code": "oldest"\n  }\n]`,
         key: "ljnwdbfwyl",
         labelTextSize: "0.875rem",
         isDeprecated: false,
@@ -1218,7 +1218,7 @@ export const copiedWidgets: CopiedWidgetGroup[] = [
         ],
         labelPosition: $t('pasteWidgetAdditionfixture.9ef8786f305f75ff'),
         sourceData:
-          '[\n  {\n    "name": $t('pasteWidgetAdditionfixture.22f65befc80a20a3'),\n    "code": "open"\n  },\n  {\n    "name": $t('pasteWidgetAdditionfixture.e8537e3442001784'),\n    "code": $t('pasteWidgetAdditionfixture.386b1ed37cb954b7')\n  },\n  {\n    "name": $t('pasteWidgetAdditionfixture.a7ac1230556dbdd4'),\n    "code": "closed"\n  }\n]',
+          `[\n  {\n    "name": ${$t('pasteWidgetAdditionfixture.22f65befc80a20a3')},\n    "code": "open"\n  },\n  {\n    "name": ${$t('pasteWidgetAdditionfixture.e8537e3442001784')},\n    "code": ${$t('pasteWidgetAdditionfixture.386b1ed37cb954b7')}\n  },\n  {\n    "name": ${$t('pasteWidgetAdditionfixture.a7ac1230556dbdd4')},\n    "code": "closed"\n  }\n]`,
         key: "u8mwcq927c",
         labelTextSize: "0.875rem",
         isDeprecated: false,

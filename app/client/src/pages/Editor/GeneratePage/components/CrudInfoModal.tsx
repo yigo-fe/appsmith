@@ -114,7 +114,7 @@ function InfoContent({
       />
       <ImageWrapper>
         <ProgressiveImage
-          alt=$t('CrudInfoModal.b30529ac885f37bd')
+          alt={$t('CrudInfoModal.b30529ac885f37bd')}
           imageSource={getAssetUrl(successImageUrl)}
           thumbnailSource={getInfoThumbnail()}
         />

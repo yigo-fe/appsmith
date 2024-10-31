@@ -1200,7 +1200,7 @@ export const SNIPING_NOT_SUPPORTED = () =>
 //Checklist page
 export enum ONBOARDING_CHECKLIST_ACTIONS {
   CONNECT_A_DATASOURCE = "Connect datasource",
-  CREATE_A_QUERY = $t('messages.5279425db4a8e166'),
+  CREATE_A_QUERY = "Create a query",
   ADD_WIDGETS = "Add widgets",
   CONNECT_DATA_TO_WIDGET = "Connect data to widget",
   DEPLOY_APPLICATIONS = "Deploy application",

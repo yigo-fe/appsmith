@@ -96,19 +96,19 @@ function LeftSideContent() {
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/gsk-logo-grey.svg`)}`}
           />
           <img
-            alt=$t('LeftSideContent.ea3205a06cf830a7')
+            alt={$t('LeftSideContent.ea3205a06cf830a7')}
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/omron-logo.svg`)}`}
           />
           <img
-            alt=$t('LeftSideContent.74ed257247039fea')
+            alt={$t('LeftSideContent.74ed257247039fea')}
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/dropbox-text-logo.svg`)}`}
           />
           <img
-            alt=$t('LeftSideContent.ac4a025a5bfa26e6')
+            alt={$t('LeftSideContent.ac4a025a5bfa26e6')}
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/aws-logo-grey.svg`)}`}
           />
           <img
-            alt=$t('LeftSideContent.c2973c9363125113')
+            alt={$t('LeftSideContent.c2973c9363125113')}
             src={`${getAssetUrl(`${ASSETS_CDN_URL}/twilio-logo.svg`)}`}
           />
         </div>

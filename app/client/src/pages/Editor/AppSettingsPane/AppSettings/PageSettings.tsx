@@ -210,7 +210,7 @@ function PageSettings(props: { page: Page }) {
               savePageName();
             }
           }}
-          placeholder=$t('PageSettings.0ee7107d0cda3c24')
+          placeholder={$t('PageSettings.0ee7107d0cda3c24')}
           size="md"
           type="text"
           value={pageName}
@@ -253,7 +253,7 @@ function PageSettings(props: { page: Page }) {
               saveCustomSlug();
             }
           }}
-          placeholder=$t('PageSettings.ca4aede5c2849eed')
+          placeholder={$t('PageSettings.ca4aede5c2849eed')}
           size="md"
           type="text"
           value={customSlug}

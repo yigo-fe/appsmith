@@ -503,13 +503,13 @@ function Pagination(props: PaginationProps) {
                     label: props.limitBased?.offset?.name,
                     value: props.limitBased?.offset?.name,
                   }}
-                  valueLabel=$t('Pagination.75fb759feeffb20c')
+                  valueLabel={$t('Pagination.75fb759feeffb20c')}
                   valuePath={`${PAGINATION_PREFIX}.${LIMITBASED_PREFIX}.${PaginationSubComponent.Offset}.value`}
                   valuePlaceholder="{{Table1.pageNo * Table1.pageSize}}"
-                  valueTooltip=$t('Pagination.88314ff972b64692')
-                  variableLabel=$t('Pagination.191ea06691bfb264')
+                  valueTooltip={$t('Pagination.88314ff972b64692')}
+                  variableLabel={$t('Pagination.191ea06691bfb264')}
                   variableOptions={variableOptions}
-                  variableTooltip=$t('Pagination.4bf867385221e06b')
+                  variableTooltip={$t('Pagination.4bf867385221e06b')}
                 />
               </PaginationSection>
             </PaginationTypeView>,
@@ -606,13 +606,13 @@ function Pagination(props: PaginationProps) {
                     label: paginationPrev?.cursor?.name,
                     value: paginationPrev?.cursor?.name,
                   }}
-                  valueLabel=$t('Pagination.5df94039b5a5e79b')
+                  valueLabel={$t('Pagination.5df94039b5a5e79b')}
                   valuePath={`${PAGINATION_PREFIX}.${CURSORBASED_PREFIX}.${CURSOR_PREVIOUS_PREFIX}.${PaginationSubComponent.Cursor}.value`}
                   valuePlaceholder="{{Api1.data.previousCursor}}"
-                  valueTooltip=$t('Pagination.f2a03425d9b10164')
-                  variableLabel=$t('Pagination.9f9ee5da96f05e33')
+                  valueTooltip={$t('Pagination.f2a03425d9b10164')}
+                  variableLabel={$t('Pagination.9f9ee5da96f05e33')}
                   variableOptions={variableOptions}
-                  variableTooltip=$t('Pagination.15ff3beac9949dd2')
+                  variableTooltip={$t('Pagination.15ff3beac9949dd2')}
                 />
               </PaginationSection>
               <PaginationSection>
@@ -706,13 +706,13 @@ function Pagination(props: PaginationProps) {
                     label: paginationNext?.cursor?.name,
                     value: paginationNext?.cursor?.name,
                   }}
-                  valueLabel=$t('Pagination.0189d3d1aa1a103f')
+                  valueLabel={$t('Pagination.0189d3d1aa1a103f')}
                   valuePath={`${PAGINATION_PREFIX}.${CURSORBASED_PREFIX}.${CURSOR_NEXT_PREFIX}.${PaginationSubComponent.Cursor}.value`}
                   valuePlaceholder="{{Api1.data.nextCursor}}"
-                  valueTooltip=$t('Pagination.78311615e0e4e9c3')
-                  variableLabel=$t('Pagination.3052eca9703b8490')
+                  valueTooltip={$t('Pagination.78311615e0e4e9c3')}
+                  variableLabel={$t('Pagination.3052eca9703b8490')}
                   variableOptions={variableOptions}
-                  variableTooltip=$t('Pagination.b0f6de5bda3c47d2')
+                  variableTooltip={$t('Pagination.b0f6de5bda3c47d2')}
                 />
               </PaginationSection>
             </PaginationTypeView>,

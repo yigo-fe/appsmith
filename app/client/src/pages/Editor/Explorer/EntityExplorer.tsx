@@ -119,9 +119,9 @@ function EntityExplorer({ isActive }: { isActive: boolean }) {
       {noResults && (
         <NoResult
           className={Classes.DARK}
-          description=$t('EntityExplorer.d332d71c96123344')
+          description={$t('EntityExplorer.d332d71c96123344')}
           icon={<NoEntityFoundSvg />}
-          title=$t('EntityExplorer.eaf1adb5c228ddd2')
+          title={$t('EntityExplorer.eaf1adb5c228ddd2')}
         />
       )}
     </EntityExplorerWrapper>

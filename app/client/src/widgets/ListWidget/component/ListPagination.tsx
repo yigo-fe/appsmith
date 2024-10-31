@@ -437,10 +437,10 @@ export function ServerSideListPagination(props: any) {
         className={`t--list-widget-prev-page rc-pagination-prev ${
           props.pageNo === 1 && "rc-pagination-disabled"
         }`}
-        title=$t('ListPagination.a5e22a089055557e')
+        title={$t('ListPagination.a5e22a089055557e')}
       >
         <button
-          aria-label=$t('ListPagination.6170802fb3427cd8')
+          aria-label={$t('ListPagination.6170802fb3427cd8')}
           className="rc-pagination-item-link"
           onClick={() => {
             if (props.pageNo > 1) props.prevPageClick();

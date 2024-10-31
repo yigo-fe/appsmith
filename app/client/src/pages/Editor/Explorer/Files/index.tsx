@@ -192,7 +192,7 @@ function Files() {
       }
       isSticky
       key={parentEntityId + "_actions"}
-      name=$t('index.7fd0414fe23f6459')
+      name={$t('index.7fd0414fe23f6459')}
       onCreate={onCreate}
       onToggle={onFilesToggle}
       searchKeyword={""}

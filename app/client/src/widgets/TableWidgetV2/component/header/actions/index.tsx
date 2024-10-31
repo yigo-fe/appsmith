@@ -177,11 +177,11 @@ function Actions(props: ActionsPropsType) {
                 borderRadius={props.borderRadius}
                 className="t--add-new-row"
                 disabled={props.disableAddNewRow}
-                disabledMessage=$t('index.4aa7530a3a3ee8d8')
+                disabledMessage={$t('index.4aa7530a3a3ee8d8')}
                 icon="add"
                 selectMenu={props.onAddNewRow}
                 selected={false}
-                title=$t('index.6477bda3d662b9ee')
+                title={$t('index.6477bda3d662b9ee')}
                 width={12}
               />
             )}

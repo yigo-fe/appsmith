@@ -279,7 +279,7 @@ function TableFilterPaneContent(props: TableFilterProps) {
               icon={<AddIcon className="w-5 h-5" color={props.accentColor} />}
               onClick={addFilter}
               size="small"
-              text=$t('FilterPaneContent.1fa97c25ea77cf26')
+              text={$t('FilterPaneContent.1fa97c25ea77cf26')}
             />
             <ButtonActionsWrapper>
               <Button

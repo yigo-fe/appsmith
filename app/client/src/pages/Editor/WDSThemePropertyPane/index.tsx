@@ -180,7 +180,7 @@ function WDSThemePropertyPane() {
       <SettingSection
         className="px-4 py-3 border-t"
         isDefaultOpen
-        title=$t('index.451206beb4f8e768')
+        title={$t('index.451206beb4f8e768')}
       >
         <section className="space-y-2">
           <SubText>Density</SubText>
@@ -218,7 +218,7 @@ function WDSThemePropertyPane() {
       <SettingSection
         className="px-4 py-3 border-t "
         isDefaultOpen
-        title=$t('index.5b283e459dc6b188')
+        title={$t('index.5b283e459dc6b188')}
       >
         <section className="space-y-2">
           <SegmentedControl
@@ -240,7 +240,7 @@ function WDSThemePropertyPane() {
       <SettingSection
         className="px-4 py-3 border-t"
         isDefaultOpen
-        title=$t('index.15f90a7e65c50c8e')
+        title={$t('index.15f90a7e65c50c8e')}
       >
         <section className="space-y-2">
           <SubText>Max app width</SubText>

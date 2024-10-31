@@ -787,7 +787,7 @@ const PropertyControl = memo((props: Props) => {
     if (widgetProperties.isPropertyDynamicTrigger) {
       config.validationMessage = "";
       config.expected = {
-        example: 'showAlert($t('PropertyControl.d89f6b9153531d31'), "error")',
+        example: `showAlert(${$t('PropertyControl.d89f6b9153531d31')}, "error")`,
         type: "Function",
         autocompleteDataType: AutocompleteDataType.FUNCTION,
       };

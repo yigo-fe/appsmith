@@ -35,7 +35,7 @@ export const FileTab = ({
     >
       {children}
       <Styled.CloseButton
-        aria-label=$t('FileTab.d0077cceb0e1144f')
+        aria-label={$t('FileTab.d0077cceb0e1144f')}
         className="tab-close"
         data-testid={DATA_TEST_ID.CLOSE_BUTTON}
         onClick={onClose}

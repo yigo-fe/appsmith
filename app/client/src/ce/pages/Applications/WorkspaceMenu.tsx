@@ -127,7 +127,7 @@ function WorkspaceMenu({
                 onBlur={(value: string) => {
                   workspaceNameChange(value, workspace.id);
                 }}
-                placeholder=$t('WorkspaceMenu.287a091253f89898')
+                placeholder={$t('WorkspaceMenu.287a091253f89898')}
                 savingState={
                   isSavingWorkspaceInfo
                     ? SavingState.STARTED

@@ -365,7 +365,7 @@ function JSDependencies() {
       icon={null}
       isDefaultExpanded={isOpen}
       isSticky
-      name=$t('index.a56794ac76656b41')
+      name={$t('index.a56794ac76656b41')}
       showAddButton={canCreateActions && !isAirgappedInstance}
       step={0}
     >

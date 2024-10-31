@@ -24,7 +24,7 @@ export default function DropDown(
         name={setting.id}
         options={dropdownOptions}
         outline={false}
-        placeholder=$t('Dropdown.418fac53e713fdc2')
+        placeholder={$t('Dropdown.418fac53e713fdc2')}
         size="large"
       />
     </FormGroup>

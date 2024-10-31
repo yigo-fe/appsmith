@@ -39,7 +39,7 @@ export default [
         controlConfig: {
           searchableColumn: true,
         },
-        placeholderText: '[{ "name": $t('contentConfig.e6d48978a218e759') }]',
+        placeholderText: `[{ "name": ${$t('contentConfig.e6d48978a218e759')} }]`,
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,
@@ -50,7 +50,7 @@ export default [
             fn: tableDataValidation,
             expected: {
               type: "Array",
-              example: `[{ "name": $t('contentConfig.e6d48978a218e759') }]`,
+              example: `[{ "name": ${$t('contentConfig.e6d48978a218e759')} }]`,
               autocompleteDataType: AutocompleteDataType.ARRAY,
             },
           },

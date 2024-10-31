@@ -262,7 +262,7 @@ export default function CurrencyTypeDropdown(props: CurrencyDropdownProps) {
         portalClassName={`country-type-filter-dropdown-${props.widgetId}`}
         portalContainer={document.getElementById(CANVAS_ART_BOARD) || undefined}
         searchAutoFocus
-        searchPlaceholder=$t('CurrencyCodeDropdown.5654e4c3bbac517e')
+        searchPlaceholder={$t('CurrencyCodeDropdown.5654e4c3bbac517e')}
         selected={selectedOption}
         showEmptyOptions
         showLabelOnly

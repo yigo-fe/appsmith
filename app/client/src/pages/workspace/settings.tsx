@@ -131,7 +131,7 @@ export default function Settings() {
         <StyledStickyHeader isMobile={isMobile}>
           <BackButton />
           <SettingsPageHeader
-            buttonText=$t('settings.1c3361c6f4af0a2f')
+            buttonText={$t('settings.1c3361c6f4af0a2f')}
             onButtonClick={onButtonClick}
             onSearch={onSearch}
             pageMenuItems={pageMenuItems}

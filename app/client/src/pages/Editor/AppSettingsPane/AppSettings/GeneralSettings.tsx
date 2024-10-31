@@ -121,7 +121,7 @@ function GeneralSettings() {
               updateAppSettings();
             }
           }}
-          placeholder=$t('GeneralSettings.132dc271a4df47ec')
+          placeholder={$t('GeneralSettings.132dc271a4df47ec')}
           size="md"
           type="text"
           value={applicationName}

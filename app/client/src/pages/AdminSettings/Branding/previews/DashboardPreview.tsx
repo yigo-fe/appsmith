@@ -14,7 +14,7 @@ const DashboardPreview = (props: PreviewsProps) => {
       style={{
         backgroundColor: shades?.background,
       }}
-      title=$t('DashboardPreview.600f78065575751c')
+      title={$t('DashboardPreview.600f78065575751c')}
     >
       <div className="w-full h-full bg-white">
         <div className="flex flex-col">

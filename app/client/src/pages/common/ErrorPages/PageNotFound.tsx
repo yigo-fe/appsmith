@@ -40,7 +40,7 @@ function PageNotFound(props: Props) {
           {createMessage(BACK_TO_HOMEPAGE)}
         </Button>
       }
-      description=$t('PageNotFound.c4b2b5eb1aff156d')
+      description={$t('PageNotFound.c4b2b5eb1aff156d')}
       errorCode={createMessage(PAGE_NOT_FOUND_TITLE)}
       title={createMessage(PAGE_NOT_FOUND)}
     />

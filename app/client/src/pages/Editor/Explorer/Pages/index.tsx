@@ -130,13 +130,13 @@ function Pages() {
             openMenu={isMenuOpen}
           />
         }
-        entityId=$t('index.01ffde0c816de38d')
+        entityId="Pages"
         entitySize={ENTITY_HEIGHT * pages.length}
         icon={""}
         isDefaultExpanded={
           isPagesOpen === null || isPagesOpen === undefined ? true : isPagesOpen
         }
-        name=$t('index.01ffde0c816de38d')
+        name={$t('index.01ffde0c816de38d')}
         onClickPreRightIcon={onPin}
         onToggle={onPageToggle}
         searchKeyword={""}

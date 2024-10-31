@@ -64,7 +64,7 @@ const SearchBox = (props: SearchBoxProps) => {
 
   return (
     <StyledInput
-      placeholder=$t('SearchBox.a5acc6cad5fc9686')
+      placeholder={$t('SearchBox.a5acc6cad5fc9686')}
       ref={searchBoxRef}
       type="text"
     />

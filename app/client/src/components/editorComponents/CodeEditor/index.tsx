@@ -1833,7 +1833,7 @@ class CodeEditor extends Component<Props, State> {
                 <a
                   className="linkStyles"
                   href={this.props.link}
-                  rel=$t('index.51ad6033e10b8de8')
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   API documentation

@@ -61,7 +61,7 @@ function TabControlComponent(props: RenderComponentProps<DroppableItem>) {
       {...props}
       deleteOption={deleteOption}
       isDelete
-      placeholder=$t('TabControl.6459a4a8f35d9f79')
+      placeholder={$t('TabControl.6459a4a8f35d9f79')}
     />
   );
 }

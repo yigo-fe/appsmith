@@ -279,7 +279,7 @@ function NewApiScreen(props: Props) {
             >
               <CardContentWrapper>
                 <img
-                  alt=$t('NewApi.b18468b1bef77ea8')
+                  alt={$t('NewApi.b18468b1bef77ea8')}
                   className="curlImage t--plusImage content-icon"
                   src={GraphQLLogo}
                 />

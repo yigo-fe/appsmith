@@ -16,7 +16,7 @@ export const PropertyPaneContentConfig = [
         propertyName: "listData",
         label: $t('propertyConfig.9db45760671631fd'),
         controlType: "INPUT_TEXT",
-        placeholderText: '[{ "name": $t('propertyConfig.9d38471c8641e1d5') }]',
+        placeholderText: `[{ "name": ${$t('propertyConfig.9d38471c8641e1d5')} }]`,
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,

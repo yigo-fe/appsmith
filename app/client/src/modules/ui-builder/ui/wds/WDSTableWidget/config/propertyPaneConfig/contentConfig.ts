@@ -30,7 +30,7 @@ export const contentConfig = [
           searchableColumn: true,
           maxHeight: "300px",
         },
-        placeholderText: '[{ "name": $t('contentConfig.44179052fdc49607') }]',
+        placeholderText: `[{ "name": ${$t('contentConfig.44179052fdc49607')} }]`,
         inputType: "ARRAY",
         isBindProperty: true,
         isTriggerProperty: false,

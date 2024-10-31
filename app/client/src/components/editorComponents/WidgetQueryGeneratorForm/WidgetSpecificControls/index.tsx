@@ -24,7 +24,7 @@ export default function WidgetSpecificControls(props: Props) {
         alias="searchableColumn"
         id="searchableColumn"
         isSearcheable
-        label=$t('index.bf75223d43da3c3a')
+        label={$t('index.bf75223d43da3c3a')}
         onSelect={noop}
       />
     );

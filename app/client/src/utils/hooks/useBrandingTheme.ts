@@ -54,11 +54,11 @@ const useBrandingTheme = () => {
     // Set the favicon
     // TODO: Fix this the next time the file is edited
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let favicon: any = document.querySelector("link[rel=$t('useBrandingTheme.3933a512dff50167')]");
+    let favicon: any = document.querySelector("link[rel='shortcut icon']");
 
     if (!favicon) {
       favicon = document.createElement("link");
-      favicon.rel = $t('useBrandingTheme.3933a512dff50167');
+      favicon.rel = "shortcut icon";
       favicon.className = "t--branding-favicon";
       document.getElementsByTagName("head")[0].appendChild(favicon);
     }

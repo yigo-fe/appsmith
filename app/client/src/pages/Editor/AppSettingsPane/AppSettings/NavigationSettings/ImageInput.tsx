@@ -83,7 +83,7 @@ export const ImageInput = (props: ImageInputProps) => {
     if (value) {
       return (
         <StyledImg
-          alt=$t('ImageInput.010dd2aee5b80530')
+          alt={$t('ImageInput.010dd2aee5b80530')}
           className={classNames({
             hidden: !isLogoLoaded,
           })}

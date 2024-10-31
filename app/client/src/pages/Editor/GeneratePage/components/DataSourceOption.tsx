@@ -101,7 +101,7 @@ function DataSourceOption({
 
   return (
     <Tooltip
-      content=$t('DataSourceOption.b8eb4cf41cb924a2')
+      content={$t('DataSourceOption.b8eb4cf41cb924a2')}
       isDisabled={
         isSupportedForTemplate || isSelectedNode || isConnectNewDataSourceBtn
       }

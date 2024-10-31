@@ -96,7 +96,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
                 widget&apos;s container should not have a fixed height set.{" "}
                 <StyledLink
                   kind="secondary"
-                  rel={$t('index.31d1ac60864480ff')}
+                  rel="noopener noreferrer"
                   target="_blank"
                   to={CUSTOM_WIDGET_HEIGHT_DOC_URL}
                 >
@@ -182,7 +182,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
                 The source editor lets you add your own HTML, CSS and JS.{" "}
                 <StyledLink
                   kind="secondary"
-                  rel={$t('index.31d1ac60864480ff')}
+                  rel="noopener noreferrer"
                   target="_blank"
                   to={CUSTOM_WIDGET_DOC_URL}
                 >
@@ -203,7 +203,7 @@ class CustomWidget extends BaseWidget<CustomWidgetProps, WidgetState> {
                 This model exposes Appsmith data to the widget editor.{" "}
                 <StyledLink
                   kind="secondary"
-                  rel={$t('index.31d1ac60864480ff')}
+                  rel="noopener noreferrer"
                   target="_blank"
                   to={CUSTOM_WIDGET_DEFAULT_MODEL_DOC_URL}
                 >
